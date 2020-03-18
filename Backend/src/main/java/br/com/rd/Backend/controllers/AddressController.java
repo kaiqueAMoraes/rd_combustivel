@@ -20,6 +20,11 @@ public class AddressController {
         return addressService.saveAddress(addressDTO);
     }
 
+    @GetMapping("/find-address/{id}")
+    public ResponseEntity findAddressById(@PathVariable("id") Long id) {
+        return addressService.findAddressById(id);
+    }
+
     @DeleteMapping("/delete-address/{id}")
     public ResponseEntity deleteAddress(@PathVariable("id") Long id) {
        return addressService.deleteAddressById(id);
