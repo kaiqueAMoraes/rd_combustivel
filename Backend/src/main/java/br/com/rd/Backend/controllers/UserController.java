@@ -22,11 +22,13 @@ public class UserController {
 
     @DeleteMapping("/delete-user/{id}")
     public ResponseEntity deleteUserById (@PathVariable ("id") Long id) {
+
         return userService.deleteUserById(id);
     }
 
     @GetMapping("/find-user/{id}")
     public ResponseEntity findUserById(@PathVariable("id") Long id) {
+
         return userService.findUserById(id);
     }
 
@@ -37,16 +39,19 @@ public class UserController {
 
     @GetMapping("find-user-cpf/{cpf}")
     public ResponseEntity findByCpf(@PathVariable("cpf")String cpf) {
+
         return userService.findUserByCpf(cpf);
     }
 
     @GetMapping("find-users")
     public ResponseEntity<List<User>> findAllUsers() {
+
         return userService.findAllUsers();
     }
 
     @PutMapping("update-user/{id}")
     public ResponseEntity updateUserById(@RequestBody UserDTO user) {
+
         return userService.updateUserById(user);
     }
 
