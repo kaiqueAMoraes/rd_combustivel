@@ -5,9 +5,9 @@ import br.com.rd.Backend.models.Address;
 import br.com.rd.Backend.services.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.websocket.server.PathParam;
 
 @RestController
 public class AddressController {
@@ -18,5 +18,10 @@ public class AddressController {
     @PostMapping("/create-address")
     public ResponseEntity saveAddress(@RequestBody AddressDTO addressDTO) {
         return addressService.saveAddress(addressDTO);
+    }
+
+    @DeleteMapping("/delete-address/{id}")
+    public ResponseEntity deleteAddress(@PathVariable("id") Long id) {
+       return addressService.deleteAddressById(id);
     }
 }
