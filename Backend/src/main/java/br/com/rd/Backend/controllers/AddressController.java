@@ -25,6 +25,16 @@ public class AddressController {
         return addressService.findAddressById(id);
     }
 
+    @GetMapping("/findall-address")
+    public ResponseEntity findAllAddresses() {
+        return addressService.findAllAddresses();
+    }
+
+    @PutMapping("/update-address")
+    public ResponseEntity updateAddress(@RequestBody AddressDTO addressDTO) {
+        return addressService.updateAddressById(addressDTO);
+    }
+
     @DeleteMapping("/delete-address/{id}")
     public ResponseEntity deleteAddress(@PathVariable("id") Long id) {
        return addressService.deleteAddressById(id);

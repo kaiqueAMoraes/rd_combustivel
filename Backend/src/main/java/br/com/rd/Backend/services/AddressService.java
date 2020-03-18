@@ -4,7 +4,9 @@ import br.com.rd.Backend.DTOs.AddressDTO;
 import br.com.rd.Backend.interfaces.AddressInterface;
 import br.com.rd.Backend.models.Address;
 import br.com.rd.Backend.repositories.AddressRepository;
+import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
@@ -29,28 +31,22 @@ public class AddressService implements AddressInterface {
             address.setNumber(addressDTO.getNumber());
             address.setComplement(addressDTO.getComplement());
 
-            addressRepository.save(address);
+            Address addressResponse = addressRepository.save(address);
 
-            return ResponseEntity.ok().body("Ok");
+            return ResponseEntity.ok().body(addressResponse);
 
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: Exite um erro na requisição");
+        } catch (DataIntegrityViolationException e) {
+            return ResponseEntity.badRequest().body("Erro: Exite um erro na requisição: " + e.getMessage());
         }
     }
 
     @Override
     public ResponseEntity deleteAddressById(Long id) {
-        try {
-            if (addressRepository.findById(id).isEmpty()) {
-                return ResponseEntity.ok().body("Endereco não encontrado");
-            } else {
-                addressRepository.deleteById(id);
-                return ResponseEntity.ok().body("Endereco deletado");
-            }
-        } catch (NumberFormatException e) {
-            return ResponseEntity.badRequest().body("Houve um erro na consulta" + e.getMessage());
-        } catch (MethodArgumentTypeMismatchException e) {
-            return ResponseEntity.badRequest().body("Houve um erro na consulta" + e.getMessage());
+        if (addressRepository.findById(id).isEmpty()) {
+            return ResponseEntity.ok().body("Não há registros para o id informado");
+        } else {
+            addressRepository.deleteById(id);
+            return ResponseEntity.ok().body("Endereco deletado");
         }
     }
 
@@ -65,12 +61,32 @@ public class AddressService implements AddressInterface {
 
     @Override
     public ResponseEntity<List<Address>> findAllAddresses() {
-        return null;
+        if (addressRepository.findAll().isEmpty()) {
+            return null;
+        } else {
+            return ResponseEntity.ok().body(addressRepository.findAll());
+        }
     }
 
     @Override
     public ResponseEntity updateAddressById(AddressDTO addressDTO) {
-        //TODO
-        return null;
+        try {
+            Address addressUpdate = addressRepository.getOne(addressDTO.getIdAddress());
+
+            addressUpdate.setCep(addressDTO.getCep());
+            addressUpdate.setState(addressDTO.getState());
+            addressUpdate.setCity(addressDTO.getCity());
+            addressUpdate.setDistrict(addressDTO.getDistrict());
+            addressUpdate.setStreet(addressDTO.getStreet());
+            addressUpdate.setNumber(addressDTO.getNumber());
+            addressUpdate.setComplement(addressDTO.getComplement());
+
+            Address addressResponse = addressRepository.save(addressUpdate);
+
+            return ResponseEntity.ok().body(addressResponse);
+
+        } catch (DataIntegrityViolationException e) {
+            return ResponseEntity.badRequest().body("Erro: Exite um erro na requisição: " + e.getMessage());
+        }
     }
 }
