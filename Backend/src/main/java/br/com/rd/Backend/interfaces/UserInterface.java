@@ -15,6 +15,8 @@ public interface UserInterface {
 
     ResponseEntity findUserById(Long id);
 
+    ResponseEntity findUserByEmail (String email);
+
     ResponseEntity<List<User>> findAllUsers ();
 
     ResponseEntity updateUserById (UserDTO userDTO);
