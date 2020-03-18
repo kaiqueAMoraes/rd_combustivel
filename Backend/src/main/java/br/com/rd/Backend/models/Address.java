@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.websocket.OnClose;
 
 @Data
 @AllArgsConstructor
@@ -38,4 +39,8 @@ public class Address {
 
     @Column(name = "ds_complement")
     private String complement;
+
+    @ManyToOne
+    @JoinColumn(name = "id_user")
+    private User user;
 }

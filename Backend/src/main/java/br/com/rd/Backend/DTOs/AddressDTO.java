@@ -1,5 +1,6 @@
 package br.com.rd.Backend.DTOs;
 
+import br.com.rd.Backend.models.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,5 +20,5 @@ public class AddressDTO {
     private String street;
     private String number;
     private String complement;
-
+    private User user;
 }
