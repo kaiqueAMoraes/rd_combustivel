@@ -62,7 +62,9 @@ public class UserService implements UserInterface {
             return response;
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Erro: " + e);
-        } 
+        }  catch (MethodArgumentTypeMismatchException e ) {
+            return ResponseEntity.badRequest().body("tipo errado");
+        }
     }
 
     @Override
