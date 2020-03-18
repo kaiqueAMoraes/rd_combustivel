@@ -21,6 +21,7 @@ public class UserService implements UserInterface {
     @Override
     public ResponseEntity saveUser(UserDTO userDTO) { //TO DO: Verificar se email já está cadastrado
         ResponseEntity response = null;
+
         if (
                 userDTO.getFirstName() == null ||
                         userDTO.getLastName() == null ||
@@ -29,9 +30,13 @@ public class UserService implements UserInterface {
                         userDTO.getEmail() == null ||
                         userDTO.getPassword() == null
 
-        ) {
+        )  {
             response = ResponseEntity.badRequest().body("Um dos campos obrigátorios não foi preenchido");
-        } else {
+        }  else if (userRepository.findByEmail(userDTO.getEmail()).size() != 0 ) {
+            return ResponseEntity.badRequest().body("Este e-mail já está cadastrado");
+        }
+
+        else {
             User user = new User();
             user.setFirstName(userDTO.getFirstName());
             user.setLastName(userDTO.getLastName());
@@ -42,11 +47,9 @@ public class UserService implements UserInterface {
             user.setGender(userDTO.getGender());
             user.setPhone(userDTO.getPhone());
 
-            userRepository.save(user);
-
-            response = ResponseEntity.ok().body(" Usuário cadastrado");
+                userRepository.save(user);
+                response = ResponseEntity.ok().body(" Usuário cadastrado");
         }
-
         return response;
     }
 
@@ -58,7 +61,6 @@ public class UserService implements UserInterface {
             userRepository.deleteById(id);
             return ResponseEntity.ok().body("Usuário deletado");
         }
-
     }
 
     @Override
