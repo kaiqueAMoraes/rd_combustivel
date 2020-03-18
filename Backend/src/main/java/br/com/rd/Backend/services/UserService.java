@@ -4,13 +4,11 @@ import br.com.rd.Backend.DTOs.UserDTO;
 import br.com.rd.Backend.interfaces.UserInterface;
 import br.com.rd.Backend.models.User;
 import br.com.rd.Backend.repositories.UserRepository;
-import ch.qos.logback.core.encoder.EchoEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import java.util.List;
 
@@ -60,10 +58,8 @@ public class UserService implements UserInterface {
                 response = ResponseEntity.ok().body(" Usuário cadastrado");
             }
             return response;
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: " + e);
-        }  catch (MethodArgumentTypeMismatchException e ) {
-            return ResponseEntity.badRequest().body("tipo errado");
+        } catch (Exception e ) {
+            return ResponseEntity.badRequest().body("Erro: " + e );
         }
     }
 
@@ -74,10 +70,6 @@ public class UserService implements UserInterface {
             return ResponseEntity.ok().body("Usuário deletado");
         } catch (EmptyResultDataAccessException e) {
             return ResponseEntity.badRequest().body("Id do usuário incorreto");
-        } catch (NumberFormatException e){
-            return ResponseEntity.badRequest().body("O Id deve ser numérico");
-        } catch (MethodArgumentTypeMismatchException e) {
-            return ResponseEntity.badRequest().body("O Id deve ser numérico");
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Não foi possível realizar a consulta");
         }
