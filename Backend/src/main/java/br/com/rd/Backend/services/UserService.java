@@ -32,8 +32,16 @@ public class UserService implements UserInterface {
 
         )  {
             response = ResponseEntity.badRequest().body("Um dos campos obrigátorios não foi preenchido");
-        }  else if (userRepository.findByEmail(userDTO.getEmail()).size() != 0 ) {
+        }
+        //Validação de email já cadastrado
+
+        else if (userRepository.findByEmail(userDTO.getEmail()).size() != 0 ) {
             return ResponseEntity.badRequest().body("Este e-mail já está cadastrado");
+        }
+
+        //Validação de CPF já cadastrado
+        else if (userRepository.findByCpf(userDTO.getCpf()).size() != 0 ) {
+            return ResponseEntity.badRequest().body("Este CPF já está cadastrado");
         }
 
         else {
