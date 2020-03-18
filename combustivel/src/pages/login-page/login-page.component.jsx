@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 
-import FormInput from '../../components/form-input/form-input.componets';
+import FormInput from '../cadastro-page/form-input/form-input.componets';
 import CustomButton from '../../components/custom-button/custom-button.component';
 
 import FormGroup from 'react-bootstrap/FormGroup'
@@ -59,10 +59,10 @@ class LoginPage extends Component {
                       email: `${email}`
                     }
                   })
-
                 if (response.password === password) {
+                    let userName = JSON.stringify(response.name);
                     this.props.history.push("/");
-                    sessionStorage.setItem("user", JSON.stringify(response.name));
+                    sessionStorage.setItem("user", userName);
                     window.location.reload();
                 }
                 else

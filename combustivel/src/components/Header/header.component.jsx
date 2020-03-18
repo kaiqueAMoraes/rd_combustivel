@@ -22,7 +22,7 @@ const Header = ({ history }) => {
 
 
     {
-        return history.location.pathname === "/login" ? (
+        return history.location.pathname === "/login" || history.location.pathname === "/cadastro" ? (
 
             <Navbar className="bg-main navbar">
                 <Link to="/" className="logo"></Link>
@@ -32,7 +32,6 @@ const Header = ({ history }) => {
             </Navbar>
 
         ) : (
-                // mostra o header normal ....
                 <>
                     <Navbar className="bg-main navbar">
                         <Link to="/" className="logo"></Link>
