@@ -35,6 +35,11 @@ public class UserController {
         return  userService.findUserByEmail(email);
     }
 
+    @GetMapping("find-user-cpf/{cpf}")
+    public ResponseEntity findByCpf(@PathVariable("cpf")String cpf) {
+        return userService.findUserByCpf(cpf);
+    }
+
     @GetMapping("find-users")
     public ResponseEntity<List<User>> findAllUsers() {
         return userService.findAllUsers();

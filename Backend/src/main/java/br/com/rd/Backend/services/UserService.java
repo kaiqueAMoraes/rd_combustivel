@@ -90,6 +90,15 @@ public class UserService implements UserInterface {
     }
 
     @Override
+    public ResponseEntity findUserByCpf(String cpf) {
+        if (userRepository.findByCpf(cpf).isEmpty()) {
+            return ResponseEntity.badRequest().body("CPF não encontrado");
+        } else {
+            return ResponseEntity.ok().body(userRepository.findByCpf(cpf));
+        }
+    }
+
+    @Override
     public ResponseEntity<List<User>> findAllUsers() {
         return ResponseEntity.ok().body(userRepository.findAll());
     }
