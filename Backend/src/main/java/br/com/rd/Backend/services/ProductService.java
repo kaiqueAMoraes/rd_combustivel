@@ -5,6 +5,7 @@ import br.com.rd.Backend.interfaces.ProductInterface;
 import br.com.rd.Backend.models.Product;
 import br.com.rd.Backend.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -48,12 +49,28 @@ public class ProductService implements ProductInterface {
 
     @Override
     public ResponseEntity deleteProductById(Long id) {
-        return null;
+
+        try {
+            productRepository.deleteById(id);
+            return ResponseEntity.ok().body("Produto deletado");
+        } catch (EmptyResultDataAccessException e) {
+            return ResponseEntity.badRequest().body("Id do produto incorreto");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Erro: " + e);
+        }
     }
 
     @Override
     public ResponseEntity findProductById(Long id) {
-        return null;
+        try {
+            if (productRepository.findById(id).isEmpty()) {
+                return ResponseEntity.badRequest().body("Id do produto não encontrado");
+            } else {
+                return ResponseEntity.ok().body(productRepository.findById(id).get());
+            }
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Erro: " + e);
+        }
     }
 
     @Override
