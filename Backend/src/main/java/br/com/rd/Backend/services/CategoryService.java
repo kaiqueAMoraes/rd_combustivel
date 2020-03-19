@@ -5,6 +5,7 @@ import br.com.rd.Backend.interfaces.CategoryInterface;
 import br.com.rd.Backend.models.Category;
 import br.com.rd.Backend.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
@@ -34,8 +35,8 @@ public class CategoryService implements CategoryInterface {
 
                 return ResponseEntity.ok().body(categoryRepository.save(category));
             }
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: " + e);
+        } catch (DataIntegrityViolationException e) {
+            return ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos ");
         }
     }
 
@@ -45,9 +46,7 @@ public class CategoryService implements CategoryInterface {
             categoryRepository.deleteById(id);
             return ResponseEntity.ok().body("Categoria " + id + " deletada");
         } catch (EmptyResultDataAccessException e) {
-            return ResponseEntity.badRequest().body("Id da categoria incorreto");
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: " + e);
+            return ResponseEntity.badRequest().body("Id da categoria não existe");
         }
     }
 
@@ -59,8 +58,8 @@ public class CategoryService implements CategoryInterface {
             } else {
                 return ResponseEntity.ok().body(categoryRepository.findById(id).get());
             }
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: " + e);
+        } catch (DataIntegrityViolationException e) {
+            return ResponseEntity.badRequest().body("Foram enviados campos nulos");
         }
     }
 
@@ -72,8 +71,8 @@ public class CategoryService implements CategoryInterface {
             } else {
                 return ResponseEntity.ok().body(categoryRepository.findByName(name));
             }
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: " + e);
+        } catch (DataIntegrityViolationException e) {
+            return ResponseEntity.badRequest().body("Foram enviados campos nulos");
         }
     }
 
@@ -95,8 +94,6 @@ public class CategoryService implements CategoryInterface {
 
         } catch (InvalidDataAccessApiUsageException e) {
             return ResponseEntity.badRequest().body("O idCategory não foi informado na requisição");
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: " + e);
-        }
+        } 
     }
 }
