@@ -162,10 +162,10 @@ class CadastroPage extends Component {
             }
             const date = birthArr.slice(",").join('');
             const user = {
-                "email": email,
+                "email": email.toLowerCase(),
                 "password": password,
-                "firstName": fullName.split(" ").slice(0, 1).toString(),
-                "lastName": fullName.split(" ").slice(1).join(" "),
+                "firstName": fullName.split(" ").slice(0, 1).toString().toLowerCase(),
+                "lastName": fullName.split(" ").slice(1).join(" ").toLowerCase(),
                 "cpf": cpf,
                 "gender": gender,
                 "phone": phone,
