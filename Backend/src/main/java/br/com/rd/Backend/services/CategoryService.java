@@ -5,6 +5,7 @@ import br.com.rd.Backend.interfaces.CategoryInterface;
 import br.com.rd.Backend.models.Category;
 import br.com.rd.Backend.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -39,7 +40,14 @@ public class CategoryService implements CategoryInterface {
 
     @Override
     public ResponseEntity deleteCategoryById(Long id) {
-        return null;
+        try {
+            categoryRepository.deleteById(id);
+            return ResponseEntity.ok().body("Categoria " + id + " deletada");
+        } catch (EmptyResultDataAccessException e) {
+            return ResponseEntity.badRequest().body("Id da categoria incorreto");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Erro: " + e);
+        }
     }
 
     @Override
