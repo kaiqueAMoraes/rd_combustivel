@@ -17,6 +17,9 @@ class CadastroPage extends Component {
     constructor(props) {
         super(props);
 
+        if (sessionStorage.getItem('user'))
+            this.props.history.push('/');
+
         this.state = {
             "fullName": "",
             "firstName": "",
@@ -35,6 +38,10 @@ class CadastroPage extends Component {
 
     errorMessage = message => {
         this.setState({ errorMessage: `${message}` });
+    }
+    
+    clearErrorMessage = () => {
+        this.setState({ errorMessage: "" });
     }
 
     checkIfIsEmpty = () => {
@@ -106,6 +113,16 @@ class CadastroPage extends Component {
         return true
     };
 
+    checkEmail = async email => {
+        await axios.get('http://localhost:8080/find-user-email/' + email)
+                .then( response => {
+                        console.log(response.data)
+                        if(response.data[0].email === email ){
+                            return false
+                        }}
+                    )
+    }
+
 
     handleSubmit = async e => {
         e.preventDefault();
@@ -119,6 +136,12 @@ class CadastroPage extends Component {
             if (elm === "") this.errorMessage("todos os campos precisam ser preenchidos")
         });
 
+        
+
+        if(this.checkEmail(email)){
+            console.log("email já existe")
+        }
+        
         if (errorMessage === "") {
             if (password !== passwordValidation) this.errorMessage("as senhas precisam ser iguais")
             else {
@@ -137,56 +160,41 @@ class CadastroPage extends Component {
                         if (birth[i].match(intNum)) birthArr.push(birth[i])
                     }
                     const date = birthArr.slice(",").join('');
-
-                    /* const user = {
+                    const user = {
                         "email": email,
                         "password": password,
                         "firstName": fullName.split(" ").slice(0, 1).toString(),
                         "lastName": fullName.split(" ").slice(1).join(" "),
-                        "CPF": cpf,
+                        "cpf": cpf,
                         "gender": gender,
                         "phone": phone,
                         "birth": date
-                    } */
-                    
-                    /* try {
-                        fetch('http://localhost:8080/create-user', {
-                            method: 'post',
-                            body: user
-                        }).then(function(response) {
-                            console.log(user)
-                            console.log(JSON.stringify(user))
-                            console.log(JSON.parse(user))
-                            return response.json();
-                          })
-                    }catch (err){
-                        this.setState({ errorMessage: err.toString() }) */
-
-                    //}
-
+                    }
                     try {
-                        await axios.post("http://localhost:8080/create-user", {
-                            "email": email,
-                            "password": password,
-                            "firstName": fullName.split(" ").slice(0, 1).toString(),
-                            "lastName": fullName.split(" ").slice(1).join(" "),
-                            "cpf": cpf,
-                            "gender": gender,
-                            "phone": phone,
-                            "birth": date
-                        }).then( response => {
+                        await axios.post("http://localhost:8080/create-user", user)
+                        .then( response => {
                             console.log(response)
                         }).catch(error => {
-                            console.log(error.response)
-                        });
+                            this.errorMessage(error.response.data)
+                        })
                         
                     } catch (error) {
-                        this.setState({ errorMessage: error.toString() })
+                        this.setState({ errorMessage: "d" })
                         console.log(error)
-
+                        
                     } finally {
-                        this.clearState();
-                        this.props.history.push("/login");
+                        if(errorMessage !== ""){
+                            console.log("chegou no if do finally")
+                            this.clearErrorMessage();
+                        }
+                        console.log('chegou no finally')
+                        //this.setState({ successMessage: "usuario cadastrado com sucesso" })
+                        //setInterval(()=> {
+                        //    this.clearState();
+                        //    sessionStorage.setItem("user", fullName);
+                        //    this.props.history.push("/");
+                        //}, 3000)
+                        console.log(user)
                     }
             }
         }
@@ -301,12 +309,12 @@ render() {
                                 onClick={this.handleSubmit} >
                                 Continuar
                             </CustomButton>
+                        {this.state.successMessage ? (<Alert className="m-4" variant='success'>{this.state.successMessage}</Alert>) : ""}
+                        {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
 
                         </FormGroup>
 
                         <span>Já tem uma conta ? <Link to='/login'>faça login</Link></span>
-
-                        {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
 
                     </form>
                 </BoxContainer>

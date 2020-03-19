@@ -20,7 +20,6 @@ const handleSignOut = () => {
 const Header = ({ history }) => {
     const currentUser = sessionStorage.getItem('user');
 
-
     {
         return history.location.pathname === "/login" || history.location.pathname === "/cadastro" ? (
 
@@ -36,27 +35,33 @@ const Header = ({ history }) => {
                     <Navbar className="bg-main navbar">
                         <Link to="/" className="logo"></Link>
                         <div className="d-flex user-bag">
-                            <Link to="/login" className="logged navbar-brand d-flex" id="user">
-                                <FontAwesomeIcon icon={faUserCircle} className="icon-userCircle" />
+                            <div className="logged navbar-brand d-flex" id="user">
                                 {
                                     currentUser ? (
+                                        <>
+                                        <Link to="/pagina-do-usuario"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle" /></Link>
                                         <div className="user-login d-flex flex-column bd-highlight mb-3 Row" id="div-header-separation">
                                             <h3 className="navbar-span" id="ola-navbar" >Olá, {currentUser}</h3>
                                             <Link onClick={handleSignOut} className="navbar-span align-self-bottom" id="usuario-navbar">Sair?</Link>
                                         </div>
-
+                                        </>
                                     ) : (
+                                        <>   
+                                        <Link to="/login"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle" /></Link>
                                             <div className="user-login d-flex flex-column bd-highlight mb-3 Row" id="div-header-separation">
                                                 <Link to="/login" className="navbar-span" id="ola-navbar">Olá, faça seu login </Link>
                                                 <Link to="/cadastro" className="navbar-span align-self-bottom" id="usuario-navbar"> ou Cadastre-se</Link>
                                             </div>
+                                            </>
                                         )
                                 }
-                            </Link>
+                            </div>
                             <CartIcon />
 
                         </div>
                     </Navbar>
+
+
                     <Navbar className="nav-menu sub-navbar navbar-expand-lg navbar-light">
                         <Container className="fluid">
                             <ul className="navbar-nav">
