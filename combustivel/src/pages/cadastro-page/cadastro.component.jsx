@@ -186,16 +186,14 @@ class CadastroPage extends Component {
             } catch (err) {
                 if(err) {
                     this.setState({ errorMessage: err.message, valid:false })
-                }                
-                //if(!err) this.setState({ valid:true ,  errorMessage: ""})
+                }
             } finally {
+                sessionStorage.setItem("user", fullName);
                     setInterval(()=> {
                         this.clearState();
-                        sessionStorage.setItem("user", fullName);
                         this.props.history.push("/");
                         
                     }, 1500);
-                    this.setState({ successMessage: "" })
                     console.log(user);
                 }
             }
