@@ -75,7 +75,7 @@ public class AddressService implements AddressInterface {
             addressUpdate.setStreet(addressDTO.getStreet());
             addressUpdate.setNumber(addressDTO.getNumber());
             addressUpdate.setComplement(addressDTO.getComplement());
-            addressUpdate.setUser(addressDTO.getUser());
+            addressUpdate.setIdUser(addressDTO.getIdUser());
 
             Address addressResponse = addressRepository.save(addressUpdate);
 

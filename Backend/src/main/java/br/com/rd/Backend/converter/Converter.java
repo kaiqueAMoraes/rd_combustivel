@@ -29,7 +29,7 @@ public class Converter {
             address.setStreet(addressDTO.getStreet());
             address.setNumber(addressDTO.getNumber());
             address.setComplement(addressDTO.getComplement());
-            address.setUser(addressDTO.getUser());
+            address.setIdUser(addressDTO.getIdUser());
 
             return address;
     }

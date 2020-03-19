@@ -19,17 +19,17 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOrder;
 
-    @Column(name = "ds_total_price", nullable = false)
+    @Column(name = "vl_total_price", nullable = false)
     private Double totalPrice;
 
     @Column(name = "dt_order", nullable = false)
     private Date date;
 
-    @ManyToOne(targetEntity = User.class)
+    @ManyToOne
     @JoinColumn(name = "id_user")
     private User idUser;
 
-    @ManyToOne(targetEntity = Address.class)
+    @ManyToOne
     @JoinColumn(name = "id_address")
     private Address idAddress;
 

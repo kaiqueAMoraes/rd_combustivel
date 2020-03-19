@@ -17,4 +17,14 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOrderItem;
 
+    @OneToOne(targetEntity = Product.class)
+    @JoinColumn(name = "id_product")
+    private Long idProduct;
+
+    @Column(name = "vl_price")
+    private Double price;
+
+    @Column(name = "nr_quantity")
+    private Integer quantity;
+
 }
