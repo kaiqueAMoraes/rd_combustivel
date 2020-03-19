@@ -64,7 +64,8 @@ class CadastroPage extends Component {
             "CPF": "",
             "gender": "",
             "phone": "",
-            "birth": ""
+            "birth": "",
+            "valEmail" : ""
         })
     }
 
@@ -114,13 +115,16 @@ class CadastroPage extends Component {
     };
 
     checkEmail = async email => {
-        await axios.get('http://localhost:8080/find-user-email/' + email)
+        try {
+            await axios.get('http://localhost:8080/find-user-email/' + email)
                 .then( response => {
-                        console.log(response.data)
                         if(response.data[0].email === email ){
-                            return false
-                        }}
-                    )
+                            this.errorMessage('email já cadastrado')
+                        }
+                    }
+                    )}finally {
+                        return 
+                    }
     }
 
 
@@ -137,13 +141,10 @@ class CadastroPage extends Component {
         });
 
         
-
-        if(this.checkEmail(email)){
-            console.log("email já existe")
-        }
-        
-        if (errorMessage === "") {
-            if (password !== passwordValidation) this.errorMessage("as senhas precisam ser iguais")
+        this.checkEmail(email);
+        if(this.state.valEmail === ""){
+            this.clearErrorMessage();
+            if (password !== passwordValidation || (password === "" && passwordValidation === "")) this.errorMessage("as senhas precisam ser iguais")
             else {
                 
                 let arr = [];
@@ -175,7 +176,7 @@ class CadastroPage extends Component {
                         .then( response => {
                             console.log(response)
                         }).catch(error => {
-                            this.errorMessage(error.response.data)
+                            this.errorMessage("error data : " + error.response.data)
                         })
                         
                     } catch (error) {
