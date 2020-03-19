@@ -5,12 +5,9 @@ import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.AddressInterface;
 import br.com.rd.Backend.models.Address;
 import br.com.rd.Backend.repositories.AddressRepository;
-import org.hibernate.property.access.spi.PropertyAccessException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.orm.jpa.JpaSystemException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,10 +31,6 @@ public class AddressService implements AddressInterface {
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: Exite um erro na requisição: " + e.getMessage());
-        } catch (PropertyAccessException e) {
-            return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Erro: O Usuário informado não existe: " + e.getMessage());
-        } catch (JpaSystemException e) {
-            return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Erro: O Usuário informado não existe: " + e.getMessage());
         }
     }
 
@@ -89,10 +82,6 @@ public class AddressService implements AddressInterface {
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: Exite um erro na requisição: " + e.getMessage());
-        } catch (PropertyAccessException e) {
-            return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Erro: O Usuário informado não existe: " + e.getMessage());
-        } catch (JpaSystemException e) {
-            return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Erro: O Usuário informado não existe: " + e.getMessage());
         }
     }
 }
