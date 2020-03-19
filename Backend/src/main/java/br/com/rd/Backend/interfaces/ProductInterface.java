@@ -16,7 +16,7 @@ public interface ProductInterface {
 
     ResponseEntity findProductByName(String name);
 
-    ResponseEntity<List<Product>> findProductByCategory (ProductDTO productDTO);
+    //TO DO: Implementar busca pela categoria
 
     ResponseEntity<List<Product>> findAllProducts ();
 

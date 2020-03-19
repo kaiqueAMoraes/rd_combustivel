@@ -27,4 +27,21 @@ public class ProductController {
         return productService.findProductById(id);
     }
 
+    @GetMapping("/find-product-name/{name}")
+    public ResponseEntity findProductByName (@PathVariable ("name")String name) {
+        return productService.findProductByName(name);
+    }
+
+  // TO DO:  @GetMapping("/find-product-category/{idCategory}")
+
+    @GetMapping("/find-all-products")
+    public ResponseEntity findAllProducts() {
+        return productService.findAllProducts();
+    }
+
+    @PutMapping("/update-product")
+    public ResponseEntity updateProductById(@RequestBody ProductDTO product) {
+        return productService.updateProductById(product);
+    }
+
 }

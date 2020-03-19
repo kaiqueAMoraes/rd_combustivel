@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -44,7 +45,7 @@ public class ProductService implements ProductInterface {
         } catch (Exception e) {
             response = ResponseEntity.badRequest().body("Erro: " + e);
         }
-            return response;
+        return response;
     }
 
     @Override
@@ -75,21 +76,39 @@ public class ProductService implements ProductInterface {
 
     @Override
     public ResponseEntity findProductByName(String name) {
-        return null;
-    }
-
-    @Override
-    public ResponseEntity<List<Product>> findProductByCategory(ProductDTO productDTO) {
-        return null;
+        try {
+            if (productRepository.findByName(name).isEmpty()) {
+                return ResponseEntity.badRequest().body("Nome do produto não encontrado");
+            } else {
+                return ResponseEntity.ok().body(productRepository.findByName(name));
+            }
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Erro: " + e);
+        }
     }
 
     @Override
     public ResponseEntity<List<Product>> findAllProducts() {
-        return null;
+        return ResponseEntity.ok().body(productRepository.findAll());
     }
 
     @Override
-    public ResponseEntity updateProductById(ProductDTO productDTO) {
-        return null;
+    public ResponseEntity updateProductById(@RequestBody ProductDTO productDTO) {
+        try {
+            Product productEntity = productRepository.getOne(productDTO.getIdProduct());
+
+            productEntity.setName(productDTO.getName());
+            productEntity.setDescription(productDTO.getDescription());
+            productEntity.setQuantStock(productDTO.getQuantStock());
+            productEntity.setPrice(productDTO.getPrice());
+            productEntity.setImage(productDTO.getImage());
+
+            productRepository.save(productEntity);
+
+            return ResponseEntity.ok().body(productEntity);
+
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Erro: " + e);
+        }
     }
 }

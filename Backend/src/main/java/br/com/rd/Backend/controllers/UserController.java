@@ -49,9 +49,8 @@ public class UserController {
         return userService.findAllUsers();
     }
 
-    @PutMapping("update-user/{id}")
+    @PutMapping("update-user")
     public ResponseEntity updateUserById(@RequestBody UserDTO user) {
-
         return userService.updateUserById(user);
     }
 
