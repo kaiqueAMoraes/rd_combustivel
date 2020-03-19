@@ -1,9 +1,15 @@
 package br.com.rd.Backend.converter;
 
 import br.com.rd.Backend.DTOs.AddressDTO;
+import br.com.rd.Backend.DTOs.OrderDTO;
 import br.com.rd.Backend.DTOs.UserDTO;
 import br.com.rd.Backend.models.Address;
+import br.com.rd.Backend.models.Order;
+import br.com.rd.Backend.models.OrderItem;
 import br.com.rd.Backend.models.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Converter {
 
@@ -27,5 +33,25 @@ public class Converter {
 
     public User converterTo(UserDTO userDTO){
         return null;
+    }
+
+    public Order converterTo(OrderDTO orderDTO) {
+
+        Order order = new Order();
+
+        order.setDate(orderDTO.getDate());
+        order.setTotalPrice(order.getTotalPrice());
+        order.setIdUser(orderDTO.getIdUser());
+        order.setIdAddress(orderDTO.getIdAddress());
+
+        List<OrderItem> list = new ArrayList<>();
+        for (OrderItem itens: orderDTO.getList()) {
+            OrderItem orderItem = new OrderItem();
+
+
+            list.add(orderItem);
+        }
+
+        return order;
     }
 }
