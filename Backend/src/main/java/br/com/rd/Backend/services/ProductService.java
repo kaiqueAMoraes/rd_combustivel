@@ -1,11 +1,15 @@
 package br.com.rd.Backend.services;
 
 import br.com.rd.Backend.DTOs.ProductDTO;
+import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.ProductInterface;
+import br.com.rd.Backend.models.Category;
 import br.com.rd.Backend.models.Product;
 import br.com.rd.Backend.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,26 +28,20 @@ public class ProductService implements ProductInterface {
         ResponseEntity response = null;
 
         try {
-            if (productDTO.getName() == null ||
-                    productDTO.getPrice() == null ||
-                    productDTO.getQuantStock() == null
-            ) {
-                response = ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
+            if ((productRepository.findByName(productDTO.getName()).size() != 0) &&
+                    (productRepository.findByDescription(productDTO.getDescription()).size() != 0)) {
+                return ResponseEntity.badRequest().body("Este produto já está cadastrado");
             } else {
-                Product product = new Product();
 
-                product.setName(productDTO.getName());
-                product.setPrice(productDTO.getPrice());
-                product.setImage(productDTO.getImage());
-                product.setDescription(productDTO.getDescription());
-                product.setQuantStock(productDTO.getQuantStock());
+                Converter converter = new Converter();
 
-                productRepository.save(product);
+                Product product = converter.converterTo(productDTO);
 
-                response = ResponseEntity.ok().body(product);
+                response = ResponseEntity.ok().body(productRepository.save(product));
+
             }
-        } catch (Exception e) {
-            response = ResponseEntity.badRequest().body("Erro: " + e);
+        } catch (DataIntegrityViolationException e) {
+            response = ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos " + e.getMessage());
         }
         return response;
     }
@@ -55,9 +53,7 @@ public class ProductService implements ProductInterface {
             productRepository.deleteById(id);
             return ResponseEntity.ok().body("Produto deletado");
         } catch (EmptyResultDataAccessException e) {
-            return ResponseEntity.badRequest().body("Id do produto incorreto");
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: " + e);
+            return ResponseEntity.badRequest().body("Id do produto não existe");
         }
     }
 
@@ -69,22 +65,33 @@ public class ProductService implements ProductInterface {
             } else {
                 return ResponseEntity.ok().body(productRepository.findById(id).get());
             }
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: " + e);
+        } catch (DataIntegrityViolationException e) {
+            return ResponseEntity.badRequest().body("Foram enviados campos nulos");
+        } catch (EmptyResultDataAccessException e) {
+            return ResponseEntity.badRequest().body("Id do produto não existe");
         }
     }
 
     @Override
     public ResponseEntity findProductByName(String name) {
-        try {
-            if (productRepository.findByName(name).isEmpty()) {
-                return ResponseEntity.badRequest().body("Nome do produto não encontrado");
-            } else {
-                return ResponseEntity.ok().body(productRepository.findByName(name));
-            }
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: " + e);
+
+        if (productRepository.findByName(name).isEmpty()) {
+            return ResponseEntity.badRequest().body("Este produto não existe");
+        } else {
+            return ResponseEntity.ok().body(productRepository.findByName(name));
         }
+
+    }
+
+    @Override
+    public ResponseEntity findProductByIdCategory(Category idCategory) {
+
+        if (productRepository.findByIdCategory(idCategory).isEmpty()) {
+            return ResponseEntity.badRequest().body("Não existem produtos nesta categoria");
+        } else {
+            return ResponseEntity.ok().body(productRepository.findByIdCategory(idCategory));
+        }
+
     }
 
     @Override
@@ -95,20 +102,21 @@ public class ProductService implements ProductInterface {
     @Override
     public ResponseEntity updateProductById(@RequestBody ProductDTO productDTO) {
         try {
-            Product productEntity = productRepository.getOne(productDTO.getIdProduct());
+            Product product = productRepository.getOne(productDTO.getIdProduct());
 
-            productEntity.setName(productDTO.getName());
-            productEntity.setDescription(productDTO.getDescription());
-            productEntity.setQuantStock(productDTO.getQuantStock());
-            productEntity.setPrice(productDTO.getPrice());
-            productEntity.setImage(productDTO.getImage());
+            product.setName(productDTO.getName());
+            product.setDescription(productDTO.getDescription());
+            product.setQuantStock(productDTO.getQuantStock());
+            product.setPrice(productDTO.getPrice());
+            product.setImage(productDTO.getImage());
 
-            productRepository.save(productEntity);
+            productRepository.save(product);
 
-            return ResponseEntity.ok().body(productEntity);
+            return ResponseEntity.ok().body(product);
 
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: " + e);
+        } catch (InvalidDataAccessApiUsageException e) {
+            return ResponseEntity.badRequest().body("O Id do produto não foi informado");
         }
     }
+
 }

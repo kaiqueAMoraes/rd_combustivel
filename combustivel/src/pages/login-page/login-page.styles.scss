@@ -1,0 +1,30 @@
+
+.sign-in {
+    width: 480px;
+    height:  auto;
+    display: flex;
+    flex-direction: column;
+    margin: 35px;
+    padding: 25px;
+    background-color: #F8F9FA;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+.span-signin{
+  font-size: 12px;
+  color: rgb(63, 63, 63);
+}
+
+.text-container {
+  margin: 15px;
+  margin-bottom: 20px;
+}
+
+.btn-login{
+  margin-top: 20px;
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+}
