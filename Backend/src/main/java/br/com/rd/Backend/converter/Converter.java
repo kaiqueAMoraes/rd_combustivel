@@ -2,12 +2,15 @@ package br.com.rd.Backend.converter;
 
 import br.com.rd.Backend.DTOs.AddressDTO;
 import br.com.rd.Backend.DTOs.OrderDTO;
+import br.com.rd.Backend.DTOs.CategoryDTO;
+import br.com.rd.Backend.DTOs.ProductDTO;
 import br.com.rd.Backend.DTOs.UserDTO;
 import br.com.rd.Backend.DTOs.ProductDTO;
 
 import br.com.rd.Backend.models.Address;
 import br.com.rd.Backend.models.Order;
 import br.com.rd.Backend.models.OrderItem;
+import br.com.rd.Backend.models.Category;
 import br.com.rd.Backend.models.Product;
 import br.com.rd.Backend.models.User;
 
@@ -35,7 +38,19 @@ public class Converter {
     }
 
     public User converterTo(UserDTO userDTO){
-        return null;
+
+        User user = new User();
+
+        user.setFirstName(userDTO.getFirstName());
+        user.setLastName(userDTO.getLastName());
+        user.setCpf(userDTO.getCpf());
+        user.setBirth(userDTO.getBirth());
+        user.setEmail(userDTO.getEmail());
+        user.setPassword(userDTO.getPassword());
+        user.setGender(userDTO.getGender());
+        user.setPhone(userDTO.getPhone());
+
+        return user;
     }
 
     public Order converterTo(OrderDTO orderDTO) {
@@ -66,7 +81,17 @@ public class Converter {
         product.setImage(productDTO.getImage());
         product.setDescription(productDTO.getDescription());
         product.setQuantStock(productDTO.getQuantStock());
+        product.setIdCategory(productDTO.getIdCategory());
 
         return product;
+    }
+
+    public Category converterTo(CategoryDTO categoryDTO) {
+
+        Category category = new Category();
+
+        category.setName(categoryDTO.getName());
+
+        return category;
     }
 }
