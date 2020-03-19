@@ -85,4 +85,13 @@ public class Converter {
 
         return product;
     }
+
+    public Category converterTo(CategoryDTO categoryDTO) {
+
+        Category category = new Category();
+
+        category.setName(categoryDTO.getName());
+
+        return category;
+    }
 }
