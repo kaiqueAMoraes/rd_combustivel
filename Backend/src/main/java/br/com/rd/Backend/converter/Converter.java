@@ -69,5 +69,4 @@ public class Converter {
 
         return product;
     }
-
 }

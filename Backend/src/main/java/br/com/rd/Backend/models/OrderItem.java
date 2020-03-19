@@ -16,5 +16,5 @@ public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOrderItem;
-    
+
 }
