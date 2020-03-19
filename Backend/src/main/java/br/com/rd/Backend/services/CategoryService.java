@@ -6,6 +6,7 @@ import br.com.rd.Backend.models.Category;
 import br.com.rd.Backend.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -52,21 +53,50 @@ public class CategoryService implements CategoryInterface {
 
     @Override
     public ResponseEntity findCategoryById(Long id) {
-        return null;
+        try {
+            if (categoryRepository.findById(id).isEmpty()) {
+                return ResponseEntity.badRequest().body("Id da categoria não encontrado");
+            } else {
+                return ResponseEntity.ok().body(categoryRepository.findById(id).get());
+            }
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Erro: " + e);
+        }
     }
 
     @Override
     public ResponseEntity findCategoryByName(String name) {
-        return null;
+        try {
+            if (categoryRepository.findByName(name).isEmpty()) {
+                return ResponseEntity.badRequest().body("Categoria não encontrada");
+            } else {
+                return ResponseEntity.ok().body(categoryRepository.findByName(name));
+            }
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Erro: " + e);
+        }
     }
 
     @Override
     public ResponseEntity<List<Category>> findAllCategories() {
-        return null;
+        return ResponseEntity.ok().body(categoryRepository.findAll());
     }
 
     @Override
     public ResponseEntity updateCategory(CategoryDTO categoryDTO) {
-        return null;
+        try {
+            Category category = categoryRepository.getOne(categoryDTO.getIdCategory());
+
+            category.setName(categoryDTO.getName());
+
+            categoryRepository.save(category);
+
+            return ResponseEntity.ok().body(category);
+
+        } catch (InvalidDataAccessApiUsageException e) {
+            return ResponseEntity.badRequest().body("O idCategory não foi informado na requisição");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Erro: " + e);
+        }
     }
 }
