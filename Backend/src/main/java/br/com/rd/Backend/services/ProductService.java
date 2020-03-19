@@ -18,17 +18,32 @@ public class ProductService implements ProductInterface {
 
     @Override
     public ResponseEntity saveProduct(ProductDTO productDTO) {
-    Product product = new Product();
 
-    product.setName(productDTO.getName());
-    product.setDescription(productDTO.getDescription());
-    product.setImage(productDTO.getImage());
-    product.setPrice(productDTO.getPrice());
-    product.setQuantStock(productDTO.getQuantStock());
+        ResponseEntity response = null;
 
-    productRepository.save(product);
+        try {
+            if (productDTO.getName() == null ||
+                    productDTO.getPrice() == null ||
+                    productDTO.getQuantStock() == null
+            ) {
+                response = ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
+            } else {
+                Product product = new Product();
 
-    return ResponseEntity.ok().body("Produto criado");
+                product.setName(productDTO.getName());
+                product.setPrice(productDTO.getPrice());
+                product.setImage(productDTO.getImage());
+                product.setDescription(productDTO.getDescription());
+                product.setQuantStock(productDTO.getQuantStock());
+
+                productRepository.save(product);
+
+                response = ResponseEntity.ok().body(product);
+            }
+        } catch (Exception e) {
+            response = ResponseEntity.badRequest().body("Erro: " + e);
+        }
+            return response;
     }
 
     @Override

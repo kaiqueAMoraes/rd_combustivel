@@ -5,6 +5,7 @@ import br.com.rd.Backend.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,7 +15,7 @@ public class ProductController {
     ProductService productService;
 
     @PostMapping("/create-product")
-    public ResponseEntity saveProduct (ProductDTO productDTO) {
+    public ResponseEntity saveProduct (@RequestBody ProductDTO productDTO) {
         return productService.saveProduct(productDTO);
     }
 

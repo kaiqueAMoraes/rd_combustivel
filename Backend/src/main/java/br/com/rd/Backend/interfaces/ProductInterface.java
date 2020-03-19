@@ -8,13 +8,13 @@ import java.util.List;
 
 public interface ProductInterface {
 
-    ResponseEntity saveProduct (ProductDTO productDTO);
+    ResponseEntity saveProduct(ProductDTO productDTO);
 
-    ResponseEntity deleteProductById (Long id);
+    ResponseEntity deleteProductById(Long id);
 
-    ResponseEntity findProductById (Long id);
+    ResponseEntity findProductById(Long id);
 
-    ResponseEntity findProductByName (String name);
+    ResponseEntity findProductByName(String name);
 
     ResponseEntity<List<Product>> findProductByCategory (ProductDTO productDTO);
 
