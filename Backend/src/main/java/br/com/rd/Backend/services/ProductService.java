@@ -1,6 +1,7 @@
 package br.com.rd.Backend.services;
 
 import br.com.rd.Backend.DTOs.ProductDTO;
+import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.ProductInterface;
 import br.com.rd.Backend.models.Product;
 import br.com.rd.Backend.repositories.ProductRepository;
@@ -30,17 +31,13 @@ public class ProductService implements ProductInterface {
             ) {
                 response = ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
             } else {
-                Product product = new Product();
 
-                product.setName(productDTO.getName());
-                product.setPrice(productDTO.getPrice());
-                product.setImage(productDTO.getImage());
-                product.setDescription(productDTO.getDescription());
-                product.setQuantStock(productDTO.getQuantStock());
+                Converter converter = new Converter();
 
-                productRepository.save(product);
+                Product product = converter.converterTo(productDTO);
 
-                response = ResponseEntity.ok().body(product);
+               response = ResponseEntity.ok().body(productRepository.save(product));
+
             }
         } catch (Exception e) {
             response = ResponseEntity.badRequest().body("Erro: " + e);
@@ -95,17 +92,17 @@ public class ProductService implements ProductInterface {
     @Override
     public ResponseEntity updateProductById(@RequestBody ProductDTO productDTO) {
         try {
-            Product productEntity = productRepository.getOne(productDTO.getIdProduct());
+            Product product = productRepository.getOne(productDTO.getIdProduct());
 
-            productEntity.setName(productDTO.getName());
-            productEntity.setDescription(productDTO.getDescription());
-            productEntity.setQuantStock(productDTO.getQuantStock());
-            productEntity.setPrice(productDTO.getPrice());
-            productEntity.setImage(productDTO.getImage());
+            product.setName(productDTO.getName());
+            product.setDescription(productDTO.getDescription());
+            product.setQuantStock(productDTO.getQuantStock());
+            product.setPrice(productDTO.getPrice());
+            product.setImage(productDTO.getImage());
 
-            productRepository.save(productEntity);
+            productRepository.save(product);
 
-            return ResponseEntity.ok().body(productEntity);
+            return ResponseEntity.ok().body(product);
 
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Erro: " + e);
