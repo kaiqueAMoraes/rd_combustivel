@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -35,7 +36,7 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "dt_birth", nullable = false)
+    @Column(name = "dt_birth", nullable = true)
     private Date birth;
 
     @Column(name = "ds_gender")
@@ -43,5 +44,4 @@ public class User {
 
     @Column(name = "ds_phone", nullable = false)
     private String phone;
-
 }

@@ -1,5 +1,6 @@
 package br.com.rd.Backend.DTOs;
 
+import br.com.rd.Backend.models.Address;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
