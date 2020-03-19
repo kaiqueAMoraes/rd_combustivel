@@ -1,9 +1,11 @@
 package br.com.rd.Backend.converter;
 
 import br.com.rd.Backend.DTOs.AddressDTO;
+import br.com.rd.Backend.DTOs.CategoryDTO;
 import br.com.rd.Backend.DTOs.ProductDTO;
 import br.com.rd.Backend.DTOs.UserDTO;
 import br.com.rd.Backend.models.Address;
+import br.com.rd.Backend.models.Category;
 import br.com.rd.Backend.models.Product;
 import br.com.rd.Backend.models.User;
 
@@ -40,6 +42,7 @@ public class Converter {
         product.setImage(productDTO.getImage());
         product.setDescription(productDTO.getDescription());
         product.setQuantStock(productDTO.getQuantStock());
+        product.setIdCategory(productDTO.getIdCategory());
 
         return product;
     }

@@ -1,6 +1,7 @@
 package br.com.rd.Backend.interfaces;
 
 import br.com.rd.Backend.DTOs.ProductDTO;
+import br.com.rd.Backend.models.Category;
 import br.com.rd.Backend.models.Product;
 import org.springframework.http.ResponseEntity;
 
@@ -16,7 +17,7 @@ public interface ProductInterface {
 
     ResponseEntity findProductByName(String name);
 
-    //TO DO: Implementar busca pela categoria
+    ResponseEntity findProductByIdCategory(Category idCategory);
 
     ResponseEntity<List<Product>> findAllProducts ();
 
