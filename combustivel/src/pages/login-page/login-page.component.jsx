@@ -60,22 +60,24 @@ class LoginPage extends Component {
         else {
             try {
 
-                const { data: response } = await axios.get('http://localhost:8080/login', {
-                    params: {
-                      email: `${email}`
-                    }
-                  })
-                if (response.password === password) {
-                    let userName = JSON.stringify(response.name);
-                    this.props.history.push("/");
-                    sessionStorage.setItem("user", userName);
-                    window.location.reload();
-                }
-                else
-                    this.credentialsErrorMessage()
+                await axios.get('http://localhost:8080/find-user-email/' + email)
+                .then( response => {
+                        if (response.data[0].password === password) {
+                            let userName = response.data[0].firstName;
+                            this.props.history.push("/");
+                            sessionStorage.setItem("user", userName);
+                            window.location.reload();
+                        }
+                        else
+                        {
+                            this.credentialsErrorMessage()
+                        }
+                }).catch(error => {
+                    console.log(error)
+                });
             } catch (err) {
-                this.credentialsErrorMessage()
-                    ;
+                console.log(err)
+                this.credentialsErrorMessage();
             }
         }
     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Axios from 'axios';
+import axios from 'axios';
 
 
 
@@ -128,12 +128,17 @@ class CadastroPage extends Component {
                     if (CPF[i].match(intNum)) arr.push(CPF[i])
                 }
                 const cpf = arr.slice(",").join('');
-
                 if (!this.handleCpfValidation(cpf)) this.setState({ CPFValidation: "CPF invalido" })
                 else {
                     this.setState({ CPFValidation: "" })
 
-                    const user = {
+                    let birthArr = [];
+                    for (let i = 0; i < birth.length; i++) {
+                        if (birth[i].match(intNum)) birthArr.push(birth[i])
+                    }
+                    const date = birthArr.slice(",").join('');
+
+                    /* const user = {
                         "email": email,
                         "password": password,
                         "firstName": fullName.split(" ").slice(0, 1).toString(),
@@ -141,17 +146,47 @@ class CadastroPage extends Component {
                         "CPF": cpf,
                         "gender": gender,
                         "phone": phone,
-                        "birth": birth
-                    }
-                    console.log(user)
+                        "birth": date
+                    } */
+                    
+                    /* try {
+                        fetch('http://localhost:8080/create-user', {
+                            method: 'post',
+                            body: user
+                        }).then(function(response) {
+                            console.log(user)
+                            console.log(JSON.stringify(user))
+                            console.log(JSON.parse(user))
+                            return response.json();
+                          })
+                    }catch (err){
+                        this.setState({ errorMessage: err.toString() }) */
+
+                    //}
 
                     try {
-                        await Axios.post("http://localhost:8080/ecommerce/client/", user);
-                        this.clearState();
-                        this.props.history.push("/login");
+                        await axios.post("http://localhost:8080/create-user", {
+                            "email": email,
+                            "password": password,
+                            "firstName": fullName.split(" ").slice(0, 1).toString(),
+                            "lastName": fullName.split(" ").slice(1).join(" "),
+                            "cpf": cpf,
+                            "gender": gender,
+                            "phone": phone,
+                            "birth": date
+                        }).then( response => {
+                            console.log(response)
+                        }).catch(error => {
+                            console.log(error.response)
+                        });
+                        
                     } catch (error) {
                         this.setState({ errorMessage: error.toString() })
+                        console.log(error)
 
+                    } finally {
+                        this.clearState();
+                        this.props.history.push("/login");
                     }
             }
         }
