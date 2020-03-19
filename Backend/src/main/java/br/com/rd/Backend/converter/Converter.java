@@ -38,7 +38,19 @@ public class Converter {
     }
 
     public User converterTo(UserDTO userDTO){
-        return null;
+
+        User user = new User();
+
+        user.setFirstName(userDTO.getFirstName());
+        user.setLastName(userDTO.getLastName());
+        user.setCpf(userDTO.getCpf());
+        user.setBirth(userDTO.getBirth());
+        user.setEmail(userDTO.getEmail());
+        user.setPassword(userDTO.getPassword());
+        user.setGender(userDTO.getGender());
+        user.setPhone(userDTO.getPhone());
+
+        return user;
     }
 
     public Order converterTo(OrderDTO orderDTO) {
