@@ -29,8 +29,8 @@ class LoginPage extends Component {
         this.setState({ errorMessage: "" })
     }
 
-    emptyInputErrorMessage = () => {
-        this.setState({ errorMessage: "Os campos de email e senha estão vazios" })
+    emptyInputErrorMessage = error => {
+        this.setState({ errorMessage: error })
     }
 
     credentialsErrorMessage = () => {
@@ -49,9 +49,15 @@ class LoginPage extends Component {
 
 
         this.clearMessage();
-        if (!email || !password) {
-            this.emptyInputErrorMessage()
-        } else {
+        // TODO refatorar codigo
+        if (!email && !password) {
+            this.emptyInputErrorMessage("Os campos de email e senha estão vazios")
+        } else if(!email) {
+            this.emptyInputErrorMessage("O campo de email precisa estar preenchido")
+        } else if (!password){
+            this.emptyInputErrorMessage("O campo de senha precisa estar preenchido")
+        }
+        else {
             try {
 
                 const { data: response } = await axios.get('http://localhost:8080/login', {
@@ -86,6 +92,7 @@ class LoginPage extends Component {
                                     <span className="span-signin" >Entre com email e senha</span>
                                 </div>
                                 {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
+                                
                                 <FormInput
                                     name="email"
                                     type="email"
