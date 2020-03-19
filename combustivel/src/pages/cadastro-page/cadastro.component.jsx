@@ -21,39 +21,37 @@ class CadastroPage extends Component {
             this.props.history.push('/');
 
         this.state = {
-            "fullName": "",
-            "firstName": "",
-            "lastName": "",
-            "CPF": "",
-            "CPFValidation": "",
-            "email": "",
-            "password": "",
-            "passwordValidation": "",
-            "birth": "",
-            "gender": "",
-            "phone": "",
-            "errorMessage": ""
+            "fullName" : "",
+            "firstName" : "",
+            "lastName" : "",
+            "CPF" : "",
+            "CPFValidation" : "",
+            "email" : "",
+            "password" : "",
+            "passwordValidation" : "",
+            "birth" : "",
+            "gender" : "",
+            "phone" : "",
+            "errorMessage" : "",
+            "isValidEmail" : "",
+            "vGender" : "",
+            "vMail" : "",
+            "vBirth" : "",
+            "vPass" : "",
+            "vCpf" : "",
+            "vPhone" : "",
+            "vName" : "",
+            "valid" :false
         }
     }
 
     errorMessage = message => {
         this.setState({ errorMessage: `${message}` });
     }
-    
+
     clearErrorMessage = () => {
         this.setState({ errorMessage: "" });
     }
-
-    checkIfIsEmpty = () => {
-        const { firstName, lastName, CPF, email, password, passwordValidation, birth, gender, phone } = this.state;
-
-        const arr = [firstName, lastName, CPF, email, password, passwordValidation, birth, gender, phone];
-
-        arr.forEach(elm => {
-            if (elm === "") this.setState({ errorMessage: "todos os campos precisam ser preenchidos" })
-        });
-    }
-
 
     clearState = () => {
         this.setState({
@@ -65,7 +63,7 @@ class CadastroPage extends Component {
             "gender": "",
             "phone": "",
             "birth": "",
-            "valEmail" : ""
+            "valEmail": ""
         })
     }
 
@@ -114,93 +112,97 @@ class CadastroPage extends Component {
         return true
     };
 
-    checkEmail = async email => {
-        try {
-            await axios.get('http://localhost:8080/find-user-email/' + email)
-                .then( response => {
-                        if(response.data[0].email === email ){
-                            this.errorMessage('email já cadastrado')
-                        }
-                    }
-                    )}finally {
-                        return 
-                    }
-    }
-
-
     handleSubmit = async e => {
         e.preventDefault();
 
         let intNum = /^[0-9]+$/;
-        const { fullName, CPF, email, password, passwordValidation, birth, gender, phone, errorMessage } = this.state;
-        const arr = [fullName, CPF, email, password, passwordValidation, birth, gender, phone];
+        const { fullName, CPF, email, password, passwordValidation, birth, gender, phone, valid } = this.state;
 
 
-        arr.forEach(elm => {
-            if (elm === "") this.errorMessage("todos os campos precisam ser preenchidos")
-        });
+        // TODO este bloco de codigo é um codigo mocado e não deve ser passado para produção
 
+        fullName === "" ? this.setState({ vName: "este campo precisa estar preenchido" })
+            : this.setState({ vName: "" })
+
+        CPF === "" ? this.setState({ vCpf: "este campo precisa estar preenchido" })
+            : this.setState({ vCpf: "" })
         
-        this.checkEmail(email);
-        if(this.state.valEmail === ""){
-            this.clearErrorMessage();
-            if (password !== passwordValidation || (password === "" && passwordValidation === "")) this.errorMessage("as senhas precisam ser iguais")
-            else {
-                
-                let arr = [];
-                for (let i = 0; i < CPF.length; i++) {
-                    if (CPF[i].match(intNum)) arr.push(CPF[i])
-                }
-                const cpf = arr.slice(",").join('');
-                if (!this.handleCpfValidation(cpf)) this.setState({ CPFValidation: "CPF invalido" })
-                else {
-                    this.setState({ CPFValidation: "" })
+        email === "" ? this.setState({ vMail: "este campo precisa estar preenchido" })
+            : this.setState({ vMail: "" })
+        
+        password === "" ? this.setState({ vPass: "este campo precisa estar preenchido" })
+            : this.setState({ vPass: "" })
 
-                    let birthArr = [];
-                    for (let i = 0; i < birth.length; i++) {
-                        if (birth[i].match(intNum)) birthArr.push(birth[i])
-                    }
-                    const date = birthArr.slice(",").join('');
-                    const user = {
-                        "email": email,
-                        "password": password,
-                        "firstName": fullName.split(" ").slice(0, 1).toString(),
-                        "lastName": fullName.split(" ").slice(1).join(" "),
-                        "cpf": cpf,
-                        "gender": gender,
-                        "phone": phone,
-                        "birth": date
-                    }
-                    try {
-                        await axios.post("http://localhost:8080/create-user", user)
-                        .then( response => {
-                            console.log(response)
-                        }).catch(error => {
-                            this.errorMessage("error data : " + error.response.data)
-                        })
+        birth === "" ? this.setState({ vBirth: "este campo precisa estar preenchido" })
+            : this.setState({ vBirth: "" })
+        
+        gender === "" ? this.setState({ vGender: "este campo precisa estar preenchido" })
+            : this.setState({ vGender: "" })
+        
+        phone === "" ? this.setState({ vPhone: "este campo precisa estar preenchido" })
+            : this.setState({ vPhone: "" })
+
+         // TODO fim do codigo mocado !!!!! ==== nao passar para produção   
+
+        if (password !== passwordValidation) this.errorMessage("as senhas precisam ser iguais");
+
+
+        const arr = [];
+        for (let i = 0; i < CPF.length; i++) {
+            if (CPF[i].match(intNum)) arr.push(CPF[i])
+        }
+        const cpf = arr.slice(",").join('');
+        if (!this.handleCpfValidation(cpf)) this.setState({ vCpf: "CPF invalido", valid : false })
+        else {
+            this.setState({ CPFValidation: "" })
+
+            let birthArr = [];
+            for (let i = 0; i < birth.length; i++) {
+                if (birth[i].match(intNum)) birthArr.push(birth[i])
+            }
+            const date = birthArr.slice(",").join('');
+            const user = {
+                "email": email,
+                "password": password,
+                "firstName": fullName.split(" ").slice(0, 1).toString(),
+                "lastName": fullName.split(" ").slice(1).join(" "),
+                "cpf": cpf,
+                "gender": gender,
+                "phone": phone,
+                "birth": date
+            }
+            try {
+                await axios.post("http://localhost:8080/create-user", user)
+                    .then(response => {
+                        console.log(response)
+                        if (response.status === 200) 
+                            this.setState({ errorMessage: "", 
+                                            valid:true,
+                                            successMessage: "usuario cadastrado com sucesso" })
+                    }).catch(error => {
+                        throw new Error(error.response.data);
+                    })
+
+            } catch (err) {
+                if(err) {
+                    this.setState({ errorMessage: err.message, valid:false })
+                }                
+                //if(!err) this.setState({ valid:true ,  errorMessage: ""})
+            } finally {
+                    setInterval(()=> {
+                        this.clearState();
+                        sessionStorage.setItem("user", fullName);
+                        this.props.history.push("/");
                         
-                    } catch (error) {
-                        this.setState({ errorMessage: "d" })
-                        console.log(error)
-                        
-                    } finally {
-                        if(errorMessage !== ""){
-                            console.log("chegou no if do finally")
-                            this.clearErrorMessage();
-                        }
-                        console.log('chegou no finally')
-                        //this.setState({ successMessage: "usuario cadastrado com sucesso" })
-                        //setInterval(()=> {
-                        //    this.clearState();
-                        //    sessionStorage.setItem("user", fullName);
-                        //    this.props.history.push("/");
-                        //}, 3000)
-                        console.log(user)
-                    }
+                    }, 1500);
+                    this.setState({ successMessage: "" })
+                    console.log(user);
+                }
             }
         }
-    }
-}
+    
+
+
 
 
 render() {
@@ -223,6 +225,7 @@ render() {
                                 handleChange={this.handleChange}
                                 label='email'
                                 required />
+                            {this.state.vMail ? (<Alert className="m-4" variant='danger'>{this.state.vMail}</Alert>) : ""}
 
                             <FormInput name="password"
                                 type="password"
@@ -231,6 +234,8 @@ render() {
                                 label='senha'
                                 size="input-small"
                                 required />
+                            {this.state.vPass ? (<Alert className="m-4" variant='danger'>{this.state.vPass}</Alert>) : ""}
+
 
                             <FormInput
                                 name="passwordValidation"
@@ -248,8 +253,9 @@ render() {
                                 handleChange={this.handleNameChange}
                                 label='nome completo'
                                 required />
+                            {this.state.vName ? (<Alert className="m-4" variant='danger'>{this.state.vName}</Alert>) : ""}
 
-                            {this.state.CPFValidation ? (<Alert className="m-4" variant='danger'>{this.state.CPFValidation}</Alert>) : ""}
+
                             <FormInput
                                 name="CPF"
                                 type="text"
@@ -259,6 +265,7 @@ render() {
                                 value={this.state.CPF}
                                 handleChange={this.handleChange}
                                 required />
+                                {this.state.vCpf ? (<Alert className="m-4" variant='danger'>{this.state.vCpf}</Alert>) : ""}
 
 
                             <div className="gender">
@@ -282,6 +289,7 @@ render() {
                                     required />
                                     <label className="label-gender" htmlFor="m">masculino</label></div>
                             </div>
+                            {this.state.vGender ? (<Alert className="m-4" variant='danger'>{this.state.vGender}</Alert>) : ""}
 
                             {/* //TODO tratativa de ano de nascimento! */}
                             <FormInput
@@ -293,6 +301,8 @@ render() {
                                 value={this.state.birth}
                                 handleChange={this.handleChange}
                                 required />
+                            {this.state.vBirth ? (<Alert className="m-4" variant='danger'>{this.state.vBirth}</Alert>) : ""}
+
 
                             <FormInput
                                 label="telefone"
@@ -303,6 +313,7 @@ render() {
                                 value={this.state.phone}
                                 handleChange={this.handleChange}
                                 required />
+                            {this.state.vPhone ? (<Alert className="m-4" variant='danger'>{this.state.vPhone}</Alert>) : ""}
 
 
                             <CustomButton
@@ -310,8 +321,8 @@ render() {
                                 onClick={this.handleSubmit} >
                                 Continuar
                             </CustomButton>
-                        {this.state.successMessage ? (<Alert className="m-4" variant='success'>{this.state.successMessage}</Alert>) : ""}
-                        {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
+                            {this.state.successMessage ? (<Alert className="m-4" variant='success'>{this.state.successMessage}</Alert>) : ""}
+                            {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
 
                         </FormGroup>
 

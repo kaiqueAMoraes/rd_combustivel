@@ -41,7 +41,7 @@ const Header = ({ history }) => {
                                         <>
                                         <Link to="/pagina-do-usuario"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle" /></Link>
                                         <div className="user-login d-flex flex-column bd-highlight mb-3 Row" id="div-header-separation">
-                                            <h3 className="navbar-span" id="ola-navbar" >Olá, {currentUser}</h3>
+                                            <Link to="/pagina-do-usuario" className="navbar-span" id="ola-navbar" >Olá, {currentUser}</Link>
                                             <Link onClick={handleSignOut} className="navbar-span align-self-bottom" id="usuario-navbar">Sair?</Link>
                                         </div>
                                         </>
