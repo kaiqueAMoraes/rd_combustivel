@@ -35,4 +35,8 @@ public class Product {
     @Column(name = "nr_quantStock", nullable = false)
     private Long quantStock;
 
+    @ManyToOne
+    @JoinColumn(name = "id_category")
+    private Category idCategory;
+
 }

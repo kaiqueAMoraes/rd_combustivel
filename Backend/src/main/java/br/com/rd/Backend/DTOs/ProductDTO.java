@@ -1,5 +1,6 @@
 package br.com.rd.Backend.DTOs;
 
+import br.com.rd.Backend.models.Category;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,4 +18,5 @@ public class ProductDTO {
     private String image;
     private Double price;
     private Long quantStock;
+    private Category idCategory;
 }

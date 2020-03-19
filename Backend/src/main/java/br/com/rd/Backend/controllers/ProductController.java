@@ -1,10 +1,13 @@
 package br.com.rd.Backend.controllers;
 
 import br.com.rd.Backend.DTOs.ProductDTO;
+import br.com.rd.Backend.models.Category;
 import br.com.rd.Backend.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.websocket.server.PathParam;
 
 @RestController
 public class ProductController {
@@ -32,7 +35,10 @@ public class ProductController {
         return productService.findProductByName(name);
     }
 
-  // TO DO:  @GetMapping("/find-product-category/{idCategory}")
+    @GetMapping("/find-product-category/{idCategory}")
+    public ResponseEntity findProductByIdCategory (@PathVariable("idCategory") Category idCategory ) {
+        return productService.findProductByIdCategory(idCategory);
+    }
 
     @GetMapping("/find-all-products")
     public ResponseEntity findAllProducts() {

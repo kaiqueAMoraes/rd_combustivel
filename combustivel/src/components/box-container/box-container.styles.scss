@@ -1,0 +1,20 @@
+.box-container {
+    width: 480px;
+    height:  auto;
+    display: flex;
+    flex-direction: column;
+    margin: 35px;
+    padding: 25px;
+    background-color: #F8F9FA;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+        .box-medium {
+            width: 680px !important;
+        }
+    
+        .box-big {
+            width: 1120px !important;
+}
