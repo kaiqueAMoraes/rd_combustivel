@@ -1,9 +1,6 @@
 package br.com.rd.Backend.converter;
 
-import br.com.rd.Backend.DTOs.AddressDTO;
-import br.com.rd.Backend.DTOs.OrderDTO;
-import br.com.rd.Backend.DTOs.UserDTO;
-import br.com.rd.Backend.DTOs.ProductDTO;
+import br.com.rd.Backend.DTOs.*;
 
 import br.com.rd.Backend.models.Address;
 import br.com.rd.Backend.models.Order;
@@ -48,12 +45,16 @@ public class Converter {
         order.setIdAddress(orderDTO.getIdAddress());
 
         List<OrderItem> list = new ArrayList<>();
-        for (OrderItem itens: orderDTO.getList()) {
+        for (OrderItemDTO items: orderDTO.getList()) {
             OrderItem orderItem = new OrderItem();
-
+            orderItem.setIdProduct(items.getIdProduct());
+            orderItem.setPrice(items.getPrice());
+            orderItem.setQuantity(items.getQuantity());
 
             list.add(orderItem);
         }
+
+        order.setList(list);
 
         return order;
     }
@@ -68,5 +69,17 @@ public class Converter {
         product.setQuantStock(productDTO.getQuantStock());
 
         return product;
+    }
+
+    public OrderItem converterTo(OrderItemDTO orderItemDTO){
+
+        OrderItem orderItem = new OrderItem();
+
+        orderItem.setIdProduct(orderItemDTO.getIdProduct());
+        orderItem.setPrice(orderItemDTO.getPrice());
+        orderItem.setQuantity(orderItemDTO.getQuantity());
+
+        return orderItem;
+
     }
 }

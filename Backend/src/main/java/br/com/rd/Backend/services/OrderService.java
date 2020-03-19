@@ -1,11 +1,13 @@
 package br.com.rd.Backend.services;
 
 import br.com.rd.Backend.DTOs.OrderDTO;
+import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.OrderInterface;
 import br.com.rd.Backend.models.Order;
 import br.com.rd.Backend.models.User;
 import br.com.rd.Backend.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +22,18 @@ public class OrderService implements OrderInterface {
 
     @Override
     public ResponseEntity saveOrder(OrderDTO orderDTO) {
-        return null;
+        try{
+
+            Converter converter = new Converter();
+
+            Order order = converter.converterTo(orderDTO);
+
+            return ResponseEntity.ok().body(orderRepository.save(order));
+
+        } catch (DataIntegrityViolationException e){
+            return ResponseEntity.badRequest().body("Erro: um ou mais campos não foram preenchidos " +  e.getMessage());
+        }
+
     }
 
     @Override

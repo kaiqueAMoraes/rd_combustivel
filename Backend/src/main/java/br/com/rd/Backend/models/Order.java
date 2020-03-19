@@ -1,5 +1,6 @@
 package br.com.rd.Backend.models;
 
+import br.com.rd.Backend.DTOs.OrderItemDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,7 +23,8 @@ public class Order {
     @Column(name = "vl_total_price", nullable = false)
     private Double totalPrice;
 
-    @Column(name = "dt_order", nullable = false)
+    @Column(name = "dt_order")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
     @ManyToOne
@@ -34,7 +36,7 @@ public class Order {
     private Address idAddress;
 
     @OneToOne(targetEntity = OrderItem.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_itens")
+    @JoinColumn(name = "order_itens", nullable = false)
     private List<OrderItem> list;
 
 }
