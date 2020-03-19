@@ -122,12 +122,13 @@ class CadastroPage extends Component {
         if (errorMessage === "") {
             if (password !== passwordValidation) this.errorMessage("as senhas precisam ser iguais")
             else {
+                
                 let arr = [];
                 for (let i = 0; i < CPF.length; i++) {
                     if (CPF[i].match(intNum)) arr.push(CPF[i])
                 }
                 const cpf = arr.slice(",").join('');
-                console.log(cpf)
+
                 if (!this.handleCpfValidation(cpf)) this.setState({ CPFValidation: "CPF invalido" })
                 else {
                     this.setState({ CPFValidation: "" })
