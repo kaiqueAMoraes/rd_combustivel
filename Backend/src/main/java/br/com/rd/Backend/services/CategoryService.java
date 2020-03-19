@@ -24,10 +24,7 @@ public class CategoryService implements CategoryInterface {
         try {
             Category category = new Category();
 
-            if (categoryDTO.getName() == null) {
-                return ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
-
-            } else if (categoryRepository.findByName(categoryDTO.getName()).size() != 0) {
+            if (categoryRepository.findByName(categoryDTO.getName()).size() != 0) {
                 return ResponseEntity.badRequest().body("Esta categoria já está cadastrada");
 
             } else {
@@ -94,6 +91,6 @@ public class CategoryService implements CategoryInterface {
 
         } catch (InvalidDataAccessApiUsageException e) {
             return ResponseEntity.badRequest().body("O idCategory não foi informado na requisição");
-        } 
+        }
     }
 }
