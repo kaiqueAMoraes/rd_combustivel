@@ -6,6 +6,7 @@ import br.com.rd.Backend.DTOs.ProductDTO;
 import br.com.rd.Backend.models.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -55,7 +56,7 @@ public class Converter {
         order.setIdUser(orderDTO.getIdUser());
         order.setIdAddress(orderDTO.getIdAddress());
         order.setTotalPrice(orderDTO.getTotalPrice());
-        order.setDate(orderDTO.getDate());
+        order.setDate(new Date());
 
         List<OrderItem> listItems = converterTo(orderDTO.getList());
 

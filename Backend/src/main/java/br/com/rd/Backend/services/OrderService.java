@@ -57,7 +57,11 @@ public class OrderService implements OrderInterface {
 
     @Override
     public ResponseEntity findOrderByUser(User user) {
-        return null;
+        if (orderRepository.findByIdUser(user).isEmpty()) {
+            return ResponseEntity.badRequest().body("Não existem pedidos para teste usuário");
+        } else {
+            return ResponseEntity.ok().body(orderRepository.findByIdUser(user));
+        }
     }
 
     @Override

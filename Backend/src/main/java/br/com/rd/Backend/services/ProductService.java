@@ -86,7 +86,6 @@ public class ProductService implements ProductInterface {
         } else {
             return ResponseEntity.ok().body(productRepository.findByIdCategory(idCategory));
         }
-
     }
 
     @Override

@@ -23,7 +23,7 @@ public class Order {
     @Column(name = "vl_total_price", nullable = false)
     private Double totalPrice;
 
-    @Column(name = "dt_order", nullable = true)
+    @Column(name = "dt_order")
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
@@ -36,7 +36,7 @@ public class Order {
     private Address idAddress;
 
     @OneToMany(targetEntity = OrderItem.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_itens")
+    @JoinColumn(name = "id_order_itens")
     private List<OrderItem> list;
 
 }
