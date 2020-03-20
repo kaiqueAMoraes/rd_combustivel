@@ -5,8 +5,8 @@ import br.com.rd.Backend.DTOs.ProductDTO;
 
 import br.com.rd.Backend.models.*;
 
-import java.security.NoSuchAlgorithmException;
-import java.util.Calendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Converter {
@@ -66,10 +66,14 @@ public class Converter {
 
         Order order = new Order();
 
-        order.setTotalPrice(orderDTO.getTotalPrice());
-        order.setDate(orderDTO.getDate());
         order.setIdUser(orderDTO.getIdUser());
         order.setIdAddress(orderDTO.getIdAddress());
+        order.setTotalPrice(orderDTO.getTotalPrice());
+        order.setDate(orderDTO.getDate());
+
+        List<OrderItem> listItems = converterTo(orderDTO.getList());
+
+        order.setList(listItems);
 
         return order;
     }
@@ -89,16 +93,27 @@ public class Converter {
     }
 
 
-    public OrderItem converterTo(OrderItemDTO orderItemDTO) {
+    // public OrderItem converterTo(OrderItemDTO orderItemDTO) {
 
-        OrderItem orderItem = new OrderItem();
+    //     OrderItem orderItem = new OrderItem();
 
-        orderItem.setIdProduct(orderItemDTO.getIdProduct());
-        orderItem.setPrice(orderItemDTO.getPrice());
-        orderItem.setQuantity(orderItemDTO.getQuantity());
+    //     orderItem.setIdProduct(orderItemDTO.getIdProduct());
+    //     orderItem.setPrice(orderItemDTO.getPrice());
+    //     orderItem.setQuantity(orderItemDTO.getQuantity());
+        
+    public List<OrderItem> converterTo(List<OrderItemDTO> orderItemDTO) {
 
-        return orderItem;
+        List<OrderItem> listItems = new ArrayList<>();
+        for (OrderItemDTO orderItems : orderItemDTO) {
+            OrderItem it = new OrderItem();
+            it.setIdOrderItem(orderItems.getIdOrderItem());
+            it.setQuantity(orderItems.getQuantity());
+            it.setPrice(orderItems.getPrice());
+            it.setIdProduct(orderItems.getIdProduct());
+            listItems.add(it);
+        }
 
+        return listItems;
     }
 
     public Category converterTo(CategoryDTO categoryDTO) {
