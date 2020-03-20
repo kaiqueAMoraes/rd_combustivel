@@ -21,14 +21,15 @@ const Header = ({ history }) => {
     const currentUser = sessionStorage.getItem('user');
 
     {
-        return history.location.pathname === "/login" || history.location.pathname === "/cadastro" ? (
+        return history.location.pathname === "/login" || 
+            history.location.pathname === "/cadastro" || 
+            history.location.pathname === "/dashboard" ? (
 
             <Navbar className="bg-main navbar">
                 <Link to="/" className="logo"></Link>
                 <div className="d-flex user-bag">
                 </div>
             </Navbar>
-
         ) : (
                 <>
                     <Navbar className="bg-main navbar">
