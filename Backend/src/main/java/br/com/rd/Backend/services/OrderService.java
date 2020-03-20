@@ -27,31 +27,17 @@ public class OrderService implements OrderInterface {
     public ResponseEntity saveOrder(OrderDTO orderDTO) {
         try {
 
-            Order orderEntity = new Order();
+            Converter converter = new Converter();
 
-            orderEntity.setIdUser(orderDTO.getIdUser());
-            orderEntity.setIdAddress(orderDTO.getIdAddress());
-            orderEntity.setTotalPrice(orderDTO.getTotalPrice());
-            orderEntity.setDate(orderDTO.getDate());
+            Order order = converter.converterTo(orderDTO);
 
-            List<OrderItem> listItens = new ArrayList<>();
-            for (OrderItemDTO orderItens : orderDTO.getList()) {
-                OrderItem it = new OrderItem();
-                it.setIdOrderItem(orderItens.getIdOrderItem());
-                it.setQuantity(orderItens.getQuantity());
-                it.setPrice(orderItens.getPrice());
-                it.setIdProduct(orderItens.getIdProduct());
-                listItens.add(it);
-            }
+            orderRepository.save(order);
 
-            orderEntity.setList(listItens);
-            orderRepository.save(orderEntity);
-
-            return ResponseEntity.ok().body(orderEntity);
+            return ResponseEntity.ok().body(order);
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: um ou mais campos não foram preenchidos " + e.getMessage());
-        }
+        }   
     }
 
     @Override
@@ -76,7 +62,7 @@ public class OrderService implements OrderInterface {
 
     @Override
     public ResponseEntity<List<Order>> findAllOrders() {
-        return null;
+        return ResponseEntity.ok().body(orderRepository.findAll());
     }
 
     @Override

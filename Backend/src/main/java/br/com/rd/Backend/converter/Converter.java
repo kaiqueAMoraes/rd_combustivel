@@ -5,6 +5,9 @@ import br.com.rd.Backend.DTOs.ProductDTO;
 
 import br.com.rd.Backend.models.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Converter {
 
@@ -49,10 +52,14 @@ public class Converter {
 
         Order order = new Order();
 
-        order.setTotalPrice(orderDTO.getTotalPrice());
-        order.setDate(orderDTO.getDate());
         order.setIdUser(orderDTO.getIdUser());
         order.setIdAddress(orderDTO.getIdAddress());
+        order.setTotalPrice(orderDTO.getTotalPrice());
+        order.setDate(orderDTO.getDate());
+
+        List<OrderItem> listItems = converterTo(orderDTO.getList());
+
+        order.setList(listItems);
 
         return order;
     }
@@ -71,16 +78,19 @@ public class Converter {
         return product;
     }
 
-    public OrderItem converterTo(OrderItemDTO orderItemDTO) {
+    public List<OrderItem> converterTo(List<OrderItemDTO> orderItemDTO) {
 
-        OrderItem orderItem = new OrderItem();
+        List<OrderItem> listItems = new ArrayList<>();
+        for (OrderItemDTO orderItems : orderItemDTO) {
+            OrderItem it = new OrderItem();
+            it.setIdOrderItem(orderItems.getIdOrderItem());
+            it.setQuantity(orderItems.getQuantity());
+            it.setPrice(orderItems.getPrice());
+            it.setIdProduct(orderItems.getIdProduct());
+            listItems.add(it);
+        }
 
-        orderItem.setIdProduct(orderItemDTO.getIdProduct());
-        orderItem.setPrice(orderItemDTO.getPrice());
-        orderItem.setQuantity(orderItemDTO.getQuantity());
-
-        return orderItem;
-
+        return listItems;
     }
 
     public Category converterTo(CategoryDTO categoryDTO) {
