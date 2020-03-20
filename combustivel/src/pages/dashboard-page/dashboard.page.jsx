@@ -9,31 +9,40 @@ import './dashboard.styles.scss';
 import Container from 'react-bootstrap/Container'
 
 class DashboardPage extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
 
         if (sessionStorage.getItem('user'))
             this.props.history.push('/');
 
         this.state = {
-            produtos : []
+            produtos: []
         }
     }
 
-  render() {
-    return  (
-        <div className="dashboard-container">
-            <div className="user-profile"></div>
+    render() {
+        return (
 
-        <Container className="d-flex justify-content-between"> 
-            <div className="dashboard-content-holder">
-        
-                <CardsGrid api={'https://jsonplaceholder.typicode.com/users'}  itemsQtd={5}/>
-            </div> 
-        </Container>
-        </div>
-    )
-  }
+            <div className="dashboard-container">
+                <Container className="d-flex justify-content-between">
+                    <div className="user-container">
+                        <div className="user-profile">
+
+                            <div className="u-show">
+                                <h2>Minha conta</h2>
+                                <span>{sessionStorage.getItem('user')}</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="dashboard-content-holder">
+
+
+                    </div>
+                </Container>
+            </div>
+        )
+    }
 }
 
 export default withRouter(DashboardPage);

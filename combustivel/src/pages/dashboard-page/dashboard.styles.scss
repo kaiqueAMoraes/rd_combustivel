@@ -1,12 +1,11 @@
-body{
 
-
-}
 
 .user-profile,
-.dashboard-container {
-    border-radius: 4px;
-    padding: 15px
+.dashboard-content-holder {
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 15px #ebebeb;
+    background-color: #fff;
 }
 
 .dashboard-container {
@@ -14,16 +13,20 @@ body{
  display: flex;
  flex-direction: row;
 }
-
-.user-profile{
-    box-shadow: 0px 120px 25px #ebebeb;
-    background-color: #fff;
-    width: 360px;
+.user-container{
+    width: 275px;
+    position: relative;
+    margin-top: 85px;
 
 }
+.user-profile{
+    height: 370px;
+    width: 275px;
+    position: fixed;
+}
 
-.dashboard-items-holder{
-    width: 100%;
+.dashboard-content-holder{
+    width: 70%;
     height: 800px;
-    border : 1px solid red;
+    margin-top: 85px;
 }
