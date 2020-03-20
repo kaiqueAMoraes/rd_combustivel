@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.persistence.EntityNotFoundException;
+import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
@@ -41,9 +42,9 @@ public class UserService implements UserInterface {
             } else {
                 Converter converter = new Converter();
 
-                User user = converter.converterTo(userDTO);
+                User user = userRepository.save(converter.converterTo(userDTO));
 
-                response = ResponseEntity.ok().body(userRepository.save(user));
+                response = ResponseEntity.ok().body(converter.converterTo(user));
             }
         } catch (DataIntegrityViolationException e) {
             response = ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos ");
