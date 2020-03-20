@@ -13,13 +13,21 @@ import { faUserCircle, faInfoCircle, faShoppingBag} from '@fortawesome/free-soli
 class DashboardPage extends Component {
     constructor(props) {
         super(props);
-
-        if (!sessionStorage.getItem('user'))
+        const currentUser = sessionStorage.getItem('user');
+        if (!currentUser)
             this.props.history.push('/');
 
         this.state = {
+            user : {},
+            email: sessionStorage.getItem('email'),
             produtos: []
         }
+    }
+
+    handleUserInformation = async () => {
+        const {email}  = this.state;
+        await axios.get("http://localhost:8080/find-user-email/", email)
+        .then(response => this.setState({user : response}))
     }
 
     render() {
@@ -30,7 +38,7 @@ class DashboardPage extends Component {
                     <div className="user-container">
                         <div className="user-profile">
 
-                            <div className="u-show">
+                            <div className="u-show" onClick={this.handleUserInformation}>
                                 <div className="u-icon-holder"><FontAwesomeIcon icon={faInfoCircle} className="icon-userCircle" /></div>
 
                                 <div className="u-text-container">
@@ -48,7 +56,7 @@ class DashboardPage extends Component {
                     </div>
 
                     <div className="dashboard-content-holder">
-                        
+
                     </div>
                 </Container>
             </div>
