@@ -183,19 +183,15 @@ class CadastroPage extends Component {
                                     this.clearState();
                                     this.props.history.push("/");
                                 }, 1500);
-                                console.log(user);
-
+                                
                             } else {
-                                const err = response;
                                 throw new Error(response.data);
                             }
                         })
                 }
                 catch (err) {
                     if (err) {
-                        console.log(err.data)
-                        console.log(err.message)
-                        console.log(err.response.data)
+
                         this.setState({ errorMessage: err.response.data, valid: false })
                     }
                 } finally {
