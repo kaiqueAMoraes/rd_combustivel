@@ -12,7 +12,7 @@ class DashboardPage extends Component {
     constructor(props) {
         super(props);
 
-        if (sessionStorage.getItem('user'))
+        if (!sessionStorage.getItem('user'))
             this.props.history.push('/');
 
         this.state = {
