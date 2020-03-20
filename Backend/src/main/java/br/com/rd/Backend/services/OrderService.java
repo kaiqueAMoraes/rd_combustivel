@@ -47,7 +47,12 @@ public class OrderService implements OrderInterface {
 
     @Override
     public ResponseEntity findOrderById(Long id) {
-        return null;
+        if (orderRepository.findById(id).isEmpty()) {
+            return ResponseEntity.badRequest().body("Pedido não encontrado");
+        } else {
+            orderRepository.findById(id).get();
+            return ResponseEntity.ok().body(orderRepository.findById(id).get());
+        }
     }
 
     @Override
