@@ -6,11 +6,12 @@
     line-height: 50px;
     padding: 0 35px 0 35px;
     font-size: 12px;
-    background-color: black;
+    background-color: #4285f4;
     color: white;
     text-transform: uppercase;
     font-weight: bolder;
     border: none;
+    border-radius: 10px;
     cursor: pointer;
     &:hover {
       transition: all 0.5s;

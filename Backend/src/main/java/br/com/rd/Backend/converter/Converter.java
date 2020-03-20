@@ -31,7 +31,7 @@ public class Converter {
         return address;
     }
 
-    public User converterTo(UserDTO userDTO) {
+    public User converterTo(UserDTO userDTO){
 
         User user = new User();
 
@@ -44,10 +44,24 @@ public class Converter {
         user.setGender(userDTO.getGender());
         user.setPhone(userDTO.getPhone());
 
-
-
         return user;
     }
+
+    public UserDTO converterTo (User user) {
+        UserDTO userDTO = new UserDTO();
+
+        userDTO.setIdUser(user.getIdUser());
+        userDTO.setFirstName(user.getFirstName());
+        userDTO.setLastName(user.getLastName());
+        userDTO.setBirth(user.getBirth());
+        userDTO.setCpf(user.getCpf());
+        userDTO.setEmail(user.getEmail());
+        userDTO.setGender(user.getGender());
+        userDTO.setPhone(user.getPhone());
+
+        return userDTO;
+    }
+
 
     public Order converterTo(OrderDTO orderDTO) {
 
@@ -79,6 +93,15 @@ public class Converter {
         return product;
     }
 
+
+    // public OrderItem converterTo(OrderItemDTO orderItemDTO) {
+
+    //     OrderItem orderItem = new OrderItem();
+
+    //     orderItem.setIdProduct(orderItemDTO.getIdProduct());
+    //     orderItem.setPrice(orderItemDTO.getPrice());
+    //     orderItem.setQuantity(orderItemDTO.getQuantity());
+        
     public List<OrderItem> converterTo(List<OrderItemDTO> orderItemDTO) {
 
         List<OrderItem> listItems = new ArrayList<>();
