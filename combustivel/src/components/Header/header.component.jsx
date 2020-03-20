@@ -3,7 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import './header.styles.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import CartIcon from './cart-icon/cart-icon.component';
 
 import {

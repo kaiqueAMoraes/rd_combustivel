@@ -7,6 +7,8 @@ import CardsGrid from './cards-grid/cards-grid.component'
 
 import './dashboard.styles.scss';
 import Container from 'react-bootstrap/Container'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
 class DashboardPage extends Component {
     constructor(props) {
@@ -29,8 +31,39 @@ class DashboardPage extends Component {
                         <div className="user-profile">
 
                             <div className="u-show">
-                                <h2>Minha conta</h2>
-                                <span>{sessionStorage.getItem('user')}</span>
+                                <div className="u-icon-holder"><FontAwesomeIcon icon={faInfoCircle} className="icon-userCircle" /></div>
+
+                                <div className="u-text-container">
+                                <h2 class="u-title">Minha conta</h2>
+                                <span className="u-hello-user" >Olá, {sessionStorage.getItem('user')}</span>
+                                </div>
+                            </div>
+
+                            <div className="u-show">
+                                <div className="u-icon-holder"><FontAwesomeIcon icon={faInfoCircle} className="icon-userCircle" /></div>
+
+                                <div className="u-text-container">
+                                <h2 class="u-title">Minha conta</h2>
+                                <span className="u-hello-user" >Olá, {sessionStorage.getItem('user')}</span>
+                                </div>
+                            </div>
+
+                            <div className="u-show">
+                                <div className="u-icon-holder"><FontAwesomeIcon icon={faInfoCircle} className="icon-userCircle" /></div>
+
+                                <div className="u-text-container">
+                                <h2 class="u-title">Minha conta</h2>
+                                <span className="u-hello-user" >Olá, {sessionStorage.getItem('user')}</span>
+                                </div>
+                            </div>
+
+                            <div className="u-show">
+                                <div className="u-icon-holder"><FontAwesomeIcon icon={faInfoCircle} className="icon-userCircle" /></div>
+
+                                <div className="u-text-container">
+                                <h2 class="u-title">Minha conta</h2>
+                                <span className="u-hello-user" >Olá, {sessionStorage.getItem('user')}</span>
+                                </div>
                             </div>
 
                         </div>
