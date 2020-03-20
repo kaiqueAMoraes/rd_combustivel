@@ -21,27 +21,27 @@ class CadastroPage extends Component {
             this.props.history.push('/');
 
         this.state = {
-            "fullName" : "",
-            "firstName" : "",
-            "lastName" : "",
-            "CPF" : "",
-            "CPFValidation" : "",
-            "email" : "",
-            "password" : "",
-            "passwordValidation" : "",
-            "birth" : "",
-            "gender" : "",
-            "phone" : "",
-            "errorMessage" : "",
-            "isValidEmail" : "",
-            "vGender" : "",
-            "vMail" : "",
-            "vBirth" : "",
-            "vPass" : "",
-            "vCpf" : "",
-            "vPhone" : "",
-            "vName" : "",
-            "valid" :false
+            "fullName": "",
+            "firstName": "",
+            "lastName": "",
+            "CPF": "",
+            "CPFValidation": "",
+            "email": "",
+            "password": "",
+            "passwordValidation": "",
+            "birth": "",
+            "gender": "",
+            "phone": "",
+            "errorMessage": "",
+            "isValidEmail": "",
+            "vGender": "",
+            "vMail": "",
+            "vBirth": "",
+            "vPass": "",
+            "vCpf": "",
+            "vPhone": "",
+            "vName": "",
+            "valid": false
         }
     }
 
@@ -71,7 +71,6 @@ class CadastroPage extends Component {
         const { name, value } = e.target;
 
         this.setState({ [name]: value });
-        console.log(name + " : " + value)
     }
 
     handleNameChange = e => {
@@ -126,23 +125,23 @@ class CadastroPage extends Component {
 
         CPF === "" ? this.setState({ vCpf: "este campo precisa estar preenchido" })
             : this.setState({ vCpf: "" })
-        
+
         email === "" ? this.setState({ vMail: "este campo precisa estar preenchido" })
             : this.setState({ vMail: "" })
-        
+
         password === "" ? this.setState({ vPass: "este campo precisa estar preenchido" })
             : this.setState({ vPass: "" })
 
         birth === "" ? this.setState({ vBirth: "este campo precisa estar preenchido" })
             : this.setState({ vBirth: "" })
-        
+
         gender === "" ? this.setState({ vGender: "este campo precisa estar preenchido" })
             : this.setState({ vGender: "" })
-        
+
         phone === "" ? this.setState({ vPhone: "este campo precisa estar preenchido" })
             : this.setState({ vPhone: "" })
 
-         // TODO fim do codigo mocado !!!!! ==== nao passar para produção   
+        // TODO fim do codigo mocado !!!!! ==== nao passar para produção   
 
         if (password !== passwordValidation) this.errorMessage("as senhas precisam ser iguais");
 
@@ -152,186 +151,203 @@ class CadastroPage extends Component {
             if (CPF[i].match(intNum)) arr.push(CPF[i])
         }
         const cpf = arr.slice(",").join('');
-        if (!this.handleCpfValidation(cpf)) this.setState({ vCpf: "CPF invalido", valid : false })
-        else {
-            this.setState({ CPFValidation: "" })
+        try {
+            if (this.handleCpfValidation(cpf)) {
 
-            let birthArr = [];
-            for (let i = 0; i < birth.length; i++) {
-                if (birth[i].match(intNum)) birthArr.push(birth[i])
-            }
-            const date = birthArr.slice(",").join('');
-            const user = {
-                "email": email.toLowerCase(),
-                "password": password,
-                "firstName": fullName.split(" ").slice(0, 1).toString().toLowerCase(),
-                "lastName": fullName.split(" ").slice(1).join(" ").toLowerCase(),
-                "cpf": cpf,
-                "gender": gender,
-                "phone": phone,
-                "birth": date
-            }
-            try {
-                await axios.post("http://localhost:8080/create-user", user)
-                    .then(response => {
-                        console.log(response)
-                        if (response.status === 200) 
-                            this.setState({ errorMessage: "", 
-                                            valid:true,
-                                            successMessage: "usuario cadastrado com sucesso" })
-                    }).catch(error => {
-                        throw new Error(error.response.data);
-                    })
+                let birthArr = [];
+                for (let i = 0; i < birth.length; i++) {
+                    if (birth[i].match(intNum)) birthArr.push(birth[i])
+                }
+                const date = birthArr.slice(",").join('');
+                const user = {
+                    "email": email.toLowerCase(),
+                    "password": password,
+                    "firstName": fullName.split(" ").slice(0, 1).toString().toLowerCase(),
+                    "lastName": fullName.split(" ").slice(1).join(" ").toLowerCase(),
+                    "cpf": cpf,
+                    "gender": gender,
+                    "phone": phone,
+                    "birth": date
+                }
+                try {
+                    await axios.post("http://localhost:8080/create-user", user)
+                        .then(response => {
+                            if (response.status === 200) {
+                                this.setState({
+                                    errorMessage: "",
+                                    valid: true,
+                                    successMessage: "usuario cadastrado com sucesso"
+                                })
+                                sessionStorage.setItem("user", fullName);
+                                setInterval(() => {
+                                    this.clearState();
+                                    this.props.history.push("/");
+                                }, 1500);
+                                console.log(user);
 
-            } catch (err) {
-                if(err) {
-                    this.setState({ errorMessage: err.message, valid:false })
+                            } else {
+                                const err = response;
+                                throw new Error(response.data);
+                            }
+                        })
                 }
-            } finally {
-                sessionStorage.setItem("user", fullName);
-                    setInterval(()=> {
-                        this.clearState();
-                        this.props.history.push("/");
-                        
-                    }, 1500);
-                    console.log(user);
+                catch (err) {
+                    if (err) {
+                        console.log(err.data)
+                        console.log(err.message)
+                        console.log(err.response.data)
+                        this.setState({ errorMessage: err.response.data, valid: false })
+                    }
+                } finally {
+
                 }
+
+
             }
+            else throw new Error("cpf invalido");
+
+        } catch (err) {
+            this.setState({ errorMessage: err.message })
+
         }
-    
+
+    }
 
 
 
 
-render() {
-    return (
-        <div className="container mt-4">
-            <div className="row d-flex justify-content-center">
-                <BoxContainer >
-                    <div className="text-container" >
-                        <h1>Cadastre-se</h1>
-                    </div>
-                    <form method="get" onSubmit={this.handleSubmit}>
 
 
-                        <FormGroup>
 
-                            <FormInput
-                                name="email"
-                                type="email"
-                                value={this.state.email}
-                                handleChange={this.handleChange}
-                                label='email'
-                                required />
-                            {this.state.vMail ? (<Alert className="m-4" variant='danger'>{this.state.vMail}</Alert>) : ""}
-
-                            <FormInput name="password"
-                                type="password"
-                                value={this.state.password}
-                                handleChange={this.handleChange}
-                                label='senha'
-                                size="input-small"
-                                required />
-                            {this.state.vPass ? (<Alert className="m-4" variant='danger'>{this.state.vPass}</Alert>) : ""}
+    render() {
+        return (
+            <div className="container mt-4">
+                <div className="row d-flex justify-content-center">
+                    <BoxContainer >
+                        <div className="text-container" >
+                            <h1>Cadastre-se</h1>
+                        </div>
+                        <form method="get" onSubmit={this.handleSubmit}>
 
 
-                            <FormInput
-                                name="passwordValidation"
-                                type="password"
-                                value={this.state.passwordValidation}
-                                handleChange={this.handleChange}
-                                label='repita a senha'
-                                size="input-small"
-                                required />
+                            <FormGroup>
 
-                            <FormInput
-                                name="fullName"
-                                type="text"
-                                value={this.state.fullName}
-                                handleChange={this.handleNameChange}
-                                label='nome completo'
-                                required />
-                            {this.state.vName ? (<Alert className="m-4" variant='danger'>{this.state.vName}</Alert>) : ""}
+                                <FormInput
+                                    name="email"
+                                    type="email"
+                                    value={this.state.email}
+                                    handleChange={this.handleChange}
+                                    label='email'
+                                    required />
+                                {this.state.vMail ? (<Alert className="m-4" variant='danger'>{this.state.vMail}</Alert>) : ""}
+
+                                <FormInput name="password"
+                                    type="password"
+                                    value={this.state.password}
+                                    handleChange={this.handleChange}
+                                    label='senha'
+                                    size="input-small"
+                                    required />
+                                {this.state.vPass ? (<Alert className="m-4" variant='danger'>{this.state.vPass}</Alert>) : ""}
 
 
-                            <FormInput
-                                name="CPF"
-                                type="text"
-                                label="digite seu CPF"
-                                mask="999.999.999-99"
-                                size="input-m"
-                                value={this.state.CPF}
-                                handleChange={this.handleChange}
-                                required />
+                                <FormInput
+                                    name="passwordValidation"
+                                    type="password"
+                                    value={this.state.passwordValidation}
+                                    handleChange={this.handleChange}
+                                    label='repita a senha'
+                                    size="input-small"
+                                    required />
+
+                                <FormInput
+                                    name="fullName"
+                                    type="text"
+                                    value={this.state.fullName}
+                                    handleChange={this.handleNameChange}
+                                    label='nome completo'
+                                    required />
+                                {this.state.vName ? (<Alert className="m-4" variant='danger'>{this.state.vName}</Alert>) : ""}
+
+
+                                <FormInput
+                                    name="CPF"
+                                    type="text"
+                                    label="digite seu CPF"
+                                    mask="999.999.999-99"
+                                    size="input-m"
+                                    value={this.state.CPF}
+                                    handleChange={this.handleChange}
+                                    required />
                                 {this.state.vCpf ? (<Alert className="m-4" variant='danger'>{this.state.vCpf}</Alert>) : ""}
 
 
-                            <div className="gender">
-                                <div>
-                                    <input
-                                        id="f"
+                                <div className="gender">
+                                    <div>
+                                        <input
+                                            id="f"
+                                            name="gender"
+                                            type="radio"
+                                            value={"F"}
+                                            onClick={this.handleChange}
+                                            required />
+                                        <label className="label-gender" htmlFor="f">feminino</label>
+                                    </div>
+
+                                    <div><input
+                                        id="m"
                                         name="gender"
                                         type="radio"
-                                        value={"F"}
+                                        value={"M"}
                                         onClick={this.handleChange}
                                         required />
-                                    <label className="label-gender" htmlFor="f">feminino</label>
+                                        <label className="label-gender" htmlFor="m">masculino</label></div>
                                 </div>
+                                {this.state.vGender ? (<Alert className="m-4" variant='danger'>{this.state.vGender}</Alert>) : ""}
 
-                                <div><input
-                                    id="m"
-                                    name="gender"
-                                    type="radio"
-                                    value={"M"}
-                                    onClick={this.handleChange}
+                                {/* //TODO tratativa de ano de nascimento! */}
+                                <FormInput
+                                    label="data de nascimento"
+                                    name="birth"
+                                    type="text"
+                                    mask="99/99/9999"
+                                    size="input-small"
+                                    value={this.state.birth}
+                                    handleChange={this.handleChange}
                                     required />
-                                    <label className="label-gender" htmlFor="m">masculino</label></div>
-                            </div>
-                            {this.state.vGender ? (<Alert className="m-4" variant='danger'>{this.state.vGender}</Alert>) : ""}
-
-                            {/* //TODO tratativa de ano de nascimento! */}
-                            <FormInput
-                                label="data de nascimento"
-                                name="birth"
-                                type="text"
-                                mask="99/99/9999"
-                                size="input-small"
-                                value={this.state.birth}
-                                handleChange={this.handleChange}
-                                required />
-                            {this.state.vBirth ? (<Alert className="m-4" variant='danger'>{this.state.vBirth}</Alert>) : ""}
+                                {this.state.vBirth ? (<Alert className="m-4" variant='danger'>{this.state.vBirth}</Alert>) : ""}
 
 
-                            <FormInput
-                                label="telefone"
-                                mask="(99) 99999-9999"
-                                name="phone"
-                                type="text"
-                                size="input-m"
-                                value={this.state.phone}
-                                handleChange={this.handleChange}
-                                required />
-                            {this.state.vPhone ? (<Alert className="m-4" variant='danger'>{this.state.vPhone}</Alert>) : ""}
+                                <FormInput
+                                    label="telefone"
+                                    mask="(99) 99999-9999"
+                                    name="phone"
+                                    type="text"
+                                    size="input-m"
+                                    value={this.state.phone}
+                                    handleChange={this.handleChange}
+                                    required />
+                                {this.state.vPhone ? (<Alert className="m-4" variant='danger'>{this.state.vPhone}</Alert>) : ""}
 
 
-                            <CustomButton
-                                type="submit"
-                                onClick={this.handleSubmit} >
-                                Continuar
+                                <CustomButton
+                                    type="submit"
+                                    onClick={this.handleSubmit} >
+                                    Continuar
                             </CustomButton>
-                            {this.state.successMessage ? (<Alert className="m-4" variant='success'>{this.state.successMessage}</Alert>) : ""}
-                            {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
+                                {this.state.successMessage ? (<Alert className="m-4" variant='success'>{this.state.successMessage}</Alert>) : ""}
+                                {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
 
-                        </FormGroup>
+                            </FormGroup>
 
-                        <span>Já tem uma conta ? <Link to='/login'>faça login</Link></span>
+                            <span>Já tem uma conta ? <Link to='/login'>faça login</Link></span>
 
-                    </form>
-                </BoxContainer>
+                        </form>
+                    </BoxContainer>
+                </div>
             </div>
-        </div>
-    )
-}
+        )
+    }
 }
 
 
