@@ -19,4 +19,5 @@ public class ProductDTO {
     private Double price;
     private Long quantStock;
     private Category idCategory;
+
 }
