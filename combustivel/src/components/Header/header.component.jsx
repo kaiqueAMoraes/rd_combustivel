@@ -26,7 +26,6 @@ const Header = ({ history }) => {
             <Navbar className="bg-main navbar">
                 <Link to="/" className="logo"></Link>
                 <div className="d-flex user-bag">
-                    <div className="for-login-page"></div>
                 </div>
             </Navbar>
 
@@ -35,6 +34,8 @@ const Header = ({ history }) => {
                     <Navbar className="bg-main navbar">
                         <Link to="/" className="logo"></Link>
                         <div className="d-flex user-bag">
+                        <CartIcon />
+
                             <div className="logged navbar-brand d-flex" id="user">
                                 {
                                     currentUser ? (
@@ -56,25 +57,24 @@ const Header = ({ history }) => {
                                         )
                                 }
                             </div>
-                            <CartIcon />
 
                         </div>
                     </Navbar>
 
 
                     <Navbar className="nav-menu sub-navbar navbar-expand-lg navbar-light">
-                        <Container className="fluid">
-                            <ul className="navbar-nav">
-                                <li className="ml-4 nav-item mr-4">
+                        <Container className="fluid ">
+                            <ul className="navbar-nav d-flex none ">
+                                <li className="ml-4 nav-item mr-4 none">
                                     <Link className="nav-link" to={'/home/categoria/gasolina-aditivada/'}>Gasolina Adtivada</Link>
                                 </li>
-                                <li className="ml-4 nav-item mr-4">
+                                <li className="ml-4 nav-item mr-4 none">
                                     <Link className="nav-link" to={'/home/categoria/etanol-aditivado/'}>Etanol Adtivado</Link>
                                 </li>
-                                <li className="ml-4 nav-item mr-4">
+                                <li className="ml-4 nav-item mr-4 none" >
                                     <Link className="nav-link" to={'/home/categoria/Diesel/'}>Diesel</Link>
                                 </li>
-                                <li className="ml-4 nav-item mr-4">
+                                <li className="ml-4 nav-item mr-4 none">
                                     <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Gás Natural</Link>
                                 </li>
                             </ul>
