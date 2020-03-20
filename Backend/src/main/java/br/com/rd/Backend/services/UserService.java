@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.persistence.EntityNotFoundException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Service
@@ -103,6 +104,7 @@ public class UserService implements UserInterface {
     public ResponseEntity updateUserById(@RequestBody UserDTO userDTO) {
 
         try {
+
             User userEntity = userRepository.getOne(userDTO.getIdUser());
 
             userEntity.setFirstName(userDTO.getFirstName());

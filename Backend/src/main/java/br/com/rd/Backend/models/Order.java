@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+
 import java.util.Date;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class Order {
     @Column(name = "vl_total_price", nullable = false)
     private Double totalPrice;
 
-    @Column(name = "dt_order", nullable = false)
+    @Column(name = "dt_order", nullable = true)
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
@@ -34,7 +35,7 @@ public class Order {
     @JoinColumn(name = "id_address", nullable = false)
     private Address idAddress;
 
-    @OneToOne(targetEntity = OrderItem.class, cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = OrderItem.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "order_itens")
     private List<OrderItem> list;
 

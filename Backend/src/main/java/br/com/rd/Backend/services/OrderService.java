@@ -27,23 +27,27 @@ public class OrderService implements OrderInterface {
     public ResponseEntity saveOrder(OrderDTO orderDTO) {
         try {
 
-            Converter converter = new Converter();
+            Order orderEntity = new Order();
 
-            Order order = converter.converterTo(orderDTO);
+            orderEntity.setIdUser(orderDTO.getIdUser());
+            orderEntity.setIdAddress(orderDTO.getIdAddress());
+            orderEntity.setTotalPrice(orderDTO.getTotalPrice());
+            orderEntity.setDate(orderDTO.getDate());
 
-            List<OrderItem> list = new ArrayList<>();
-            for (OrderItemDTO items : orderDTO.getList()) {
-                OrderItem orderItem = new OrderItem();
-                orderItem.setIdProduct(items.getIdProduct());
-                orderItem.setPrice(items.getPrice());
-                orderItem.setQuantity(items.getQuantity());
-                orderItem.setIdOrderItem(items.getIdOrderItem());
-                list.add(orderItem);
+            List<OrderItem> listItens = new ArrayList<>();
+            for (OrderItemDTO orderItens : orderDTO.getList()) {
+                OrderItem it = new OrderItem();
+                it.setIdOrderItem(orderItens.getIdOrderItem());
+                it.setQuantity(orderItens.getQuantity());
+                it.setPrice(orderItens.getPrice());
+                it.setIdProduct(orderItens.getIdProduct());
+                listItens.add(it);
             }
 
-            order.setList(list);
+            orderEntity.setList(listItens);
+            orderRepository.save(orderEntity);
 
-            return ResponseEntity.ok().body(orderRepository.save(order));
+            return ResponseEntity.ok().body(orderEntity);
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: um ou mais campos não foram preenchidos " + e.getMessage());

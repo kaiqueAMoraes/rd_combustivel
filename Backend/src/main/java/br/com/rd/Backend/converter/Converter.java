@@ -3,14 +3,8 @@ package br.com.rd.Backend.converter;
 import br.com.rd.Backend.DTOs.*;
 import br.com.rd.Backend.DTOs.ProductDTO;
 
-import br.com.rd.Backend.models.Address;
-import br.com.rd.Backend.models.Order;
-import br.com.rd.Backend.models.OrderItem;
-import br.com.rd.Backend.models.Product;
-import br.com.rd.Backend.models.User;
+import br.com.rd.Backend.models.*;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Converter {
 
@@ -33,7 +27,7 @@ public class Converter {
         return address;
     }
 
-    public User converterTo(UserDTO userDTO){
+    public User converterTo(UserDTO userDTO) {
 
         User user = new User();
 
@@ -45,6 +39,8 @@ public class Converter {
         user.setPassword(userDTO.getPassword());
         user.setGender(userDTO.getGender());
         user.setPhone(userDTO.getPhone());
+
+
 
         return user;
     }
@@ -84,6 +80,8 @@ public class Converter {
         orderItem.setQuantity(orderItemDTO.getQuantity());
 
         return orderItem;
+
+    }
 
     public Category converterTo(CategoryDTO categoryDTO) {
 
