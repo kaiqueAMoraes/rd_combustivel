@@ -33,8 +33,20 @@ public class Converter {
         return address;
     }
 
-    public User converterTo(UserDTO userDTO) {
-        return null;
+    public User converterTo(UserDTO userDTO){
+
+        User user = new User();
+
+        user.setFirstName(userDTO.getFirstName());
+        user.setLastName(userDTO.getLastName());
+        user.setCpf(userDTO.getCpf());
+        user.setBirth(userDTO.getBirth());
+        user.setEmail(userDTO.getEmail());
+        user.setPassword(userDTO.getPassword());
+        user.setGender(userDTO.getGender());
+        user.setPhone(userDTO.getPhone());
+
+        return user;
     }
 
     public Order converterTo(OrderDTO orderDTO) {
@@ -73,5 +85,12 @@ public class Converter {
 
         return orderItem;
 
+    public Category converterTo(CategoryDTO categoryDTO) {
+
+        Category category = new Category();
+
+        category.setName(categoryDTO.getName());
+
+        return category;
     }
 }

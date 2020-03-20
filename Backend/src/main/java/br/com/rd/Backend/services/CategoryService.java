@@ -1,6 +1,7 @@
 package br.com.rd.Backend.services;
 
 import br.com.rd.Backend.DTOs.CategoryDTO;
+import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.CategoryInterface;
 import br.com.rd.Backend.models.Category;
 import br.com.rd.Backend.repositories.CategoryRepository;
@@ -22,13 +23,15 @@ public class CategoryService implements CategoryInterface {
     @Override
     public ResponseEntity saveCategory(CategoryDTO categoryDTO) {
         try {
-            Category category = new Category();
 
             if (categoryRepository.findByName(categoryDTO.getName()).size() != 0) {
-                return ResponseEntity.badRequest().body("Esta categoria já está cadastrada");
+                return ResponseEntity.badRequest().body("Esta categoria já foi cadastrada");
 
             } else {
-                category.setName(categoryDTO.getName());
+
+                Converter converter = new Converter();
+
+                Category category = converter.converterTo(categoryDTO);
 
                 return ResponseEntity.ok().body(categoryRepository.save(category));
             }
@@ -90,7 +93,7 @@ public class CategoryService implements CategoryInterface {
             return ResponseEntity.ok().body(category);
 
         } catch (InvalidDataAccessApiUsageException e) {
-            return ResponseEntity.badRequest().body("O idCategory não foi informado na requisição");
+            return ResponseEntity.badRequest().body("O Id da categoria não foi informado na requisição");
         }
     }
 }

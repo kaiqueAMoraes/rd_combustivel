@@ -59,16 +59,11 @@ public class ProductService implements ProductInterface {
 
     @Override
     public ResponseEntity findProductById(Long id) {
-        try {
-            if (productRepository.findById(id).isEmpty()) {
-                return ResponseEntity.badRequest().body("Id do produto não encontrado");
-            } else {
-                return ResponseEntity.ok().body(productRepository.findById(id).get());
-            }
-        } catch (DataIntegrityViolationException e) {
-            return ResponseEntity.badRequest().body("Foram enviados campos nulos");
-        } catch (EmptyResultDataAccessException e) {
-            return ResponseEntity.badRequest().body("Id do produto não existe");
+
+        if (productRepository.findById(id).isEmpty()) {
+            return ResponseEntity.badRequest().body("Id do produto não encontrado");
+        } else {
+            return ResponseEntity.ok().body(productRepository.findById(id).get());
         }
     }
 
@@ -115,7 +110,7 @@ public class ProductService implements ProductInterface {
             return ResponseEntity.ok().body(product);
 
         } catch (InvalidDataAccessApiUsageException e) {
-            return ResponseEntity.badRequest().body("O Id do produto não foi informado");
+            return ResponseEntity.badRequest().body("O Id do produto não foi informado na requisição");
         }
     }
 

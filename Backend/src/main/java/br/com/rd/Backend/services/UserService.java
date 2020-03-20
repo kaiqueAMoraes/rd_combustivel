@@ -1,15 +1,19 @@
 package br.com.rd.Backend.services;
 
 import br.com.rd.Backend.DTOs.UserDTO;
+import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.UserInterface;
 import br.com.rd.Backend.models.User;
 import br.com.rd.Backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @Service
@@ -22,45 +26,28 @@ public class UserService implements UserInterface {
     @Override
     public ResponseEntity saveUser(UserDTO userDTO) {
         ResponseEntity response = null;
-        try {
-            if (
-                    userDTO.getFirstName() == null ||
-                            userDTO.getLastName() == null ||
-                            userDTO.getCpf() == null ||
-                            userDTO.getBirth() == null ||
-                            userDTO.getEmail() == null ||
-                            userDTO.getPassword() == null
 
-            ) {
-                response = ResponseEntity.badRequest().body("Um dos campos obrigátorios não foi preenchido");
-            }
+        try {
             //Validação de email já cadastrado
 
-            else if (userRepository.findByEmail(userDTO.getEmail()).size() != 0) {
-                return ResponseEntity.badRequest().body("Este e-mail já está cadastrado");
+            if (userRepository.findByEmail(userDTO.getEmail()).size() != 0) {
+                return ResponseEntity.badRequest().body("Este e-mail já foi cadastrado");
             }
 
             //Validação de CPF já cadastrado
             else if (userRepository.findByCpf(userDTO.getCpf()).size() != 0) {
-                return ResponseEntity.badRequest().body("Este CPF já está cadastrado");
+                return ResponseEntity.badRequest().body("Este CPF já foi cadastrado");
             } else {
-                User user = new User();
-                user.setFirstName(userDTO.getFirstName());
-                user.setLastName(userDTO.getLastName());
-                user.setCpf(userDTO.getCpf());
-                user.setBirth(userDTO.getBirth());
-                user.setEmail(userDTO.getEmail());
-                user.setPassword(userDTO.getPassword());
-                user.setGender(userDTO.getGender());
-                user.setPhone(userDTO.getPhone());
+                Converter converter = new Converter();
 
-                userRepository.save(user);
-                response = ResponseEntity.ok().body(" Usuário cadastrado");
+                User user = converter.converterTo(userDTO);
+
+                response = ResponseEntity.ok().body(userRepository.save(user));
             }
-            return response;
-        } catch (Exception e ) {
-            return ResponseEntity.badRequest().body("Erro: " + e );
+        } catch (DataIntegrityViolationException e) {
+            response = ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos ");
         }
+        return response;
     }
 
     @Override
@@ -69,9 +56,7 @@ public class UserService implements UserInterface {
             userRepository.deleteById(id);
             return ResponseEntity.ok().body("Usuário deletado");
         } catch (EmptyResultDataAccessException e) {
-            return ResponseEntity.badRequest().body("Id do usuário incorreto");
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Não foi possível realizar a consulta");
+            return ResponseEntity.badRequest().body("Id do usuário não existe");
         }
     }
 
@@ -79,44 +64,34 @@ public class UserService implements UserInterface {
     @Override
     public ResponseEntity findUserById(Long id) {
 
-        try {
-            if (userRepository.findById(id).isEmpty()) {
-                return ResponseEntity.badRequest().body("Id do usuário não encontrado");
-            } else {
+        if (userRepository.findById(id).isEmpty()) {
+            return ResponseEntity.badRequest().body("Id do usuário não encontrado");
+        } else {
             userRepository.findById(id).get();
             return ResponseEntity.ok().body(userRepository.findById(id).get());
-            }
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Id do usuário não encontrado");
         }
     }
 
     @Override
     public ResponseEntity findUserByEmail(String email) {
 
-        try {
-            if (userRepository.findByEmail(email).isEmpty()) {
-                return ResponseEntity.badRequest().body("Email não encontrado");
-            } else {
+        if (userRepository.findByEmail(email).isEmpty()) {
+            return ResponseEntity.badRequest().body("Email não encontrado");
+        } else {
             userRepository.findByEmail(email);
             return ResponseEntity.ok().body(userRepository.findByEmail(email));
-            }
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("E-mail não encontrado");
         }
     }
 
     @Override
     public ResponseEntity findUserByCpf(String cpf) {
-        try {
-            if (userRepository.findByCpf(cpf).isEmpty()) {
-                return ResponseEntity.badRequest().body("CPF não encontrado");
-            } else {
-                return ResponseEntity.ok().body(userRepository.findByCpf(cpf));
-            }
-        } catch (Exception e) {
+
+        if (userRepository.findByCpf(cpf).isEmpty()) {
             return ResponseEntity.badRequest().body("CPF não encontrado");
+        } else {
+            return ResponseEntity.ok().body(userRepository.findByCpf(cpf));
         }
+
     }
 
     @Override
@@ -138,11 +113,14 @@ public class UserService implements UserInterface {
             userEntity.setEmail(userDTO.getEmail());
             userEntity.setPassword(userDTO.getPassword());
 
-            userRepository.save(userEntity);
+            return ResponseEntity.ok().body(userRepository.save(userEntity));
 
-            return ResponseEntity.ok().body("Atualizado com sucesso");
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Erro: " + e);
+        } catch (InvalidDataAccessApiUsageException e) {
+            return ResponseEntity.badRequest().body("O Id do usuário não foi informado na requisição");
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.badRequest().body("Erro: " + e.getMessage());
+        } catch (EmptyResultDataAccessException e) {
+            return ResponseEntity.badRequest().body("Id do usuário não existe");
         }
     }
 }
