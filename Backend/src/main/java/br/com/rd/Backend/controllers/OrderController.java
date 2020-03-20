@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
+
 @RestController
 public class OrderController {
 
@@ -32,4 +34,10 @@ public class OrderController {
     public ResponseEntity findById(@PathVariable("idUser") User user){
         return orderService.findOrderByUser(user);
     }
+
+    @GetMapping("/find-orders-bydate/{date}")
+    public ResponseEntity findById(@PathVariable("date") Date date){
+        return orderService.findOrderByDate(date);
+    }
+
 }

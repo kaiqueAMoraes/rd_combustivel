@@ -13,6 +13,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -58,16 +59,22 @@ public class OrderService implements OrderInterface {
     @Override
     public ResponseEntity findOrderByUser(User user) {
         if (orderRepository.findByIdUser(user).isEmpty()) {
-            return ResponseEntity.badRequest().body("Não existem pedidos para teste usuário");
+            return ResponseEntity.badRequest().body("Não existem pedidos para este usuário");
         } else {
             return ResponseEntity.ok().body(orderRepository.findByIdUser(user));
         }
     }
 
     @Override
-    public ResponseEntity findOrderByDate(Date date) {
-        return null;
+    public ResponseEntity findOrderByDate(Date date) { //TODO
+
+        if (orderRepository.findByDate(date).isEmpty()) {
+            return ResponseEntity.badRequest().body("Não existem pedidos para a data informada");
+        } else {
+            return ResponseEntity.ok().body(orderRepository.findByDate(date));
+        }
     }
+
 
     @Override
     public ResponseEntity<List<Order>> findAllOrders() {
