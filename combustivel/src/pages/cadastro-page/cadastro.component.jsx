@@ -43,7 +43,7 @@ class CadastroPage extends Component {
             "vName": "",
             "valid": false
         }
-        this.handleChange = this.handleChange.bind(this);
+        //this.handleChange = this.handleChange.bind(this);
     }
 
     errorMessage = message => {
