@@ -43,6 +43,7 @@ class CadastroPage extends Component {
             "vName": "",
             "valid": false
         }
+        this.handleChange = this.handleChange.bind(this);
     }
 
     errorMessage = message => {
@@ -179,9 +180,11 @@ class CadastroPage extends Component {
                                     successMessage: "usuario cadastrado com sucesso"
                                 })
                                 sessionStorage.setItem("user", fullName);
+                                sessionStorage.setItem("email", response.data[0].email);
                                 setInterval(() => {
                                     this.clearState();
                                     this.props.history.push("/");
+                                    window.location.reload();
                                 }, 1500);
                                 
                             } else {

@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import {  withRouter } from 'react-router-dom';
 import axios from 'axios';
+//Link
 
-import CustomButton from '../../components/custom-button/custom-button.component';
-import CardsGrid from './cards-grid/cards-grid.component'
+//import CustomButton from '../../components/custom-button/custom-button.component';
+//import CardsGrid from './cards-grid/cards-grid.component'
 
 import './dashboard.styles.scss';
 import Container from 'react-bootstrap/Container'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle, faInfoCircle, faShoppingBag} from '@fortawesome/free-solid-svg-icons'
-
+import {  faInfoCircle, faShoppingBag} from '@fortawesome/free-solid-svg-icons'
+//faUserCircle,
 class DashboardPage extends Component {
     constructor(props) {
         super(props);
@@ -22,19 +23,30 @@ class DashboardPage extends Component {
             email: sessionStorage.getItem('email'),
             produtos: []
         }
+
+        //this.handleUserInformation = this.handleUserInformation.bind(this);
     }
 
-    handleUserInformation = async () => {
-        const {email}  = this.state;
-        await axios.get("http://localhost:8080/find-user-email/", email)
-        .then(response => this.setState({user : response}))
+    componentDidMount = () => {
+        //console.log(this.state.email)
+       const handleUserInformation = async () => {
+            const {email}  = this.state;
+            console.log(email)
+            await axios.get('http://localhost:8080/find-user-email/' + email)
+                .then( response => {
+                        console.log(response)
+                }).catch(error => {
+                    console.log(error)
+                });
+        }
+        handleUserInformation();
     }
 
     render() {
         return (
 
             <div className="dashboard-container">
-                <Container className="d-flex justify-content-between">
+                <Container className="inner-container">
                     <div className="user-container">
                         <div className="user-profile">
 
@@ -42,7 +54,7 @@ class DashboardPage extends Component {
                                 <div className="u-icon-holder"><FontAwesomeIcon icon={faInfoCircle} className="icon-userCircle" /></div>
 
                                 <div className="u-text-container">
-                                <h2 class="u-title">Minha conta</h2>
+                                <h2 className="u-title">Minha conta</h2>
                                 <span className="u-hello-user" >Olá, {sessionStorage.getItem('user')}</span>
                                 </div>
                             </div>

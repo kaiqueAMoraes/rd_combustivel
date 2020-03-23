@@ -29,6 +29,8 @@ const Header = ({ history }) => {
             <Navbar className="bg-main navbar">
                 <Link to="/" className="logo"></Link>
                 <div className="d-flex user-bag">
+                <Link onClick={handleSignOut} className="navbar-span align-self-bottom" id="usuario-navbar">Sair</Link>
+
                 </div>
             </Navbar>
         ) : (
@@ -45,7 +47,7 @@ const Header = ({ history }) => {
                                         <Link to="/dashboard"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle" /></Link>
                                         <div className="user-login d-flex flex-column bd-highlight mb-3 Row" id="div-header-separation">
                                             <Link to="/dashboard" className="navbar-span" id="ola-navbar" >Olá, {currentUser}</Link>
-                                            <Link onClick={handleSignOut} className="navbar-span align-self-bottom" id="usuario-navbar">Sair?</Link>
+                                            <Link  to="/dashboard" className="navbar-span align-self-bottom" id="usuario-navbar">Minha conta</Link>
                                         </div>
                                         </>
                                     ) : (
