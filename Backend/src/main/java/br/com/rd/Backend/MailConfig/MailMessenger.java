@@ -1,11 +1,15 @@
 package br.com.rd.Backend.MailConfig;
 
 import br.com.rd.Backend.models.User;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class MailMessenger {
 
     private String sender;
@@ -13,10 +17,4 @@ public class MailMessenger {
     private String subject;
     private String bodyMail;
 
-    public MailMessenger(String sender, String recipient, String subject, String bodyMail) {
-        this.sender = sender;
-        this.recipient = recipient;
-        this.subject = subject;
-        this.bodyMail = bodyMail;
-    }
 }

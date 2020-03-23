@@ -8,8 +8,8 @@ public class SpringMailMain {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
                 SpringMailMain.class.getPackage().getName());
 
-        SendMail sendMail = applicationContext.getBean(SendMail.class);
-        sendMail.enviar(new MailMessenger(
+        MailService mailService = applicationContext.getBean(MailService.class);
+        mailService.enviar(new MailMessenger(
                 "origin.combustivel@gmail.com",
                 "aryana.silva@usp.br",
                 "Teste Esqueci minha senha",
