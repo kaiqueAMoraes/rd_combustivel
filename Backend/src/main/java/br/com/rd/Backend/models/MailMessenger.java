@@ -1,4 +1,4 @@
-package br.com.rd.Backend.MailConfig;
+package br.com.rd.Backend.models;
 
 import br.com.rd.Backend.models.User;
 import lombok.AllArgsConstructor;
