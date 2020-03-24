@@ -5,6 +5,7 @@ import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.AddressInterface;
 import br.com.rd.Backend.models.Address;
 import br.com.rd.Backend.repositories.AddressRepository;
+import br.com.rd.Backend.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
@@ -58,6 +59,15 @@ public class AddressService implements AddressInterface {
             return null;
         } else {
             return ResponseEntity.ok().body(addressRepository.findAll());
+        }
+    }
+
+    @Override
+    public ResponseEntity findAddressByUser(User user) {
+        if (addressRepository.findByIdUser(user).isEmpty()) {
+            return ResponseEntity.badRequest().body("Não existem endereços para este usuário");
+        } else {
+            return ResponseEntity.ok().body(addressRepository.findByIdUser(user));
         }
     }
 
