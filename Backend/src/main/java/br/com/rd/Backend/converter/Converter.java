@@ -31,7 +31,23 @@ public class Converter {
         return address;
     }
 
-    public User converterTo(UserDTO userDTO){
+    public AddressDTO converterTo(Address address) {
+
+        AddressDTO addressDTO = new AddressDTO();
+
+        addressDTO.setCep(address.getCep());
+        addressDTO.setState(address.getState());
+        addressDTO.setCity(address.getCity());
+        addressDTO.setDistrict(address.getDistrict());
+        addressDTO.setStreet(address.getStreet());
+        addressDTO.setNumber(address.getNumber());
+        addressDTO.setComplement(address.getComplement());
+        addressDTO.setIdUser(address.getIdUser());
+
+        return addressDTO;
+    }
+
+    public User converterTo(UserDTO userDTO) {
 
         User user = new User();
 
@@ -47,7 +63,8 @@ public class Converter {
         return user;
     }
 
-    public UserDTO converterTo (User user) {
+    public UserDTO converterTo(User user) {
+
         UserDTO userDTO = new UserDTO();
 
         userDTO.setIdUser(user.getIdUser());
@@ -61,7 +78,6 @@ public class Converter {
 
         return userDTO;
     }
-
 
     public Order converterTo(OrderDTO orderDTO) {
 
@@ -79,29 +95,22 @@ public class Converter {
         return order;
     }
 
-    public Product converterTo(ProductDTO productDTO) {
+    public OrderDTO converterTo(Order order) {
 
-        Product product = new Product();
+        OrderDTO orderDTO = new OrderDTO();
 
-        product.setName(productDTO.getName());
-        product.setPrice(productDTO.getPrice());
-        product.setImage(productDTO.getImage());
-        product.setDescription(productDTO.getDescription());
-        product.setQuantStock(productDTO.getQuantStock());
-        product.setIdCategory(productDTO.getIdCategory());
+        orderDTO.setIdUser(order.getIdUser());
+        orderDTO.setIdAddress(order.getIdAddress());
+        orderDTO.setTotalPrice(order.getTotalPrice());
+        orderDTO.setDate(new Date());
 
-        return product;
+        List<OrderItemDTO> listItems = convert(order.getList());
+
+        orderDTO.setList(listItems);
+
+        return orderDTO;
     }
 
-
-    // public OrderItem converterTo(OrderItemDTO orderItemDTO) {
-
-    //     OrderItem orderItem = new OrderItem();
-
-    //     orderItem.setIdProduct(orderItemDTO.getIdProduct());
-    //     orderItem.setPrice(orderItemDTO.getPrice());
-    //     orderItem.setQuantity(orderItemDTO.getQuantity());
-        
     public List<OrderItem> converterTo(List<OrderItemDTO> orderItemDTO) {
 
         List<OrderItem> listItems = new ArrayList<>();
@@ -117,6 +126,49 @@ public class Converter {
         return listItems;
     }
 
+    public List<OrderItemDTO> convert(List<OrderItem> orderItem) {
+
+        List<OrderItemDTO> listItems = new ArrayList<>();
+        for (OrderItem orderItems : orderItem) {
+            OrderItemDTO it = new OrderItemDTO();
+            it.setIdOrderItem(orderItems.getIdOrderItem());
+            it.setQuantity(orderItems.getQuantity());
+            it.setPrice(orderItems.getPrice());
+            it.setIdProduct(orderItems.getIdProduct());
+            listItems.add(it);
+        }
+
+        return listItems;
+    }
+
+    public Product converterTo(ProductDTO productDTO) {
+
+        Product product = new Product();
+
+        product.setName(productDTO.getName());
+        product.setPrice(productDTO.getPrice());
+        product.setImage(productDTO.getImage());
+        product.setDescription(productDTO.getDescription());
+        product.setQuantStock(productDTO.getQuantStock());
+        product.setIdCategory(productDTO.getIdCategory());
+
+        return product;
+    }
+
+    public ProductDTO converterTo(Product product) {
+
+        ProductDTO productDTO = new ProductDTO();
+
+        productDTO.setName(product.getName());
+        productDTO.setPrice(product.getPrice());
+        productDTO.setImage(product.getImage());
+        productDTO.setDescription(product.getDescription());
+        productDTO.setQuantStock(product.getQuantStock());
+        productDTO.setIdCategory(product.getIdCategory());
+
+        return productDTO;
+    }
+
     public Category converterTo(CategoryDTO categoryDTO) {
 
         Category category = new Category();
@@ -124,5 +176,14 @@ public class Converter {
         category.setName(categoryDTO.getName());
 
         return category;
+    }
+
+    public CategoryDTO converterTo(Category category) {
+
+        CategoryDTO categoryDTO = new CategoryDTO();
+
+        categoryDTO.setName(category.getName());
+
+        return categoryDTO;
     }
 }

@@ -23,12 +23,10 @@ public class UserService implements UserInterface {
 
     @Autowired
     UserRepository userRepository;
-
+    private User user;
 
     @Override
     public ResponseEntity saveUser(UserDTO userDTO) {
-        ResponseEntity response = null;
-
         try {
             //Validação de email já cadastrado
 
@@ -41,15 +39,12 @@ public class UserService implements UserInterface {
                 return ResponseEntity.badRequest().body("Este CPF já foi cadastrado");
             } else {
                 Converter converter = new Converter();
-
                 User user = userRepository.save(converter.converterTo(userDTO));
-
-                response = ResponseEntity.ok().body(converter.converterTo(user));
+                return ResponseEntity.ok().body(converter.converterTo(user));
             }
         } catch (DataIntegrityViolationException e) {
-            response = ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos ");
+            return ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos ");
         }
-        return response;
     }
 
     @Override
@@ -65,7 +60,6 @@ public class UserService implements UserInterface {
 
     @Override
     public ResponseEntity findUserById(Long id) {
-
         if (userRepository.findById(id).isEmpty()) {
             return ResponseEntity.badRequest().body("Id do usuário não encontrado");
         } else {
@@ -76,7 +70,6 @@ public class UserService implements UserInterface {
 
     @Override
     public ResponseEntity findUserByEmail(String email) {
-
         if (userRepository.findByEmail(email).isEmpty()) {
             return ResponseEntity.badRequest().body("Email não encontrado");
         } else {
@@ -87,13 +80,11 @@ public class UserService implements UserInterface {
 
     @Override
     public ResponseEntity findUserByCpf(String cpf) {
-
         if (userRepository.findByCpf(cpf).isEmpty()) {
             return ResponseEntity.badRequest().body("CPF não encontrado");
         } else {
             return ResponseEntity.ok().body(userRepository.findByCpf(cpf));
         }
-
     }
 
     @Override
@@ -103,9 +94,7 @@ public class UserService implements UserInterface {
 
     @Override
     public ResponseEntity updateUserById(@RequestBody UserDTO userDTO) {
-
         try {
-
             User userEntity = userRepository.getOne(userDTO.getIdUser());
 
             userEntity.setFirstName(userDTO.getFirstName());

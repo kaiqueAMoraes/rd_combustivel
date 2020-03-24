@@ -5,7 +5,6 @@ import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.AddressInterface;
 import br.com.rd.Backend.models.Address;
 import br.com.rd.Backend.repositories.AddressRepository;
-import com.fasterxml.jackson.core.JsonParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +22,6 @@ public class AddressService implements AddressInterface {
     public ResponseEntity saveAddress(AddressDTO addressDTO) {
 
         try {
-
             Converter converter = new Converter();
 
             Address address = converter.converterTo(addressDTO);
@@ -41,7 +39,7 @@ public class AddressService implements AddressInterface {
             return ResponseEntity.ok().body("Não há registros para o id informado");
         } else {
             addressRepository.deleteById(id);
-            return ResponseEntity.ok().body("Endereco deletado");
+            return ResponseEntity.ok().body("Endereço deletado");
         }
     }
 

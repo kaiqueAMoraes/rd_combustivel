@@ -67,7 +67,6 @@ public class OrderService implements OrderInterface {
 
     @Override
     public ResponseEntity findOrderByDate(Date date) { //TODO
-
         if (orderRepository.findByDate(date).isEmpty()) {
             return ResponseEntity.badRequest().body("Não existem pedidos para a data informada");
         } else {
@@ -82,7 +81,7 @@ public class OrderService implements OrderInterface {
     }
 
     @Override
-    public ResponseEntity updateOrderById(OrderDTO orderDTO) {
+    public ResponseEntity updateOrderById(OrderDTO orderDTO) { //TODO
         return null;
     }
 }
