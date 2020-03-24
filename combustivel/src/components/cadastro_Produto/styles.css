@@ -1,0 +1,20 @@
+
+.titulo {
+    background-color: #ff6b6b;
+    color: white;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: solid;
+    border-radius: 10px;
+    width: 30.5vw;
+    
+}
+
+.form {
+    background-color: rgb(218, 211, 211);
+    width: 30vw;
+    margin-bottom: 10px;
+    height: 600px;
+    padding-top: 20px;
+
+}
