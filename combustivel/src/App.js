@@ -6,6 +6,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './pages/login-page/login-page.component';
 import CadastroPage from './pages/cadastro-page/cadastro.component';
+import Produto from './components/grid-produto/grid-produto.components';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Switch>
         <Route exact path="/login" component={Login} />
         <Route exact path="/cadastro" component={CadastroPage} />
+        <Produto/>
       </Switch>
     </BrowserRouter>
   </>
