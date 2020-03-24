@@ -20,7 +20,17 @@ public class MailController {
 
     @GetMapping("/recuperar-senha/{email}")
     public ResponseEntity recuperarSenha(@PathVariable("email") String email){
+
+        String user = userService.findUserByEmail(email).toString();
+        String envioEmail = "aryanaagustavo.aa@gmail.com";
+
+        mailService.recuperarSenha(envioEmail, user);
+
         return userService.findUserByEmail(email);
+
     }
+
+
+
 
 }
