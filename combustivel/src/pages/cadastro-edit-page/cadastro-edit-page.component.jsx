@@ -11,27 +11,30 @@ import Alert from 'react-bootstrap/Alert'
 
 import BoxContainer from "../../components/box-container/box-container.component"
 
-import './cadastro.styles.scss';
+import './cadastro-edit-page.styles.scss';
 
-class CadastroPage extends Component {
+class CadastroEditPage extends Component {
     constructor(props) {
         super(props);
-
-        if (sessionStorage.getItem('user'))
+        const user = props.history.location.state.response;
+        
+        if (!sessionStorage.getItem('user')){
             this.props.history.push('/');
+        }
 
         this.state = {
-            "fullName": "",
-            "firstName": "",
-            "lastName": "",
-            "CPF": "",
+            "idUser" : user.idUser,
+            "fullName": user.firstName + " " + user.lastName,
+            "firstName": user.firstName,
+            "lastName": user.lastName,
+            "CPF": user.cpf,
             "CPFValidation": "",
-            "email": "",
+            "email": user.email,
             "password": "",
             "passwordValidation": "",
-            "birth": "",
-            "gender": "",
-            "phone": "",
+            "birth": user.birth,
+            "gender": user.birth,
+            "phone": user.phone,
             "errorMessage": "",
             "isValidEmail": "",
             "vGender": "",
@@ -43,7 +46,12 @@ class CadastroPage extends Component {
             "vName": "",
             "valid": false
         }
+
         //this.handleChange = this.handleChange.bind(this);
+    }
+
+    componentDidMount = (props) => {
+        console.log(props)
     }
 
     errorMessage = message => {
@@ -116,7 +124,7 @@ class CadastroPage extends Component {
         e.preventDefault();
 
         let intNum = /^[0-9]+$/;
-        const { fullName, CPF, email, password, passwordValidation, birth, gender, phone, valid } = this.state;
+        const { fullName, CPF, email, password, passwordValidation, birth, gender, phone, idUser, valid } = this.state;
 
 
         // TODO este bloco de codigo é um codigo mocado e não deve ser passado para produção
@@ -161,6 +169,7 @@ class CadastroPage extends Component {
                 }
                 const date = birthArr.slice(",").join('');
                 const user = {
+                    "userId": idUser,
                     "email": email.toLowerCase(),
                     "password": password,
                     "firstName": fullName.split(" ").slice(0, 1).toString().toLowerCase(),
@@ -171,13 +180,13 @@ class CadastroPage extends Component {
                     "birth": date
                 }
                 try {
-                    await axios.post("http://localhost:8080/create-user", user)
+                    await axios.put("http://localhost:8080/update-user", user)
                         .then(response => {
                             if (response.status === 200) {
                                 this.setState({
                                     errorMessage: "",
                                     valid: true,
-                                    successMessage: "usuario cadastrado com sucesso"
+                                    successMessage: "informações editadas com sucesso"
                                 })
                                 sessionStorage.setItem("user", fullName);
                                 sessionStorage.setItem("email", response.data.email);
@@ -194,13 +203,8 @@ class CadastroPage extends Component {
                 }
                 catch (err) {
                     if (err) {
-                        // aparentemente por qualquer motivo que seja a maneira a qual o erro é 
-                        // passado está vindo de acordo com a maquina desde response para response.data
-                        // eu não sei o motivo, porém é possivel vir o erro dizendo que não é possivel
-                        // criar um react child com objetos, se der, descomente abaixo um e comente o outro.
-
-                        //this.setState({ errorMessage: err.response, valid: false })
-                        this.setState({ errorMessage: err.response.data, valid: false })
+                        console.log(err.response)
+                        this.setState({ errorMessage: err.response, valid: false })
                     }
                 } finally {
 
@@ -217,19 +221,13 @@ class CadastroPage extends Component {
 
     }
 
-
-
-
-
-
-
     render() {
         return (
             <div className="container mt-4">
                 <div className="row d-flex justify-content-center">
                     <BoxContainer >
                         <div className="text-container" >
-                            <h1>Cadastre-se</h1>
+                            <h1>Editar informações</h1>
                         </div>
                         <form method="get" onSubmit={this.handleSubmit}>
 
@@ -343,8 +341,8 @@ class CadastroPage extends Component {
                                 {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
 
                             </FormGroup>
+                            <Link to='/dashboard'>voltar</Link>
 
-                            <span>Já tem uma conta ? <Link to='/login'>faça login</Link></span>
 
                         </form>
                     </BoxContainer>
@@ -356,4 +354,4 @@ class CadastroPage extends Component {
 
 
 
-export default withRouter(CadastroPage);
+export default withRouter(CadastroEditPage);
