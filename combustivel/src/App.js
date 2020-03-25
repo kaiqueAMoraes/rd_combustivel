@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Switch>
-        {/* <Product/>  - só para testar a pag produto*/}
+        <Product/>  {/* - só para testar a pag produto*/}
         <Route exact path="/login" component={Login} />
         <Route exact path="/cadastro" component={CadastroPage} />
         <Route exact path="/dashboard" component={DashboardPage}/>

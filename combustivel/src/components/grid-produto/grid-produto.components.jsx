@@ -14,7 +14,7 @@ class Product extends Component {
 constructor(props){
     super(props);
     this.state = {
-        id: "",
+        idProduct: "",
         name: "",
         description: "",
         image: "",
@@ -31,7 +31,7 @@ constructor(props){
         const {data:product} = await axios("http://localhost:8080/find-product/{id}");
 
         this.setState({
-            id: product.idProduct,
+            idProduct: product.idProduct,
             name: product.name,
             description: product.description,
             image: product.image,
