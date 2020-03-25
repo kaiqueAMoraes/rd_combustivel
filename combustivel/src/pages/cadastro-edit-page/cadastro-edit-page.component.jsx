@@ -160,29 +160,34 @@ class CadastroEditPage extends Component {
         }
         const cpf = arr.slice(",").join('');
         try {
-            if (this.handleCpfValidation(cpf)) {
+        console.log("entrou try")
+        if (this.handleCpfValidation(cpf)) {
+            console.log("passou validação")
+            
+            let birthArr = [];
+            for (let i = 0; i < birth.length; i++) {
+                if (birth[i].match(intNum)) birthArr.push(birth[i])
+            }
+            const date = birthArr.slice(",").join('');
+            const user = {
+                "idUser": idUser,
+                "email": email.toLowerCase(),
+                "password": password,
+                "firstName": fullName.split(" ").slice(0, 1).toString().toLowerCase(),
+                "lastName": fullName.split(" ").slice(1).join(" ").toLowerCase(),
+                "cpf": cpf,
+                "gender": gender,
+                "phone": phone,
+                "birth": date
+            }
+            console.log("entrou val")
+            try {
+                console.log("entrou try da requisição")
 
-                let birthArr = [];
-                for (let i = 0; i < birth.length; i++) {
-                    if (birth[i].match(intNum)) birthArr.push(birth[i])
-                }
-                const date = birthArr.slice(",").join('');
-                const user = {
-                    "idUser": idUser,
-                    "email": email.toLowerCase(),
-                    "password": password,
-                    "firstName": fullName.split(" ").slice(0, 1).toString().toLowerCase(),
-                    "lastName": fullName.split(" ").slice(1).join(" ").toLowerCase(),
-                    "cpf": cpf,
-                    "gender": gender,
-                    "phone": phone,
-                    "birth": date
-                }
-                console.log("entrou val")
-                try {
-                    await axios.put("http://localhost:8080/update-user", user)
-                        .then(response => {
-                            if (response.status === 200) {
+                await axios.put("http://localhost:8080/update-user", user)
+                .then(response => {
+                    if (response.status === 200) {
+                        console.log("passou validação server")
                                 this.setState({
                                     errorMessage: "",
                                     valid: true,
@@ -193,10 +198,12 @@ class CadastroEditPage extends Component {
                                 //sessionStorage.setItem("email", response.data[0].email);
                                 setInterval(() => {
                                     this.clearState();
-                                    this.props.history.push("/");
+                                    this.props.history.push("/dashboard");
                                     window.location.reload();
                                 }, 1500);
                             } else {
+                        console.log("deu erro com servidor")
+
                                 throw new Error(response.data);
                             }
                         })
@@ -204,7 +211,7 @@ class CadastroEditPage extends Component {
                 catch (err) {
                     if (err) {
                         console.log(err.response)
-                        //this.setState({ errorMessage: err.response, valid: false })
+                        this.setState({ errorMessage: err.response.data.error, valid: false })
                     }
                 } finally {
 
@@ -222,7 +229,6 @@ class CadastroEditPage extends Component {
     }
 
     render() {
-console.log(this.state)
 
         return (
             <div className="container mt-4">

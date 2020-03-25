@@ -122,8 +122,8 @@ class CreateAddress extends Component {
             if (err) {
                 console.log('err.response')
                 console.log(err)
-                console.log(address);
                 console.log('err.response')
+                
                 this.setState({ errorMessage: err.toString(), valid: false })
             }
         }
