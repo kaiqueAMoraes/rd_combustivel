@@ -44,4 +44,5 @@ public class User {
 
     @Column(name = "ds_phone", nullable = false)
     private String phone;
+
 }

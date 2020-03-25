@@ -6,7 +6,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './pages/login-page/login-page.component';
 import CadastroPage from './pages/cadastro-page/cadastro.component';
-import Produto from './components/grid-produto/grid-produto.components';
+import CadastroEditPage from './pages/cadastro-edit-page/cadastro-edit-page.component';
+import CreateAddress from './pages/create-address-page/create-address-page.component';
+import DashboardPage from './pages/dashboard-page/dashboard.page';
 
 
 function App() {
@@ -17,7 +19,10 @@ function App() {
       <Switch>
         <Route exact path="/login" component={Login} />
         <Route exact path="/cadastro" component={CadastroPage} />
-        <Produto/>
+        <Route exact path="/dashboard" component={DashboardPage}/>
+        <Route exact path="/dashboard/novo-endereco" component={CreateAddress}/>
+        <Route exact path="/dashboard/edit-endereco" component={CreateAddress}/>
+        <Route exact path="/dashboard/edit-usuario" component={CadastroEditPage}/>
       </Switch>
     </BrowserRouter>
   </>

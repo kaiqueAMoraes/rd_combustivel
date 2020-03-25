@@ -31,8 +31,8 @@ public class UserController {
     }
 
     @GetMapping("/find-user-email/{email}")
-    public  ResponseEntity findByEmail(@PathVariable ("email") String email) {
-        return  userService.findUserByEmail(email);
+    public ResponseEntity findByEmail(@PathVariable ("email") String email) {
+        return userService.findUserByEmail(email);
     }
 
     @GetMapping("find-user-cpf/{cpf}")
@@ -45,9 +45,8 @@ public class UserController {
         return userService.findAllUsers();
     }
 
-    @PutMapping("update-user/{id}")
+    @PutMapping("update-user")
     public ResponseEntity updateUserById(@RequestBody UserDTO user) {
         return userService.updateUserById(user);
     }
-
 }

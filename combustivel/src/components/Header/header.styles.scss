@@ -2,10 +2,12 @@
     background-color: #fff;
     box-shadow: 0px 0px 25px #ebebeb;
     display: flex;
-    padding-left: 11% !important;
-    padding-right: 11% !important;
+    padding-left: 7% !important;
+    padding-right: 7% !important;
     display: flex;
     justify-content: space-between;
+    height: 70px;
+    z-index: 99999;
 }
 
 /*.navbar {
@@ -28,6 +30,8 @@ a:hover {
     border: 1px solid #e3e3e3;
     margin-bottom: 35px;
     height: 40px;
+    z-index: 99999;
+
 }
 
 .logo {
@@ -43,12 +47,15 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    height: 42px;
+    margin-left: 10px;
+    width: 300px;
 }
 
 .icon-userCircle {
-    font-size: 40px;
-    padding-top: 7px;
-    color: #929292
+    font-size: 33px;
+
+    color: #333;
 }
 
 
@@ -87,7 +94,7 @@ a:hover {
 }
 
 
-@media (max-width: 576px) {
+@media (max-width: 1056px) {
 
     .navbar,
     .sub-navbar {
@@ -100,9 +107,13 @@ a:hover {
     .sub-navbar {
         margin-bottom: 90px !important;
         background-color: #fff;
-        box-shadow: 0 0 15px #cacaca;
-        top: 77px;
-        z-index: 99;
+        box-shadow: 0px 10px 5px rgba(226, 234, 255, 0.61);
+        display: none;
+        
+    }
+    .none{
+        
+        display: none;
     }
 
     #ola-navbar,
@@ -112,7 +123,8 @@ a:hover {
 
     #user {
         margin: 0;
-        width: 55px;
+    width: 300px;
+
     }
 
     .login-icon {
@@ -121,6 +133,9 @@ a:hover {
 
 }
 
+.login-span{
+    font-size: 13px;
+}
 
 .carrinho-container {
     width: 290px;
@@ -136,4 +151,20 @@ a:hover {
 
 .for-login-page{
     height: 100px;
+}
+
+.get-exit{
+    background-color: #F082AC82;
+    padding:  8.5px 20px;
+    color: #fff !important;
+    border-radius: 20px;
+    &:hover{
+        transition: all 0.5s;
+        background-color: #F082AC;
+    }
+}
+
+.user-name{
+  color: #fd8091 !important;
+
 }

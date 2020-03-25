@@ -5,6 +5,7 @@ import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.AddressInterface;
 import br.com.rd.Backend.models.Address;
 import br.com.rd.Backend.repositories.AddressRepository;
+import br.com.rd.Backend.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +23,6 @@ public class AddressService implements AddressInterface {
     public ResponseEntity saveAddress(AddressDTO addressDTO) {
 
         try {
-
             Converter converter = new Converter();
 
             Address address = converter.converterTo(addressDTO);
@@ -40,7 +40,7 @@ public class AddressService implements AddressInterface {
             return ResponseEntity.ok().body("Não há registros para o id informado");
         } else {
             addressRepository.deleteById(id);
-            return ResponseEntity.ok().body("Endereco deletado");
+            return ResponseEntity.ok().body("Endereço deletado");
         }
     }
 
@@ -63,6 +63,15 @@ public class AddressService implements AddressInterface {
     }
 
     @Override
+    public ResponseEntity findAddressByUser(User user) {
+        if (addressRepository.findByIdUser(user).isEmpty()) {
+            return ResponseEntity.badRequest().body("Não existem endereços para este usuário");
+        } else {
+            return ResponseEntity.ok().body(addressRepository.findByIdUser(user));
+        }
+    }
+
+    @Override
     public ResponseEntity updateAddressById(AddressDTO addressDTO) {
         try {
             Address addressUpdate = addressRepository.getOne(addressDTO.getIdAddress());
@@ -74,7 +83,7 @@ public class AddressService implements AddressInterface {
             addressUpdate.setStreet(addressDTO.getStreet());
             addressUpdate.setNumber(addressDTO.getNumber());
             addressUpdate.setComplement(addressDTO.getComplement());
-            addressUpdate.setUser(addressDTO.getUser());
+            addressUpdate.setIdUser(addressDTO.getIdUser());
 
             Address addressResponse = addressRepository.save(addressUpdate);
 

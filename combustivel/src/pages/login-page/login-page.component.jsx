@@ -66,6 +66,7 @@ class LoginPage extends Component {
                             let userName = response.data[0].firstName;
                             this.props.history.push("/");
                             sessionStorage.setItem("user", userName);
+                            sessionStorage.setItem("email", response.data[0].email);
                             window.location.reload();
                         }
                         else
@@ -94,7 +95,6 @@ class LoginPage extends Component {
                                     <span className="span-signin" >Entre com email e senha</span>
                                 </div>
                                 {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
-                                
                                 <FormInput
                                     name="email"
                                     type="email"
@@ -102,7 +102,6 @@ class LoginPage extends Component {
                                     handleChange={this.handleChange}
                                     label='email'
                                     required />
-
                                 <FormInput name="password"
                                     type="password"
                                     value={this.state.password}
@@ -114,11 +113,8 @@ class LoginPage extends Component {
                                     onClick={this.handleSignIn} >
                                     Continuar
                             </CustomButton>
-
                             </FormGroup>
-
                             <span>Não tem conta ? <Link to='/cadastro'>cadastre-se</Link></span>
-
                         </form>
                     </div>
                 </div>

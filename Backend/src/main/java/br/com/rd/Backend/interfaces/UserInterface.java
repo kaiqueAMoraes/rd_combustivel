@@ -22,5 +22,4 @@ public interface UserInterface {
     ResponseEntity<List<User>> findAllUsers ();
 
     ResponseEntity updateUserById (UserDTO userDTO);
-
 }

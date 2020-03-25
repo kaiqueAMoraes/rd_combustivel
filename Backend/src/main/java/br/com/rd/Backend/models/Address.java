@@ -42,5 +42,5 @@ public class Address {
 
     @ManyToOne
     @JoinColumn(name = "id_user")
-    private User user;
+    private User idUser;
 }
