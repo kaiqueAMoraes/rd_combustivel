@@ -7,30 +7,40 @@ import { faGasPump } from '@fortawesome/free-solid-svg-icons';
 import {
     Container, Button, Row, Col
 } from 'reactstrap';
-
+import axios from 'axios';
 
 class Product extends Component {
 
 constructor(props){
     super(props);
-    state = {
-        
+    this.state = {
+        id: "",
+        name: "",
+        description: "",
+        image: "",
+        price: "",
+        quantStock: "",
+        idCategory: ""
     }
 
+    this.getProduct()
+    
+}
     getProduct = async () => {
-        const DataProduct = await axios("http://localhost:8080/find-product/" + id);
+        
+        const {data:product} = await axios("http://localhost:8080/find-product/{id}");
 
         this.setState({
-            id: DataProduct.idProduct,
-            name: DataProduct.name,
-            description: DataProduct.description,
-            image: DataProduct.image,
-            price: DataProduct.price,
-            quantStock: DataProduct.quantStock,
-            idCategory: DataProduct.idCategory 
+            id: product.idProduct,
+            name: product.name,
+            description: product.description,
+            image: product.image,
+            price: product.price,
+            quantStock: product.quantStock,
+            idCategory: product.idCategory 
         })
     }
-}
+
 
     render() {
         return (
@@ -45,13 +55,10 @@ constructor(props){
                                 <div className="card-body">
                                     <Col md="4" lg="4">
                                         <h1 className="card-title nome-produto">{this.state.name}</h1>
-                                        <p className="card-text descricao-produto">This is a wider card with supporting text below
-                                        as a natural lead-in to
-                                        additional content. This content is a little bit longer.
-                                            </p>
+                                        <p className="card-text descricao-produto">{this.state.description}</p>
                                     </Col>
                                     <Col md="4" lg="4" className="adicionar-produto">
-                                        <h1 className="card-text preco-produto">R$98,99</h1>
+                                        <h1 className="card-text preco-produto">{this.state.price}</h1>
                                         <div>por litro</div>
                                         <Button type="submit" color="success" className="btn-addCarrinho">Adicionar ao carrinho</Button>
                                         <br />

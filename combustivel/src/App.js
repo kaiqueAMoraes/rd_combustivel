@@ -9,7 +9,7 @@ import CadastroPage from './pages/cadastro-page/cadastro.component';
 import CadastroEditPage from './pages/cadastro-edit-page/cadastro-edit-page.component';
 import CreateAddress from './pages/create-address-page/create-address-page.component';
 import DashboardPage from './pages/dashboard-page/dashboard.page';
-
+import Product from '../src/components/grid-produto/grid-produto.components';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Switch>
+        {/* <Product/>  - só para testar a pag produto*/}
         <Route exact path="/login" component={Login} />
         <Route exact path="/cadastro" component={CadastroPage} />
         <Route exact path="/dashboard" component={DashboardPage}/>
