@@ -34,7 +34,7 @@ const Header = ({ history }) => {
                         {
                             history.location.pathname === "/dashboard" ? (
                                 <div className="d-flex user-bag">
-                                    <Link onClick={handleSignOut} className="navbar-span align-self-bottom" id="usuario-navbar">Sair</Link>
+                                    <Link onClick={handleSignOut} className="navbar-span align-self-bottom get-exit" id="usuario-navbar">Sair</Link>
                                 </div>
                             ) : (
                                     <div className="d-flex user-bag">

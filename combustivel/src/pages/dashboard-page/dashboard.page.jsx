@@ -52,6 +52,10 @@ class DashboardPage extends Component {
             });
     }
 
+    handleUserEdit = () => {
+        this.props.history.push('/dashboard/edit-usuario', {response : this.state.user});
+    }
+
     componentDidMount = () => {
         this.handleUserInformation();
     }
@@ -60,7 +64,6 @@ class DashboardPage extends Component {
 
     render() {
         const { endereco, produtos } = this.state;
-        console.log(endereco)
         const MyComponents = { // cria componetização dinamica na pagina por um objeto, assim não é necessario criar callbacks no jsx
             Adressess: function showAddresses() {
                 return endereco.map(elm => {
@@ -111,7 +114,7 @@ class DashboardPage extends Component {
 
 
                     <div className="dashboard-content-holder">
-                        <h5>Minha conta</h5>
+                        <h5 className="dashboard-title">Minha conta</h5>
                         <div className="info-holder box-border">
                             <div className="info-container">
                                 <span>nome</span><p>{this.state.user.firstName}</p>
@@ -145,22 +148,22 @@ class DashboardPage extends Component {
                                 <CustomButton
                                     type="submit"
                                     className="edit-button"
-                                    onClick={this.handleSubmit} >
+                                    onClick={this.handleUserEdit} >
                                     Editar
                         </CustomButton>
                             </div>
                         </div>
 
                         <div className="line-break">
-                            <h5>Meus endereços</h5>
+                            <h5 className="dashboard-title">Meus endereços</h5>
 
                             <div className="flex-to-left">
                                 <Link to={`${this.props.match.url}/novo-endereco`}>
                                     <CustomButton
                                         type="submit"
                                         className="create-button"
-                                        onClick={this.handleSubmit} >
-                                        adicionar novo
+                                        onClick={this.handleChange} >
+                                        novo endereço
                                 </CustomButton>
                                 </Link>
                             </div>

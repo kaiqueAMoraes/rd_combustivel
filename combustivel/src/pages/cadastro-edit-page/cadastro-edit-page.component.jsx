@@ -11,17 +11,17 @@ import Alert from 'react-bootstrap/Alert'
 
 import BoxContainer from "../../components/box-container/box-container.component"
 
-import './cadastro.styles.scss';
+import './cadastro-edit-page.styles.scss';
 
-class CadastroPage extends Component {
+class CadastroEditPage extends Component {
     constructor(props) {
         super(props);
-
-        if (sessionStorage.getItem('user'))
+        const user = props.history.location.state.response;
+        if (!sessionStorage.getItem('user'))
             this.props.history.push('/');
 
         this.state = {
-            "fullName": "",
+            "fullName": user.firstName + " " + user.lastName,
             "firstName": "",
             "lastName": "",
             "CPF": "",
@@ -43,6 +43,7 @@ class CadastroPage extends Component {
             "vName": "",
             "valid": false
         }
+
         //this.handleChange = this.handleChange.bind(this);
     }
 
@@ -351,4 +352,4 @@ class CadastroPage extends Component {
 
 
 
-export default withRouter(CadastroPage);
+export default withRouter(CadastroEditPage);
