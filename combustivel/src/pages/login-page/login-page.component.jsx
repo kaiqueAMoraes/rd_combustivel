@@ -95,7 +95,6 @@ class LoginPage extends Component {
                                     <span className="span-signin" >Entre com email e senha</span>
                                 </div>
                                 {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
-                                
                                 <FormInput
                                     name="email"
                                     type="email"
@@ -103,7 +102,6 @@ class LoginPage extends Component {
                                     handleChange={this.handleChange}
                                     label='email'
                                     required />
-
                                 <FormInput name="password"
                                     type="password"
                                     value={this.state.password}
@@ -115,11 +113,8 @@ class LoginPage extends Component {
                                     onClick={this.handleSignIn} >
                                     Continuar
                             </CustomButton>
-
                             </FormGroup>
-
                             <span>Não tem conta ? <Link to='/cadastro'>cadastre-se</Link></span>
-
                         </form>
                     </div>
                 </div>

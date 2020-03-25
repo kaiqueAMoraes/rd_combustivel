@@ -1,34 +1,87 @@
 .custom-button {
-    min-width: 165px;
-    width: auto;
-    height: 50px;
-    letter-spacing: 0.5px;
-    line-height: 50px;
-    padding: 0 35px 0 35px;
-    font-size: 12px;
-    background-color: #4285f4;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bolder;
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 12px;
+  background-color: #4285f4;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.5s;
+    background-color: #357ae8;
+  }
+}
+
+.edit-button {
+  width: 85px;
+  height: 35px;
+  font-size: 10px;
+  background-color: #f39c1275;
+  color: #e67e22;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  &:hover {
+    transition: all 0.5s;
+    background-color: #e67e228f;
+  }
+}
+
+.delete-button {
+  width: 85px;
+  height: 35px;
+  font-size: 10px;
+  background-color: #e74c3c5c;
+  color: #c0392b;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+
+  &:hover {
+    transition: all 0.5s;
+    background-color: #e0423282;
+  }
+}
+
+
+.create-button {
+  height: 35px;
+  font-size: 10px;
+  background-color: #1e6dff;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+
+  &:hover {
+    transition: all 0.5s;
+    background-color: #1e6dff;
+  }
+}
+
+
+.google-sign-in {
+  background-color: #4285f4;
+  color: white;
+
+  &:hover {
+    background-color: #357ae8;
     border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    &:hover {
-      transition: all 0.5s;
-      background-color: white;
-      color: black;
-      border: 1px solid black;
-    }
- 
-  }
-
- .google-sign-in{
-    background-color: #4285f4;
-    color: white;
-    &:hover {
-      background-color: #357ae8;
-      border:none;
     color: white;
 
-    }
   }
+}
