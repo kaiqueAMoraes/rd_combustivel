@@ -21,15 +21,18 @@ class CreateAddress extends Component {
             this.props.history.push('/');
 
         this.state = {
+            "idAddress": "",
             "cep": "",
-            "isInvalidCep" : false,
+            "isInvalidCep": false,
             "state": "",
             "city": "",
             "district": "",
             "street": "",
             "number": "",
             "complement": "",
-            "errorMessage": ""
+            "errorMessage": "",
+            "idUser": "",
+            "isEdit": false
         }
         //this.handleChange = this.handleChange.bind(this);
     }
@@ -52,6 +55,72 @@ class CreateAddress extends Component {
             "number": "",
             "complement": ""
         })
+    }
+
+    componentDidMount = () => {
+        if (this.props.location.pathname === "/dashboard/edit-endereco") {
+            const endereco = this.props.location.state.response;
+            console.log(endereco)
+
+            if (endereco) {
+                this.setState({
+                    "idAdress": endereco.idAddress,
+                    "cep": endereco.cep,
+                    "state": endereco.state,
+                    "city": endereco.city,
+                    "district": endereco.district,
+                    "street": endereco.street,
+                    "number": endereco.number,
+                    "complement": endereco.complement,
+                    "idUser": endereco.idUser,
+                    "edit": true
+                })
+            }
+        }
+    }
+
+    handleEditChange = async e => {
+        e.preventDefault();
+        const { cep, state, city, district, street, number, complement, idUser, idAddress } = this.state;
+
+        const address = {
+            "idAddress": idAddress,
+            "cep": cep,
+            "state": state,
+            "city": city,
+            "district": district,
+            "street": street,
+            "number": number,
+            "complement": complement,
+            "user": {
+                "idUser": idUser
+            }
+        }
+        try {
+            await axios.put("http://localhost:8080/update-address", address)
+                .then(response => {
+                    if (response.status === 200) {
+                        this.setState({
+                            errorMessage: "",
+                            successMessage: "informações editadas com sucesso"
+                        })
+                        setInterval(() => {
+                            //this.props.history.push("/");
+                            //window.location.reload();
+                        }, 1500);
+                    } else {
+                        throw new Error(response.data);
+                    }
+                })
+        }
+        catch (err) {
+            if (err) {
+                console.log('err.response')
+                console.log(err)
+                console.log('err.response')
+                this.setState({ errorMessage: err.toString(), valid: false })
+            }
+        }
     }
 
     handleChange = e => {
@@ -126,52 +195,58 @@ class CreateAddress extends Component {
         try {
             let address = {};
             await axios.get('http://localhost:8080/find-user-email/' + sessionStorage.getItem('email'))
-            .then( response => {
-                address = {
-                    "cep": cep,
-                    "state": state,
-                    "city": city,
-                    "district": district,
-                    "street": street,
-                    "number": number,
-                    "complement" : complement,
-                    "user" : {
-                        "idUser" : response.data[0].idUser
-                    }
-                }     
-            }).catch(error => {
-                console.log(error)
-            });
-                await axios.post("http://localhost:8080/create-address", address)
-                    .then(response => {
-                        if (response.status === 200) {
-                            this.setState({
-                                errorMessage: "",
-                                successMessage: "endereço cadastrado com sucesso"
-                            })
-                            setInterval(() => {
-                                this.clearState();
-                                this.props.history.push("/dashboard");
-                                //window.location.reload();
-                            }, 1500);
-                        } else {
-                            throw new Error(response.data);
+                .then(response => {
+                    address = {
+                        "cep": cep,
+                        "state": state,
+                        "city": city,
+                        "district": district,
+                        "street": street,
+                        "number": number,
+                        "complement": complement,
+                        "user": {
+                            "idUser": response.data[0].idUser
                         }
-                    })
+                    }
+                }).catch(error => {
+                    console.log(error)
+                });
+            await axios.post("http://localhost:8080/create-address", address)
+                .then(response => {
+                    if (response.status === 200) {
+                        this.setState({
+                            errorMessage: "",
+                            successMessage: "endereço cadastrado com sucesso"
+                        })
+                        setInterval(() => {
+                            this.clearState();
+                            this.props.history.push("/dashboard");
+                            window.location.reload();
+                        }, 1500);
+                    } else {
+                        throw new Error(response.data);
+                    }
+                })
         } catch (err) {
-            this.setState({ errorMessage: err.response})
+            this.setState({ errorMessage: err.response })
         }
     }
 
     render() {
-        const { cep, street, district, state, number, complement, errorMessage } = this.state;
+        const { cep, city, street, district, state, number, complement, errorMessage } = this.state;
 
         return (
             <div className="container mt-4">
                 <div className="row d-flex justify-content-center">
                     <BoxContainer >
                         <div className="text-container" >
-                            <h4>Adicionar novo endereço</h4>
+                            {
+
+                                this.props.location.pathname === "/dashboard/edit-endereco" ?
+                                    <h4>editar endereço</h4>
+                                    :
+                                    <h4>Adicionar novo endereço</h4>
+                            }
                         </div>
                         <form method="get" onSubmit={this.handleSubmit}>
 
@@ -215,6 +290,15 @@ class CreateAddress extends Component {
                                     required />
 
                                 <FormInput
+                                    name="complement"
+                                    type="text"
+                                    value={city}
+                                    handleChange={this.handleChange}
+                                    label='cidade'
+
+                                    required />
+
+                                <FormInput
                                     name="number"
                                     type="text"
                                     value={number}
@@ -223,20 +307,32 @@ class CreateAddress extends Component {
                                     size="input-small"
                                     required />
 
+
                                 <FormInput
                                     name="complement"
                                     type="text"
                                     value={complement}
                                     handleChange={this.handleChange}
                                     label='complemento'
+                                    />
+                                {
 
-                                    required />
+                                    this.props.location.pathname === 
+                                        "/dashboard/edit-endereco" ? 
+                                        (<CustomButton
+                                            type="submit"
+                                            onClick={this.handleEditChange}>
+                                            editar endereço
+                                        </CustomButton>)
+                                        : 
+                                        (<CustomButton
+                                            type="submit"
+                                            onClick={this.handleSubmit}>
+                                            adicionar novo endereço
+                                        </CustomButton>) 
+                                        }
 
-                                <CustomButton
-                                    type="submit"
-                                    onClick={this.handleSubmit} >
-                                    adicionar novo endereço
-                            </CustomButton>
+                                
 
                                 {this.state.successMessage ? (<Alert className="m-4" variant='success'>{this.state.successMessage}</Alert>) : ""}
                                 {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}

@@ -3,16 +3,40 @@ import axios from 'axios';
 
 import './cardAddress.styles.scss';
 import CustomButton from '../custom-button/custom-button.component';
+import { withRouter } from 'react-router-dom';
 
 
-export default function CardAddress({ cep, state, city, district, street, number, complement, id }) {
-    const handleEdit = () => {
-        console.log(id)
-
+class CardAddress extends React.Component {
+    constructor(props){
+        super(props)
     }
-    const handleDelete = async () => {
+
+    handleEdit = () => {
+        console.log(this.props)
+        const { cep, state, city, district, street, number, complement, id, userId} = this.props;
+
+        const address2 = {
+            "idAdress" : id,
+            "cep": cep,
+            "state": state,
+            "city": city,
+            "district": district,
+            "street": street,
+            "number": number,
+            "complement" : complement,
+            "user" : {
+                "idUser" : userId
+            }
+        }
+        
+        this.props.history.push('/dashboard/edit-endereco', { response: address2 });
+    }
+    
+    handleDelete = async () => {
+        const { id } = this.props;
+
         const config = {
-            params: { "id": id },
+            params: { "idAdress": id },
             headers: {
             'Content-Type': 'application/json;charset=UTF-8',
             "Access-Control-Allow-Origin": "*",
@@ -21,6 +45,9 @@ export default function CardAddress({ cep, state, city, district, street, number
         axios.delete(`http://localhost:8080/delete-address/`,config)
     }
 
+    render(){
+        const { cep, state, city, district, street, number, complement, id } = this.props;
+        console.log(this.props)
     return (
         <div className="info-holder box-border">
             <div className="info-container">
@@ -58,17 +85,20 @@ export default function CardAddress({ cep, state, city, district, street, number
                 <CustomButton
                     type="submit"
                     className="edit-button"
-                    onClick={handleEdit.bind(this)} >
+                    onClick={this.handleEdit.bind(this)} >
                     Editar
                 </CustomButton>
 
                 <CustomButton
                     type="submit"
                     className="delete-button"
-                    onClick={handleDelete.bind(this)} >
+                    onClick={this.handleDelete.bind(this)} >
                     excluir
                 </CustomButton>
             </div>
         </div>
     );
+            }
 }
+
+export default withRouter(CardAddress);

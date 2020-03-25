@@ -49,6 +49,7 @@ a:hover {
     text-decoration: none;
     height: 42px;
     margin-left: 10px;
+    width: 300px;
 }
 
 .icon-userCircle {
@@ -122,7 +123,8 @@ a:hover {
 
     #user {
         margin: 0;
-        width: 55px;
+    width: 300px;
+
     }
 
     .login-icon {
@@ -131,6 +133,9 @@ a:hover {
 
 }
 
+.login-span{
+    font-size: 13px;
+}
 
 .carrinho-container {
     width: 290px;
@@ -157,4 +162,9 @@ a:hover {
         transition: all 0.5s;
         background-color: #F082AC;
     }
+}
+
+.user-name{
+  color: #fd8091 !important;
+
 }
