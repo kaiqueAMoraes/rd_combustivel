@@ -126,7 +126,6 @@ class CadastroEditPage extends Component {
         let intNum = /^[0-9]+$/;
         const { fullName, CPF, email, password, passwordValidation, birth, gender, phone, idUser, valid } = this.state;
 
-
         // TODO este bloco de codigo é um codigo mocado e não deve ser passado para produção
 
         fullName === "" ? this.setState({ vName: "este campo precisa estar preenchido" })
@@ -169,7 +168,7 @@ class CadastroEditPage extends Component {
                 }
                 const date = birthArr.slice(",").join('');
                 const user = {
-                    "userId": idUser,
+                    "idUser": idUser,
                     "email": email.toLowerCase(),
                     "password": password,
                     "firstName": fullName.split(" ").slice(0, 1).toString().toLowerCase(),
@@ -179,6 +178,7 @@ class CadastroEditPage extends Component {
                     "phone": phone,
                     "birth": date
                 }
+                console.log("entrou val")
                 try {
                     await axios.put("http://localhost:8080/update-user", user)
                         .then(response => {
@@ -204,7 +204,7 @@ class CadastroEditPage extends Component {
                 catch (err) {
                     if (err) {
                         console.log(err.response)
-                        this.setState({ errorMessage: err.response, valid: false })
+                        //this.setState({ errorMessage: err.response, valid: false })
                     }
                 } finally {
 
@@ -222,6 +222,8 @@ class CadastroEditPage extends Component {
     }
 
     render() {
+console.log(this.state)
+
         return (
             <div className="container mt-4">
                 <div className="row d-flex justify-content-center">
