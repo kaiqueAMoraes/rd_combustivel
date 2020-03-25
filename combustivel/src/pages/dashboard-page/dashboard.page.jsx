@@ -18,7 +18,7 @@ import Alert from 'react-bootstrap/Alert'
 class DashboardPage extends Component {
     constructor(props) {
         super(props);
-
+        console.log(props)
         const currentUser = sessionStorage.getItem('user');
         if (!currentUser)
             this.props.history.push('/');
@@ -255,6 +255,7 @@ class DashboardPage extends Component {
 
     render() {
         const { endereco, compras, user } = this.state;
+        const props = this.props;
         const MyComponents = { // cria componetização dinamica na pagina por um objeto, assim não é necessario criar callbacks no jsx
             Adressess: function showAddresses() {
                 return endereco.map(elm => {
@@ -285,7 +286,7 @@ class DashboardPage extends Component {
                         street={elm.idAddress.street}
                         number={elm.idAddress.number}
                         cep={elm.idAddress.cep}
-                        props={this.props}
+                        props={props}
                     />
 
                 })
