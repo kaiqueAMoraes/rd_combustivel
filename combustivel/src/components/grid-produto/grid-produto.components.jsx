@@ -32,9 +32,6 @@ constructor(props){
     }
 }
 
-    // const Produto = (props) => {
-    //     console.log(props);
-
     render() {
         return (
             <Container className="telaProduto">
