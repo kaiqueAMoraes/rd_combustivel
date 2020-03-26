@@ -5,6 +5,7 @@ import axios from 'axios';
 
 
 import FormInput from './form-input/form-input.componets';
+import FormInputDate from '../../components/form-input-date/form-input-date.componets';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import FormGroup from 'react-bootstrap/FormGroup'
 import Alert from 'react-bootstrap/Alert'
@@ -126,7 +127,6 @@ class CadastroEditPage extends Component {
         let intNum = /^[0-9]+$/;
         const { fullName, CPF, email, password, passwordValidation, birth, gender, phone, idUser, valid } = this.state;
 
-
         // TODO este bloco de codigo é um codigo mocado e não deve ser passado para produção
 
         fullName === "" ? this.setState({ vName: "este campo precisa estar preenchido" })
@@ -161,28 +161,35 @@ class CadastroEditPage extends Component {
         }
         const cpf = arr.slice(",").join('');
         try {
-            if (this.handleCpfValidation(cpf)) {
+        console.log("entrou try")
+        if (this.handleCpfValidation(cpf)) {
+            console.log("passou validação")
+            
+            let birthArr = [];
+            for (let i = 0; i < birth.length; i++) {
+                if (birth[i].match(intNum)) birthArr.push(birth[i])
+            }
+            const date = birthArr.slice(",").join('');
+            const user = {
+                "idUser": idUser,
+                "email": email.toLowerCase(),
+                "password": password,
+                "firstName": fullName.split(" ").slice(0, 1).toString().toLowerCase(),
+                "lastName": fullName.split(" ").slice(1).join(" ").toLowerCase(),
+                "cpf": cpf,
+                "gender": gender,
+                "phone": phone,
+                "birth": date
+            }
+            console.log(user)
+            console.log("entrou val")
+            try {
+                console.log("entrou try da requisição")
 
-                let birthArr = [];
-                for (let i = 0; i < birth.length; i++) {
-                    if (birth[i].match(intNum)) birthArr.push(birth[i])
-                }
-                const date = birthArr.slice(",").join('');
-                const user = {
-                    "userId": idUser,
-                    "email": email.toLowerCase(),
-                    "password": password,
-                    "firstName": fullName.split(" ").slice(0, 1).toString().toLowerCase(),
-                    "lastName": fullName.split(" ").slice(1).join(" ").toLowerCase(),
-                    "cpf": cpf,
-                    "gender": gender,
-                    "phone": phone,
-                    "birth": date
-                }
-                try {
-                    await axios.put("http://localhost:8080/update-user", user)
-                        .then(response => {
-                            if (response.status === 200) {
+                await axios.put("http://localhost:8080/update-user", user)
+                .then(response => {
+                    if (response.status === 200) {
+                        console.log("passou validação server")
                                 this.setState({
                                     errorMessage: "",
                                     valid: true,
@@ -193,10 +200,12 @@ class CadastroEditPage extends Component {
                                 //sessionStorage.setItem("email", response.data[0].email);
                                 setInterval(() => {
                                     this.clearState();
-                                    this.props.history.push("/");
+                                    this.props.history.push("/dashboard");
                                     window.location.reload();
                                 }, 1500);
                             } else {
+                        console.log("deu erro com servidor")
+
                                 throw new Error(response.data);
                             }
                         })
@@ -204,7 +213,7 @@ class CadastroEditPage extends Component {
                 catch (err) {
                     if (err) {
                         console.log(err.response)
-                        this.setState({ errorMessage: err.response, valid: false })
+                        this.setState({ errorMessage: err.response.data.error, valid: false })
                     }
                 } finally {
 
@@ -222,6 +231,7 @@ class CadastroEditPage extends Component {
     }
 
     render() {
+
         return (
             <div className="container mt-4">
                 <div className="row d-flex justify-content-center">
@@ -308,11 +318,10 @@ class CadastroEditPage extends Component {
                                 {this.state.vGender ? (<Alert className="m-4" variant='danger'>{this.state.vGender}</Alert>) : ""}
 
                                 {/* //TODO tratativa de ano de nascimento! */}
-                                <FormInput
+                                <FormInputDate
                                     label="data de nascimento"
                                     name="birth"
-                                    type="text"
-                                    mask="99/99/9999"
+                                    type="date"
                                     size="input-small"
                                     value={this.state.birth}
                                     handleChange={this.handleChange}
