@@ -11,36 +11,63 @@ import axios from 'axios';
 
 class Product extends Component {
 
-constructor(props){
-    super(props);
-    this.state = {
-        idProduct: "",
-        name: "",
-        description: "",
-        image: "",
-        price: "",
-        quantStock: "",
-        idCategory: ""
+    state = {
+        produtos: []
     }
 
-    this.getProduct()
+    componentDidMount () {
+        fetch('http://localhost:8080/find-product/1')
+        .then(response => response.json())
+        .then(response => {
+            this.setState({
+                produtos: response
+            });
+        });
+    }
+
+    // buscarProdutos = async () => {
+    //     const produtos = await axios('http://localhost:8080/find-product/' /*+ idProduct*/)
+
+    //     this.setState({produtos: [produtos.data, ...this.state.produtos]})
+    // }
+
+// async componentDidMount() {
+//     const response = await axios.get('http://localhost:8080/find-all-products');
+   
+//     console.log(response.data);
+
+//     this.setState({produtos: response.data});
+// }
+
+// constructor(props){
+//     super(props);
+//     this.state = {
+//         idProduct: "",
+//         name: "",
+//         description: "",
+//         image: "",
+//         price: "",
+//         quantStock: "",
+//         idCategory: ""
+//     }
+
+//     this.getProduct()
     
-}
-    getProduct = async () => {
+// }
+    // getProduct = async () => {
         
-        const {data:product} = await axios("http://localhost:8080/find-product/{id}");
+    //     const apiProduct = await axios.get('http://localhost:8080/find-product/' + idProduct);
 
-        this.setState({
-            idProduct: product.idProduct,
-            name: product.name,
-            description: product.description,
-            image: product.image,
-            price: product.price,
-            quantStock: product.quantStock,
-            idCategory: product.idCategory 
-        })
-    }
-
+    //     this.setState({
+    //         idProduct: product.idProduct,
+    //         name: product.name,
+    //         description: product.description,
+    //         image: product.image,
+    //         price: product.price,
+    //         quantStock: product.quantStock,
+    //         idCategory: product.idCategory 
+    //     })
+    // }
 
     render() {
         return (
@@ -55,7 +82,7 @@ constructor(props){
                                 <div className="card-body">
                                     <Col md="4" lg="4">
                                         <h1 className="card-title nome-produto">{this.state.name}</h1>
-                                        <p className="card-text descricao-produto">{this.state.description}</p>
+                                        <p className="card-text descricao-produto">Descrição</p>
                                     </Col>
                                     <Col md="4" lg="4" className="adicionar-produto">
                                         <h1 className="card-text preco-produto">{this.state.price}</h1>
