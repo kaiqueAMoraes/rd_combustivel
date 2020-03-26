@@ -5,6 +5,7 @@ import axios from 'axios';
 
 
 import FormInput from './form-input/form-input.componets';
+import FormInputDate from '../../components/form-input-date/form-input-date.componets';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import FormGroup from 'react-bootstrap/FormGroup'
 import Alert from 'react-bootstrap/Alert'
@@ -170,7 +171,8 @@ class CadastroPage extends Component {
                 for (let i = 0; i < birth.length; i++) {
                     if (birth[i].match(intNum)) birthArr.push(birth[i])
                 }
-                const date = birthArr.slice(",").join('');
+
+
                 const user = {
                     "email": email.toLowerCase(),
                     "password": password,
@@ -179,8 +181,10 @@ class CadastroPage extends Component {
                     "cpf": cpf,
                     "gender": gender,
                     "phone": phone,
-                    "birth": date
+                    "birth": birth
+                    //birth.split('-').reverse().toString().split(",", 2).reverse().concat(birth.split("-",1)).join('-')
                 }
+                console.log(user);
                 try {
                     await axios.post("http://localhost:8080/create-user", user)
                         .then(response => {
@@ -209,9 +213,9 @@ class CadastroPage extends Component {
                         // passado está vindo de acordo com a maquina desde response para response.data
                         // eu não sei o motivo, porém é possivel vir o erro dizendo que não é possivel
                         // criar um react child com objetos, se der, descomente abaixo um e comente o outro.
-
+console.log(err)
                         //this.setState({ errorMessage: err.response, valid: false })
-                        this.setState({ errorMessage: err.response.data, valid: false })
+                        //this.setState({ errorMessage: err.response.data, valid: false })
                     }
                 } finally {
 
@@ -313,11 +317,10 @@ class CadastroPage extends Component {
                                 {this.state.vGender ? (<Alert className="m-4" variant='danger'>{this.state.vGender}</Alert>) : ""}
 
                                 {/* //TODO tratativa de ano de nascimento! */}
-                                <FormInput
+                                <FormInputDate
                                     label="data de nascimento"
                                     name="birth"
-                                    type="text"
-                                    mask="99/99/9999"
+                                    type="date"
                                     size="input-small"
                                     value={this.state.birth}
                                     handleChange={this.handleChange}

@@ -5,6 +5,7 @@ import axios from 'axios';
 
 
 import FormInput from './form-input/form-input.componets';
+import FormInputDate from '../../components/form-input-date/form-input-date.componets';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import FormGroup from 'react-bootstrap/FormGroup'
 import Alert from 'react-bootstrap/Alert'
@@ -180,6 +181,7 @@ class CadastroEditPage extends Component {
                 "phone": phone,
                 "birth": date
             }
+            console.log(user)
             console.log("entrou val")
             try {
                 console.log("entrou try da requisição")
@@ -316,11 +318,10 @@ class CadastroEditPage extends Component {
                                 {this.state.vGender ? (<Alert className="m-4" variant='danger'>{this.state.vGender}</Alert>) : ""}
 
                                 {/* //TODO tratativa de ano de nascimento! */}
-                                <FormInput
+                                <FormInputDate
                                     label="data de nascimento"
                                     name="birth"
-                                    type="text"
-                                    mask="99/99/9999"
+                                    type="date"
                                     size="input-small"
                                     value={this.state.birth}
                                     handleChange={this.handleChange}
