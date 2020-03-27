@@ -3,11 +3,9 @@ package br.com.rd.Backend.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -37,6 +35,7 @@ public class User {
     private String password;
 
     @Column(name = "dt_birth", nullable = true)
+    @Temporal(TemporalType.DATE)
     private Date birth;
 
     @Column(name = "ds_gender")
