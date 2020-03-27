@@ -103,34 +103,30 @@ public class Converter {
         return orderDTO;
     }
 
-    public List<OrderItem> converterTo(List<OrderItemDTO> orderItemDTO) {
+    public OrderItem convertTo(OrderItemDTO orderItemDTO) {
 
-        List<OrderItem> listItems = new ArrayList<>();
-        for (OrderItemDTO orderItems : orderItemDTO) {
-            OrderItem it = new OrderItem();
-            it.setIdOrderItem(orderItems.getIdOrderItem());
-            it.setQuantity(orderItems.getQuantity());
-            it.setPrice(orderItems.getPrice());
-            it.setIdProduct(orderItems.getIdProduct());
-            listItems.add(it);
-        }
+        OrderItem orderItem = new OrderItem();
 
-        return listItems;
+        orderItem.setIdOrderItem(orderItemDTO.getIdOrderItem());
+        orderItem.setQuantity(orderItemDTO.getQuantity());
+        orderItem.setPrice(orderItemDTO.getPrice());
+        orderItem.setIdProduct(orderItemDTO.getIdProduct());
+        orderItem.setIdOrder(orderItemDTO.getIdOrder());
+
+        return orderItem;
     }
 
-    public List<OrderItemDTO> convert(List<OrderItem> orderItem) {
+    public OrderItemDTO convertTo(OrderItem orderItem) {
 
-        List<OrderItemDTO> listItems = new ArrayList<>();
-        for (OrderItem orderItems : orderItem) {
-            OrderItemDTO it = new OrderItemDTO();
-            it.setIdOrderItem(orderItems.getIdOrderItem());
-            it.setQuantity(orderItems.getQuantity());
-            it.setPrice(orderItems.getPrice());
-            it.setIdProduct(orderItems.getIdProduct());
-            listItems.add(it);
-        }
+        OrderItemDTO orderItemDTO = new OrderItemDTO();
 
-        return listItems;
+        orderItemDTO.setIdOrderItem(orderItem.getIdOrderItem());
+        orderItemDTO.setQuantity(orderItem.getQuantity());
+        orderItemDTO.setPrice(orderItem.getPrice());
+        orderItemDTO.setIdProduct(orderItem.getIdProduct());
+        orderItemDTO.setIdOrder(orderItem.getIdOrder());
+
+        return orderItemDTO;
     }
 
     public Product converterTo(ProductDTO productDTO) {

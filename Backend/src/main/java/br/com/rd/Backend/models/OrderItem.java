@@ -27,7 +27,7 @@ public class OrderItem {
     @Column(name = "nr_quantity", nullable = false)
     private Integer quantity;
 
-    @OneToMany(targetEntity = OrderItem.class)
+    @ManyToOne(targetEntity = OrderItem.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_order")
     private Order idOrder;
 }

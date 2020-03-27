@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface OrderItemInterface {
 
-    ResponseEntity saveOrderItem(OrderItemDTO orderItemDTODTO);
+    ResponseEntity saveOrderItem(OrderItemDTO orderItemDTO);
 
     ResponseEntity findOrderItemByIdOrder(Order order);
 
