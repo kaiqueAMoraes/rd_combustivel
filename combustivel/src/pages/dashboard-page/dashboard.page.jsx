@@ -390,6 +390,7 @@ class DashboardPage extends Component {
                                             </Link>
                                         </div>
                                     </div>
+                                    <span>{this.state.endereco.length} endereços cadastrados</span>
 
                                     <MyComponents.Adressess />
                                 </>
