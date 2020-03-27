@@ -81,9 +81,11 @@ public class CategoryService implements CategoryInterface {
     public ResponseEntity updateCategory(CategoryDTO categoryDTO) {
         try {
             Category category = categoryRepository.getOne(categoryDTO.getIdCategory());
-            category.setName(categoryDTO.getName());
-            categoryRepository.save(category);
-            return ResponseEntity.ok().body(category);
+
+            if (categoryDTO.getName() != null) {
+                category.setName(categoryDTO.getName());
+            }
+            return ResponseEntity.ok().body(categoryRepository.save(category));
 
         } catch (InvalidDataAccessApiUsageException e) {
             return ResponseEntity.badRequest().body("O Id da categoria não foi informado na requisição");

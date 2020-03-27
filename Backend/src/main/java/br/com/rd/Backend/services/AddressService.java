@@ -76,13 +76,28 @@ public class AddressService implements AddressInterface {
         try {
             Address addressUpdate = addressRepository.getOne(addressDTO.getIdAddress());
 
-            addressUpdate.setCep(addressDTO.getCep());
-            addressUpdate.setState(addressDTO.getState());
-            addressUpdate.setCity(addressDTO.getCity());
-            addressUpdate.setDistrict(addressDTO.getDistrict());
-            addressUpdate.setStreet(addressDTO.getStreet());
-            addressUpdate.setNumber(addressDTO.getNumber());
-            addressUpdate.setComplement(addressDTO.getComplement());
+            if (addressDTO.getCep() != null) {
+                addressUpdate.setCep(addressDTO.getCep());
+            }
+            if (addressDTO.getState() != null) {
+                addressUpdate.setState(addressDTO.getState());
+            }
+            if (addressDTO.getCity() != null) {
+                addressUpdate.setCity(addressDTO.getCity());
+            }
+            if (addressDTO.getDistrict() != null) {
+                addressUpdate.setDistrict(addressDTO.getDistrict());
+            }
+            if (addressDTO.getStreet() != null) {
+                addressUpdate.setStreet(addressDTO.getStreet());
+            }
+            if (addressDTO.getNumber() != null) {
+                addressUpdate.setNumber(addressDTO.getNumber());
+            }
+            if (addressDTO.getComplement() != null) {
+                addressUpdate.setComplement(addressDTO.getComplement());
+            }
+
             addressUpdate.setIdUser(addressDTO.getIdUser());
 
             Address addressResponse = addressRepository.save(addressUpdate);

@@ -96,26 +96,26 @@ public class UserService implements UserInterface {
     @Override
     public ResponseEntity updateUserById(@RequestBody UserDTO userDTO) {
         try {
-//            User userEntity = userRepository.getOne(userDTO.getIdUser());
-//
-//            if (userDTO.getFirstName() != null) {
-//                userEntity.setFirstName(userDTO.getFirstName());
-//            }
-//            if (userDTO.getLastName() != null) {
-//                userEntity.setLastName(userDTO.getLastName());
-//            }
-//            if (userDTO.getCpf() != null) {
-//                userEntity.setCpf(userDTO.getCpf());
-//            }
-//            if (userDTO.getPhone() != null) {
-//                userEntity.setPhone(userDTO.getPhone());
-//            }
-//            if (userDTO.getBirth() != null) {
-//                userEntity.setBirth(userDTO.getBirth());
-//            }
-//            if (userDTO.getEmail() != null) {
-//                userEntity.setEmail(userDTO.getEmail());
-//            }
+            User userEntity = userRepository.getOne(userDTO.getIdUser());
+
+            if (userDTO.getFirstName() != null) {
+                userEntity.setFirstName(userDTO.getFirstName());
+            }
+            if (userDTO.getLastName() != null) {
+                userEntity.setLastName(userDTO.getLastName());
+            }
+            if (userDTO.getCpf() != null) {
+                userEntity.setCpf(userDTO.getCpf());
+            }
+            if (userDTO.getPhone() != null) {
+                userEntity.setPhone(userDTO.getPhone());
+            }
+            if (userDTO.getBirth() != null) {
+                userEntity.setBirth(userDTO.getBirth());
+            }
+            if (userDTO.getEmail() != null) {
+                userEntity.setEmail(userDTO.getEmail());
+            }
             if (userDTO.getPassword() != null) {
                 userEntity.setPassword(userDTO.getPassword());
             }
