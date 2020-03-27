@@ -59,7 +59,7 @@
 .create-button {
   height: 35px;
   font-size: 10px;
-  background-color: #A3B4F2;
+  background-color: #FF6596;
   color: white;
   text-transform: uppercase;
   font-weight: bolder;
@@ -73,6 +73,40 @@
   }
 }
 
+.login-button{
+  height: 45px;
+  font-size: 10px;
+  width: 100px;
+
+  background-color: #ECECEC;
+  color: rgb(71, 71, 71);
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  &:hover {
+    transition: all 0.5s;
+    background-color:rgb(209, 209, 209);
+  }
+}
+
+.signin-button{
+  height: 45px;
+  width: 100px;
+  font-size: 10px;
+  background-color: #fd8091;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  &:hover {
+    transition: all 0.5s;
+    background-color: rgb(128, 151, 233);
+  }
+}
 
 .google-sign-in {
   background-color: #4285f4;

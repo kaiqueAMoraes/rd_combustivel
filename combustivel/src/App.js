@@ -21,6 +21,7 @@ function App() {
         <Route exact path="/cadastro" component={CadastroPage} />
         <Route exact path="/dashboard" component={DashboardPage}/>
         <Route exact path="/dashboard/novo-endereco" component={CreateAddress}/>
+        <Route exact path="/dashboard/edit-endereco" component={CreateAddress}/>
         <Route exact path="/dashboard/edit-usuario" component={CadastroEditPage}/>
       </Switch>
     </BrowserRouter>

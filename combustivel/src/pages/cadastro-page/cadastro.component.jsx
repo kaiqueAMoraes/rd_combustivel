@@ -194,8 +194,13 @@ class CadastroPage extends Component {
                 }
                 catch (err) {
                     if (err) {
-                        console.log(err.response)
-                        this.setState({ errorMessage: err.response, valid: false })
+                        // aparentemente por qualquer motivo que seja a maneira a qual o erro é 
+                        // passado está vindo de acordo com a maquina desde response para response.data
+                        // eu não sei o motivo, porém é possivel vir o erro dizendo que não é possivel
+                        // criar um react child com objetos, se der, descomente abaixo um e comente o outro.
+
+                        //this.setState({ errorMessage: err.response, valid: false })
+                        this.setState({ errorMessage: err.response.data, valid: false })
                     }
                 } finally {
 
