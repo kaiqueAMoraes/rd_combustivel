@@ -1,0 +1,62 @@
+.prod-card {
+    width: 224px;
+    height: 290px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 30px;
+    display: inline-block;
+    border-radius: 5px;
+    overflow: hidden;
+
+
+    & .prod-image {
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        & img {
+            height: 100%;
+        }
+    }
+
+    & .prod-content {
+        margin-top: 25px;
+        position: relative;
+        top: 0;
+        padding: 10px;
+
+        & .prod-price {
+            color: #48cfad;
+            display: inline-block;
+            font-size: 17px;
+            background-color: #48cfad2e;
+            padding: 6px;
+            border-radius: 7px;
+
+        }
+
+        & .prod-title {
+            color: #b1b1b3;
+            font-size: 12px;
+        }
+    }
+
+
+    &:hover {
+        transition: all 200ms ease-out;
+        transform: scale(1.03);
+        box-shadow: 0 0 20px #bcbcbd29;
+        cursor: pointer;
+
+        @keyframes example {
+            from {top: 0;}
+            to {top: -55px;}
+          }
+        & .prod-content {
+            height: 177px;
+            animation: example 0.2s linear  1  forwards;
+            background-color: #fff;
+        }
+    }
+}
