@@ -49,4 +49,5 @@ public class UserController {
     public ResponseEntity updateUserById(@RequestBody UserDTO user) {
         return userService.updateUserById(user);
     }
+
 }
