@@ -22,8 +22,9 @@ public class OrderItemService implements OrderItemInterface {
     public ResponseEntity saveOrderItem(OrderItemDTO orderItemDTO) {
 
         Converter converter = new Converter();
-        OrderItem orderItem = converter.convertTo(orderItemDTO);
-        return ResponseEntity.ok().body(orderItemRepository.save(orderItem));
+        OrderItem orderItem = converter.converterTo(orderItemDTO);
+        orderItemRepository.save(orderItem);
+        return ResponseEntity.ok().body(orderItem);
     }
 
     @Override

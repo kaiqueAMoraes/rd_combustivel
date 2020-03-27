@@ -103,7 +103,7 @@ public class Converter {
         return orderDTO;
     }
 
-    public OrderItem convertTo(OrderItemDTO orderItemDTO) {
+    public OrderItem converterTo(OrderItemDTO orderItemDTO) {
 
         OrderItem orderItem = new OrderItem();
 
