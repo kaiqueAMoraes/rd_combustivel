@@ -151,7 +151,7 @@ class CreateAddress extends Component {
                             })
                             setInterval(() => {
                                 this.clearState();
-                                this.props.history.push("/dashboard");
+                                //this.props.history.push("/dashboard");
                                 //window.location.reload();
                             }, 1500);
                         } else {
@@ -159,7 +159,8 @@ class CreateAddress extends Component {
                         }
                     })
         } catch (err) {
-            this.setState({ errorMessage: err.response})
+            console.log(err)
+            //this.setState({ errorMessage: err.response})
         }
     }
 

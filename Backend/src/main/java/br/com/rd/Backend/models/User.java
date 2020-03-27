@@ -37,6 +37,7 @@ public class User {
     private String password;
 
     @Column(name = "dt_birth", nullable = true)
+    @Temporal(TemporalType.DATE)
     private Date birth;
 
     @Column(name = "ds_gender")
