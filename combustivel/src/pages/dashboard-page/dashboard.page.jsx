@@ -221,7 +221,20 @@ class DashboardPage extends Component {
         const { email } = this.state;
         await axios.get('http://localhost:8080/find-user-email/' + email)
             .then(response => {
-                this.setState({ user: response.data[0] })
+                this.setState({
+                    user: {
+                        "idUser": response.data[0].idUser, 
+                        "email": response.data[0].email.toLowerCase(),
+                        "password": response.data[0].password,
+                        "firstName": response.data[0].firstName,
+                        "lastName": response.data[0].lastName,
+                        "cpf": response.data[0].cpf,
+                        "gender": response.data[0].gender,
+                        "phone": response.data[0].phone,
+                        "birth": response.data[0].birth.split('-').reverse().toString().split(",", 2).concat(response.data[0].birth.split("-", 1)).join('-')
+                        //birth.split('-').reverse().toString().split(",", 2).reverse().concat(birth.split("-",1)).join('-')
+                    }
+                })
             }).catch(error => {
                 console.log(error)
             });
@@ -295,8 +308,8 @@ class DashboardPage extends Component {
         }
 
 
+        const { birth } = this.state.user;
         return (
-
             <div className="dashboard-container">
                 <Container className="inner-container">
                     {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
@@ -351,7 +364,7 @@ class DashboardPage extends Component {
                                         </div>
 
                                         <div className="info-container">
-                                            <span>data nasc</span><p>{this.state.user.birth}</p>
+                                            <span>data nasc</span><p>{birth}</p>
                                         </div>
 
                                         <div className="line-break-left">
@@ -381,11 +394,11 @@ class DashboardPage extends Component {
                                     <MyComponents.Adressess />
                                 </>
                             ) : (
-                                <>      
-                                <h5 className="dashboard-title">Minhas compras</h5>
-                                    <div className="info-holder center box-border">
-                                        <MyComponents.Compras />
-                                    </div>
+                                    <>
+                                        <h5 className="dashboard-title">Minhas compras</h5>
+                                        <div className="info-holder center box-border">
+                                            <MyComponents.Compras />
+                                        </div>
                                     </>
                                 )
                         }

@@ -2,7 +2,8 @@ $sub-color: grey;
 $main-color: black;
 
 @mixin shrinkLabel {
-  top: -10px;
+  top: 2px;
+  left: 45px;
   font-size: 12px;
   color: #fd8091 !important;
 
@@ -14,9 +15,8 @@ $main-color: black;
   display: flex;
   justify-content: center;
 
-  
 
-  .form-input {
+  .form-input-date {
     background: none;
     background-color: transparent;
     color: $sub-color;
@@ -25,16 +25,14 @@ $main-color: black;
     display: block;
     width: 80%;
     border: none;
-    border: 1px solid $sub-color;
+    border-bottom: 1px solid $sub-color;
     margin: 25px 0;
-
-    
 
     &:focus {
       outline: none;
     }
 
-    &:focus ~ .form-input-label {
+    &:focus ~ .form-input-date-label {
       @include shrinkLabel();
     }
   }
@@ -43,8 +41,8 @@ $main-color: black;
     letter-spacing: 0.3em;
   }
 
-  .form-input-label {
-    color: $sub-color;
+  .form-input-date-label {
+    color: transparent;
     font-size: 16px;
     font-weight: normal;
     position: absolute;

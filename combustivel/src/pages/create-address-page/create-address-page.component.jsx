@@ -64,7 +64,7 @@ class CreateAddress extends Component {
 
             if (endereco) {
                 this.setState({
-                    "idAdress": endereco.idAddress,
+                    "idAddress": endereco.idAdress,
                     "cep": endereco.cep,
                     "state": endereco.state,
                     "city": endereco.city,
@@ -81,9 +81,14 @@ class CreateAddress extends Component {
 
     handleEditChange = async e => {
         e.preventDefault();
-        const { cep, state, city, district, street, number, complement, idUser, idAddress } = this.state;
-
+        const { cep, state, city, district, street, number, complement, idUser, id, idAddress } = this.state;
+        console.log(idAddress);
+        console.log(id);
+        console.log(this.state)
         const address = {
+            "user": {
+                "idUser": idUser
+            },
             "idAddress": idAddress,
             "cep": cep,
             "state": state,
@@ -91,24 +96,24 @@ class CreateAddress extends Component {
             "district": district,
             "street": street,
             "number": number,
-            "complement": complement,
-            "user": {
-                "idUser": idUser
-            }
+            "complement": complement
+            
         }
         try {
             await axios.put("http://localhost:8080/update-address", address)
                 .then(response => {
+                    console.log(address);
                     if (response.status === 200) {
                         this.setState({
                             errorMessage: "",
                             successMessage: "informações editadas com sucesso"
                         })
                         setInterval(() => {
-                            //this.props.history.push("/");
-                            //window.location.reload();
+                            this.props.history.push("/dashboard");
+                            window.location.reload();
                         }, 1500);
                     } else {
+                    console.log(address);
                         throw new Error(response.data);
                     }
                 })
@@ -118,6 +123,7 @@ class CreateAddress extends Component {
                 console.log('err.response')
                 console.log(err)
                 console.log('err.response')
+                
                 this.setState({ errorMessage: err.toString(), valid: false })
             }
         }
@@ -204,9 +210,7 @@ class CreateAddress extends Component {
                         "street": street,
                         "number": number,
                         "complement": complement,
-                        "user": {
-                            "idUser": response.data[0].idUser
-                        }
+                        "idUser": response.data[0].idUser,
                     }
                 }).catch(error => {
                     console.log(error)
