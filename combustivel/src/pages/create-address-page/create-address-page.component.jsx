@@ -210,9 +210,7 @@ class CreateAddress extends Component {
                         "street": street,
                         "number": number,
                         "complement": complement,
-                        "user": {
-                            "idUser": response.data[0].idUser
-                        }
+                        "idUser": response.data[0].idUser,
                     }
                 }).catch(error => {
                     console.log(error)
