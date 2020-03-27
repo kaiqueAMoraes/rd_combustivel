@@ -42,6 +42,7 @@ export default class Home extends Component {
                                 <div className="prod-content">
                                     <h5 className="prod-price">R${elm.price}</h5>
                                     <h5 className="prod-title">{elm.name}</h5>
+                                    <button className="btn-to-cart">Adicionar ao Carrinho</button>
                                 </div>
                          
                         </div>

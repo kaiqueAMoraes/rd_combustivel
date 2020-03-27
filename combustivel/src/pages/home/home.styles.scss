@@ -2,7 +2,6 @@
     width: 224px;
     height: 290px;
     background-color: #fff;
-    padding: 20px;
     margin: 30px;
     display: inline-block;
     border-radius: 5px;
@@ -14,6 +13,7 @@
         display: flex;
         justify-content: center;
         overflow: hidden;
+        padding: 20px;
 
         & img {
             height: 100%;
@@ -21,10 +21,12 @@
     }
 
     & .prod-content {
+        padding: 20px;
+        border-top: 1px solid #80808026;
         margin-top: 25px;
         position: relative;
         top: 0;
-        padding: 10px;
+        padding: 20px;
 
         & .prod-price {
             color: #48cfad;
@@ -40,10 +42,65 @@
             color: #b1b1b3;
             font-size: 12px;
         }
+
+        & .btn-to-cart{
+display: none;
+            flex: 1 1 auto;
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+    margin: 10px 10px;
+    font-size: 11px;
+    &:after {
+        position: absolute;
+        -webkit-transition: .6s;
+        transition: .6s;
+        content: '';
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        height: 3px;
+        background: #5bcbff;
+        height: 120%;
+        left: -10%;
+        -webkit-transform: skewX(15deg);
+        transform: skewX(15deg);
+        z-index: -1;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        color: #fff;
+        
+
+        &:after {
+            left: -10%;
+            width: 120%;
+            z-index: 1;
+        }
+    }
+    & span{
+        font-size: 13px;
+        z-index: 99;
+        position: absolute;
+        left: 0;
+        top: 5.5px;
+    }
+        }
     }
 
 
     &:hover {
+        & .btn-to-cart {
+            transition: all ease 1s;
+            margin-top: 20px;
+            display: block;
+        }
         transition: all 200ms ease-out;
         transform: scale(1.03);
         box-shadow: 0 0 20px #bcbcbd29;
