@@ -10,7 +10,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -28,7 +27,7 @@ public class User {
     @Column(name = "ds_firstName", nullable = false)
     private String firstName;
 
-    @NotBlank (message = "Sorenome não foi informado")
+    @NotBlank (message = "Sobrenome não foi informado")
     @Column(name = "ds_lastName", nullable = false)
     private String lastName;
 
@@ -44,8 +43,8 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "dt_birth", nullable = true)
+    @Temporal(TemporalType.DATE)
     private Date birth;
 
     @Column(name = "ds_gender", nullable = true)

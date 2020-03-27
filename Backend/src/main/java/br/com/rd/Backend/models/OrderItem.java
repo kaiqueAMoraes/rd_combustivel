@@ -18,12 +18,16 @@ public class OrderItem {
     private Long idOrderItem;
 
     @OneToOne
-    @JoinColumn(name = "id_product", nullable = false)
+    @JoinColumn(name = "id_product", nullable = true)
     private Product idProduct;
 
-    @Column(name = "vl_price", nullable = false)
+    @Column(name = "vl_price", nullable = true)
     private Double price;
 
-    @Column(name = "nr_quantity", nullable = false)
+    @Column(name = "nr_quantity", nullable = true)
     private Integer quantity;
+
+    @ManyToOne
+    @JoinColumn(name = "id_order", nullable = false)
+    private Order idOrder;
 }
