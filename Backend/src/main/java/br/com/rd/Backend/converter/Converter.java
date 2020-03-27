@@ -88,10 +88,6 @@ public class Converter {
         order.setTotalPrice(orderDTO.getTotalPrice());
         order.setDate(new Date());
 
-        List<OrderItem> listItems = converterTo(orderDTO.getList());
-
-        order.setList(listItems);
-
         return order;
     }
 
@@ -103,10 +99,6 @@ public class Converter {
         orderDTO.setIdAddress(order.getIdAddress());
         orderDTO.setTotalPrice(order.getTotalPrice());
         orderDTO.setDate(new Date());
-
-        List<OrderItemDTO> listItems = convert(order.getList());
-
-        orderDTO.setList(listItems);
 
         return orderDTO;
     }

@@ -34,9 +34,4 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "id_address", nullable = false)
     private Address idAddress;
-
-    @OneToMany(targetEntity = Order.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_order_itens")
-    private List<OrderItem> list;
-
 }
