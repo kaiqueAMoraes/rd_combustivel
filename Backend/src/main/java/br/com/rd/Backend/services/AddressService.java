@@ -8,6 +8,8 @@ import br.com.rd.Backend.repositories.AddressRepository;
 import br.com.rd.Backend.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -106,6 +108,8 @@ public class AddressService implements AddressInterface {
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: Exite um erro na requisição: " + e.getMessage());
+        } catch (InvalidDataAccessApiUsageException e) {
+            return ResponseEntity.badRequest().body("O Id do endereço não foi informado na requisição");
         }
     }
 }
