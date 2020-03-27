@@ -15,29 +15,31 @@ class Product extends Component {
         produtos: []
     }
 
-    componentDidMount () {
-        fetch('http://localhost:8080/find-product/1')
-        .then(response => response.json())
-        .then(response => {
-            this.setState({
-                produtos: response
-            });
-        });
-    }
-
-    // buscarProdutos = async () => {
-    //     const produtos = await axios('http://localhost:8080/find-product/' /*+ idProduct*/)
-
-    //     this.setState({produtos: [produtos.data, ...this.state.produtos]})
+    // componentDidMount () {
+    //     fetch('http://localhost:8080/find-product/1')
+    //     .then(response => response.json())
+    //     .then(response => {
+    //         this.setState({
+    //             produtos: response
+    //         });
+    //     });
     // }
 
-// async componentDidMount() {
-//     const response = await axios.get('http://localhost:8080/find-all-products');
-   
-//     console.log(response.data);
+    // buscarProdutos = async () => {
+    //     const produtos = await axios('http://localhost:8080/find-product/1')
 
-//     this.setState({produtos: response.data});
-// }
+    //     this.setState({ produtos: [produtos.data, ...this.state.produtos]})
+        
+    //     console.log(produtos);
+    // }
+
+async componentDidMount() {
+    const response = await axios('http://localhost:8080/find-product/1');
+   
+    console.log(response.data);
+
+    this.setState({produtos: [response.data]});
+}
 
 // constructor(props){
 //     super(props);
@@ -72,6 +74,11 @@ class Product extends Component {
     render() {
         return (
             <Container className="telaProduto">
+                <div>
+                    {this.state.produtos.map((produtos) => (
+                        <h1>Nome: {produtos.name}</h1>
+                    ))}
+                </div>
                 <Row className="d-flex justify-content-center">
                     <div className='card'>
                         <Row className="card-compra" >
@@ -81,11 +88,11 @@ class Product extends Component {
                             <Col md="8" lg="8" className="produto">
                                 <div className="card-body">
                                     <Col md="4" lg="4">
-                                        <h1 className="card-title nome-produto">{this.state.name}</h1>
+                                        <h1 className="card-title nome-produto">Nome do Produto</h1>
                                         <p className="card-text descricao-produto">Descrição</p>
                                     </Col>
                                     <Col md="4" lg="4" className="adicionar-produto">
-                                        <h1 className="card-text preco-produto">{this.state.price}</h1>
+                                        <h1 className="card-text preco-produto">Preço</h1>
                                         <div>por litro</div>
                                         <Button type="submit" color="success" className="btn-addCarrinho">Adicionar ao carrinho</Button>
                                         <br />
