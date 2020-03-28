@@ -1,119 +1,137 @@
-.prod-card {
-    width: 224px;
-    height: 290px;
-    background-color: #fff;
-    margin: 30px;
-    display: inline-block;
-    border-radius: 5px;
-    overflow: hidden;
 
+.discount-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 220px;
+    gap: 20px;
 
-    & .prod-image {
-        height: 160px;
-        display: flex;
-        justify-content: center;
+    .discount {
+        height: 220px;
+        margin-bottom: 25px;
+        border-radius: 5px;
+        box-shadow: 0 0 20px #bcbcbd29;
+        background-color: #fff;
+        cursor: pointer;
         overflow: hidden;
-        padding: 20px;
+        position: relative;
 
         & img {
-            height: 100%;
+            z-index: 90;
+            width: 100%;
+            position: relative;
+        }
+
+        & span, h2 {
+            z-index: 99;
+            position: absolute;
+            font-weight: bold;
+            color: rgb(68, 68, 68);
         }
     }
 
-    & .prod-content {
-        padding: 20px;
-        border-top: 1px solid #80808026;
-        margin-top: 25px;
-        position: relative;
-        top: 0;
-        padding: 20px;
+    & #discount-a {
+        background-color: #f5f5f5;
 
-        & .prod-price {
-            color: #48cfad;
-            display: inline-block;
-            font-size: 17px;
-            background-color: #48cfad2e;
-            padding: 6px;
-            border-radius: 7px;
-
+        & h2 {
+            top: 14.5%;
+            font-size: 52px;
+            right: 8.2%;
+            width: 220px;
         }
 
-        & .prod-title {
-            color: #b1b1b3;
-            font-size: 12px;
+        & span {
+            top: 47.5%;
+            font-size: 15px;
+            right: 15%;
+            width: 90px;
         }
 
-        & .btn-to-cart{
-display: none;
-            flex: 1 1 auto;
-    padding: 10px;
-    border: 1px solid #fff;
-    text-align: center;
-    text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
-    transition: .3s;
-    margin: 10px 10px;
-    font-size: 11px;
-    &:after {
-        position: absolute;
-        -webkit-transition: .6s;
-        transition: .6s;
-        content: '';
-        width: 0;
-        left: 50%;
-        bottom: 0;
-        height: 3px;
-        background: #5bcbff;
-        height: 120%;
-        left: -10%;
-        -webkit-transform: skewX(15deg);
-        transform: skewX(15deg);
-        z-index: -1;
+        & img {
+            right: 45%;
+        }
     }
 
-    &:hover {
-        cursor: pointer;
-        background-color: transparent;
-        color: #fff;
+    & #discount-b {
         
+        & h2 {
+            top: 44.5%;
+            font-size: 32px;
+            left: 3.5%;
+            width: 220px;
+        }
 
-        &:after {
-            left: -10%;
-            width: 120%;
-            z-index: 1;
+        & span {
+            bottom: 13.5%;
+            font-size: 15px;
+            left: 3.5%;
+            width: 90px;
+        }
+
+        & img {
+            right: -12%;
+            width: 200%;
+            top: -60%;
         }
     }
-    & span{
-        font-size: 13px;
-        z-index: 99;
-        position: absolute;
-        left: 0;
-        top: 5.5px;
-    }
+
+    & #discount-c {
+        
+        & h2 {
+            top: 44.5%;
+            font-size: 32px;
+            left: 3.5%;
+            width: 220px;
+        }
+
+        & span {
+            bottom: 13.5%;
+            font-size: 15px;
+            left: 3.5%;
+            width: 90px;
+        }
+
+        & img {
+            right: -35%;
+            width: 100%;
+            bottom: 60%;
         }
     }
 
-
-    &:hover {
-        & .btn-to-cart {
-            transition: all ease 1s;
-            margin-top: 20px;
-            display: block;
+    & #discount-d {
+        
+        & h2 {
+            color: #fff;
+            top: 10.5%;
+            font-size: 52px;
+            right: 8.5%;
         }
-        transition: all 200ms ease-out;
-        transform: scale(1.03);
-        box-shadow: 0 0 20px #bcbcbd29;
-        cursor: pointer;
 
-        @keyframes example {
-            from {top: 0;}
-            to {top: -55px;}
-          }
-        & .prod-content {
-            height: 177px;
-            animation: example 0.2s linear  1  forwards;
-            background-color: #fff;
+        & span {
+            color: #fff;
+            top: 37.5%;
+            font-size: 25px;
+            right: 8.5%;
+        }
+
+        & img {
+            width: 150%;
         }
     }
+}
+
+.full {
+    width: 100%;
+    height: 120px;
+    box-shadow: 0 0 20px #bcbcbd29;
+    background-color: #fd8091;
+    margin: 50px 0 25px 0;
+    border-radius: 5px;
+}
+
+.carousel{
+    width: 100%;
+    height: 400px;
+    background-color:  #4e66cd;
+    margin-bottom: 45px;
 }
