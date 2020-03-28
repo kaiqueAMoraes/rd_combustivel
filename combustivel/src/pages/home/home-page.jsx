@@ -13,7 +13,8 @@ class Home extends Component {
         super(props)
 
         this.state = {
-            products: []
+            products: [],
+            left: 100
         }
     }
 
@@ -30,8 +31,34 @@ class Home extends Component {
             });
     }
 
+    handleCarouselLeft = () => {
+        if (this.state.left !== 0) {
+            this.setState({ left: this.state.left -= 100 },
+                () => { console.log(this.state.left) })
+            }
+            if (this.state.left === 0) {
+                this.setState({ left: 400 }
+                )
+            }
+        
+    }
+
+    handleCarouselRight = () => {
+        this.setState({ left: this.state.left += 100 },
+            () => { console.log(this.state.left) })
+
+        if (this.state.left === 500) {
+            this.setState({ left: 100 }
+            )
+        }
+    }
+
     render() {
         const { products } = this.state;
+        const left = {
+            right: `${this.state.left}vw`
+        }
+
 
         const MyComponents = { // cria componetização dinamica na pagina por um objeto, assim não é necessario criar callbacks no jsx
             Discount: function showAddresses() {
@@ -57,17 +84,17 @@ class Home extends Component {
 
                             <Link to="/login">
                                 <div className="discount" id="discount-c">
-                                <h2>Até 40% off</h2>
+                                    <h2>Até 40% off</h2>
                                     <span>nos esportivos</span>
-                                    <img src="https://www.motorsportmaranello.com.br/wp-content/uploads//2019/12/test-drive-noleggio-Lamborghini-Hur%C3%A0can-2.jpg" alt="" srcset=""/>
+                                    <img src="https://www.motorsportmaranello.com.br/wp-content/uploads//2019/12/test-drive-noleggio-Lamborghini-Hur%C3%A0can-2.jpg" alt="" srcset="" />
                                 </div>
                             </Link>
-                            
+
                             <Link to="/login">
                                 <div className="discount" id="discount-d">
                                     <h2>Até 25% off</h2>
                                     <span>escolhido a dedo</span>
-                                    <img src="https://media.gazetadopovo.com.br/2018/08/a166e0e4b01fdced4a49ac7635f45394-gpMedium.jpg" alt="" srcset=""/>
+                                    <img src="https://media.gazetadopovo.com.br/2018/08/a166e0e4b01fdced4a49ac7635f45394-gpMedium.jpg" alt="" srcset="" />
                                 </div>
                             </Link>
                         </div>
@@ -77,16 +104,31 @@ class Home extends Component {
         }
 
 
+
         return (
             <>
-                <div className="carousel"></div>
+                {/* CAROUSEL ===> TO COMPONENT */}
+                <div className="carousel-controller">
+                    <button className="left" onClick={this.handleCarouselLeft}>left</button>
+                    <div className="carousel-container"  >
+                        <div className="carousel carousel-a" style={left}>1</div>
+                        <div className="carousel carousel-b" style={left}>2</div>
+                        <div className="carousel carousel-c" style={left}>3</div>
+                        <div className="carousel carousel-d" style={left}>4</div>
+                        <div className="carousel carousel-e" style={left}>5</div>
+                    </div>
+                    <button className="right" onClick={this.handleCarouselRight}>right</button>
+                </div>
+                {/* CAROUSEL ===> TO COMPONENT */}
+
                 <Container className="container-fluid">
 
+                    {/* DISCOUNTS ===> TO COMPONENT */}
                     <MyComponents.Discount></MyComponents.Discount>
-
+                    {/* DISCOUNTS ===> TO COMPONENT */}
 
                     <Row className="justify-content-between">
-                        <div className="full"></div>
+                        <div className="full" ></div>
                         {
                             products.map(elm => {
                                 return (

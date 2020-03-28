@@ -1,6 +1,7 @@
 html{
   background-color: #f5f5f5 !important;
-
+  overflow-x: hidden !important;
+  width: 100vw;
 }
 .App {
   text-align: center;
