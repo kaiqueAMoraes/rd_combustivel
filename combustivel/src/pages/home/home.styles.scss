@@ -1,10 +1,10 @@
-
 .discount-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 220px 220px;
     gap: 20px;
+    margin-bottom: 35px;
 
     .discount {
         height: 220px;
@@ -22,7 +22,8 @@
             position: relative;
         }
 
-        & span, h2 {
+        & span,
+        h2 {
             z-index: 99;
             position: absolute;
             font-weight: bold;
@@ -53,7 +54,7 @@
     }
 
     & #discount-b {
-        
+
         & h2 {
             top: 44.5%;
             font-size: 32px;
@@ -76,7 +77,7 @@
     }
 
     & #discount-c {
-        
+
         & h2 {
             top: 44.5%;
             font-size: 32px;
@@ -99,7 +100,7 @@
     }
 
     & #discount-d {
-        
+
         & h2 {
             color: #fff;
             top: 10.5%;
@@ -129,45 +130,162 @@
     border-radius: 5px;
 }
 
-.carousel-controller{
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//carousel 
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+.carousel-controller {
     width: 100vw;
     overflow: hidden;
     position: relative;
-    & .left, & .right{
+
+    & .left,
+    & .right {
         position: absolute;
         z-index: 999;
         top: 34.5%;
         background-color: #fff;
-        border:none;
+        border: none;
         border-radius: 5px;
         height: 100px;
         width: 50px;
+        box-shadow: 0 0 20px #7272724b;
+
     }
 
-    & .left{
-        left: 10px;
+    & .left {
+        left: -5px;
     }
-    & .right{
-        right: -5px;
+
+    & .right {
+        right: 15px;
     }
 }
-.carousel-container{
+
+.carousel-container {
     overflow: hidden;
     transition: all 10ms ease-out;
     width: 500vw;
 
-    .carousel-a{background-color: #F4F7FF !important;} //não mudar cor
-    .carousel-b{background-color: #fd8091;}
-    .carousel-c{background-color: #fee502;}
-    .carousel-d{background-color: #4afc68;}
-    .carousel-e{background-color: #01B1EA;}
+    .carousel-a {
+        background-color: #F4F7FF !important;
+    }
+
+    //não mudar cor
+    .carousel-b {
+        background-color: #fd8091;
+    }
+
+    .carousel-c {
+        background-color: #fee502;
+    }
+
+    .carousel-d {
+        background-color: #4afc68;
+    }
+
+    .carousel-e {
+        background-color: #01B1EA;
+    }
 }
-.carousel{
+
+.carousel {
     display: inline-block;
     transition: all 1s ease-out;
     width: 100vw;
     position: relative;
     height: 400px;
-    background-color:  #4e66cd;
+    background-color: #4e66cd;
     margin-bottom: 45px;
+
+    & span {
+        position: absolute;
+        font-size: 50px;
+        color: #fff;
+        left: 48%;
+    }
 }
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//scrollable div 
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+.scroll-products-container-control {
+    //border: 1px solid red;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    transition: all 1s ease-out;
+    position: relative;
+
+    & div.scroll-products-container {
+        transition: all 1s ease-out;
+        width: 3500px;
+        height: 100%;
+        display: flex;
+        gap: 30px;
+        position: relative;
+        margin-right: 10vw;
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//scrollable end ==> btn starts 
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+.hold{
+    position: relative;
+}
+
+        .btn-before {
+        position: absolute;
+        z-index: 999;
+        top: 32.5%;
+        background-color: #fff;
+        border: none;
+        border-radius:100% ;
+        height: 75px;
+                width: 75px;
+        box-shadow: 0 0 20px #7272724b;
+        left: -36px;
+        
+    }
+            .btn-next:hover {
+                transition: all 50ms ease-in;
+                transform: scale(1.1);
+            }
+
+            .btn-next {
+                position: absolute;
+                z-index: 999;
+                top: 32.5%;
+                background-color: #fff;
+                border: none;
+                border-radius:100% ;
+                height: 75px;
+                width: 75px;
+                box-shadow: 0 0 20px #7272724b;
+                right: -25px;
+                
+            }
+                    .btn-next:hover {
+                        transition: all 50ms ease-in;
+                        transform: scale(1.1);
+                    }
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
