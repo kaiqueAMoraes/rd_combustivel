@@ -1,3 +1,36 @@
+.heart {
+    //border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 100%;
+    padding-top: 3.5px;
+    background-color: #fff;
+    right: 10px;
+    top: 10px;
+    box-shadow: 0 0 5px #fff;
+
+    & .icon-heart {
+        color: #80808026;
+        width: 100%;
+        font-size: 20px;
+    }
+}
+
+.heart:hover {
+    transition: all 350ms ease-in-out;
+    box-shadow: 0 0 5px #80808026;
+    & .icon-heart {
+        transition: all 350ms ease-in-out;
+        color: #01B1EA;
+
+    }
+}
+
 .prod-card {
     width: 204px;
     height: 280px;
@@ -93,6 +126,7 @@
                 width: 120%;
                 z-index: 1;
             }
+
             & span {
                 z-index: 99;
                 position: relative;
@@ -102,12 +136,12 @@
     }
 
     &:hover {
-        
+
         transition: all 200ms ease-out;
         transform: scale(1.03);
         box-shadow: 0 0 20px #bcbcbd29;
         cursor: pointer;
-        
+
         @keyframes example {
             from {
                 top: 0;
@@ -117,17 +151,18 @@
                 top: -55px;
             }
         }
+
         @keyframes btnUp {
             to {
                 bottom: 10px;
             }
         }
-        
+
         & .btn-to-cart {
             animation: btnUp 0.2s linear 1 forwards;
-        display: block;
+            display: block;
 
-            }
+        }
 
         & .prod-content {
             height: 177px;

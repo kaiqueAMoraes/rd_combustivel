@@ -130,84 +130,6 @@
     border-radius: 5px;
 }
 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//carousel 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-.carousel-controller {
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-
-    & .left,
-    & .right {
-        position: absolute;
-        z-index: 999;
-        top: 34.5%;
-        background-color: #fff;
-        border: none;
-        border-radius: 5px;
-        height: 100px;
-        width: 50px;
-        box-shadow: 0 0 20px #7272724b;
-
-    }
-
-    & .left {
-        left: -5px;
-    }
-
-    & .right {
-        right: 15px;
-    }
-}
-
-.carousel-container {
-    overflow: hidden;
-    transition: all 10ms ease-out;
-    width: 500vw;
-
-    .carousel-a {
-        background-color: #F4F7FF !important;
-    }
-
-    //não mudar cor
-    .carousel-b {
-        background-color: #fd8091;
-    }
-
-    .carousel-c {
-        background-color: #fee502;
-    }
-
-    .carousel-d {
-        background-color: #4afc68;
-    }
-
-    .carousel-e {
-        background-color: #01B1EA;
-    }
-}
-
-.carousel {
-    display: inline-block;
-    transition: all 1s ease-out;
-    width: 100vw;
-    position: relative;
-    height: 400px;
-    background-color: #4e66cd;
-    margin-bottom: 45px;
-
-    & span {
-        position: absolute;
-        font-size: 50px;
-        color: #fff;
-        left: 48%;
-    }
-}
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -277,7 +199,7 @@
                 height: 75px;
                 width: 75px;
                 box-shadow: 0 0 20px #7272724b;
-                right: -25px;
+                right: -40px;
                 
             }
                     .btn-next:hover {

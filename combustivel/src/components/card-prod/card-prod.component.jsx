@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 import './card-prod.styles.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -27,7 +29,6 @@ class CardProd extends Component {
         alert("adicionado no carrinho")
     }
 
-
     handleProduto = e => {
         e.preventDefault()
         console.log(e.currentTarget)
@@ -36,27 +37,29 @@ class CardProd extends Component {
         console.log(produto);
     }
 
-
     render() {
         const { idprod, image, price, name } = this.props;
 
         return (
-        <div className="prod-card">
-            <div key={idprod}  onClick={this.handleProduto.bind(this)}>
-                <div className="prod-image" >
-                    <img src={image} alt="image prod" />
+            <div className="prod-card">
+                <div className="heart">
+                <FontAwesomeIcon icon={faHeart} className="icon-heart" />
                 </div>
-                <div className="prod-content">
-                    <h5 className="prod-price">R${price}</h5>
-                    <h5 className="prod-title" >{name}</h5>
-                    
-                </div>
-            </div>
-                    <button onClick={this.handleCarrinho.bind(this)}
-                        className="btn-to-cart">
-                        <span>Adicionar ao Carrinho</span>
-                    </button>
+                <div key={idprod} onClick={this.handleProduto.bind(this)}>
+                    <div className="prod-image" >
+                        <img src={image} alt="image prod" />
                     </div>
+                    <div className="prod-content">
+                        <h5 className="prod-price">R${price}</h5>
+                        <h5 className="prod-title" >{name}</h5>
+
+                    </div>
+                </div>
+                <button onClick={this.handleCarrinho.bind(this)}
+                    className="btn-to-cart">
+                    <span>Adicionar ao Carrinho</span>
+                </button>
+            </div>
         )
     }
 }

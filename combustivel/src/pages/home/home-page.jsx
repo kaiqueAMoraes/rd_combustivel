@@ -6,7 +6,13 @@ import { Link, withRouter } from 'react-router-dom';
 import CardProd from "../../components/card-prod/card-prod.component";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import Carousel from '../../components/carousel/carousel.component'
 
+
+//TODO: APGAR ESSAS DEPENDENCIAS DEPOIS
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 class Home extends Component {
     constructor(props) {
@@ -18,7 +24,7 @@ class Home extends Component {
             left: 100,
             right: 0,
             showbtnbefore: false,
-            showbtnnext : true
+            showbtnnext: true
         }
     }
 
@@ -47,7 +53,7 @@ class Home extends Component {
         // LEFT É O STATE "FINAL=0/INITIAL=400" QUE EMPURRA AS "DIVS"
         if (this.state.left !== 0) {
             // A CONTA FOI FEITA USANDO VW(viewport width) POR ISSO TEM QUES ETAR SEMPRE INCREMENTANDO OU DECREMENTANDO 100
-            this.setState({ left: this.state.left -= 100 }, 
+            this.setState({ left: this.state.left -= 100 },
                 () => { console.log(this.state.left) })
         }
         // CHEGANDO A ZERO ELE RESETA AO INITIAL STATE
@@ -79,31 +85,32 @@ class Home extends Component {
     handleScrollProducts = () => {
         let counter = 0; //COUNTER COMEÇA EM ZERO- ELE É O HOLDER DO INTERVAL
         let count = 936 / 11; // 936 É O VALOR DO PRIMEIRO SCROLL DOS 5 ITENS, É DIVIDIDO EM 11 POIS O COUNT PARA DEPOIS DE 10
-        let limit = 936 * 2 - 20; // não mudar esse desgraçado aqui // CONTA PARA DETERMINAR QUANDO MOSTRAR O BOTÃO
+        let limit = 936 / 2; // não mudar esse desgraçado aqui // CONTA PARA DETERMINAR QUANDO MOSTRAR O BOTÃO
 
         // ATRIBUINDO UMA FUNÇÃO QUE VAI FUNCIONAR COMO INTERVAL, PARA TER CONTROLE DE ITERAÇÃO
-        let scrollControler =  () => {
+        let scrollControler = () => {
             if (counter <= 10) { //NUMERO DE VEZES PARA ITERAR E FAZER A ANIMAÇÃO DE SCROLL USANDO CLASSES
                 this.setState({ right: this.state.right -= count }, // DIVISÃO DO TOTAL / 11 DA TELA PARA INCREMENTAR UMA VOLTA COMPLETA DOS ITENS
                     () => {
                         console.log(this.state.right) //DEBUG TODO: APAGAR DEPOIS ISSO AQUI 
                         counter++; //INCREMENTA VALOR
+                        if (this.state.right <= limit) {
+                            this.setState({ showbtnbefore: false })
+                        }
                     });
-                    //DEBUG TODO: APAGAR DEPOIS ISSO AQUI 
-                    console.log('counter : ' + counter + "// count : " + count + ` // limit is ${limit} `)
-                } else {
-                    //LIMPA O STATE E PREVINI DE ACONTECER APÓS AS 10 ITERAÇÕES = 936px/100vw
-                    clearInterval(scrollAction);
-                }
+                //DEBUG TODO: APAGAR DEPOIS ISSO AQUI 
+                console.log('counter : ' + counter + "// count : " + count + ` // limit is ${limit} `)
+            } else {
+                //LIMPA O STATE E PREVINI DE ACONTECER APÓS AS 10 ITERAÇÕES = 936px/100vw
+                clearInterval(scrollAction);
             }
-            let scrollAction = setInterval(scrollControler, 10);
+        }
+        let scrollAction = setInterval(scrollControler, 10);
 
-            //CHECA VALOR TOTAL, SE FOR A ULTIMA ITERAÇÃO e
-            this.setState({showbtnnext : true})
+        //CHECA VALOR TOTAL, SE FOR A ULTIMA ITERAÇÃO e
+        this.setState({ showbtnnext: true })
 
-            if(this.state.right >= limit ){
-                this.setState({showbtnbefore : false})
-            }
+
     }
 
 
@@ -111,29 +118,30 @@ class Home extends Component {
     handleScrollNextProducts = () => {
         let counter = 0; //COUNTER COMEÇA EM ZERO- ELE É O HOLDER DO INTERVAL
         let count = 936 / 11; // 936 É O VALOR DO PRIMEIRO SCROLL DOS 5 ITENS, É DIVIDIDO EM 11 POIS O COUNT PARA DEPOIS DE 10
-        let limit = 936 * 2 - 20; // não mudar esse desgraçado aqui // CONTA PARA DETERMINAR QUANDO MOSTRAR O BOTÃO
+        let limit = 936 * 3 - 1; // não mudar esse desgraçado aqui // CONTA PARA DETERMINAR QUANDO MOSTRAR O BOTÃO
 
         // ATRIBUINDO UMA FUNÇÃO QUE VAI FUNCIONAR COMO INTERVAL, PARA TER CONTROLE DE ITERAÇÃO
-        let scrollControler =  () => {
+        let scrollControler = () => {
             if (counter <= 10) { //NUMERO DE VEZES PARA ITERAR E FAZER A ANIMAÇÃO DE SCROLL USANDO CLASSES
                 this.setState({ right: this.state.right += count }, // DIVISÃO DO TOTAL / 11 DA TELA PARA INCREMENTAR UMA VOLTA COMPLETA DOS ITENS
                     () => {
+                        //CHECA VALOR TOTAL, SE FOR A ULTIMA ITERAÇÃO e
+                        if (this.state.right >= limit) {
+                            this.setState({ showbtnnext: false })
+                        }
                         console.log(this.state.right) //DEBUG TODO: APAGAR DEPOIS ISSO AQUI 
                         counter++; //INCREMENTA VALOR
                     });
-                    //DEBUG TODO: APAGAR DEPOIS ISSO AQUI 
-                    console.log('counter : ' + counter + "// count : " + count + ` // limit is ${limit} `)
-                } else {
-                    //LIMPA O STATE E PREVINI DE ACONTECER APÓS AS 10 ITERAÇÕES = 936px/100vw
-                    clearInterval(scrollAction);
-                }
+                //DEBUG TODO: APAGAR DEPOIS ISSO AQUI 
+                console.log('counter : ' + counter + "// count : " + count + ` // limit is ${limit} `)
+            } else {
+                //LIMPA O STATE E PREVINI DE ACONTECER APÓS AS 10 ITERAÇÕES = 936px/100vw
+                clearInterval(scrollAction);
             }
-            let scrollAction = setInterval(scrollControler, 10);
-            this.setState({showbtnbefore : true})
-            //CHECA VALOR TOTAL, SE FOR A ULTIMA ITERAÇÃO e
-            if(this.state.right >= limit ){
-                this.setState({showbtnnext : false})
-            }
+        }
+        let scrollAction = setInterval(scrollControler, 10);
+        this.setState({ showbtnbefore: true })
+
     }
     // scroll para a direita ---> termina aqui ///
 
@@ -214,9 +222,15 @@ class Home extends Component {
                                 }
                             </div>
                         </div>
-                        { showbtnbefore ?  (<button className="btn-before" onClick={handleScrollProducts}>before</button>) : "" }
-                        { showbtnnext ?  (<button className="btn-next" onClick={handleScrollNextProducts}>next</button>) : "" }
-                        
+                        {showbtnbefore ? 
+                            (<button className="btn-before" onClick={handleScrollProducts}>
+                                <FontAwesomeIcon icon={faChevronLeft} />
+                            </button>) : ""}
+                        {showbtnnext ?
+                            (<button className="btn-next" onClick={handleScrollNextProducts}>
+                                <FontAwesomeIcon icon={faChevronRight} />
+                            </button>) : ""}
+
                     </Row>
                 )
             }
@@ -226,20 +240,8 @@ class Home extends Component {
 
         return (
             <>
-                {/* CAROUSEL ===> TO CREATE COMPONENT */}
-                <div className="carousel-controller">
-                    <button className="left" onClick={this.handleCarouselLeft}>left</button>
-                    <div className="carousel-container">
-                        <div className="carousel carousel-a" style={left}><span>0</span></div>
-                        <div className="carousel carousel-b" style={left}><span>1</span></div>
-                        <div className="carousel carousel-c" style={left}><span>2</span></div>
-                        <div className="carousel carousel-d" style={left}><span>3</span></div>
-                        <div className="carousel carousel-e" style={left}><span>4</span></div>
-                    </div>
-                    <button className="right" onClick={this.handleCarouselRight}>right</button>
-                </div>
-                {/* CAROUSEL ===> TO CREATE COMPONENT */}
-
+                
+                <Carousel/>
                 <Container className="container-fluid">
 
                     {/* DISCOUNTS ===> TO CREATE COMPONENT */}
