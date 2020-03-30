@@ -10,11 +10,6 @@ import Carousel from '../../components/carousel/carousel.component'
 import ScrollCards from '../../components/scroll-cards/scroll-cards.component'
 
 
-//TODO: APGAR ESSAS DEPENDENCIAS DEPOIS
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-
 class Home extends Component {
     constructor(props) {
         super(props)
@@ -104,6 +99,7 @@ class Home extends Component {
                         <Link className="diamond-offer"><span>90% off</span></Link>
                         <Link className="diamond-offer"><span>50% off</span></Link>
                     </Row>
+
 
                     <h2>Adicionados recentemente</h2>
                     <ScrollCards/>

@@ -5,8 +5,9 @@ import './header.styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import CartIcon from './cart-icon/cart-icon.component';
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import { connect } from 'react-redux';
 
 
 import {
@@ -126,5 +127,8 @@ const Header = ({ history }) => {
 
 }
 
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+});
 
-export default withRouter(Header);
+export default connect(mapStateToProps)(withRouter(Header));

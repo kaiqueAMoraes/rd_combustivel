@@ -26,7 +26,8 @@ class CardProd extends Component {
 
     handleCarrinho = e => {
         e.preventDefault()
-        alert("adicionado no carrinho")
+        const produto = this.state.prod
+        alert(`${produto.name} adicionado ao carrinho`)
     }
 
     handleProduto = e => {

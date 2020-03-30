@@ -194,7 +194,7 @@ class CadastroPage extends Component {
                                     valid: true,
                                     successMessage: "usuario cadastrado com sucesso"
                                 })
-                                sessionStorage.setItem("user", fullName);
+                                sessionStorage.setItem("user", user.firstName);
                                 sessionStorage.setItem("email", response.data.email);
                                 //sessionStorage.setItem("email", response.data[0].email);
                                 setInterval(() => {

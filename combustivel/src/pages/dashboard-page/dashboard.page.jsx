@@ -18,7 +18,7 @@ import Alert from 'react-bootstrap/Alert'
 class DashboardPage extends Component {
     constructor(props) {
         super(props);
-        console.log(props)
+        //console.log(props)
         const currentUser = sessionStorage.getItem('user');
         if (!currentUser)
             this.props.history.push('/');
@@ -237,13 +237,15 @@ class DashboardPage extends Component {
                 })
             }).catch(error => {
                 console.log(error)
+                //throw new Error(error)
             });
-
-        await axios.get('http://localhost:8080/findall-address')
+//${this.state.user.idUser}
+        await axios.get(`http://localhost:8080/findall-address/`)
             .then(response => {
                 console.log(response.data)
                 if (response.data) {
-                    this.setState({ endereco: response.data })
+                    typeof response.data === "string" ? this.setState({errorMessage : "ainda não existem endereços para este usuario"}) : 
+                    this.setState({endereco : response.data})
                 }
 
             }).catch(error => {
@@ -287,8 +289,6 @@ class DashboardPage extends Component {
                 })
             },
             Compras: function showPurchases() {
-                console.log(compras)
-                console.log(compras[0].list.length)
                 return compras.map(elm => {
                     return <CardPurchases
                         key={elm.idOrder}
@@ -312,7 +312,6 @@ class DashboardPage extends Component {
         return (
             <div className="dashboard-container">
                 <Container className="inner-container">
-                    {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
 
                     {/* INICIO box de seleção de display */}
                     <div className="user-container">
@@ -392,6 +391,7 @@ class DashboardPage extends Component {
                                     </div>
                                     <span>{this.state.endereco.length} endereços cadastrados</span>
 
+                                    {this.state.errorMessage ? (<Alert className="m-4" variant='primary'>{this.state.errorMessage}</Alert>) : ""}
                                     <MyComponents.Adressess />
                                 </>
                             ) : (
