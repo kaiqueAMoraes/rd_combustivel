@@ -67,7 +67,7 @@ const Header = ({ history }) => {
                                             </>
                                         ) : (
                                             <>
-                                                        <Link to="/dashboard"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle user-mobile" /></Link>
+                                                        <Link to="/login"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle user-mobile" /></Link>
                                                         <Link to="/login">
                                                         <CustomButton
                                                         className="login-button">
@@ -122,9 +122,6 @@ const Header = ({ history }) => {
                 )
         )
     }
-
-
-
 }
 
 const mapStateToProps = state => ({

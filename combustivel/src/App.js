@@ -13,6 +13,12 @@ import DashboardPage from './pages/dashboard-page/dashboard.page';
 
 
 function App() {
+  let timer = 0;
+  setInterval(() => {
+    timer++;
+    console.log(`app loaded ${timer} times`)
+  }, 20000);
+
   return (
     <>
     <BrowserRouter>

@@ -25,7 +25,6 @@ export default class scrollCards extends Component {
     componentDidMount = async () => {
         await axios.get("http://localhost:8080/find-all-products")
             .then(response => {
-                console.log(response.data[0].idProduct)
                 this.setState({ products: response.data })
             }).catch(error => {
                 console.log(error)
@@ -47,14 +46,12 @@ export default class scrollCards extends Component {
             if (counter <= 10) { //NUMERO DE VEZES PARA ITERAR E FAZER A ANIMAÇÃO DE SCROLL USANDO CLASSES
                 this.setState({ right: this.state.right -= count }, // DIVISÃO DO TOTAL / 11 DA TELA PARA INCREMENTAR UMA VOLTA COMPLETA DOS ITENS
                     () => {
-                        console.log(this.state.right) //DEBUG TODO: APAGAR DEPOIS ISSO AQUI 
                         counter++; //INCREMENTA VALOR
                         if (this.state.right <= limit) {
                             this.setState({ showbtnbefore: false })
                         }
                     });
                 //DEBUG TODO: APAGAR DEPOIS ISSO AQUI 
-                console.log('counter : ' + counter + "// count : " + count + ` // limit is ${limit} `)
             } else {
                 //LIMPA O STATE E PREVINI DE ACONTECER APÓS AS 10 ITERAÇÕES = 936px/100vw
                 clearInterval(scrollAction);

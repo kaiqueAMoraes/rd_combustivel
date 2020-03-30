@@ -242,12 +242,10 @@ class DashboardPage extends Component {
 //${this.state.user.idUser}
         await axios.get(`http://localhost:8080/findall-address/`)
             .then(response => {
-                console.log(response.data)
                 if (response.data) {
                     typeof response.data === "string" ? this.setState({errorMessage : "ainda não existem endereços para este usuario"}) : 
                     this.setState({endereco : response.data})
                 }
-
             }).catch(error => {
                 console.log(error)
             });

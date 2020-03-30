@@ -22,7 +22,6 @@ class Home extends Component {
     componentDidMount = async () => {
         await axios.get("http://localhost:8080/find-all-products")
             .then(response => {
-                console.log(response.data[0].idProduct)
                 this.setState({ products: response.data })
             }).catch(error => {
                 console.log(error)
