@@ -5,6 +5,7 @@ import './header.styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import CartIcon from './cart-icon/cart-icon.component';
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import CustomButton from '../../components/custom-button/custom-button.component';
 
 
@@ -55,6 +56,8 @@ const Header = ({ history }) => {
                                     {
                                         currentUser ? (
                                             <>
+                                                
+                                                <Link to="/dashboard"><FontAwesomeIcon icon={faHeart} className="icon-heart" /></Link>
                                                 <Link to="/dashboard"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle" /></Link>
                                                 <div className="user-login d-flex flex-column bd-highlight mb-3 Row" id="div-header-separation">
                                                     <Link to="/dashboard" className="navbar-span user-name" id="ola-navbar" >Olá, {currentUser}</Link>
@@ -62,21 +65,20 @@ const Header = ({ history }) => {
                                                 </div>
                                             </>
                                         ) : (
-                                                <>
+                                            <>
+                                                        <Link to="/dashboard"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle user-mobile" /></Link>
                                                         <Link to="/login">
                                                         <CustomButton
                                                         className="login-button">
                                                             entre
                                                         </CustomButton>
                                                         </Link>
-                                                        <span className="login-span">ou</span>
                                                         <Link to="/cadastro">
                                                         <CustomButton
                                                         className="signin-button">
                                                             cadastre-se
                                                         </CustomButton>
                                                         </Link>
-                                                   
                                                 </>
                                             )
                                     }

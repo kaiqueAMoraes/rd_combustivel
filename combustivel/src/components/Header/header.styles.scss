@@ -92,15 +92,13 @@ a:hover {
     justify-content: space-between;
 }
 
-
+.user-mobile{display: none;}
 @media (max-width: 1056px) {
-
     .navbar,
     .sub-navbar {
-        position: fixed;
-        z-index: 999;
-        right: 0px;
-        width: 100vw;
+
+        padding-left: 2% !important;
+        padding-right: 2% !important;
     }
 
     .sub-navbar {
@@ -118,16 +116,21 @@ a:hover {
         display: none;
     }
 
-    #user {
+    #user, .logo {
         margin: 0;
-    width: 300px;
+        width: 150px;
 
     }
 
     .login-icon {
         padding: 0;
     }
-
+    .signin-button,
+    .login-button,
+    .login-span{
+        display: none;
+    }
+    .user-mobile{display: block;}
 }
 
 .login-span{
@@ -164,4 +167,17 @@ a:hover {
 .user-name{
   color: #fd8091 !important;
 
+}
+
+.icon-heart {
+    color: #333;
+    width: 100%;
+    font-size: 30px;
+}
+
+.footer{
+    width: 100%;
+    height: 520px;
+    background-color: #fff;
+    margin-top: 150px;
 }
