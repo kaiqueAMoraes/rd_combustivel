@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import {connect} from 'react-redux'
 
 import './card-prod.styles.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
-
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import {addItem} from '../../redux/cart/cart.actions';
 
 
 class CardProd extends Component {
@@ -39,8 +40,8 @@ class CardProd extends Component {
     }
 
     render() {
-        const { idprod, image, price, name } = this.props;
-
+        const { idprod, image, price, name, addItem } = this.props;
+        const item = this.state.prod;
         return (
             <div className="prod-card">
                 <div className="heart">
@@ -56,7 +57,7 @@ class CardProd extends Component {
 
                     </div>
                 </div>
-                <button onClick={this.handleCarrinho.bind(this)}
+                <button onClick={()=> addItem(item)}
                     className="btn-to-cart">
                     <span>Adicionar ao Carrinho</span>
                 </button>
@@ -64,4 +65,10 @@ class CardProd extends Component {
         )
     }
 }
-export default withRouter(CardProd);
+
+const mapDispatchToProps = dispatch => ({
+    addItem : item => dispatch(addItem(item))
+})
+
+
+export default connect(null, mapDispatchToProps)(withRouter(CardProd));

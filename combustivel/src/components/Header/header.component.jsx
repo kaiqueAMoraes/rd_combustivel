@@ -23,7 +23,7 @@ const handleSignOut = () => {
     console.log(sessionStorage.getItem('user'))
 }
 
-const Header = ({ history }) => {
+const Header = ({ history, hidden }) => {
     const currentUser = sessionStorage.getItem('user');
 
     {
@@ -85,7 +85,10 @@ const Header = ({ history }) => {
                                     }
                                 <CartIcon />
                                 </div>
-                            <CartDropdown></CartDropdown>
+                                {
+                                    hidden ? null : <CartDropdown/>
+                                }
+                            
 
                             </div>
                         </Navbar>
@@ -128,8 +131,9 @@ const Header = ({ history }) => {
     }
 }
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+const mapStateToProps = ({user: {currentUser}, cart : {hidden}}) => ({
+    currentUser,
+    hidden
 });
 
 export default connect(mapStateToProps)(withRouter(Header));
