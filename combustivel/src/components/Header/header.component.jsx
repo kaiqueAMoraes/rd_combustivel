@@ -13,6 +13,7 @@ import { connect } from 'react-redux';
 import {
     Navbar, Container
 } from 'reactstrap'
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 
 const handleSignOut = () => {
@@ -53,7 +54,6 @@ const Header = ({ history }) => {
                             <Link to="/" className="logo"></Link>
                             <div className="d-flex user-bag">
                                 <div className="logged navbar-brand d-flex" id="user">
-                                <CartIcon />
                                     {
                                         currentUser ? (
                                             <>
@@ -83,7 +83,10 @@ const Header = ({ history }) => {
                                                 </>
                                             )
                                     }
+                                <CartIcon />
                                 </div>
+                            <CartDropdown></CartDropdown>
+
                             </div>
                         </Navbar>
 
@@ -120,6 +123,7 @@ const Header = ({ history }) => {
                         </Navbar>
                     </>
                 )
+
         )
     }
 }

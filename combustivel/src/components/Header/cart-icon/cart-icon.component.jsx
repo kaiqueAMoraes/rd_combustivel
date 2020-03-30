@@ -16,7 +16,7 @@ const CartIcon = () => (
     <div>
         <NavbarBrand href="#">
             <FontAwesomeIcon icon={faShoppingBag} className="icon-shoppingBag" />
-            <span id="qtd-produto" className="navbar-span"></span>
+            <span id="qtd-produto" className="navbar-span">0</span>
         </NavbarBrand>
     </div>
 )
