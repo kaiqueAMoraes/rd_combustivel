@@ -10,12 +10,12 @@ const CartDropdown = ({cartItems}) => (
     <div className="cart-dropdown">
         <div className="cart-items">
             {
-                cartItems.map(cartItem => 
+                cartItems.length ? cartItems.map(cartItem => 
                     <CartItem key={cartItem.id} item={cartItem}></CartItem>
-                    )
+                    ) : <span className="empty-message">Carrinho vazio :(</span>
             }
         </div>
-            <CustomButton>checkout</CustomButton>
+            <CustomButton>ver carrinho</CustomButton>
     </div>
 );
 
