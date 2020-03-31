@@ -4,7 +4,8 @@ $main-color: black;
 @mixin shrinkLabel {
   top: -10px;
   font-size: 12px;
-  color: $main-color;
+  color: #fd8091 !important;
+
 }
 
 .group {
@@ -24,7 +25,6 @@ $main-color: black;
     display: block;
     width: 80%;
     border: none;
-    border-radius: 5px;
     border: 1px solid $sub-color;
     margin: 25px 0;
 

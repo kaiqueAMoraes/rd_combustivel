@@ -1,0 +1,69 @@
+$sub-color: grey;
+$main-color: black;
+
+@mixin shrinkLabel {
+  top: 2px;
+  left: 45px;
+  font-size: 12px;
+  color: #fd8091 !important;
+
+}
+
+.group {
+  position: relative;
+  margin: 0 0;
+  display: flex;
+  justify-content: center;
+
+
+  .form-input-date {
+    background: none;
+    background-color: transparent;
+    color: $sub-color;
+    font-size: 18px;
+    padding: 10px 10px 10px 17px;
+    display: block;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid $sub-color;
+    margin: 25px 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .form-input-date-label {
+      @include shrinkLabel();
+    }
+  }
+
+  input[type='password'] {
+    letter-spacing: 0.3em;
+  }
+
+  .form-input-date-label {
+    color: transparent;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 60px;
+    top: 35px;
+    transition: 350ms ease all;
+
+    &.shrink {
+      @include shrinkLabel();
+    }
+  }
+}
+.input-small{
+  width: 270px !important;
+  justify-content: start !important;
+  padding-left: 10%;
+}
+
+.input-m{
+  width: 320px !important;
+  justify-content: start !important;
+  padding-left: 10%;
+}

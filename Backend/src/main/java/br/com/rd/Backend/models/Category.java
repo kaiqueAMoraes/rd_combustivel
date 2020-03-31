@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Data
@@ -21,6 +22,7 @@ public class Category {
     @Column(name = "id_category")
     private Long idCategory;
 
+    @NotBlank(message = "Nome da categoria não foi informado")
     @Column(name = "ds_name", nullable = false)
     private String name;
 }

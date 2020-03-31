@@ -74,7 +74,6 @@ public class OrderService implements OrderInterface {
         }
     }
 
-
     @Override
     public ResponseEntity<List<Order>> findAllOrders() {
         return ResponseEntity.ok().body(orderRepository.findAll());

@@ -22,8 +22,7 @@ $main-color: black;
     display: block;
     width: 80%;
     border: none;
-    border-radius: 5px;
-    border: 1px solid $sub-color;
+    border-bottom: 1px solid $sub-color;
     margin: 25px 0;
 
     &:focus {
