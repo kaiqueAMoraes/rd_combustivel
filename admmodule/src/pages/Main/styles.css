@@ -1,0 +1,35 @@
+.header-container {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(255, 251, 251);
+}
+
+.header-container img {
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+.header-container .link {
+    font-size: 20px;
+    margin-top: 30px;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.header-container .logout {
+    position: relative;
+    text-decoration: none;
+}
+
+.header-container .link:hover{
+    opacity: 0.7;
+}
+
+.header-container button {
+    position: absolute;
+    right: 24px;
+    top: 10px;
+    border: 0;
+    background-color: rgb(255, 251, 251);
+}
