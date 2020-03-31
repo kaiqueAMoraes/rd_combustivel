@@ -1,12 +1,40 @@
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 import './styles.css';
 
-import logoImg from '../../assets/logo.svg';
+import Header from '../../components/header';
+
+import api from '../../services/api';
 
 export default function Clientes() {
+
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    api.get('/find-users')
+      .then(response => {
+        setUsers(response.data);
+      })
+  });
+
   return (
-    <h1>Works!</h1>
+    <>
+      <Header />
+      <h1>Works!</h1>
+      <button onClick="">Trazer Clientes</button>
+      <header>
+        <ul>
+          {users.map(user => (
+            <li key={user.idUser}>
+              <strong>Nome: </strong>
+              <p>{user.firstName}</p>
+
+              <strong>Sobrenome: </strong>
+              <p>{user.lastName}</p>
+            </li>
+          ))}
+        </ul>
+      </header>
+    </>
   );
 }
