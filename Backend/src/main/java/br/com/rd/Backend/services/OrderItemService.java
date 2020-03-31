@@ -46,10 +46,12 @@ public class OrderItemService implements OrderItemInterface {
         } else {
             updateProduct.setQuantStock(updateProduct.getQuantStock() - orderItem.getQuantity());
 
+            orderItem.setPrice(updateProduct.getPrice() * orderItemDTO.getQuantity());
+
             productService.updateProductById(converter.converterTo(updateProduct));
 
             orderItemRepository.save(orderItem);
-            return ResponseEntity.status(200).body("Save");
+            return ResponseEntity.status(200).body("Item Salvo!");
         }
     }
 

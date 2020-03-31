@@ -20,7 +20,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOrder;
 
-    @Column(name = "vl_total_price", nullable = false)
+    @Column(name = "vl_total_price", nullable = true)
     private Double totalPrice;
 
     @Column(name = "dt_order")
