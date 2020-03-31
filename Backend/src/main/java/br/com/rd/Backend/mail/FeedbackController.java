@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.ValidationException;
+import java.util.Properties;
 
 @RestController
 @RequestMapping("/feedback")
@@ -33,6 +34,13 @@ public class FeedbackController {
         javaMailSender.setPort(emailConf.getPort());
         javaMailSender.setUsername(emailConf.getUsername());
         javaMailSender.setPassword(emailConf.getPassword());
+
+        Properties properties = new Properties();
+
+        properties.put("spring.mail.properties.mail.smtp.auth", "true");
+        properties.put("spring.mail.properties.mail.smtp.starttls.enable", "true");
+
+        javaMailSender.setJavaMailProperties(properties);
 
         // Create a mail instance
         SimpleMailMessage mailMessage = new SimpleMailMessage();
