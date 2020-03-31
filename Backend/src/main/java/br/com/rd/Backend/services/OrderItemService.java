@@ -32,35 +32,23 @@ public class OrderItemService implements OrderItemInterface {
     Converter converter = new Converter();
 
     @Override
-    public ResponseEntity saveOrderItem(OrderItemDTO orderItemDTO) {
-//
-//        Converter converter = new Converter();
-//
-//        OrderItem orderItem = converter.converterTo(orderItemDTO);
-//
-//        Product product = orderItemDTO.getIdProduct();
-//
-//        Product updateProduct = productRepository.findById(product.getIdProduct()).get();
-//        if (updateProduct.getQuantStock() < orderItem.getQuantity()) {
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Estoque insuficiente");
-//        } else {
-//            updateProduct.setQuantStock(updateProduct.getQuantStock() - orderItem.getQuantity());
-//
-//            orderItem.setPrice(updateProduct.getPrice() * orderItemDTO.getQuantity());
-//
-//            productService.updateProductById(converter.converterTo(updateProduct));
-//
-//            orderItemRepository.save(orderItem);
-            return ResponseEntity.status(200).body("Item Salvo!");
+    public ResponseEntity saveOrderItem(List<OrderItem> list) {
+        ResponseEntity response = null;
+
+        for (OrderItem orderItem: list) {
+            Product product = orderItem.getIdProduct();
+
+            Product updateProduct = productRepository.findById(product.getIdProduct()).get();
+            if (updateProduct.getQuantStock() < orderItem.getQuantity()){
+                response = ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Estoque insuficiente para o produto: " + updateProduct.getIdProduct());
+            } else {
+                updateProduct.setQuantStock(updateProduct.getQuantStock() - orderItem.getQuantity());
+                orderItem.setPrice(updateProduct.getPrice() * orderItem.getQuantity());
+                productService.updateProductById(converter.converterTo(updateProduct));
+                response = ResponseEntity.status(HttpStatus.ACCEPTED).body("Saved");
+            }
         }
 
-    @Override
-    public ResponseEntity findOrderItemByIdOrder(Order order) {
-        return null;
-    }
-
-    @Override
-    public ResponseEntity<List<OrderItem>> findAllOrderItems() {
-        return null;
+        return response;
     }
 }
