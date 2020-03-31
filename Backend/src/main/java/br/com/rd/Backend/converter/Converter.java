@@ -147,6 +147,7 @@ public class Converter {
 
         ProductDTO productDTO = new ProductDTO();
 
+        productDTO.setIdProduct(product.getIdProduct());
         productDTO.setName(product.getName());
         productDTO.setPrice(product.getPrice());
         productDTO.setImage(product.getImage());
