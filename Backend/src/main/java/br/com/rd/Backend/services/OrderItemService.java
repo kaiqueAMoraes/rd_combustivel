@@ -33,35 +33,34 @@ public class OrderItemService implements OrderItemInterface {
 
     @Override
     public ResponseEntity saveOrderItem(OrderItemDTO orderItemDTO) {
-
-        Converter converter = new Converter();
-
-        OrderItem orderItem = converter.converterTo(orderItemDTO);
-
-        Product product = orderItemDTO.getIdProduct();
-
-        Product updateProduct = productRepository.findById(product.getIdProduct()).get();
-        if (updateProduct.getQuantStock() < orderItem.getQuantity()) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Estoque insuficiente");
-        } else {
-            updateProduct.setQuantStock(updateProduct.getQuantStock() - orderItem.getQuantity());
-
-            orderItem.setPrice(updateProduct.getPrice() * orderItemDTO.getQuantity());
-
-            productService.updateProductById(converter.converterTo(updateProduct));
-
-            orderItemRepository.save(orderItem);
+//
+//        Converter converter = new Converter();
+//
+//        OrderItem orderItem = converter.converterTo(orderItemDTO);
+//
+//        Product product = orderItemDTO.getIdProduct();
+//
+//        Product updateProduct = productRepository.findById(product.getIdProduct()).get();
+//        if (updateProduct.getQuantStock() < orderItem.getQuantity()) {
+//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Estoque insuficiente");
+//        } else {
+//            updateProduct.setQuantStock(updateProduct.getQuantStock() - orderItem.getQuantity());
+//
+//            orderItem.setPrice(updateProduct.getPrice() * orderItemDTO.getQuantity());
+//
+//            productService.updateProductById(converter.converterTo(updateProduct));
+//
+//            orderItemRepository.save(orderItem);
             return ResponseEntity.status(200).body("Item Salvo!");
         }
-    }
 
     @Override
     public ResponseEntity findOrderItemByIdOrder(Order order) {
-        return ResponseEntity.ok().body(orderItemRepository.findByIdOrder(order));
+        return null;
     }
 
     @Override
     public ResponseEntity<List<OrderItem>> findAllOrderItems() {
-        return ResponseEntity.ok().body(orderItemRepository.findAll());
+        return null;
     }
 }
