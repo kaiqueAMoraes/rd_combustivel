@@ -1,0 +1,36 @@
+.form {
+    background-color: rgb(218, 211, 211);
+    margin-bottom: 10px;
+    padding-top: 8px; 
+    width: 100%;
+    height: 300px;
+}
+.titulo {
+
+    background-color: #ff6b6b; 
+    color: white;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: solid;
+    border-radius: 10px;
+}
+
+.infoPedido {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.infoUser {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-control {
+    width: 500px;
+}
+
+.infoPedido-result{
+    display: flex;
+    justify-content: space-evenly;
+}
+
