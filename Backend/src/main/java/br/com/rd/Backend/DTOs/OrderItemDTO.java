@@ -1,6 +1,5 @@
 package br.com.rd.Backend.DTOs;
 
-import br.com.rd.Backend.models.Order;
 import br.com.rd.Backend.models.Product;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,6 +14,5 @@ public class OrderItemDTO {
     private Product idProduct;
     private Double price;
     private Integer quantity;
-    private Order idOrder;
 }
 

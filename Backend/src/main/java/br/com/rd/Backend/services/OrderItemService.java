@@ -15,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service("OrderItemService")
@@ -32,36 +33,33 @@ public class OrderItemService implements OrderItemInterface {
     Converter converter = new Converter();
 
     @Override
-    public ResponseEntity saveOrderItem(OrderItemDTO orderItemDTO) {
+    public ResponseEntity saveOrderItem(List<OrderItem> list) {
 
-        Converter converter = new Converter();
+        List<Product> productList = new ArrayList<>();
 
-        OrderItem orderItem = converter.converterTo(orderItemDTO);
+        // Check if the orders are valid
+        for (OrderItem orderItem: list) {
 
-        Product product = orderItemDTO.getIdProduct();
+            Product product = productRepository.findById(orderItem.getIdProduct().getIdProduct()).get();
 
-        Product updateProduct = productRepository.findById(product.getIdProduct()).get();
-        if (updateProduct.getQuantStock() < orderItem.getQuantity()) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Estoque insuficiente");
-        } else {
-            updateProduct.setQuantStock(updateProduct.getQuantStock() - orderItem.getQuantity());
+            if (product.getQuantStock() < orderItem.getQuantity()){
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).
+                        body("Estoque insuficiente para o produto: " + product.getIdProduct());
+            }
 
-            orderItem.setPrice(updateProduct.getPrice() * orderItemDTO.getQuantity());
+            // Remove this products in stock
+            product.setQuantStock(product.getQuantStock() - orderItem.getQuantity());
+            orderItem.setPrice(product.getPrice() * orderItem.getQuantity());
 
-            productService.updateProductById(converter.converterTo(updateProduct));
+            productList.add(product);
 
-            orderItemRepository.save(orderItem);
-            return ResponseEntity.status(200).body("Item Salvo!");
         }
+
+        for (Product product : productList)
+            productService.updateProductById(converter.converterTo(product));
+
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body("Saved");
     }
 
-    @Override
-    public ResponseEntity findOrderItemByIdOrder(Order order) {
-        return ResponseEntity.ok().body(orderItemRepository.findByIdOrder(order));
-    }
 
-    @Override
-    public ResponseEntity<List<OrderItem>> findAllOrderItems() {
-        return ResponseEntity.ok().body(orderItemRepository.findAll());
-    }
 }
