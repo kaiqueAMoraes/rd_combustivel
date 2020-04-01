@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import { withRouter} from 'react-router-dom';
 
 import "./styles.css";
 
 class Fomularioproduto extends Component {
-
 
     handleChange = e => {
         const { name, value } = e.target;
@@ -51,13 +51,11 @@ class Fomularioproduto extends Component {
             } catch (error) {
                 console.log(error)
             }
-        
-            
-                      } 
+    } 
                     
     render() {
         return (
-            <main id="main-produto">
+            <main id="main-produto" className="main-produto">
                 {/* Cabeçalho do formulário */}
 
                 {/* Formulário de Cadastro */}
@@ -97,7 +95,6 @@ class Fomularioproduto extends Component {
     }
 
 
-};
+}
 
-
-export default Fomularioproduto 
+export default withRouter(Fomularioproduto);

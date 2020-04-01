@@ -11,6 +11,8 @@ import CadastroEditPage from './pages/cadastro-edit-page/cadastro-edit-page.comp
 import CreateAddress from './pages/create-address-page/create-address-page.component';
 import DashboardPage from './pages/dashboard-page/dashboard.page';
 import CheckoutPage from './pages/checkout/checkout.component'
+import Fomularioproduto from './components/cadastro_Produto/cadastroproduto';
+import ConsultaPedidos from './components/consulta-pedidos/consulta-pedidos';
 
 function App() {
 
@@ -33,6 +35,9 @@ function App() {
         <Route exact path="/dashboard/edit-endereco" component={CreateAddress}/>
         <Route exact path="/dashboard/edit-usuario" component={CadastroEditPage}/>
         <Route exact path="/checkout" component={CheckoutPage}/>
+        <Route exact path="/cadastro-produto" component={Fomularioproduto}/>
+        <Route exact path="/consultar-pedidos" component={ConsultaPedidos}/>
+
       </Switch>
     </BrowserRouter>
   </>
