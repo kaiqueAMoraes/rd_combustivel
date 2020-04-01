@@ -13,18 +13,8 @@ public class OrderItemController {
     @Autowired
     OrderItemService orderItemService;
 
-    @PostMapping("/create-orderitem")
-    public ResponseEntity createOrderItem(@RequestBody OrderItemDTO orderItemDTO) {
-        return orderItemService.saveOrderItem(orderItemDTO);
-    }
-
     @GetMapping("/findall-orderitems")
     public ResponseEntity findAllOrderItems() {
         return orderItemService.findAllOrderItems();
-    }
-
-    @GetMapping("/findorderitemsbyidOrder/{id}")
-    public ResponseEntity findByIdOrder(@PathVariable("id") Order order) {
-        return orderItemService.findOrderItemByIdOrder(order);
     }
 }

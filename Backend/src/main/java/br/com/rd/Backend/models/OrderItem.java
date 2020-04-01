@@ -21,13 +21,10 @@ public class OrderItem {
     @JoinColumn(name = "id_product", nullable = false)
     private Product idProduct;
 
-    @Column(name = "vl_price", nullable = true)
+    @Column(name = "vl_price")
     private Double price;
 
     @Column(name = "nr_quantity", nullable = false)
     private Integer quantity;
 
-    @ManyToOne
-    @JoinColumn(name = "id_order", nullable = false)
-    private Order idOrder;
 }
