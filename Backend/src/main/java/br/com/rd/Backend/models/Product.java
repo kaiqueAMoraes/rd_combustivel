@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Data
@@ -20,9 +21,11 @@ public class Product {
     @Column(name = "id_product")
     private Long idProduct;
 
+    @NotBlank(message = "Nome do produto não foi informado")
     @Column(name = "ds_name", nullable = false)
     private String name;
 
+    @Lob
     @Column(name = "ds_description", nullable = true)
     private String description;
 
@@ -36,7 +39,7 @@ public class Product {
     private Long quantStock;
 
     @ManyToOne
-    @JoinColumn(name = "id_category")
+    @JoinColumn(name = "id_category", referencedColumnName = "id_category")
     private Category idCategory;
 
 }

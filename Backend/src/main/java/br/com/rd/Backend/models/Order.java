@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+
 import java.util.Date;
 import java.util.List;
 
@@ -19,22 +20,21 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOrder;
 
-    @Column(name = "ds_total_price", nullable = false)
+    @Column(name = "vl_total_price")
     private Double totalPrice;
 
-    @Column(name = "dt_order", nullable = false)
+    @Column(name = "dt_order")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
-    @ManyToOne(targetEntity = User.class)
-    @JoinColumn(name = "id_user")
+    @ManyToOne
+    @JoinColumn(name = "id_user", nullable = false)
     private User idUser;
 
-    @ManyToOne(targetEntity = Address.class)
-    @JoinColumn(name = "id_address")
+    @ManyToOne
+    @JoinColumn(name = "id_address", nullable = false)
     private Address idAddress;
 
-    @OneToOne(targetEntity = OrderItem.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_itens")
-    private List<OrderItem> list;
-
+    @OneToMany(targetEntity = OrderItem.class, cascade = CascadeType.ALL)
+    private List<OrderItem> itemList;
 }

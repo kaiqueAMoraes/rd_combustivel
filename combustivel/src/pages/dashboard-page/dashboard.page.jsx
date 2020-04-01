@@ -18,7 +18,7 @@ import Alert from 'react-bootstrap/Alert'
 class DashboardPage extends Component {
     constructor(props) {
         super(props);
-
+        //console.log(props)
         const currentUser = sessionStorage.getItem('user');
         if (!currentUser)
             this.props.history.push('/');
@@ -221,18 +221,31 @@ class DashboardPage extends Component {
         const { email } = this.state;
         await axios.get('http://localhost:8080/find-user-email/' + email)
             .then(response => {
-                this.setState({ user: response.data[0] })
+                this.setState({
+                    user: {
+                        "idUser": response.data[0].idUser, 
+                        "email": response.data[0].email.toLowerCase(),
+                        "password": response.data[0].password,
+                        "firstName": response.data[0].firstName,
+                        "lastName": response.data[0].lastName,
+                        "cpf": response.data[0].cpf,
+                        "gender": response.data[0].gender,
+                        "phone": response.data[0].phone,
+                        "birth": response.data[0].birth.split('-').reverse().toString().split(",", 2).concat(response.data[0].birth.split("-", 1)).join('-')
+                        //birth.split('-').reverse().toString().split(",", 2).reverse().concat(birth.split("-",1)).join('-')
+                    }
+                })
             }).catch(error => {
                 console.log(error)
+                //throw new Error(error)
             });
-
-        await axios.get('http://localhost:8080/findall-address')
+//${this.state.user.idUser}
+        await axios.get(`http://localhost:8080/findall-address/`)
             .then(response => {
-                console.log(response.data)
                 if (response.data) {
-                    this.setState({ endereco: response.data })
+                    typeof response.data === "string" ? this.setState({errorMessage : "ainda não existem endereços para este usuario"}) : 
+                    this.setState({endereco : response.data})
                 }
-
             }).catch(error => {
                 console.log(error)
             });
@@ -255,6 +268,7 @@ class DashboardPage extends Component {
 
     render() {
         const { endereco, compras, user } = this.state;
+        const props = this.props;
         const MyComponents = { // cria componetização dinamica na pagina por um objeto, assim não é necessario criar callbacks no jsx
             Adressess: function showAddresses() {
                 return endereco.map(elm => {
@@ -273,8 +287,6 @@ class DashboardPage extends Component {
                 })
             },
             Compras: function showPurchases() {
-                console.log(compras)
-                console.log(compras[0].list.length)
                 return compras.map(elm => {
                     return <CardPurchases
                         key={elm.idOrder}
@@ -285,7 +297,7 @@ class DashboardPage extends Component {
                         street={elm.idAddress.street}
                         number={elm.idAddress.number}
                         cep={elm.idAddress.cep}
-                        props={this.props}
+                        props={props}
                     />
 
                 })
@@ -294,11 +306,10 @@ class DashboardPage extends Component {
         }
 
 
+        const { birth } = this.state.user;
         return (
-
             <div className="dashboard-container">
                 <Container className="inner-container">
-                    {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
 
                     {/* INICIO box de seleção de display */}
                     <div className="user-container">
@@ -350,7 +361,7 @@ class DashboardPage extends Component {
                                         </div>
 
                                         <div className="info-container">
-                                            <span>data nasc</span><p>{this.state.user.birth}</p>
+                                            <span>data nasc</span><p>{birth}</p>
                                         </div>
 
                                         <div className="line-break-left">
@@ -376,15 +387,17 @@ class DashboardPage extends Component {
                                             </Link>
                                         </div>
                                     </div>
+                                    <span>{this.state.endereco.length} endereços cadastrados</span>
 
+                                    {this.state.errorMessage ? (<Alert className="m-4" variant='primary'>{this.state.errorMessage}</Alert>) : ""}
                                     <MyComponents.Adressess />
                                 </>
                             ) : (
-                                <>      
-                                <h5 className="dashboard-title">Minhas compras</h5>
-                                    <div className="info-holder center box-border">
-                                        <MyComponents.Compras />
-                                    </div>
+                                    <>
+                                        <h5 className="dashboard-title">Minhas compras</h5>
+                                        <div className="info-holder center box-border">
+                                            <MyComponents.Compras />
+                                        </div>
                                     </>
                                 )
                         }

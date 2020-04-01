@@ -20,5 +20,5 @@ public class AddressDTO {
     private String street;
     private String number;
     private String complement;
-    private User user;
+    private User idUser;
 }

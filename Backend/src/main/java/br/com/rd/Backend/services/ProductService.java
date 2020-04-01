@@ -24,31 +24,22 @@ public class ProductService implements ProductInterface {
 
     @Override
     public ResponseEntity saveProduct(ProductDTO productDTO) {
-
-        ResponseEntity response = null;
-
         try {
             if ((productRepository.findByName(productDTO.getName()).size() != 0) &&
                     (productRepository.findByDescription(productDTO.getDescription()).size() != 0)) {
                 return ResponseEntity.badRequest().body("Este produto já está cadastrado");
             } else {
-
                 Converter converter = new Converter();
-
                 Product product = converter.converterTo(productDTO);
-
-                response = ResponseEntity.ok().body(productRepository.save(product));
-
+                return ResponseEntity.ok().body(productRepository.save(product));
             }
         } catch (DataIntegrityViolationException e) {
-            response = ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos " + e.getMessage());
+            return ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos " + e.getMessage());
         }
-        return response;
     }
 
     @Override
     public ResponseEntity deleteProductById(Long id) {
-
         try {
             productRepository.deleteById(id);
             return ResponseEntity.ok().body("Produto deletado");
@@ -59,7 +50,6 @@ public class ProductService implements ProductInterface {
 
     @Override
     public ResponseEntity findProductById(Long id) {
-
         if (productRepository.findById(id).isEmpty()) {
             return ResponseEntity.badRequest().body("Id do produto não encontrado");
         } else {
@@ -69,24 +59,20 @@ public class ProductService implements ProductInterface {
 
     @Override
     public ResponseEntity findProductByName(String name) {
-
         if (productRepository.findByName(name).isEmpty()) {
             return ResponseEntity.badRequest().body("Este produto não existe");
         } else {
             return ResponseEntity.ok().body(productRepository.findByName(name));
         }
-
     }
 
     @Override
     public ResponseEntity findProductByIdCategory(Category idCategory) {
-
         if (productRepository.findByIdCategory(idCategory).isEmpty()) {
             return ResponseEntity.badRequest().body("Não existem produtos nesta categoria");
         } else {
             return ResponseEntity.ok().body(productRepository.findByIdCategory(idCategory));
         }
-
     }
 
     @Override
@@ -99,19 +85,26 @@ public class ProductService implements ProductInterface {
         try {
             Product product = productRepository.getOne(productDTO.getIdProduct());
 
-            product.setName(productDTO.getName());
-            product.setDescription(productDTO.getDescription());
-            product.setQuantStock(productDTO.getQuantStock());
-            product.setPrice(productDTO.getPrice());
-            product.setImage(productDTO.getImage());
+            if (productDTO.getName() != null) {
+                product.setName(productDTO.getName());
+            }
+            if (productDTO.getDescription() != null) {
+                product.setDescription(productDTO.getDescription());
+            }
+            if (productDTO.getQuantStock() != null) {
+                product.setQuantStock(productDTO.getQuantStock());
+            }
+            if (productDTO.getPrice() != null) {
+                product.setPrice(productDTO.getPrice());
+            }
+            if (productDTO.getImage() != null) {
+                product.setImage(productDTO.getImage());
+            }
 
-            productRepository.save(product);
-
-            return ResponseEntity.ok().body(product);
+            return ResponseEntity.ok().body(productRepository.save(product));
 
         } catch (InvalidDataAccessApiUsageException e) {
             return ResponseEntity.badRequest().body("O Id do produto não foi informado na requisição");
         }
     }
-
 }
