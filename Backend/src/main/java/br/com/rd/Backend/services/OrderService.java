@@ -34,19 +34,21 @@ public class OrderService implements OrderInterface {
 
     @Override
     public ResponseEntity saveOrder(OrderDTO orderDTO) {
+
         try {
 
             Converter converter = new Converter();
 
             Order order = converter.converterTo(orderDTO);
 
-            if(orderItemService.saveOrderItem(order.getItemList()).getStatusCode() == BAD_REQUEST){
-                return ResponseEntity.badRequest().body(orderItemService.saveOrderItem(order.getItemList()).getBody());
+            ResponseEntity response = orderItemService.saveOrderItem(order.getItemList());
+            if(response.getStatusCode() == BAD_REQUEST){
+                return ResponseEntity.badRequest().body(response.getBody());
             }
 
             orderRepository.save(order);
 
-            return ResponseEntity.ok().body(orderItemService.saveOrderItem(order.getItemList()).getBody());
+            return ResponseEntity.ok().body(order);
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: um ou mais campos não foram preenchidos " + e.getMessage());

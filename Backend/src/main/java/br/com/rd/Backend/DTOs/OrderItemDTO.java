@@ -1,6 +1,5 @@
 package br.com.rd.Backend.DTOs;
 
-import br.com.rd.Backend.models.Order;
 import br.com.rd.Backend.models.Product;
 import lombok.AllArgsConstructor;
 import lombok.Data;

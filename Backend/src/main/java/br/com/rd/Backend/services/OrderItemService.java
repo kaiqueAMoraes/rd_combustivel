@@ -15,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service("OrderItemService")
@@ -33,22 +34,31 @@ public class OrderItemService implements OrderItemInterface {
 
     @Override
     public ResponseEntity saveOrderItem(List<OrderItem> list) {
-        ResponseEntity response = null;
 
+        List<Product> productList = new ArrayList<>();
+
+        // Check if the orders are valid
         for (OrderItem orderItem: list) {
-            Product product = orderItem.getIdProduct();
 
-            Product updateProduct = productRepository.findById(product.getIdProduct()).get();
-            if (updateProduct.getQuantStock() < orderItem.getQuantity()){
-                response = ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Estoque insuficiente para o produto: " + updateProduct.getIdProduct());
-            } else {
-                updateProduct.setQuantStock(updateProduct.getQuantStock() - orderItem.getQuantity());
-                orderItem.setPrice(updateProduct.getPrice() * orderItem.getQuantity());
-                productService.updateProductById(converter.converterTo(updateProduct));
-                response = ResponseEntity.status(HttpStatus.ACCEPTED).body("Saved");
+            Product product = productRepository.findById(orderItem.getIdProduct().getIdProduct()).get();
+
+            if (product.getQuantStock() < orderItem.getQuantity()){
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).
+                        body("Estoque insuficiente para o produto: " + product.getIdProduct());
             }
+
+            // Remove this products in stock
+            product.setQuantStock(product.getQuantStock() - orderItem.getQuantity());
+            orderItem.setPrice(product.getPrice() * orderItem.getQuantity());
+
+            productList.add(product);
+
         }
 
-        return response;
+        for (Product product : productList)
+            productService.updateProductById(converter.converterTo(product));
+
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body("Saved");
+
     }
 }
