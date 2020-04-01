@@ -61,5 +61,8 @@ public class OrderItemService implements OrderItemInterface {
         return ResponseEntity.status(HttpStatus.ACCEPTED).body("Saved");
     }
 
-
+    @Override
+    public ResponseEntity<List<OrderItem>> findAllOrderItems() {
+        return ResponseEntity.ok().body(orderItemRepository.findAll());
+    }
 }

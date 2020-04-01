@@ -25,6 +25,7 @@ public class Product {
     @Column(name = "ds_name", nullable = false)
     private String name;
 
+    @Lob
     @Column(name = "ds_description", nullable = true)
     private String description;
 
