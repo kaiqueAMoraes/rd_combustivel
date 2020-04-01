@@ -73,6 +73,18 @@
   }
 }
 
+.increment,.decrement{
+  background-color: #FF6596;
+  height: 35px;
+  width: 35px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+}
+
 .login-button{
   height: 45px;
   font-size: 10px;

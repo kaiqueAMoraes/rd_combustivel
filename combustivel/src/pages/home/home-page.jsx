@@ -7,7 +7,7 @@ import CardProd from "../../components/card-prod/card-prod.component";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Carousel from '../../components/carousel/carousel.component'
-import ScrollCards from '../../components/scroll-cards/scroll-cards.component'
+import ScrollCards from '../../components/scroll-cards/scroll-cards.component';
 
 
 class Home extends Component {
