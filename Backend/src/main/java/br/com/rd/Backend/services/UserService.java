@@ -18,6 +18,9 @@ import javax.persistence.EntityNotFoundException;
 import javax.validation.ConstraintViolationException;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 @Service
@@ -44,6 +47,9 @@ public class UserService implements UserInterface {
                 User user = userRepository.save(converter.converterTo(userDTO));
                 return ResponseEntity.ok().body(converter.converterTo(user));
             }
+
+            //TODO: validação de maioridade
+
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos ");
         } catch (ConstraintViolationException e) {
