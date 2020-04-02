@@ -20,7 +20,6 @@ export default function Clientes() {
   return (
     <>
       <Header />
-      <h1>Works!</h1>
       <button onClick="">Trazer Clientes</button>
       <header>
         <ul>

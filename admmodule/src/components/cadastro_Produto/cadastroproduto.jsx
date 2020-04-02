@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { withRouter} from 'react-router-dom';
 
-import "./styles.css";
+import "./cadastroproduto.css";
 
 class Fomularioproduto extends Component {
 
@@ -62,7 +62,7 @@ class Fomularioproduto extends Component {
                 <div className="container form">
 
                     <header className="container titulo">
-                        <h2>Cadastro de Produtos</h2>
+                        <p>Cadastro de Produtos</p>
                     </header>
                     {/* Cabeçalho do formulário  (FIM) */}
                     <form onSubmit={this.mySubmitHandler}>

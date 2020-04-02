@@ -1,0 +1,52 @@
+
+.form {
+    display: block;
+    align-items: center;
+    background-color: rgb(218, 211, 211);
+    margin-bottom: 10px;
+    padding-top: 8px; 
+    
+}
+
+.titulo {
+    padding-left: 20px;
+    background-color: #ff6b6b; 
+    color: white;
+    margin-bottom: 10px;
+    border: solid;
+    border-radius: 5px;
+}
+
+.infoPedido {
+    display: flex;
+}
+
+.infoUser {
+    display: flex;
+}
+
+.form-control {
+    width: 300px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+} 
+
+.tableResults{
+    display: block;
+}
+
+.colunm{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 20px;
+    padding: 15px;
+}
+
+
+
+/* .infoPedido-result{
+    display: flex;
+} */
+

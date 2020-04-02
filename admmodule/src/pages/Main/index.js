@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { TiPowerOutline } from 'react-icons/ti';
 
-import './styles.css';
+// import './styles.css';
 
 import Header from '../../components/header';
 
