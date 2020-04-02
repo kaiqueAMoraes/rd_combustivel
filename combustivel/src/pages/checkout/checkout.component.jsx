@@ -14,7 +14,8 @@ import ScrollCards from '../../components/scroll-cards/scroll-cards.component';
 import './checkout.styles.scss';
 
 const handleSubmit = items => {
-    console.log(items)
+    
+    console.log(JSON.stringify(items))
 }
 
 const CheckoutPage = ({ cartItems, total }) => (
