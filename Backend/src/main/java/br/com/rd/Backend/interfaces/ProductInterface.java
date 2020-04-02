@@ -19,7 +19,7 @@ public interface ProductInterface {
 
     ResponseEntity findProductByIdCategory(Category idCategory);
 
-    ResponseEntity<List<Product>> findAllProducts ();
+    ResponseEntity<List<Product>> findAllProducts();
 
     ResponseEntity updateProductById (ProductDTO productDTO);
 }

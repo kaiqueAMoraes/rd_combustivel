@@ -20,5 +20,5 @@ public class OrderDTO {
     private Date date;
     private User idUser;
     private Address idAddress;
-    private List<OrderItemDTO> list;
+    private List<OrderItemDTO> itemList;
 }

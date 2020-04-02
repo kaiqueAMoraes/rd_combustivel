@@ -1,13 +1,11 @@
 package br.com.rd.Backend.controllers;
 
 import br.com.rd.Backend.DTOs.AddressDTO;
-import br.com.rd.Backend.models.Address;
 import br.com.rd.Backend.services.AddressService;
+import br.com.rd.Backend.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.websocket.server.PathParam;
 
 @RestController
 public class AddressController {
@@ -30,6 +28,12 @@ public class AddressController {
         return addressService.findAllAddresses();
     }
 
+    @GetMapping("/find-address-byuser/{idUser}")
+    public ResponseEntity findById(@PathVariable("idUser") User user){
+        return addressService.findAddressByUser(user);
+    }
+
+
     @PutMapping("/update-address")
     public ResponseEntity updateAddress(@RequestBody AddressDTO addressDTO) {
         return addressService.updateAddressById(addressDTO);
@@ -37,6 +41,6 @@ public class AddressController {
 
     @DeleteMapping("/delete-address/{id}")
     public ResponseEntity deleteAddress(@PathVariable("id") Long id) {
-       return addressService.deleteAddressById(id);
+        return addressService.deleteAddressById(id);
     }
 }

@@ -16,27 +16,27 @@ public class ProductController {
     ProductService productService;
 
     @PostMapping("/create-product")
-    public ResponseEntity saveProduct (@RequestBody ProductDTO productDTO) {
+    public ResponseEntity saveProduct(@RequestBody ProductDTO productDTO) {
         return productService.saveProduct(productDTO);
     }
 
     @DeleteMapping("/delete-product/{id}")
-    public ResponseEntity deleteProductById (@PathVariable ("id")Long id) {
+    public ResponseEntity deleteProductById(@PathVariable("id") Long id) {
         return productService.deleteProductById(id);
     }
 
     @GetMapping("/find-product/{id}")
-    public ResponseEntity findProductById (@PathVariable ("id")Long id) {
+    public ResponseEntity findProductById(@PathVariable("id") Long id) {
         return productService.findProductById(id);
     }
 
     @GetMapping("/find-product-name/{name}")
-    public ResponseEntity findProductByName (@PathVariable ("name")String name) {
+    public ResponseEntity findProductByName(@PathVariable("name") String name) {
         return productService.findProductByName(name);
     }
 
     @GetMapping("/find-product-category/{idCategory}")
-    public ResponseEntity findProductByIdCategory (@PathVariable("idCategory") Category idCategory ) {
+    public ResponseEntity findProductByIdCategory(@PathVariable("idCategory") Category idCategory) {
         return productService.findProductByIdCategory(idCategory);
     }
 
@@ -49,5 +49,4 @@ public class ProductController {
     public ResponseEntity updateProductById(@RequestBody ProductDTO product) {
         return productService.updateProductById(product);
     }
-
 }

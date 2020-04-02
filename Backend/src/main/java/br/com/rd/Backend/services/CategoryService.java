@@ -12,6 +12,7 @@ import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.validation.ConstraintViolationException;
 import java.util.List;
 
 @Service
@@ -23,20 +24,18 @@ public class CategoryService implements CategoryInterface {
     @Override
     public ResponseEntity saveCategory(CategoryDTO categoryDTO) {
         try {
-
             if (categoryRepository.findByName(categoryDTO.getName()).size() != 0) {
                 return ResponseEntity.badRequest().body("Esta categoria já foi cadastrada");
 
             } else {
-
                 Converter converter = new Converter();
-
                 Category category = converter.converterTo(categoryDTO);
-
                 return ResponseEntity.ok().body(categoryRepository.save(category));
             }
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos ");
+        }  catch (ConstraintViolationException e) {
+            return ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
         }
     }
 
@@ -86,11 +85,10 @@ public class CategoryService implements CategoryInterface {
         try {
             Category category = categoryRepository.getOne(categoryDTO.getIdCategory());
 
-            category.setName(categoryDTO.getName());
-
-            categoryRepository.save(category);
-
-            return ResponseEntity.ok().body(category);
+            if (categoryDTO.getName() != null) {
+                category.setName(categoryDTO.getName());
+            }
+            return ResponseEntity.ok().body(categoryRepository.save(category));
 
         } catch (InvalidDataAccessApiUsageException e) {
             return ResponseEntity.badRequest().body("O Id da categoria não foi informado na requisição");

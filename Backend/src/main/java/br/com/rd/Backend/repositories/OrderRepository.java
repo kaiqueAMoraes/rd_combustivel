@@ -13,4 +13,5 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 
     List<Order> findByDate(Date date);
     List<Order> findByIdUser(User user);
+
 }

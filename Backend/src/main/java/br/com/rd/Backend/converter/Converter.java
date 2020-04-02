@@ -4,6 +4,7 @@ import br.com.rd.Backend.DTOs.*;
 import br.com.rd.Backend.DTOs.ProductDTO;
 
 import br.com.rd.Backend.models.*;
+import org.aspectj.weaver.ast.Or;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -31,7 +32,23 @@ public class Converter {
         return address;
     }
 
-    public User converterTo(UserDTO userDTO){
+    public AddressDTO converterTo(Address address) {
+
+        AddressDTO addressDTO = new AddressDTO();
+
+        addressDTO.setCep(address.getCep());
+        addressDTO.setState(address.getState());
+        addressDTO.setCity(address.getCity());
+        addressDTO.setDistrict(address.getDistrict());
+        addressDTO.setStreet(address.getStreet());
+        addressDTO.setNumber(address.getNumber());
+        addressDTO.setComplement(address.getComplement());
+        addressDTO.setIdUser(address.getIdUser());
+
+        return addressDTO;
+    }
+
+    public User converterTo(UserDTO userDTO) {
 
         User user = new User();
 
@@ -47,7 +64,8 @@ public class Converter {
         return user;
     }
 
-    public UserDTO converterTo (User user) {
+    public UserDTO converterTo(User user) {
+
         UserDTO userDTO = new UserDTO();
 
         userDTO.setIdUser(user.getIdUser());
@@ -62,21 +80,57 @@ public class Converter {
         return userDTO;
     }
 
-
     public Order converterTo(OrderDTO orderDTO) {
 
         Order order = new Order();
 
+        order.setIdOrder(orderDTO.getIdOrder());
+        order.setTotalPrice(orderDTO.getTotalPrice());
         order.setIdUser(orderDTO.getIdUser());
         order.setIdAddress(orderDTO.getIdAddress());
-        order.setTotalPrice(orderDTO.getTotalPrice());
         order.setDate(new Date());
 
-        List<OrderItem> listItems = converterTo(orderDTO.getList());
+        List<OrderItem> itemList = new ArrayList<>();
 
-        order.setList(listItems);
+        for (OrderItemDTO orderItemDTO: orderDTO.getItemList()) {
+            OrderItem orderItem = new OrderItem();
+
+            orderItem.setIdOrderItem(orderItemDTO.getIdOrderItem());
+            orderItem.setIdProduct(orderItemDTO.getIdProduct());
+            orderItem.setPrice(orderItemDTO.getPrice());
+            orderItem.setQuantity(orderItemDTO.getQuantity());
+
+            itemList.add(orderItem);
+        }
+        order.setItemList(itemList);
 
         return order;
+    }
+
+    public OrderDTO converterTo(Order order) {
+
+        OrderDTO orderDTO = new OrderDTO();
+
+        orderDTO.setIdOrder(order.getIdOrder());
+        orderDTO.setIdUser(order.getIdUser());
+        orderDTO.setIdAddress(order.getIdAddress());
+        orderDTO.setTotalPrice(order.getTotalPrice());
+        orderDTO.setDate(new Date());
+
+        List<OrderItemDTO> itemList = new ArrayList<>();
+        for (OrderItem orderItem: order.getItemList()) {
+            OrderItemDTO orderItemDTO = new OrderItemDTO();
+
+            orderItemDTO.setIdOrderItem(orderItem.getIdOrderItem());
+            orderItemDTO.setIdProduct(orderItem.getIdProduct());
+            orderItemDTO.setPrice(orderItem.getPrice());
+            orderItemDTO.setQuantity(orderItem.getQuantity());
+
+            itemList.add(orderItemDTO);
+        }
+        orderDTO.setItemList(itemList);
+
+        return orderDTO;
     }
 
     public Product converterTo(ProductDTO productDTO) {
@@ -93,36 +147,32 @@ public class Converter {
         return product;
     }
 
+    public ProductDTO converterTo(Product product) {
 
-    // public OrderItem converterTo(OrderItemDTO orderItemDTO) {
+        ProductDTO productDTO = new ProductDTO();
 
-    //     OrderItem orderItem = new OrderItem();
+        productDTO.setIdProduct(product.getIdProduct());
+        productDTO.setName(product.getName());
+        productDTO.setPrice(product.getPrice());
+        productDTO.setImage(product.getImage());
+        productDTO.setDescription(product.getDescription());
+        productDTO.setQuantStock(product.getQuantStock());
+        productDTO.setIdCategory(product.getIdCategory());
 
-    //     orderItem.setIdProduct(orderItemDTO.getIdProduct());
-    //     orderItem.setPrice(orderItemDTO.getPrice());
-    //     orderItem.setQuantity(orderItemDTO.getQuantity());
-        
-    public List<OrderItem> converterTo(List<OrderItemDTO> orderItemDTO) {
-
-        List<OrderItem> listItems = new ArrayList<>();
-        for (OrderItemDTO orderItems : orderItemDTO) {
-            OrderItem it = new OrderItem();
-            it.setIdOrderItem(orderItems.getIdOrderItem());
-            it.setQuantity(orderItems.getQuantity());
-            it.setPrice(orderItems.getPrice());
-            it.setIdProduct(orderItems.getIdProduct());
-            listItems.add(it);
-        }
-
-        return listItems;
+        return productDTO;
     }
 
     public Category converterTo(CategoryDTO categoryDTO) {
 
         Category category = new Category();
-
         category.setName(categoryDTO.getName());
-
         return category;
+    }
+
+    public CategoryDTO converterTo(Category category) {
+
+        CategoryDTO categoryDTO = new CategoryDTO();
+        categoryDTO.setName(category.getName());
+        return categoryDTO;
     }
 }

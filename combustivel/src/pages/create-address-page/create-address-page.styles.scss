@@ -1,0 +1,20 @@
+html{
+  background-color: #F4F7FF !important;
+}
+body {
+  background-color: #F4F7FF !important;
+
+}
+
+.gender {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0 10px 0;
+}
+
+.label-gender{
+    font-size: 17px;
+    padding-left: 20px;
+    position: relative;
+    top: -3px;
+}
