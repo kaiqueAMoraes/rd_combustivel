@@ -12,10 +12,12 @@ import br.com.rd.Backend.repositories.OrderRepository;
 import br.com.rd.Backend.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.validation.ConstraintViolationException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -52,12 +54,20 @@ public class OrderService implements OrderInterface {
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: um ou mais campos não foram preenchidos " + e.getMessage());
-        }   
+        } catch (
+                ConstraintViolationException e) {
+            return ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
+        }
     }
 
     @Override
     public ResponseEntity deleteOrderById(Long id) {
-        return null;
+        try {
+            orderRepository.deleteById(id);
+            return ResponseEntity.ok().body("Pedido " + id + " deletado");
+        } catch (EmptyResultDataAccessException e) {
+            return ResponseEntity.badRequest().body("Id do pedido não existe");
+        }
     }
 
     @Override
@@ -79,8 +89,9 @@ public class OrderService implements OrderInterface {
         }
     }
 
+    //SEM FUNCIONAMENTO
     @Override
-    public ResponseEntity findOrderByDate(Date date) { //TODO
+    public ResponseEntity findOrderByDate(Date date) {
         if (orderRepository.findByDate(date).isEmpty()) {
             return ResponseEntity.badRequest().body("Não existem pedidos para a data informada");
         } else {

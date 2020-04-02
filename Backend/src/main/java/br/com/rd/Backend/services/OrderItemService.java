@@ -15,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.validation.ConstraintViolationException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +35,8 @@ public class OrderItemService implements OrderItemInterface {
 
     @Override
     public ResponseEntity saveOrderItem(List<OrderItem> list) {
+
+        try {
 
         List<Product> productList = new ArrayList<>();
 
@@ -59,7 +62,12 @@ public class OrderItemService implements OrderItemInterface {
             productService.updateProductById(converter.converterTo(product));
 
         return ResponseEntity.status(HttpStatus.ACCEPTED).body("Saved");
+        } catch (
+                ConstraintViolationException e) {
+            return ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
+        }
     }
+
 
     @Override
     public ResponseEntity<List<OrderItem>> findAllOrderItems() {
