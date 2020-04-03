@@ -12,8 +12,7 @@ const seed = 25;
 generateUsers = amount => {
     for (let i = 0; i < amount; i++) {
         let user = `insert into tb_user(
-					id_user,
-					dt_birth, 
+                                        dt_birth, 
                                         ds_cpf,
                                         ds_email, 
                                         ds_first_name, 
@@ -22,7 +21,6 @@ generateUsers = amount => {
                                         password, 
                                         ds_phone)
         values(
-		24,
             "19${faker.random.number(5)+4}${faker.random.number(9)}-${faker.random.number(11)+1}-${faker.random.number(30)+1}", 
             "${faker.random.number(99999999999)}",
             "${faker.internet.email()}",
@@ -36,7 +34,7 @@ generateUsers = amount => {
     }
 }
 
-//generateUsers(25);
+generateUsers(125);
 
 
 generateAddresses = amount => {
@@ -68,7 +66,7 @@ generateAddresses = amount => {
     // SELECT us.id_user ,us.ds_first_name, count(ad.id_address) as 'addresses amount' FROM tb_user us JOIN tb_address ad ON ad.id_user = us.id_user GROUP BY us.id_user; 
 }
 
-//generateAddresses(75)
+//generateAddresses(475)
 
 const category = ["Gás Natural", "Gasolina Adtivada", "Diesel", "Etanol Adtivado"];
 generateCategories = () => {
@@ -84,7 +82,7 @@ generateCategories = () => {
     }
 }
 
-generateCategories();
+//generateCategories();
 
 let products = [
     "https://http2.mlstatic.com/galo-tanque-de-combustivel-20-litros-original-seaflo-D_NQ_NP_841552-MLB31118387857_062019-O.webp",
@@ -202,10 +200,11 @@ generateProducts = () => {
     }
 }
 
-generateProducts()
+//generateProducts()
 
 const generateOrders = amount => {
     for (let i = 0; i < amount; i++) {
+        
         let order = `insert into tb_order(
             dt_order,
             ds_total_price,

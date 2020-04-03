@@ -25,7 +25,7 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem}) => {
         <div className='arrow' onClick={() => addItem(cartItem)}>
           <CustomButton className="increment">&#10095;</CustomButton>
         </div>
-    <span className='price'>{price}</span>
+    <span className='price'>{Intl.NumberFormat('pt-BR',{style:'currency', currency:'BRL'}).format(price)}</span>
     <div onClick={() => clearItem(cartItem)} className='remove-button'>Remover</div>
   </div>
 )};

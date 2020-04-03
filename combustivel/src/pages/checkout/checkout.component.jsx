@@ -1,7 +1,8 @@
 import React from 'react';
+import axios from 'axios';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { selectCartItems, selectCartTotal } from '../../redux/cart/cart.selectors';
 import CustomButton from '../../components/custom-button/custom-button.component';
@@ -13,20 +14,47 @@ import ScrollCards from '../../components/scroll-cards/scroll-cards.component';
 
 import './checkout.styles.scss';
 
-const handleSubmit = items => {
-    
-    console.log(JSON.stringify(items))
+const handleSubmit = async (items, total) => {
+    const itemList = [];
+    items.map(item => {
+        itemList.push({ "idProduct": { "idProduct": item.id }, "quantity": item.quantity })
+    })
+    const email = sessionStorage.getItem('email');
+    let userId  = await axios.get('http://localhost:8080/find-user-email/' + email).then(response => {return response.data[0].idUser})
+    let userAddress  = await axios.get(`http://localhost:8080/find-address-byuser/${userId}`).then(response => {return response.data[0].idAddress})
+    const order =
+    {
+        "totalPrice": total,
+        "idUser": {
+            "idUser": userId
+        },
+        "idAddress": {
+            "idAddress": userAddress
+        },
+        "itemList": itemList
+    }
+    console.log(order)
+
+    axios.post("http://localhost:8080/create-order", order)
+        .then(response => {
+            if (response.status === 200) {
+                console.log("sucesso ao cadastrar produto")
+            } else {
+                console.log(response.data)
+                //throw new Error(response.data);
+            }
+        })
 }
 
 const CheckoutPage = ({ cartItems, total }) => (
     <>
         <Container>
-        <h3>Talvez você goste</h3>
-            
-        <ScrollCards
-                        label={"Os mais vendidos"}
-                        produtos={`http://localhost:8080/find-all-products`}
-                    />
+            <h3>Talvez você goste</h3>
+
+            <ScrollCards
+                label={"Os mais vendidos"}
+                produtos={`http://localhost:8080/find-all-products`}
+            />
 
             <h3>Minha cesta</h3>
             <Row>
@@ -62,11 +90,11 @@ const CheckoutPage = ({ cartItems, total }) => (
                             <span>{cartItems.length} produtos</span>
                         </div>
                         <div className="total">
-                            <span>TOTAL : ${total}</span>
+                            <span>TOTAL : {Intl.NumberFormat('pt-BR',{style:'currency', currency:'BRL'}).format(total)}</span>
                         </div>
 
                         <div className="btn-cart-holder d-flex justify-content-center">
-                            <CustomButton onClick={() => handleSubmit(cartItems)}>finalizar</CustomButton>
+                            <CustomButton onClick={() => handleSubmit(cartItems, total)}>finalizar</CustomButton>
                         </div>
                         <div className="btn-cart-holder d-flex justify-content-center">
                             <Link to="/">Continuar comprando</Link>
@@ -76,18 +104,18 @@ const CheckoutPage = ({ cartItems, total }) => (
             </Row>
 
             <h3>Talvez você goste</h3>
-            
-        <ScrollCards
-                        label={"Os mais vendidos"}
-                        produtos={`http://localhost:8080/find-all-products`}
-                    />
 
-<h3>Talvez você goste</h3>
-            
             <ScrollCards
-                            label={"Os mais vendidos"}
-                            produtos={`http://localhost:8080/find-all-products`}
-                        />
+                label={"Os mais vendidos"}
+                produtos={`http://localhost:8080/find-all-products`}
+            />
+
+            <h3>Talvez você goste</h3>
+
+            <ScrollCards
+                label={"Os mais vendidos"}
+                produtos={`http://localhost:8080/find-all-products`}
+            />
         </Container>
     </>
 )

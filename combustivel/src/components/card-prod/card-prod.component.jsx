@@ -52,7 +52,7 @@ class CardProd extends Component {
                         <img src={image} alt="image prod" />
                     </div>
                     <div className="prod-content">
-                        <h5 className="prod-price">R${price}</h5>
+                        <h5 className="prod-price">{Intl.NumberFormat('pt-BR',{style:'currency', currency:'BRL'}).format(price)}</h5>
                         <h5 className="prod-title" >{name}</h5>
 
                     </div>
