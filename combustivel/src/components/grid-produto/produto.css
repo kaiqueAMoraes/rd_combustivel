@@ -1,0 +1,39 @@
+.telaProduto {
+    padding-bottom: 50px;
+
+}
+
+.produto {
+    height: 100%;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.card-compra {
+    
+    padding-top: 70px;
+    padding-left: 8%;    
+    padding-bottom: 50px;
+} 
+
+input{
+    height: 37px;
+    padding-bottom: 5px;
+}
+
+.card-body {
+    width: 90px;
+    height: 100px;
+    padding-right: 50px;
+
+}
+
+div#compra {
+    padding-bottom: 25px;
+   
+}
+
+div#teste {
+    height: 10px;
+    width: 5px;
+}
