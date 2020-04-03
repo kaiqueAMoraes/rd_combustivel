@@ -36,10 +36,9 @@ public class OrderItemService implements OrderItemInterface {
     @Override
     public ResponseEntity saveOrderItem(List<OrderItem> list) {
 
-        try {
-
         List<Product> productList = new ArrayList<>();
 
+        Double sum = 0.0;
         // Check if the orders are valid
         for (OrderItem orderItem: list) {
 
@@ -55,17 +54,14 @@ public class OrderItemService implements OrderItemInterface {
             orderItem.setPrice(product.getPrice() * orderItem.getQuantity());
 
             productList.add(product);
-
+            sum += orderItem.getPrice();
         }
 
         for (Product product : productList)
             productService.updateProductById(converter.converterTo(product));
 
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body("Saved");
-        } catch (
-                ConstraintViolationException e) {
-            return ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
-        }
+
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(sum);
     }
 
 

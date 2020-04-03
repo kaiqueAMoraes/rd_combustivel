@@ -1,25 +1,22 @@
 package br.com.rd.Backend.services;
 
 import br.com.rd.Backend.DTOs.OrderDTO;
-import br.com.rd.Backend.DTOs.OrderItemDTO;
+import br.com.rd.Backend.MailConfig.Cart;
+import br.com.rd.Backend.MailConfig.Mailer;
+import br.com.rd.Backend.MailConfig.Messenger;
 import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.OrderInterface;
 import br.com.rd.Backend.models.Order;
-import br.com.rd.Backend.models.OrderItem;
-import br.com.rd.Backend.models.Product;
 import br.com.rd.Backend.models.User;
 import br.com.rd.Backend.repositories.OrderRepository;
-import br.com.rd.Backend.repositories.ProductRepository;
+import br.com.rd.Backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import javax.validation.ConstraintViolationException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -33,6 +30,14 @@ public class OrderService implements OrderInterface {
 
     @Autowired
     OrderItemService orderItemService;
+
+    @Autowired
+    UserRepository userRepository;
+
+    @Autowired
+    Mailer mailer;
+
+    Cart cart;
 
     @Override
     public ResponseEntity saveOrder(OrderDTO orderDTO) {
@@ -48,7 +53,14 @@ public class OrderService implements OrderInterface {
                 return ResponseEntity.badRequest().body(response.getBody());
             }
 
+            order.setTotalPrice((Double) response.getBody());
             orderRepository.save(order);
+
+            mailer.enviar(new Messenger(
+                    "Origin Combustível <origin.combustivel@gmail.com>",
+                    userRepository.findById(order.getIdUser().getIdUser()).get().getEmail(),
+                    "Confirmação de compra",
+                    "OK"));
 
             return ResponseEntity.ok().body(order);
 
