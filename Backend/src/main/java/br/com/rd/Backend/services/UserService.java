@@ -67,7 +67,6 @@ public class UserService implements UserInterface {
         }
     }
 
-
     @Override
     public ResponseEntity findUserById(Long id) {
         if (userRepository.findById(id).isEmpty()) {
