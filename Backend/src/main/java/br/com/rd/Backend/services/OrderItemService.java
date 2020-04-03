@@ -37,6 +37,7 @@ public class OrderItemService implements OrderItemInterface {
 
         List<Product> productList = new ArrayList<>();
 
+        Double sum = 0.0;
         // Check if the orders are valid
         for (OrderItem orderItem: list) {
 
@@ -52,13 +53,14 @@ public class OrderItemService implements OrderItemInterface {
             orderItem.setPrice(product.getPrice() * orderItem.getQuantity());
 
             productList.add(product);
-
+            sum += orderItem.getPrice();
         }
 
         for (Product product : productList)
             productService.updateProductById(converter.converterTo(product));
 
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body("Saved");
+
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(sum);
     }
 
     @Override
