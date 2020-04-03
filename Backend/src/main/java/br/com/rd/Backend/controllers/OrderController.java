@@ -45,8 +45,8 @@ public class OrderController {
         return orderService.findOrderByDate(date);
     }
 
-    @GetMapping("/search-order")
-    public ResponseEntity searchOrder(@RequestParam ("idOrder")Long idOrder, @RequestParam("dateInput")String dateInput) {
-        return ResponseEntity.ok().body(orderRepository.findByIdOrderOrDate(idOrder, dateInput));
-    }
+//    @GetMapping("/search-order")
+//    public ResponseEntity searchOrder(@RequestParam ("idOrder")Long idOrder, @RequestParam("dateInput")String dateInput) {
+//        return ResponseEntity.ok().body(orderRepository.findByIdOrderOrDate(idOrder, dateInput));
+//    }
 }

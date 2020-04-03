@@ -16,7 +16,4 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 
     List<Order> findByDate(Date date);
     List<Order> findByIdUser(User user);
-
-    @Query("select o from Order o where o.idOrder = ?1 or o.date = ?2")
-    List<Order> findByIdOrderOrDate(Long idOrder, String dateInput);
 }
