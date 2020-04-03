@@ -48,9 +48,11 @@ public class OrderService implements OrderInterface {
                 return ResponseEntity.badRequest().body(response.getBody());
             }
 
+            order.setTotalPrice((Double) response.getBody());
+
             orderRepository.save(order);
 
-            return ResponseEntity.ok().body(order);
+            return ResponseEntity.ok().body(response.getBody());
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: um ou mais campos não foram preenchidos " + e.getMessage());
