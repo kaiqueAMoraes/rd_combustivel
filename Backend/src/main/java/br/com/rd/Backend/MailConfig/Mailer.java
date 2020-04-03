@@ -16,8 +16,7 @@ public class Mailer {
 		SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
 		
 		simpleMailMessage.setFrom(messenger.getSender());
-		simpleMailMessage.setTo(messenger.getReceiver()
-				.toArray(new String[messenger.getReceiver().size()]));
+		simpleMailMessage.setTo(messenger.getReceiver());
 		simpleMailMessage.setSubject(messenger.getSubject());
 		simpleMailMessage.setText(messenger.getText());
 		

@@ -2,6 +2,9 @@ package br.com.rd.Backend.services;
 
 import br.com.rd.Backend.DTOs.OrderDTO;
 import br.com.rd.Backend.DTOs.OrderItemDTO;
+import br.com.rd.Backend.MailConfig.Mailer;
+import br.com.rd.Backend.MailConfig.Messenger;
+import br.com.rd.Backend.MailConfig.SpringEmailMain;
 import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.OrderInterface;
 import br.com.rd.Backend.models.Order;
@@ -11,6 +14,7 @@ import br.com.rd.Backend.models.User;
 import br.com.rd.Backend.repositories.OrderRepository;
 import br.com.rd.Backend.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
@@ -51,6 +55,18 @@ public class OrderService implements OrderInterface {
             order.setTotalPrice((Double) response.getBody());
 
             orderRepository.save(order);
+
+            AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
+                    SpringEmailMain.class.getPackage().getName());
+
+            Mailer mailer = applicationContext.getBean(Mailer.class);
+            mailer.enviar(new Messenger(
+                    "Origin Combustível <origin.combustivel@gmail.com>",
+                    "aryanaagustavo.aa@gmail.com",
+                    "Teste Pedido",
+                    order.toString()));
+
+            applicationContext.close();
 
             return ResponseEntity.ok().body(order);
 

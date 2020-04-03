@@ -11,9 +11,11 @@ public class SpringEmailMain {
 				SpringEmailMain.class.getPackage().getName());
 		
 		Mailer mailer = applicationContext.getBean(Mailer.class);
-		mailer.enviar(new Messenger("origin.combustivel@gmail.com",
-				Arrays.asList("aryanaagustavo.aa@gmail.com")
-				, "Teste E-mail", "Teste de e-mail para Esqueceu a senha"));
+		mailer.enviar(new Messenger(
+				"Origin Combustível <origin.combustivel@gmail.com>",
+				"aryanaagustavo.aa@gmail.com",
+				"Teste E-mail",
+				"Teste de e-mail para Esqueceu a senha"));
 		
 		applicationContext.close();
 		
