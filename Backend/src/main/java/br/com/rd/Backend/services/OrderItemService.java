@@ -36,8 +36,6 @@ public class OrderItemService implements OrderItemInterface {
     @Override
     public ResponseEntity saveOrderItem(List<OrderItem> list) {
 
-        try {
-
         List<Product> productList = new ArrayList<>();
 
         Double sum = 0.0;

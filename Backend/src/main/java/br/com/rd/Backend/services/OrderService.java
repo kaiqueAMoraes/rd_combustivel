@@ -52,7 +52,7 @@ public class OrderService implements OrderInterface {
 
             orderRepository.save(order);
 
-            return ResponseEntity.ok().body(response.getBody());
+            return ResponseEntity.ok().body(order);
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: um ou mais campos não foram preenchidos " + e.getMessage());
