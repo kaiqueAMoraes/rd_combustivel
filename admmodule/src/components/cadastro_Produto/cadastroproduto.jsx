@@ -59,7 +59,7 @@ class Fomularioproduto extends Component {
                 {/* Cabeçalho do formulário */}
 
                 {/* Formulário de Cadastro */}
-                <div className="container form">
+                <div className="container-form-cadastro">
 
                     <header className="container titulo">
                         <p>Cadastro de Produtos</p>

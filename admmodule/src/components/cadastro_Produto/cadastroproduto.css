@@ -1,23 +1,21 @@
-/* .titulo {
+ .titulo {
     background-color: #ff6b6b; 
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border: solid;
-    border-radius: 10px;
+    border-radius: 5px;
 }   
 
-.form {
+.container-form-cadastro {
     display: block;
     align-items: center;
     background-color: rgb(218, 211, 211);
-    width: 30vw;
     margin-bottom: 10px;
-    height: 600px;
     padding-top: 20px;
 }
 
-.main-produto {
-    display: flex;
-    justify-content: center;
-} */
+input{
+    border-radius: 4px;
+}
+
