@@ -37,6 +37,7 @@ public class OrderService implements OrderInterface {
     @Autowired
     Mailer mailer;
 
+    @Autowired
     Cart cart;
 
     @Override
@@ -56,11 +57,10 @@ public class OrderService implements OrderInterface {
             order.setTotalPrice((Double) response.getBody());
             orderRepository.save(order);
 
-            mailer.enviar(new Messenger(
-                    "Origin Combustível <origin.combustivel@gmail.com>",
+            new Thread(() -> mailer.enviar(new Messenger(
                     userRepository.findById(order.getIdUser().getIdUser()).get().getEmail(),
                     "Confirmação de compra",
-                    "OK"));
+                    cart.cartItems(order)))).start();
 
             return ResponseEntity.ok().body(order);
 
