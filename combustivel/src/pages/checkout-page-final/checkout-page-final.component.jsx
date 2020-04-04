@@ -130,6 +130,7 @@ class CheckoutPageFinal extends React.Component {
                                                 {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(frete)}
                                             </p>
                                         </div>
+                                            <span className="frete-info">* o frete é gerado de acordo com o cep do endereço escolhido</span>
                                     </div>
                                     <div className="total-resumo-b">
                                         <span>total</span><p>

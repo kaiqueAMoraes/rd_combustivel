@@ -33,10 +33,22 @@ class CardAddress extends React.Component {
     }
 
     handleDelete = async () => {
-        console.log("deleted")
         const { id } = this.props;
+        const { cep, state, city, district, street, number, history} = this.props;
+        
+        const address = {
+            "idAddress": id,
+            "cep": cep,
+            "state": state,
+            "city": city,
+            "district": district,
+            "street": street,
+            "number": number,
+            "idUser": null
+        }
+        console.log(address)
 
-        await axios.delete(`http://localhost:8080/delete-address/${id}`).then(
+        await axios.put(`http://localhost:8080/update-address`, address).then(
             window.location.reload()
         )
     }

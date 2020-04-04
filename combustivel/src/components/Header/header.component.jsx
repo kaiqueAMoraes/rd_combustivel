@@ -34,6 +34,7 @@ const Header = ({ history, hidden }) => {
                 history.location.pathname === "/dashboard" ||
                 history.location.pathname === "/dashboard/novo-endereco" ||
                 history.location.pathname === "/carrinho/checkout" ||
+                history.location.pathname === "/carrinho/checkout/success-page" ||
                 history.location.pathname === "/dashboard/edit-usuario" ? (
                     
                     <Navbar className="bg-main navbar">
