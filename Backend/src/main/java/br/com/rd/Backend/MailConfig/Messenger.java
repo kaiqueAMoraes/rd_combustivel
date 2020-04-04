@@ -7,7 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class Messenger {
 	
-	private String sender;
 	private String receiver;
 	private String subject;
 	private String text;
