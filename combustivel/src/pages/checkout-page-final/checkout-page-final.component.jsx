@@ -6,7 +6,8 @@ import "./checkout-page-final.styless.scss"
 import CardAddress from "../../components/card-address/cardAddress.component"
 
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+import CustomButton from '../../components/custom-button/custom-button.component';
+import Spinner from 'react-bootstrap/Spinner';
 
 
 
@@ -19,7 +20,9 @@ class CheckoutPageFinal extends React.Component {
             address: [],
             itemList: [],
             total: 0,
-            frete: 91.32
+            frete: 91.32,
+            loading: false,
+            idUser: ""
         }
     }
 
@@ -32,39 +35,43 @@ class CheckoutPageFinal extends React.Component {
         this.setState({
             itemList: this.props.history.location.state.itemList,
             total: this.props.history.location.state.total,
-            address: userAddress
-        }, () => { console.log(this.state.address) })
+            address: userAddress,
+            idUser : userId,
+
+        })
     }
 
-    // handleOrder = () => {
-    //     const {items} = this.state
+    handleOrder = async () => {
+        this.setState({loading: true})
+        const { address, itemList, total, idUser } = this.state;
+        const order =
+        {
+            "totalPrice": total,
+            "idUser": {
+                "idUser": idUser
+            },
+            "idAddress": {
+                "idAddress": address.idAddress
+            },
+            "itemList": itemList
+        }
+        console.log(order)
 
-    //     const order =
-    //     {
-    //         "totalPrice": total,
-    //         "idUser": {
-    //             "idUser": userId
-    //         },
-    //         "idAddress": {
-    //             "idAddress": userAddress
-    //         },
-    //         "itemList": itemList
-    //     }
-    //     console.log(order)
-
-    //     axios.post("http://localhost:8080/create-order", order)
-    //         .then(response => {
-    //             if (response.status === 200) {
-    //                 console.log("sucesso ao cadastrar produto")
-    //             } else {
-    //                 console.log(response.data)
-    //                 //throw new Error(response.data);
-    //             }
-    //         })
-    // }
+        await axios.post("http://localhost:8080/create-order", order)
+            .then(response => {
+                if (response.status === 200) {
+                    console.log("sucesso ao cadastrar produto")
+                    this.setState({loading: false})
+                    this.props.history.push("/carrinho/checkout/success-page")
+                } else {
+                    console.log(response.data)
+                    //throw new Error(response.data);
+                }
+            })
+    }
 
     render() {
-        const { total, itemList, frete, address } = this.state;
+        const { total, itemList, frete, address ,loading} = this.state;
 
         const { cep, street, city, district, number, complement, state, idAddress } = address;
 
@@ -106,6 +113,8 @@ class CheckoutPageFinal extends React.Component {
                                                 <p>, {complement}</p>
                                             ) : ""}
                                         </div>
+                                        <p className="p-title-resumo">Destinatario </p>
+                                        <span>{sessionStorage.getItem("user")}</span>
                                     </div>
                                 </div>
                                 <div className="total-resumo">
@@ -130,6 +139,18 @@ class CheckoutPageFinal extends React.Component {
 
                                 </div>
                             </div>
+                            <div className="to-the-left">
+                            <CustomButton 
+                                
+                                onClick={this.handleOrder}>
+                                finalizar compra
+                                {loading ? <Spinner animation="grow" variant="light" /> : ""}
+                            </CustomButton>
+
+                            </div>
+                            {/* <p className="p-title-resumo">Cartão de pagamento</p>
+                            <div className="pagamento-cartao">
+                            </div> */}
                         </div>
                     </div>
                 </div>

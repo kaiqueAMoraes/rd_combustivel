@@ -11,7 +11,9 @@ import CadastroEditPage from './pages/cadastro-edit-page/cadastro-edit-page.comp
 import CreateAddress from './pages/create-address-page/create-address-page.component';
 import DashboardPage from './pages/dashboard-page/dashboard.page';
 import CheckoutPage from './pages/checkout/checkout.component';
-import CheckoutPageFinal from './pages/checkout-page-final/checkout-page-final.component'
+import CheckoutPageFinal from './pages/checkout-page-final/checkout-page-final.component';
+import SuccessOrderPage from './pages/checkout-success/checkout-success.component';
+
 
 function App() {
 
@@ -35,8 +37,8 @@ function App() {
         <Route exact path="/dashboard/edit-usuario" component={CadastroEditPage}/>
         <Route exact path="/carrinho" component={CheckoutPage}/>
         <Route exact path="/carrinho/checkout" component={CheckoutPageFinal}/>
-        {/* <Route exact path="/carrinho/checkout/checkout-adresses" component={CreateAddress}/>
-        <Route exact path="/finalizacao-compra" component={finalizarCompra}/> */}
+        <Route exact path="/carrinho/checkout/success-page" component={SuccessOrderPage}/> 
+        {/* <Route exact path="/carrinho/checkout/checkout-adresses" component={CreateAddress}/> */}
       </Switch>
     </BrowserRouter>
   </>
