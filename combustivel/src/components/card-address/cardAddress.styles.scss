@@ -6,36 +6,37 @@
     background-color: #fff;
     box-shadow: 0px 0px 15px #D9E3FF;
     border: 1px solid #D9E3FF;
-
-    & .info-container {
+    padding: 15px  15px 0  15px !important;
+    p{
+        margin: 0;
+        padding: 2px;
+    }
+    & .rua{
+        font-size: 18px;
+        width: 100%;
+        min-height: 30px;
+    }
+    & .address-info{
+        width: 100%;
+        color: #2125298f;
         display: flex;
-        gap: 15px;
-        text-align: center;
-        align-items: center;
-        margin: 20px;
-        width: auto;
-
-        & span {
-            color: #6e6e6e;
-        }
-
-        & p {
-            background: #DAE7F04D;
-color: #6272A4;
-            border: 1px solid #D9E3FF;
-            padding: 4.5px 10px;
-            border-radius: 5px;
-            margin: 0;
+        flex-direction: column;
+        font-size: 14px;
+        & .address-state-city-cep {
+            p {
+                display: inline-block;
+            }
         }
     }
+    & .spaced{
+        margin-top: 15px;
+    }
 }
-
 
 .line-break {
     display: flex;
     width: 100%;
     align-items: center;
-    margin-top: 3rem;
 }
 
 .line-break-left{
@@ -44,12 +45,11 @@ color: #6272A4;
     align-items: center;
     justify-content: flex-end;
     border-top: 1px solid #D9E3FF;
-    margin-top: 1rem;
+    margin-top: 2px;
 }
 
 .box-border {
     border: 1px solid #D9E3FF;
-    padding:10px;
     border-radius: 5px;
     margin: 1rem 0;
 

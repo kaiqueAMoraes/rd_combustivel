@@ -24,8 +24,8 @@
   width: 85px;
   height: 35px;
   font-size: 10px;
-  background-color: #f39c1275;
-  color: #e67e22;
+  background-color: #D9E7FA;
+  color: #357ae8;
   text-transform: uppercase;
   font-weight: bolder;
   border: none;
@@ -33,25 +33,24 @@
   margin: 10px;
   &:hover {
     transition: all 0.5s;
-    background-color: #e67e228f;
+    background-color: rgb(195, 220, 255);
   }
 }
 
 .delete-button {
-  width: 85px;
+  min-width: 85px;
   height: 35px;
   font-size: 10px;
-  background-color: #e74c3c5c;
-  color: #c0392b;
+  background-color: transparent;
+  color: #357ae8;
   text-transform: uppercase;
   font-weight: bolder;
   border: none;
   border-radius: 10px;
   margin: 10px;
-
   &:hover {
-    transition: all 0.5s;
-    background-color: #e0423282;
+    transition: all 1s;
+    background-color: rgba(217, 231, 250, 0.452);
   }
 }
 

@@ -34,7 +34,7 @@ generateUsers = amount => {
     }
 }
 
-generateUsers(125);
+//generateUsers(125);
 
 
 generateAddresses = amount => {
@@ -57,7 +57,7 @@ generateAddresses = amount => {
     "${faker.random.number(99999)}",
     "${faker.address.state()}",
     "${faker.address.streetAddress()}",
-    "${faker.random.number(25)+1}"
+    "${faker.random.number(123)+1}"
     );
     `
         console.log(address)
@@ -66,7 +66,7 @@ generateAddresses = amount => {
     // SELECT us.id_user ,us.ds_first_name, count(ad.id_address) as 'addresses amount' FROM tb_user us JOIN tb_address ad ON ad.id_user = us.id_user GROUP BY us.id_user; 
 }
 
-//generateAddresses(475)
+generateAddresses(475)
 
 const category = ["Gás Natural", "Gasolina Adtivada", "Diesel", "Etanol Adtivado"];
 generateCategories = () => {

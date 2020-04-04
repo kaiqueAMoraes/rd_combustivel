@@ -9,14 +9,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "37969908",
-    "South Lenny",
-    "voluptas-est-ut",
-    "Bedfordshire",
-    "36390",
-    "West Virginia",
-    "2121 Kody Village",
-    "9"
+    "95392210",
+    "North Mac",
+    "consequatur-est-velit",
+    "Berkshire",
+    "23607",
+    "Wisconsin",
+    "19018 Oral Village",
+    "87"
     );
     
 insert into tb_address(
@@ -30,391 +30,13 @@ insert into tb_address(
             id_user
             )
             values(
-    "43205673",
-    "Kassulkeburgh",
-    "qui-repellendus-cupiditate",
+    "45775539",
+    "South Kelleymouth",
+    "odio-dolorum-est",
     "Borders",
-    "9821",
-    "Maine",
-    "883 Edward Plaza",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "45350019",
-    "Lake Eudoraview",
-    "dolores-doloremque-tempora",
-    "Buckinghamshire",
-    "25842",
-    "Tennessee",
-    "092 Luella Points",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "43620619",
-    "South Maurinemouth",
-    "et-sed-vero",
-    "Avon",
-    "96321",
-    "Nebraska",
-    "1560 Rocky Walks",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "6887306",
-    "Kelsieside",
-    "voluptatem-minus-tempore",
-    "Bedfordshire",
-    "46154",
-    "New Jersey",
-    "700 Nikolaus Mission",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "55495325",
-    "Aimeeberg",
-    "magnam-non-enim",
-    "Bedfordshire",
-    "31925",
-    "Virginia",
-    "64794 Lind Neck",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "42803590",
-    "Lake Nathenville",
-    "consequuntur-blanditiis-et",
-    "Bedfordshire",
-    "17612",
-    "Maine",
-    "8944 Bell Cove",
-    "2"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "93803327",
-    "South Mariaview",
-    "pariatur-aliquid-quae",
-    "Bedfordshire",
-    "28244",
-    "Connecticut",
-    "6690 Hegmann Branch",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "85281702",
-    "Lake Haskellville",
-    "ea-sit-labore",
-    "Cambridgeshire",
-    "68751",
-    "South Carolina",
-    "12248 Justina Mountains",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "223587",
-    "Kristaside",
-    "iure-impedit-et",
-    "Borders",
-    "21994",
-    "Hawaii",
-    "63235 Okuneva Mews",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "36073187",
-    "Tysonville",
-    "reprehenderit-qui-rem",
-    "Cambridgeshire",
-    "26569",
-    "South Carolina",
-    "0491 Ward Inlet",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "5175122",
-    "North Herminiochester",
-    "est-sint-tenetur",
-    "Buckinghamshire",
-    "69275",
-    "Nevada",
-    "310 Guy Key",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "69922373",
-    "Queenville",
-    "molestiae-eligendi-soluta",
-    "Bedfordshire",
-    "12652",
-    "Vermont",
-    "077 Dietrich Crossroad",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "93589668",
-    "Langoshchester",
-    "quam-rerum-exercitationem",
-    "Cambridgeshire",
-    "40355",
+    "95463",
     "Delaware",
-    "28639 Vincent Prairie",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "28000160",
-    "Zackport",
-    "sint-voluptate-quam",
-    "Avon",
-    "44895",
-    "Colorado",
-    "4208 Bayer Locks",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "37937666",
-    "Birdieside",
-    "nemo-soluta-sunt",
-    "Bedfordshire",
-    "46623",
-    "Wyoming",
-    "635 Junior Crest",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "31592626",
-    "Damonbury",
-    "enim-quo-quae",
-    "Borders",
-    "14102",
-    "Alabama",
-    "194 Caesar Lodge",
-    "2"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "28786232",
-    "Addieside",
-    "dolorum-omnis-eum",
-    "Buckinghamshire",
-    "65969",
-    "Georgia",
-    "9499 Angelita Canyon",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "88701989",
-    "East Mozell",
-    "aut-ab-unde",
-    "Bedfordshire",
-    "91753",
-    "New Mexico",
-    "2053 Kovacek Lakes",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "34502944",
-    "West Freida",
-    "et-provident-reiciendis",
-    "Borders",
-    "74747",
-    "South Carolina",
-    "6432 Kuhn Drives",
+    "0834 Legros Parkway",
     "16"
     );
     
@@ -429,14 +51,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "20788092",
-    "South Sonnytown",
-    "odit-eum-dolorum",
-    "Berkshire",
-    "15435",
-    "Arizona",
-    "996 Reichel Squares",
-    "9"
+    "93019731",
+    "East Missourifurt",
+    "optio-ut-est",
+    "Cambridgeshire",
+    "14731",
+    "New Jersey",
+    "42101 Isabelle Points",
+    "32"
     );
     
 insert into tb_address(
@@ -450,13 +72,97 @@ insert into tb_address(
             id_user
             )
             values(
-    "2108295",
-    "West Cullenton",
-    "sint-dignissimos-ea",
+    "93023397",
+    "Georgettechester",
+    "aperiam-eos-quasi",
     "Bedfordshire",
-    "46606",
-    "Kansas",
-    "37728 Corrine Highway",
+    "40385",
+    "Iowa",
+    "65109 Deron Springs",
+    "122"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "35738168",
+    "East Abagailland",
+    "odio-et-fugit",
+    "Cambridgeshire",
+    "68507",
+    "Pennsylvania",
+    "33060 Boehm Roads",
+    "7"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "6586596",
+    "Dejuanfurt",
+    "dolorum-provident-error",
+    "Borders",
+    "67820",
+    "Ohio",
+    "7896 Daniel Stravenue",
+    "51"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "53645655",
+    "Rodrigotown",
+    "accusamus-recusandae-incidunt",
+    "Borders",
+    "84092",
+    "Idaho",
+    "159 Jacobs Flat",
+    "60"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "31243476",
+    "Lake Princessborough",
+    "est-distinctio-et",
+    "Cambridgeshire",
+    "21043",
+    "Georgia",
+    "1115 Runolfsson Green",
     "3"
     );
     
@@ -471,13 +177,97 @@ insert into tb_address(
             id_user
             )
             values(
-    "10087576",
-    "O'Harafurt",
-    "fugiat-eos-voluptatibus",
+    "28623486",
+    "Lulufort",
+    "similique-nobis-voluptatem",
     "Bedfordshire",
-    "8378",
-    "New Mexico",
-    "83935 Monserrate Locks",
+    "33852",
+    "Utah",
+    "544 Santino Village",
+    "33"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "72468349",
+    "Daughertyberg",
+    "ea-itaque-officiis",
+    "Borders",
+    "26105",
+    "Florida",
+    "29164 Gusikowski Expressway",
+    "119"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "33500560",
+    "South Brown",
+    "voluptates-et-ut",
+    "Avon",
+    "81451",
+    "Alabama",
+    "99406 Warren Orchard",
+    "53"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "6730531",
+    "Veronashire",
+    "et-nostrum-culpa",
+    "Cambridgeshire",
+    "47403",
+    "Missouri",
+    "8620 Pacocha Passage",
+    "87"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "33491842",
+    "Veumchester",
+    "dolor-cupiditate-nulla",
+    "Bedfordshire",
+    "34373",
+    "Wisconsin",
+    "19850 Israel Haven",
     "2"
     );
     
@@ -492,14 +282,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "39974514",
-    "Jeanstad",
-    "porro-aliquid-architecto",
+    "95394672",
+    "Lake Paulinestad",
+    "impedit-iste-hic",
     "Berkshire",
-    "99649",
-    "Idaho",
-    "341 Grady Bypass",
-    "3"
+    "25699",
+    "Virginia",
+    "96717 Kassulke Circle",
+    "74"
     );
     
 insert into tb_address(
@@ -513,119 +303,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "26618086",
-    "West Anissa",
-    "esse-facilis-eum",
-    "Borders",
-    "10858",
-    "Oregon",
-    "23325 Veum Manors",
-    "4"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "7349720",
-    "Fosterville",
-    "et-similique-eum",
-    "Bedfordshire",
-    "53392",
-    "Michigan",
-    "96292 Beier Extension",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "42011731",
-    "North Jenaville",
-    "et-dolores-sequi",
-    "Avon",
-    "89216",
-    "Arizona",
-    "9563 Grady Park",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "95259857",
-    "West Delbertville",
-    "enim-provident-dolore",
-    "Bedfordshire",
-    "46439",
-    "Kentucky",
-    "3811 Danielle Mountain",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "43084575",
-    "Leuschkeside",
-    "mollitia-amet-voluptatibus",
+    "41495394",
+    "North Rosetown",
+    "illum-aut-saepe",
     "Cambridgeshire",
-    "14507",
-    "Mississippi",
-    "6648 Stamm Inlet",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "16659147",
-    "Lake Devontechester",
-    "velit-ab-iusto",
-    "Avon",
-    "89698",
+    "11251",
     "Maine",
-    "01907 Jacobson Manors",
-    "10"
+    "9597 Mosciski Burgs",
+    "87"
     );
     
 insert into tb_address(
@@ -639,56 +324,35 @@ insert into tb_address(
             id_user
             )
             values(
-    "17345749",
-    "Alexandrinestad",
-    "quia-sed-expedita",
-    "Buckinghamshire",
-    "57138",
-    "South Dakota",
-    "459 Nigel Turnpike",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "15432424",
-    "North Kiera",
-    "aperiam-doloremque-et",
-    "Borders",
-    "36866",
-    "Massachusetts",
-    "115 Yost Stream",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "9730312",
-    "Erikside",
-    "odio-fugiat-distinctio",
+    "23781149",
+    "Port Aimee",
+    "ipsum-suscipit-deserunt",
     "Bedfordshire",
-    "96296",
+    "37551",
+    "Nevada",
+    "2468 Wilkinson Underpass",
+    "106"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "9894626",
+    "Lake Katherine",
+    "facere-harum-adipisci",
+    "Avon",
+    "97662",
     "Colorado",
-    "96249 Huels Mills",
-    "18"
+    "7082 Braun Locks",
+    "88"
     );
     
 insert into tb_address(
@@ -702,14 +366,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "66183505",
-    "Marinatown",
-    "mollitia-veniam-magnam",
+    "64962781",
+    "East Horaceville",
+    "excepturi-hic-aliquid",
     "Berkshire",
-    "87255",
-    "Iowa",
-    "74067 Fritz Points",
-    "20"
+    "17353",
+    "Montana",
+    "656 Emerson Mission",
+    "47"
     );
     
 insert into tb_address(
@@ -723,160 +387,202 @@ insert into tb_address(
             id_user
             )
             values(
-    "15552132",
-    "Otiliachester",
-    "fugit-libero-amet",
+    "52567017",
+    "Wintheisertown",
+    "quia-omnis-ducimus",
+    "Cambridgeshire",
+    "32088",
+    "Kentucky",
+    "8960 Abner Bridge",
+    "85"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "39132724",
+    "Shanahanmouth",
+    "veritatis-quidem-non",
+    "Berkshire",
+    "8129",
+    "Vermont",
+    "597 Kiehn Islands",
+    "75"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "86471867",
+    "Marksshire",
+    "consequatur-debitis-sit",
+    "Berkshire",
+    "72036",
+    "Tennessee",
+    "3416 Strosin Turnpike",
+    "83"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "5657861",
+    "Ryanfort",
+    "ex-iusto-non",
+    "Berkshire",
+    "18375",
+    "New Mexico",
+    "913 Caleb Freeway",
+    "99"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "68404082",
+    "East Sheaside",
+    "consequuntur-ratione-et",
+    "Berkshire",
+    "91473",
+    "Colorado",
+    "06030 Schowalter Avenue",
+    "16"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "26320456",
+    "Phoebehaven",
+    "deserunt-quo-labore",
+    "Berkshire",
+    "82193",
+    "New Jersey",
+    "51790 Runte Lodge",
+    "103"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "58440082",
+    "Grahamchester",
+    "quam-aliquam-cupiditate",
+    "Cambridgeshire",
+    "12576",
+    "Kansas",
+    "2466 Triston Cliff",
+    "101"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "65400081",
+    "Considinestad",
+    "quo-commodi-maxime",
+    "Borders",
+    "10579",
+    "Michigan",
+    "777 Winnifred Fall",
+    "2"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "43278780",
+    "New Harrisonport",
+    "necessitatibus-tenetur-ratione",
+    "Berkshire",
+    "36105",
+    "Rhode Island",
+    "0823 Rowe Court",
+    "98"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "67401638",
+    "Schuppeberg",
+    "tenetur-repellat-ducimus",
     "Avon",
-    "60406",
-    "Maryland",
-    "043 Huels Throughway",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "76211660",
-    "Laurelstad",
-    "qui-omnis-omnis",
-    "Berkshire",
-    "82122",
-    "Maine",
-    "49409 Shanahan Bridge",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "96943540",
-    "New Ike",
-    "facere-ab-et",
-    "Buckinghamshire",
-    "75398",
-    "Texas",
-    "375 Hermann Stream",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "46428398",
-    "South Kristopher",
-    "aspernatur-ut-et",
-    "Borders",
-    "96953",
-    "Connecticut",
-    "29296 Heaney Camp",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "65264299",
-    "West Toby",
-    "est-labore-quam",
-    "Bedfordshire",
-    "41016",
-    "New Hampshire",
-    "922 Roob Path",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "33288760",
-    "Dietrichtown",
-    "delectus-velit-magnam",
-    "Buckinghamshire",
-    "4425",
-    "New York",
-    "1730 Godfrey Islands",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "61129237",
-    "Crawfordchester",
-    "modi-aliquid-unde",
-    "Bedfordshire",
-    "61532",
-    "Florida",
-    "27630 Bayer Brook",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "1817597",
-    "New Meggiefort",
-    "earum-corrupti-esse",
-    "Borders",
-    "39757",
-    "Idaho",
-    "6046 Elfrieda Loaf",
+    "13802",
+    "Alabama",
+    "0091 McClure Cape",
     "19"
     );
     
@@ -891,76 +597,55 @@ insert into tb_address(
             id_user
             )
             values(
-    "3041221",
-    "Wandastad",
-    "doloribus-earum-sunt",
-    "Bedfordshire",
-    "92393",
-    "Tennessee",
-    "45813 Sister Islands",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "26413708",
-    "Autumnview",
-    "consequatur-omnis-neque",
-    "Bedfordshire",
-    "17477",
-    "Colorado",
-    "924 Connelly Tunnel",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "96409651",
-    "East Jayne",
-    "suscipit-ullam-voluptatem",
-    "Avon",
-    "21665",
-    "Virginia",
-    "09795 Jules Oval",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "5922730",
-    "Sibylhaven",
-    "et-suscipit-quae",
+    "41510930",
+    "Faheyton",
+    "eius-ipsam-non",
     "Borders",
-    "71712",
-    "Virginia",
-    "905 Grant Meadow",
+    "93305",
+    "Ohio",
+    "50163 Ward Crossroad",
+    "89"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "22998460",
+    "Wizaburgh",
+    "totam-voluptas-est",
+    "Borders",
+    "70360",
+    "Washington",
+    "68046 Jesse Rapids",
+    "76"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "75810283",
+    "New Philipview",
+    "ipsam-voluptatum-et",
+    "Cambridgeshire",
+    "65054",
+    "Pennsylvania",
+    "77939 Martin Overpass",
     "25"
     );
     
@@ -975,13 +660,55 @@ insert into tb_address(
             id_user
             )
             values(
-    "89804287",
-    "Aleneshire",
-    "dicta-architecto-eaque",
+    "9421466",
+    "East Anna",
+    "autem-earum-ut",
+    "Borders",
+    "87811",
+    "Washington",
+    "523 Hyatt Wall",
+    "85"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "81662815",
+    "Gibsonchester",
+    "minus-et-qui",
     "Bedfordshire",
-    "54101",
-    "New York",
-    "44333 Janie Trace",
+    "58882",
+    "Wisconsin",
+    "7068 Velva Oval",
+    "117"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "8612551",
+    "South Augustmouth",
+    "adipisci-debitis-atque",
+    "Cambridgeshire",
+    "21897",
+    "Virginia",
+    "03078 Walter Crest",
     "4"
     );
     
@@ -996,14 +723,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "77650043",
-    "Lake Bobbyshire",
-    "nemo-explicabo-soluta",
+    "2927798",
+    "Weimannmouth",
+    "aut-et-quis",
     "Cambridgeshire",
-    "49763",
-    "Nebraska",
-    "24664 Huel Squares",
-    "18"
+    "763",
+    "Iowa",
+    "28450 Cristobal Mews",
+    "39"
     );
     
 insert into tb_address(
@@ -1017,13 +744,97 @@ insert into tb_address(
             id_user
             )
             values(
-    "88439844",
-    "New Emeliemouth",
-    "voluptate-dolor-maiores",
-    "Avon",
-    "91256",
-    "Iowa",
-    "0797 Terrence Parks",
+    "52621260",
+    "Isabellabury",
+    "id-officia-sed",
+    "Berkshire",
+    "74663",
+    "Arizona",
+    "08508 Sporer Bypass",
+    "114"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "67911777",
+    "New Federicoland",
+    "animi-et-omnis",
+    "Bedfordshire",
+    "12027",
+    "South Dakota",
+    "81614 Micaela Trail",
+    "99"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "2435105",
+    "Genesisburgh",
+    "commodi-aut-occaecati",
+    "Berkshire",
+    "2011",
+    "Louisiana",
+    "429 Zemlak Village",
+    "104"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "55693036",
+    "West Mazieview",
+    "labore-facilis-et",
+    "Cambridgeshire",
+    "12687",
+    "Alaska",
+    "67679 Gutkowski Parkway",
+    "92"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "81984194",
+    "East Margeburgh",
+    "aliquid-pariatur-quo",
+    "Bedfordshire",
+    "87277",
+    "South Carolina",
+    "902 Bertrand Shore",
     "20"
     );
     
@@ -1038,14 +849,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "12135564",
-    "Binsbury",
-    "repellat-culpa-non",
+    "89105065",
+    "Beerburgh",
+    "sed-fugit-modi",
     "Avon",
-    "18978",
-    "Rhode Island",
-    "21967 Herman Via",
-    "15"
+    "60883",
+    "Illinois",
+    "40127 Janie Dale",
+    "107"
     );
     
 insert into tb_address(
@@ -1059,13 +870,496 @@ insert into tb_address(
             id_user
             )
             values(
-    "36498064",
-    "Port Justinaborough",
-    "consequatur-assumenda-voluptatem",
+    "24201150",
+    "Josestad",
+    "molestias-labore-voluptatum",
     "Borders",
-    "13288",
+    "49242",
+    "Ohio",
+    "18295 Langworth Vista",
+    "46"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "76161789",
+    "Ziemeville",
+    "temporibus-delectus-maiores",
+    "Cambridgeshire",
+    "55474",
     "West Virginia",
-    "18953 O'Hara Club",
+    "68921 Brianne Cove",
+    "97"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "15763956",
+    "Handchester",
+    "laboriosam-qui-aspernatur",
+    "Bedfordshire",
+    "16232",
+    "Kentucky",
+    "913 Bartoletti Rapid",
+    "103"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "18266398",
+    "Nienowtown",
+    "accusamus-mollitia-minus",
+    "Bedfordshire",
+    "7099",
+    "Oregon",
+    "828 Vidal Tunnel",
+    "109"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "2208192",
+    "Lake Laverne",
+    "corrupti-repudiandae-et",
+    "Cambridgeshire",
+    "42831",
+    "Oklahoma",
+    "785 Rebeka Drive",
+    "104"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "23655685",
+    "Sammymouth",
+    "error-quia-eligendi",
+    "Avon",
+    "75178",
+    "Tennessee",
+    "60573 Khalil Bridge",
+    "48"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "94798080",
+    "New Amani",
+    "cum-qui-tenetur",
+    "Buckinghamshire",
+    "86248",
+    "Florida",
+    "299 Miracle Port",
+    "85"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "57475040",
+    "Aureliemouth",
+    "illo-maiores-voluptatem",
+    "Buckinghamshire",
+    "84629",
+    "Missouri",
+    "9488 Dicki Trail",
+    "49"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "87978793",
+    "Port Pattiechester",
+    "adipisci-ipsa-et",
+    "Cambridgeshire",
+    "20342",
+    "Nebraska",
+    "7859 Lucy Plaza",
+    "106"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "60808041",
+    "Krajcikport",
+    "possimus-ex-hic",
+    "Bedfordshire",
+    "94799",
+    "South Dakota",
+    "306 Dedrick Viaduct",
+    "116"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "87209440",
+    "Armandochester",
+    "et-dolorum-itaque",
+    "Bedfordshire",
+    "24271",
+    "California",
+    "363 Shields Spur",
+    "17"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "98811768",
+    "Heidenreichside",
+    "eveniet-doloribus-temporibus",
+    "Cambridgeshire",
+    "69361",
+    "Montana",
+    "22868 Freida Expressway",
+    "41"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "20411785",
+    "Schroederland",
+    "nobis-odio-deserunt",
+    "Bedfordshire",
+    "75034",
+    "Iowa",
+    "742 Albertha Wall",
+    "79"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "68249510",
+    "East Oswaldo",
+    "dolores-nostrum-autem",
+    "Avon",
+    "23483",
+    "Tennessee",
+    "3454 Grover Hills",
+    "92"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "17042296",
+    "South Ashleighbury",
+    "dolor-nisi-doloribus",
+    "Buckinghamshire",
+    "39163",
+    "Wisconsin",
+    "930 Chris Views",
+    "118"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "36556206",
+    "Wymanchester",
+    "ut-dolorem-et",
+    "Avon",
+    "56843",
+    "Alabama",
+    "2087 Cassandra Villages",
+    "61"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "46276363",
+    "Hagenesmouth",
+    "in-id-possimus",
+    "Avon",
+    "33689",
+    "Minnesota",
+    "11886 Kihn Creek",
+    "100"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "78114501",
+    "North Kaseyhaven",
+    "magnam-quos-ut",
+    "Cambridgeshire",
+    "86593",
+    "West Virginia",
+    "072 Nicklaus Greens",
+    "82"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "81934194",
+    "New Hanston",
+    "quia-debitis-unde",
+    "Borders",
+    "15342",
+    "Mississippi",
+    "159 Laney Island",
+    "112"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "93130259",
+    "Taniachester",
+    "in-harum-cum",
+    "Avon",
+    "57930",
+    "Idaho",
+    "6454 Littel Stream",
+    "6"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "58742824",
+    "Beckerfort",
+    "enim-nesciunt-aut",
+    "Cambridgeshire",
+    "77116",
+    "Washington",
+    "063 Dylan Junctions",
+    "47"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "33881516",
+    "Quitzonton",
+    "quasi-voluptas-omnis",
+    "Buckinghamshire",
+    "38586",
+    "Kentucky",
+    "750 Clinton Radial",
+    "87"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "16135949",
+    "Sheashire",
+    "recusandae-consequuntur-minima",
+    "Buckinghamshire",
+    "85931",
+    "Missouri",
+    "765 Toni Isle",
+    "100"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "2307475",
+    "Zenabury",
+    "temporibus-cumque-veritatis",
+    "Borders",
+    "41909",
+    "New Mexico",
+    "6098 Rowland Vista",
     "13"
     );
     
@@ -1080,14 +1374,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "40076007",
-    "Samshire",
-    "dolorum-quisquam-dolor",
+    "78256296",
+    "Hagenesbury",
+    "ut-sed-a",
     "Cambridgeshire",
-    "75759",
-    "Tennessee",
-    "179 Leuschke Creek",
-    "26"
+    "87822",
+    "Indiana",
+    "832 Terrance Plaza",
+    "38"
     );
     
 insert into tb_address(
@@ -1101,98 +1395,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "94068617",
-    "Genevievemouth",
-    "error-assumenda-et",
-    "Buckinghamshire",
-    "28070",
-    "Virginia",
-    "4127 DuBuque Trail",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "99051082",
-    "Wilmafort",
-    "aliquam-non-ea",
-    "Buckinghamshire",
-    "33090",
-    "Ohio",
-    "4679 Arne Valleys",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "92029784",
-    "South Ferminville",
-    "nam-aut-excepturi",
-    "Buckinghamshire",
-    "1683",
-    "Ohio",
-    "840 Ryan Pass",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "47311485",
-    "South Hazelton",
-    "sint-placeat-aut",
-    "Cambridgeshire",
-    "16076",
-    "Iowa",
-    "5338 Mante Hill",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "4045747",
-    "Paucekberg",
-    "repudiandae-quia-sunt",
+    "2281328",
+    "Rathville",
+    "id-quis-laboriosam",
     "Bedfordshire",
-    "45392",
-    "Virginia",
-    "5569 Terry Point",
-    "14"
+    "53378",
+    "Nevada",
+    "91257 Aufderhar Harbors",
+    "122"
     );
     
 insert into tb_address(
@@ -1206,13 +1416,76 @@ insert into tb_address(
             id_user
             )
             values(
-    "79525978",
-    "Jorgefurt",
-    "perferendis-itaque-veritatis",
+    "2091945",
+    "East Liliana",
+    "iste-sed-reiciendis",
+    "Avon",
+    "35734",
+    "Illinois",
+    "1111 Grimes Extensions",
+    "6"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "17361451",
+    "Volkmantown",
+    "qui-ut-facilis",
     "Buckinghamshire",
-    "89366",
-    "Wisconsin",
-    "102 Delphine Bypass",
+    "93292",
+    "Washington",
+    "41670 Lubowitz Port",
+    "121"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "75601515",
+    "New Toy",
+    "qui-explicabo-quos",
+    "Borders",
+    "20307",
+    "Minnesota",
+    "86692 Virgil Dale",
+    "60"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "62162440",
+    "Bulahborough",
+    "quos-nesciunt-quo",
+    "Berkshire",
+    "908",
+    "Illinois",
+    "72471 Collier Summit",
     "15"
     );
     
@@ -1227,14 +1500,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "24294370",
-    "North Abdiel",
-    "laboriosam-accusantium-atque",
-    "Bedfordshire",
-    "65777",
-    "South Carolina",
-    "18226 Shanie Court",
-    "25"
+    "81449330",
+    "Port Tod",
+    "eum-doloremque-labore",
+    "Borders",
+    "31504",
+    "Louisiana",
+    "1758 Catharine Pine",
+    "62"
     );
     
 insert into tb_address(
@@ -1248,13 +1521,160 @@ insert into tb_address(
             id_user
             )
             values(
-    "16212318",
-    "West Wanda",
-    "id-illum-aliquam",
-    "Berkshire",
-    "18725",
-    "Mississippi",
-    "23982 Martin Turnpike",
+    "91212117",
+    "Williamsonland",
+    "molestias-sint-voluptatem",
+    "Bedfordshire",
+    "57570",
+    "Wisconsin",
+    "686 Nakia Points",
+    "105"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "6488357",
+    "West Brendan",
+    "temporibus-natus-sunt",
+    "Buckinghamshire",
+    "71001",
+    "Indiana",
+    "57535 Hamill Manors",
+    "122"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "12788800",
+    "Dameontown",
+    "libero-dolore-sed",
+    "Cambridgeshire",
+    "68153",
+    "North Carolina",
+    "5312 Roslyn Vista",
+    "31"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "31912876",
+    "Koeppmouth",
+    "facilis-dignissimos-id",
+    "Avon",
+    "72850",
+    "Colorado",
+    "3865 Howe Glens",
+    "122"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "22595395",
+    "West Alessandrafurt",
+    "quis-et-aut",
+    "Bedfordshire",
+    "3207",
+    "New Hampshire",
+    "98201 Bradtke Port",
+    "37"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "27820264",
+    "South Paige",
+    "vero-veritatis-voluptatem",
+    "Cambridgeshire",
+    "45490",
+    "Oklahoma",
+    "560 Sally Canyon",
+    "63"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "6091895",
+    "New Alvah",
+    "iure-voluptas-veritatis",
+    "Buckinghamshire",
+    "56213",
+    "Vermont",
+    "6855 Rashad Loop",
+    "83"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "19763535",
+    "Gutkowskifort",
+    "qui-quia-amet",
+    "Borders",
+    "3430",
+    "Michigan",
+    "194 Jadyn Shoals",
     "2"
     );
     
@@ -1269,14 +1689,56 @@ insert into tb_address(
             id_user
             )
             values(
-    "80853440",
-    "Port Tate",
-    "dolores-soluta-ea",
+    "4477307",
+    "Josephinemouth",
+    "rerum-recusandae-dicta",
     "Buckinghamshire",
-    "19153",
+    "70364",
+    "Tennessee",
+    "446 Blanda Club",
+    "89"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "77783714",
+    "Lake Emerychester",
+    "voluptatibus-ea-at",
+    "Bedfordshire",
+    "22479",
+    "Maine",
+    "975 Berge Freeway",
+    "78"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "53497266",
+    "Chanellehaven",
+    "rerum-aliquid-possimus",
+    "Avon",
+    "28386",
     "New Hampshire",
-    "1412 Beatty Glens",
-    "10"
+    "09610 Ulises Dam",
+    "95"
     );
     
 insert into tb_address(
@@ -1290,13 +1752,727 @@ insert into tb_address(
             id_user
             )
             values(
-    "49867162",
-    "North Jettstad",
-    "ut-laboriosam-dolores",
+    "18556884",
+    "East Brayanshire",
+    "officiis-facilis-exercitationem",
     "Cambridgeshire",
-    "41084",
+    "20866",
+    "Indiana",
+    "213 Larkin Ferry",
+    "31"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "38969390",
+    "East Mckenzie",
+    "cupiditate-ratione-repellat",
+    "Borders",
+    "3575",
+    "Oregon",
+    "793 Howell Ridge",
+    "16"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "18633430",
+    "Lake Rigoberto",
+    "fugiat-aut-ratione",
+    "Berkshire",
+    "33933",
+    "Alaska",
+    "777 Willms Parkways",
+    "83"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "7146046",
+    "McLaughlinton",
+    "quisquam-voluptatem-quis",
+    "Borders",
+    "50116",
+    "Iowa",
+    "174 Johan Harbor",
+    "95"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "6633173",
+    "Boscotown",
+    "vero-in-ut",
+    "Buckinghamshire",
+    "88302",
+    "North Dakota",
+    "130 Marquise Crossing",
+    "25"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "82664483",
+    "New Jasmin",
+    "quas-doloremque-quas",
+    "Bedfordshire",
+    "4440",
+    "Illinois",
+    "649 Ilene Coves",
+    "79"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "6919965",
+    "Port Joshuamouth",
+    "laboriosam-incidunt-dolores",
+    "Cambridgeshire",
+    "40868",
+    "West Virginia",
+    "24600 Jennyfer Ramp",
+    "3"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "82873347",
+    "West Cassidyborough",
+    "et-odit-assumenda",
+    "Bedfordshire",
+    "42242",
+    "New Mexico",
+    "334 Cummings Ferry",
+    "48"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "6819921",
+    "North Harveyborough",
+    "ex-aut-facere",
+    "Avon",
+    "43426",
+    "New York",
+    "220 Willms Centers",
+    "61"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "77361692",
+    "North Marta",
+    "aut-voluptatum-sunt",
+    "Cambridgeshire",
+    "74482",
+    "Idaho",
+    "35364 Justyn Coves",
+    "88"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "59858052",
+    "West Stacey",
+    "ea-consequatur-dolorem",
+    "Cambridgeshire",
+    "37881",
+    "New Mexico",
+    "776 Kellen Road",
+    "114"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "43234034",
+    "New Tatehaven",
+    "est-doloribus-dicta",
+    "Avon",
+    "85663",
+    "Pennsylvania",
+    "954 Carroll Camp",
+    "84"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "19963816",
+    "Brownport",
+    "eum-aut-cumque",
+    "Cambridgeshire",
+    "6678",
+    "South Carolina",
+    "9744 Yost Stream",
+    "65"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "76326206",
+    "Port Elaina",
+    "exercitationem-eos-dolorem",
+    "Borders",
+    "41190",
+    "Maine",
+    "57871 Harvey Station",
+    "56"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "58235839",
+    "New Johannaville",
+    "et-qui-tenetur",
+    "Cambridgeshire",
+    "87535",
     "Colorado",
-    "18889 Schimmel Prairie",
+    "631 Zboncak Road",
+    "117"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "80128026",
+    "Shanyshire",
+    "magni-fugiat-cupiditate",
+    "Cambridgeshire",
+    "83343",
+    "Hawaii",
+    "2279 Glover Locks",
+    "45"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "22672412",
+    "South Laurencebury",
+    "quidem-omnis-autem",
+    "Buckinghamshire",
+    "4089",
+    "New York",
+    "9792 Sarina Squares",
+    "58"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "47773265",
+    "East Ruthie",
+    "repellat-beatae-aspernatur",
+    "Avon",
+    "61763",
+    "New Mexico",
+    "3008 Kessler Run",
+    "99"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "96365516",
+    "Myachester",
+    "tenetur-optio-est",
+    "Borders",
+    "14141",
+    "Texas",
+    "230 Rutherford Crest",
+    "118"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "58869262",
+    "West Patview",
+    "et-incidunt-voluptas",
+    "Borders",
+    "69711",
+    "Ohio",
+    "819 Luis Ranch",
+    "24"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "29112931",
+    "East Maverickside",
+    "fugiat-tenetur-quis",
+    "Cambridgeshire",
+    "36362",
+    "Connecticut",
+    "079 Asha Point",
+    "112"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "75845189",
+    "Lake Lydiaburgh",
+    "minima-aut-voluptatem",
+    "Berkshire",
+    "25140",
+    "New Mexico",
+    "1149 Xander Orchard",
+    "100"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "67623496",
+    "New Christopheport",
+    "sint-non-optio",
+    "Berkshire",
+    "21988",
+    "Connecticut",
+    "34489 Katarina Pass",
+    "25"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "67445341",
+    "Torpchester",
+    "similique-minus-sit",
+    "Cambridgeshire",
+    "42983",
+    "Connecticut",
+    "48238 Baumbach Field",
+    "76"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "33435688",
+    "Harberberg",
+    "tenetur-et-possimus",
+    "Borders",
+    "19732",
+    "Washington",
+    "0806 Jon Falls",
+    "103"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "87094920",
+    "Trishafurt",
+    "explicabo-odit-ut",
+    "Buckinghamshire",
+    "53858",
+    "South Dakota",
+    "554 Prosacco Fields",
+    "35"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "21880863",
+    "D'Amoremouth",
+    "aliquam-vel-excepturi",
+    "Avon",
+    "43296",
+    "Missouri",
+    "5616 Reymundo Center",
+    "102"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "15970491",
+    "New Loniechester",
+    "eos-odio-dicta",
+    "Borders",
+    "43162",
+    "Ohio",
+    "193 Miller Valley",
+    "66"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "30858352",
+    "Frederickborough",
+    "tempore-rerum-minus",
+    "Avon",
+    "83599",
+    "Ohio",
+    "354 Mortimer Radial",
+    "95"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "3768042",
+    "Luellaside",
+    "minima-rerum-voluptatem",
+    "Berkshire",
+    "89963",
+    "Nevada",
+    "38157 Michelle Glens",
+    "115"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "54353656",
+    "Lake Marcoston",
+    "nihil-in-odit",
+    "Borders",
+    "55410",
+    "South Dakota",
+    "3422 Mathew Wall",
+    "72"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "93348398",
+    "New Luther",
+    "omnis-dolor-provident",
+    "Borders",
+    "44213",
+    "Louisiana",
+    "6829 Emelia Dam",
+    "25"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "24929561",
+    "South Nicolastad",
+    "pariatur-suscipit-aliquid",
+    "Borders",
+    "48953",
+    "Missouri",
+    "1003 Elmore Corner",
+    "71"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "35267857",
+    "Davisside",
+    "quod-illum-eum",
+    "Bedfordshire",
+    "82525",
+    "Washington",
+    "02435 Antone Centers",
+    "122"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "15662968",
+    "Lake Ruthport",
+    "enim-occaecati-nihil",
+    "Borders",
+    "60036",
+    "Wisconsin",
+    "896 Okuneva Burg",
     "10"
     );
     
@@ -1311,14 +2487,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "25903625",
-    "Bellemouth",
-    "ex-beatae-voluptate",
+    "56579217",
+    "West Danielastad",
+    "laudantium-illo-minus",
     "Borders",
-    "75440",
-    "Louisiana",
-    "578 Ulises Islands",
-    "14"
+    "5246",
+    "Michigan",
+    "0558 Runolfsson Flats",
+    "90"
     );
     
 insert into tb_address(
@@ -1332,14 +2508,35 @@ insert into tb_address(
             id_user
             )
             values(
-    "53769541",
-    "North Kaylatown",
-    "dignissimos-non-debitis",
+    "8400118",
+    "Port Jessicashire",
+    "in-impedit-blanditiis",
+    "Bedfordshire",
+    "27719",
+    "Maine",
+    "605 Gianni Tunnel",
+    "66"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "155251",
+    "New Reilly",
+    "tenetur-rerum-non",
     "Berkshire",
-    "33339",
-    "Kentucky",
-    "70440 Khalid Viaduct",
-    "23"
+    "33777",
+    "Michigan",
+    "370 Johns Key",
+    "74"
     );
     
 insert into tb_address(
@@ -1353,14 +2550,245 @@ insert into tb_address(
             id_user
             )
             values(
-    "10665129",
-    "Willmstown",
-    "magnam-omnis-voluptatem",
+    "77166362",
+    "Lake Braulio",
+    "rerum-fugiat-sequi",
+    "Avon",
+    "12957",
+    "New Mexico",
+    "60012 Clay Wells",
+    "29"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "11455794",
+    "Rickiebury",
+    "molestias-eos-est",
+    "Bedfordshire",
+    "27683",
+    "Connecticut",
+    "36119 Klocko Tunnel",
+    "40"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "65891808",
+    "Port Cobyhaven",
+    "dolor-voluptas-voluptatum",
+    "Bedfordshire",
+    "63742",
+    "Montana",
+    "195 Schulist Dale",
+    "51"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "10981407",
+    "Adalineport",
+    "quo-corrupti-at",
+    "Buckinghamshire",
+    "4412",
+    "Louisiana",
+    "7267 Flavie Loaf",
+    "68"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "47364509",
+    "Port Jeramyview",
+    "qui-a-vel",
+    "Buckinghamshire",
+    "55348",
+    "Minnesota",
+    "6476 Rosenbaum Forest",
+    "46"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "13137842",
+    "East Solon",
+    "voluptatem-sed-fugit",
+    "Berkshire",
+    "63368",
+    "Iowa",
+    "4145 Wuckert Valley",
+    "10"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "25881596",
+    "Orlandoville",
+    "et-dolor-omnis",
+    "Avon",
+    "81846",
+    "New York",
+    "5709 Alberto Drive",
+    "123"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "19635509",
+    "West Biankaport",
+    "perspiciatis-et-sed",
+    "Bedfordshire",
+    "91463",
+    "Mississippi",
+    "701 Konopelski Grove",
+    "62"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "31710193",
+    "Hirthehaven",
+    "assumenda-impedit-quia",
     "Borders",
-    "90906",
+    "533",
+    "Nebraska",
+    "4857 Dax Neck",
+    "118"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "59353469",
+    "Terryview",
+    "id-ducimus-qui",
+    "Borders",
+    "1451",
+    "Wyoming",
+    "2809 Alexanne Ports",
+    "78"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "59456730",
+    "South Bufordshire",
+    "cum-molestias-accusamus",
+    "Berkshire",
+    "65222",
+    "Michigan",
+    "85885 Armstrong Shoal",
+    "43"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "16675090",
+    "South Jess",
+    "consequatur-sit-tenetur",
+    "Avon",
+    "37146",
     "Arkansas",
-    "26338 Glover Stream",
-    "10"
+    "2928 Savanah Course",
+    "117"
     );
     
 insert into tb_address(
@@ -1374,1190 +2802,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "7869872",
-    "Hillsmouth",
-    "et-est-laboriosam",
+    "49375768",
+    "Lake Tyriquemouth",
+    "enim-quis-quia",
     "Borders",
-    "80382",
-    "Washington",
-    "04061 Rolfson Hollow",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "82164436",
-    "East Sarahborough",
-    "sint-autem-rerum",
-    "Avon",
-    "80241",
-    "Montana",
-    "0730 Corwin Tunnel",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "60390404",
-    "Enosstad",
-    "similique-dolor-tempore",
-    "Avon",
-    "53959",
-    "Wisconsin",
-    "1812 Kub Ferry",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "75623045",
-    "North Ransom",
-    "sit-et-consequatur",
-    "Cambridgeshire",
-    "15318",
-    "Oregon",
-    "41773 Cummings Mews",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "44141355",
-    "South Aaliyahshire",
-    "debitis-est-nam",
-    "Buckinghamshire",
-    "87468",
-    "Rhode Island",
-    "0236 Lester Mount",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "53503732",
-    "East Felicita",
-    "officia-earum-asperiores",
-    "Buckinghamshire",
-    "93574",
-    "Washington",
-    "492 Mauricio Burg",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "78022483",
-    "New Hanna",
-    "a-deserunt-rem",
-    "Berkshire",
-    "2916",
-    "Indiana",
-    "938 Wiegand Loaf",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "95676995",
-    "Clementhaven",
-    "est-perferendis-rerum",
-    "Borders",
-    "50454",
-    "West Virginia",
-    "31688 Mohammed Bypass",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "30769053",
-    "Lexusmouth",
-    "at-debitis-qui",
-    "Cambridgeshire",
-    "42473",
-    "Nebraska",
-    "13080 Jake Pines",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "91846337",
-    "Port Vernon",
-    "cum-modi-ut",
-    "Bedfordshire",
-    "4576",
-    "Missouri",
-    "225 Schumm View",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "40366891",
-    "Lake Terryberg",
-    "incidunt-non-ut",
-    "Borders",
-    "20168",
-    "Hawaii",
-    "5600 Botsford Shore",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "33799359",
-    "Port Donald",
-    "laudantium-dolor-aut",
-    "Borders",
-    "15493",
-    "West Virginia",
-    "07451 Jaquan Rapids",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "49253200",
-    "Brownfurt",
-    "explicabo-et-eligendi",
-    "Borders",
-    "81729",
-    "Montana",
-    "38610 Rigoberto Circles",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "37545211",
-    "East Felicia",
-    "maxime-recusandae-numquam",
-    "Avon",
-    "44932",
-    "Missouri",
-    "588 Jada Underpass",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "60541095",
-    "Sauerfort",
-    "impedit-assumenda-molestias",
-    "Bedfordshire",
-    "62832",
-    "New Jersey",
-    "1407 Marcella Flats",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "27776585",
-    "Kesslerborough",
-    "deserunt-explicabo-voluptatem",
-    "Avon",
-    "68352",
-    "West Virginia",
-    "508 Reed Plaza",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "68387888",
-    "North Bryon",
-    "delectus-facilis-assumenda",
-    "Buckinghamshire",
-    "54906",
-    "Washington",
-    "85715 Autumn Burg",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "41905472",
-    "Trentonville",
-    "voluptatem-sit-nesciunt",
-    "Borders",
-    "29789",
-    "Delaware",
-    "32291 Gaylord Mount",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "90349986",
-    "Reillyfort",
-    "quaerat-harum-ullam",
-    "Cambridgeshire",
-    "14887",
-    "West Virginia",
-    "813 Mraz Plains",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "40469616",
-    "Jeraldburgh",
-    "ipsum-et-ab",
-    "Avon",
-    "75378",
-    "Kentucky",
-    "5512 Clementine Cliffs",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "31368764",
-    "Pfefferfurt",
-    "et-sed-eos",
-    "Buckinghamshire",
-    "93591",
-    "Wyoming",
-    "62054 Bradford Views",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "63222373",
-    "South Roselynberg",
-    "alias-quo-non",
-    "Borders",
-    "54966",
-    "North Carolina",
-    "328 Von Squares",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "90313473",
-    "Port Jaedenville",
-    "rem-ea-tenetur",
-    "Buckinghamshire",
-    "83565",
-    "Mississippi",
-    "11242 Bradtke Rapids",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "50168299",
-    "Lake Sonia",
-    "ut-voluptatum-deleniti",
-    "Buckinghamshire",
-    "80201",
-    "Virginia",
-    "5542 Herman Plains",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "75734234",
-    "West Shainaburgh",
-    "veritatis-omnis-molestiae",
-    "Borders",
-    "9153",
-    "Hawaii",
-    "758 Barbara Estate",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "69640688",
-    "Port Robertchester",
-    "ipsum-iste-praesentium",
-    "Avon",
-    "63017",
-    "Pennsylvania",
-    "742 Jessica Parkway",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "89787583",
-    "Zakaryside",
-    "hic-dolorum-repellat",
-    "Borders",
-    "77915",
-    "Arkansas",
-    "5735 Caleb Junction",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "5817872",
-    "New Stefanshire",
-    "soluta-commodi-dolor",
-    "Cambridgeshire",
-    "51840",
-    "New Hampshire",
-    "551 Jordi Locks",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "91448038",
-    "Trantowhaven",
-    "odit-voluptatem-deleniti",
-    "Avon",
-    "95925",
-    "Washington",
-    "179 Quitzon Ramp",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "22900887",
-    "Caspermouth",
-    "sit-neque-nesciunt",
-    "Buckinghamshire",
-    "95273",
-    "West Virginia",
-    "149 Andre Flat",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "3125271",
-    "Nikolausstad",
-    "cumque-omnis-veniam",
-    "Cambridgeshire",
-    "4814",
-    "Nevada",
-    "05278 Davion Mountain",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "3021250",
-    "West Chelsie",
-    "provident-qui-non",
-    "Buckinghamshire",
-    "60102",
-    "Utah",
-    "810 Newell Mountains",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "38307949",
-    "Jaydeport",
-    "quia-totam-quo",
-    "Borders",
-    "60848",
-    "California",
-    "05210 Rosenbaum Greens",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "94261840",
-    "Gleasonland",
-    "possimus-non-ipsum",
-    "Buckinghamshire",
-    "16710",
-    "Maine",
-    "082 Cleora Islands",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "6158787",
-    "New Jedediah",
-    "adipisci-sapiente-molestiae",
-    "Buckinghamshire",
-    "9237",
-    "Alaska",
-    "51821 Rohan Ridge",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "86979442",
-    "Elnaport",
-    "suscipit-laborum-expedita",
-    "Borders",
-    "21873",
-    "Pennsylvania",
-    "523 Tressie Fields",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "57047547",
-    "Paucekport",
-    "amet-odio-enim",
-    "Avon",
-    "70671",
-    "Alabama",
-    "84604 Haven Avenue",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "6518529",
-    "Johnmouth",
-    "repellendus-sit-est",
-    "Cambridgeshire",
-    "26108",
-    "Hawaii",
-    "0527 Randal Village",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "93796851",
-    "Cassinburgh",
-    "aut-nihil-est",
-    "Bedfordshire",
-    "20714",
-    "Virginia",
-    "29152 Cruickshank Port",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "15001163",
-    "Runtemouth",
-    "sunt-provident-qui",
-    "Berkshire",
-    "71355",
-    "West Virginia",
-    "120 Olin Curve",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "22231191",
-    "Brodymouth",
-    "facilis-quo-dignissimos",
-    "Borders",
-    "89614",
-    "New Hampshire",
-    "2718 Predovic Way",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "25034230",
-    "O'Harachester",
-    "velit-vel-excepturi",
-    "Bedfordshire",
-    "79253",
-    "South Carolina",
-    "3314 Easton Locks",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "16695424",
-    "Schambergerchester",
-    "minima-qui-esse",
-    "Cambridgeshire",
-    "72295",
-    "Minnesota",
-    "1418 Thiel Ports",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "40361487",
-    "Abshirestad",
-    "exercitationem-veniam-explicabo",
-    "Berkshire",
-    "47866",
-    "Texas",
-    "25083 Yost Squares",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "84985248",
-    "Bodemouth",
-    "vitae-omnis-consequatur",
-    "Berkshire",
-    "89736",
-    "South Dakota",
-    "93759 Rolfson Groves",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "3230571",
-    "East Jonas",
-    "illo-et-nostrum",
-    "Cambridgeshire",
-    "41688",
-    "Arkansas",
-    "168 Destin Oval",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "43108878",
-    "Walterland",
-    "sequi-necessitatibus-accusantium",
-    "Cambridgeshire",
-    "76236",
-    "Indiana",
-    "7303 Harris Junction",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "62136662",
-    "Alyssontown",
-    "nostrum-ipsam-officia",
-    "Berkshire",
-    "6067",
-    "Massachusetts",
-    "4840 O'Hara Rapid",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "52686299",
-    "Port Rasheedburgh",
-    "sint-et-vero",
-    "Borders",
-    "36744",
-    "Delaware",
-    "55991 Monahan Plain",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "34710950",
-    "Trompchester",
-    "tempore-reiciendis-corporis",
-    "Berkshire",
-    "60121",
-    "Texas",
-    "09245 Aubree Route",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "55390978",
-    "West Marcelina",
-    "numquam-provident-impedit",
-    "Buckinghamshire",
-    "84951",
-    "Florida",
-    "6693 Murray Dale",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "65900598",
-    "Harveyville",
-    "facilis-modi-laborum",
-    "Avon",
-    "10639",
-    "Delaware",
-    "618 Jaskolski Coves",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "5878215",
-    "Dorrismouth",
-    "qui-qui-tempora",
-    "Cambridgeshire",
-    "95313",
-    "Massachusetts",
-    "39179 Pfeffer Avenue",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "81495378",
-    "New Fiona",
-    "aut-et-voluptatem",
-    "Borders",
-    "74236",
-    "Oklahoma",
-    "913 Hester Station",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "67225901",
-    "Aidenfurt",
-    "et-nulla-amet",
-    "Borders",
-    "39813",
-    "Missouri",
-    "370 Wisozk Garden",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "21306081",
-    "Pfannerstillshire",
-    "aut-similique-aliquid",
-    "Cambridgeshire",
-    "4857",
-    "Mississippi",
-    "24258 Gerhold Walks",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "39859227",
-    "Port Verlatown",
-    "et-occaecati-deleniti",
-    "Borders",
-    "34736",
+    "10521",
     "Illinois",
-    "1097 Eloise Mountain",
-    "2"
+    "265 Winfield Lodge",
+    "46"
     );
     
 insert into tb_address(
@@ -2571,14 +2823,56 @@ insert into tb_address(
             id_user
             )
             values(
-    "65383867",
-    "New Bryon",
-    "facere-nemo-deserunt",
+    "5261141",
+    "Lake Eleazar",
+    "repellat-ut-illum",
     "Avon",
-    "422",
+    "74891",
+    "Arizona",
+    "667 Hilpert Lakes",
+    "73"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "30478190",
+    "East Adolfo",
+    "laudantium-voluptatem-alias",
+    "Cambridgeshire",
+    "65452",
+    "Alaska",
+    "440 Zulauf Ville",
+    "93"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "93701687",
+    "South Cordelia",
+    "beatae-a-atque",
+    "Buckinghamshire",
+    "80416",
     "Tennessee",
-    "230 Lupe Forks",
-    "5"
+    "900 Boyer Road",
+    "93"
     );
     
 insert into tb_address(
@@ -2592,308 +2886,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "28094389",
-    "Thieltown",
-    "dignissimos-nihil-eaque",
-    "Bedfordshire",
-    "41074",
-    "Michigan",
-    "18781 Colin Hills",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "88065217",
-    "Kyraland",
-    "et-reiciendis-perspiciatis",
-    "Cambridgeshire",
-    "7659",
-    "Ohio",
-    "16025 Rosie Turnpike",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "1154161",
-    "South Marley",
-    "exercitationem-itaque-voluptatem",
-    "Berkshire",
-    "42973",
-    "Nebraska",
-    "0061 Runte Rapids",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "72019967",
-    "East Ahmed",
-    "dolor-nobis-quas",
-    "Borders",
-    "67545",
-    "California",
-    "78296 Abe Lodge",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "68484897",
-    "Lake Cyrus",
-    "quis-enim-ab",
+    "69674032",
+    "D'Amorechester",
+    "tempore-optio-accusamus",
     "Avon",
-    "93642",
-    "Massachusetts",
-    "7242 Schaefer Hills",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "65941565",
-    "North Roelside",
-    "numquam-et-sed",
-    "Bedfordshire",
-    "97975",
-    "Connecticut",
-    "6790 Bernhard Orchard",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "85742050",
-    "Nolanfort",
-    "dolor-exercitationem-omnis",
-    "Cambridgeshire",
-    "35950",
-    "Massachusetts",
-    "6217 Myron Manors",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "47544345",
-    "Lake Sigmundfort",
-    "tempora-veniam-voluptas",
-    "Bedfordshire",
-    "78887",
-    "Vermont",
-    "2571 Conner Stravenue",
-    "4"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "82977639",
-    "North Ethan",
-    "odit-similique-ut",
-    "Buckinghamshire",
-    "69406",
-    "West Virginia",
-    "627 Lourdes Crossing",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "96841253",
-    "Bechtelarstad",
-    "qui-eius-sit",
-    "Bedfordshire",
-    "40297",
-    "Nevada",
-    "944 Tromp Estate",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "74744743",
-    "Norenehaven",
-    "distinctio-dolore-doloribus",
-    "Berkshire",
-    "85790",
-    "Massachusetts",
-    "587 Donnelly Summit",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "35928828",
-    "Ignacioville",
-    "amet-officia-eum",
-    "Cambridgeshire",
-    "74317",
-    "Arizona",
-    "302 Goodwin View",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "83694654",
-    "Lake Judgestad",
-    "sint-quaerat-et",
-    "Bedfordshire",
-    "39230",
-    "North Carolina",
-    "9255 Zboncak Islands",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "92221673",
-    "East Madge",
-    "fugit-reiciendis-odio",
-    "Buckinghamshire",
-    "79188",
-    "Pennsylvania",
-    "85964 Hayes Landing",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "25627972",
-    "Hyattland",
-    "possimus-sed-eum",
-    "Berkshire",
-    "2486",
+    "6178",
     "Indiana",
-    "942 William Junctions",
-    "13"
+    "1865 Alexandre Greens",
+    "56"
     );
     
 insert into tb_address(
@@ -2907,77 +2907,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "61965001",
-    "Littlebury",
-    "iste-facere-eum",
-    "Cambridgeshire",
-    "11469",
-    "Wyoming",
-    "084 Rita Pike",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "46995108",
-    "Daughertyville",
-    "ut-fuga-amet",
-    "Bedfordshire",
-    "44915",
-    "Ohio",
-    "890 Blanda Lodge",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "19438319",
-    "East Cornell",
-    "dignissimos-excepturi-vel",
-    "Borders",
-    "34749",
-    "North Dakota",
-    "617 Wehner Key",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "15148988",
-    "Leonorland",
-    "voluptatem-dolores-cumque",
-    "Avon",
-    "63567",
+    "9850071",
+    "Wolfstad",
+    "vel-quia-qui",
+    "Buckinghamshire",
+    "76120",
     "Iowa",
-    "180 Joseph Brook",
-    "8"
+    "119 Kuhn Gateway",
+    "59"
     );
     
 insert into tb_address(
@@ -2991,476 +2928,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "43356405",
-    "Brennanhaven",
-    "minus-temporibus-aut",
-    "Bedfordshire",
-    "15086",
-    "Georgia",
-    "411 Collins Shoal",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "54632010",
-    "Schambergerville",
-    "non-repudiandae-beatae",
-    "Avon",
-    "11991",
-    "Idaho",
-    "7956 Torphy Mountains",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "29985298",
-    "West Dino",
-    "aut-sit-voluptatem",
-    "Cambridgeshire",
-    "7898",
-    "New York",
-    "68116 Cecilia Parkways",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "86736980",
-    "Novellaport",
-    "et-dolorum-nemo",
-    "Cambridgeshire",
-    "90574",
-    "Montana",
-    "71753 Celia Bypass",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "52855915",
-    "North Rozella",
-    "explicabo-velit-reprehenderit",
-    "Berkshire",
-    "56772",
-    "Illinois",
-    "8067 Chelsea Circle",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "92328582",
-    "South Judyfurt",
-    "est-ut-a",
-    "Cambridgeshire",
-    "32268",
-    "Massachusetts",
-    "756 Reggie Turnpike",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "95839321",
-    "Luettgenview",
-    "facere-architecto-commodi",
-    "Berkshire",
-    "30560",
-    "Washington",
-    "3471 Hobart Springs",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "14847860",
-    "Chetmouth",
-    "sunt-aperiam-doloremque",
+    "86903222",
+    "Turnershire",
+    "assumenda-unde-exercitationem",
     "Buckinghamshire",
-    "881",
-    "Washington",
-    "2279 Altenwerth Stream",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "70973947",
-    "Lake Laurie",
-    "quidem-quisquam-rerum",
-    "Avon",
-    "73945",
-    "South Carolina",
-    "506 Lowe Squares",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "73143804",
-    "Turcottefort",
-    "natus-rerum-consectetur",
-    "Avon",
-    "84019",
-    "Utah",
-    "48264 Tyrel Fort",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "5068474",
-    "Port Everett",
-    "dolorem-nesciunt-repellat",
-    "Berkshire",
-    "85914",
-    "Nevada",
-    "0522 Adelle Tunnel",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "76329972",
-    "North Aniya",
-    "ut-error-accusantium",
-    "Bedfordshire",
-    "57831",
-    "New Hampshire",
-    "7164 Rempel Port",
-    "2"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "77687529",
-    "Eleazarmouth",
-    "distinctio-quia-sunt",
-    "Avon",
-    "43180",
-    "Rhode Island",
-    "96745 Feil Centers",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "6998968",
-    "Lake Edwinaville",
-    "libero-omnis-ut",
-    "Berkshire",
-    "21641",
-    "Mississippi",
-    "06840 Spencer Course",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "37646001",
-    "Adelbertfort",
-    "tenetur-placeat-recusandae",
-    "Cambridgeshire",
-    "85841",
-    "Nebraska",
-    "73565 Weimann Hills",
-    "4"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "82520165",
-    "Jerodburgh",
-    "magnam-voluptatibus-minima",
-    "Avon",
-    "49462",
-    "New Jersey",
-    "9296 Amina Fall",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "71966104",
-    "Kuhlmanside",
-    "veritatis-provident-sunt",
-    "Cambridgeshire",
-    "30947",
-    "Mississippi",
-    "356 Cummings Wells",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "20107870",
-    "North Eloise",
-    "fuga-deleniti-doloremque",
-    "Bedfordshire",
-    "64411",
-    "Colorado",
-    "37370 Carolina Forge",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "5811119",
-    "Gracefurt",
-    "ut-ut-et",
-    "Avon",
-    "31157",
-    "Connecticut",
-    "927 Brandt Way",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "28147260",
-    "Chandlerbury",
-    "ratione-placeat-doloremque",
-    "Buckinghamshire",
-    "87738",
-    "Arizona",
-    "7362 Schuppe Viaduct",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "15128400",
-    "South Arlofort",
-    "hic-molestiae-optio",
-    "Bedfordshire",
-    "30462",
-    "Minnesota",
-    "1513 Osborne Roads",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "41785727",
-    "New Reinhold",
-    "dolore-ipsa-aliquam",
-    "Berkshire",
-    "9870",
-    "New York",
-    "683 Daniel Course",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "3927611",
-    "Valentinhaven",
-    "minus-doloribus-non",
-    "Cambridgeshire",
-    "48879",
+    "40883",
     "Missouri",
-    "8703 Zack Lakes",
-    "24"
+    "56293 Bechtelar Roads",
+    "31"
     );
     
 insert into tb_address(
@@ -3474,35 +2949,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "90218290",
-    "Torphyshire",
-    "praesentium-vero-animi",
-    "Berkshire",
-    "76604",
-    "Kansas",
-    "43847 Maymie Roads",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "90623438",
-    "Rosaleechester",
-    "modi-vel-quidem",
+    "90004143",
+    "Murraybury",
+    "natus-ducimus-et",
     "Avon",
-    "2151",
+    "79852",
     "Utah",
-    "5721 Chandler Locks",
-    "16"
+    "147 Vinnie Mill",
+    "75"
     );
     
 insert into tb_address(
@@ -3516,77 +2970,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "18481208",
-    "Berneiceborough",
-    "ut-perspiciatis-ipsa",
-    "Avon",
-    "59383",
-    "Wyoming",
-    "88001 Olen Glen",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "46732949",
-    "Majorfurt",
-    "earum-repellat-vero",
+    "28077179",
+    "East Lee",
+    "reiciendis-enim-quis",
     "Berkshire",
-    "72240",
-    "New Jersey",
-    "3554 Blanche Vista",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "95091339",
-    "Nolanfurt",
-    "nesciunt-doloribus-et",
-    "Bedfordshire",
-    "96547",
-    "Montana",
-    "11744 Zora Springs",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "28457818",
-    "Willmsmouth",
-    "quasi-quos-et",
-    "Berkshire",
-    "12489",
+    "36503",
     "Virginia",
-    "7975 Cindy Ford",
-    "12"
+    "738 Florence Glen",
+    "53"
     );
     
 insert into tb_address(
@@ -3600,14 +2991,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "35228265",
-    "Susiefort",
-    "at-voluptatum-qui",
+    "96343881",
+    "South Krystalland",
+    "saepe-quo-praesentium",
     "Borders",
-    "30140",
-    "Wyoming",
-    "63215 Brody Summit",
-    "21"
+    "88615",
+    "Kansas",
+    "7815 Swaniawski Mountain",
+    "43"
     );
     
 insert into tb_address(
@@ -3621,182 +3012,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "43757787",
-    "South Lilyan",
-    "incidunt-aut-sed",
-    "Cambridgeshire",
-    "61858",
-    "Maine",
-    "6273 Ullrich Plaza",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "5823845",
-    "Eldredshire",
-    "voluptatibus-et-porro",
-    "Bedfordshire",
-    "83099",
-    "Oregon",
-    "0120 Gottlieb Summit",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "84485399",
-    "Bentonview",
-    "facilis-voluptates-fugit",
-    "Bedfordshire",
-    "47502",
-    "Alabama",
-    "7583 Mohr Flat",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "32625179",
-    "Kutchchester",
-    "eum-cum-provident",
-    "Bedfordshire",
-    "26225",
-    "Hawaii",
-    "1609 Wuckert Branch",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "41095363",
-    "Daltonmouth",
-    "neque-mollitia-porro",
-    "Berkshire",
-    "64358",
-    "Mississippi",
-    "457 Jaden Garden",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "41329521",
-    "Lake Marcelinaview",
-    "aut-assumenda-asperiores",
-    "Berkshire",
-    "28990",
-    "Texas",
-    "0782 Ashtyn Station",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "44513918",
-    "Nitzscheshire",
-    "mollitia-quod-nam",
-    "Berkshire",
-    "23183",
-    "Oregon",
-    "42820 Joana Club",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "79966754",
-    "Port Rosieland",
-    "temporibus-minus-nostrum",
-    "Bedfordshire",
-    "72784",
-    "Indiana",
-    "178 Prosacco Expressway",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "20131265",
-    "East Zola",
-    "eos-quia-ducimus",
-    "Cambridgeshire",
-    "23632",
+    "51734208",
+    "Metzburgh",
+    "assumenda-provident-sit",
+    "Buckinghamshire",
+    "63849",
     "Idaho",
-    "212 Gaylord Brook",
-    "11"
+    "025 Emmanuelle Roads",
+    "91"
     );
     
 insert into tb_address(
@@ -3810,35 +3033,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "91928889",
-    "Connellymouth",
-    "rem-perspiciatis-qui",
-    "Berkshire",
-    "51693",
-    "Iowa",
-    "9221 Wilmer Mills",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "60899500",
-    "New Cedrick",
-    "ut-laborum-explicabo",
+    "83650263",
+    "Hammesbury",
+    "cum-hic-ea",
     "Bedfordshire",
-    "32059",
+    "5980",
     "Maryland",
-    "29104 Doyle Camp",
-    "8"
+    "63680 Effertz Extension",
+    "68"
     );
     
 insert into tb_address(
@@ -3852,224 +3054,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "86391375",
-    "Royalshire",
-    "sint-atque-rerum",
-    "Borders",
-    "45656",
-    "California",
-    "508 Romaguera Vista",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "57044970",
-    "Mitchellstad",
-    "placeat-qui-dolore",
-    "Avon",
-    "47504",
-    "South Carolina",
-    "8236 Walsh Springs",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "76976220",
-    "New Blair",
-    "error-et-reprehenderit",
-    "Borders",
-    "34054",
-    "Nebraska",
-    "419 Jabari Walks",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "86074507",
-    "Ritchieshire",
-    "provident-iste-et",
-    "Avon",
-    "24998",
-    "West Virginia",
-    "1200 Daniel Shoal",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "57693249",
-    "Robertahaven",
-    "eum-voluptatibus-est",
-    "Avon",
-    "64644",
-    "Wisconsin",
-    "3818 Glenda Prairie",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "67900680",
-    "Kulaschester",
-    "possimus-hic-ea",
+    "75431376",
+    "New Bo",
+    "enim-ea-dolorum",
     "Berkshire",
-    "54501",
-    "Missouri",
-    "54253 Barney Inlet",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "29729503",
-    "Nehaborough",
-    "id-autem-ea",
-    "Borders",
-    "30699",
-    "Maine",
-    "3684 Weimann Mountain",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "26631860",
-    "East Ozellaport",
-    "provident-numquam-consequatur",
-    "Berkshire",
-    "63789",
-    "Washington",
-    "688 Mueller Haven",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "16045414",
-    "West Carleton",
-    "libero-voluptate-quia",
-    "Berkshire",
-    "13182",
-    "Illinois",
-    "66782 Homenick Forks",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "57385258",
-    "Cassinhaven",
-    "repellendus-quia-quis",
-    "Avon",
-    "38326",
-    "New Jersey",
-    "307 Jovany Views",
-    "2"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "2910817",
-    "Breitenbergburgh",
-    "repellendus-autem-aut",
-    "Berkshire",
-    "27169",
+    "87895",
     "Utah",
-    "466 Dolores Field",
-    "12"
+    "015 Johanna Station",
+    "72"
     );
     
 insert into tb_address(
@@ -4083,392 +3075,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "59654001",
-    "Beckerburgh",
-    "qui-fugiat-recusandae",
+    "65683387",
+    "West Leon",
+    "vel-non-rerum",
     "Borders",
-    "24035",
-    "Washington",
-    "43630 Lockman Gardens",
-    "4"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "57239659",
-    "Lake Malika",
-    "culpa-dicta-sapiente",
-    "Berkshire",
-    "68697",
-    "West Virginia",
-    "6458 Kristian View",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "32636805",
-    "North Otha",
-    "odit-ipsam-consequuntur",
-    "Bedfordshire",
-    "89996",
-    "Arizona",
-    "2916 Edd Meadow",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "76535844",
-    "West Dorthyton",
-    "unde-ab-dolor",
-    "Avon",
-    "50208",
-    "North Carolina",
-    "8497 Durward Highway",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "36053021",
-    "East Vesta",
-    "et-saepe-rerum",
-    "Berkshire",
-    "98980",
-    "Alaska",
-    "70010 Gutkowski Pine",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "74769816",
-    "Hamillview",
-    "rerum-voluptatem-delectus",
-    "Bedfordshire",
-    "77565",
-    "Mississippi",
-    "146 O'Conner Crest",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "37609980",
-    "Port Dandreland",
-    "quasi-inventore-odit",
-    "Buckinghamshire",
-    "20808",
-    "New Mexico",
-    "07717 Waldo Forge",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "3882654",
-    "New Mattie",
-    "qui-commodi-sed",
-    "Buckinghamshire",
-    "71420",
-    "Michigan",
-    "61904 Madaline Orchard",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "15419463",
-    "West Kiarrabury",
-    "alias-ad-et",
-    "Cambridgeshire",
-    "3764",
-    "Kentucky",
-    "746 Jada Heights",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "74275185",
-    "New Ryan",
-    "optio-debitis-eos",
-    "Borders",
-    "16458",
-    "Alaska",
-    "88102 Jalyn Course",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "55128292",
-    "Marquardtfurt",
-    "sed-aspernatur-aliquid",
-    "Cambridgeshire",
-    "25792",
-    "Delaware",
-    "4189 Adams Mill",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "38165827",
-    "Port Janet",
-    "exercitationem-dolore-eos",
-    "Cambridgeshire",
-    "25368",
-    "Iowa",
-    "835 Abernathy Passage",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "29679561",
-    "East Donnabury",
-    "quia-reprehenderit-sed",
-    "Cambridgeshire",
-    "76272",
-    "Maine",
-    "428 Darian Landing",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "19417838",
-    "North Jovanifort",
-    "dolores-quisquam-numquam",
-    "Avon",
-    "86576",
-    "Massachusetts",
-    "865 Gracie Spring",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "89181200",
-    "Eichmannstad",
-    "quos-libero-occaecati",
-    "Avon",
-    "53004",
-    "Washington",
-    "348 Crist Drives",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "56569104",
-    "Mistymouth",
-    "a-sed-maxime",
-    "Cambridgeshire",
-    "76361",
-    "Massachusetts",
-    "45405 Marlee Port",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "84226125",
-    "West Dora",
-    "sint-error-dolorem",
-    "Buckinghamshire",
-    "41250",
-    "Washington",
-    "0939 Rohan Circles",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "88471697",
-    "McLaughlinmouth",
-    "voluptas-veniam-ex",
-    "Buckinghamshire",
-    "5281",
-    "Delaware",
-    "16254 Reinger Place",
-    "2"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "15344179",
-    "Dallinburgh",
-    "perspiciatis-necessitatibus-sed",
-    "Borders",
-    "99327",
+    "5191",
     "New Hampshire",
-    "7842 Trace Shoal",
-    "14"
+    "31146 Lang Plain",
+    "124"
     );
     
 insert into tb_address(
@@ -4482,581 +3096,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "56461537",
-    "South Janessatown",
-    "tempora-tempore-ut",
-    "Borders",
-    "49352",
-    "Pennsylvania",
-    "244 Gutkowski Bridge",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "13806125",
-    "North Lilly",
-    "sapiente-omnis-iusto",
-    "Cambridgeshire",
-    "63927",
-    "Oklahoma",
-    "481 Mann Village",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "34921696",
-    "Winonaton",
-    "sint-fugit-provident",
-    "Cambridgeshire",
-    "75261",
-    "Colorado",
-    "99848 Jakubowski Flats",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "40279414",
-    "Edmundton",
-    "dolor-quidem-laboriosam",
-    "Borders",
-    "91931",
-    "Alabama",
-    "73251 Lubowitz Point",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "65837411",
-    "East Torrey",
-    "numquam-repudiandae-enim",
-    "Bedfordshire",
-    "83468",
-    "Indiana",
-    "9444 Josefina Ramp",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "7432281",
-    "Kolehaven",
-    "in-ullam-facere",
+    "95914495",
+    "New Metabury",
+    "vel-quia-deserunt",
     "Berkshire",
-    "26827",
-    "West Virginia",
-    "6452 Smith Meadow",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "80506993",
-    "Lake Elenaberg",
-    "molestias-quibusdam-velit",
-    "Avon",
-    "47023",
-    "Georgia",
-    "680 Imani Garden",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "46473208",
-    "Marquardtburgh",
-    "consequatur-earum-est",
-    "Berkshire",
-    "44573",
-    "New Mexico",
-    "331 Vanessa Burgs",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "26799690",
-    "Oswaldoborough",
-    "perspiciatis-consequatur-illo",
-    "Cambridgeshire",
-    "94957",
-    "Idaho",
-    "46498 Shakira Mission",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "26958022",
-    "Araborough",
-    "veritatis-autem-sit",
-    "Buckinghamshire",
-    "35618",
-    "Nebraska",
-    "6293 Kayli Cape",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "63796393",
-    "Lueilwitztown",
-    "sed-et-laborum",
-    "Berkshire",
-    "82526",
-    "Oregon",
-    "96394 Dexter Fork",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "6156387",
-    "Ernserhaven",
-    "temporibus-velit-earum",
-    "Buckinghamshire",
-    "29104",
-    "Iowa",
-    "3167 Noe Coves",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "77409952",
-    "East Lewisfurt",
-    "minima-voluptatum-in",
-    "Avon",
-    "85794",
-    "Michigan",
-    "046 Karlie Plaza",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "79586187",
-    "Swiftstad",
-    "consequatur-sed-et",
-    "Berkshire",
-    "71063",
-    "New Hampshire",
-    "5901 Cassin Centers",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "29946683",
-    "Eviehaven",
-    "nisi-optio-sed",
-    "Berkshire",
-    "74988",
-    "Wyoming",
-    "2336 Hoeger Meadow",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "88849615",
-    "Jameyborough",
-    "tempore-veritatis-vel",
-    "Bedfordshire",
-    "25687",
-    "West Virginia",
-    "4579 Cleora Viaduct",
-    "4"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "30014732",
-    "Vivienland",
-    "dolorem-dolorum-impedit",
-    "Avon",
-    "71925",
-    "Vermont",
-    "70372 Lola Causeway",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "38642697",
-    "East Ronton",
-    "ea-iure-eum",
-    "Avon",
-    "17523",
-    "Delaware",
-    "139 Armstrong Island",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "42354959",
-    "Loyport",
-    "sequi-eos-magnam",
-    "Berkshire",
-    "10300",
-    "Kentucky",
-    "4002 D'Amore Mountain",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "83373440",
-    "Lake Robin",
-    "quo-illo-sapiente",
-    "Avon",
-    "79342",
-    "North Carolina",
-    "6785 Sophia Extensions",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "81867640",
-    "Ondrickaville",
-    "dignissimos-eum-quis",
-    "Cambridgeshire",
-    "73123",
-    "Kentucky",
-    "622 Willa Pine",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "39352919",
-    "Trantowside",
-    "dolores-est-nihil",
-    "Avon",
-    "95750",
-    "Michigan",
-    "4570 Cassin Prairie",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "74200719",
-    "Thomasburgh",
-    "dolorum-adipisci-magnam",
-    "Berkshire",
-    "19855",
-    "Massachusetts",
-    "9682 Xander Stravenue",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "21551",
-    "Lake Carson",
-    "dolorem-error-voluptatum",
-    "Cambridgeshire",
-    "49972",
-    "Iowa",
-    "76157 Shields Mountain",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "89228677",
-    "Port Rita",
-    "sed-amet-mollitia",
-    "Cambridgeshire",
-    "24592",
-    "West Virginia",
-    "1193 Kennith Brook",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "17005752",
-    "New Abdul",
-    "asperiores-veritatis-voluptatem",
-    "Bedfordshire",
-    "29798",
-    "Vermont",
-    "32202 Aliza Oval",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "74551199",
-    "North Priscillabury",
-    "aut-quos-assumenda",
-    "Cambridgeshire",
-    "17770",
-    "Colorado",
-    "248 Cheyanne Drive",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "73295032",
-    "South Bradly",
-    "consequatur-voluptatem-modi",
-    "Bedfordshire",
-    "76390",
+    "46790",
     "Utah",
-    "68689 Rowe Meadows",
-    "22"
+    "8968 Will Hollow",
+    "46"
     );
     
 insert into tb_address(
@@ -5070,14 +3117,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "80136075",
-    "West Orion",
-    "voluptates-est-cumque",
-    "Bedfordshire",
-    "53115",
-    "Oklahoma",
-    "189 Jeanne Pike",
-    "12"
+    "61186994",
+    "Lake Stantonberg",
+    "magnam-temporibus-exercitationem",
+    "Cambridgeshire",
+    "89787",
+    "Louisiana",
+    "8349 Moen Row",
+    "77"
     );
     
 insert into tb_address(
@@ -5091,14 +3138,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "50953099",
-    "Gerholdshire",
-    "molestiae-quia-est",
-    "Borders",
-    "85001",
+    "25593655",
+    "South Orion",
+    "magni-accusamus-dolore",
+    "Avon",
+    "19761",
     "Rhode Island",
-    "91365 Pfeffer Landing",
-    "2"
+    "7643 Marisa Pike",
+    "10"
     );
     
 insert into tb_address(
@@ -5112,119 +3159,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "38580988",
-    "Lake Bridgette",
-    "molestiae-eum-commodi",
-    "Berkshire",
-    "31270",
-    "Michigan",
-    "0979 Hayley Forks",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "87202124",
-    "East Winston",
-    "sunt-non-quis",
-    "Avon",
-    "14071",
-    "New Hampshire",
-    "25470 Phoebe Garden",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "55301209",
-    "Yeseniafurt",
-    "excepturi-dolor-et",
-    "Cambridgeshire",
-    "18349",
-    "Indiana",
-    "59608 Alexys Terrace",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "64981356",
-    "Port Lauretta",
-    "ea-voluptatem-quis",
-    "Berkshire",
-    "93553",
-    "California",
-    "616 Bartoletti Summit",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "90290205",
-    "Blockview",
-    "iure-aut-sapiente",
-    "Berkshire",
-    "89151",
-    "Nevada",
-    "6327 Abbott Crescent",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "69183848",
-    "East Cornellmouth",
-    "blanditiis-saepe-esse",
-    "Cambridgeshire",
-    "44282",
+    "25675110",
+    "New Abbie",
+    "quas-minima-ad",
+    "Borders",
+    "37218",
     "Montana",
-    "224 Bergstrom Unions",
-    "18"
+    "65079 Kozey Pass",
+    "121"
     );
     
 insert into tb_address(
@@ -5238,35 +3180,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "97151260",
-    "Shadport",
-    "aliquam-at-rem",
-    "Cambridgeshire",
-    "41441",
-    "Wyoming",
-    "0232 Kilback Mount",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "91265946",
-    "Lake Helgamouth",
-    "est-quaerat-beatae",
+    "65372795",
+    "Lake Birdie",
+    "nesciunt-sed-ex",
     "Borders",
-    "35662",
-    "Alabama",
-    "45327 Gleichner Ramp",
-    "26"
+    "88069",
+    "Idaho",
+    "068 Mac Rest",
+    "77"
     );
     
 insert into tb_address(
@@ -5280,245 +3201,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "41073603",
-    "Willisberg",
-    "ullam-nisi-sunt",
-    "Avon",
-    "68971",
-    "New Hampshire",
-    "842 Dietrich Trace",
-    "4"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "6599731",
-    "Marianoport",
-    "soluta-ipsam-ad",
-    "Cambridgeshire",
-    "54403",
-    "Vermont",
-    "86007 Emerald Grove",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "50215183",
-    "East Norbertotown",
-    "et-excepturi-maxime",
-    "Buckinghamshire",
-    "41513",
-    "Indiana",
-    "6008 Mosciski Parkway",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "70682525",
-    "South Martina",
-    "accusamus-nisi-perspiciatis",
+    "46025775",
+    "Lake Brooklyn",
+    "voluptates-mollitia-aspernatur",
     "Berkshire",
-    "21980",
-    "Minnesota",
-    "3631 Feest Estates",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "47262362",
-    "Turnermouth",
-    "rerum-illum-dolores",
-    "Bedfordshire",
-    "56411",
-    "California",
-    "965 Mallie Mission",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "84729562",
-    "Kesslerport",
-    "omnis-est-voluptatibus",
-    "Berkshire",
-    "40822",
-    "South Carolina",
-    "3901 Claud Plaza",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "44338099",
-    "West Groverhaven",
-    "dolorem-molestiae-doloribus",
-    "Avon",
-    "62083",
-    "Georgia",
-    "239 Carroll Crest",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "65694857",
-    "Karianneburgh",
-    "dolor-consectetur-est",
-    "Avon",
-    "11430",
-    "Mississippi",
-    "6477 Schmidt Green",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "18987806",
-    "Wunschmouth",
-    "ea-voluptatem-vitae",
-    "Berkshire",
-    "25376",
-    "Nevada",
-    "0928 Bailee Orchard",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "88426516",
-    "Port Majorchester",
-    "id-ea-blanditiis",
-    "Buckinghamshire",
-    "11624",
-    "Kansas",
-    "8979 Doyle Cove",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "1524025",
-    "Ferryville",
-    "quisquam-voluptas-quia",
-    "Avon",
-    "65529",
-    "Rhode Island",
-    "8502 Dixie Villages",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "23054936",
-    "Muhammadland",
-    "natus-officiis-magni",
-    "Cambridgeshire",
-    "56460",
+    "69767",
     "Michigan",
-    "936 Quitzon Springs",
-    "25"
+    "6844 Jerome Landing",
+    "36"
     );
     
 insert into tb_address(
@@ -5532,14 +3222,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "46088278",
-    "Feestburgh",
-    "nemo-animi-accusantium",
-    "Cambridgeshire",
-    "93768",
-    "Ohio",
-    "399 VonRueden Prairie",
-    "3"
+    "45286767",
+    "East Winonatown",
+    "dolor-qui-iste",
+    "Buckinghamshire",
+    "92177",
+    "South Carolina",
+    "50726 Wilkinson Stravenue",
+    "96"
     );
     
 insert into tb_address(
@@ -5553,55 +3243,34 @@ insert into tb_address(
             id_user
             )
             values(
-    "44497897",
-    "Waylonville",
-    "ipsum-enim-illo",
+    "45374796",
+    "Veumfurt",
+    "blanditiis-corporis-illum",
+    "Borders",
+    "73299",
+    "Colorado",
+    "65987 O'Conner Lock",
+    "77"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "11043022",
+    "Rogahntown",
+    "labore-qui-dolor",
     "Avon",
-    "17469",
-    "Virginia",
-    "20890 Aimee Radial",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "51122195",
-    "Cartwrighthaven",
-    "alias-possimus-voluptatem",
-    "Berkshire",
-    "36986",
-    "Florida",
-    "695 Hauck Mills",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "27390234",
-    "South Ethyl",
-    "porro-mollitia-rerum",
-    "Berkshire",
-    "29549",
-    "Oklahoma",
-    "365 Judd Extensions",
+    "83280",
+    "Kansas",
+    "896 Torp Roads",
     "17"
     );
     
@@ -5616,139 +3285,13 @@ insert into tb_address(
             id_user
             )
             values(
-    "30805883",
-    "Lake Ayla",
-    "nesciunt-qui-non",
-    "Buckinghamshire",
-    "32953",
-    "Wisconsin",
-    "6253 Schuppe Valley",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "28141510",
-    "North Toneyport",
-    "veniam-voluptatem-voluptas",
-    "Bedfordshire",
-    "26093",
-    "West Virginia",
-    "7748 Erich Unions",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "80267255",
-    "Port Jedediahtown",
-    "enim-maxime-ab",
-    "Bedfordshire",
-    "49372",
-    "Virginia",
-    "22476 Hammes Trail",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "53292093",
-    "Tiannaberg",
-    "dignissimos-beatae-occaecati",
-    "Berkshire",
-    "83002",
+    "54238016",
+    "Davionville",
+    "qui-officiis-eos",
+    "Borders",
+    "84376",
     "Mississippi",
-    "25775 Daniel Mission",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "27897267",
-    "North Obie",
-    "neque-autem-laboriosam",
-    "Berkshire",
-    "34889",
-    "Massachusetts",
-    "735 Lamont Rest",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "51084990",
-    "West Cecilia",
-    "totam-deleniti-fuga",
-    "Cambridgeshire",
-    "74525",
-    "Alaska",
-    "6546 Jast Gardens",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "22498601",
-    "Lake Busterburgh",
-    "non-totam-et",
-    "Buckinghamshire",
-    "75702",
-    "Indiana",
-    "196 Lockman Lakes",
+    "342 Cheyenne Burg",
     "13"
     );
     
@@ -5763,14 +3306,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "91641296",
-    "West Noefurt",
-    "et-velit-consequuntur",
+    "74031182",
+    "O'Konside",
+    "quibusdam-consequatur-nisi",
     "Buckinghamshire",
-    "11018",
-    "Washington",
-    "927 Ondricka Fords",
-    "10"
+    "87040",
+    "Alaska",
+    "035 Steuber Camp",
+    "35"
     );
     
 insert into tb_address(
@@ -5784,35 +3327,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "20819155",
-    "Lucianoview",
-    "officiis-quod-dolore",
-    "Cambridgeshire",
-    "99840",
-    "Utah",
-    "338 Milton Plaza",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "19557664",
-    "South Demondside",
-    "iste-ullam-natus",
+    "23673535",
+    "Port Christopfurt",
+    "sit-quibusdam-eligendi",
     "Borders",
-    "15563",
-    "California",
-    "318 Kessler Path",
-    "24"
+    "78003",
+    "Rhode Island",
+    "253 Johnston Pass",
+    "111"
     );
     
 insert into tb_address(
@@ -5826,56 +3348,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "9478211",
-    "Ankundingborough",
-    "minima-architecto-est",
-    "Borders",
-    "99245",
-    "South Carolina",
-    "1221 Christiansen Common",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "56993774",
-    "Port Brendanport",
-    "iste-id-velit",
-    "Berkshire",
-    "58271",
-    "Pennsylvania",
-    "78351 Stacey Knolls",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "54293054",
-    "Carletonview",
-    "voluptatibus-beatae-voluptatibus",
+    "81391231",
+    "Waylonborough",
+    "et-iste-sint",
     "Bedfordshire",
-    "54246",
-    "Indiana",
-    "7868 White Radial",
-    "4"
+    "57868",
+    "Nevada",
+    "988 Stehr Cliffs",
+    "113"
     );
     
 insert into tb_address(
@@ -5889,14 +3369,35 @@ insert into tb_address(
             id_user
             )
             values(
-    "45525859",
-    "New Francesca",
-    "inventore-tempora-nam",
+    "60176427",
+    "Port Danikamouth",
+    "aut-voluptatem-natus",
+    "Bedfordshire",
+    "83800",
+    "Oklahoma",
+    "394 Isom Loaf",
+    "96"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "34186136",
+    "Trompbury",
+    "quia-ea-aut",
     "Buckinghamshire",
-    "96055",
-    "Hawaii",
-    "687 Louvenia Trail",
-    "24"
+    "93118",
+    "Wisconsin",
+    "1233 Pacocha Mountains",
+    "117"
     );
     
 insert into tb_address(
@@ -5910,13 +3411,118 @@ insert into tb_address(
             id_user
             )
             values(
-    "1325633",
-    "South Tadfort",
-    "voluptatum-neque-aut",
+    "55938767",
+    "West Karl",
+    "ea-praesentium-qui",
+    "Bedfordshire",
+    "19327",
+    "Delaware",
+    "4663 Bennett Inlet",
+    "28"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "56715169",
+    "Batzland",
+    "culpa-enim-illo",
+    "Bedfordshire",
+    "52947",
+    "Michigan",
+    "757 Kerluke Plains",
+    "68"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "38762809",
+    "South Berry",
+    "maiores-cumque-dolores",
     "Berkshire",
-    "4238",
-    "Nebraska",
-    "6328 Konopelski Ferry",
+    "40826",
+    "Maine",
+    "6691 Pfeffer Unions",
+    "5"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "22053079",
+    "East Cleo",
+    "rerum-ut-nihil",
+    "Avon",
+    "44944",
+    "Georgia",
+    "580 Rogahn Inlet",
+    "90"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "91171234",
+    "West Lamontborough",
+    "aut-sunt-velit",
+    "Borders",
+    "31691",
+    "North Dakota",
+    "9120 Cletus Ridges",
+    "61"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "96426071",
+    "West Maureenstad",
+    "et-adipisci-possimus",
+    "Buckinghamshire",
+    "83271",
+    "Missouri",
+    "7758 Stiedemann Wells",
     "12"
     );
     
@@ -5931,14 +3537,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "97037834",
-    "Ronville",
-    "delectus-laboriosam-quam",
-    "Avon",
-    "67401",
-    "Vermont",
-    "83633 Chester Overpass",
-    "4"
+    "22707785",
+    "Lake Reuben",
+    "laborum-voluptatem-nostrum",
+    "Borders",
+    "40715",
+    "Indiana",
+    "7367 Einar Forges",
+    "123"
     );
     
 insert into tb_address(
@@ -5952,14 +3558,56 @@ insert into tb_address(
             id_user
             )
             values(
-    "31891860",
-    "Jodiefurt",
-    "aut-placeat-est",
-    "Cambridgeshire",
-    "6799",
+    "79243469",
+    "West Jaquelinmouth",
+    "ut-fugiat-ad",
+    "Borders",
+    "43676",
+    "Maryland",
+    "777 Hoppe Burg",
+    "1"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "60024962",
+    "Glennatown",
+    "quia-officiis-ad",
+    "Avon",
+    "81060",
+    "Iowa",
+    "645 Jordy Shore",
+    "42"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "93609472",
+    "North Alfred",
+    "ut-delectus-officia",
+    "Borders",
+    "9351",
     "Tennessee",
-    "6279 Skyla Cliffs",
-    "18"
+    "3285 Nader Islands",
+    "104"
     );
     
 insert into tb_address(
@@ -5973,14 +3621,35 @@ insert into tb_address(
             id_user
             )
             values(
-    "21104193",
-    "South Kassandrachester",
-    "eius-asperiores-cupiditate",
+    "59051001",
+    "Mariettahaven",
+    "rerum-aut-nisi",
+    "Bedfordshire",
+    "79446",
+    "South Carolina",
+    "742 Stacey Drive",
+    "117"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "65175898",
+    "Larsonhaven",
+    "vero-non-alias",
     "Avon",
-    "12725",
-    "Kansas",
-    "2576 Hermiston Wells",
-    "11"
+    "52606",
+    "Montana",
+    "510 Kiley Shoal",
+    "6"
     );
     
 insert into tb_address(
@@ -5994,35 +3663,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "55890303",
-    "Noramouth",
-    "atque-amet-et",
-    "Avon",
-    "31485",
-    "Alaska",
-    "386 Senger Dale",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "24290675",
-    "Port Nettie",
-    "earum-aut-et",
+    "39618352",
+    "Johnsonbury",
+    "vitae-ut-atque",
     "Buckinghamshire",
-    "98227",
-    "Virginia",
-    "0548 Mabelle Port",
-    "4"
+    "35451",
+    "Colorado",
+    "266 Hand Garden",
+    "121"
     );
     
 insert into tb_address(
@@ -6036,77 +3684,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "47392245",
-    "Lake Germaine",
-    "repudiandae-sunt-laborum",
-    "Buckinghamshire",
-    "76484",
-    "Minnesota",
-    "789 Klocko Mountains",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "65011754",
-    "Lake Efrain",
-    "et-odio-in",
-    "Avon",
-    "72569",
-    "Maryland",
-    "68360 Mauricio Drive",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "71077065",
-    "West Hilmachester",
-    "qui-qui-distinctio",
-    "Buckinghamshire",
-    "25763",
-    "Kentucky",
-    "8943 Nadia Creek",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "55004025",
-    "Lake Sabinachester",
-    "enim-odio-repellat",
-    "Buckinghamshire",
-    "27578",
+    "58026459",
+    "Rennerburgh",
+    "tempora-iure-sed",
+    "Berkshire",
+    "32577",
     "Illinois",
-    "40064 Huels Courts",
-    "26"
+    "64399 Hodkiewicz Light",
+    "73"
     );
     
 insert into tb_address(
@@ -6120,119 +3705,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "29612120",
-    "South Rodger",
-    "quas-et-sint",
-    "Buckinghamshire",
-    "30278",
-    "Oregon",
-    "000 Wilderman Springs",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "59848078",
-    "Lelahborough",
-    "incidunt-autem-dicta",
-    "Berkshire",
-    "93363",
-    "Mississippi",
-    "104 Marcelino Pass",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "71419802",
-    "Milanbury",
-    "sunt-laudantium-temporibus",
-    "Bedfordshire",
-    "55869",
-    "Kentucky",
-    "308 Jacobi Village",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "38542098",
-    "South Eliseofurt",
-    "sunt-delectus-soluta",
-    "Cambridgeshire",
-    "67809",
-    "Minnesota",
-    "62923 Weissnat Meadows",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "7352844",
-    "West Jaydemouth",
-    "necessitatibus-sint-amet",
-    "Buckinghamshire",
-    "21256",
-    "Colorado",
-    "430 Marvin Way",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "88023253",
-    "West Kennedyhaven",
-    "sint-dolorum-sint",
+    "65798348",
+    "Hettingershire",
+    "architecto-repudiandae-rerum",
     "Avon",
-    "9508",
-    "Florida",
-    "4036 Renner Course",
-    "25"
+    "61043",
+    "Massachusetts",
+    "990 Heaney Glen",
+    "66"
     );
     
 insert into tb_address(
@@ -6246,350 +3726,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "68622275",
-    "Lindport",
-    "tempora-maiores-commodi",
-    "Borders",
-    "85049",
-    "New York",
-    "2237 Steuber Ridge",
-    "2"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "97964212",
-    "Sengermouth",
-    "necessitatibus-et-quisquam",
-    "Bedfordshire",
-    "17324",
-    "Mississippi",
-    "39986 Wunsch Via",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "94084187",
-    "South Missourimouth",
-    "maxime-consequatur-optio",
-    "Borders",
-    "92136",
-    "Connecticut",
-    "226 Madie Mills",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "42626700",
-    "Ianfurt",
-    "eum-omnis-quis",
+    "70970860",
+    "New Alyceview",
+    "adipisci-et-quisquam",
     "Avon",
-    "61259",
-    "Arizona",
-    "41234 Crooks Wells",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "64916132",
-    "Teaganfort",
-    "repellendus-praesentium-doloribus",
-    "Bedfordshire",
-    "62157",
-    "Montana",
-    "7966 Darrick Village",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "57344650",
-    "Homenickhaven",
-    "sed-reiciendis-veritatis",
-    "Cambridgeshire",
-    "25003",
-    "Idaho",
-    "66452 Dare Square",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "4807197",
-    "Christamouth",
-    "eum-perspiciatis-reiciendis",
-    "Borders",
-    "29803",
-    "Utah",
-    "8262 Kirlin Divide",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "54590669",
-    "North Devon",
-    "asperiores-ab-quia",
-    "Bedfordshire",
-    "83265",
-    "Hawaii",
-    "371 Nienow Mountains",
-    "4"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "24867575",
-    "West Ashlybury",
-    "commodi-temporibus-adipisci",
-    "Borders",
-    "59044",
-    "Pennsylvania",
-    "9098 Cecelia Motorway",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "32272898",
-    "South Jeramiefurt",
-    "omnis-et-qui",
-    "Bedfordshire",
-    "29860",
-    "Missouri",
-    "225 Pouros Island",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "70020861",
-    "Creminfort",
-    "nam-neque-voluptate",
-    "Avon",
-    "11835",
-    "Missouri",
-    "5695 Thomas Trail",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "12191448",
-    "Purdyland",
-    "quo-dignissimos-omnis",
-    "Borders",
-    "20688",
-    "Oklahoma",
-    "2727 Jonathan Falls",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "84168999",
-    "Rutherfordfurt",
-    "optio-unde-eius",
-    "Borders",
-    "55638",
-    "Kansas",
-    "72643 Fidel Forge",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "78941994",
-    "Bethtown",
-    "voluptatem-delectus-laborum",
-    "Borders",
-    "78765",
-    "Colorado",
-    "184 Simeon Plain",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "7383497",
-    "Jaylonfort",
-    "blanditiis-eveniet-accusantium",
-    "Bedfordshire",
-    "29538",
-    "North Carolina",
-    "63948 Schmidt Locks",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "69786051",
-    "South Ellis",
-    "totam-deserunt-voluptatem",
-    "Berkshire",
-    "89363",
-    "New Hampshire",
-    "4610 Lueilwitz Manor",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "78463276",
-    "Malcolmton",
-    "occaecati-amet-distinctio",
-    "Bedfordshire",
-    "8228",
+    "96477",
     "Texas",
-    "7314 Elmer Tunnel",
-    "24"
+    "67971 Yost Rue",
+    "115"
     );
     
 insert into tb_address(
@@ -6603,329 +3747,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "87042934",
-    "Lake Romanberg",
-    "quis-nesciunt-earum",
+    "27490150",
+    "Lake Wavaport",
+    "sed-enim-ut",
     "Berkshire",
-    "5319",
-    "Mississippi",
-    "34654 Heller Cliffs",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "51085718",
-    "West Meganefurt",
-    "aspernatur-ea-voluptates",
-    "Buckinghamshire",
-    "77591",
-    "Colorado",
-    "385 Ottis Mall",
-    "2"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "77797207",
-    "West Meggieshire",
-    "labore-amet-sapiente",
-    "Berkshire",
-    "2034",
-    "Massachusetts",
-    "4333 Tressa Glen",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "39134475",
-    "Randallville",
-    "aut-sequi-nostrum",
-    "Bedfordshire",
-    "69111",
-    "Ohio",
-    "5379 Gerald Streets",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "32692748",
-    "Turcotteberg",
-    "nihil-atque-iste",
-    "Berkshire",
-    "20145",
-    "Oklahoma",
-    "856 Hoppe Road",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "80047352",
-    "Ziemanntown",
-    "esse-harum-temporibus",
-    "Borders",
-    "60586",
-    "Louisiana",
-    "387 Darrel Via",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "63824224",
-    "Corbinshire",
-    "fuga-voluptatem-totam",
-    "Bedfordshire",
-    "24186",
-    "Oklahoma",
-    "94360 Eleanore Fort",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "30363109",
-    "North Coryborough",
-    "quia-sequi-in",
-    "Berkshire",
-    "24474",
-    "Washington",
-    "602 Upton Turnpike",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "10879309",
-    "East Jamarcusport",
-    "minima-dolorem-asperiores",
-    "Cambridgeshire",
-    "76310",
-    "Iowa",
-    "94518 Murray Keys",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "73527149",
-    "East Arlo",
-    "eos-totam-tempora",
-    "Avon",
-    "16033",
-    "Kentucky",
-    "18651 Osinski Islands",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "90335533",
-    "Port Robb",
-    "quam-et-quia",
-    "Borders",
-    "68441",
-    "Washington",
-    "731 Clint Causeway",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "31338869",
-    "Nitzscheport",
-    "vel-reiciendis-officia",
-    "Berkshire",
-    "51076",
-    "Michigan",
-    "007 Collier Centers",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "66607779",
-    "Monahanton",
-    "quasi-nam-ut",
-    "Borders",
-    "55968",
-    "Delaware",
-    "73918 Charity Forges",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "42811552",
-    "East Vernicehaven",
-    "accusamus-cumque-sunt",
-    "Avon",
-    "10144",
-    "Pennsylvania",
-    "615 Gideon Rest",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "98829413",
-    "Lake Porterhaven",
-    "doloremque-dicta-eligendi",
-    "Buckinghamshire",
-    "44608",
-    "Pennsylvania",
-    "8067 Larson Expressway",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "6902221",
-    "Fritschbury",
-    "ducimus-consequuntur-aperiam",
-    "Bedfordshire",
-    "15698",
+    "55819",
     "Virginia",
-    "0387 Alejandrin Neck",
-    "20"
+    "02599 Drew Street",
+    "106"
     );
     
 insert into tb_address(
@@ -6939,644 +3768,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "82159098",
-    "Maureenmouth",
-    "sit-quos-sequi",
-    "Bedfordshire",
-    "74930",
-    "North Dakota",
-    "6234 Maggio Land",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "4022470",
-    "Hintzborough",
-    "sit-est-error",
-    "Bedfordshire",
-    "78768",
-    "Utah",
-    "11723 Janiya Tunnel",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "62874617",
-    "Fayburgh",
-    "nulla-dolor-aut",
-    "Bedfordshire",
-    "4094",
-    "Alaska",
-    "45881 Quigley Plaza",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "69299437",
-    "East Tianamouth",
-    "quas-quia-tenetur",
-    "Cambridgeshire",
-    "12607",
-    "Maine",
-    "50311 Cassin Pass",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "52475959",
-    "Sisterfurt",
-    "sit-aut-quae",
-    "Berkshire",
-    "21192",
-    "Florida",
-    "2323 McClure Row",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "42243048",
-    "Lake Feltontown",
-    "itaque-eligendi-asperiores",
-    "Berkshire",
-    "59969",
-    "Nebraska",
-    "758 Bruen Hollow",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "64744904",
-    "Lindsayview",
-    "et-autem-animi",
+    "70653927",
+    "Lake Jacquelynberg",
+    "est-aut-dignissimos",
     "Avon",
-    "54949",
-    "Idaho",
-    "6997 Kira Cliffs",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "96762761",
-    "Gaylordborough",
-    "est-accusantium-provident",
-    "Avon",
-    "76043",
-    "Minnesota",
-    "5588 Quinton Springs",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "39396612",
-    "Port Norvalmouth",
-    "a-omnis-ut",
-    "Berkshire",
-    "67246",
-    "Mississippi",
-    "022 Wilma Lights",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "21027291",
-    "Brycenland",
-    "porro-est-voluptatem",
-    "Cambridgeshire",
-    "76248",
-    "Massachusetts",
-    "29133 King Unions",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "99785051",
-    "South Ameliabury",
-    "et-iusto-eos",
-    "Borders",
-    "8509",
-    "New York",
-    "93485 Streich Track",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "15066327",
-    "Friedrichhaven",
-    "ut-voluptatum-consequuntur",
-    "Bedfordshire",
-    "29364",
-    "New Hampshire",
-    "52287 Bernier Vista",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "13272420",
-    "Susanatown",
-    "rem-est-enim",
-    "Buckinghamshire",
-    "60587",
-    "Florida",
-    "30225 Morar Plain",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "50981431",
-    "Tabithatown",
-    "voluptas-non-cumque",
-    "Avon",
-    "848",
-    "Virginia",
-    "98089 Durgan Springs",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "58681781",
-    "Lake Abehaven",
-    "voluptates-omnis-omnis",
-    "Buckinghamshire",
-    "64945",
-    "Florida",
-    "6931 Jackson Springs",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "23773236",
-    "South Deronfurt",
-    "qui-facilis-deserunt",
-    "Cambridgeshire",
-    "87314",
-    "Washington",
-    "117 Schiller Fields",
-    "2"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "92275262",
-    "South Emie",
-    "voluptas-aperiam-sequi",
-    "Borders",
-    "34518",
-    "Idaho",
-    "6420 Gaetano Drives",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "66050609",
-    "Lake Donna",
-    "doloribus-hic-minus",
-    "Buckinghamshire",
-    "36707",
-    "Kentucky",
-    "7494 Maggie Branch",
-    "2"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "83731501",
-    "Aricville",
-    "cumque-sed-est",
-    "Berkshire",
-    "29027",
-    "Nevada",
-    "55147 Eileen Curve",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "50539740",
-    "Jevonshire",
-    "et-aut-fugit",
-    "Bedfordshire",
-    "16242",
-    "Maine",
-    "35556 Roderick Centers",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "57521725",
-    "East Anabel",
-    "aperiam-ea-voluptas",
-    "Buckinghamshire",
-    "99221",
-    "Arizona",
-    "99921 Paris Throughway",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "58657269",
-    "West Janae",
-    "distinctio-occaecati-qui",
-    "Bedfordshire",
-    "11265",
-    "Vermont",
-    "8645 Boyle Run",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "21267024",
-    "Lake Reid",
-    "commodi-doloremque-nihil",
-    "Buckinghamshire",
-    "22722",
-    "Kentucky",
-    "96087 Noe Extension",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "81368141",
-    "South Celestinechester",
-    "enim-quia-saepe",
-    "Bedfordshire",
-    "31115",
-    "Wisconsin",
-    "74388 Vesta Pike",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "66678854",
-    "Port Immanuel",
-    "autem-sapiente-labore",
-    "Buckinghamshire",
-    "79196",
-    "Mississippi",
-    "9364 Luettgen Drives",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "38427797",
-    "Gottliebmouth",
-    "expedita-quia-non",
-    "Cambridgeshire",
-    "62779",
-    "Delaware",
-    "841 Bogan Valley",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "84409099",
-    "Raynorland",
-    "itaque-architecto-est",
-    "Buckinghamshire",
-    "21657",
-    "Pennsylvania",
-    "7367 Grant Extensions",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "63746872",
-    "East Maribel",
-    "ut-recusandae-ipsa",
-    "Avon",
-    "30077",
-    "Idaho",
-    "5871 Schiller Isle",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "41156500",
-    "Lake Adele",
-    "est-nobis-quo",
-    "Bedfordshire",
-    "38909",
-    "Nevada",
-    "01573 Nelle Underpass",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "41976011",
-    "West Erynville",
-    "voluptatibus-non-dolorem",
-    "Avon",
-    "91279",
-    "Vermont",
-    "59450 Braun Dale",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "11836403",
-    "North Heavenchester",
-    "qui-voluptas-similique",
-    "Avon",
-    "88699",
+    "86462",
     "Louisiana",
-    "24164 Desmond Trail",
-    "6"
+    "59658 Orn Ramp",
+    "29"
     );
     
 insert into tb_address(
@@ -7590,160 +3789,13 @@ insert into tb_address(
             id_user
             )
             values(
-    "55304482",
-    "Rustyberg",
-    "voluptatem-nesciunt-maxime",
-    "Berkshire",
-    "61728",
-    "Pennsylvania",
-    "21624 Triston Overpass",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "13614934",
-    "West Amari",
-    "animi-est-consequatur",
+    "50360714",
+    "Weststad",
+    "fuga-saepe-commodi",
     "Bedfordshire",
-    "34624",
-    "Kansas",
-    "71097 Erdman Vista",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "52818863",
-    "Pansyberg",
-    "vero-iste-voluptatibus",
-    "Cambridgeshire",
-    "86446",
+    "33535",
     "Hawaii",
-    "1422 Luettgen Cliffs",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "76156396",
-    "New Constance",
-    "nobis-mollitia-tempora",
-    "Borders",
-    "17069",
-    "Louisiana",
-    "005 Jacquelyn Cape",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "22133290",
-    "West Petra",
-    "qui-possimus-eos",
-    "Cambridgeshire",
-    "19605",
-    "Kentucky",
-    "23283 Nikolaus Oval",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "20375912",
-    "Donnellview",
-    "omnis-molestias-et",
-    "Berkshire",
-    "9879",
-    "New Jersey",
-    "63729 Cummerata Junction",
-    "7"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "36239581",
-    "Wavaton",
-    "aut-facere-dolor",
-    "Cambridgeshire",
-    "11278",
-    "South Carolina",
-    "466 Kilback Crest",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "72941430",
-    "South Thad",
-    "mollitia-fugit-corporis",
-    "Berkshire",
-    "99652",
-    "Minnesota",
-    "4009 Skiles Corner",
+    "0314 Senger Brook",
     "10"
     );
     
@@ -7758,665 +3810,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "19189426",
-    "Missouritown",
-    "nobis-accusantium-saepe",
-    "Berkshire",
-    "93261",
-    "Montana",
-    "9856 Dietrich Glen",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "95880706",
-    "New Roma",
-    "blanditiis-omnis-id",
-    "Avon",
-    "99989",
-    "Maine",
-    "906 Cassin Court",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "38552916",
-    "New Erikafort",
-    "provident-fugiat-dolore",
-    "Borders",
-    "3938",
-    "Maryland",
-    "4466 Hermiston Wells",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "2317306",
-    "Georgetteview",
-    "iste-dolores-vel",
-    "Cambridgeshire",
-    "73138",
-    "Florida",
-    "662 Corkery Ramp",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "82734751",
-    "Port Jaycee",
-    "hic-facilis-eum",
+    "46113166",
+    "North Giles",
+    "quam-et-molestias",
     "Buckinghamshire",
-    "55677",
-    "Pennsylvania",
-    "55872 Charley Gateway",
-    "4"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "20630961",
-    "Bartonland",
-    "ut-excepturi-vero",
-    "Borders",
-    "95559",
-    "Maine",
-    "161 Keagan Fall",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "52427135",
-    "North Marcellus",
-    "labore-et-doloribus",
-    "Bedfordshire",
-    "23797",
-    "South Dakota",
-    "34878 Lorna Dale",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "85268868",
-    "West Efrainburgh",
-    "architecto-accusamus-voluptatum",
-    "Berkshire",
-    "46128",
-    "Alabama",
-    "1002 Alfreda Rue",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "56915920",
-    "Port Carrieview",
-    "consequuntur-recusandae-magni",
-    "Bedfordshire",
-    "72785",
-    "Delaware",
-    "14446 Rolfson Parkways",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "68409968",
-    "Lake Courtneyhaven",
-    "inventore-sed-officiis",
-    "Cambridgeshire",
-    "35019",
-    "Missouri",
-    "97268 Elsa Trace",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "5838914",
-    "Port Collinshire",
-    "perspiciatis-sit-neque",
-    "Buckinghamshire",
-    "18072",
-    "Maine",
-    "7444 Ceasar Isle",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "42958855",
-    "East Bria",
-    "at-qui-et",
-    "Bedfordshire",
-    "15956",
-    "Mississippi",
-    "3598 Purdy Mount",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "79184940",
-    "Krystalport",
-    "aut-totam-numquam",
-    "Cambridgeshire",
-    "34291",
-    "New York",
-    "55050 Khalil Plains",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "98950900",
-    "Stromanfort",
-    "iste-aut-numquam",
-    "Avon",
-    "52239",
-    "Colorado",
-    "515 Botsford Vista",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "99990369",
-    "New Tressa",
-    "ea-impedit-et",
-    "Buckinghamshire",
-    "37661",
-    "Nebraska",
-    "696 Dan Lights",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "29142729",
-    "South Hermannborough",
-    "nostrum-voluptatem-natus",
-    "Berkshire",
-    "8646",
-    "Idaho",
-    "5400 Auer Pass",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "58829833",
-    "Mitchellview",
-    "id-dignissimos-voluptatum",
-    "Berkshire",
-    "17552",
-    "New Hampshire",
-    "4090 Lucius Islands",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "87829632",
-    "Buckridgeton",
-    "vel-ipsa-vel",
-    "Avon",
-    "85143",
-    "Iowa",
-    "285 Blanda Keys",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "29153398",
-    "Feilfurt",
-    "numquam-sit-et",
-    "Borders",
-    "61592",
-    "Alabama",
-    "2384 Alan Pines",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "17059040",
-    "Reichelbury",
-    "iste-nihil-est",
-    "Avon",
-    "98111",
-    "Massachusetts",
-    "81699 Chaya Junction",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "48434693",
-    "North Birdie",
-    "enim-quis-ipsum",
-    "Bedfordshire",
-    "14352",
-    "New York",
-    "0465 Brown Square",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "8606199",
-    "Terencehaven",
-    "sunt-molestiae-hic",
-    "Borders",
-    "27157",
-    "Connecticut",
-    "58035 Joshuah Prairie",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "26661373",
-    "Deckowburgh",
-    "dolore-explicabo-labore",
-    "Avon",
-    "32145",
-    "Tennessee",
-    "2502 Clint Centers",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "66214408",
-    "Ashleighfort",
-    "voluptas-qui-at",
-    "Bedfordshire",
-    "7662",
-    "Vermont",
-    "90776 Emmalee Stream",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "53428169",
-    "Reubenstad",
-    "molestiae-repudiandae-sunt",
-    "Berkshire",
-    "39793",
-    "Connecticut",
-    "177 Delphine Grove",
-    "2"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "70747534",
-    "Budfort",
-    "repudiandae-animi-quia",
-    "Bedfordshire",
-    "39417",
-    "New Mexico",
-    "857 Isai Expressway",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "1177421",
-    "Tremblayfort",
-    "quia-reiciendis-eveniet",
-    "Cambridgeshire",
-    "11583",
-    "Wyoming",
-    "5045 Balistreri Lock",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "83771463",
-    "Lake Genesiston",
-    "non-tempore-et",
-    "Berkshire",
-    "21249",
-    "Wisconsin",
-    "4818 Rory Island",
-    "4"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "35025356",
-    "Camdenville",
-    "id-fugit-tempore",
-    "Avon",
-    "61655",
-    "Massachusetts",
-    "117 Fritz Court",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "16133887",
-    "West Mara",
-    "facere-rerum-unde",
-    "Bedfordshire",
-    "42449",
-    "South Carolina",
-    "958 Lynch Mountains",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "90798109",
-    "Rautown",
-    "natus-id-necessitatibus",
-    "Bedfordshire",
-    "75415",
-    "Oregon",
-    "778 Delaney Ports",
-    "9"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "79632334",
-    "Jakestad",
-    "error-laborum-placeat",
-    "Berkshire",
-    "11365",
+    "63273",
     "Rhode Island",
-    "9923 Jena Ramp",
-    "24"
+    "6915 Weissnat Circle",
+    "45"
     );
     
 insert into tb_address(
@@ -8430,412 +3831,13 @@ insert into tb_address(
             id_user
             )
             values(
-    "1010974",
-    "New Giovanifort",
-    "repudiandae-aut-voluptatem",
-    "Berkshire",
-    "76358",
-    "Florida",
-    "3981 Nicola Island",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "2840641",
-    "New Johathan",
-    "accusantium-harum-earum",
-    "Avon",
-    "97373",
-    "Iowa",
-    "2565 Ebert Park",
-    "20"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "2743771",
-    "Lake Jean",
-    "minus-molestiae-incidunt",
-    "Berkshire",
-    "94351",
-    "Mississippi",
-    "401 Rasheed Flat",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "56216614",
-    "Tillmanland",
-    "voluptatum-repudiandae-soluta",
-    "Bedfordshire",
-    "23437",
-    "Alaska",
-    "7836 Lindgren Heights",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "70583048",
-    "East Stuartport",
-    "molestias-vitae-et",
-    "Avon",
-    "91171",
-    "South Dakota",
-    "4969 Britney Forks",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "5198149",
-    "Rachelleborough",
-    "facilis-dolorem-quam",
+    "61602456",
+    "Georgetteside",
+    "amet-eligendi-error",
     "Borders",
-    "37975",
+    "33754",
     "South Dakota",
-    "1180 Andres Trail",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "99515257",
-    "East Tillman",
-    "deleniti-quas-cum",
-    "Avon",
-    "8691",
-    "Wyoming",
-    "6986 Wilfrid Port",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "76070433",
-    "Port Amyaberg",
-    "est-repudiandae-nihil",
-    "Berkshire",
-    "2688",
-    "Kansas",
-    "087 Ashley Way",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "30180335",
-    "Casperhaven",
-    "laudantium-sequi-perferendis",
-    "Bedfordshire",
-    "52237",
-    "Florida",
-    "495 Bennett Club",
-    "4"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "13732151",
-    "Streichstad",
-    "debitis-ut-magnam",
-    "Berkshire",
-    "34276",
-    "Louisiana",
-    "4672 Rosenbaum Gateway",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "38442826",
-    "South Nataliaside",
-    "ut-est-laudantium",
-    "Cambridgeshire",
-    "54334",
-    "Louisiana",
-    "74624 Eichmann Course",
-    "17"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "32915820",
-    "Nathanielview",
-    "in-cupiditate-dolore",
-    "Cambridgeshire",
-    "2652",
-    "New Jersey",
-    "9996 Anna Plaza",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "90813035",
-    "Spencertown",
-    "illo-fugit-accusamus",
-    "Berkshire",
-    "43909",
-    "Florida",
-    "9985 Macy Manors",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "17739866",
-    "Pourostown",
-    "quos-sed-laudantium",
-    "Buckinghamshire",
-    "45715",
-    "North Dakota",
-    "569 O'Connell Lake",
-    "22"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "76919352",
-    "East Adella",
-    "voluptates-optio-quo",
-    "Berkshire",
-    "63463",
-    "Colorado",
-    "31733 Herman Port",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "74680255",
-    "Lake Corbin",
-    "nihil-enim-aut",
-    "Buckinghamshire",
-    "54864",
-    "Ohio",
-    "269 Fritsch Overpass",
-    "14"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "37585317",
-    "South Brianview",
-    "molestiae-eaque-esse",
-    "Berkshire",
-    "950",
-    "Wyoming",
-    "777 Dickinson Skyway",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "84031880",
-    "East Shawna",
-    "deleniti-consequuntur-corporis",
-    "Berkshire",
-    "44946",
-    "New Mexico",
-    "978 Flatley Inlet",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "88895001",
-    "Shieldsburgh",
-    "distinctio-qui-rerum",
-    "Avon",
-    "17995",
-    "Wisconsin",
-    "81976 Wuckert Mills",
-    "10"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "35438126",
-    "Hermistonview",
-    "provident-nisi-aut",
-    "Avon",
-    "7319",
-    "North Carolina",
-    "07405 Darby Parkway",
+    "47340 Upton Mission",
     "25"
     );
     
@@ -8850,14 +3852,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "4560874",
-    "Lake Laurencefort",
-    "rem-maxime-laudantium",
-    "Buckinghamshire",
-    "56150",
-    "Ohio",
-    "275 Batz Mill",
-    "10"
+    "93155805",
+    "New Germainebury",
+    "optio-qui-exercitationem",
+    "Borders",
+    "49267",
+    "South Carolina",
+    "8970 Kiehn Street",
+    "55"
     );
     
 insert into tb_address(
@@ -8871,14 +3873,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "86512868",
-    "Jeffmouth",
-    "at-aperiam-id",
-    "Berkshire",
-    "12002",
-    "Washington",
-    "16832 Wilma Club",
-    "11"
+    "99264444",
+    "Bryanastad",
+    "dolorem-dolorum-qui",
+    "Bedfordshire",
+    "92042",
+    "Virginia",
+    "07852 Dell Vista",
+    "28"
     );
     
 insert into tb_address(
@@ -8892,14 +3894,56 @@ insert into tb_address(
             id_user
             )
             values(
-    "72017853",
-    "North Jadeborough",
-    "sint-quam-cumque",
+    "99195841",
+    "South Camila",
+    "omnis-saepe-dolor",
+    "Bedfordshire",
+    "54113",
+    "Maine",
+    "088 Hayes Mountains",
+    "29"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "33915041",
+    "West Edshire",
+    "voluptatem-commodi-nihil",
+    "Bedfordshire",
+    "44819",
+    "New Jersey",
+    "607 Stracke Shore",
+    "36"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "83339104",
+    "Kassulkeport",
+    "quas-autem-distinctio",
     "Cambridgeshire",
-    "92448",
-    "North Dakota",
-    "5750 Luis Flat",
-    "15"
+    "39076",
+    "Hawaii",
+    "651 Janick Inlet",
+    "104"
     );
     
 insert into tb_address(
@@ -8913,13 +3957,55 @@ insert into tb_address(
             id_user
             )
             values(
-    "12672387",
-    "South Robyntown",
-    "eum-non-est",
-    "Avon",
-    "59290",
-    "Colorado",
-    "73821 Francisca Circles",
+    "27625410",
+    "Hermistonville",
+    "doloribus-fugiat-blanditiis",
+    "Bedfordshire",
+    "79018",
+    "Indiana",
+    "84381 Koepp Bypass",
+    "66"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "16439420",
+    "New Ettie",
+    "est-iure-repudiandae",
+    "Cambridgeshire",
+    "25511",
+    "Kentucky",
+    "62299 Emiliano Drive",
+    "106"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "70155003",
+    "South Vivianview",
+    "aut-nam-nostrum",
+    "Berkshire",
+    "25543",
+    "New Mexico",
+    "288 Funk Crescent",
     "16"
     );
     
@@ -8934,287 +4020,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "6868572",
-    "Lake Jaren",
-    "aliquid-aut-eaque",
-    "Cambridgeshire",
-    "86227",
-    "Virginia",
-    "202 Dewitt Ports",
-    "23"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "70821103",
-    "Wilfredoside",
-    "in-vel-eaque",
-    "Buckinghamshire",
-    "74758",
-    "Utah",
-    "5178 Prosacco Lights",
-    "15"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "74380060",
-    "West Svenport",
-    "perspiciatis-velit-quos",
-    "Cambridgeshire",
-    "11163",
-    "North Carolina",
-    "0638 Wisoky Valley",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "28443000",
-    "West Genoveva",
-    "cupiditate-dolore-deleniti",
-    "Borders",
-    "174",
-    "Pennsylvania",
-    "75241 Schoen Park",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "79493465",
-    "East Keshaun",
-    "incidunt-laboriosam-praesentium",
-    "Avon",
-    "56330",
-    "Louisiana",
-    "34806 Donny Island",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "70186962",
-    "Prohaskaton",
-    "vitae-qui-porro",
-    "Cambridgeshire",
-    "21485",
-    "Oregon",
-    "9559 Alphonso Falls",
-    "21"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "51737342",
-    "Kristabury",
-    "a-at-odio",
-    "Borders",
-    "80774",
-    "Nebraska",
-    "9838 Carmel Mills",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "64414103",
-    "East Rossiebury",
-    "accusantium-autem-quia",
-    "Avon",
-    "44774",
-    "New York",
-    "469 Gibson Valley",
-    "12"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "66667582",
-    "West Troy",
-    "et-a-consequatur",
-    "Borders",
-    "71190",
-    "Nevada",
-    "234 Parisian Parkways",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "98894684",
-    "East Georgiana",
-    "perspiciatis-et-minima",
-    "Borders",
-    "27488",
-    "Oregon",
-    "77273 Deckow Pike",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "68616483",
-    "New Jovanmouth",
-    "perferendis-ducimus-dolorem",
-    "Avon",
-    "51156",
-    "Mississippi",
-    "58058 Gisselle Pine",
-    "24"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "55096639",
-    "Stehrhaven",
-    "dolores-non-qui",
-    "Borders",
-    "61067",
-    "Colorado",
-    "255 Randall Mountains",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "84658831",
-    "East Lavadaville",
-    "illum-perferendis-voluptatem",
-    "Berkshire",
-    "56485",
-    "Hawaii",
-    "121 Conor Station",
-    "25"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "77032501",
-    "North Aylaside",
-    "totam-nobis-et",
+    "2103908",
+    "Kraigburgh",
+    "adipisci-est-impedit",
     "Bedfordshire",
-    "46191",
-    "North Carolina",
-    "031 Gottlieb Walks",
-    "24"
+    "95510",
+    "Montana",
+    "7511 Leda Mount",
+    "74"
     );
     
 insert into tb_address(
@@ -9228,14 +4041,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "69347539",
-    "Haagstad",
-    "iure-ut-autem",
-    "Berkshire",
-    "73493",
-    "Utah",
-    "30282 Turner Unions",
-    "22"
+    "82535154",
+    "Port Barneyhaven",
+    "magnam-ut-velit",
+    "Cambridgeshire",
+    "73361",
+    "Alabama",
+    "4126 Wehner Junctions",
+    "78"
     );
     
 insert into tb_address(
@@ -9249,14 +4062,35 @@ insert into tb_address(
             id_user
             )
             values(
-    "53887749",
-    "East Lawson",
-    "temporibus-qui-voluptate",
+    "99373064",
+    "East Justinaport",
+    "praesentium-voluptatem-et",
+    "Cambridgeshire",
+    "69643",
+    "Maryland",
+    "222 Murl Roads",
+    "27"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "32307174",
+    "Luettgenland",
+    "deleniti-quibusdam-ut",
     "Borders",
-    "59598",
-    "West Virginia",
-    "815 Steuber Turnpike",
-    "14"
+    "29346",
+    "South Carolina",
+    "96487 Lisandro Pike",
+    "49"
     );
     
 insert into tb_address(
@@ -9270,14 +4104,98 @@ insert into tb_address(
             id_user
             )
             values(
-    "68756817",
+    "28496755",
+    "Uniqueberg",
+    "vel-sint-id",
+    "Borders",
+    "89234",
+    "Louisiana",
+    "9690 Ashleigh Valley",
+    "108"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "27364227",
+    "Austinview",
+    "debitis-in-quasi",
+    "Bedfordshire",
+    "51280",
+    "Alaska",
+    "017 Beahan Spurs",
+    "86"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "84402693",
+    "Kundebury",
+    "non-recusandae-numquam",
+    "Berkshire",
+    "28857",
+    "Connecticut",
+    "69858 Leo Points",
+    "70"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "8398072",
+    "South Theresa",
+    "aut-aut-praesentium",
+    "Cambridgeshire",
+    "18951",
+    "Utah",
+    "2842 Witting Unions",
+    "31"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "84177884",
     "Vandervortshire",
-    "architecto-possimus-saepe",
-    "Bedfordshire",
-    "31974",
-    "Wisconsin",
-    "2735 Earlene Inlet",
-    "14"
+    "repudiandae-laboriosam-aliquid",
+    "Cambridgeshire",
+    "75402",
+    "Nevada",
+    "17751 Viola Green",
+    "72"
     );
     
 insert into tb_address(
@@ -9291,181 +4209,13 @@ insert into tb_address(
             id_user
             )
             values(
-    "23735500",
-    "South Jessie",
-    "et-et-nobis",
-    "Bedfordshire",
-    "97005",
-    "Oklahoma",
-    "85589 Belle Causeway",
-    "6"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "24264223",
-    "Alverashire",
-    "consequatur-eum-unde",
-    "Bedfordshire",
-    "78915",
-    "Rhode Island",
-    "763 Quigley Lake",
-    "18"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "24278032",
-    "West Jaylonberg",
-    "quos-est-neque",
-    "Bedfordshire",
-    "18568",
-    "New Hampshire",
-    "31854 Yundt Stravenue",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "40762284",
-    "Diannashire",
-    "odio-accusamus-rerum",
-    "Buckinghamshire",
-    "41343",
-    "Hawaii",
-    "177 Wolf Field",
-    "2"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "48761801",
-    "Janaeborough",
-    "omnis-esse-qui",
-    "Bedfordshire",
-    "66158",
-    "Washington",
-    "3065 Howe Fords",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "28013152",
-    "New Carmel",
-    "est-placeat-omnis",
-    "Bedfordshire",
-    "16693",
-    "North Dakota",
-    "298 Fidel Ports",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "8391167",
-    "Lake Clemens",
-    "facilis-et-sed",
-    "Berkshire",
-    "32522",
-    "New Jersey",
-    "167 Hayes Squares",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "94154991",
-    "Schneiderchester",
-    "eaque-pariatur-est",
-    "Berkshire",
-    "52335",
-    "New York",
-    "82996 Monserrat Stream",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "35885131",
-    "Tremblaychester",
-    "eveniet-sint-non",
-    "Bedfordshire",
-    "63318",
-    "South Dakota",
-    "851 Vincenza Square",
+    "25750988",
+    "Ahmadland",
+    "molestias-ea-et",
+    "Borders",
+    "39112",
+    "Nebraska",
+    "90918 Destini Loop",
     "7"
     );
     
@@ -9480,56 +4230,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "28298198",
-    "Jacobifort",
-    "ex-repellendus-placeat",
-    "Berkshire",
-    "42254",
-    "Mississippi",
-    "926 Brown Valleys",
-    "16"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "28916193",
-    "Port Ashleeport",
-    "delectus-voluptate-excepturi",
-    "Avon",
-    "12943",
-    "New York",
-    "514 Trantow Glen",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "91152432",
-    "South Isabelle",
-    "magnam-reprehenderit-et",
+    "21924422",
+    "New Kaitlynside",
+    "sequi-omnis-maiores",
     "Bedfordshire",
-    "74948",
-    "Vermont",
-    "285 Bauch Route",
-    "14"
+    "97310",
+    "Nebraska",
+    "6494 Lubowitz Parkways",
+    "85"
     );
     
 insert into tb_address(
@@ -9543,13 +4251,55 @@ insert into tb_address(
             id_user
             )
             values(
-    "91828466",
-    "Port Collinside",
-    "qui-voluptatum-iusto",
+    "25198353",
+    "Hesselstad",
+    "quis-et-debitis",
+    "Borders",
+    "27194",
+    "Wyoming",
+    "5142 Schuster Streets",
+    "8"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "75921913",
+    "Port Amelia",
+    "quia-ullam-ex",
     "Cambridgeshire",
-    "35787",
-    "North Carolina",
-    "04301 Carey Ford",
+    "28985",
+    "Kentucky",
+    "828 Deborah Grove",
+    "89"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "53722725",
+    "North Genesis",
+    "incidunt-iste-deleniti",
+    "Borders",
+    "73175",
+    "Mississippi",
+    "613 Johnpaul Rue",
     "20"
     );
     
@@ -9564,35 +4314,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "44987774",
-    "Lake Ciceroberg",
-    "soluta-id-similique",
-    "Avon",
-    "28038",
-    "Colorado",
-    "24292 Roscoe Fall",
-    "11"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "88899776",
-    "Fritschfort",
-    "qui-officiis-sunt",
+    "97622687",
+    "Aurelioborough",
+    "voluptatibus-maxime-non",
     "Berkshire",
-    "79890",
-    "Michigan",
-    "45866 Emelia Fork",
-    "18"
+    "19306",
+    "Maine",
+    "1159 Jena Circle",
+    "62"
     );
     
 insert into tb_address(
@@ -9606,182 +4335,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "96116757",
-    "Larryside",
-    "magni-dolores-autem",
+    "74373821",
+    "Dedrickton",
+    "harum-explicabo-dolor",
     "Cambridgeshire",
-    "64144",
-    "Florida",
-    "4943 Catalina Villages",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "49746068",
-    "North Fay",
-    "consequatur-culpa-iste",
-    "Buckinghamshire",
-    "74263",
-    "New Mexico",
-    "943 Buford Field",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "12739178",
-    "New Dinofurt",
-    "eveniet-quasi-repudiandae",
-    "Borders",
-    "17733",
-    "Florida",
-    "3311 Brekke Curve",
-    "1"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "11838042",
-    "Isaitown",
-    "provident-facere-qui",
-    "Buckinghamshire",
-    "32750",
-    "California",
-    "39112 Martin Manors",
-    "19"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "8419633",
-    "Port Casandraview",
-    "est-culpa-nobis",
-    "Avon",
-    "47855",
-    "Montana",
-    "669 Jalen Turnpike",
-    "13"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "17923302",
-    "Port Kennithbury",
-    "quod-et-est",
-    "Berkshire",
-    "89532",
-    "Alaska",
-    "43063 Monique Causeway",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "87676614",
-    "Marksside",
-    "numquam-aut-ratione",
-    "Cambridgeshire",
-    "40913",
-    "New Mexico",
-    "414 Herman Club",
-    "5"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "23973076",
-    "New Nathan",
-    "rerum-quo-dolorum",
-    "Buckinghamshire",
-    "29621",
-    "Mississippi",
-    "858 Zula Dam",
-    "3"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "89008682",
-    "West Barbara",
-    "error-magni-nam",
-    "Avon",
-    "65707",
+    "16961",
     "Nebraska",
-    "1681 Deborah Loop",
-    "14"
+    "43850 Grayce Fork",
+    "50"
     );
     
 insert into tb_address(
@@ -9795,56 +4356,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "10764501",
-    "North Giovannafort",
-    "consequuntur-dolorum-qui",
-    "Avon",
-    "93895",
-    "Missouri",
-    "81544 Alice Drives",
-    "26"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "77061343",
-    "Rippintown",
-    "enim-tempore-ipsa",
-    "Bedfordshire",
-    "8491",
-    "Oklahoma",
-    "92186 Graham Throughway",
-    "8"
-    );
-    
-insert into tb_address(
-            cep,
-            ds_city,
-            ds_complement,
-            ds_district,
-            ds_number,
-            ds_state,
-            ds_street,
-            id_user
-            )
-            values(
-    "46594060",
-    "Casandramouth",
-    "culpa-iste-voluptatem",
+    "22207053",
+    "West Celestino",
+    "a-cupiditate-aliquam",
     "Buckinghamshire",
-    "48317",
-    "Oklahoma",
-    "0671 Bogisich Ridge",
-    "1"
+    "17817",
+    "Indiana",
+    "05329 Dannie Island",
+    "46"
     );
     
 insert into tb_address(
@@ -9858,13 +4377,118 @@ insert into tb_address(
             id_user
             )
             values(
-    "92386258",
-    "Adolfofort",
-    "explicabo-laborum-qui",
+    "85116095",
+    "Baileyland",
+    "non-porro-repellat",
+    "Bedfordshire",
+    "97016",
+    "Minnesota",
+    "1195 Boyer Trace",
+    "71"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "68247795",
+    "New Tyler",
+    "qui-ut-quia",
     "Avon",
-    "92213",
-    "Alaska",
-    "4783 Tanner Squares",
+    "60989",
+    "New Mexico",
+    "201 Hoeger Mill",
+    "51"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "19791862",
+    "Gretchenport",
+    "accusantium-sunt-nobis",
+    "Avon",
+    "12275",
+    "Virginia",
+    "099 Tierra Harbors",
+    "52"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "10077357",
+    "Reillymouth",
+    "sed-in-minus",
+    "Cambridgeshire",
+    "33448",
+    "Idaho",
+    "703 Haag Mall",
+    "28"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "38483552",
+    "Janemouth",
+    "commodi-praesentium-cumque",
+    "Buckinghamshire",
+    "58392",
+    "Rhode Island",
+    "047 Reinhold Manors",
+    "103"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "50286052",
+    "Micaelaport",
+    "et-eos-cum",
+    "Bedfordshire",
+    "87084",
+    "Georgia",
+    "026 Kulas Curve",
     "15"
     );
     
@@ -9879,13 +4503,160 @@ insert into tb_address(
             id_user
             )
             values(
-    "26082568",
-    "South Eudoraton",
-    "molestiae-optio-et",
+    "45249248",
+    "Sylvanbury",
+    "et-quis-sint",
     "Bedfordshire",
-    "41504",
+    "71409",
+    "South Carolina",
+    "35184 Charlotte Light",
+    "92"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "51733356",
+    "Rosenbaumberg",
+    "ad-ut-culpa",
+    "Avon",
+    "88564",
+    "Oregon",
+    "0644 Bernice Landing",
+    "80"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "45380101",
+    "East Oletafort",
+    "qui-voluptatem-assumenda",
+    "Cambridgeshire",
+    "27746",
+    "Rhode Island",
+    "54449 Lowe Light",
+    "55"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "8208382",
+    "Wardfort",
+    "et-quo-error",
+    "Cambridgeshire",
+    "82431",
+    "Georgia",
+    "74901 Lind Street",
+    "50"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "60486888",
+    "Bergnaumchester",
+    "et-blanditiis-sunt",
+    "Avon",
+    "7612",
+    "Pennsylvania",
+    "7705 Sipes River",
+    "101"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "17327160",
+    "New Darron",
+    "est-quidem-necessitatibus",
+    "Bedfordshire",
+    "88640",
+    "Colorado",
+    "212 Herman Stream",
+    "54"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "43672214",
+    "North Albina",
+    "voluptatem-et-ab",
+    "Berkshire",
+    "17639",
+    "Virginia",
+    "643 Joany Ford",
+    "68"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "24534187",
+    "Wittingview",
+    "excepturi-ut-consequuntur",
+    "Bedfordshire",
+    "34037",
     "Kentucky",
-    "062 Rath Rest",
+    "50589 Kris Green",
     "9"
     );
     
@@ -9900,13 +4671,349 @@ insert into tb_address(
             id_user
             )
             values(
-    "63138344",
-    "Ethelynstad",
-    "laborum-officiis-cupiditate",
+    "28124192",
+    "Freemanberg",
+    "magni-temporibus-praesentium",
+    "Bedfordshire",
+    "13854",
+    "Nevada",
+    "423 Abel Camp",
+    "74"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "56698029",
+    "Port Jamiltown",
+    "laboriosam-aut-sit",
+    "Berkshire",
+    "6453",
+    "Kentucky",
+    "2947 Wiza Harbors",
+    "37"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "72877013",
+    "New Katharina",
+    "non-quisquam-alias",
+    "Borders",
+    "48554",
+    "Florida",
+    "475 Prosacco Tunnel",
+    "20"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "99907888",
+    "North Tillmanside",
+    "qui-in-voluptas",
     "Buckinghamshire",
-    "89945",
-    "Colorado",
-    "6649 Trevor Spur",
+    "43596",
+    "Idaho",
+    "864 Brooke Meadow",
+    "45"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "71157166",
+    "East Jeffhaven",
+    "nam-eum-quisquam",
+    "Cambridgeshire",
+    "51854",
+    "New Mexico",
+    "04139 Bennie Circles",
+    "106"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "95877417",
+    "Ullrichstad",
+    "qui-nihil-et",
+    "Berkshire",
+    "15173",
+    "Washington",
+    "31624 Shanny Turnpike",
+    "59"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "78151263",
+    "Cronaview",
+    "suscipit-quia-fuga",
+    "Berkshire",
+    "46952",
+    "Illinois",
+    "132 Walter Pines",
+    "50"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "70402594",
+    "East Brandyn",
+    "sint-quaerat-repellendus",
+    "Borders",
+    "27686",
+    "Montana",
+    "312 Alexandro Corners",
+    "32"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "41002896",
+    "Nitzscheshire",
+    "est-quis-delectus",
+    "Borders",
+    "72805",
+    "New York",
+    "37060 Nitzsche Expressway",
+    "85"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "84816685",
+    "Alyceborough",
+    "laboriosam-omnis-repellat",
+    "Borders",
+    "87496",
+    "Pennsylvania",
+    "44428 Frederic Mountain",
+    "63"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "78163632",
+    "North Dalemouth",
+    "velit-officia-porro",
+    "Bedfordshire",
+    "45609",
+    "Florida",
+    "843 Leuschke Mountain",
+    "123"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "65874543",
+    "New Jaylinbury",
+    "possimus-et-quia",
+    "Borders",
+    "38408",
+    "Virginia",
+    "68562 Ryley Pike",
+    "83"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "89790489",
+    "Jaquelineborough",
+    "hic-qui-saepe",
+    "Berkshire",
+    "71424",
+    "South Dakota",
+    "18579 Eldred Corners",
+    "94"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "33031086",
+    "Port Else",
+    "culpa-dolores-magni",
+    "Buckinghamshire",
+    "13941",
+    "Pennsylvania",
+    "977 Jacobson Cove",
+    "99"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "83096073",
+    "South Maurinefurt",
+    "occaecati-aut-quod",
+    "Berkshire",
+    "21682",
+    "Indiana",
+    "662 Franecki Parkways",
+    "76"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "79721311",
+    "South Adelaton",
+    "neque-voluptatum-dolor",
+    "Buckinghamshire",
+    "64125",
+    "Montana",
+    "5359 Wiza Shoals",
+    "79"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "75831539",
+    "Myrnabury",
+    "consequatur-quaerat-aut",
+    "Berkshire",
+    "53909",
+    "New Jersey",
+    "563 Kasey Villages",
     "3"
     );
     
@@ -9921,14 +5028,14 @@ insert into tb_address(
             id_user
             )
             values(
-    "45496112",
-    "Medhurstmouth",
-    "ut-eos-sed",
-    "Bedfordshire",
-    "54723",
-    "Oregon",
-    "424 Colton Lights",
-    "7"
+    "63026525",
+    "Lailabury",
+    "fugiat-ducimus-omnis",
+    "Avon",
+    "77672",
+    "Missouri",
+    "800 Lubowitz Mount",
+    "53"
     );
     
 insert into tb_address(
@@ -9942,13 +5049,160 @@ insert into tb_address(
             id_user
             )
             values(
-    "1193675",
-    "Stacybury",
-    "atque-autem-magnam",
+    "96506970",
+    "West Abigayle",
+    "nobis-neque-officiis",
+    "Bedfordshire",
+    "54263",
+    "Vermont",
+    "3814 Vance Plain",
+    "94"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "96705625",
+    "Port Jacintoborough",
+    "delectus-aspernatur-occaecati",
+    "Berkshire",
+    "44635",
+    "Illinois",
+    "6382 Feil Dam",
+    "54"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "89201226",
+    "Pfannerstillbury",
+    "amet-velit-deserunt",
+    "Avon",
+    "58338",
+    "Kentucky",
+    "015 Shanahan Locks",
+    "113"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "22532388",
+    "Kuhicton",
+    "voluptatem-et-mollitia",
+    "Cambridgeshire",
+    "37140",
+    "Arkansas",
+    "4377 Larkin Village",
+    "86"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "95475429",
+    "New Emiliano",
+    "nihil-a-sit",
     "Buckinghamshire",
-    "5783",
-    "Massachusetts",
-    "773 Jaskolski Terrace",
+    "27720",
+    "Vermont",
+    "48832 Ernser Ridges",
+    "10"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "71814858",
+    "North Cadenton",
+    "labore-fugiat-accusamus",
+    "Berkshire",
+    "47896",
+    "Idaho",
+    "086 Lockman Creek",
+    "85"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "644625",
+    "West Lauren",
+    "voluptatibus-odit-quia",
+    "Cambridgeshire",
+    "11907",
+    "North Dakota",
+    "8911 Bartoletti Square",
+    "98"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "5864242",
+    "West Joeymouth",
+    "et-enim-non",
+    "Borders",
+    "96877",
+    "Vermont",
+    "64977 Dane Turnpike",
     "7"
     );
     
@@ -9963,12 +5217,4759 @@ insert into tb_address(
             id_user
             )
             values(
-    "93298826",
-    "Elyseshire",
-    "occaecati-possimus-inventore",
+    "96684885",
+    "New Samsonbury",
+    "ratione-dolores-quas",
+    "Buckinghamshire",
+    "97323",
+    "Louisiana",
+    "910 Tatyana Forest",
+    "112"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "89532712",
+    "North Simeonborough",
+    "nisi-architecto-pariatur",
     "Bedfordshire",
-    "18686",
+    "98755",
+    "Kansas",
+    "982 Pablo Squares",
+    "10"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "81194747",
+    "Antwonview",
+    "consequatur-non-nemo",
+    "Bedfordshire",
+    "2679",
+    "Vermont",
+    "118 Nienow Meadow",
+    "87"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "13841826",
+    "West Annamaeville",
+    "error-et-explicabo",
+    "Cambridgeshire",
+    "34194",
+    "Minnesota",
+    "573 Ludwig Courts",
+    "121"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "49498536",
+    "East Kathlynton",
+    "libero-ipsam-eligendi",
+    "Berkshire",
+    "77920",
+    "Minnesota",
+    "4642 Beier Shoal",
+    "49"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "97140978",
+    "Dulceborough",
+    "mollitia-ratione-qui",
+    "Avon",
+    "16719",
+    "Louisiana",
+    "443 Streich Isle",
+    "121"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "69833563",
+    "Domenickborough",
+    "aspernatur-nostrum-nulla",
+    "Bedfordshire",
+    "1527",
+    "Arkansas",
+    "4477 Jeramy Avenue",
+    "64"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "35335000",
+    "West Guidoborough",
+    "ab-omnis-explicabo",
+    "Berkshire",
+    "50486",
+    "Connecticut",
+    "65143 Ullrich Viaduct",
+    "44"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "29155789",
+    "Eusebiochester",
+    "similique-fugiat-aut",
+    "Bedfordshire",
+    "85555",
+    "Delaware",
+    "251 Francis Mews",
+    "80"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "24569474",
+    "Lake Carmella",
+    "rem-molestiae-ullam",
+    "Avon",
+    "25690",
+    "Maine",
+    "23684 Seamus Hollow",
+    "69"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "35249607",
+    "Edwardoville",
+    "unde-hic-nemo",
+    "Buckinghamshire",
+    "50114",
+    "Oklahoma",
+    "7608 Kovacek Dale",
+    "108"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "25998792",
+    "North Kendall",
+    "quae-itaque-consectetur",
+    "Berkshire",
+    "6711",
+    "Wisconsin",
+    "729 Orn Ways",
+    "63"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "94252129",
+    "West Jonathanbury",
+    "rem-ut-eos",
+    "Avon",
+    "71751",
+    "Massachusetts",
+    "097 Elwin Course",
+    "21"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "49607228",
+    "North Thurman",
+    "debitis-perspiciatis-corporis",
+    "Buckinghamshire",
+    "68708",
+    "Wyoming",
+    "6552 Considine Common",
+    "84"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "46691303",
+    "Larkinmouth",
+    "provident-dolorem-illum",
+    "Avon",
+    "6174",
+    "Kansas",
+    "842 Spinka Isle",
+    "24"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "58439533",
+    "West Casandrabury",
+    "quis-eaque-reprehenderit",
+    "Buckinghamshire",
+    "5361",
+    "Arkansas",
+    "22604 Willms Mission",
+    "122"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "14483322",
+    "Budside",
+    "ut-aperiam-enim",
+    "Buckinghamshire",
+    "31713",
+    "Michigan",
+    "59874 O'Conner Spur",
+    "77"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "89806056",
+    "Ceasarmouth",
+    "neque-earum-et",
+    "Buckinghamshire",
+    "19355",
+    "Delaware",
+    "327 Ocie Cliffs",
+    "113"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "88461259",
+    "Port Porterfort",
+    "quia-id-voluptatem",
+    "Buckinghamshire",
+    "42279",
+    "Nevada",
+    "2581 Langworth Unions",
+    "80"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "38282481",
+    "Mellieport",
+    "eos-occaecati-corporis",
+    "Avon",
+    "63505",
+    "Utah",
+    "544 Enoch Canyon",
+    "16"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "97382286",
+    "Haagfort",
+    "qui-asperiores-ipsum",
+    "Cambridgeshire",
+    "45908",
+    "Iowa",
+    "3426 Ethel Wall",
+    "103"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "37992517",
+    "New Quincyburgh",
+    "dolore-aliquid-aperiam",
+    "Berkshire",
+    "54589",
+    "Delaware",
+    "68118 Rae Knoll",
+    "13"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "22272406",
+    "Mohammedstad",
+    "rerum-culpa-ullam",
+    "Buckinghamshire",
+    "51990",
+    "Idaho",
+    "081 MacGyver Isle",
+    "116"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "90844893",
+    "Raynorborough",
+    "saepe-illo-minima",
+    "Buckinghamshire",
+    "75718",
+    "Missouri",
+    "7462 Name Plains",
+    "28"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "97165737",
+    "Rodrickton",
+    "omnis-consequuntur-ut",
+    "Buckinghamshire",
+    "50144",
+    "Tennessee",
+    "416 Daniella Lane",
+    "30"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "61553678",
+    "North Sim",
+    "illo-et-sunt",
+    "Borders",
+    "48188",
+    "Nebraska",
+    "6517 Koelpin Street",
+    "111"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "68737818",
+    "Port Isabelle",
+    "sunt-et-est",
+    "Berkshire",
+    "8251",
+    "Texas",
+    "154 Javonte Circle",
+    "9"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "85070224",
+    "South Jarrodfort",
+    "eveniet-sit-vel",
+    "Avon",
+    "83074",
     "Oregon",
-    "3122 Macejkovic Manors",
+    "0142 Maud Spurs",
+    "111"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "10631994",
+    "North Omarifurt",
+    "maxime-vitae-quaerat",
+    "Bedfordshire",
+    "30154",
+    "Hawaii",
+    "67270 Francesco Haven",
+    "108"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "93588836",
+    "Lake Catherine",
+    "dignissimos-libero-expedita",
+    "Cambridgeshire",
+    "35102",
+    "West Virginia",
+    "3877 O'Kon Street",
+    "89"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "21771231",
+    "Hansenstad",
+    "eveniet-deleniti-ab",
+    "Avon",
+    "28690",
+    "Iowa",
+    "6113 Jenkins Lake",
+    "20"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "79714431",
+    "Oswaldfurt",
+    "quasi-enim-dolor",
+    "Berkshire",
+    "59319",
+    "Oklahoma",
+    "283 Rempel Overpass",
+    "21"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "8143011",
+    "Johnathonside",
+    "quo-illum-sint",
+    "Avon",
+    "23235",
+    "Iowa",
+    "3308 Kieran Summit",
+    "75"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "36236625",
+    "West Amandaland",
+    "id-consectetur-est",
+    "Buckinghamshire",
+    "12487",
+    "North Carolina",
+    "81472 Osvaldo Drive",
+    "120"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "57778276",
+    "Shanahanhaven",
+    "maxime-atque-sunt",
+    "Buckinghamshire",
+    "80539",
+    "Kansas",
+    "586 Johann Skyway",
+    "59"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "65321691",
+    "Priceport",
+    "sed-amet-exercitationem",
+    "Berkshire",
+    "50975",
+    "Washington",
+    "886 Jarret Mount",
+    "29"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "47681188",
+    "Ewellfurt",
+    "sed-quam-vel",
+    "Borders",
+    "79502",
+    "Texas",
+    "3050 Ritchie Manor",
+    "28"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "94672388",
+    "Brakuston",
+    "repellendus-nesciunt-qui",
+    "Cambridgeshire",
+    "81523",
+    "Nebraska",
+    "82325 Morissette Motorway",
+    "86"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "44199349",
+    "Lake Rosettahaven",
+    "qui-aut-eos",
+    "Cambridgeshire",
+    "74603",
+    "Utah",
+    "41251 Gaylord Glens",
+    "11"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "65054739",
+    "Osinskimouth",
+    "tenetur-explicabo-maxime",
+    "Berkshire",
+    "70854",
+    "South Carolina",
+    "9859 Kurtis Plaza",
+    "99"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "9191828",
+    "Nonaton",
+    "consequatur-et-tempora",
+    "Avon",
+    "8006",
+    "Montana",
+    "2521 Roob Corner",
+    "30"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "82063010",
+    "Port Maiaberg",
+    "error-aut-beatae",
+    "Buckinghamshire",
+    "48151",
+    "New Mexico",
+    "494 Kovacek Ramp",
+    "115"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "22288832",
+    "Robertsside",
+    "soluta-itaque-quae",
+    "Berkshire",
+    "87493",
+    "Minnesota",
+    "7572 Ziemann Key",
+    "47"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "97493232",
+    "Chanellemouth",
+    "ipsam-inventore-earum",
+    "Borders",
+    "46254",
+    "Louisiana",
+    "674 Harvey Greens",
+    "57"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "62022916",
+    "Mosciskifort",
+    "dignissimos-magni-amet",
+    "Berkshire",
+    "49028",
+    "Hawaii",
+    "14244 Ahmad Inlet",
+    "103"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "18717294",
+    "West Jamal",
+    "voluptas-provident-ut",
+    "Bedfordshire",
+    "21937",
+    "South Carolina",
+    "008 Uriah Islands",
+    "47"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "89287762",
+    "Hermantown",
+    "error-adipisci-quae",
+    "Bedfordshire",
+    "48397",
+    "Florida",
+    "0677 Fabian Place",
+    "93"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "76139494",
+    "Robyntown",
+    "aut-enim-quos",
+    "Buckinghamshire",
+    "93046",
+    "Nevada",
+    "080 Jaskolski Extension",
+    "92"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "23046131",
+    "Port Payton",
+    "omnis-sapiente-quisquam",
+    "Borders",
+    "18118",
+    "New Hampshire",
+    "73323 Lucie Causeway",
+    "94"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "47978678",
+    "Marquardthaven",
+    "consectetur-eum-rem",
+    "Cambridgeshire",
+    "48406",
+    "Massachusetts",
+    "006 Nicolas Mission",
+    "36"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "87872146",
+    "Haylieside",
+    "quis-et-qui",
+    "Berkshire",
+    "78311",
+    "Massachusetts",
+    "65512 Carmel Knolls",
+    "46"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "99634680",
+    "West Stella",
+    "ut-ratione-quis",
+    "Berkshire",
+    "23333",
+    "Wisconsin",
+    "47145 Noel Glens",
+    "23"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "1470574",
+    "Grahammouth",
+    "dolores-quia-sunt",
+    "Cambridgeshire",
+    "56733",
+    "Louisiana",
+    "375 Rempel Light",
+    "123"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "84880256",
+    "Margueritetown",
+    "eum-rem-magni",
+    "Berkshire",
+    "25916",
+    "Missouri",
+    "95786 Meta Drive",
+    "15"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "17906540",
+    "Margretland",
+    "aut-accusantium-molestias",
+    "Borders",
+    "87665",
+    "Rhode Island",
+    "3855 Addison Villages",
+    "57"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "64141067",
+    "Jackieborough",
+    "rerum-molestiae-ut",
+    "Cambridgeshire",
+    "81223",
+    "New Jersey",
+    "8271 Oberbrunner Garden",
     "12"
     );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "16832308",
+    "Balistreriview",
+    "error-alias-reiciendis",
+    "Bedfordshire",
+    "86175",
+    "Connecticut",
+    "55846 Shaina Road",
+    "26"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "29108130",
+    "Port Maye",
+    "est-ut-ut",
+    "Cambridgeshire",
+    "30569",
+    "Delaware",
+    "9834 Rosina Mountain",
+    "95"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "36053205",
+    "South Laylamouth",
+    "eaque-temporibus-perferendis",
+    "Berkshire",
+    "6761",
+    "Wyoming",
+    "12968 Barton Field",
+    "20"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "99537349",
+    "Bergetown",
+    "facilis-nisi-ipsam",
+    "Berkshire",
+    "42495",
+    "Texas",
+    "704 Gleichner Ridges",
+    "100"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "20160261",
+    "Port Deondre",
+    "beatae-distinctio-velit",
+    "Bedfordshire",
+    "77418",
+    "Delaware",
+    "379 General Cape",
+    "17"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "62345440",
+    "Cedrickside",
+    "sit-culpa-fugiat",
+    "Avon",
+    "40053",
+    "Delaware",
+    "084 Corbin Hill",
+    "36"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "13324707",
+    "Legrosstad",
+    "enim-totam-qui",
+    "Berkshire",
+    "63236",
+    "Michigan",
+    "65518 Lindsay Plaza",
+    "107"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "33218092",
+    "Vonmouth",
+    "cumque-ut-nisi",
+    "Borders",
+    "17560",
+    "Minnesota",
+    "7799 Ova Inlet",
+    "27"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "86983887",
+    "West Emersonmouth",
+    "ipsa-et-libero",
+    "Buckinghamshire",
+    "62910",
+    "New Mexico",
+    "352 Aaliyah Hill",
+    "54"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "83409486",
+    "Hermanport",
+    "doloremque-numquam-odio",
+    "Bedfordshire",
+    "80522",
+    "Arkansas",
+    "84547 Schmidt Radial",
+    "47"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "81841415",
+    "New Alexandria",
+    "fugiat-quibusdam-a",
+    "Borders",
+    "88572",
+    "Wyoming",
+    "74515 Oberbrunner Points",
+    "27"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "27438653",
+    "Kennyville",
+    "inventore-nostrum-sit",
+    "Cambridgeshire",
+    "68126",
+    "New Mexico",
+    "5469 Erwin Prairie",
+    "61"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "74576119",
+    "East Carmeloview",
+    "quidem-perspiciatis-sunt",
+    "Avon",
+    "8010",
+    "Pennsylvania",
+    "3506 Andreane Trail",
+    "9"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "4876818",
+    "Port Alaina",
+    "quis-voluptates-iusto",
+    "Buckinghamshire",
+    "17764",
+    "North Dakota",
+    "475 Tre Cape",
+    "24"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "68304325",
+    "New Domenickview",
+    "voluptatem-ea-eveniet",
+    "Bedfordshire",
+    "2150",
+    "New Hampshire",
+    "286 Clifford Dale",
+    "48"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "46297687",
+    "Irwinchester",
+    "cum-illum-veritatis",
+    "Borders",
+    "41474",
+    "New Hampshire",
+    "6771 Ferry Meadow",
+    "103"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "71657337",
+    "Port Torranceton",
+    "voluptate-exercitationem-mollitia",
+    "Cambridgeshire",
+    "67321",
+    "Washington",
+    "710 Sterling Terrace",
+    "124"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "37243309",
+    "New Gonzalomouth",
+    "ipsam-omnis-vitae",
+    "Berkshire",
+    "96049",
+    "Maine",
+    "0293 Freda Station",
+    "115"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "14994305",
+    "Lake Orlofurt",
+    "optio-nemo-laboriosam",
+    "Avon",
+    "78946",
+    "New Hampshire",
+    "4544 Mona Bypass",
+    "17"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "83161143",
+    "Armstrongville",
+    "nihil-facere-minima",
+    "Cambridgeshire",
+    "37129",
+    "Arkansas",
+    "8511 Alverta Inlet",
+    "90"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "64872588",
+    "Sigmundmouth",
+    "minus-voluptatem-explicabo",
+    "Borders",
+    "56920",
+    "South Dakota",
+    "057 O'Keefe Plains",
+    "106"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "8952215",
+    "South Janie",
+    "nihil-consequatur-ut",
+    "Borders",
+    "409",
+    "Maryland",
+    "147 Bartoletti Meadows",
+    "44"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "29614509",
+    "Clintonborough",
+    "et-aut-quia",
+    "Borders",
+    "19779",
+    "Vermont",
+    "2156 Beer Fork",
+    "122"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "34977473",
+    "East Julia",
+    "aut-perspiciatis-voluptatum",
+    "Avon",
+    "46300",
+    "Alabama",
+    "3117 Frami Station",
+    "123"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "22727917",
+    "Haskellburgh",
+    "quia-aut-autem",
+    "Bedfordshire",
+    "33417",
+    "South Dakota",
+    "485 Barbara Viaduct",
+    "110"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "74231080",
+    "Wilkinsonport",
+    "error-voluptas-et",
+    "Bedfordshire",
+    "85177",
+    "Missouri",
+    "57347 Fabiola Prairie",
+    "43"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "72668106",
+    "New Lori",
+    "eligendi-dolores-doloribus",
+    "Buckinghamshire",
+    "78404",
+    "Maryland",
+    "8401 Toni Mountain",
+    "52"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "92463418",
+    "New Augustineview",
+    "quaerat-qui-aut",
+    "Avon",
+    "45694",
+    "Vermont",
+    "61031 Liza Dale",
+    "50"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "76694085",
+    "East Angelo",
+    "sunt-beatae-deleniti",
+    "Avon",
+    "89585",
+    "Nevada",
+    "911 Zola Manors",
+    "10"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "59806510",
+    "New Lauren",
+    "et-eum-unde",
+    "Bedfordshire",
+    "22024",
+    "Ohio",
+    "722 Norene Plains",
+    "48"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "90240274",
+    "Raoulborough",
+    "tempora-asperiores-cupiditate",
+    "Avon",
+    "19456",
+    "Georgia",
+    "1710 Geovanny Track",
+    "11"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "13426612",
+    "South Jayce",
+    "repellendus-consequatur-rem",
+    "Cambridgeshire",
+    "95448",
+    "Florida",
+    "29885 Fisher Via",
+    "87"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "17613175",
+    "Fishershire",
+    "nam-libero-eaque",
+    "Berkshire",
+    "93243",
+    "Texas",
+    "61365 Zoila Lock",
+    "19"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "96209026",
+    "Eichmanntown",
+    "mollitia-quibusdam-et",
+    "Berkshire",
+    "69392",
+    "Hawaii",
+    "6650 Luettgen Common",
+    "80"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "28767892",
+    "Kirashire",
+    "alias-natus-id",
+    "Bedfordshire",
+    "5128",
+    "Massachusetts",
+    "867 Trevor Roads",
+    "78"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "85855685",
+    "Spencerborough",
+    "mollitia-et-possimus",
+    "Buckinghamshire",
+    "3866",
+    "Indiana",
+    "55351 Stefan Summit",
+    "62"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "1412665",
+    "North Elliot",
+    "eos-libero-ullam",
+    "Cambridgeshire",
+    "18030",
+    "Oregon",
+    "84266 Vandervort Path",
+    "87"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "31598480",
+    "Austynville",
+    "non-fuga-distinctio",
+    "Berkshire",
+    "90693",
+    "Colorado",
+    "265 Seamus Extensions",
+    "62"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "3325890",
+    "Larsonton",
+    "consequatur-sit-ab",
+    "Avon",
+    "15319",
+    "Arkansas",
+    "98683 Armstrong Bypass",
+    "24"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "4186901",
+    "Ciceroton",
+    "dolore-quis-minima",
+    "Avon",
+    "14718",
+    "Oregon",
+    "0653 Gracie Views",
+    "102"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "99611190",
+    "Lake Clarabelleville",
+    "tempora-ad-labore",
+    "Cambridgeshire",
+    "13295",
+    "Rhode Island",
+    "6149 Faustino Mission",
+    "24"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "47186657",
+    "North Susanafort",
+    "occaecati-quo-et",
+    "Berkshire",
+    "22114",
+    "Nevada",
+    "656 Geraldine Key",
+    "116"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "75711414",
+    "West Zariaberg",
+    "reprehenderit-omnis-omnis",
+    "Buckinghamshire",
+    "24832",
+    "Tennessee",
+    "21015 Mertz Vista",
+    "16"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "5234259",
+    "Lake Angelinefort",
+    "soluta-officia-dolorem",
+    "Borders",
+    "45219",
+    "New Mexico",
+    "7655 Yost Meadows",
+    "80"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "99101021",
+    "Port Charles",
+    "vel-accusantium-in",
+    "Cambridgeshire",
+    "97054",
+    "Indiana",
+    "13085 Swaniawski Manor",
+    "28"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "6529085",
+    "Maggiofurt",
+    "possimus-esse-quasi",
+    "Avon",
+    "84081",
+    "North Carolina",
+    "393 Kirlin Plain",
+    "7"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "52475663",
+    "Port Deangelomouth",
+    "nesciunt-sunt-odit",
+    "Buckinghamshire",
+    "52602",
+    "Pennsylvania",
+    "242 Bogisich Curve",
+    "23"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "24518507",
+    "Rollinside",
+    "voluptatem-vitae-consequatur",
+    "Buckinghamshire",
+    "97258",
+    "Illinois",
+    "171 Morissette Cape",
+    "65"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "73181555",
+    "Darehaven",
+    "fugiat-odio-perspiciatis",
+    "Borders",
+    "56187",
+    "Alabama",
+    "454 Guiseppe Lodge",
+    "113"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "33946297",
+    "South Dominicport",
+    "voluptas-voluptatem-quia",
+    "Avon",
+    "842",
+    "Ohio",
+    "7234 Howe Islands",
+    "20"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "3167801",
+    "Lake Laurenshire",
+    "ullam-quis-cum",
+    "Bedfordshire",
+    "72594",
+    "Nevada",
+    "55072 Armand Way",
+    "114"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "55267462",
+    "Beverlyview",
+    "ut-quia-enim",
+    "Bedfordshire",
+    "23802",
+    "New Hampshire",
+    "9436 Lynch Port",
+    "109"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "4928596",
+    "Port Jarodside",
+    "ducimus-error-quia",
+    "Borders",
+    "53459",
+    "Nebraska",
+    "920 Walker Falls",
+    "25"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "82289621",
+    "Reynoldsshire",
+    "aperiam-commodi-autem",
+    "Bedfordshire",
+    "18708",
+    "West Virginia",
+    "5052 Joel Stravenue",
+    "32"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "42512918",
+    "North Ramiro",
+    "quia-debitis-sapiente",
+    "Berkshire",
+    "43037",
+    "Utah",
+    "63871 Raphaelle Orchard",
+    "44"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "78230779",
+    "Adriennemouth",
+    "alias-ut-vel",
+    "Avon",
+    "78150",
+    "Louisiana",
+    "458 Vern Fork",
+    "23"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "20342568",
+    "East Verdie",
+    "consequatur-dolor-optio",
+    "Borders",
+    "60163",
+    "New Hampshire",
+    "851 Kassulke Stravenue",
+    "27"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "63035847",
+    "Selenastad",
+    "earum-sit-laboriosam",
+    "Buckinghamshire",
+    "25903",
+    "New Mexico",
+    "0144 Manuel Hollow",
+    "116"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "69084176",
+    "West Macie",
+    "suscipit-est-incidunt",
+    "Cambridgeshire",
+    "98095",
+    "Louisiana",
+    "530 Dewitt Isle",
+    "50"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "79739541",
+    "South Brendantown",
+    "labore-molestiae-dignissimos",
+    "Bedfordshire",
+    "13797",
+    "Hawaii",
+    "92463 Crona Wells",
+    "69"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "46178514",
+    "Grahamton",
+    "aliquam-velit-et",
+    "Buckinghamshire",
+    "55993",
+    "South Carolina",
+    "289 Caitlyn Pass",
+    "64"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "65329502",
+    "Lake Chloefort",
+    "quisquam-id-ut",
+    "Berkshire",
+    "71703",
+    "Idaho",
+    "50409 Baumbach Mount",
+    "26"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "57415923",
+    "Reichelborough",
+    "ipsa-voluptas-at",
+    "Avon",
+    "7240",
+    "Louisiana",
+    "2926 Sabrina Avenue",
+    "50"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "61657988",
+    "North Ivyshire",
+    "est-tempora-minus",
+    "Berkshire",
+    "59025",
+    "Tennessee",
+    "278 Carroll Mount",
+    "37"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "67317711",
+    "Port Immanuel",
+    "culpa-quasi-minima",
+    "Buckinghamshire",
+    "95677",
+    "West Virginia",
+    "041 Nader Forks",
+    "51"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "85721472",
+    "Considineside",
+    "voluptatem-voluptas-officia",
+    "Avon",
+    "34798",
+    "West Virginia",
+    "671 Hannah Shoal",
+    "119"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "38944491",
+    "Lake Angelica",
+    "reiciendis-totam-recusandae",
+    "Buckinghamshire",
+    "75897",
+    "Minnesota",
+    "991 Boyer Ports",
+    "40"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "94053973",
+    "East Mara",
+    "tenetur-maxime-sequi",
+    "Avon",
+    "51376",
+    "Nebraska",
+    "8663 Yundt Turnpike",
+    "111"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "67379224",
+    "North Judyberg",
+    "neque-vel-incidunt",
+    "Cambridgeshire",
+    "85375",
+    "West Virginia",
+    "13614 Swaniawski Motorway",
+    "99"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "14530437",
+    "New Allene",
+    "voluptatibus-et-veniam",
+    "Avon",
+    "47825",
+    "New Jersey",
+    "874 Lexi Mews",
+    "95"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "63543141",
+    "Schummbury",
+    "labore-blanditiis-tempore",
+    "Berkshire",
+    "95921",
+    "Tennessee",
+    "9915 Haag Garden",
+    "17"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "5378276",
+    "Jadonport",
+    "ad-et-incidunt",
+    "Borders",
+    "53750",
+    "North Carolina",
+    "7654 Kaela Mill",
+    "110"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "59341934",
+    "Kiehnmouth",
+    "velit-mollitia-magnam",
+    "Bedfordshire",
+    "34524",
+    "Virginia",
+    "015 Danyka Trail",
+    "94"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "91180620",
+    "Yundtton",
+    "culpa-quibusdam-est",
+    "Cambridgeshire",
+    "13451",
+    "Iowa",
+    "36769 Mohr Path",
+    "42"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "705130",
+    "East Mariliemouth",
+    "quae-quam-est",
+    "Borders",
+    "87645",
+    "North Carolina",
+    "351 Mazie Plains",
+    "120"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "88520822",
+    "South Clairport",
+    "illum-magni-molestiae",
+    "Borders",
+    "19147",
+    "Montana",
+    "93269 Barrows Pass",
+    "101"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "44878525",
+    "Adelinestad",
+    "et-fuga-ea",
+    "Avon",
+    "49230",
+    "Minnesota",
+    "384 Johnson Overpass",
+    "21"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "73124125",
+    "Lake Sonya",
+    "sunt-minus-rerum",
+    "Borders",
+    "28799",
+    "New Jersey",
+    "5413 Barton Plains",
+    "15"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "64837649",
+    "South Andreane",
+    "cum-et-aperiam",
+    "Berkshire",
+    "37258",
+    "Virginia",
+    "921 Christina Mount",
+    "9"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "176780",
+    "East Stanton",
+    "eos-voluptates-dignissimos",
+    "Avon",
+    "75092",
+    "Maine",
+    "2248 Billie Branch",
+    "120"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "90926961",
+    "Labadietown",
+    "iure-non-placeat",
+    "Avon",
+    "63860",
+    "Indiana",
+    "5955 Donato Village",
+    "92"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "20147613",
+    "Port Muhammad",
+    "veniam-neque-vero",
+    "Bedfordshire",
+    "20965",
+    "Pennsylvania",
+    "637 Reynolds Union",
+    "12"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "59955515",
+    "Ziemannside",
+    "voluptatem-aspernatur-culpa",
+    "Buckinghamshire",
+    "37732",
+    "New Hampshire",
+    "024 Bert Rest",
+    "64"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "45984512",
+    "Heathcoteton",
+    "a-nam-placeat",
+    "Avon",
+    "88281",
+    "Minnesota",
+    "7996 Grady Prairie",
+    "100"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "50000124",
+    "New Yvette",
+    "nisi-corrupti-et",
+    "Borders",
+    "36577",
+    "Louisiana",
+    "55406 Greenholt Landing",
+    "69"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "94665655",
+    "Port Morrisfurt",
+    "delectus-culpa-accusantium",
+    "Bedfordshire",
+    "80132",
+    "Georgia",
+    "117 Haag Manors",
+    "98"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "69197477",
+    "West Mandy",
+    "voluptate-ad-eos",
+    "Cambridgeshire",
+    "84935",
+    "North Dakota",
+    "56797 Koch Grove",
+    "41"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "99336524",
+    "Mooreberg",
+    "fugiat-sed-recusandae",
+    "Borders",
+    "33887",
+    "New Hampshire",
+    "451 Treutel Crescent",
+    "33"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "19018300",
+    "Macejkovicberg",
+    "dolores-laborum-natus",
+    "Avon",
+    "38762",
+    "North Carolina",
+    "51154 Penelope Ports",
+    "36"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "98574495",
+    "Hackettland",
+    "autem-neque-qui",
+    "Borders",
+    "69178",
+    "Missouri",
+    "96403 Kshlerin Ports",
+    "64"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "34738935",
+    "North Adalbertoview",
+    "officia-fuga-et",
+    "Avon",
+    "1484",
+    "Iowa",
+    "014 Reanna Flat",
+    "69"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "49860401",
+    "Kreigerport",
+    "natus-facere-saepe",
+    "Bedfordshire",
+    "69816",
+    "Louisiana",
+    "30899 Ed Green",
+    "55"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "74365553",
+    "Torphytown",
+    "dolorum-quidem-non",
+    "Cambridgeshire",
+    "85978",
+    "Wisconsin",
+    "0925 Beier Grove",
+    "90"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "4163373",
+    "Carrollborough",
+    "omnis-dicta-aperiam",
+    "Borders",
+    "22290",
+    "Texas",
+    "858 Patsy Junctions",
+    "9"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "52081213",
+    "North Marshall",
+    "voluptate-quam-voluptatem",
+    "Buckinghamshire",
+    "28938",
+    "Rhode Island",
+    "641 Smitham Summit",
+    "71"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "2839938",
+    "Vergieburgh",
+    "unde-consequatur-et",
+    "Bedfordshire",
+    "87287",
+    "Georgia",
+    "11925 Kiel Lodge",
+    "20"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "40174412",
+    "Jasminfort",
+    "eos-et-officia",
+    "Buckinghamshire",
+    "7899",
+    "Wisconsin",
+    "459 Gulgowski Land",
+    "95"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "37048487",
+    "New Jessycaport",
+    "aut-adipisci-ipsa",
+    "Avon",
+    "43419",
+    "Tennessee",
+    "179 Howell Rest",
+    "96"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "22426330",
+    "North Jadebury",
+    "est-beatae-nobis",
+    "Buckinghamshire",
+    "38468",
+    "Georgia",
+    "5384 Naomie Glens",
+    "58"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "60770081",
+    "Crookschester",
+    "itaque-fugit-nisi",
+    "Berkshire",
+    "28603",
+    "Vermont",
+    "15653 Swift Drive",
+    "39"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "31579044",
+    "South Gisselle",
+    "eius-facilis-ullam",
+    "Avon",
+    "87933",
+    "Utah",
+    "025 Manley Port",
+    "38"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "70226316",
+    "East Frederik",
+    "voluptate-ea-cum",
+    "Buckinghamshire",
+    "42422",
+    "Kansas",
+    "145 Homenick Trail",
+    "90"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "62119259",
+    "Royalchester",
+    "optio-possimus-voluptatem",
+    "Borders",
+    "40426",
+    "Kansas",
+    "4337 Jarrell Mills",
+    "23"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "85395178",
+    "East Lupe",
+    "consectetur-veniam-id",
+    "Buckinghamshire",
+    "96779",
+    "Tennessee",
+    "173 Asa Spurs",
+    "55"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "90546076",
+    "Port Alannamouth",
+    "laudantium-odio-fugit",
+    "Buckinghamshire",
+    "86207",
+    "Delaware",
+    "057 Ratke Loop",
+    "92"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "98881764",
+    "Adamouth",
+    "ea-earum-sapiente",
+    "Borders",
+    "4675",
+    "Maine",
+    "518 Senger Heights",
+    "46"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "54179570",
+    "West Winonaborough",
+    "nemo-sed-quo",
+    "Buckinghamshire",
+    "8456",
+    "Maryland",
+    "0015 Heaven Passage",
+    "85"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "88432058",
+    "Swaniawskiburgh",
+    "ducimus-sed-quidem",
+    "Bedfordshire",
+    "98375",
+    "Massachusetts",
+    "7546 Boehm Cliff",
+    "15"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "28537486",
+    "Blandahaven",
+    "repudiandae-alias-ut",
+    "Buckinghamshire",
+    "76692",
+    "Minnesota",
+    "22431 Royal Avenue",
+    "5"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "54270864",
+    "Naderside",
+    "corrupti-corporis-quia",
+    "Berkshire",
+    "91326",
+    "Utah",
+    "667 Hudson Mews",
+    "71"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "3845337",
+    "New Aprilshire",
+    "dolor-vel-eum",
+    "Borders",
+    "30348",
+    "North Dakota",
+    "49577 Tia River",
+    "97"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "69941097",
+    "East June",
+    "at-placeat-dolorem",
+    "Bedfordshire",
+    "14565",
+    "Pennsylvania",
+    "7037 Klocko Fort",
+    "117"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "69694283",
+    "Lake Elishaville",
+    "quia-non-consectetur",
+    "Bedfordshire",
+    "45690",
+    "Nebraska",
+    "549 Kaylee Harbor",
+    "91"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "67965655",
+    "Marianafurt",
+    "sapiente-illum-voluptas",
+    "Borders",
+    "66953",
+    "Mississippi",
+    "262 Wuckert Lodge",
+    "22"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "53453133",
+    "North Georgettefurt",
+    "similique-sed-et",
+    "Cambridgeshire",
+    "61081",
+    "South Dakota",
+    "1793 Wunsch Place",
+    "73"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "48867065",
+    "Rasheedstad",
+    "et-aperiam-architecto",
+    "Bedfordshire",
+    "4993",
+    "Texas",
+    "7333 Fahey Underpass",
+    "112"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "10579853",
+    "Port Georgianaburgh",
+    "architecto-fuga-facilis",
+    "Bedfordshire",
+    "21823",
+    "Maine",
+    "354 Bauch Shores",
+    "8"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "19127695",
+    "South Salvatore",
+    "cumque-repellendus-perspiciatis",
+    "Berkshire",
+    "52626",
+    "Idaho",
+    "2039 Jewell Street",
+    "16"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "5816724",
+    "Chelseyborough",
+    "neque-est-facilis",
+    "Bedfordshire",
+    "72278",
+    "Missouri",
+    "333 Mark Branch",
+    "30"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "34979365",
+    "South Haileebury",
+    "veniam-aut-officia",
+    "Cambridgeshire",
+    "31179",
+    "Indiana",
+    "54662 Marks Forks",
+    "97"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "13879118",
+    "Jenaland",
+    "et-atque-voluptatem",
+    "Buckinghamshire",
+    "66507",
+    "Montana",
+    "1611 Huel Oval",
+    "13"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "8167248",
+    "New Alan",
+    "perferendis-quam-totam",
+    "Avon",
+    "32224",
+    "Wisconsin",
+    "95004 Torphy Branch",
+    "58"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "6547266",
+    "Kayleyburgh",
+    "velit-quis-et",
+    "Avon",
+    "87194",
+    "Tennessee",
+    "33679 Fahey Village",
+    "37"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "57232360",
+    "South Americo",
+    "esse-dolorem-reiciendis",
+    "Cambridgeshire",
+    "52080",
+    "Florida",
+    "39918 Wiza Walks",
+    "10"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "60843548",
+    "Dagmarfurt",
+    "architecto-et-ea",
+    "Avon",
+    "95730",
+    "Kansas",
+    "62850 Hudson Locks",
+    "51"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "45703786",
+    "Carrollmouth",
+    "sit-adipisci-ducimus",
+    "Berkshire",
+    "17737",
+    "Colorado",
+    "743 Schamberger Brook",
+    "70"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "95441962",
+    "Annabelletown",
+    "unde-vel-porro",
+    "Berkshire",
+    "14334",
+    "Colorado",
+    "02554 Goodwin Islands",
+    "93"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "52234018",
+    "Dietrichville",
+    "et-reiciendis-et",
+    "Bedfordshire",
+    "38077",
+    "Washington",
+    "2553 Chelsie Brook",
+    "98"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "41034867",
+    "Angelinaberg",
+    "inventore-sint-perspiciatis",
+    "Berkshire",
+    "90347",
+    "North Dakota",
+    "535 Cronin Circle",
+    "112"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "67329109",
+    "O'Connellhaven",
+    "soluta-rerum-atque",
+    "Avon",
+    "22918",
+    "Ohio",
+    "818 Williamson Greens",
+    "22"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "28277451",
+    "Joanniebury",
+    "eum-cupiditate-quis",
+    "Cambridgeshire",
+    "70252",
+    "Oklahoma",
+    "98123 Willms Circles",
+    "89"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "79818887",
+    "Okunevahaven",
+    "aut-odit-ratione",
+    "Cambridgeshire",
+    "11980",
+    "New York",
+    "778 Winona Hills",
+    "113"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "24457893",
+    "Declanside",
+    "beatae-iste-vel",
+    "Bedfordshire",
+    "33960",
+    "North Dakota",
+    "945 Ullrich Forges",
+    "35"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "5656005",
+    "Lake Nathanaelborough",
+    "enim-ullam-dolorem",
+    "Buckinghamshire",
+    "96746",
+    "North Carolina",
+    "545 Anjali Via",
+    "107"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "30255933",
+    "Mrazberg",
+    "dolor-quam-dolorem",
+    "Avon",
+    "26336",
+    "Nevada",
+    "2965 Paucek Manors",
+    "122"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "86458836",
+    "Walkerborough",
+    "sint-sint-est",
+    "Berkshire",
+    "44046",
+    "New Jersey",
+    "67669 Rice Fords",
+    "97"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "41485093",
+    "Beahanland",
+    "libero-reprehenderit-quia",
+    "Avon",
+    "58361",
+    "New Jersey",
+    "81172 Runte Key",
+    "47"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "34873699",
+    "Connellyberg",
+    "est-dignissimos-est",
+    "Borders",
+    "71725",
+    "New Mexico",
+    "05945 Nicholaus Islands",
+    "39"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "43597471",
+    "Howellton",
+    "impedit-vitae-consectetur",
+    "Bedfordshire",
+    "64403",
+    "Louisiana",
+    "58000 Kamille Prairie",
+    "61"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "83277727",
+    "Heathcotemouth",
+    "sit-voluptates-et",
+    "Berkshire",
+    "39214",
+    "Washington",
+    "3935 Delaney Burgs",
+    "113"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "95441627",
+    "New Briceview",
+    "accusamus-at-magni",
+    "Avon",
+    "91687",
+    "Ohio",
+    "41181 Paucek Fort",
+    "21"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "71595154",
+    "Port Russmouth",
+    "iste-omnis-non",
+    "Borders",
+    "9573",
+    "Indiana",
+    "6977 Nicholas Light",
+    "45"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "80423969",
+    "Kilbackmouth",
+    "cupiditate-eos-quos",
+    "Bedfordshire",
+    "3758",
+    "Colorado",
+    "8405 Jacobs Forest",
+    "113"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "88458752",
+    "West Raphaelstad",
+    "sint-nesciunt-voluptatem",
+    "Berkshire",
+    "58374",
+    "Mississippi",
+    "161 Riley Way",
+    "18"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "91007210",
+    "Janaport",
+    "magni-temporibus-eos",
+    "Buckinghamshire",
+    "88930",
+    "Arkansas",
+    "16685 Abe Shoals",
+    "78"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "15803244",
+    "Batzland",
+    "reiciendis-vel-sit",
+    "Borders",
+    "61367",
+    "Montana",
+    "6029 Spinka Landing",
+    "77"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "18908937",
+    "Kennafort",
+    "consequatur-tenetur-a",
+    "Bedfordshire",
+    "74443",
+    "Massachusetts",
+    "959 Lesch Union",
+    "45"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "45299950",
+    "Ettieberg",
+    "ullam-minus-ut",
+    "Berkshire",
+    "29964",
+    "Ohio",
+    "9637 Ewell Union",
+    "39"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "99330303",
+    "Aufderharhaven",
+    "quia-repellendus-quo",
+    "Avon",
+    "42376",
+    "North Carolina",
+    "379 Evie Green",
+    "78"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "86328942",
+    "New Cedrickburgh",
+    "reprehenderit-quis-officiis",
+    "Buckinghamshire",
+    "73568",
+    "Ohio",
+    "679 Kennedi Terrace",
+    "75"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "20974188",
+    "Leanntown",
+    "et-necessitatibus-totam",
+    "Berkshire",
+    "93485",
+    "Oklahoma",
+    "45901 Rylan Corners",
+    "54"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "56124241",
+    "Lake Ari",
+    "pariatur-temporibus-voluptatem",
+    "Borders",
+    "80523",
+    "South Dakota",
+    "439 Leannon Wells",
+    "53"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "38737095",
+    "Gradyberg",
+    "voluptatibus-est-qui",
+    "Berkshire",
+    "80326",
+    "Indiana",
+    "03690 Cormier Square",
+    "87"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "63537272",
+    "West Elouise",
+    "explicabo-iusto-modi",
+    "Avon",
+    "60908",
+    "Georgia",
+    "1375 Grant Crescent",
+    "106"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "82451422",
+    "New Kyleigh",
+    "rerum-nihil-cupiditate",
+    "Borders",
+    "3729",
+    "Kansas",
+    "476 Durgan Divide",
+    "100"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "15842616",
+    "Thurmanstad",
+    "voluptas-aliquid-illum",
+    "Cambridgeshire",
+    "73951",
+    "California",
+    "29221 Wisoky Grove",
+    "111"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "29898103",
+    "New Duncan",
+    "deleniti-sit-non",
+    "Cambridgeshire",
+    "82456",
+    "Delaware",
+    "3374 Feest Station",
+    "28"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "96235596",
+    "East Tod",
+    "consectetur-perferendis-et",
+    "Borders",
+    "83361",
+    "Louisiana",
+    "586 Zulauf Manor",
+    "81"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "33813417",
+    "North Adrianaberg",
+    "deserunt-voluptatem-dolorem",
+    "Cambridgeshire",
+    "8589",
+    "Oklahoma",
+    "69597 Konopelski Landing",
+    "65"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "3596948",
+    "Reinholdside",
+    "sed-quibusdam-ut",
+    "Bedfordshire",
+    "91496",
+    "Idaho",
+    "28111 Darius Ports",
+    "110"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "46559807",
+    "Bruentown",
+    "eveniet-in-maxime",
+    "Buckinghamshire",
+    "11492",
+    "Oregon",
+    "537 Adelbert Underpass",
+    "40"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "16691574",
+    "North Dellabury",
+    "quos-officia-temporibus",
+    "Berkshire",
+    "38601",
+    "Wisconsin",
+    "900 Libby Brook",
+    "95"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "56466270",
+    "New Orval",
+    "molestias-ut-consequatur",
+    "Borders",
+    "31021",
+    "Hawaii",
+    "08765 Bernice Villages",
+    "61"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "57864480",
+    "Kleinside",
+    "impedit-consequatur-molestiae",
+    "Buckinghamshire",
+    "18887",
+    "Michigan",
+    "10257 Goldner Valleys",
+    "108"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "57316753",
+    "New Marilouview",
+    "fuga-voluptas-magni",
+    "Buckinghamshire",
+    "59753",
+    "Tennessee",
+    "078 Mayert Stravenue",
+    "110"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "69312509",
+    "Jameyfurt",
+    "ipsum-neque-quod",
+    "Cambridgeshire",
+    "80986",
+    "Illinois",
+    "4727 Ruthe Garden",
+    "97"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "71165281",
+    "West Xzavier",
+    "odit-aut-ea",
+    "Cambridgeshire",
+    "51634",
+    "Alabama",
+    "624 Lisa Street",
+    "6"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "87495797",
+    "Johathanhaven",
+    "omnis-exercitationem-totam",
+    "Buckinghamshire",
+    "33771",
+    "South Dakota",
+    "52478 Mosciski Gardens",
+    "71"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "46378738",
+    "Port Hermina",
+    "a-eaque-dolores",
+    "Bedfordshire",
+    "49674",
+    "Michigan",
+    "40790 Cassin Courts",
+    "96"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "28847352",
+    "Zemlakburgh",
+    "consequatur-corporis-dolor",
+    "Borders",
+    "56531",
+    "Kentucky",
+    "788 Alvis Park",
+    "3"
+    );
+    
+insert into tb_address(
+            cep,
+            ds_city,
+            ds_complement,
+            ds_district,
+            ds_number,
+            ds_state,
+            ds_street,
+            id_user
+            )
+            values(
+    "56597121",
+    "West Theo",
+    "veniam-necessitatibus-culpa",
+    "Berkshire",
+    "28008",
+    "Hawaii",
+    "191 Johann Rapid",
+    "70"
+    );
+    

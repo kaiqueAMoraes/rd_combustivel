@@ -2,7 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+
 
 import { selectCartItems, selectCartTotal } from '../../redux/cart/cart.selectors';
 import CustomButton from '../../components/custom-button/custom-button.component';
@@ -14,39 +16,20 @@ import ScrollCards from '../../components/scroll-cards/scroll-cards.component';
 
 import './checkout.styles.scss';
 
-const handleSubmit = async (items, total) => {
+const handleSubmit = async (items, history, total) => {
     const itemList = [];
     items.map(item => {
         itemList.push({ "idProduct": { "idProduct": item.id }, "quantity": item.quantity })
     })
-    const email = sessionStorage.getItem('email');
-    let userId  = await axios.get('http://localhost:8080/find-user-email/' + email).then(response => {return response.data[0].idUser})
-    let userAddress  = await axios.get(`http://localhost:8080/find-address-byuser/${userId}`).then(response => {return response.data[0].idAddress})
-    const order =
-    {
-        "totalPrice": total,
-        "idUser": {
-            "idUser": userId
-        },
-        "idAddress": {
-            "idAddress": userAddress
-        },
-        "itemList": itemList
+    const orderInfo = {
+        "itemList" : itemList,
+        "total" : total
     }
-    console.log(order)
-
-    axios.post("http://localhost:8080/create-order", order)
-        .then(response => {
-            if (response.status === 200) {
-                console.log("sucesso ao cadastrar produto")
-            } else {
-                console.log(response.data)
-                //throw new Error(response.data);
-            }
-        })
+    history.push("/carrinho/checkout", orderInfo);
 }
 
-const CheckoutPage = ({ cartItems, total }) => (
+
+const CheckoutPage = ({ cartItems, total, history}) => (
     <>
         <Container>
             <h3>Talvez você goste</h3>
@@ -94,7 +77,7 @@ const CheckoutPage = ({ cartItems, total }) => (
                         </div>
 
                         <div className="btn-cart-holder d-flex justify-content-center">
-                            <CustomButton onClick={() => handleSubmit(cartItems, total)}>finalizar</CustomButton>
+                            <CustomButton onClick={() => handleSubmit(cartItems, history, total)}>finalizar</CustomButton>
                         </div>
                         <div className="btn-cart-holder d-flex justify-content-center">
                             <Link to="/">Continuar comprando</Link>
@@ -125,4 +108,4 @@ const mapStateToProps = createStructuredSelector({
     total: selectCartTotal
 });
 
-export default connect(mapStateToProps)(CheckoutPage);
+export default withRouter(connect(mapStateToProps)(CheckoutPage));

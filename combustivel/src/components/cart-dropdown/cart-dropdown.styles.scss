@@ -1,5 +1,6 @@
+
 .cart-dropdown {
-    position: absolute;
+    position: fixed;
     width: 360px;
     height: auto;
     max-height: 375px;
@@ -10,9 +11,9 @@
     border: 1px solid rgba(0, 0, 0, 0.274);
     border-radius: 8px;
     background-color: white;
-    top: 70px;
-    right: 40px;
-    z-index: 5;
+    top: 90px;
+    right: 150px;
+    z-index: 99999999;
     
   
     .cart-items {
