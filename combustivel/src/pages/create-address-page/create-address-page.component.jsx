@@ -202,6 +202,7 @@ class CreateAddress extends Component {
             let address = {};
             await axios.get('http://localhost:8080/find-user-email/' + sessionStorage.getItem('email'))
                 .then(response => {
+                    console.log(sessionStorage.getItem('email'));
                     address = {
                         "cep": cep,
                         "state": state,
@@ -210,10 +211,11 @@ class CreateAddress extends Component {
                         "street": street,
                         "number": number,
                         "complement": complement,
-                        "user": {
-                            "idUser": response.data[0].idUser
-                        }
+                        "idUser": {
+                            "idUser" : response.data[0].idUser
+                        } ,
                     }
+                    console.log(address);
                 }).catch(error => {
                     console.log(error)
                 });
@@ -234,7 +236,8 @@ class CreateAddress extends Component {
                     }
                 })
         } catch (err) {
-            this.setState({ errorMessage: err.response })
+            console.log(err)
+            //this.setState({ errorMessage: err.response })
         }
     }
 

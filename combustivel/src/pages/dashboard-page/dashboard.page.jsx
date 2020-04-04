@@ -18,7 +18,7 @@ import Alert from 'react-bootstrap/Alert'
 class DashboardPage extends Component {
     constructor(props) {
         super(props);
-        console.log(props)
+        //console.log(props)
         const currentUser = sessionStorage.getItem('user');
         if (!currentUser)
             this.props.history.push('/');
@@ -27,188 +27,7 @@ class DashboardPage extends Component {
             user: {},
             email: sessionStorage.getItem('email'),
             endereco: [],
-            compras: [
-                {
-                    "idOrder": 1,
-                    "totalPrice": 150.0,
-                    "date": "1995-08-05T00:00:00.000+0000",
-                    "idUser": {
-                        "idUser": 1,
-                        "firstName": "Paul",
-                        "lastName": "McCartney",
-                        "cpf": "398.588.321-05",
-                        "email": "paul_mccartney@gmail.com",
-                        "password": "123456",
-                        "birth": "1995-08-05T03:00:00.000+0000",
-                        "gender": "Masculino",
-                        "phone": "(11) 92344-4562"
-                    },
-                    "idAddress": {
-                        "idAddress": 1,
-                        "cep": "04502003",
-                        "state": "SP",
-                        "city": "Sao Paulo",
-                        "district": "Morumbi",
-                        "street": "Avenida Giovani Gronchi",
-                        "number": "2053",
-                        "complement": null,
-                        "idUser": {
-                            "idUser": 1,
-                            "firstName": "Paul",
-                            "lastName": "McCartney",
-                            "cpf": "398.588.321-05",
-                            "email": "paul_mccartney@gmail.com",
-                            "password": "123456",
-                            "birth": "1995-08-05T03:00:00.000+0000",
-                            "gender": "Masculino",
-                            "phone": "(11) 92344-4562"
-                        }
-                    },
-                    "list": [
-                        {
-                            "idOrderItem": 1,
-                            "idProduct": {
-                                "idProduct": 1,
-                                "name": "Gasolina Comum",
-                                "description": "LOREM IPSUM LOREM IPSUM LOREM IPSUM",
-                                "image": "imgURL",
-                                "price": 3.52,
-                                "quantStock": 1500,
-                                "idCategory": {
-                                    "idCategory": 1,
-                                    "name": "Gasolina"
-                                }
-                            },
-                            "price": 3.2,
-                            "quantity": 50
-                        },
-                        {
-                            "idOrderItem": 2,
-                            "idProduct": {
-                                "idProduct": 2,
-                                "name": "Gasolina Aditivada",
-                                "description": "LOREM IPSUM LOREM IPSUM LOREM IPSUM",
-                                "image": "imgURL",
-                                "price": 5.45,
-                                "quantStock": 9000,
-                                "idCategory": {
-                                    "idCategory": 1,
-                                    "name": "Gasolina"
-                                }
-                            },
-                            "price": 3.2,
-                            "quantity": 50
-                        }
-                    ]
-                },
-                {
-                    "idOrder": 2,
-                    "totalPrice": 150.0,
-                    "date": "1995-08-05T00:00:00.000+0000",
-                    "idUser": {
-                        "idUser": 1,
-                        "firstName": "Paul",
-                        "lastName": "McCartney",
-                        "cpf": "398.588.321-05",
-                        "email": "paul_mccartney@gmail.com",
-                        "password": "123456",
-                        "birth": "1995-08-05T03:00:00.000+0000",
-                        "gender": "Masculino",
-                        "phone": "(11) 92344-4562"
-                    },
-                    "idAddress": {
-                        "idAddress": 1,
-                        "cep": "04502003",
-                        "state": "SP",
-                        "city": "Sao Paulo",
-                        "district": "Morumbi",
-                        "street": "Avenida Giovani Gronchi",
-                        "number": "2053",
-                        "complement": null,
-                        "idUser": {
-                            "idUser": 1,
-                            "firstName": "Paul",
-                            "lastName": "McCartney",
-                            "cpf": "398.588.321-05",
-                            "email": "paul_mccartney@gmail.com",
-                            "password": "123456",
-                            "birth": "1995-08-05T03:00:00.000+0000",
-                            "gender": "Masculino",
-                            "phone": "(11) 92344-4562"
-                        }
-                    },
-                    "list": [
-                        {
-                            "idOrderItem": 1,
-                            "idProduct": {
-                                "idProduct": 1,
-                                "name": "Gasolina Comum",
-                                "description": "LOREM IPSUM LOREM IPSUM LOREM IPSUM",
-                                "image": "imgURL",
-                                "price": 3.52,
-                                "quantStock": 1500,
-                                "idCategory": {
-                                    "idCategory": 1,
-                                    "name": "Gasolina"
-                                }
-                            },
-                            "price": 3.2,
-                            "quantity": 50
-                        },
-                        {
-                            "idOrderItem": 1,
-                            "idProduct": {
-                                "idProduct": 1,
-                                "name": "Gasolina Comum",
-                                "description": "LOREM IPSUM LOREM IPSUM LOREM IPSUM",
-                                "image": "imgURL",
-                                "price": 3.52,
-                                "quantStock": 1500,
-                                "idCategory": {
-                                    "idCategory": 1,
-                                    "name": "Gasolina"
-                                }
-                            },
-                            "price": 3.2,
-                            "quantity": 50
-                        },
-                        {
-                            "idOrderItem": 1,
-                            "idProduct": {
-                                "idProduct": 1,
-                                "name": "Gasolina Comum",
-                                "description": "LOREM IPSUM LOREM IPSUM LOREM IPSUM",
-                                "image": "imgURL",
-                                "price": 3.52,
-                                "quantStock": 1500,
-                                "idCategory": {
-                                    "idCategory": 1,
-                                    "name": "Gasolina"
-                                }
-                            },
-                            "price": 3.2,
-                            "quantity": 50
-                        },
-                        {
-                            "idOrderItem": 2,
-                            "idProduct": {
-                                "idProduct": 2,
-                                "name": "Gasolina Aditivada",
-                                "description": "LOREM IPSUM LOREM IPSUM LOREM IPSUM",
-                                "image": "imgURL",
-                                "price": 5.45,
-                                "quantStock": 9000,
-                                "idCategory": {
-                                    "idCategory": 1,
-                                    "name": "Gasolina"
-                                }
-                            },
-                            "price": 3.2,
-                            "quantity": 50
-                        }
-                    ]
-                }
-            ],
+            compras : [],
             active: "myAccount",
             errorMessage: ""
         }
@@ -232,20 +51,28 @@ class DashboardPage extends Component {
                         "gender": response.data[0].gender,
                         "phone": response.data[0].phone,
                         "birth": response.data[0].birth.split('-').reverse().toString().split(",", 2).concat(response.data[0].birth.split("-", 1)).join('-')
-                        //birth.split('-').reverse().toString().split(",", 2).reverse().concat(birth.split("-",1)).join('-')
                     }
                 })
             }).catch(error => {
                 console.log(error)
             });
 
-        await axios.get('http://localhost:8080/findall-address')
+        await axios.get(`http://localhost:8080/find-address-byuser/${this.state.user.idUser}`)
             .then(response => {
-                console.log(response.data)
                 if (response.data) {
-                    this.setState({ endereco: response.data })
+                    typeof response.data === "string" ? this.setState({errorMessage : "ops! você ainda não tem nenhum endereço cadastrado."}) : 
+                    this.setState({endereco : response.data})
                 }
+            }).catch(error => {
+                console.log(error)
+            });
 
+            await axios.get(`http://localhost:8080/find-orders-byuser/${this.state.user.idUser}`)
+            .then(response => {
+                if (response.data) {
+                    typeof response.data === "string" ? this.setState({errorMessage : "nenhuma compra realizada ainda"}) : 
+                    this.setState({compras : response.data})
+                }
             }).catch(error => {
                 console.log(error)
             });
@@ -287,21 +114,12 @@ class DashboardPage extends Component {
                 })
             },
             Compras: function showPurchases() {
-                console.log(compras)
-                console.log(compras[0].list.length)
                 return compras.map(elm => {
-                    return <CardPurchases
+                    console.log(elm)
+                    return     <CardPurchases
                         key={elm.idOrder}
-                        id={elm.idOrder}
-                        datePurchase={elm.date}
-                        qtdItems={elm.list.length}
-                        vTotal={elm.totalPrice}
-                        street={elm.idAddress.street}
-                        number={elm.idAddress.number}
-                        cep={elm.idAddress.cep}
-                        props={props}
-                    />
-
+                        elm={elm}
+                    props={props} />
                 })
             }
 
@@ -312,7 +130,6 @@ class DashboardPage extends Component {
         return (
             <div className="dashboard-container">
                 <Container className="inner-container">
-                    {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}
 
                     {/* INICIO box de seleção de display */}
                     <div className="user-container">
@@ -390,7 +207,9 @@ class DashboardPage extends Component {
                                             </Link>
                                         </div>
                                     </div>
+                                    <span>{this.state.endereco.length} endereços cadastrados</span>
 
+                                    {this.state.errorMessage ? (<Alert className="m-4" variant='primary'>{this.state.errorMessage}</Alert>) : ""}
                                     <MyComponents.Adressess />
                                 </>
                             ) : (

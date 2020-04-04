@@ -8,9 +8,12 @@ import br.com.rd.Backend.repositories.AddressRepository;
 import br.com.rd.Backend.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.validation.ConstraintViolationException;
 import java.util.List;
 
 @Service("AddressService")
@@ -31,6 +34,8 @@ public class AddressService implements AddressInterface {
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: Exite um erro na requisição: " + e.getMessage());
+        } catch (ConstraintViolationException e) {
+            return ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
         }
     }
 
@@ -40,14 +45,14 @@ public class AddressService implements AddressInterface {
             return ResponseEntity.ok().body("Não há registros para o id informado");
         } else {
             addressRepository.deleteById(id);
-            return ResponseEntity.ok().body("Endereço deletado");
+            return ResponseEntity.ok().body("Endereço id:" + id + " deletado");
         }
     }
 
     @Override
     public ResponseEntity findAddressById(Long id) {
         if (addressRepository.findById(id).isEmpty()) {
-            return ResponseEntity.ok().body("Endereco não encontrado");
+            return ResponseEntity.ok().body("Endereço não encontrado");
         } else {
             return ResponseEntity.ok().body(addressRepository.findById(id));
         }
@@ -76,13 +81,28 @@ public class AddressService implements AddressInterface {
         try {
             Address addressUpdate = addressRepository.getOne(addressDTO.getIdAddress());
 
-            addressUpdate.setCep(addressDTO.getCep());
-            addressUpdate.setState(addressDTO.getState());
-            addressUpdate.setCity(addressDTO.getCity());
-            addressUpdate.setDistrict(addressDTO.getDistrict());
-            addressUpdate.setStreet(addressDTO.getStreet());
-            addressUpdate.setNumber(addressDTO.getNumber());
-            addressUpdate.setComplement(addressDTO.getComplement());
+            if (addressDTO.getCep() != null) {
+                addressUpdate.setCep(addressDTO.getCep());
+            }
+            if (addressDTO.getState() != null) {
+                addressUpdate.setState(addressDTO.getState());
+            }
+            if (addressDTO.getCity() != null) {
+                addressUpdate.setCity(addressDTO.getCity());
+            }
+            if (addressDTO.getDistrict() != null) {
+                addressUpdate.setDistrict(addressDTO.getDistrict());
+            }
+            if (addressDTO.getStreet() != null) {
+                addressUpdate.setStreet(addressDTO.getStreet());
+            }
+            if (addressDTO.getNumber() != null) {
+                addressUpdate.setNumber(addressDTO.getNumber());
+            }
+            if (addressDTO.getComplement() != null) {
+                addressUpdate.setComplement(addressDTO.getComplement());
+            }
+
             addressUpdate.setIdUser(addressDTO.getIdUser());
 
             Address addressResponse = addressRepository.save(addressUpdate);
@@ -91,6 +111,8 @@ public class AddressService implements AddressInterface {
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: Exite um erro na requisição: " + e.getMessage());
+        } catch (InvalidDataAccessApiUsageException e) {
+            return ResponseEntity.badRequest().body("O Id do endereço não foi informado na requisição");
         }
     }
 }

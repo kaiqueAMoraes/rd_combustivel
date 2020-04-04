@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
 }
 
 code {
@@ -15,12 +16,17 @@ code {
 
 html{
   background-color: #F4F7FF !important;
+  overflow-x: hidden !important;
+
 }
 
 body{
+
+  overflow-x: hidden !important;
   background-color: #F4F7FF !important;
 }
 
 #root {
+  overflow-x: hidden !important;
   background-color: #F4F7FF !important;
 }

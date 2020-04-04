@@ -11,11 +11,16 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.persistence.EntityNotFoundException;
+import javax.validation.ConstraintViolationException;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 @Service
@@ -42,8 +47,13 @@ public class UserService implements UserInterface {
                 User user = userRepository.save(converter.converterTo(userDTO));
                 return ResponseEntity.ok().body(converter.converterTo(user));
             }
+
+            //TODO: validação de maioridade
+
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos ");
+        } catch (ConstraintViolationException e) {
+            return ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
         }
     }
 
@@ -56,7 +66,6 @@ public class UserService implements UserInterface {
             return ResponseEntity.badRequest().body("Id do usuário não existe");
         }
     }
-
 
     @Override
     public ResponseEntity findUserById(Long id) {
@@ -97,13 +106,27 @@ public class UserService implements UserInterface {
         try {
             User userEntity = userRepository.getOne(userDTO.getIdUser());
 
-            userEntity.setFirstName(userDTO.getFirstName());
-            userEntity.setLastName(userDTO.getLastName());
-            userEntity.setCpf(userDTO.getCpf());
-            userEntity.setPhone(userDTO.getPhone());
-            userEntity.setBirth(userDTO.getBirth());
-            userEntity.setEmail(userDTO.getEmail());
-            userEntity.setPassword(userDTO.getPassword());
+            if (userDTO.getFirstName() != null) {
+                userEntity.setFirstName(userDTO.getFirstName());
+            }
+            if (userDTO.getLastName() != null) {
+                userEntity.setLastName(userDTO.getLastName());
+            }
+            if (userDTO.getCpf() != null) {
+                userEntity.setCpf(userDTO.getCpf());
+            }
+            if (userDTO.getPhone() != null) {
+                userEntity.setPhone(userDTO.getPhone());
+            }
+            if (userDTO.getBirth() != null) {
+                userEntity.setBirth(userDTO.getBirth());
+            }
+            if (userDTO.getEmail() != null) {
+                userEntity.setEmail(userDTO.getEmail());
+            }
+            if (userDTO.getPassword() != null) {
+                userEntity.setPassword(userDTO.getPassword());
+            }
 
             return ResponseEntity.ok().body(userRepository.save(userEntity));
 
@@ -115,4 +138,5 @@ public class UserService implements UserInterface {
             return ResponseEntity.badRequest().body("Id do usuário não existe");
         }
     }
+
 }

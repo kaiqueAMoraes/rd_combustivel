@@ -12,6 +12,7 @@ import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.validation.ConstraintViolationException;
 import java.util.List;
 
 @Service
@@ -33,6 +34,8 @@ public class CategoryService implements CategoryInterface {
             }
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos ");
+        }  catch (ConstraintViolationException e) {
+            return ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
         }
     }
 
@@ -81,9 +84,11 @@ public class CategoryService implements CategoryInterface {
     public ResponseEntity updateCategory(CategoryDTO categoryDTO) {
         try {
             Category category = categoryRepository.getOne(categoryDTO.getIdCategory());
-            category.setName(categoryDTO.getName());
-            categoryRepository.save(category);
-            return ResponseEntity.ok().body(category);
+
+            if (categoryDTO.getName() != null) {
+                category.setName(categoryDTO.getName());
+            }
+            return ResponseEntity.ok().body(categoryRepository.save(category));
 
         } catch (InvalidDataAccessApiUsageException e) {
             return ResponseEntity.badRequest().body("O Id da categoria não foi informado na requisição");

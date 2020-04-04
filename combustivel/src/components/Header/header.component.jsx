@@ -5,12 +5,15 @@ import './header.styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import CartIcon from './cart-icon/cart-icon.component';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import { connect } from 'react-redux';
 
 
 import {
     Navbar, Container
 } from 'reactstrap'
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 
 const handleSignOut = () => {
@@ -20,7 +23,7 @@ const handleSignOut = () => {
     console.log(sessionStorage.getItem('user'))
 }
 
-const Header = ({ history }) => {
+const Header = ({ history, hidden }) => {
     const currentUser = sessionStorage.getItem('user');
 
     {
@@ -51,10 +54,11 @@ const Header = ({ history }) => {
                             <Link to="/" className="logo"></Link>
                             <div className="d-flex user-bag">
                                 <div className="logged navbar-brand d-flex" id="user">
-                                <CartIcon />
                                     {
                                         currentUser ? (
                                             <>
+                                                
+                                                <Link to="/dashboard"><FontAwesomeIcon icon={faHeart} className="icon-heart" /></Link>
                                                 <Link to="/dashboard"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle" /></Link>
                                                 <div className="user-login d-flex flex-column bd-highlight mb-3 Row" id="div-header-separation">
                                                     <Link to="/dashboard" className="navbar-span user-name" id="ola-navbar" >Olá, {currentUser}</Link>
@@ -62,25 +66,30 @@ const Header = ({ history }) => {
                                                 </div>
                                             </>
                                         ) : (
-                                                <>
+                                            <>
+                                                        <Link to="/login"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle user-mobile" /></Link>
                                                         <Link to="/login">
                                                         <CustomButton
                                                         className="login-button">
                                                             entre
                                                         </CustomButton>
                                                         </Link>
-                                                        <span className="login-span">ou</span>
                                                         <Link to="/cadastro">
                                                         <CustomButton
                                                         className="signin-button">
                                                             cadastre-se
                                                         </CustomButton>
                                                         </Link>
-                                                   
                                                 </>
                                             )
                                     }
+                                <CartIcon />
                                 </div>
+                                {
+                                    hidden ? null : <CartDropdown/>
+                                }
+                            
+
                             </div>
                         </Navbar>
 
@@ -100,17 +109,31 @@ const Header = ({ history }) => {
                                     <li className="ml-4 nav-item mr-4 none">
                                         <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Gás Natural</Link>
                                     </li>
+                                    <li className="ml-4 nav-item mr-4 none">
+                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Carros</Link>
+                                    </li>
+                                    <li className="ml-4 nav-item mr-4 none">
+                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Motos</Link>
+                                    </li>
+                                    <li className="ml-4 nav-item mr-4 none">
+                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Esportivos</Link>
+                                    </li>
+                                    <li className="ml-4 nav-item mr-4 none">
+                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Lorem</Link>
+                                    </li>
                                 </ul>
                             </Container>
                         </Navbar>
                     </>
                 )
+
         )
     }
-
-
-
 }
 
+const mapStateToProps = ({user: {currentUser}, cart : {hidden}}) => ({
+    currentUser,
+    hidden
+});
 
-export default withRouter(Header);
+export default connect(mapStateToProps)(withRouter(Header));

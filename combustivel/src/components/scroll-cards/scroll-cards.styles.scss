@@ -1,0 +1,62 @@
+.scroll-products-container-control {
+    //border: 1px solid red;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    //transition: all 0.5ms;
+    position: relative;
+
+    & div.scroll-products-container {
+        transition: all 10ms ease-out !important;
+        width: 3500px;
+        height: 100%;
+        //display: flex;
+        //gap: 30px;
+        position: relative;
+        //margin-right: 10vw;
+        display: grid;
+        grid-template-columns: repeat(15, 235px);
+        grid-template-rows: 350px;
+    }
+
+}
+.hold{
+    position: relative;
+}
+
+        .btn-before {
+        position: absolute;
+        z-index: 999;
+        top: 32.5%;
+        background-color: #fff;
+        border: none;
+        border-radius:100% ;
+        height: 75px;
+                width: 75px;
+        box-shadow: 0 0 20px #7272724b;
+        left: -36px;
+        
+    }
+            .btn-next:hover {
+                transition: all 50ms ease-in;
+                transform: scale(1.1);
+            }
+
+            .btn-next {
+                position: absolute;
+                z-index: 999;
+                top: 32.5%;
+                background-color: #fff;
+                border: none;
+                border-radius:100% ;
+                height: 75px;
+                width: 75px;
+                box-shadow: 0 0 20px #7272724b;
+                right: -40px;
+                
+            }
+                    .btn-next:hover {
+                        transition: all 50ms ease-in;
+                        transform: scale(1.1);
+                    }
+

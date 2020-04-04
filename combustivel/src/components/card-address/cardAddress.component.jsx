@@ -33,16 +33,12 @@ class CardAddress extends React.Component {
     }
     
     handleDelete = async () => {
+        console.log("deleted")
         const { id } = this.props;
 
-        const config = {
-            params: { "idAdress": id },
-            headers: {
-            'Content-Type': 'application/json;charset=UTF-8',
-            "Access-Control-Allow-Origin": "*",
-        }}
-
-        axios.delete(`http://localhost:8080/delete-address/`,config)
+        await axios.delete(`http://localhost:8080/delete-address/${id}`,).then(
+            window.location.reload()
+        )
     }
 
     render(){

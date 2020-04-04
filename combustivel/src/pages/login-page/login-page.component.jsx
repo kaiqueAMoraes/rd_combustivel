@@ -50,13 +50,10 @@ class LoginPage extends Component {
 
         this.clearMessage();
         // TODO refatorar codigo
-        if (!email && !password) {
-            this.emptyInputErrorMessage("Os campos de email e senha estão vazios")
-        } else if(!email) {
-            this.emptyInputErrorMessage("O campo de email precisa estar preenchido")
-        } else if (!password){
-            this.emptyInputErrorMessage("O campo de senha precisa estar preenchido")
-        }
+        if (!email || !password ) {
+            this.emptyInputErrorMessage("Todos os campos precisam estar preechidos");
+            return null;
+        } 
         else {
             try {
 
@@ -91,7 +88,7 @@ class LoginPage extends Component {
                         <form method="get" onSubmit={this.handleSignIn}>
                             <FormGroup>
                                 <div className="text-container" >
-                                    <h2>Login do cliente</h2>
+                                    <h2>Bem vindo de volta</h2>
                                     <span className="span-signin" >Entre com email e senha</span>
                                 </div>
                                 {this.state.errorMessage ? (<Alert className="m-4" variant='danger'>{this.state.errorMessage}</Alert>) : ""}

@@ -4,6 +4,7 @@ import br.com.rd.Backend.DTOs.*;
 import br.com.rd.Backend.DTOs.ProductDTO;
 
 import br.com.rd.Backend.models.*;
+import org.aspectj.weaver.ast.Or;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -83,14 +84,25 @@ public class Converter {
 
         Order order = new Order();
 
+        order.setIdOrder(orderDTO.getIdOrder());
+        order.setTotalPrice(orderDTO.getTotalPrice());
         order.setIdUser(orderDTO.getIdUser());
         order.setIdAddress(orderDTO.getIdAddress());
-        order.setTotalPrice(orderDTO.getTotalPrice());
         order.setDate(new Date());
 
-        List<OrderItem> listItems = converterTo(orderDTO.getList());
+        List<OrderItem> itemList = new ArrayList<>();
 
-        order.setList(listItems);
+        for (OrderItemDTO orderItemDTO: orderDTO.getItemList()) {
+            OrderItem orderItem = new OrderItem();
+
+            orderItem.setIdOrderItem(orderItemDTO.getIdOrderItem());
+            orderItem.setIdProduct(orderItemDTO.getIdProduct());
+            orderItem.setPrice(orderItemDTO.getPrice());
+            orderItem.setQuantity(orderItemDTO.getQuantity());
+
+            itemList.add(orderItem);
+        }
+        order.setItemList(itemList);
 
         return order;
     }
@@ -99,46 +111,26 @@ public class Converter {
 
         OrderDTO orderDTO = new OrderDTO();
 
+        orderDTO.setIdOrder(order.getIdOrder());
         orderDTO.setIdUser(order.getIdUser());
         orderDTO.setIdAddress(order.getIdAddress());
         orderDTO.setTotalPrice(order.getTotalPrice());
         orderDTO.setDate(new Date());
 
-        List<OrderItemDTO> listItems = convert(order.getList());
+        List<OrderItemDTO> itemList = new ArrayList<>();
+        for (OrderItem orderItem: order.getItemList()) {
+            OrderItemDTO orderItemDTO = new OrderItemDTO();
 
-        orderDTO.setList(listItems);
+            orderItemDTO.setIdOrderItem(orderItem.getIdOrderItem());
+            orderItemDTO.setIdProduct(orderItem.getIdProduct());
+            orderItemDTO.setPrice(orderItem.getPrice());
+            orderItemDTO.setQuantity(orderItem.getQuantity());
+
+            itemList.add(orderItemDTO);
+        }
+        orderDTO.setItemList(itemList);
 
         return orderDTO;
-    }
-
-    public List<OrderItem> converterTo(List<OrderItemDTO> orderItemDTO) {
-
-        List<OrderItem> listItems = new ArrayList<>();
-        for (OrderItemDTO orderItems : orderItemDTO) {
-            OrderItem it = new OrderItem();
-            it.setIdOrderItem(orderItems.getIdOrderItem());
-            it.setQuantity(orderItems.getQuantity());
-            it.setPrice(orderItems.getPrice());
-            it.setIdProduct(orderItems.getIdProduct());
-            listItems.add(it);
-        }
-
-        return listItems;
-    }
-
-    public List<OrderItemDTO> convert(List<OrderItem> orderItem) {
-
-        List<OrderItemDTO> listItems = new ArrayList<>();
-        for (OrderItem orderItems : orderItem) {
-            OrderItemDTO it = new OrderItemDTO();
-            it.setIdOrderItem(orderItems.getIdOrderItem());
-            it.setQuantity(orderItems.getQuantity());
-            it.setPrice(orderItems.getPrice());
-            it.setIdProduct(orderItems.getIdProduct());
-            listItems.add(it);
-        }
-
-        return listItems;
     }
 
     public Product converterTo(ProductDTO productDTO) {
@@ -159,6 +151,7 @@ public class Converter {
 
         ProductDTO productDTO = new ProductDTO();
 
+        productDTO.setIdProduct(product.getIdProduct());
         productDTO.setName(product.getName());
         productDTO.setPrice(product.getPrice());
         productDTO.setImage(product.getImage());
@@ -172,18 +165,14 @@ public class Converter {
     public Category converterTo(CategoryDTO categoryDTO) {
 
         Category category = new Category();
-
         category.setName(categoryDTO.getName());
-
         return category;
     }
 
     public CategoryDTO converterTo(Category category) {
 
         CategoryDTO categoryDTO = new CategoryDTO();
-
         categoryDTO.setName(category.getName());
-
         return categoryDTO;
     }
 }
