@@ -10,9 +10,8 @@ import CadastroPage from './pages/cadastro-page/cadastro.component';
 import CadastroEditPage from './pages/cadastro-edit-page/cadastro-edit-page.component';
 import CreateAddress from './pages/create-address-page/create-address-page.component';
 import DashboardPage from './pages/dashboard-page/dashboard.page';
-//import Product from '../src/components/grid-produto/grid-produto.components';
-import Produto from './components/grid-produto/produto';
 import CheckoutPage from './pages/checkout/checkout.component'
+import Product from './components/grid-produto/new-grid-product';
 
 function App() {
 
@@ -35,7 +34,7 @@ function App() {
         <Route exact path="/dashboard/novo-endereco" component={CreateAddress}/>
         <Route exact path="/dashboard/edit-endereco" component={CreateAddress}/>
         <Route exact path="/dashboard/edit-usuario" component={CadastroEditPage}/>
-        <Route exact path="/produto" component={Produto}/>
+        <Route exact path="/produto" component={Product}/>
         <Route exact path="/checkout" component={CheckoutPage}/>
       </Switch>
     </BrowserRouter>
