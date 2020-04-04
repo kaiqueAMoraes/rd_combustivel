@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router-dom';
 
 
@@ -12,7 +12,7 @@ import CheckoutItem from '../../components/checkout-item/checkout-item.component
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import ScrollCards from '../../components/scroll-cards/scroll-cards.component';
-
+import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
 
 import './checkout.styles.scss';
 
@@ -22,14 +22,13 @@ const handleSubmit = async (items, history, total) => {
         itemList.push({ "idProduct": { "idProduct": item.id }, "quantity": item.quantity })
     })
     const orderInfo = {
-        "itemList" : itemList,
-        "total" : total
+        "itemList": itemList,
+        "total": total
     }
     history.push("/carrinho/checkout", orderInfo);
 }
 
-
-const CheckoutPage = ({ cartItems, total, history}) => (
+const CheckoutPage = ({ cartItems, total, history }) => (
     <>
         <Container>
             <h3>Talvez você goste</h3>
@@ -70,10 +69,12 @@ const CheckoutPage = ({ cartItems, total, history}) => (
                     <div className="cart-distress">
                         Resumo do pedido
                         <div>
-                            <span>{cartItems.length} produtos</span>
+                            <span>
+                                {cartItems.quantity}
+                        produtos</span>
                         </div>
                         <div className="total">
-                            <span>TOTAL : {Intl.NumberFormat('pt-BR',{style:'currency', currency:'BRL'}).format(total)}</span>
+                            <span>TOTAL : {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total)}</span>
                         </div>
 
                         <div className="btn-cart-holder d-flex justify-content-center">
@@ -105,7 +106,7 @@ const CheckoutPage = ({ cartItems, total, history}) => (
 
 const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems,
-    total: selectCartTotal
+    total: selectCartTotal,
 });
 
 export default withRouter(connect(mapStateToProps)(CheckoutPage));

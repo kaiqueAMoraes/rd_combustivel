@@ -8,7 +8,8 @@ import CardAddress from "../../components/card-address/cardAddress.component"
 import Container from 'react-bootstrap/Container';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import Spinner from 'react-bootstrap/Spinner';
-
+import {selectCartItemsCount} from '../../redux/cart/cart.selectors';
+import { connect } from 'react-redux';
 
 
 class CheckoutPageFinal extends React.Component {
@@ -72,7 +73,7 @@ class CheckoutPageFinal extends React.Component {
 
     render() {
         const { total, itemList, frete, address ,loading} = this.state;
-
+        const {itemCount} = this.props
         const { cep, street, city, district, number, complement, state, idAddress } = address;
 
 
@@ -121,7 +122,7 @@ class CheckoutPageFinal extends React.Component {
                                     <p className="p-title-resumo">Resumo do pedido</p>
                                     <div className="total-resumo-a">
                                         <div className="a-qtd-items-e-total">
-                                            <span>{itemList.length > 1 ? (`${itemList.length} produtos`) : (`${itemList.length} produto`)} </span><p>
+                                            <span>{itemCount > 1 ? (`${itemCount} produtos`) : (`${itemCount} produto`)} </span><p>
                                                 {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total)}
                                             </p>
                                         </div>
@@ -160,4 +161,10 @@ class CheckoutPageFinal extends React.Component {
     }
 
 }
-export default withRouter(CheckoutPageFinal)
+
+const mapStateToProps = (state) => ({
+    itemCount : selectCartItemsCount(state)
+});
+
+
+export default withRouter(connect(mapStateToProps)(CheckoutPageFinal))
