@@ -10,30 +10,20 @@ export default function Clientes() {
 
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    api.get('/find-users')
-      .then(response => {
-        setUsers(response.data);
-      })
-  });
+
+  function findClients() {
+        api.get('/find-users')
+          .then(response => {
+            setUsers(response.data);
+          })
+        }
+ 
 
   return (
     <>
       <Header />
-      <button onClick="">Trazer Clientes</button>
-      <header>
-        <ul>
-          {users.map(user => (
-            <li key={user.idUser}>
-              <strong>Nome: </strong>
-              <p>{user.firstName}</p>
-
-              <strong>Sobrenome: </strong>
-              <p>{user.lastName}</p>
-            </li>
-          ))}
-        </ul>
-      </header>
+      <button onClick={() => findClients()}>Trazer Clientes</button>
+      
     </>
   );
 }

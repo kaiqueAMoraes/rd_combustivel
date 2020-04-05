@@ -1,4 +1,11 @@
- .titulo {
+main {
+    margin-top: 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+main .titulo {
     background-color: #ff6b6b; 
     color: white;
     margin-bottom: 5px;
@@ -7,15 +14,16 @@
     border-radius: 5px;
 }   
 
-.container-form-cadastro {
+main .container-form-cadastro {
+    width: 80%;
     display: block;
     align-items: center;
     background-color: rgb(218, 211, 211);
     margin-bottom: 10px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
 
-input{
+input {
     border-radius: 4px;
 }
 

@@ -2,7 +2,7 @@
     display: flex;
     height: 10vh;
     width: 100%;
-    background-color: rgb(255, 251, 251);
+    background-color: rgb(255, 255, 255);
 }
 
 .header-container img {
@@ -30,7 +30,7 @@
 .header-container button {
     position: absolute;
     right: 24px;
-    top: 10px;
+    top: 25px;
     border: 0;
-    background-color: rgb(255, 251, 251);
+    background-color: rgb(255, 255, 255);
 }
