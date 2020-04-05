@@ -19,7 +19,7 @@ const CartDropdown = ({cartItems, history, dispatch}) => {
         }
     </div>
         <CustomButton onClick={() => {
-            history.push('/checkout')
+            history.push('/carrinho')
             dispatch(toggleCartHidden())
             }}>ver carrinho</CustomButton>
 </div>

@@ -3,6 +3,8 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+
 
 import { selectCartItems, selectCartTotal } from '../../redux/cart/cart.selectors';
 import CustomButton from '../../components/custom-button/custom-button.component';
@@ -10,43 +12,23 @@ import CheckoutItem from '../../components/checkout-item/checkout-item.component
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import ScrollCards from '../../components/scroll-cards/scroll-cards.component';
-
+import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
 
 import './checkout.styles.scss';
 
-const handleSubmit = async (items, total) => {
+const handleSubmit = async (items, history, total) => {
     const itemList = [];
     items.map(item => {
         itemList.push({ "idProduct": { "idProduct": item.id }, "quantity": item.quantity })
     })
-    const email = sessionStorage.getItem('email');
-    let userId  = await axios.get('http://localhost:8080/find-user-email/' + email).then(response => {return response.data[0].idUser})
-    let userAddress  = await axios.get(`http://localhost:8080/find-address-byuser/${userId}`).then(response => {return response.data[0].idAddress})
-    const order =
-    {
-        "totalPrice": total,
-        "idUser": {
-            "idUser": userId
-        },
-        "idAddress": {
-            "idAddress": userAddress
-        },
-        "itemList": itemList
+    const orderInfo = {
+        "itemList": itemList,
+        "total": total
     }
-    console.log(order)
-
-    axios.post("http://localhost:8080/create-order", order)
-        .then(response => {
-            if (response.status === 200) {
-                console.log("sucesso ao cadastrar produto")
-            } else {
-                console.log(response.data)
-                //throw new Error(response.data);
-            }
-        })
+    history.push("/carrinho/checkout", orderInfo);
 }
 
-const CheckoutPage = ({ cartItems, total }) => (
+const CheckoutPage = ({ cartItems, total, history }) => (
     <>
         <Container>
             <h3>Talvez você goste</h3>
@@ -87,14 +69,16 @@ const CheckoutPage = ({ cartItems, total }) => (
                     <div className="cart-distress">
                         Resumo do pedido
                         <div>
-                            <span>{cartItems.length} produtos</span>
+                            <span>
+                                {cartItems.quantity}
+                        produtos</span>
                         </div>
                         <div className="total">
-                            <span>TOTAL : {Intl.NumberFormat('pt-BR',{style:'currency', currency:'BRL'}).format(total)}</span>
+                            <span>TOTAL : {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total)}</span>
                         </div>
 
                         <div className="btn-cart-holder d-flex justify-content-center">
-                            <CustomButton onClick={() => handleSubmit(cartItems, total)}>finalizar</CustomButton>
+                            <CustomButton onClick={() => handleSubmit(cartItems, history, total)}>finalizar</CustomButton>
                         </div>
                         <div className="btn-cart-holder d-flex justify-content-center">
                             <Link to="/">Continuar comprando</Link>
@@ -122,7 +106,7 @@ const CheckoutPage = ({ cartItems, total }) => (
 
 const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems,
-    total: selectCartTotal
+    total: selectCartTotal,
 });
 
-export default connect(mapStateToProps)(CheckoutPage);
+export default withRouter(connect(mapStateToProps)(CheckoutPage));

@@ -4,8 +4,6 @@ import {
 
 const selectCart = state => state.cart;
 
-
-
 export const selectCartItems = createSelector(
     [selectCart],
     (cart) => cart.cartItems
@@ -23,7 +21,7 @@ export const selectCartTotal = createSelector(
     cartItems =>
     cartItems.reduce(
         (accumulatedQuantity, cartItem) =>
-        accumulatedQuantity + cartItem.price,
+        accumulatedQuantity + (cartItem.price * cartItem.quantity),
         0
     )
 );

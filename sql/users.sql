@@ -2269,25 +2269,6 @@ insert into tb_user(
                                         password, 
                                         ds_phone)
         values(
-            "1974-2-30", 
-            "60072965337",
-            "Camron.Tillman11@hotmail.com",
-            "Theresia",
-            "F",
-            "Alan", 
-            "100", 
-            "9163355693");
-            
-insert into tb_user(
-                                        dt_birth, 
-                                        ds_cpf,
-                                        ds_email, 
-                                        ds_first_name, 
-                                        ds_gender, 
-                                        ds_last_name, 
-                                        password, 
-                                        ds_phone)
-        values(
             "1953-12-14", 
             "15777299436",
             "Tristian.Hoeger@hotmail.com",

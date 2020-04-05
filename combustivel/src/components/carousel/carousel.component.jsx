@@ -16,15 +16,19 @@ class Carousel extends Component {
         }
     }
 
-
+componentDidMount = () => {
+        setInterval(() => {
+            this.handleCarouselRight();
+        }, 8000);
+    
+}
 
     // HANDLES DO CAROUSEL COMEÇAM AQUI CAROUSEL COMEÇA AQUI
     handleCarouselLeft = () => {
         // LEFT É O STATE "FINAL=0/INITIAL=400" QUE EMPURRA AS "DIVS"
         if (this.state.left !== 0) {
             // A CONTA FOI FEITA USANDO VW(viewport width) POR ISSO TEM QUES ETAR SEMPRE INCREMENTANDO OU DECREMENTANDO 100
-            this.setState({ left: this.state.left -= 100 },
-                () => { console.log(this.state.left) })
+            this.setState({ left: this.state.left -= 100 })
         }
         // CHEGANDO A ZERO ELE RESETA AO INITIAL STATE
         if (this.state.left === 0) {
@@ -36,19 +40,20 @@ class Carousel extends Component {
 
     // scroll para a direita do carousel ---> ///
     handleCarouselRight = () => {
-        this.setState({ left: this.state.left += 100 },
-            () => { console.log(this.state.left) })
+        this.setState({ left: this.state.left += 100 })
 
         if (this.state.left === 500) {
             this.setState({ left: 100 }
             )
         }
     }
+
     // scroll para a direita do carousel ---> termina aqui ///
     render() {
         const left = {
             right: `${this.state.left}vw`,
         }
+       
         return (
             <>
                 {/* CAROUSEL ===> TO CREATE COMPONENT */}

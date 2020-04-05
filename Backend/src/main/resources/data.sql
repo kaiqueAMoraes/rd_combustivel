@@ -1,3 +1,2395 @@
+ALTER DATABASE
+    db_ecommerce
+    CHARACTER SET = utf8mb4
+    COLLATE = utf8mb4_unicode_ci;
+
+ALTER TABLE
+    tb_address
+    CONVERT TO CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+ALTER TABLE
+    tb_category
+    CONVERT TO CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+ALTER TABLE
+    tb_order
+    CONVERT TO CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+ALTER TABLE
+    tb_order_item
+    CONVERT TO CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+ALTER TABLE
+    tb_product
+    CONVERT TO CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+ALTER TABLE
+    tb_user
+    CONVERT TO CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1967-3-17",
+            "7145136711",
+            "Tobin.Goldner@gmail.com",
+            "Euna",
+            "M",
+            "Dianna",
+            "386",
+            "2638297582");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1994-3-29",
+            "97553744283",
+            "Aracely.Reichel38@hotmail.com",
+            "Quincy",
+            "M",
+            "Jan",
+            "841",
+            "3303535628");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1982-3-28",
+            "47409547492",
+            "Quinn_Schimmel0@gmail.com",
+            "Alba",
+            "M",
+            "Clovis",
+            "814",
+            "1569714780");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1994-1-28",
+            "13517641602",
+            "Noah.Kozey58@gmail.com",
+            "Catalina",
+            "F",
+            "Annabel",
+            "237",
+            "7070758894");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1971-1-11",
+            "19751375168",
+            "Alvis.Ondricka@hotmail.com",
+            "Khalid",
+            "F",
+            "Alexander",
+            "473",
+            "735983518");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1951-6-25",
+            "43181213038",
+            "Hulda_Roob52@yahoo.com",
+            "Brigitte",
+            "F",
+            "Edwardo",
+            "1159",
+            "7503592659");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1947-12-14",
+            "13743003900",
+            "Jamir_Spencer@hotmail.com",
+            "Keira",
+            "M",
+            "Monica",
+            "551",
+            "2397630181");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1993-11-28",
+            "37690758449",
+            "Grayce_Lesch@gmail.com",
+            "Tristin",
+            "M",
+            "Novella",
+            "493",
+            "9535091383");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1997-5-24",
+            "30617071059",
+            "Miller.Reilly@yahoo.com",
+            "Alexis",
+            "F",
+            "Easter",
+            "111",
+            "3776382252");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1955-6-10",
+            "68322516628",
+            "Ardella.Cassin12@yahoo.com",
+            "Camden",
+            "M",
+            "Kristofer",
+            "480",
+            "11297770908");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1993-5-3",
+            "96663120854",
+            "Leonie.Nienow46@gmail.com",
+            "Dan",
+            "M",
+            "Kaleb",
+            "1012",
+            "8068354167");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1987-7-20",
+            "36956623173",
+            "Willow_Zulauf@yahoo.com",
+            "Zora",
+            "M",
+            "Eleanora",
+            "714",
+            "8756403800");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1985-12-8",
+            "26071720500",
+            "Claudine_Hackett@yahoo.com",
+            "Connie",
+            "F",
+            "Lorena",
+            "227",
+            "6946619066");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1942-8-27",
+            "2485808171",
+            "Seth.Mertz2@gmail.com",
+            "Ebba",
+            "F",
+            "Lilian",
+            "1151",
+            "11773023303");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1984-4-19",
+            "23284626891",
+            "Marquis_Auer@yahoo.com",
+            "Enos",
+            "F",
+            "Nora",
+            "209",
+            "7069103172");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1953-6-12",
+            "38950042054",
+            "Ari_Macejkovic80@hotmail.com",
+            "Milo",
+            "F",
+            "Kaylin",
+            "362",
+            "7896412974");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1997-9-11",
+            "90554036642",
+            "Grover.Schulist78@hotmail.com",
+            "Shanel",
+            "F",
+            "Reagan",
+            "921",
+            "2630606255");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1986-4-19",
+            "3994790674",
+            "Ari.Crist@gmail.com",
+            "Maida",
+            "M",
+            "Hester",
+            "817",
+            "7655413697");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1940-4-28",
+            "83551986818",
+            "Larissa5@gmail.com",
+            "Amalia",
+            "F",
+            "Ivah",
+            "719",
+            "9756611980");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1987-3-23",
+            "36214263294",
+            "Dorothea_Morar89@yahoo.com",
+            "Vena",
+            "F",
+            "Jaycee",
+            "335",
+            "11325112796");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1949-9-17",
+            "80425599100",
+            "Kaci67@hotmail.com",
+            "Nannie",
+            "M",
+            "Trycia",
+            "890",
+            "5466382023");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1974-1-4",
+            "16041960474",
+            "Chesley_Crooks44@gmail.com",
+            "Aryanna",
+            "M",
+            "Liana",
+            "1054",
+            "4480803463");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1965-11-10",
+            "23638151818",
+            "Samir69@yahoo.com",
+            "Vidal",
+            "F",
+            "Albertha",
+            "520",
+            "8495225977");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1967-9-9",
+            "14377638744",
+            "Maddison.Trantow@yahoo.com",
+            "Laisha",
+            "M",
+            "Chet",
+            "395",
+            "7915303791");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1976-11-12",
+            "96177399065",
+            "Gavin.Stracke@yahoo.com",
+            "Michelle",
+            "M",
+            "Deshaun",
+            "71",
+            "9924613240");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1959-1-30",
+            "49476090725",
+            "Leonie26@hotmail.com",
+            "Alba",
+            "F",
+            "Merl",
+            "471",
+            "5421444911");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1978-10-24",
+            "39773721504",
+            "Lukas56@gmail.com",
+            "Albertha",
+            "M",
+            "Alexandrea",
+            "790",
+            "4468149315");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1993-6-3",
+            "78990135365",
+            "Pete.Lowe79@hotmail.com",
+            "Woodrow",
+            "M",
+            "Jordi",
+            "392",
+            "9992543673");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1952-7-2",
+            "33390270126",
+            "Stacy32@gmail.com",
+            "Jonathan",
+            "F",
+            "Ramon",
+            "612",
+            "928840795");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1992-6-6",
+            "40849548438",
+            "Brianne.Swaniawski11@yahoo.com",
+            "Newton",
+            "F",
+            "Fidel",
+            "896",
+            "3142402768");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1943-4-9",
+            "84743281500",
+            "Minerva.Windler@yahoo.com",
+            "Leatha",
+            "M",
+            "Kim",
+            "850",
+            "6089895713");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1940-12-26",
+            "24351786007",
+            "Cara.Keebler@yahoo.com",
+            "Elmer",
+            "M",
+            "Keara",
+            "82",
+            "7115734303");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1999-3-31",
+            "19169873511",
+            "Jarrod.Abshire@gmail.com",
+            "Justen",
+            "F",
+            "Kacey",
+            "95",
+            "2846521175");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1954-1-3",
+            "3975756047",
+            "Marie.Muller44@yahoo.com",
+            "Carley",
+            "M",
+            "Agustina",
+            "372",
+            "940369835");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1954-1-15",
+            "68458247394",
+            "Ulises13@gmail.com",
+            "Katlynn",
+            "M",
+            "Niko",
+            "490",
+            "10351961690");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1953-2-3",
+            "49952166620",
+            "Yolanda.Hammes49@yahoo.com",
+            "Lysanne",
+            "M",
+            "Vinnie",
+            "584",
+            "7468334407");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1943-3-19",
+            "40306251449",
+            "Newton.Graham@hotmail.com",
+            "Eriberto",
+            "M",
+            "Susie",
+            "595",
+            "9597077708");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1952-12-25",
+            "42031934368",
+            "Anabel46@gmail.com",
+            "Conrad",
+            "M",
+            "Neha",
+            "708",
+            "5253756565");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1988-10-16",
+            "81919520394",
+            "Name.Satterfield26@gmail.com",
+            "Stephania",
+            "F",
+            "Nikko",
+            "144",
+            "6479381614");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1961-11-25",
+            "23820659029",
+            "Johann_Leannon@yahoo.com",
+            "Jamir",
+            "M",
+            "Gina",
+            "241",
+            "3664120160");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1951-11-24",
+            "13681020005",
+            "Aurelia.Fahey@hotmail.com",
+            "Greyson",
+            "F",
+            "Lydia",
+            "63",
+            "6785221206");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1948-10-5",
+            "64130402286",
+            "Raleigh.Lebsack@hotmail.com",
+            "Rhea",
+            "M",
+            "Elouise",
+            "1032",
+            "5991667991");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1996-9-18",
+            "14279491221",
+            "Anita_Kohler33@gmail.com",
+            "Rosemarie",
+            "M",
+            "Breanne",
+            "411",
+            "2818840596");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1986-7-1",
+            "54421075992",
+            "Gage.Grimes42@gmail.com",
+            "Audrey",
+            "M",
+            "Marianna",
+            "85",
+            "11833702845");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1967-12-7",
+            "84217618475",
+            "Penelope52@yahoo.com",
+            "Amir",
+            "M",
+            "Candelario",
+            "1227",
+            "3645956374");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1961-4-9",
+            "30684000137",
+            "Ryley.Bechtelar@gmail.com",
+            "Zaria",
+            "M",
+            "Adaline",
+            "671",
+            "761912427");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1997-9-2",
+            "57853509206",
+            "Tiara.Sauer26@hotmail.com",
+            "Watson",
+            "F",
+            "Marianne",
+            "435",
+            "11139536630");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1944-12-26",
+            "4909282340",
+            "Suzanne_King@gmail.com",
+            "Chance",
+            "M",
+            "Roslyn",
+            "1148",
+            "1399362400");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1960-10-20",
+            "5642072041",
+            "Anderson20@gmail.com",
+            "Karlee",
+            "M",
+            "Abigail",
+            "132",
+            "8241771846");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1961-8-8",
+            "44177709380",
+            "Ansley72@hotmail.com",
+            "Laurianne",
+            "M",
+            "Gerardo",
+            "940",
+            "8142763009");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1979-8-31",
+            "87042107479",
+            "Tressie_Bashirian@hotmail.com",
+            "Rosie",
+            "M",
+            "Triston",
+            "523",
+            "6775246820");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1992-1-30",
+            "97586700692",
+            "Casimer_Huels@gmail.com",
+            "Frankie",
+            "M",
+            "Dashawn",
+            "73",
+            "2345804580");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1952-2-17",
+            "42081765457",
+            "Claude.Jones@hotmail.com",
+            "Marty",
+            "M",
+            "Timmothy",
+            "1207",
+            "9752617252");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1984-8-15",
+            "73818105622",
+            "Winfield24@gmail.com",
+            "Kacie",
+            "M",
+            "Asa",
+            "320",
+            "4993134085");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1967-2-22",
+            "8615493611",
+            "Brenna.Bosco@yahoo.com",
+            "Emmett",
+            "M",
+            "Zella",
+            "529",
+            "4282215175");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1982-1-4",
+            "71559714782",
+            "Juana_Walsh67@hotmail.com",
+            "Rafaela",
+            "M",
+            "Edwin",
+            "173",
+            "749815346");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1983-8-2",
+            "40364156872",
+            "Kyler.Towne@hotmail.com",
+            "Marcia",
+            "M",
+            "Earnest",
+            "1167",
+            "8381483861");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1980-3-18",
+            "54472407489",
+            "Nichole.Ruecker@hotmail.com",
+            "Conner",
+            "M",
+            "Grayce",
+            "508",
+            "7055383561");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1984-2-17",
+            "89995865384",
+            "Jarrell_Johns@yahoo.com",
+            "Izaiah",
+            "M",
+            "Melody",
+            "1144",
+            "440250526");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1952-12-28",
+            "80646285065",
+            "Elfrieda79@yahoo.com",
+            "Kasey",
+            "M",
+            "Kaylee",
+            "210",
+            "7262589426");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1996-10-26",
+            "59356317995",
+            "Madisen70@gmail.com",
+            "Marion",
+            "F",
+            "Lewis",
+            "205",
+            "4342205864");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1967-7-31",
+            "28544451436",
+            "Deja.Braun@hotmail.com",
+            "Geovanny",
+            "M",
+            "Olen",
+            "1199",
+            "7198711607");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1947-11-15",
+            "12397544132",
+            "Joany_Cummings21@hotmail.com",
+            "Alia",
+            "M",
+            "Keon",
+            "489",
+            "6910001752");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1996-9-19",
+            "32335859537",
+            "Edd.Romaguera60@gmail.com",
+            "Odessa",
+            "F",
+            "Joyce",
+            "478",
+            "11511208662");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1955-3-27",
+            "2333422657",
+            "Janae_Kulas75@gmail.com",
+            "Jakob",
+            "F",
+            "Pinkie",
+            "852",
+            "8776233410");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1943-9-13",
+            "95095858699",
+            "Lula_Kovacek7@yahoo.com",
+            "Brent",
+            "M",
+            "Morgan",
+            "107",
+            "8241479597");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1960-1-23",
+            "56261409237",
+            "Marcelino_Wolff23@yahoo.com",
+            "Taylor",
+            "M",
+            "Lexie",
+            "45",
+            "7071245815");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1984-5-23",
+            "15078818751",
+            "Gregory_Koelpin52@hotmail.com",
+            "Marisol",
+            "F",
+            "Katherine",
+            "864",
+            "1768454091");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1953-11-25",
+            "40212436369",
+            "Stephon.Gutkowski97@gmail.com",
+            "Gladys",
+            "F",
+            "Bertrand",
+            "206",
+            "10842063638");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1943-7-24",
+            "23883737297",
+            "Tracey19@yahoo.com",
+            "Kasandra",
+            "M",
+            "Jimmy",
+            "572",
+            "6259287731");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1980-5-11",
+            "70280325436",
+            "Audrey.Balistreri@hotmail.com",
+            "Neil",
+            "F",
+            "Samanta",
+            "8",
+            "4234451883");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1979-10-24",
+            "11521514761",
+            "Gina3@yahoo.com",
+            "Savion",
+            "M",
+            "Addie",
+            "519",
+            "3781099671");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1992-4-10",
+            "33769647800",
+            "Bradley.Kuhlman@gmail.com",
+            "Dolly",
+            "M",
+            "Brandon",
+            "895",
+            "5030189836");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1986-3-14",
+            "54013104480",
+            "Dale56@gmail.com",
+            "Lesley",
+            "M",
+            "Sierra",
+            "815",
+            "2609672024");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1942-2-3",
+            "97286918945",
+            "Triston.Gorczany87@hotmail.com",
+            "Raheem",
+            "M",
+            "Ethan",
+            "66",
+            "9461252951");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1993-9-6",
+            "47244186652",
+            "Beulah_Bauch@yahoo.com",
+            "Beryl",
+            "M",
+            "Lucinda",
+            "380",
+            "1394922140");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1999-4-15",
+            "3741793939",
+            "Phoebe_Hahn59@gmail.com",
+            "Mia",
+            "M",
+            "Gloria",
+            "753",
+            "11222606437");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1985-11-30",
+            "92280779150",
+            "Zander.Moore@gmail.com",
+            "Elva",
+            "M",
+            "Dianna",
+            "244",
+            "8638451275");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1960-4-8",
+            "53670820081",
+            "Reuben.Feeney48@hotmail.com",
+            "Jaleel",
+            "F",
+            "Millie",
+            "759",
+            "10190500354");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1988-11-14",
+            "91680716956",
+            "Clay.Stokes@yahoo.com",
+            "Willie",
+            "F",
+            "Delilah",
+            "797",
+            "8654385765");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1966-1-24",
+            "79229048499",
+            "Raphael.Halvorson35@yahoo.com",
+            "Katrina",
+            "M",
+            "Hosea",
+            "88",
+            "8378153529");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1977-11-16",
+            "77468431764",
+            "Scotty_Kozey@hotmail.com",
+            "Caitlyn",
+            "F",
+            "Claudia",
+            "372",
+            "11321471418");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1978-1-29",
+            "41790568712",
+            "Nora46@yahoo.com",
+            "Simone",
+            "F",
+            "Makayla",
+            "185",
+            "8371742511");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1943-9-23",
+            "98181088082",
+            "Freddy.Smitham87@hotmail.com",
+            "Mackenzie",
+            "F",
+            "Mathilde",
+            "8",
+            "4863683466");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1960-7-15",
+            "70393290929",
+            "Elwyn84@yahoo.com",
+            "Ophelia",
+            "F",
+            "Amari",
+            "914",
+            "6861110555");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1982-2-12",
+            "5116147571",
+            "Mason_Bosco@hotmail.com",
+            "Marty",
+            "F",
+            "Erica",
+            "257",
+            "9279082015");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1999-5-10",
+            "22008358663",
+            "Coralie10@yahoo.com",
+            "Sydni",
+            "F",
+            "Aryanna",
+            "582",
+            "9603673445");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1954-12-1",
+            "63610233785",
+            "Roslyn.Wilkinson31@gmail.com",
+            "Albertha",
+            "M",
+            "Tania",
+            "1113",
+            "2856509886");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1988-12-29",
+            "74895341251",
+            "Ora_Christiansen95@hotmail.com",
+            "Jeremy",
+            "M",
+            "Glenna",
+            "458",
+            "1706578583");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1973-7-22",
+            "93845410854",
+            "Jacinto_Bartoletti@gmail.com",
+            "Maria",
+            "F",
+            "Jalyn",
+            "377",
+            "7177783358");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1986-9-16",
+            "5329928104",
+            "Brendan20@hotmail.com",
+            "Eduardo",
+            "F",
+            "Enrique",
+            "621",
+            "5553962110");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1950-4-28",
+            "17556957853",
+            "Yazmin.Streich@hotmail.com",
+            "Ulices",
+            "F",
+            "Jan",
+            "1041",
+            "5893095005");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1958-1-29",
+            "35698599857",
+            "Foster.Hirthe@gmail.com",
+            "Coby",
+            "M",
+            "Mabelle",
+            "824",
+            "1221530238");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1990-5-4",
+            "58124475018",
+            "Torey.Hamill68@hotmail.com",
+            "Carolina",
+            "M",
+            "Kari",
+            "751",
+            "1126011935");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1949-11-9",
+            "67459466401",
+            "Carleton40@yahoo.com",
+            "Braulio",
+            "M",
+            "Julie",
+            "6",
+            "1827361422");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1962-3-8",
+            "20788938389",
+            "Francis.Macejkovic@gmail.com",
+            "Jolie",
+            "M",
+            "Mark",
+            "199",
+            "6354417264");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1970-4-17",
+            "1827804883",
+            "Braden_Morar34@hotmail.com",
+            "Magdalen",
+            "M",
+            "Mariano",
+            "1074",
+            "1418010170");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1976-12-18",
+            "32954284967",
+            "Lenny61@gmail.com",
+            "Aisha",
+            "M",
+            "Leonie",
+            "85",
+            "4977823834");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1991-2-11",
+            "30110353115",
+            "Ivah.Kiehn@gmail.com",
+            "Camille",
+            "M",
+            "Kaycee",
+            "437",
+            "5717593003");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1957-5-30",
+            "37191623845",
+            "Laisha.Kunze18@gmail.com",
+            "Jamarcus",
+            "M",
+            "Sunny",
+            "861",
+            "699150717");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1944-10-15",
+            "17282242840",
+            "Davion_Trantow@hotmail.com",
+            "Doyle",
+            "F",
+            "Ezequiel",
+            "464",
+            "2647618688");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1970-4-22",
+            "25590776698",
+            "Elyse56@yahoo.com",
+            "Alec",
+            "F",
+            "Antonina",
+            "867",
+            "9090723040");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1972-12-23",
+            "24275193386",
+            "Candido_Cruickshank31@hotmail.com",
+            "Chad",
+            "M",
+            "Arvid",
+            "1154",
+            "1322625992");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1967-8-30",
+            "44330986449",
+            "Kaleb74@gmail.com",
+            "Francesco",
+            "M",
+            "Jermey",
+            "366",
+            "168754602");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1983-10-2",
+            "64816105528",
+            "Donna.Shields@hotmail.com",
+            "Delaney",
+            "M",
+            "Mack",
+            "989",
+            "7453729474");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1948-1-13",
+            "49613897269",
+            "Shana45@hotmail.com",
+            "Humberto",
+            "M",
+            "Judy",
+            "1133",
+            "10322565257");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1964-8-1",
+            "76920997584",
+            "Claude87@gmail.com",
+            "Sheldon",
+            "F",
+            "John",
+            "437",
+            "11759354425");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1978-6-28",
+            "78975304728",
+            "Gabriella.Olson@gmail.com",
+            "Cordia",
+            "M",
+            "Garret",
+            "690",
+            "10005203920");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1941-8-12",
+            "62112605501",
+            "Hal57@gmail.com",
+            "Mitchell",
+            "M",
+            "Lydia",
+            "825",
+            "5730975634");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1960-7-23",
+            "65856817574",
+            "Orlando_Wiza@yahoo.com",
+            "Melba",
+            "M",
+            "Cortez",
+            "699",
+            "8806589255");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1995-12-6",
+            "51776817231",
+            "Shayna54@hotmail.com",
+            "Gladys",
+            "F",
+            "Leslie",
+            "1217",
+            "3734168353");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1994-3-26",
+            "97618577419",
+            "Dejah.Metz@yahoo.com",
+            "Efrain",
+            "M",
+            "Doug",
+            "506",
+            "2799502473");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1997-3-11",
+            "12889404688",
+            "Giuseppe_Durgan@hotmail.com",
+            "Lyla",
+            "M",
+            "Tom",
+            "19",
+            "10549663033");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1968-2-14",
+            "38284283387",
+            "Garry.Swaniawski@gmail.com",
+            "Kayley",
+            "F",
+            "Seth",
+            "30",
+            "2652260365");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1988-4-2",
+            "41644851933",
+            "Edyth_Fritsch73@yahoo.com",
+            "Nikolas",
+            "M",
+            "Faye",
+            "796",
+            "11627359539");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1988-2-28",
+            "6700972677",
+            "Joseph.Heaney@gmail.com",
+            "Will",
+            "F",
+            "Vernice",
+            "706",
+            "4709294926");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1975-9-19",
+            "55563802854",
+            "Jude_Koepp39@hotmail.com",
+            "Valentina",
+            "M",
+            "Enola",
+            "666",
+            "2954047671");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1949-11-12",
+            "74364738119",
+            "Devan.Mueller68@yahoo.com",
+            "Sylvan",
+            "M",
+            "Rose",
+            "299",
+            "8284326978");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1993-11-28",
+            "71730497316",
+            "Hipolito_Leffler@gmail.com",
+            "Timmothy",
+            "M",
+            "Jessie",
+            "800",
+            "7152764123");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1953-12-14",
+            "15777299436",
+            "Tristian.Hoeger@hotmail.com",
+            "Yasmeen",
+            "M",
+            "Emma",
+            "245",
+            "872269523");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1975-12-6",
+            "89548517297",
+            "Lelia_Wuckert@yahoo.com",
+            "Orville",
+            "M",
+            "Darrell",
+            "211",
+            "3553107691");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1986-10-5",
+            "64782551769",
+            "Lorna.Torp@yahoo.com",
+            "Else",
+            "F",
+            "Brooks",
+            "301",
+            "3073277880");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1942-2-26",
+            "46875738631",
+            "Melany_McGlynn46@gmail.com",
+            "Mina",
+            "M",
+            "Idella",
+            "620",
+            "793830974");
+
+insert into tb_user(
+                                        dt_birth,
+                                        ds_cpf,
+                                        ds_email,
+                                        ds_first_name,
+                                        ds_gender,
+                                        ds_last_name,
+                                        password,
+                                        ds_phone)
+        values(
+            "1951-6-10",
+            "38640736229",
+            "Melody.Hagenes@gmail.com",
+            "Wanda",
+            "F",
+            "Arielle",
+            "193",
+            "11904020986");
+
 insert into tb_address(
             cep,
             ds_city,
@@ -18,7 +2410,7 @@ insert into tb_address(
     "19018 Oral Village",
     "87"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -39,7 +2431,7 @@ insert into tb_address(
     "0834 Legros Parkway",
     "16"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -60,7 +2452,7 @@ insert into tb_address(
     "42101 Isabelle Points",
     "32"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -81,7 +2473,7 @@ insert into tb_address(
     "65109 Deron Springs",
     "122"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -102,7 +2494,7 @@ insert into tb_address(
     "33060 Boehm Roads",
     "7"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -123,7 +2515,7 @@ insert into tb_address(
     "7896 Daniel Stravenue",
     "51"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -144,7 +2536,7 @@ insert into tb_address(
     "159 Jacobs Flat",
     "60"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -165,7 +2557,7 @@ insert into tb_address(
     "1115 Runolfsson Green",
     "3"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -186,7 +2578,7 @@ insert into tb_address(
     "544 Santino Village",
     "33"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -207,7 +2599,7 @@ insert into tb_address(
     "29164 Gusikowski Expressway",
     "119"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -228,7 +2620,7 @@ insert into tb_address(
     "99406 Warren Orchard",
     "53"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -249,7 +2641,7 @@ insert into tb_address(
     "8620 Pacocha Passage",
     "87"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -270,7 +2662,7 @@ insert into tb_address(
     "19850 Israel Haven",
     "2"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -291,7 +2683,7 @@ insert into tb_address(
     "96717 Kassulke Circle",
     "74"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -312,7 +2704,7 @@ insert into tb_address(
     "9597 Mosciski Burgs",
     "87"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -333,7 +2725,7 @@ insert into tb_address(
     "2468 Wilkinson Underpass",
     "106"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -354,7 +2746,7 @@ insert into tb_address(
     "7082 Braun Locks",
     "88"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -375,7 +2767,7 @@ insert into tb_address(
     "656 Emerson Mission",
     "47"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -396,7 +2788,7 @@ insert into tb_address(
     "8960 Abner Bridge",
     "85"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -417,7 +2809,7 @@ insert into tb_address(
     "597 Kiehn Islands",
     "75"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -438,7 +2830,7 @@ insert into tb_address(
     "3416 Strosin Turnpike",
     "83"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -459,7 +2851,7 @@ insert into tb_address(
     "913 Caleb Freeway",
     "99"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -480,7 +2872,7 @@ insert into tb_address(
     "06030 Schowalter Avenue",
     "16"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -501,7 +2893,7 @@ insert into tb_address(
     "51790 Runte Lodge",
     "103"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -522,7 +2914,7 @@ insert into tb_address(
     "2466 Triston Cliff",
     "101"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -543,7 +2935,7 @@ insert into tb_address(
     "777 Winnifred Fall",
     "2"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -564,7 +2956,7 @@ insert into tb_address(
     "0823 Rowe Court",
     "98"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -585,7 +2977,7 @@ insert into tb_address(
     "0091 McClure Cape",
     "19"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -606,7 +2998,7 @@ insert into tb_address(
     "50163 Ward Crossroad",
     "89"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -627,7 +3019,7 @@ insert into tb_address(
     "68046 Jesse Rapids",
     "76"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -648,7 +3040,7 @@ insert into tb_address(
     "77939 Martin Overpass",
     "25"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -669,7 +3061,7 @@ insert into tb_address(
     "523 Hyatt Wall",
     "85"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -690,7 +3082,7 @@ insert into tb_address(
     "7068 Velva Oval",
     "117"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -711,7 +3103,7 @@ insert into tb_address(
     "03078 Walter Crest",
     "4"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -732,7 +3124,7 @@ insert into tb_address(
     "28450 Cristobal Mews",
     "39"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -753,7 +3145,7 @@ insert into tb_address(
     "08508 Sporer Bypass",
     "114"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -774,7 +3166,7 @@ insert into tb_address(
     "81614 Micaela Trail",
     "99"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -795,7 +3187,7 @@ insert into tb_address(
     "429 Zemlak Village",
     "104"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -816,7 +3208,7 @@ insert into tb_address(
     "67679 Gutkowski Parkway",
     "92"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -837,7 +3229,7 @@ insert into tb_address(
     "902 Bertrand Shore",
     "20"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -858,7 +3250,7 @@ insert into tb_address(
     "40127 Janie Dale",
     "107"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -879,7 +3271,7 @@ insert into tb_address(
     "18295 Langworth Vista",
     "46"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -900,7 +3292,7 @@ insert into tb_address(
     "68921 Brianne Cove",
     "97"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -921,7 +3313,7 @@ insert into tb_address(
     "913 Bartoletti Rapid",
     "103"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -942,7 +3334,7 @@ insert into tb_address(
     "828 Vidal Tunnel",
     "109"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -963,7 +3355,7 @@ insert into tb_address(
     "785 Rebeka Drive",
     "104"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -984,7 +3376,7 @@ insert into tb_address(
     "60573 Khalil Bridge",
     "48"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1005,7 +3397,7 @@ insert into tb_address(
     "299 Miracle Port",
     "85"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1026,7 +3418,7 @@ insert into tb_address(
     "9488 Dicki Trail",
     "49"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1047,7 +3439,7 @@ insert into tb_address(
     "7859 Lucy Plaza",
     "106"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1068,7 +3460,7 @@ insert into tb_address(
     "306 Dedrick Viaduct",
     "116"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1089,7 +3481,7 @@ insert into tb_address(
     "363 Shields Spur",
     "17"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1110,7 +3502,7 @@ insert into tb_address(
     "22868 Freida Expressway",
     "41"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1131,7 +3523,7 @@ insert into tb_address(
     "742 Albertha Wall",
     "79"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1152,7 +3544,7 @@ insert into tb_address(
     "3454 Grover Hills",
     "92"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1173,7 +3565,7 @@ insert into tb_address(
     "930 Chris Views",
     "118"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1194,7 +3586,7 @@ insert into tb_address(
     "2087 Cassandra Villages",
     "61"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1215,7 +3607,7 @@ insert into tb_address(
     "11886 Kihn Creek",
     "100"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1236,7 +3628,7 @@ insert into tb_address(
     "072 Nicklaus Greens",
     "82"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1257,7 +3649,7 @@ insert into tb_address(
     "159 Laney Island",
     "112"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1278,7 +3670,7 @@ insert into tb_address(
     "6454 Littel Stream",
     "6"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1299,7 +3691,7 @@ insert into tb_address(
     "063 Dylan Junctions",
     "47"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1320,7 +3712,7 @@ insert into tb_address(
     "750 Clinton Radial",
     "87"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1341,7 +3733,7 @@ insert into tb_address(
     "765 Toni Isle",
     "100"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1362,7 +3754,7 @@ insert into tb_address(
     "6098 Rowland Vista",
     "13"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1383,7 +3775,7 @@ insert into tb_address(
     "832 Terrance Plaza",
     "38"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1404,7 +3796,7 @@ insert into tb_address(
     "91257 Aufderhar Harbors",
     "122"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1425,7 +3817,7 @@ insert into tb_address(
     "1111 Grimes Extensions",
     "6"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1446,7 +3838,7 @@ insert into tb_address(
     "41670 Lubowitz Port",
     "121"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1467,7 +3859,7 @@ insert into tb_address(
     "86692 Virgil Dale",
     "60"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1488,7 +3880,7 @@ insert into tb_address(
     "72471 Collier Summit",
     "15"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1509,7 +3901,7 @@ insert into tb_address(
     "1758 Catharine Pine",
     "62"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1530,7 +3922,7 @@ insert into tb_address(
     "686 Nakia Points",
     "105"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1551,7 +3943,7 @@ insert into tb_address(
     "57535 Hamill Manors",
     "122"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1572,7 +3964,7 @@ insert into tb_address(
     "5312 Roslyn Vista",
     "31"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1593,7 +3985,7 @@ insert into tb_address(
     "3865 Howe Glens",
     "122"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1614,7 +4006,7 @@ insert into tb_address(
     "98201 Bradtke Port",
     "37"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1635,7 +4027,7 @@ insert into tb_address(
     "560 Sally Canyon",
     "63"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1656,7 +4048,7 @@ insert into tb_address(
     "6855 Rashad Loop",
     "83"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1677,7 +4069,7 @@ insert into tb_address(
     "194 Jadyn Shoals",
     "2"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1698,7 +4090,7 @@ insert into tb_address(
     "446 Blanda Club",
     "89"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1719,7 +4111,7 @@ insert into tb_address(
     "975 Berge Freeway",
     "78"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1740,7 +4132,7 @@ insert into tb_address(
     "09610 Ulises Dam",
     "95"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1761,7 +4153,7 @@ insert into tb_address(
     "213 Larkin Ferry",
     "31"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1782,7 +4174,7 @@ insert into tb_address(
     "793 Howell Ridge",
     "16"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1803,7 +4195,7 @@ insert into tb_address(
     "777 Willms Parkways",
     "83"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1824,7 +4216,7 @@ insert into tb_address(
     "174 Johan Harbor",
     "95"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1845,7 +4237,7 @@ insert into tb_address(
     "130 Marquise Crossing",
     "25"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1866,7 +4258,7 @@ insert into tb_address(
     "649 Ilene Coves",
     "79"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1887,7 +4279,7 @@ insert into tb_address(
     "24600 Jennyfer Ramp",
     "3"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1908,7 +4300,7 @@ insert into tb_address(
     "334 Cummings Ferry",
     "48"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1929,7 +4321,7 @@ insert into tb_address(
     "220 Willms Centers",
     "61"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1950,7 +4342,7 @@ insert into tb_address(
     "35364 Justyn Coves",
     "88"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1971,7 +4363,7 @@ insert into tb_address(
     "776 Kellen Road",
     "114"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -1992,7 +4384,7 @@ insert into tb_address(
     "954 Carroll Camp",
     "84"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2013,7 +4405,7 @@ insert into tb_address(
     "9744 Yost Stream",
     "65"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2034,7 +4426,7 @@ insert into tb_address(
     "57871 Harvey Station",
     "56"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2055,7 +4447,7 @@ insert into tb_address(
     "631 Zboncak Road",
     "117"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2076,7 +4468,7 @@ insert into tb_address(
     "2279 Glover Locks",
     "45"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2097,7 +4489,7 @@ insert into tb_address(
     "9792 Sarina Squares",
     "58"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2118,7 +4510,7 @@ insert into tb_address(
     "3008 Kessler Run",
     "99"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2139,7 +4531,7 @@ insert into tb_address(
     "230 Rutherford Crest",
     "118"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2160,7 +4552,7 @@ insert into tb_address(
     "819 Luis Ranch",
     "24"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2181,7 +4573,7 @@ insert into tb_address(
     "079 Asha Point",
     "112"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2202,7 +4594,7 @@ insert into tb_address(
     "1149 Xander Orchard",
     "100"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2223,7 +4615,7 @@ insert into tb_address(
     "34489 Katarina Pass",
     "25"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2244,7 +4636,7 @@ insert into tb_address(
     "48238 Baumbach Field",
     "76"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2265,7 +4657,7 @@ insert into tb_address(
     "0806 Jon Falls",
     "103"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2286,7 +4678,7 @@ insert into tb_address(
     "554 Prosacco Fields",
     "35"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2307,7 +4699,7 @@ insert into tb_address(
     "5616 Reymundo Center",
     "102"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2328,7 +4720,7 @@ insert into tb_address(
     "193 Miller Valley",
     "66"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2349,7 +4741,7 @@ insert into tb_address(
     "354 Mortimer Radial",
     "95"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2370,7 +4762,7 @@ insert into tb_address(
     "38157 Michelle Glens",
     "115"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2391,7 +4783,7 @@ insert into tb_address(
     "3422 Mathew Wall",
     "72"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2412,7 +4804,7 @@ insert into tb_address(
     "6829 Emelia Dam",
     "25"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2433,7 +4825,7 @@ insert into tb_address(
     "1003 Elmore Corner",
     "71"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2454,7 +4846,7 @@ insert into tb_address(
     "02435 Antone Centers",
     "122"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2475,7 +4867,7 @@ insert into tb_address(
     "896 Okuneva Burg",
     "10"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2496,7 +4888,7 @@ insert into tb_address(
     "0558 Runolfsson Flats",
     "90"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2517,7 +4909,7 @@ insert into tb_address(
     "605 Gianni Tunnel",
     "66"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2538,7 +4930,7 @@ insert into tb_address(
     "370 Johns Key",
     "74"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2559,7 +4951,7 @@ insert into tb_address(
     "60012 Clay Wells",
     "29"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2580,7 +4972,7 @@ insert into tb_address(
     "36119 Klocko Tunnel",
     "40"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2601,7 +4993,7 @@ insert into tb_address(
     "195 Schulist Dale",
     "51"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2622,7 +5014,7 @@ insert into tb_address(
     "7267 Flavie Loaf",
     "68"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2643,7 +5035,7 @@ insert into tb_address(
     "6476 Rosenbaum Forest",
     "46"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2664,7 +5056,7 @@ insert into tb_address(
     "4145 Wuckert Valley",
     "10"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2685,7 +5077,7 @@ insert into tb_address(
     "5709 Alberto Drive",
     "123"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2706,7 +5098,7 @@ insert into tb_address(
     "701 Konopelski Grove",
     "62"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2727,7 +5119,7 @@ insert into tb_address(
     "4857 Dax Neck",
     "118"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2748,7 +5140,7 @@ insert into tb_address(
     "2809 Alexanne Ports",
     "78"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2769,7 +5161,7 @@ insert into tb_address(
     "85885 Armstrong Shoal",
     "43"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2790,7 +5182,7 @@ insert into tb_address(
     "2928 Savanah Course",
     "117"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2811,7 +5203,7 @@ insert into tb_address(
     "265 Winfield Lodge",
     "46"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2832,7 +5224,7 @@ insert into tb_address(
     "667 Hilpert Lakes",
     "73"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2853,7 +5245,7 @@ insert into tb_address(
     "440 Zulauf Ville",
     "93"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2874,7 +5266,7 @@ insert into tb_address(
     "900 Boyer Road",
     "93"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2895,7 +5287,7 @@ insert into tb_address(
     "1865 Alexandre Greens",
     "56"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2916,7 +5308,7 @@ insert into tb_address(
     "119 Kuhn Gateway",
     "59"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2937,7 +5329,7 @@ insert into tb_address(
     "56293 Bechtelar Roads",
     "31"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2958,7 +5350,7 @@ insert into tb_address(
     "147 Vinnie Mill",
     "75"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -2979,7 +5371,7 @@ insert into tb_address(
     "738 Florence Glen",
     "53"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3000,7 +5392,7 @@ insert into tb_address(
     "7815 Swaniawski Mountain",
     "43"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3021,7 +5413,7 @@ insert into tb_address(
     "025 Emmanuelle Roads",
     "91"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3042,7 +5434,7 @@ insert into tb_address(
     "63680 Effertz Extension",
     "68"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3063,7 +5455,7 @@ insert into tb_address(
     "015 Johanna Station",
     "72"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3084,7 +5476,7 @@ insert into tb_address(
     "31146 Lang Plain",
     "124"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3105,7 +5497,7 @@ insert into tb_address(
     "8968 Will Hollow",
     "46"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3126,7 +5518,7 @@ insert into tb_address(
     "8349 Moen Row",
     "77"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3147,7 +5539,7 @@ insert into tb_address(
     "7643 Marisa Pike",
     "10"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3168,7 +5560,7 @@ insert into tb_address(
     "65079 Kozey Pass",
     "121"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3189,7 +5581,7 @@ insert into tb_address(
     "068 Mac Rest",
     "77"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3210,7 +5602,7 @@ insert into tb_address(
     "6844 Jerome Landing",
     "36"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3231,7 +5623,7 @@ insert into tb_address(
     "50726 Wilkinson Stravenue",
     "96"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3252,7 +5644,7 @@ insert into tb_address(
     "65987 O'Conner Lock",
     "77"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3273,7 +5665,7 @@ insert into tb_address(
     "896 Torp Roads",
     "17"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3294,7 +5686,7 @@ insert into tb_address(
     "342 Cheyenne Burg",
     "13"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3315,7 +5707,7 @@ insert into tb_address(
     "035 Steuber Camp",
     "35"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3336,7 +5728,7 @@ insert into tb_address(
     "253 Johnston Pass",
     "111"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3357,7 +5749,7 @@ insert into tb_address(
     "988 Stehr Cliffs",
     "113"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3378,7 +5770,7 @@ insert into tb_address(
     "394 Isom Loaf",
     "96"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3399,7 +5791,7 @@ insert into tb_address(
     "1233 Pacocha Mountains",
     "117"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3420,7 +5812,7 @@ insert into tb_address(
     "4663 Bennett Inlet",
     "28"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3441,7 +5833,7 @@ insert into tb_address(
     "757 Kerluke Plains",
     "68"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3462,7 +5854,7 @@ insert into tb_address(
     "6691 Pfeffer Unions",
     "5"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3483,7 +5875,7 @@ insert into tb_address(
     "580 Rogahn Inlet",
     "90"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3504,7 +5896,7 @@ insert into tb_address(
     "9120 Cletus Ridges",
     "61"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3525,7 +5917,7 @@ insert into tb_address(
     "7758 Stiedemann Wells",
     "12"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3546,7 +5938,7 @@ insert into tb_address(
     "7367 Einar Forges",
     "123"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3567,7 +5959,7 @@ insert into tb_address(
     "777 Hoppe Burg",
     "1"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3588,7 +5980,7 @@ insert into tb_address(
     "645 Jordy Shore",
     "42"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3609,7 +6001,7 @@ insert into tb_address(
     "3285 Nader Islands",
     "104"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3630,7 +6022,7 @@ insert into tb_address(
     "742 Stacey Drive",
     "117"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3651,7 +6043,7 @@ insert into tb_address(
     "510 Kiley Shoal",
     "6"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3672,7 +6064,7 @@ insert into tb_address(
     "266 Hand Garden",
     "121"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3693,7 +6085,7 @@ insert into tb_address(
     "64399 Hodkiewicz Light",
     "73"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3714,7 +6106,7 @@ insert into tb_address(
     "990 Heaney Glen",
     "66"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3735,7 +6127,7 @@ insert into tb_address(
     "67971 Yost Rue",
     "115"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3756,7 +6148,7 @@ insert into tb_address(
     "02599 Drew Street",
     "106"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3777,7 +6169,7 @@ insert into tb_address(
     "59658 Orn Ramp",
     "29"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3798,7 +6190,7 @@ insert into tb_address(
     "0314 Senger Brook",
     "10"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3819,7 +6211,7 @@ insert into tb_address(
     "6915 Weissnat Circle",
     "45"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3840,7 +6232,7 @@ insert into tb_address(
     "47340 Upton Mission",
     "25"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3861,7 +6253,7 @@ insert into tb_address(
     "8970 Kiehn Street",
     "55"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3882,7 +6274,7 @@ insert into tb_address(
     "07852 Dell Vista",
     "28"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3903,7 +6295,7 @@ insert into tb_address(
     "088 Hayes Mountains",
     "29"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3924,7 +6316,7 @@ insert into tb_address(
     "607 Stracke Shore",
     "36"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3945,7 +6337,7 @@ insert into tb_address(
     "651 Janick Inlet",
     "104"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3966,7 +6358,7 @@ insert into tb_address(
     "84381 Koepp Bypass",
     "66"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -3987,7 +6379,7 @@ insert into tb_address(
     "62299 Emiliano Drive",
     "106"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4008,7 +6400,7 @@ insert into tb_address(
     "288 Funk Crescent",
     "16"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4029,7 +6421,7 @@ insert into tb_address(
     "7511 Leda Mount",
     "74"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4050,7 +6442,7 @@ insert into tb_address(
     "4126 Wehner Junctions",
     "78"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4071,7 +6463,7 @@ insert into tb_address(
     "222 Murl Roads",
     "27"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4092,7 +6484,7 @@ insert into tb_address(
     "96487 Lisandro Pike",
     "49"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4113,7 +6505,7 @@ insert into tb_address(
     "9690 Ashleigh Valley",
     "108"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4134,7 +6526,7 @@ insert into tb_address(
     "017 Beahan Spurs",
     "86"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4155,7 +6547,7 @@ insert into tb_address(
     "69858 Leo Points",
     "70"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4176,7 +6568,7 @@ insert into tb_address(
     "2842 Witting Unions",
     "31"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4197,7 +6589,7 @@ insert into tb_address(
     "17751 Viola Green",
     "72"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4218,7 +6610,7 @@ insert into tb_address(
     "90918 Destini Loop",
     "7"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4239,7 +6631,7 @@ insert into tb_address(
     "6494 Lubowitz Parkways",
     "85"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4260,7 +6652,7 @@ insert into tb_address(
     "5142 Schuster Streets",
     "8"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4281,7 +6673,7 @@ insert into tb_address(
     "828 Deborah Grove",
     "89"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4302,7 +6694,7 @@ insert into tb_address(
     "613 Johnpaul Rue",
     "20"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4323,7 +6715,7 @@ insert into tb_address(
     "1159 Jena Circle",
     "62"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4344,7 +6736,7 @@ insert into tb_address(
     "43850 Grayce Fork",
     "50"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4365,7 +6757,7 @@ insert into tb_address(
     "05329 Dannie Island",
     "46"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4386,7 +6778,7 @@ insert into tb_address(
     "1195 Boyer Trace",
     "71"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4407,7 +6799,7 @@ insert into tb_address(
     "201 Hoeger Mill",
     "51"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4428,7 +6820,7 @@ insert into tb_address(
     "099 Tierra Harbors",
     "52"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4449,7 +6841,7 @@ insert into tb_address(
     "703 Haag Mall",
     "28"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4470,7 +6862,7 @@ insert into tb_address(
     "047 Reinhold Manors",
     "103"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4491,7 +6883,7 @@ insert into tb_address(
     "026 Kulas Curve",
     "15"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4512,7 +6904,7 @@ insert into tb_address(
     "35184 Charlotte Light",
     "92"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4533,7 +6925,7 @@ insert into tb_address(
     "0644 Bernice Landing",
     "80"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4554,7 +6946,7 @@ insert into tb_address(
     "54449 Lowe Light",
     "55"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4575,7 +6967,7 @@ insert into tb_address(
     "74901 Lind Street",
     "50"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4596,7 +6988,7 @@ insert into tb_address(
     "7705 Sipes River",
     "101"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4617,7 +7009,7 @@ insert into tb_address(
     "212 Herman Stream",
     "54"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4638,7 +7030,7 @@ insert into tb_address(
     "643 Joany Ford",
     "68"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4659,7 +7051,7 @@ insert into tb_address(
     "50589 Kris Green",
     "9"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4680,7 +7072,7 @@ insert into tb_address(
     "423 Abel Camp",
     "74"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4701,7 +7093,7 @@ insert into tb_address(
     "2947 Wiza Harbors",
     "37"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4722,7 +7114,7 @@ insert into tb_address(
     "475 Prosacco Tunnel",
     "20"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4743,7 +7135,7 @@ insert into tb_address(
     "864 Brooke Meadow",
     "45"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4764,7 +7156,7 @@ insert into tb_address(
     "04139 Bennie Circles",
     "106"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4785,7 +7177,7 @@ insert into tb_address(
     "31624 Shanny Turnpike",
     "59"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4806,7 +7198,7 @@ insert into tb_address(
     "132 Walter Pines",
     "50"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4827,7 +7219,7 @@ insert into tb_address(
     "312 Alexandro Corners",
     "32"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4848,7 +7240,7 @@ insert into tb_address(
     "37060 Nitzsche Expressway",
     "85"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4869,7 +7261,7 @@ insert into tb_address(
     "44428 Frederic Mountain",
     "63"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4890,7 +7282,7 @@ insert into tb_address(
     "843 Leuschke Mountain",
     "123"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4911,7 +7303,7 @@ insert into tb_address(
     "68562 Ryley Pike",
     "83"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4932,7 +7324,7 @@ insert into tb_address(
     "18579 Eldred Corners",
     "94"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4953,7 +7345,7 @@ insert into tb_address(
     "977 Jacobson Cove",
     "99"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4974,7 +7366,7 @@ insert into tb_address(
     "662 Franecki Parkways",
     "76"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -4995,7 +7387,7 @@ insert into tb_address(
     "5359 Wiza Shoals",
     "79"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5016,7 +7408,7 @@ insert into tb_address(
     "563 Kasey Villages",
     "3"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5037,7 +7429,7 @@ insert into tb_address(
     "800 Lubowitz Mount",
     "53"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5058,7 +7450,7 @@ insert into tb_address(
     "3814 Vance Plain",
     "94"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5079,7 +7471,7 @@ insert into tb_address(
     "6382 Feil Dam",
     "54"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5100,7 +7492,7 @@ insert into tb_address(
     "015 Shanahan Locks",
     "113"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5121,7 +7513,7 @@ insert into tb_address(
     "4377 Larkin Village",
     "86"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5142,7 +7534,7 @@ insert into tb_address(
     "48832 Ernser Ridges",
     "10"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5163,7 +7555,7 @@ insert into tb_address(
     "086 Lockman Creek",
     "85"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5184,7 +7576,7 @@ insert into tb_address(
     "8911 Bartoletti Square",
     "98"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5205,7 +7597,7 @@ insert into tb_address(
     "64977 Dane Turnpike",
     "7"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5226,7 +7618,7 @@ insert into tb_address(
     "910 Tatyana Forest",
     "112"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5247,7 +7639,7 @@ insert into tb_address(
     "982 Pablo Squares",
     "10"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5268,7 +7660,7 @@ insert into tb_address(
     "118 Nienow Meadow",
     "87"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5289,7 +7681,7 @@ insert into tb_address(
     "573 Ludwig Courts",
     "121"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5310,7 +7702,7 @@ insert into tb_address(
     "4642 Beier Shoal",
     "49"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5331,7 +7723,7 @@ insert into tb_address(
     "443 Streich Isle",
     "121"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5352,7 +7744,7 @@ insert into tb_address(
     "4477 Jeramy Avenue",
     "64"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5373,7 +7765,7 @@ insert into tb_address(
     "65143 Ullrich Viaduct",
     "44"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5394,7 +7786,7 @@ insert into tb_address(
     "251 Francis Mews",
     "80"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5415,7 +7807,7 @@ insert into tb_address(
     "23684 Seamus Hollow",
     "69"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5436,7 +7828,7 @@ insert into tb_address(
     "7608 Kovacek Dale",
     "108"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5457,7 +7849,7 @@ insert into tb_address(
     "729 Orn Ways",
     "63"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5478,7 +7870,7 @@ insert into tb_address(
     "097 Elwin Course",
     "21"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5499,7 +7891,7 @@ insert into tb_address(
     "6552 Considine Common",
     "84"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5520,7 +7912,7 @@ insert into tb_address(
     "842 Spinka Isle",
     "24"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5541,7 +7933,7 @@ insert into tb_address(
     "22604 Willms Mission",
     "122"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5562,7 +7954,7 @@ insert into tb_address(
     "59874 O'Conner Spur",
     "77"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5583,7 +7975,7 @@ insert into tb_address(
     "327 Ocie Cliffs",
     "113"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5604,7 +7996,7 @@ insert into tb_address(
     "2581 Langworth Unions",
     "80"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5625,7 +8017,7 @@ insert into tb_address(
     "544 Enoch Canyon",
     "16"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5646,7 +8038,7 @@ insert into tb_address(
     "3426 Ethel Wall",
     "103"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5667,7 +8059,7 @@ insert into tb_address(
     "68118 Rae Knoll",
     "13"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5688,7 +8080,7 @@ insert into tb_address(
     "081 MacGyver Isle",
     "116"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5709,7 +8101,7 @@ insert into tb_address(
     "7462 Name Plains",
     "28"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5730,7 +8122,7 @@ insert into tb_address(
     "416 Daniella Lane",
     "30"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5751,7 +8143,7 @@ insert into tb_address(
     "6517 Koelpin Street",
     "111"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5772,7 +8164,7 @@ insert into tb_address(
     "154 Javonte Circle",
     "9"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5793,7 +8185,7 @@ insert into tb_address(
     "0142 Maud Spurs",
     "111"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5814,7 +8206,7 @@ insert into tb_address(
     "67270 Francesco Haven",
     "108"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5835,7 +8227,7 @@ insert into tb_address(
     "3877 O'Kon Street",
     "89"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5856,7 +8248,7 @@ insert into tb_address(
     "6113 Jenkins Lake",
     "20"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5877,7 +8269,7 @@ insert into tb_address(
     "283 Rempel Overpass",
     "21"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5898,7 +8290,7 @@ insert into tb_address(
     "3308 Kieran Summit",
     "75"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5919,7 +8311,7 @@ insert into tb_address(
     "81472 Osvaldo Drive",
     "120"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5940,7 +8332,7 @@ insert into tb_address(
     "586 Johann Skyway",
     "59"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5961,7 +8353,7 @@ insert into tb_address(
     "886 Jarret Mount",
     "29"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -5982,7 +8374,7 @@ insert into tb_address(
     "3050 Ritchie Manor",
     "28"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6003,7 +8395,7 @@ insert into tb_address(
     "82325 Morissette Motorway",
     "86"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6024,7 +8416,7 @@ insert into tb_address(
     "41251 Gaylord Glens",
     "11"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6045,7 +8437,7 @@ insert into tb_address(
     "9859 Kurtis Plaza",
     "99"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6066,7 +8458,7 @@ insert into tb_address(
     "2521 Roob Corner",
     "30"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6087,7 +8479,7 @@ insert into tb_address(
     "494 Kovacek Ramp",
     "115"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6108,7 +8500,7 @@ insert into tb_address(
     "7572 Ziemann Key",
     "47"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6129,7 +8521,7 @@ insert into tb_address(
     "674 Harvey Greens",
     "57"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6150,7 +8542,7 @@ insert into tb_address(
     "14244 Ahmad Inlet",
     "103"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6171,7 +8563,7 @@ insert into tb_address(
     "008 Uriah Islands",
     "47"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6192,7 +8584,7 @@ insert into tb_address(
     "0677 Fabian Place",
     "93"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6213,7 +8605,7 @@ insert into tb_address(
     "080 Jaskolski Extension",
     "92"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6234,7 +8626,7 @@ insert into tb_address(
     "73323 Lucie Causeway",
     "94"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6255,7 +8647,7 @@ insert into tb_address(
     "006 Nicolas Mission",
     "36"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6276,7 +8668,7 @@ insert into tb_address(
     "65512 Carmel Knolls",
     "46"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6297,7 +8689,7 @@ insert into tb_address(
     "47145 Noel Glens",
     "23"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6318,7 +8710,7 @@ insert into tb_address(
     "375 Rempel Light",
     "123"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6339,7 +8731,7 @@ insert into tb_address(
     "95786 Meta Drive",
     "15"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6360,7 +8752,7 @@ insert into tb_address(
     "3855 Addison Villages",
     "57"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6381,7 +8773,7 @@ insert into tb_address(
     "8271 Oberbrunner Garden",
     "12"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6402,7 +8794,7 @@ insert into tb_address(
     "55846 Shaina Road",
     "26"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6423,7 +8815,7 @@ insert into tb_address(
     "9834 Rosina Mountain",
     "95"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6444,7 +8836,7 @@ insert into tb_address(
     "12968 Barton Field",
     "20"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6465,7 +8857,7 @@ insert into tb_address(
     "704 Gleichner Ridges",
     "100"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6486,7 +8878,7 @@ insert into tb_address(
     "379 General Cape",
     "17"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6507,7 +8899,7 @@ insert into tb_address(
     "084 Corbin Hill",
     "36"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6528,7 +8920,7 @@ insert into tb_address(
     "65518 Lindsay Plaza",
     "107"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6549,7 +8941,7 @@ insert into tb_address(
     "7799 Ova Inlet",
     "27"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6570,7 +8962,7 @@ insert into tb_address(
     "352 Aaliyah Hill",
     "54"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6591,7 +8983,7 @@ insert into tb_address(
     "84547 Schmidt Radial",
     "47"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6612,7 +9004,7 @@ insert into tb_address(
     "74515 Oberbrunner Points",
     "27"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6633,7 +9025,7 @@ insert into tb_address(
     "5469 Erwin Prairie",
     "61"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6654,7 +9046,7 @@ insert into tb_address(
     "3506 Andreane Trail",
     "9"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6675,7 +9067,7 @@ insert into tb_address(
     "475 Tre Cape",
     "24"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6696,7 +9088,7 @@ insert into tb_address(
     "286 Clifford Dale",
     "48"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6717,7 +9109,7 @@ insert into tb_address(
     "6771 Ferry Meadow",
     "103"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6738,7 +9130,7 @@ insert into tb_address(
     "710 Sterling Terrace",
     "124"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6759,7 +9151,7 @@ insert into tb_address(
     "0293 Freda Station",
     "115"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6780,7 +9172,7 @@ insert into tb_address(
     "4544 Mona Bypass",
     "17"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6801,7 +9193,7 @@ insert into tb_address(
     "8511 Alverta Inlet",
     "90"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6822,7 +9214,7 @@ insert into tb_address(
     "057 O'Keefe Plains",
     "106"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6843,7 +9235,7 @@ insert into tb_address(
     "147 Bartoletti Meadows",
     "44"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6864,7 +9256,7 @@ insert into tb_address(
     "2156 Beer Fork",
     "122"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6885,7 +9277,7 @@ insert into tb_address(
     "3117 Frami Station",
     "123"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6906,7 +9298,7 @@ insert into tb_address(
     "485 Barbara Viaduct",
     "110"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6927,7 +9319,7 @@ insert into tb_address(
     "57347 Fabiola Prairie",
     "43"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6948,7 +9340,7 @@ insert into tb_address(
     "8401 Toni Mountain",
     "52"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6969,7 +9361,7 @@ insert into tb_address(
     "61031 Liza Dale",
     "50"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -6990,7 +9382,7 @@ insert into tb_address(
     "911 Zola Manors",
     "10"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7011,7 +9403,7 @@ insert into tb_address(
     "722 Norene Plains",
     "48"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7032,7 +9424,7 @@ insert into tb_address(
     "1710 Geovanny Track",
     "11"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7053,7 +9445,7 @@ insert into tb_address(
     "29885 Fisher Via",
     "87"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7074,7 +9466,7 @@ insert into tb_address(
     "61365 Zoila Lock",
     "19"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7095,7 +9487,7 @@ insert into tb_address(
     "6650 Luettgen Common",
     "80"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7116,7 +9508,7 @@ insert into tb_address(
     "867 Trevor Roads",
     "78"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7137,7 +9529,7 @@ insert into tb_address(
     "55351 Stefan Summit",
     "62"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7158,7 +9550,7 @@ insert into tb_address(
     "84266 Vandervort Path",
     "87"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7179,7 +9571,7 @@ insert into tb_address(
     "265 Seamus Extensions",
     "62"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7200,7 +9592,7 @@ insert into tb_address(
     "98683 Armstrong Bypass",
     "24"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7221,7 +9613,7 @@ insert into tb_address(
     "0653 Gracie Views",
     "102"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7242,7 +9634,7 @@ insert into tb_address(
     "6149 Faustino Mission",
     "24"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7263,7 +9655,7 @@ insert into tb_address(
     "656 Geraldine Key",
     "116"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7284,7 +9676,7 @@ insert into tb_address(
     "21015 Mertz Vista",
     "16"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7305,7 +9697,7 @@ insert into tb_address(
     "7655 Yost Meadows",
     "80"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7326,7 +9718,7 @@ insert into tb_address(
     "13085 Swaniawski Manor",
     "28"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7347,7 +9739,7 @@ insert into tb_address(
     "393 Kirlin Plain",
     "7"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7368,7 +9760,7 @@ insert into tb_address(
     "242 Bogisich Curve",
     "23"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7389,7 +9781,7 @@ insert into tb_address(
     "171 Morissette Cape",
     "65"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7410,7 +9802,7 @@ insert into tb_address(
     "454 Guiseppe Lodge",
     "113"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7431,7 +9823,7 @@ insert into tb_address(
     "7234 Howe Islands",
     "20"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7452,7 +9844,7 @@ insert into tb_address(
     "55072 Armand Way",
     "114"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7473,7 +9865,7 @@ insert into tb_address(
     "9436 Lynch Port",
     "109"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7494,7 +9886,7 @@ insert into tb_address(
     "920 Walker Falls",
     "25"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7515,7 +9907,7 @@ insert into tb_address(
     "5052 Joel Stravenue",
     "32"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7536,7 +9928,7 @@ insert into tb_address(
     "63871 Raphaelle Orchard",
     "44"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7557,7 +9949,7 @@ insert into tb_address(
     "458 Vern Fork",
     "23"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7578,7 +9970,7 @@ insert into tb_address(
     "851 Kassulke Stravenue",
     "27"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7599,7 +9991,7 @@ insert into tb_address(
     "0144 Manuel Hollow",
     "116"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7620,7 +10012,7 @@ insert into tb_address(
     "530 Dewitt Isle",
     "50"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7641,7 +10033,7 @@ insert into tb_address(
     "92463 Crona Wells",
     "69"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7662,7 +10054,7 @@ insert into tb_address(
     "289 Caitlyn Pass",
     "64"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7683,7 +10075,7 @@ insert into tb_address(
     "50409 Baumbach Mount",
     "26"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7704,7 +10096,7 @@ insert into tb_address(
     "2926 Sabrina Avenue",
     "50"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7725,7 +10117,7 @@ insert into tb_address(
     "278 Carroll Mount",
     "37"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7746,7 +10138,7 @@ insert into tb_address(
     "041 Nader Forks",
     "51"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7767,7 +10159,7 @@ insert into tb_address(
     "671 Hannah Shoal",
     "119"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7788,7 +10180,7 @@ insert into tb_address(
     "991 Boyer Ports",
     "40"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7809,7 +10201,7 @@ insert into tb_address(
     "8663 Yundt Turnpike",
     "111"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7830,7 +10222,7 @@ insert into tb_address(
     "13614 Swaniawski Motorway",
     "99"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7851,7 +10243,7 @@ insert into tb_address(
     "874 Lexi Mews",
     "95"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7872,7 +10264,7 @@ insert into tb_address(
     "9915 Haag Garden",
     "17"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7893,7 +10285,7 @@ insert into tb_address(
     "7654 Kaela Mill",
     "110"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7914,7 +10306,7 @@ insert into tb_address(
     "015 Danyka Trail",
     "94"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7935,7 +10327,7 @@ insert into tb_address(
     "36769 Mohr Path",
     "42"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7956,7 +10348,7 @@ insert into tb_address(
     "351 Mazie Plains",
     "120"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7977,7 +10369,7 @@ insert into tb_address(
     "93269 Barrows Pass",
     "101"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -7998,7 +10390,7 @@ insert into tb_address(
     "384 Johnson Overpass",
     "21"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8019,7 +10411,7 @@ insert into tb_address(
     "5413 Barton Plains",
     "15"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8040,7 +10432,7 @@ insert into tb_address(
     "921 Christina Mount",
     "9"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8061,7 +10453,7 @@ insert into tb_address(
     "2248 Billie Branch",
     "120"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8082,7 +10474,7 @@ insert into tb_address(
     "5955 Donato Village",
     "92"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8103,7 +10495,7 @@ insert into tb_address(
     "637 Reynolds Union",
     "12"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8124,7 +10516,7 @@ insert into tb_address(
     "024 Bert Rest",
     "64"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8145,7 +10537,7 @@ insert into tb_address(
     "7996 Grady Prairie",
     "100"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8166,7 +10558,7 @@ insert into tb_address(
     "55406 Greenholt Landing",
     "69"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8187,7 +10579,7 @@ insert into tb_address(
     "117 Haag Manors",
     "98"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8208,7 +10600,7 @@ insert into tb_address(
     "56797 Koch Grove",
     "41"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8229,7 +10621,7 @@ insert into tb_address(
     "451 Treutel Crescent",
     "33"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8250,7 +10642,7 @@ insert into tb_address(
     "51154 Penelope Ports",
     "36"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8271,7 +10663,7 @@ insert into tb_address(
     "96403 Kshlerin Ports",
     "64"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8292,7 +10684,7 @@ insert into tb_address(
     "014 Reanna Flat",
     "69"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8313,7 +10705,7 @@ insert into tb_address(
     "30899 Ed Green",
     "55"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8334,7 +10726,7 @@ insert into tb_address(
     "0925 Beier Grove",
     "90"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8355,7 +10747,7 @@ insert into tb_address(
     "858 Patsy Junctions",
     "9"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8376,7 +10768,7 @@ insert into tb_address(
     "641 Smitham Summit",
     "71"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8397,7 +10789,7 @@ insert into tb_address(
     "11925 Kiel Lodge",
     "20"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8418,7 +10810,7 @@ insert into tb_address(
     "459 Gulgowski Land",
     "95"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8439,7 +10831,7 @@ insert into tb_address(
     "179 Howell Rest",
     "96"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8460,7 +10852,7 @@ insert into tb_address(
     "5384 Naomie Glens",
     "58"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8481,7 +10873,7 @@ insert into tb_address(
     "15653 Swift Drive",
     "39"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8502,7 +10894,7 @@ insert into tb_address(
     "025 Manley Port",
     "38"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8523,7 +10915,7 @@ insert into tb_address(
     "145 Homenick Trail",
     "90"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8544,7 +10936,7 @@ insert into tb_address(
     "4337 Jarrell Mills",
     "23"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8565,7 +10957,7 @@ insert into tb_address(
     "173 Asa Spurs",
     "55"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8586,7 +10978,7 @@ insert into tb_address(
     "057 Ratke Loop",
     "92"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8607,7 +10999,7 @@ insert into tb_address(
     "518 Senger Heights",
     "46"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8628,7 +11020,7 @@ insert into tb_address(
     "0015 Heaven Passage",
     "85"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8649,7 +11041,7 @@ insert into tb_address(
     "7546 Boehm Cliff",
     "15"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8670,7 +11062,7 @@ insert into tb_address(
     "22431 Royal Avenue",
     "5"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8691,7 +11083,7 @@ insert into tb_address(
     "667 Hudson Mews",
     "71"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8712,7 +11104,7 @@ insert into tb_address(
     "49577 Tia River",
     "97"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8733,7 +11125,7 @@ insert into tb_address(
     "7037 Klocko Fort",
     "117"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8754,7 +11146,7 @@ insert into tb_address(
     "549 Kaylee Harbor",
     "91"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8775,7 +11167,7 @@ insert into tb_address(
     "262 Wuckert Lodge",
     "22"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8796,7 +11188,7 @@ insert into tb_address(
     "1793 Wunsch Place",
     "73"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8817,7 +11209,7 @@ insert into tb_address(
     "7333 Fahey Underpass",
     "112"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8838,7 +11230,7 @@ insert into tb_address(
     "354 Bauch Shores",
     "8"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8859,7 +11251,7 @@ insert into tb_address(
     "2039 Jewell Street",
     "16"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8880,7 +11272,7 @@ insert into tb_address(
     "333 Mark Branch",
     "30"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8901,7 +11293,7 @@ insert into tb_address(
     "54662 Marks Forks",
     "97"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8922,7 +11314,7 @@ insert into tb_address(
     "1611 Huel Oval",
     "13"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8943,7 +11335,7 @@ insert into tb_address(
     "95004 Torphy Branch",
     "58"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8964,7 +11356,7 @@ insert into tb_address(
     "33679 Fahey Village",
     "37"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -8985,7 +11377,7 @@ insert into tb_address(
     "39918 Wiza Walks",
     "10"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9006,7 +11398,7 @@ insert into tb_address(
     "62850 Hudson Locks",
     "51"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9027,7 +11419,7 @@ insert into tb_address(
     "743 Schamberger Brook",
     "70"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9048,7 +11440,7 @@ insert into tb_address(
     "02554 Goodwin Islands",
     "93"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9069,7 +11461,7 @@ insert into tb_address(
     "2553 Chelsie Brook",
     "98"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9090,7 +11482,7 @@ insert into tb_address(
     "535 Cronin Circle",
     "112"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9111,7 +11503,7 @@ insert into tb_address(
     "818 Williamson Greens",
     "22"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9132,7 +11524,7 @@ insert into tb_address(
     "98123 Willms Circles",
     "89"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9153,7 +11545,7 @@ insert into tb_address(
     "778 Winona Hills",
     "113"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9174,7 +11566,7 @@ insert into tb_address(
     "945 Ullrich Forges",
     "35"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9195,7 +11587,7 @@ insert into tb_address(
     "545 Anjali Via",
     "107"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9216,7 +11608,7 @@ insert into tb_address(
     "2965 Paucek Manors",
     "122"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9237,7 +11629,7 @@ insert into tb_address(
     "67669 Rice Fords",
     "97"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9258,7 +11650,7 @@ insert into tb_address(
     "81172 Runte Key",
     "47"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9279,7 +11671,7 @@ insert into tb_address(
     "05945 Nicholaus Islands",
     "39"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9300,7 +11692,7 @@ insert into tb_address(
     "58000 Kamille Prairie",
     "61"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9321,7 +11713,7 @@ insert into tb_address(
     "3935 Delaney Burgs",
     "113"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9342,7 +11734,7 @@ insert into tb_address(
     "41181 Paucek Fort",
     "21"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9363,7 +11755,7 @@ insert into tb_address(
     "6977 Nicholas Light",
     "45"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9384,7 +11776,7 @@ insert into tb_address(
     "8405 Jacobs Forest",
     "113"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9405,7 +11797,7 @@ insert into tb_address(
     "161 Riley Way",
     "18"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9426,7 +11818,7 @@ insert into tb_address(
     "16685 Abe Shoals",
     "78"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9447,7 +11839,7 @@ insert into tb_address(
     "6029 Spinka Landing",
     "77"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9468,7 +11860,7 @@ insert into tb_address(
     "959 Lesch Union",
     "45"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9489,7 +11881,7 @@ insert into tb_address(
     "9637 Ewell Union",
     "39"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9510,7 +11902,7 @@ insert into tb_address(
     "379 Evie Green",
     "78"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9531,7 +11923,7 @@ insert into tb_address(
     "679 Kennedi Terrace",
     "75"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9552,7 +11944,7 @@ insert into tb_address(
     "45901 Rylan Corners",
     "54"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9573,7 +11965,7 @@ insert into tb_address(
     "439 Leannon Wells",
     "53"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9594,7 +11986,7 @@ insert into tb_address(
     "03690 Cormier Square",
     "87"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9615,7 +12007,7 @@ insert into tb_address(
     "1375 Grant Crescent",
     "106"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9636,7 +12028,7 @@ insert into tb_address(
     "476 Durgan Divide",
     "100"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9657,7 +12049,7 @@ insert into tb_address(
     "29221 Wisoky Grove",
     "111"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9678,7 +12070,7 @@ insert into tb_address(
     "3374 Feest Station",
     "28"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9699,7 +12091,7 @@ insert into tb_address(
     "586 Zulauf Manor",
     "81"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9720,7 +12112,7 @@ insert into tb_address(
     "69597 Konopelski Landing",
     "65"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9741,7 +12133,7 @@ insert into tb_address(
     "28111 Darius Ports",
     "110"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9762,7 +12154,7 @@ insert into tb_address(
     "537 Adelbert Underpass",
     "40"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9783,7 +12175,7 @@ insert into tb_address(
     "900 Libby Brook",
     "95"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9804,7 +12196,7 @@ insert into tb_address(
     "08765 Bernice Villages",
     "61"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9825,7 +12217,7 @@ insert into tb_address(
     "10257 Goldner Valleys",
     "108"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9846,7 +12238,7 @@ insert into tb_address(
     "078 Mayert Stravenue",
     "110"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9867,7 +12259,7 @@ insert into tb_address(
     "4727 Ruthe Garden",
     "97"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9888,7 +12280,7 @@ insert into tb_address(
     "624 Lisa Street",
     "6"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9909,7 +12301,7 @@ insert into tb_address(
     "52478 Mosciski Gardens",
     "71"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9930,7 +12322,7 @@ insert into tb_address(
     "40790 Cassin Courts",
     "96"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9951,7 +12343,7 @@ insert into tb_address(
     "788 Alvis Park",
     "3"
     );
-    
+
 insert into tb_address(
             cep,
             ds_city,
@@ -9972,4 +12364,1718 @@ insert into tb_address(
     "191 Johann Rapid",
     "70"
     );
-    
+
+    insert into tb_category(
+                ds_name
+                )
+                values(
+        "Gás Natural"
+        );
+
+    insert into tb_category(
+                ds_name
+                )
+                values(
+        "Gasolina Adtivada"
+        );
+
+    insert into tb_category(
+                ds_name
+                )
+                values(
+        "Diesel"
+        );
+
+    insert into tb_category(
+                ds_name
+                )
+                values(
+        "Etanol Adtivado"
+        );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Eum neque consequatur.
+Vel non laudantium ipsam quidem id architecto.
+Nulla aut sed sapiente debitis ea.
+Rerum impedit harum necessitatibus eum.",
+    "https://http2.mlstatic.com/galo-tanque-de-combustivel-20-litros-original-seaflo-D_NQ_NP_841552-MLB31118387857_062019-O.webp",
+    "Unbranded Concrete Chair",
+    174.38,
+    673,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Deleniti consequatur velit vitae odit quos magni dolor.
+Tempora id nobis libero ut deleniti quidem.
+Quisquam consequatur perspiciatis et inventore ex ipsa ipsa aut.
+Facilis consequatur repellat est dolore sunt placeat sunt et.",
+    "https://http2.mlstatic.com/D_Q_NP_694087-MLB29338393192_022019-AB.webp",
+    "Unbranded Wooden Salad",
+    68.7,
+    116,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Quia dolorum fuga modi pariatur dicta.
+Quasi nihil delectus velit reiciendis mollitia non facilis.
+Unde animi velit repellendus.
+Ducimus mollitia incidunt quibusdam porro consequatur id vero.",
+    "https://http2.mlstatic.com/troca-oleo-motor-15w40-sl-semi-sintetico-acdelco-com-filtro-D_NQ_NP_771047-MLB31203118269_062019-W.webp",
+    "Licensed Fresh Sausages",
+    759.54,
+    50,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Quis eum et assumenda.
+Sunt quo non voluptatem molestiae minima deserunt.
+Alias commodi voluptas.
+Et consectetur error cumque sint.
+Corrupti ut nam sunt qui quia rerum veritatis aut.",
+    "https://http2.mlstatic.com/5l-oleo-motor-castrol-magnatec-15w40-flex-lubrificante-carro-D_NQ_NP_799005-MLB31363741813_072019-W.webp",
+    "Gorgeous Metal Bacon",
+    869.7,
+    588,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Rerum aliquid et et.",
+    "https://http2.mlstatic.com/oleo-de-motor-veiculo-toyota-10w30-genuino-toyota-D_NQ_NP_730029-MLB40027070448_122019-W.webp",
+    "Licensed Frozen Bacon",
+    258.3,
+    883,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Aut atque reprehenderit.
+In consequatur voluptas sed accusamus pariatur error sint tempore facilis.
+Excepturi est sint id.",
+    "https://http2.mlstatic.com/oleo-de-carro-semissintetico-15w40-lubrax-1l-D_NQ_NP_631940-MLB31193076564_062019-W.webp",
+    "Ergonomic Granite Tuna",
+    129.26,
+    29,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Incidunt officiis accusamus et sit necessitatibus ut numquam.
+Sed nihil esse laborum odit enim omnis beatae sit omnis.
+Consequuntur aut quas quis ut.
+Sit laboriosam tempore non id.",
+    "https://http2.mlstatic.com/oleo-motul-carro-8100-x-cess-5w40-100-sintetico-1-litro-D_NQ_NP_800368-MLB31907057542_082019-W.webp",
+    "Practical Wooden Keyboard",
+    52.32,
+    187,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Temporibus incidunt soluta laboriosam rerum vero temporibus explicabo.
+Quo cupiditate inventore expedita id odit eum quia dolorem.
+Nam et totam veniam dolorem.
+Qui tempora et laudantium aut quaerat cumque ex similique.",
+    "https://http2.mlstatic.com/4-oleo-motor-carro-5w30-mobil-D_NQ_NP_783747-MLB31732628623_082019-W.webp",
+    "Licensed Fresh Tuna",
+    790.63,
+    983,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Tempore impedit voluptatem voluptatem quidem.
+Voluptatum rerum vel enim laborum neque vel.
+Aut et voluptate voluptatibus blanditiis cum nam.
+Facilis necessitatibus consequatur temporibus delectus sed repellendus sapiente aliquid repudiandae.",
+    "https://http2.mlstatic.com/kit-de-oleo-5w40-sintetico-atende-veiculos-diesel-gol-golf-mercedes-importado-promocao-sem-juros-brinde-exclusivo-D_NQ_NP_728868-MLB31666033072_082019-W.webp",
+    "Licensed Steel Car",
+    54.10,
+    526,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Minima dicta ea molestiae velit.
+At amet ab illo dicta iure.
+Voluptates cumque temporibus quia.
+Minima officiis est autem ut incidunt blanditiis sit.
+Nesciunt blanditiis aut perferendis.",
+    "https://http2.mlstatic.com/galao-4lts-oleo-mobil-super-original-pcarro-api-sl-20w-50-D_NQ_NP_710011-MLB32559105099_102019-W.webp",
+    "Incredible Fresh Towels",
+    815.43,
+    42,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Iste perspiciatis ad rem minus.
+Nulla quibusdam officiis sint non voluptatum asperiores et.",
+    "https://http2.mlstatic.com/aditivos-oleo-lubrificante-militec-D_NQ_NP_832622-MLB40283565401_122019-W.webp",
+    "Handcrafted Concrete Salad",
+    570.38,
+    698,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Corrupti et velit porro impedit inventore sed temporibus nulla.
+Eos possimus ex.
+Recusandae alias iusto qui reprehenderit pariatur.
+Temporibus nisi animi nobis enim incidunt.",
+    "https://http2.mlstatic.com/kit-oleo-motul-carro-8100-x-cess-5w40-4-litros-sintetico-D_NQ_NP_700541-MLB40933676655_022020-W.webp",
+    "Licensed Fresh Hat",
+    168.89,
+    802,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Et eaque autem nesciunt consequatur voluptas velit et rerum.",
+    "https://http2.mlstatic.com/motul-c4-400ml-spray-lubrificante-corrente-moto-chain-lube-D_NQ_NP_958840-MLB31421993565_072019-W.webp",
+    "Licensed Metal Pizza",
+    251.66,
+    22,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Ea quae temporibus laudantium asperiores earum corporis fugiat eum quasi.
+Aspernatur sapiente id et possimus unde quam.
+Velit veniam velit delectus et voluptates.",
+    "https://http2.mlstatic.com/D_NQ_NP_659158-MLB41138771955_032020-W.webp",
+    "Practical Concrete Table",
+    213.24,
+    685,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Quia et nostrum blanditiis cupiditate voluptatem at sed deleniti.
+Perferendis nostrum rerum nesciunt nesciunt nam voluptatem.
+Assumenda sed excepturi.
+Est et veritatis delectus tempore.
+Fugit voluptas quo nobis aut distinctio ea.",
+    "https://http2.mlstatic.com/oleo-lubrax-feroces-4t-15w-50-sintetico-D_NQ_NP_780785-MLB32814583758_112019-W.webp",
+    "Handmade Frozen Chair",
+    818.49,
+    558,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Sed illum fugiat.
+Illum deserunt eos eligendi.",
+    "https://http2.mlstatic.com/oleo-lubrificante-corrente-bardahl-maxlub-kart-e-moto-D_NQ_NP_785180-MLB26026756597_092017-W.webp",
+    "Unbranded Rubber Tuna",
+    149.3,
+    573,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Quisquam dolores ipsa eum dignissimos.
+Vel enim earum impedit.
+Quas facere est est.
+Minima aspernatur optio dicta sunt voluptatem repellat est laudantium qui.
+Tenetur aut qui ex sed.",
+    "https://http2.mlstatic.com/nanotech-1000-condicionador-de-metais-koube-D_NQ_NP_745984-MLB31092283705_062019-W.webp",
+    "Incredible Wooden Fish",
+    601.42,
+    960,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Quod fuga distinctio sit.
+Ducimus aliquid doloremque explicabo dolorem.
+Sint nemo delectus corrupti quae tempore accusamus.
+Illum doloribus deserunt fugiat inventore nostrum beatae voluptatem nemo et.",
+    "https://http2.mlstatic.com/kit-oleo-motul-5100-4t-15w50-4-litros-semissintetico-D_NQ_NP_696501-MLB31123824898_062019-W.webp",
+    "Ergonomic Frozen Soap",
+    110.43,
+    620,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Et fuga atque aut nihil nemo.
+Quibusdam non provident esse.",
+    "https://http2.mlstatic.com/kit-com-3l-motul-motocool-expert-para-radiadores-de-motos-D_NQ_NP_789193-MLB40037363846_122019-W.webp",
+    "Handmade Soft Tuna",
+    583.34,
+    256,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Quis et cumque molestiae omnis voluptatem.
+Ut neque qui eius dolore id.
+Enim eum cupiditate tempore molestiae corrupti.
+Autem porro fuga commodi libero deserunt debitis quia cupiditate.
+Rerum dolores praesentium recusandae voluptatem eaque distinctio et ducimus.",
+    "https://http2.mlstatic.com/oleo-mutul-6100-motor-syn-nergy-5w40-sintetico-1-litro-D_NQ_NP_927728-MLB32817240300_112019-W.webp",
+    "Small Frozen Salad",
+    829.37,
+    998,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Et architecto possimus voluptas saepe et earum hic.
+Rerum itaque sit ex officiis illum veritatis aut adipisci quis.
+Officiis sed inventore odio beatae harum ut officia quo.",
+    "https://http2.mlstatic.com/kit-troca-oleo-10w30-new-civic-fit-city-crv-D_NQ_NP_974713-MLB41211089699_032020-W.webp",
+    "Small Granite Fish",
+    272.77,
+    829,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Aliquid quibusdam qui officiis.
+Ut odit deserunt ut reprehenderit et.
+Et omnis voluptatem quam minus officia hic nisi necessitatibus ea.",
+    "https://http2.mlstatic.com/fluido-radiador-motul-inugel-expert-37c-1l-azul-hibrido-D_NQ_NP_836650-MLB40521639206_012020-W.webp",
+    "Tasty Steel Computer",
+    294.45,
+    140,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Odio consequatur voluptas.
+Repellat aperiam omnis reprehenderit ipsam voluptates repudiandae.
+Ipsa et fugiat dolor.",
+    "https://http2.mlstatic.com/liquido-fuido-motul-inugel-expert-radiador-moto-ou-carro-1lt-D_NQ_NP_812547-MLB32253866556_092019-W.webp",
+    "Practical Granite Sausages",
+    704.72,
+    731,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Et quas maiores quo nemo illum commodi.
+Et autem ut quaerat.
+Sed aut aspernatur nihil numquam quaerat laborum sapiente.
+Enim iste magni iste.
+Ea et fuga.",
+    "https://http2.mlstatic.com/1uni-motul-dot-5-dot51-dot-5-51-brake-fluid-freio-D_NQ_NP_991016-MLB31085255980_062019-W.webp",
+    "Sleek Wooden Table",
+    75.38,
+    322,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Quidem magnam sequi veritatis assumenda.
+Quas quis reiciendis quae provident.",
+    "https://http2.mlstatic.com/oleo-cmbio-original-peak-atf-cvt-full-synthetic-D_NQ_NP_663346-MLB31532629698_072019-W.webp",
+    "Incredible Concrete Chair",
+    233.84,
+    371,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Numquam autem voluptate dolor.
+Sit et commodi corrupti ut aut illum velit.
+Aspernatur deleniti distinctio eligendi suscipit et.
+Sunt harum incidunt eveniet illo sit nihil et doloribus quam.",
+    "https://http2.mlstatic.com/oleo-cambio-cvt-valvoline-nissan-mitsubishi-audi-vw-gm-kia-bmw-mb-honda-ford-subaru-hyundai-suzuki-dodge-jeep-D_NQ_NP_937980-MLB40738703094_022020-W.webp",
+    "Practical Fresh Ball",
+    183.93,
+    511,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Velit officia dolorum ex inventore id voluptatum ratione.
+Autem voluptate enim molestiae.
+Voluptas quod omnis occaecati.
+Perferendis quo corporis nostrum iure.",
+    "https://http2.mlstatic.com/castrol-power-1-racing-10w40-oleo-motor-moto-4t-sintetico-1l-D_NQ_NP_802189-MLB40643344023_022020-W.webp",
+    "Gorgeous Metal Shirt",
+    151.88,
+    619,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Autem iste error excepturi commodi culpa aut officia totam deleniti.
+Explicabo non quam et.",
+    "https://http2.mlstatic.com/oleo-motul-4100-turbolight-10w40-galo-4-litros-4l-semissintetico-D_NQ_NP_983167-MLB31925155979_082019-W.webp",
+    "Gorgeous Metal Chair",
+    198.64,
+    928,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Rerum aut ipsa omnis odit minima.
+Vel repellat rem deleniti voluptas et.
+Ea velit facilis eius voluptatem sunt neque illum error aut.",
+    "https://http2.mlstatic.com/oleo-lubrificante-motul-800-off-road-1-litro-100-sint-D_NQ_NP_646991-MLB31739706388_082019-W.webp",
+    "Handcrafted Plastic Fish",
+    53.88,
+    972,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Ut et amet ea dolores consequuntur consequatur et aliquam ducimus.
+Quasi laudantium iste consequuntur eum earum eaque veniam voluptatibus.",
+    "https://http2.mlstatic.com/kit-graxa-03-un-p-corrente-em-geral-motos-300ml-spray-D_NQ_NP_920479-MLB31357279525_072019-W.webp",
+    "Licensed Fresh Computer",
+    679.14,
+    691,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Sequi consectetur quo.
+Velit aliquam totam quis doloribus ipsam laborum.
+Omnis nesciunt ut aliquid enim provident quae quia.
+Quis ipsum aut ut voluptatum eius laborum.
+Corrupti non at consequatur commodi.",
+    "https://http2.mlstatic.com/4-litros-oleo-castrol-power1-racing-4t-5w40-original-bmw-D_NQ_NP_811613-MLB31095369013_062019-W.webp",
+    "Refined Rubber Fish",
+    809.91,
+    532,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Laborum quae qui qui doloremque quasi aliquam error nemo et.
+Tenetur eos et dolorem cupiditate voluptatem.
+Ea optio alias autem.",
+    "https://http2.mlstatic.com/descarbonizante-para-motos-e-barcos-perfect-clean-250ml-D_NQ_NP_889888-MLB31365499603_072019-W.webp",
+    "Gorgeous Metal Chair",
+    756.82,
+    970,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Dolor corrupti minus earum non ut deserunt.
+Id et quia nihil eos nam quo.
+Nisi ut temporibus id error rem cumque quis.",
+    "https://http2.mlstatic.com/oleo-valvoline-75w90-synpower-cambio-diferencial-autoblocante-eixo-dianterio-traseiro-D_NQ_NP_957981-MLB41102478331_032020-W.webp",
+    "Generic Wooden Shoes",
+    605.4,
+    457,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Commodi aperiam labore incidunt sed suscipit perspiciatis iure molestiae.",
+    "https://http2.mlstatic.com/motul-mc-care-m2-helmet-interior-clean-limpeza-de-capacete-D_NQ_NP_918649-MLB31028370290_062019-W.webp",
+    "Ergonomic Plastic Chicken",
+    255.43,
+    88,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Fugit id sint ratione deserunt quibusdam.
+Voluptates corrupti sed.",
+    "https://http2.mlstatic.com/oleo-febi-34608-zf-6hp-bmw-320i-x1-x3-x5-a4-a6-landrover-D_NQ_NP_949341-MLB28860885988_122018-W.webp",
+    "Rustic Rubber Computer",
+    31.17,
+    608,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Ullam fuga perspiciatis laudantium provident blanditiis nemo omnis inventore.
+Odit dolor impedit ut ullam exercitationem odio enim eaque dolores.
+Sed asperiores tempora aut.
+Possimus eos soluta.",
+    "https://http2.mlstatic.com/oleo-cambio-aut-atf-4-valvoline-mopar-full-sintetico-chrysler-jeep-dodge-grand-cherokee-caravan-pt-cruiser-town-country-D_NQ_NP_973685-MLB40877041739_022020-W.webpautentica",
+    "Small Cotton Chicken",
+    216.68,
+    43,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Ex iusto officia ea quam.
+Dolor laboriosam labore provident quibusdam recusandae.
+Nihil sapiente sit ducimus eius aut fugiat.
+Molestias quisquam sit dolorem voluptatem dolor nemo dolor aut ut.",
+    "https://http2.mlstatic.com/fluido-oleo-cambio-automatico-atf-dexron-vi-6-mobil-6-litros-D_NQ_NP_686175-MLB32133146810_092019-W.webp",
+    "Practical Frozen Cheese",
+    539.58,
+    372,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Qui cupiditate soluta ipsa.
+Adipisci tenetur occaecati.",
+    "https://http2.mlstatic.com/7-lts-oleo-fluido-cmbio-automatico-atf-t-iv-corolla-0208-D_NQ_NP_748788-MLB31094480428_062019-W.webp",
+    "Handcrafted Steel Salad",
+    355.81,
+    273,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Et illo doloremque error quae illo.
+Voluptatum eos quo.",
+    "https://http2.mlstatic.com/kit-oleo-lubrificante-atf-diamond-atf-sp-iii-sp3-7-litros-D_NQ_NP_904822-MLB32133263328_092019-W.webp   ",
+    "Gorgeous Cotton Chicken",
+    216.99,
+    821,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Consequatur consequatur illo aut vel eos.
+Quod quo molestiae soluta.
+Vel ratione nemo ut mollitia id aliquid provident itaque ut.
+Inventore occaecati quod.",
+    "https://http2.mlstatic.com/1-litro-oleo-10w40-repsol-moto-sport-4t-oleo-triumph-bmw-D_NQ_NP_996708-MLB31539551963_072019-W.webp",
+    "Awesome Metal Pants",
+    325.72,
+    92,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Sed nisi labore commodi voluptatibus eius exercitationem reprehenderit nobis et.
+Perferendis vitae cupiditate aut et dolorem numquam.",
+    "https://http2.mlstatic.com/oleo-lubrificante-grafitado-corrente-moto-jerod-kit-5-pcs-D_NQ_NP_626934-MLB32159266162_092019-W.webp",
+    "Sleek Frozen Sausages",
+    608.5,
+    304,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Qui libero provident doloribus dolorem quos enim est quisquam nihil.
+Voluptatum qui deserunt.
+Iusto dolor tempora fugiat quia magni.
+Repellendus ad tenetur laborum ex voluptas illo et consequuntur.",
+    "https://http2.mlstatic.com/elf-sti-10w40-acea-a3b4-api-sn-rno7100700-D_NQ_NP_653402-MLB31063832894_062019-W.webp",
+    "Gorgeous Soft Car",
+    489.7,
+    841,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Voluptates et eligendi quibusdam nam quasi in sapiente velit repellendus.",
+    "https://http2.mlstatic.com/oleo-motor-honda-10w30-new-civic-fit-city-crv-original-D_NQ_NP_932717-MLB41111477689_032020-W.webp",
+    "Sleek Wooden Fish",
+    301.50,
+    591,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Et minus error voluptas consectetur et molestiae impedit in.",
+    "https://http2.mlstatic.com/fluido-radiador-motul-inugel-optimal-ultra-54c-laranja-1l-D_NQ_NP_661254-MLB32916721814_112019-W.webp",
+    "Tasty Plastic Mouse",
+    921.32,
+    63,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Doloremque voluptatum facilis cumque.
+Maxime sunt ut saepe aspernatur officia.
+Sunt amet necessitatibus velit optio vero.
+Rerum consectetur quia.",
+    "https://http2.mlstatic.com/lubrax-atf-ta-oleo-fluido-direco-hidraulica-1-litro-D_NQ_NP_900491-MLB31093606118_062019-W.webp",
+    "Handcrafted Granite Cheese",
+    515.20,
+    282,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Molestiae rem dolores est minus.
+Suscipit et recusandae quia.
+Vitae minus dolor autem et fugiat.
+Sapiente dicta unde illo qui in excepturi.",
+    "https://http2.mlstatic.com/kit-4-litros-oleo-texaco-havoline-0w20-sintetico-D_NQ_NP_635930-MLB31827455594_082019-W.webp",
+    "Fantastic Wooden Car",
+    650.66,
+    56,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Laudantium praesentium earum culpa.",
+    "https://http2.mlstatic.com/1l-oleo-de-motor-honda-repsol-moto-10w30-lubrificante-10w-30-D_NQ_NP_986100-MLB32085319880_092019-W.webp",
+    "Tasty Wooden Fish",
+    992.89,
+    820,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Provident aliquid ut repellendus asperiores quo porro cum.
+Consequatur nesciunt perspiciatis temporibus corporis voluptate ducimus consectetur vel dolores.
+Quam labore quam id id.
+Dolorem assumenda magnam molestiae impedit nihil quo.",
+    "https://http2.mlstatic.com/oleo-castrol-magnatec-5w40-a3b4-orig-vw-bossoniautoparts-D_NQ_NP_627274-MLB31205278483_062019-W.webp",
+    "Ergonomic Frozen Fish",
+    768.40,
+    895,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Id doloribus ut.
+Minima adipisci labore qui.
+Velit in tempora ipsum atque quia vel voluptate eaque.
+Architecto perspiciatis accusamus et voluptas nihil vel magni explicabo.",
+    "https://http2.mlstatic.com/troca-8-oleo-cmbio-automatico-mercedes-c180-c230-c280-c350-D_NQ_NP_630050-MLB31360067660_072019-W.webp",
+    "Practical Steel Soap",
+    758.57,
+    837,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Perferendis sequi consequatur.
+Sed culpa et quis animi laborum beatae est est.",
+    "https://http2.mlstatic.com/oleo-lubrificante-castrol-power1-racing-4t-5w40-2-litros-D_NQ_NP_812089-MLB31136100740_062019-W.webp",
+    "Refined Rubber Hat",
+    740.50,
+    899,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Provident aut nemo voluptatem neque doloremque nisi.
+Est molestiae quaerat consequatur doloribus aut inventore dolores qui aperiam.",
+    "https://http2.mlstatic.com/kit-10-oleo-cambio-automatico-valvoline-dexron-vi-6-D_NQ_NP_986383-MLB32893415439_112019-W.webp",
+    "Licensed Concrete Computer",
+    385.0,
+    885,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Aut ducimus ut laudantium non labore rerum.",
+    "https://http2.mlstatic.com/oleo-petronas-sprinta-10w40-sintetico-moto-4t-jaso-ma2-1-l-D_NQ_NP_905094-MLB32165728670_092019-W.webp",
+    "Awesome Fresh Chicken",
+    989.22,
+    714,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Quo ab consequatur delectus et sunt in qui inventore.
+Corrupti ullam excepturi nemo deserunt itaque qui.
+Repellat quod fugiat soluta.
+Explicabo enim eligendi est sit ipsam asperiores illo magnam perspiciatis.
+Numquam autem et quod.",
+    "https://http2.mlstatic.com/2-litros-motul-800-2t-sintetico-oleo-motor-moto-trilha-D_NQ_NP_991398-MLB27589682873_062018-W.webp",
+    "Intelligent Wooden Towels",
+    804.43,
+    609,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Esse ut quos illo.",
+    "https://http2.mlstatic.com/6-oleo-yamalube-yamaha-mineral-4t-20w50-sae-api-sl-jaso-ma2-D_NQ_NP_635380-MLB31539551582_072019-W.webp",
+    "Fantastic Steel Sausages",
+    13.55,
+    64,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Et cum ut quibusdam eius.
+Nisi quia et.
+Eos voluptas iste voluptatem consequuntur qui deleniti.
+Nisi est ducimus fuga repellendus quis delectus illo.",
+    "https://http2.mlstatic.com/oleo-motorex-2-tempos-cross-power-motocross-trilha-enduro-D_NQ_NP_887604-MLB40997843622_032020-W.webp",
+    "Intelligent Frozen Pizza",
+    167.28,
+    238,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Nam omnis nihil iste perspiciatis.",
+    "https://http2.mlstatic.com/kit-c-7-oleo-2-tempos-castrol-motores-2t-jaso-fb-500ml-moto-D_NQ_NP_758827-MLB31123950234_062019-W.webp",
+    "Tasty Soft Mouse",
+    284.64,
+    516,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Rerum reprehenderit non laudantium qui aut.
+Et accusantium perspiciatis perspiciatis repellat dolorem explicabo vero.
+Autem corporis adipisci adipisci.
+Voluptatem voluptatem ipsam quo tempora nobis laudantium dolore.
+Quas vel ipsa velit.",
+    "https://http2.mlstatic.com/oleo-de-motor-elf-evolution-900-ft-5w-40-api-sn-D_NQ_NP_967688-MLB32384853639_102019-W.webpsss",
+    "Incredible Metal Pizza",
+    624.54,
+    968,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Veritatis beatae aliquid doloribus ratione sed aut aspernatur.",
+    "https://http2.mlstatic.com/2x-lubrificante-corrente-graxa-liquida-molysil-moto-spray-D_NQ_NP_628196-MLB40464026015_012020-W.webp",
+    "Generic Wooden Computer",
+    46.58,
+    121,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Ullam quis sequi et sequi autem autem quidem id.
+Qui dolorem quia aut cumque veritatis excepturi nemo qui voluptatem.
+Fugit non voluptatem omnis voluptatem.",
+    "https://http2.mlstatic.com/oleo-motor-motorex-cross-power-10w60-4-tempos-D_NQ_NP_901674-MLB40459620177_012020-W.webp",
+    "Gorgeous Cotton Soap",
+    104.82,
+    978,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Quae et minima animi qui dolorum ad velit ut.",
+    "https://http2.mlstatic.com/oleo-cambio-sintetico-idemitsu-atf-1-litro-3045024871200dd-D_NQ_NP_757190-MLB32901162949_112019-W.webp",
+    "Tasty Soft Mouse",
+    846.1,
+    440,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Velit cum iure itaque eos.
+Provident esse vitae ea temporibus vero quo et atque.
+Dicta blanditiis delectus et itaque sit est dolore qui.",
+    "https://http2.mlstatic.com/oleo-genuino-honda-4t-sae-10w30-api-sj-semissintetico-1-lt-D_NQ_NP_927991-MLB32093909947_092019-W.webp",
+    "Ergonomic Fresh Cheese",
+    916.77,
+    731,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Error debitis sapiente sed et deleniti dolorum et tempore.
+Corrupti sed tempore nesciunt mollitia aut cupiditate.
+Sequi enim enim beatae culpa dolores libero sit.
+Optio quibusdam quos excepturi nihil.
+Quia et fugit.",
+    "https://http2.mlstatic.com/motul-a3-air-filter-oil-filtro-de-ar-D_NQ_NP_844007-MLB31858542389_082019-W.webp",
+    "Handmade Frozen Fish",
+    987.97,
+    142,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Perferendis a reiciendis voluptatem voluptatibus et placeat.
+Incidunt quis iusto est beatae ut sequi.
+Quo et quia facilis fuga sequi accusamus ab.",
+    "https://http2.mlstatic.com/micro-oleo-wd-40-desingripante-300ml-spray-12-unidades-D_NQ_NP_654367-MLB31075961055_062019-W.webp",
+    "Small Rubber Shoes",
+    202.68,
+    365,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Ut beatae aliquam rem et sapiente eos est.
+Distinctio molestiae qui et labore explicabo repudiandae explicabo doloribus excepturi.",
+    "https://http2.mlstatic.com/6-oleo-mobil-1-0w40-one-100-sintetico-946ml-D_NQ_NP_885736-MLB31205466966_062019-W.webp",
+    "Licensed Metal Salad",
+    68.66,
+    285,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Rem maiores qui fugit architecto est.
+Aut consequatur ducimus laborum pariatur perspiciatis fugit possimus.
+Harum est tempora.
+Aliquam aut ea voluptatem dignissimos iste quo unde quos dolor.
+Nihil dolore delectus harum corrupti similique laudantium minima et dolorem.",
+    "https://http2.mlstatic.com/oleo-lubrificante-moto-anticorrosivo-corrente-hp-spray-300ml-D_NQ_NP_899152-MLB31178741776_062019-W.webp",
+    "Sleek Plastic Hat",
+    667.0,
+    240,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Veritatis ratione odit adipisci quam maiores aspernatur.
+Amet sint quisquam eos velit veritatis dolorem.
+Officiis blanditiis animi repudiandae ad commodi sunt odit facilis.",
+    "https://http2.mlstatic.com/fluido-de-freio-motul-rbf-660-500ml-racing-brake-fluid-D_NQ_NP_835379-MLB31185811113_062019-W.webp",
+    "Sleek Granite Soap",
+    414.51,
+    383,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Ut necessitatibus et labore ut.",
+    "https://http2.mlstatic.com/oleo-lubrificante-do-motor-petronas-vs-dual-api-sl-20w50-min-D_NQ_NP_933486-MLB31086779357_062019-W.webp",
+    "Gorgeous Steel Gloves",
+    297.36,
+    392,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Doloremque earum magni architecto perspiciatis itaque neque eos ex suscipit.",
+    "https://http2.mlstatic.com/fluido-freio-motul-dot-5-dot-51-brake-fluid-500ml-D_NQ_NP_709174-MLB31199360782_062019-W.webp",
+    "Generic Wooden Pants",
+    689.75,
+    329,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Illo nobis dolore qui voluptates voluptatum et.
+Magni deserunt labore.",
+    "https://http2.mlstatic.com/oleo-lubrificante-atf-diamond-atf-sp-iii-sp3-1-litro-D_NQ_NP_935177-MLB32133298748_092019-W.webp",
+    "Handmade Plastic Tuna",
+    499.74,
+    712,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Labore vitae facilis aut deserunt aut aut voluptatem incidunt.",
+    "https://http2.mlstatic.com/oleo-motor-shell-helix-hx3-20w50-sl-1lt-D_NQ_NP_601096-MLB31968967885_082019-W.webp",
+    "Practical Plastic Table",
+    970.45,
+    863,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Culpa dolorem corporis.",
+    "https://http2.mlstatic.com/oleo-shell-helix-hx8-0w20-honda-fiat-gm-hyundai-D_NQ_NP_918917-MLB32100028921_092019-W.webp",
+    "Fantastic Wooden Computer",
+    634.2,
+    182,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Voluptatem voluptatum iure repellat.
+Omnis qui eos.",
+    "https://http2.mlstatic.com/fluido-oleo-cambio-automatic-atf-dexron-vi-6-mobil-10-litros-D_NQ_NP_720851-MLB32133142497_092019-W.webp",
+    "Generic Soft Salad",
+    509.95,
+    120,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Sunt eius dolor soluta.
+Itaque nihil iure aliquam aut.
+Unde et minus dolorem eos architecto sit voluptatibus nobis.
+Qui quaerat nisi est natus animi qui voluptatem aut cum.
+Aperiam quis sint itaque praesentium est voluptatibus provident.",
+    "https://http2.mlstatic.com/dexron-6-mobil-fluido-oleo-cambio-automatico-atf-D_NQ_NP_790966-MLB32133142942_092019-W.webp",
+    "Ergonomic Granite Bacon",
+    349.32,
+    571,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Doloribus aut vel inventore adipisci qui error ut ut et.
+Dolor incidunt ratione est consequatur.",
+    "https://http2.mlstatic.com/oleo-motor-shell-helix-15w40-hx6-flex-semi-sintetico-D_NQ_NP_848562-MLB32018552869_082019-W.webp",
+    "Intelligent Wooden Pizza",
+    269.75,
+    665,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Tempore ut ut cum consequatur.
+A cupiditate voluptates aut.
+Eaque veritatis voluptatibus numquam tenetur voluptates delectus consequatur est.",
+    "https://http2.mlstatic.com/kit-reparador-pneu-motul-p3-tyre-repair-300ml-c-3-unid-D_NQ_NP_633997-MLB31087123843_062019-W.webp",
+    "Awesome Concrete Tuna",
+    813.1,
+    615,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Ad nemo est rerum quia voluptas est.
+Corporis qui ducimus accusamus possimus aut libero.
+Aut quia quia ratione quaerat dolorem eos qui repellat et.",
+    "https://http2.mlstatic.com/oleo-de-motor-total-quartz-ineo-mc3-5w30-sintetico-1lt-D_NQ_NP_805552-MLB27333823611_052018-W.webp",
+    "Fantastic Fresh Tuna",
+    916.67,
+    967,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Sit impedit deleniti non facilis totam doloribus.",
+    "https://http2.mlstatic.com/kit-oleo-motul-4100-power-15w50-semissintetico-3-litros-D_NQ_NP_783582-MLB40718283521_022020-W.webp",
+    "Incredible Granite Towels",
+    672.92,
+    436,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Adipisci labore qui numquam temporibus ad nisi.
+Iure reiciendis quis magnam voluptas iste harum qui id distinctio.",
+    "https://http2.mlstatic.com/kit-troca-de-oleos-filtro-b-harley-davidson-fat-boy-08-17-D_NQ_NP_881317-MLB31076472617_062019-W.webp",
+    "Refined Plastic Fish",
+    54.32,
+    938,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Quos ratione sint incidunt et culpa sint.
+Magnam esse provident.
+Quasi impedit iusto.
+Qui id dolores.",
+    "https://http2.mlstatic.com/oleo-motul-6100-flexmax-5w40-1litro-semi-sintetico-D_NQ_NP_685408-MLB31674391734_082019-W.webp",
+    "Awesome Rubber Soap",
+    658.87,
+    615,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Omnis at et cumque nesciunt assumenda animi ut.
+Dolores laudantium suscipit.
+Tenetur nihil vel quam iure iste ipsum sed quia quia.
+Occaecati repellat officiis aut maiores eaque.",
+    "https://http2.mlstatic.com/oleo-fluido-freio-motul-dot-3-e-4-500ml-brake-fluid-D_NQ_NP_662278-MLB40398760431_012020-W.webp",
+    "Unbranded Rubber Car",
+    788.41,
+    572,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Illo quo ex voluptatem asperiores perferendis quod consequatur et molestiae.
+Aut libero iusto qui quasi ea dolor sunt quibusdam.
+Et asperiores unde consectetur enim eos recusandae vel fuga voluptates.",
+    "https://http2.mlstatic.com/3-lubrificantes-mobil-super-moto-escova-limpa-corrente-D_NQ_NP_879750-MLB32581966699_102019-W.webp",
+    "Intelligent Granite Towels",
+    535.33,
+    19,
+    4
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Illo odio qui molestias eveniet dolor est sint quam.
+Beatae culpa omnis quidem pariatur nemo aspernatur velit ullam.",
+    "https://http2.mlstatic.com/oleo-motor-5w40-valvoline-sint-dexos2-api-vw-bmw-mb-fiat-D_NQ_NP_940684-MLB32702258951_102019-W.webp",
+    "Handmade Cotton Pants",
+    275.52,
+    221,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Qui eos repellendus esse voluptatibus voluptatem sint perferendis ut.
+Aut doloremque minus suscipit voluptatem voluptas cupiditate numquam.
+Aspernatur provident ex cupiditate soluta soluta rem molestias sed.
+Ratione rerum ipsum est.",
+    "https://http2.mlstatic.com/4-oleo-castrol-magnatec-5w40-filtro-oleo-gol-fox-502-00-D_NQ_NP_663999-MLB31205945156_062019-W.webp",
+    "Incredible Rubber Tuna",
+    50.21,
+    782,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Facere repellendus sit culpa.
+Adipisci eligendi est sunt quas placeat.
+Aut et delectus.
+Vitae et rerum ex tempora temporibus deleniti facere quidem.",
+    "https://http2.mlstatic.com/oleo-de-cambio-motul-75w140-gear-competition-1-litro-D_NQ_NP_817916-MLB31767379632_082019-W.webp",
+    "Intelligent Rubber Chips",
+    311.6,
+    761,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Asperiores tempore tempore debitis.
+Esse rem facilis.
+Officiis sit aut non.",
+    "https://http2.mlstatic.com/kit-oleo-motul-6100-syn-nergy-5w40-semisint-6-litros-D_NQ_NP_646614-MLB40933669946_022020-W.webp",
+    "Small Concrete Cheese",
+    996.12,
+    90,
+    3
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Adipisci odio veniam id iusto vitae.
+Natus et ex autem optio iure dolores.",
+    "https://http2.mlstatic.com/combo-filtro-e-oleo-yamalube-4t-20w50-landerfazertenere250-D_NQ_NP_666765-MLB31034669115_062019-W.webp",
+    "Tasty Cotton Chair",
+    940.57,
+    542,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Necessitatibus cupiditate in autem sapiente vel quia quos repudiandae.
+Soluta qui quasi iure non tempora ut fuga.
+Neque laudantium delectus aut.
+Tenetur corrupti ut accusantium ipsa ipsam eaque.
+Illo aperiam animi omnis consequatur sapiente.",
+    "https://http2.mlstatic.com/oleo-mobil-lubrificante-de-motor-4t-20w50-1-litro-D_NQ_NP_623543-MLB31187054462_062019-W.webp",
+    "Tasty Granite Bacon",
+    717.37,
+    400,
+    2
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Omnis itaque quia unde sed molestiae quia.",
+    "https://http2.mlstatic.com/4-litros-oleo-mobil-10w40-mx-mobil-super-moto-power-D_NQ_NP_993853-MLB31090216115_062019-W.webp",
+    "Practical Concrete Table",
+    374.32,
+    263,
+    1
+    );
+
+insert into tb_product(
+            ds_description,
+            ds_image,
+            ds_name,
+            vl_price,
+            nr_quant_stock,
+            id_category
+            )
+            values(
+    "Iste dolor eum quia quaerat est amet.
+Quos eveniet repudiandae.
+Consequatur quam ut illum.",
+    "https://http2.mlstatic.com/castrol-edge-0w30-a3-sn-longlife-volkswagen-bmw-D_NQ_NP_887930-MLB32633984958_102019-W.webp",
+    "Ergonomic Fresh Salad",
+    257.40,
+    896,
+    1
+            );

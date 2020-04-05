@@ -2,6 +2,7 @@ package br.com.rd.Backend.services;
 
 import br.com.rd.Backend.DTOs.OrderItemDTO;
 import br.com.rd.Backend.DTOs.ProductDTO;
+import br.com.rd.Backend.MailConfig.Cart;
 import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.OrderItemInterface;
 import br.com.rd.Backend.models.Order;

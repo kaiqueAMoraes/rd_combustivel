@@ -1681,4 +1681,6 @@ Consequatur quam ut illum.",
     "https://http2.mlstatic.com/castrol-edge-0w30-a3-sn-longlife-volkswagen-bmw-D_NQ_NP_887930-MLB32633984958_102019-W.webp",
     "Ergonomic Fresh Salad",
     257.40,
-    896
+    896,
+    1
+            );

@@ -5,7 +5,7 @@ import './header.styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import CartIcon from './cart-icon/cart-icon.component';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import { connect } from 'react-redux';
 
@@ -33,8 +33,10 @@ const Header = ({ history, hidden }) => {
                 history.location.pathname === "/cadastro" ||
                 history.location.pathname === "/dashboard" ||
                 history.location.pathname === "/dashboard/novo-endereco" ||
+                history.location.pathname === "/carrinho/checkout" ||
+                history.location.pathname === "/carrinho/checkout/success-page" ||
                 history.location.pathname === "/dashboard/edit-usuario" ? (
-
+                    
                     <Navbar className="bg-main navbar">
                         <Link to="/" className="logo"></Link>
                         {
@@ -50,7 +52,10 @@ const Header = ({ history, hidden }) => {
                     </Navbar>
                 ) : (
                     <>
-                        <Navbar className="bg-main navbar">
+                    {
+                                    hidden ? null : <CartDropdown/>
+                                }
+                        <Navbar className="bg-main navbar fixed-header">
                             <Link to="/" className="logo"></Link>
                             <div className="d-flex user-bag">
                                 <div className="logged navbar-brand d-flex" id="user">
@@ -58,7 +63,7 @@ const Header = ({ history, hidden }) => {
                                         currentUser ? (
                                             <>
                                                 
-                                                <Link to="/dashboard"><FontAwesomeIcon icon={faHeart} className="icon-heart" /></Link>
+                                                <Link to="/dashboard"><FontAwesomeIcon icon={faMapMarkerAlt} className="icon-heart" /></Link>
                                                 <Link to="/dashboard"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle" /></Link>
                                                 <div className="user-login d-flex flex-column bd-highlight mb-3 Row" id="div-header-separation">
                                                     <Link to="/dashboard" className="navbar-span user-name" id="ola-navbar" >Olá, {currentUser}</Link>
@@ -85,16 +90,12 @@ const Header = ({ history, hidden }) => {
                                     }
                                 <CartIcon />
                                 </div>
-                                {
-                                    hidden ? null : <CartDropdown/>
-                                }
-                            
-
+                                
                             </div>
                         </Navbar>
-
-
-                        <Navbar className="nav-menu sub-navbar navbar-expand-lg navbar-light">
+                        
+                        {}
+                        <Navbar className="nav-menu sub-navbar navbar-expand-lg navbar-light fixed-subnav">
                             <Container className="fluid ">
                                 <ul className="navbar-nav d-flex none ">
                                     <li className="ml-4 nav-item mr-4 none">
@@ -124,6 +125,8 @@ const Header = ({ history, hidden }) => {
                                 </ul>
                             </Container>
                         </Navbar>
+                        <div className="safe-space-for-header"></div>
+
                     </>
                 )
 
