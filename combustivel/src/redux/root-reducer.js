@@ -7,5 +7,5 @@ import addressReducer from './address/address.reducer';
 export default combineReducers({
     user : userReducer,
     cart : cartReducer,
-    addressSelected : addressReducer
+    address : addressReducer
 });

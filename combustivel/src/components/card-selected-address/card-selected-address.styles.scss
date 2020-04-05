@@ -1,12 +1,22 @@
 
-
-.info-holder {
+.info-holder-selected {
     display: flex;
     flex-wrap: wrap;
     background-color: #fff;
     box-shadow: 0px 0px 15px #D9E3FF;
     border: 1px solid #D9E3FF;
-    padding: 15px  15px 0  15px !important;
+    padding: 15px !important;
+    background-image: url("https://cdn.dribbble.com/users/1925451/screenshots/6412378/cyclist2r_copy_4x.jpg?compress=1&resize=800x600");
+    background-size: 220px;
+    background-repeat: no-repeat;
+    background-position: right;
+    span.ops-no-address{
+        font-weight: bolder;
+        display: inline-block;
+        width: 57%;
+        font-size: 15px;
+        padding: 5px;
+    }
     p{
         margin: 0;
         padding: 2px;
@@ -68,4 +78,8 @@
 align-items: center;
 height: 30px;
 justify-content: space-between;
+}
+
+.selected-address.bk {
+    
 }
