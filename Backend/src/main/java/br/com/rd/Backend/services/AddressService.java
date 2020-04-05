@@ -13,6 +13,7 @@ import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.validation.ConstraintViolationException;
 import java.util.List;
 
 @Service("AddressService")
@@ -33,6 +34,8 @@ public class AddressService implements AddressInterface {
 
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Erro: Exite um erro na requisição: " + e.getMessage());
+        } catch (ConstraintViolationException e) {
+            return ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
         }
     }
 
@@ -42,14 +45,14 @@ public class AddressService implements AddressInterface {
             return ResponseEntity.ok().body("Não há registros para o id informado");
         } else {
             addressRepository.deleteById(id);
-            return ResponseEntity.ok().body("Endereço deletado");
+            return ResponseEntity.ok().body("Endereço id:" + id + " deletado");
         }
     }
 
     @Override
     public ResponseEntity findAddressById(Long id) {
         if (addressRepository.findById(id).isEmpty()) {
-            return ResponseEntity.ok().body("Endereco não encontrado");
+            return ResponseEntity.ok().body("Endereço não encontrado");
         } else {
             return ResponseEntity.ok().body(addressRepository.findById(id));
         }

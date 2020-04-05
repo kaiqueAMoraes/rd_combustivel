@@ -7,9 +7,11 @@ import {
   removeItem
 } from '../../redux/cart/cart.actions';
 
+import CustomButton from '../../components/custom-button/custom-button.component';
 import './checkout-item.styles.scss';
 
-const CheckoutItem = ({ cartItem : {name, image, price, quantity}}) => {
+const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem}) => {
+  const {name, image, price, quantity} = cartItem;
   return (
   <div className='checkout-item'>
     <div className='image-container'>
@@ -17,15 +19,21 @@ const CheckoutItem = ({ cartItem : {name, image, price, quantity}}) => {
     </div>
     <span className='name'>{name}</span>
     <div className='arrow'>
-          &#10094;
+          <CustomButton className="decrement" onClick={() => removeItem(cartItem)}>&#10094;</CustomButton>
         </div>
         <span className='value'>{quantity}</span>
-        <div className='arrow'>
-          &#10095;
+        <div className='arrow' onClick={() => addItem(cartItem)}>
+          <CustomButton className="increment">&#10095;</CustomButton>
         </div>
     <span className='price'>{price}</span>
-    <div className='remove-button'>&#10005;</div>
+    <div onClick={() => clearItem(cartItem)} className='remove-button'>Remover</div>
   </div>
 )};
 
-export default CheckoutItem;
+const mapDispatchToProps = dispatch => ({
+  clearItem : item => dispatch(clearItemFromCart(item)),
+  addItem : item => dispatch(addItem(item)),
+  removeItem: item => dispatch(removeItem(item))
+})
+
+export default connect(null, mapDispatchToProps)(CheckoutItem);

@@ -25,6 +25,11 @@ public class OrderController {
         return orderService.saveOrder(orderDTO);
     }
 
+    @DeleteMapping("/delete-order/{id}")
+    public ResponseEntity deleteOrderById (@PathVariable ("id") Long id) {
+        return orderService.deleteOrderById(id);
+    }
+
     @GetMapping("/findall-orders")
     public ResponseEntity findAllOrders() {
         return orderService.findAllOrders();
@@ -40,9 +45,10 @@ public class OrderController {
         return orderService.findOrderByUser(user);
     }
 
-    @GetMapping("/find-orders-bydate/{date}")
-    public ResponseEntity findById(@PathVariable("date") Date date){
-        return orderService.findOrderByDate(date);
+    //SEM FUNCIONAMENTO:
+    @GetMapping("/find-orders-bydate")
+    public ResponseEntity findById(@RequestBody Date date){
+        return null;
     }
 
 //    @GetMapping("/search-order")

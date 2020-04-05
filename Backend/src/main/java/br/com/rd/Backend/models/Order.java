@@ -20,7 +20,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOrder;
 
-    @Column(name = "vl_total_price", nullable = true)
+    @Column(name = "vl_total_price")
     private Double totalPrice;
 
     @Column(name = "dt_order")
@@ -34,4 +34,7 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "id_address", nullable = false)
     private Address idAddress;
+
+    @OneToMany(targetEntity = OrderItem.class, cascade = CascadeType.ALL)
+    private List<OrderItem> itemList;
 }
