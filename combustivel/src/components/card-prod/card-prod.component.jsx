@@ -35,7 +35,7 @@ class CardProd extends Component {
         e.preventDefault()
         console.log(e.currentTarget)
         const produto = this.state.prod
-        //this.props.history.push('/dashboard/edit-usuario', { response: produto });    
+        this.props.history.push('/', { response: produto });    
         console.log(produto);
     }
 
