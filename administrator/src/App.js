@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Header from './Components/Header/header';
+import Routes from './routes';
 
 function App() {
   return (
-    <h1>Works!</h1>
+    <Routes />
   );
 }
 
