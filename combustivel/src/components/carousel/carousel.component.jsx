@@ -66,13 +66,14 @@ componentDidMount = () => {
                     <button className="left" onClick={this.handleCarouselLeft}><FontAwesomeIcon icon={faChevronLeft} /></button>
                     <div className="carousel-container">
                         <img src="" className="carousel " style={left}></img>
-                        <img src={Banner1} className="carousel carousel-b" style={left}></img>
+                        <img src={"https://cdn.dribbble.com/users/101577/screenshots/9527608/media/9b2c2007a7310aefa27b88240a60e2fe.png"} className="carousel carousel-b" style={left}></img>
                         <img src={Banner2} className="carousel carousel-c" style={left}></img>
                         <img src={Banner3} className="carousel carousel-d" style={left}></img>
+                        <img src={Banner1} className="carousel carousel-e" style={left}></img>
 
                         {/* <div className="carousel carousel-b" style={left}><span>B1</span></div> */}
                         {/* <div className="carousel carousel-c" style={left}><span>2</span></div>
-                        <div className="carousel carousel-d" style={left}><span>3</span></div> */}
+                        */}
                     </div>
                     <button className="right" onClick={this.handleCarouselRight}><FontAwesomeIcon icon={faChevronRight} /></button>
                 </div>
