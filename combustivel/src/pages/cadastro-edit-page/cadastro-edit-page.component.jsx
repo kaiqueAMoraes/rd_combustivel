@@ -19,7 +19,7 @@ class CadastroEditPage extends Component {
         super(props);
         const user = props.history.location.state.response;
         
-        if (!sessionStorage.getItem('user')){
+        if (!localStorage.getItem('user')){
             this.props.history.push('/');
         }
 
