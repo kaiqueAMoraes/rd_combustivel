@@ -34,6 +34,7 @@ class CreateAddress extends Component {
             "idUser": "",
             "isEdit": false
         }
+        
         //this.handleChange = this.handleChange.bind(this);
     }
 
@@ -59,8 +60,6 @@ class CreateAddress extends Component {
 
     componentDidMount = async () => {
 
-        
-        
         if (this.props.location.pathname === "/dashboard/edit-endereco") {
             const endereco = this.props.location.state.response;
             console.log(endereco)
@@ -85,11 +84,6 @@ class CreateAddress extends Component {
     handleEditChange = async e => {
         e.preventDefault();
         const { cep, state, city, district, street, number, complement, idUser, id, idAddress } = this.state;
-        console.log(idAddress);
-        console.log(id);
-        console.log(this.state)
-        
-
         const address = {
             "user": {
                 "idUser": idUser

@@ -140,7 +140,7 @@ class DashboardPage extends Component {
                                 <div className="u-icon-holder"><FontAwesomeIcon icon={faInfoCircle} className="icon-userCircle" /></div>
                                 <div className="u-text-container">
                                     <h2 className="u-title">Minha conta</h2>
-                                    <span className="u-hello-user" >Olá, {sessionStorage.getItem('user')}</span>
+                                    <span className="u-hello-user" >Olá, {localStorage.getItem('user')}</span>
                                 </div>
                             </div>
                             <div className="u-show" name="active" value="compras" onClick={this.handleCompra}>

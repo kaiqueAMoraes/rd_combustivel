@@ -39,7 +39,7 @@ class CheckoutPageFinal extends React.Component {
     }
 
     componentDidMount = async () => {
-        const email = sessionStorage.getItem('email');
+        const email = localStorage.getItem('email');
         let userId = await axios.get('http://localhost:8080/find-user-email/' + email).then(response => { return response.data[0].idUser })
         let userAddress = await axios.get(`http://localhost:8080/find-address-byuser/${userId}`).then(response => { return response.data[0] })
 
@@ -117,7 +117,7 @@ class CheckoutPageFinal extends React.Component {
                                                     ) : ""}
                                                 </div>
                                                 <p className="p-title-resumo">Destinatario </p>
-                                                <span>{sessionStorage.getItem("user")}</span>
+                                                <span>{localStorage.getItem("user")}</span>
                                             </div>
                                         ) : (
                                                 <div className="address-info">

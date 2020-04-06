@@ -14,7 +14,7 @@ class LoginPage extends Component {
     constructor(props) {
         super(props)
 
-        if (sessionStorage.getItem('user'))
+        if (localStorage.getItem('user'))
             this.props.history.push('/');
 
         this.state = {
