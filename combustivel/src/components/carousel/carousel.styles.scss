@@ -8,7 +8,7 @@
 ////////////////////////////////////////////////////////////////////////
 .carousel-controller {
     width: 100vw;
-    padding: 10px;
+    
     overflow: hidden;
     position: relative;
 
@@ -42,10 +42,14 @@
 
     .carousel-a {
         background-color: #F4F7FF !important;
+        
     }
 
     //não mudar cor
     .carousel-b {
+        & img {
+            height: 200%;
+        }
         background-color: #fd8091;
     }
 
@@ -63,11 +67,13 @@
 }
 
 .carousel {
+    overflow: hidden;
     display: inline-block;
     transition: all 1s ease-out;
     width: 100vw;
     position: relative;
     height: 400px;
+    max-height: 400px;
     background-color: #4e66cd;
     margin-bottom: 45px;
 

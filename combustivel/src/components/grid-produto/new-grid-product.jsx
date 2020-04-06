@@ -18,19 +18,17 @@ class Product extends Component {
 
           const produto = props.history.location.state.response
 
-          console.log(produto);
-
           this.state = {
                produto: produto
           }
      }
 
      render() {
-          const { name, id, image, price, description, addItem } = this.state.produto;
-          const item = this.state.prod;
+          const { name, id, image, price, description } = this.state.produto;
+          const { ADD_ITEM, history} = this.props;
+          const item = this.state.produto;
 
-          console.log(this.state.prod)
-          console.log(this.state.produto);
+
           return (
                <>
                     <Container className="telaProduto ">
@@ -65,7 +63,10 @@ class Product extends Component {
                                    <br /><br />
 
                                    <div id="botao " />
-                                   <Button id="botao" color="success" onClick={() => addItem(item)}>Adicionar ao carrinho</Button>{' '}
+                                   <Button id="botao" color="success" onClick={() => {
+                                        ADD_ITEM(item)
+                                        history.push('/carrinho')
+                                   }}>Adicionar ao carrinho</Button>{' '}
                               </div>
 
                               {/*parte final da compra*/}
@@ -77,7 +78,7 @@ class Product extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-     addItem: item => dispatch(addItem(item))
+     ADD_ITEM: item => dispatch(addItem(item))
 })
 
-export default connect(null, mapDispatchToProps)(withRouter(Product));
+export default withRouter(connect(null, mapDispatchToProps)(Product));
