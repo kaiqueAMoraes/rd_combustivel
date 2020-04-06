@@ -91,16 +91,12 @@ class Home extends Component {
                         produtos={`http://localhost:8080/find-all-products`}
                     />
 
-                   
-
-
                     <h2>Adicionados recentemente</h2>
                     <ScrollCards/>
                     
                     <h2>Outras ofertas</h2>
                     <ScrollCards/>
                 </Container>
-                <div className="footer"></div>
             </>
         )
     }

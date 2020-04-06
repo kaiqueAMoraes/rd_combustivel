@@ -55,8 +55,8 @@ class Product extends Component {
 
                                    <br /><br />
                                    <div className="price-container">
-                                        <h3 className="price">R$ {price}</h3>
-                                        <span>preço por litro</span>
+                                        <h3 className="price">{Intl.NumberFormat('pt-BR',{style:'currency', currency:'BRL'}).format(price)}</h3>
+                                        <span></span>
                                    </div>
                                    <br /><br />
                                    <hr />
