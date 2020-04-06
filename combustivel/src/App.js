@@ -48,6 +48,7 @@ function App() {
         <Route exact path="/carrinho/checkout/success-page" component={SuccessOrderPage}/> 
         {/* <Route exact path="/carrinho/checkout/checkout-adresses" component={CreateAddress}/> */}
       </Switch>
+      <hr className="teal" style={{ width: '100%' }} />
       <Footer/>
     </BrowserRouter>
   </>

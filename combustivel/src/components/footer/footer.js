@@ -6,12 +6,8 @@ import "./footer.css";
 const Footer = ({ match }) => {
     return (
         <>
-            <div style={{ backgroundColor: '#ffffff' }}>
-                <Container className="container">
-
-                </Container>
-            </div>
-            <Container className="container text-center text-md-left mt-5" >
+           
+            <Container className="container text-center text-md-left mt-5">
                 <Row className="row mt-3 dark-grey-text">
 
                     <Col className="col-md-3 col-lg-4 col-xl-3 mb-4">
