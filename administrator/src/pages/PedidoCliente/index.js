@@ -7,7 +7,6 @@ import Header from '../../Components/Header/header';
 import './styles.css';
 
 export default class PedidoCliente extends Component {
-
     constructor(props){
         super(props);
     }
@@ -18,7 +17,7 @@ export default class PedidoCliente extends Component {
 
 
     componentDidMount() {
-        axios.get(`http://localhost:8080/findall-orders`)
+        axios.get(`http://localhost:8080/find-orders-byuser/${this.props.id}`)
           .then(res => {
             const orders = res.data;
             this.setState({ orders });

@@ -12,22 +12,22 @@ export default class Clientes extends React.Component{
         users: []
       }
     
-      handleOrders = event => {
-        event.preventDefault();
+    handleOrders = (id) => {
     
-        this.history.push('/');
+        this.props.history.push('/pedido-cliente', id);
+        console.log(id);
     }
 
-    handleDelete = event => {
-        event.preventDefault();
-    
-        console.log(this.state.id);
+    handleDelete = (id) => {
 
-        // axios.delete(`http://localhost:8080/delete-user/${this.state.id}`)
-        //   .then(res => {
-        //     console.log(res.data);
-        //     alert('Usuário Deletado!')
-        //   })
+        axios.delete(`http://localhost:8080/delete-user/${id}`)
+          .then(res => {
+            console.log(res.data);
+          })
+
+          alert('Usuário deletado!')
+
+          this.setState.users.filter(user => user.idUser !== id)
       }
 
       componentDidMount() {
@@ -57,13 +57,13 @@ export default class Clientes extends React.Component{
                     <tbody>
                         { this.state.users.map(user => (
                             <tr>
-                                <td value="" name="id" key={user.idUser}>{user.idUser}</td>
+                                <td name="id" key={user.idUser}>{user.idUser}</td>
                                 <td>{user.firstName} {user.lastName}</td>
                                 <td>{user.email}</td>
                                 <td>{user.birth}</td>
                                 <button id="editar" className="buttons" onClick="">Editar</button>
-                                <button onClick={this.handleDelete} id="deletar" className="buttons">Deletar</button>
-                                <button onClick={this.handleOrders} id="pedidos" className="buttons">Pedidos</button>
+                                <button onClick={() => this.handleDelete(user.idUser)} id="deletar" className="buttons">Deletar</button>
+                                <button onClick={() => this.handleOrders(user.idUser)} id="pedidos" className="buttons">Pedidos</button>
                             </tr>
                         ))}
                     </tbody>
