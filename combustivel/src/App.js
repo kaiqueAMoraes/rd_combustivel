@@ -16,6 +16,7 @@ import CheckoutPage from './pages/checkout/checkout.component';
 import CheckoutPageFinal from './pages/checkout-page-final/checkout-page-final.component';
 import SuccessOrderPage from './pages/checkout-success/checkout-success.component';
 import CategoriaPage from './pages/categoria-page/categoria.component';
+import Footer from '../../combustivel/src/components/footer/footer';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
         <Route exact path="/carrinho/checkout/success-page" component={SuccessOrderPage}/> 
         {/* <Route exact path="/carrinho/checkout/checkout-adresses" component={CreateAddress}/> */}
       </Switch>
+      <Footer/>
     </BrowserRouter>
   </>
   );
