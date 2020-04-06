@@ -8,12 +8,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 
 import './checkout-success.styles.scss';
+import { connect } from 'react-redux';
+import { resetCart } from '../../redux/cart/cart.actions';
 
-const SuccessOrderPage = ({ history }) => {
+const SuccessOrderPage = ({ history, RESET_CART}) => {
+
+    RESET_CART()
     return (
         <Container>
-
-
             <div className="success-order">
                 <div className="success-icon-container">
                     <div className="success-icon">
@@ -38,4 +40,8 @@ const SuccessOrderPage = ({ history }) => {
     )
 }
 
-export default withRouter(SuccessOrderPage);
+const mapDispatchToProps = dispatch => ({
+    RESET_CART : () => dispatch(resetCart())
+})
+
+export default withRouter(connect(null,mapDispatchToProps)(SuccessOrderPage));

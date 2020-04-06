@@ -11,7 +11,8 @@ import CustomButton from '../../components/custom-button/custom-button.component
 import Spinner from 'react-bootstrap/Spinner';
 import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
 import { connect } from 'react-redux';
-
+import { resetCart } from '../../redux/cart/cart.actions';
+import FormInput from './form-input/form-input.componets';
 
 class CheckoutPageFinal extends React.Component {
     constructor(props) {
@@ -24,10 +25,18 @@ class CheckoutPageFinal extends React.Component {
             total: this.props.history.location.state.total,
             frete: 91.32,
             loading: false,
-            idUser: ""
+            idUser: "",
+            ncartao: " ",
+            CVV: " ",
+            DATA: " ",
+            nomeCartao: ""
         }
     }
+    handleChange = e => {
+        const { name, value } = e.target;
 
+        this.setState({ [name]: value.toUpperCase() });
+    }
 
     componentDidMount = async () => {
         const email = sessionStorage.getItem('email');
@@ -38,15 +47,18 @@ class CheckoutPageFinal extends React.Component {
             itemList: this.props.history.location.state.itemList,
             address: userAddress,
             idUser: userId,
+
         })
+        console.log(userId)
     }
 
     handleOrder = async () => {
         this.setState({ loading: true })
-        const { address, itemList, total, idUser } = this.state;
+        const { address, itemList, total, idUser, frete } = this.state;
+        const totalPrice = total + frete
         const order =
         {
-            "totalPrice": total,
+            "totalPrice": totalPrice,
             "idUser": {
                 "idUser": idUser
             },
@@ -72,8 +84,7 @@ class CheckoutPageFinal extends React.Component {
 
     render() {
         const { total, itemList, frete, address, loading } = this.state;
-        const { itemCount, addressSelected } = this.props
-        //const { cep, street, city, district, number, complement, state, idAddress } = addressSelected;
+        const { itemCount, addressSelected, RESET_CART } = this.props
 
         return (
             <Container>
@@ -109,10 +120,10 @@ class CheckoutPageFinal extends React.Component {
                                                 <span>{sessionStorage.getItem("user")}</span>
                                             </div>
                                         ) : (
-                                            <div className="address-info">
-                                                <p>Endereço não incluido ainda</p>
-                                            </div>
-                                        )
+                                                <div className="address-info">
+                                                    <p>Endereço não incluido ainda</p>
+                                                </div>
+                                            )
                                     }
                                 </div>
                                 <div className="total-resumo">
@@ -139,22 +150,80 @@ class CheckoutPageFinal extends React.Component {
                                 </div>
                             </div>
                             <div className="to-the-left">
-                               {
-                                   addressSelected ?  (
-                                    <CustomButton
-
-                                    onClick={this.handleOrder}>
-                                    finalizar compra
-                                {loading ? <Spinner animation="grow" variant="light" /> : ""}
-                                </CustomButton>
-                                   ) : ""
-                               }
-                                
-
                             </div>
-                            {/* <p className="p-title-resumo">Cartão de pagamento</p>
-                            <div className="pagamento-cartao">
-                            </div> */}
+                            <p className="p-title-resumo">Cartão de pagamento</p>
+                            <div className="pagamento-cartao-holder">
+                                <div className="cartao">
+                                    <FormInput
+                                        name="nomeCartao"
+                                        type="text"
+                                        label="Nome"
+
+                                        size="input-m"
+                                        value={this.state.nomeCartao.toUpperCase()}
+                                        handleChange={this.handleChange}
+                                        required />
+                                    <FormInput
+                                        name="ncartao"
+                                        type="text"
+                                        label="numero do cartão"
+                                        mask="9999.9999.9999.9999"
+                                        size="input-m"
+                                        value={this.state.ncartao}
+                                        handleChange={this.handleChange}
+                                        required />
+
+
+                                    <div className="cartao-flex-collumn">
+                                        <FormInput
+                                            size="input-cvv"
+                                            name="CVV"
+                                            type="text"
+                                            label="CVV"
+                                            mask="999"
+                                            value={this.state.CVV}
+                                            handleChange={this.handleChange}
+                                            required />
+                                        <FormInput
+
+                                            name="DATA"
+                                            type="text"
+                                            label="data"
+                                            mask="99.99"
+                                            size="input-cvv"
+                                            value={this.state.DATA}
+                                            handleChange={this.handleChange}
+                                            required />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="address-info">
+                                    <p className="p-title-resumo">informações do cartão</p>
+                                        
+                                        <div className="address-state-city-cep">
+                                            <p>nome : {this.state.nomeCartao}</p>
+                                            <p>cartão : {this.state.ncartao}</p>
+                                            <p>CVV : {this.state.CVV}</p>
+                                            <p>data : {this.state.DATA}</p>
+                                        </div>
+                                       
+                                    </div>
+                                    {
+                                        addressSelected && 
+                                        this.state.nomeCartao.length > 15 &&
+                                        this.state.ncartao.length > 10 &&
+                                        this.state.DATA.length > 4 &&
+                                            this.state.CVV.length > 2 ? (
+                                            <CustomButton
+
+                                                onClick={this.handleOrder}>
+                                                finalizar compra
+                                                {loading ? <Spinner animation="grow" variant="light" /> : ""}
+                                            </CustomButton>
+                                        ) : ""
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

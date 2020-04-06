@@ -11,6 +11,11 @@ const addressReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 addressSelected : action.payload
             }
+        case AddressActionTypes.RESET_ADDRESS:
+            return {
+                ...state,
+                addressSelected : INITIAL_STATE.addressSelected
+            }
             default : 
                 return state;
     }

@@ -1,5 +1,9 @@
 import CartActionTypes from './cart.types';
 
+export const resetCart = () => ({
+    type: CartActionTypes.RESET_CART
+})
+
 export const toggleCartHidden = () => ({
     type : CartActionTypes.TOGGLE_CART_HIDDEN
 })
