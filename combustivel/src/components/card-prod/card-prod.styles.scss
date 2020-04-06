@@ -21,6 +21,7 @@
     }
 }
 
+
 .heart:hover {
     transition: all 350ms ease-in-out;
     box-shadow: 0 0 5px #80808026;
@@ -29,6 +30,9 @@
         color: #01B1EA;
 
     }
+}
+.image-prod-grid{
+    width: 150px;
 }
 
 .prod-card {

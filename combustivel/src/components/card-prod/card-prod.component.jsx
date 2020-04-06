@@ -49,7 +49,7 @@ class CardProd extends Component {
                 </div>
                 <div key={idprod} onClick={this.handleProduto.bind(this)}>
                     <div className="prod-image" >
-                        <img src={image} alt="image prod" />
+                        <img src={image} alt="image prod" className="image-prod-grid" />
                     </div>
                     <div className="prod-content">
                         <h5 className="prod-price">{Intl.NumberFormat('pt-BR',{style:'currency', currency:'BRL'}).format(price)}</h5>
