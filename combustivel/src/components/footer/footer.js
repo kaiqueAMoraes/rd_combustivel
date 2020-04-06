@@ -3,10 +3,13 @@ import { Col, Row, Container } from 'reactstrap';
 import { Link, withRouter } from "react-router-dom";
 import "./footer.css";
 
-const Footer = ({ match }) => {
+const Footer = ({ match , history}) => {
     return (
-        <>
+        
            
+               history.location.pathname === "/dashboard" ? " " :
+                (
+                    <>
             <Container className="container text-center text-md-left mt-5">
                 <Row className="row mt-3 dark-grey-text">
 
@@ -42,7 +45,8 @@ const Footer = ({ match }) => {
                 <Link className="dark-grey-text" href='https://origin.com.br'> origin.com.br</Link>
             </div>
         </>
+                )
     )
 }
 
-export default Footer;
+export default withRouter(Footer);

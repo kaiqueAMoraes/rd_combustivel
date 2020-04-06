@@ -57,7 +57,10 @@ class CreateAddress extends Component {
         })
     }
 
-    componentDidMount = () => {
+    componentDidMount = async () => {
+
+        
+        
         if (this.props.location.pathname === "/dashboard/edit-endereco") {
             const endereco = this.props.location.state.response;
             console.log(endereco)
@@ -85,6 +88,8 @@ class CreateAddress extends Component {
         console.log(idAddress);
         console.log(id);
         console.log(this.state)
+        
+
         const address = {
             "user": {
                 "idUser": idUser
@@ -97,7 +102,6 @@ class CreateAddress extends Component {
             "street": street,
             "number": number,
             "complement": complement
-            
         }
         try {
             await axios.put("http://localhost:8080/update-address", address)
@@ -200,9 +204,9 @@ class CreateAddress extends Component {
 
         try {
             let address = {};
-            await axios.get('http://localhost:8080/find-user-email/' + sessionStorage.getItem('email'))
+            await axios.get('http://localhost:8080/find-user-email/' + localStorage.getItem('email'))
                 .then(response => {
-                    console.log(sessionStorage.getItem('email'));
+                    console.log(localStorage.getItem('email'));
                     address = {
                         "cep": cep,
                         "state": state,

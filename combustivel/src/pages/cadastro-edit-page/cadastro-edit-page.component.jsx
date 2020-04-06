@@ -195,8 +195,8 @@ class CadastroEditPage extends Component {
                                     valid: true,
                                     successMessage: "informações editadas com sucesso"
                                 })
-                                sessionStorage.setItem("user", fullName);
-                                sessionStorage.setItem("email", response.data.email);
+                                localStorage.setItem("user", fullName);
+                                localStorage.setItem("email", response.data.email);
                                 //sessionStorage.setItem("email", response.data[0].email);
                                 setInterval(() => {
                                     this.clearState();
