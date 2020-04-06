@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import axios from 'axios'
-
+import { withRouter } from 'react-router-dom';
+import axios from 'axios';
+import { addItem } from '../../redux/cart/cart.actions';
+import { connect } from 'react-redux'
 
 import '../grid-produto/new-grid-product.css';
 
@@ -11,95 +13,71 @@ import {
 
 class Product extends Component {
 
-     state = {
-          produtos: []
+     constructor(props) {
+          super(props);
+
+          const produto = props.history.location.state.response
+
+          console.log(produto);
+
+          this.state = {
+               produto: produto
+          }
      }
-
-     buscarProduto = async (e) => {
-          e.preventDefault()
-
-          const produtos = await axios(`http://localhost:8080/find-product/1`)
-
-          this.setState({ produtos: [produtos.data, ...this.state.produtos] });
-
-          console.log(produtos);
-     }
-
 
      render() {
+          const { name, id, image, price, description, addItem } = this.state.produto;
+          const item = this.state.prod;
+
+          console.log(this.state.prod)
+          console.log(this.state.produto);
           return (
                <>
-                    <Container className="telaProduto  ">
+                    <Container className="telaProduto ">
                          {/*parte inicio produto e descrição*/}
                          <form id="produto" className="row ">
 
                               <div className="card col-md-7">
-
-                                   {this.state.produtos.map(produtos => (
-                                        <div>
-                                             
-                                             <Row className=" card-compra" >
-                                                  <div className="img">
-                                                       <img src="https://images-americanas.b2w.io/produtos/01/00/oferta/134253/9/134253978G1.jpg" alt="" />
-                                                  </div>
-
-                                                  <div className="card-body">
-                                                       <div>
-
-                                                            <h1>Nome produto</h1>
-                                                            <p>Descrição do Produto</p>
-
-                                                       </div>
-                                                  </div>
-                                             </Row>
-                                        </div>
-                                   ))}
+                                   <div>
+                                        <Row className="card-compra" >
+                                             <h2 className="name">{name}</h2>
+                                             <div className="block-2">
+                                                  <img src={image} alt="" />
+                                                  <p className="block-description">{description}</p>
+                                             </div>
+                                        </Row>
+                                   </div>
                               </div>
+
                               {/*parte final produto e descrição*/}
-
-
                               <div id="teste" className=""></div> {/*" col-md-1" em classname para ocupar uma colna */}
 
-
                               {/*parte de compra*/}
-
-                              <div id="compra" className="card col-md-4">
+                              <div id="compra" className="card card-price col-md-4">
 
                                    <br /><br />
                                    <div className="price-container">
-                                        <h3 className="price">R$ 123,20</h3>
+                                        <h3 className="price">R$ {price}</h3>
                                         <span>preço por litro</span>
                                    </div>
-
-
-
                                    <br /><br />
                                    <hr />
                                    <br /><br />
-
-                                   <div className="container">
-                                        <label htmlFor="frete"><h4>Calcular Frete</h4></label>
-                                        <br />
-                                        <input className="frete" type="text" id="titular" name="frete" placeholder="" />
-                                        <Button id="btnok" color="primary">OK</Button>{' '}
-                                   </div>
-
-                                   <br /><br />
-                                   <hr />
-                                   <br />
 
                                    <div id="botao " />
-                                   <Button id="botao" color="success">Comprar</Button>{' '}
+                                   <Button id="botao" color="success" onClick={() => addItem(item)}>Adicionar ao carrinho</Button>{' '}
                               </div>
-
 
                               {/*parte final da compra*/}
                          </form>
                     </Container>
-
                </>
           )
      }
 }
 
-export default Product;
+const mapDispatchToProps = dispatch => ({
+     addItem: item => dispatch(addItem(item))
+})
+
+export default connect(null, mapDispatchToProps)(withRouter(Product));
