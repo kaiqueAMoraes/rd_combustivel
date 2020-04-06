@@ -16,7 +16,7 @@ export default function Logon() {
     async function handleLogin(evt) {
         evt.preventDefault();
 
-        history.push("/main")
+        history.push("/main");
     }
 
   return (

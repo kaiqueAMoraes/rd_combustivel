@@ -6,6 +6,7 @@ import Main from './pages/Main';
 import Clientes from './pages/Clientes';
 import Pedidos from './pages/Pedidos';
 import CadastrarProduto from './pages/CadastrarProduto';
+import PedidoCliente from './pages/PedidoCliente';
 
 
 export default function Routes() {
@@ -17,6 +18,7 @@ export default function Routes() {
             <Route path="/clientes" exact component={Clientes} />
             <Route path="/pedidos" exact component={Pedidos} />
             <Route path="/cadastrar-produto" exact component={CadastrarProduto} />
+            <Route path="/pedido-cliente" exact component={PedidoCliente} />
         </Switch>
     </BrowserRouter>
   );
