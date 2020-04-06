@@ -5,6 +5,11 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { withRouter } from 'react-router-dom';
 
+import Banner1 from "../../banners/Banner1.jpg";
+import Banner2 from "../../banners/Banner2.jpg";
+import Banner3 from "../../banners/Banner3.jpg";
+
+
 import './carousel.styles.scss';
 
 class Carousel extends Component {
@@ -60,11 +65,14 @@ componentDidMount = () => {
                 <div className="carousel-controller">
                     <button className="left" onClick={this.handleCarouselLeft}><FontAwesomeIcon icon={faChevronLeft} /></button>
                     <div className="carousel-container">
-                        <div className="carousel carousel-a" style={left}><span>0</span></div>
-                        <div className="carousel carousel-b" style={left}><span>B1</span></div>
-                        <div className="carousel carousel-c" style={left}><span>2</span></div>
-                        <div className="carousel carousel-d" style={left}><span>3</span></div>
-                        <div className="carousel carousel-e" style={left}><span>4</span></div>
+                        <img src="" className="carousel " style={left}></img>
+                        <img src={Banner1} className="carousel carousel-b" style={left}></img>
+                        <img src={Banner2} className="carousel carousel-c" style={left}></img>
+                        <img src={Banner3} className="carousel carousel-d" style={left}></img>
+
+                        {/* <div className="carousel carousel-b" style={left}><span>B1</span></div> */}
+                        {/* <div className="carousel carousel-c" style={left}><span>2</span></div>
+                        <div className="carousel carousel-d" style={left}><span>3</span></div> */}
                     </div>
                     <button className="right" onClick={this.handleCarouselRight}><FontAwesomeIcon icon={faChevronRight} /></button>
                 </div>

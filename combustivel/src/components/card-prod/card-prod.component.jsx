@@ -54,13 +54,13 @@ class CardProd extends Component {
                     <div className="prod-content">
                         <h5 className="prod-price">{Intl.NumberFormat('pt-BR',{style:'currency', currency:'BRL'}).format(price)}</h5>
                         <h5 className="prod-title" >{name}</h5>
-
                     </div>
                 </div>
                 <button onClick={()=> addItem(item)}
                     className="btn-to-cart">
                     <span>Adicionar ao Carrinho</span>
                 </button>
+                
             </div>
         )
     }
