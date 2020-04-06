@@ -21,13 +21,13 @@ class DashboardPage extends Component {
     constructor(props) {
         super(props);
         //console.log(props)
-        const currentUser = sessionStorage.getItem('user');
+        const currentUser = localStorage.getItem('user');
         if (!currentUser)
             this.props.history.push('/');
 
         this.state = {
             user: {},
-            email: sessionStorage.getItem('email'),
+            email: localStorage.getItem('email'),
             endereco: [],
             compras: [],
             active: "myAccount",

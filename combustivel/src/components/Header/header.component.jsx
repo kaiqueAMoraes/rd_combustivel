@@ -120,18 +120,6 @@ const Header = ({ history, hidden }) => {
                                             history.push('/home/categoria/gas-natural/')
                                             window.location.reload()}}>Fluidos para motor</Link>
                                     </li>
-                                    {/* <li className="ml-4 nav-item mr-4 none">
-                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Carros</Link>
-                                    </li>
-                                    <li className="ml-4 nav-item mr-4 none">
-                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Motos</Link>
-                                    </li>
-                                    <li className="ml-4 nav-item mr-4 none">
-                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Esportivos</Link>
-                                    </li>
-                                    <li className="ml-4 nav-item mr-4 none">
-                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Lorem</Link> 
-                                    </li>*/}
                                 </ul>
                             </Container>
                         </Navbar>

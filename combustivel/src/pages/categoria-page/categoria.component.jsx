@@ -56,8 +56,6 @@ export default class CategoriaPage extends Component {
             default:
                 break;
         }
-
-
     }
 
     render() {
