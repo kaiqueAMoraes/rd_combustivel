@@ -103,18 +103,18 @@ const Header = ({ history, hidden }) => {
                             <Container className="fluid ">
                                 <ul className="navbar-nav d-flex none ">
                                     <li className="ml-4 nav-item mr-4 none">
-                                        <Link className="nav-link" to={'/home/categoria/gasolina-aditivada/'}>Gasolina Adtivada</Link>
+                                        <Link className="nav-link" to={'/home/categoria/gasolina-aditivada/'}>Gasolina</Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none">
-                                        <Link className="nav-link" to={'/home/categoria/etanol-aditivado/'}>Etanol Adtivado</Link>
+                                        <Link className="nav-link" to={'/home/categoria/etanol-aditivado/'}>Etanol </Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none" >
-                                        <Link className="nav-link" to={'/home/categoria/Diesel/'}>Diesel</Link>
+                                        <Link className="nav-link" to={'/home/categoria/Diesel/'}>Óleo</Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none">
-                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Gás Natural</Link>
+                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Fluidos para motor</Link>
                                     </li>
-                                    <li className="ml-4 nav-item mr-4 none">
+                                    {/* <li className="ml-4 nav-item mr-4 none">
                                         <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Carros</Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none">
@@ -124,8 +124,8 @@ const Header = ({ history, hidden }) => {
                                         <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Esportivos</Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none">
-                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Lorem</Link>
-                                    </li>
+                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Lorem</Link> 
+                                    </li>*/}
                                 </ul>
                             </Container>
                         </Navbar>
