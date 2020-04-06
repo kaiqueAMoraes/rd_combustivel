@@ -1,0 +1,64 @@
+.row {
+    padding: 35px;
+}
+
+.telaProduto {
+    padding-bottom: 50px;
+
+}
+
+.produto {
+    height: 100%;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.card-compra {
+    display: block;
+    padding-top: 50px;
+    padding-left: 50px;    
+    padding-bottom: 50px;
+} 
+
+.name{
+    display: flex;
+    align-items: center;
+}
+
+.block-2{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    padding-right: 40px;
+}
+
+.block-description{
+    text-align: justify;
+}
+
+input{
+    height: 37px;
+    padding-bottom: 5px;
+}
+
+.card-body {
+    width: 90px;
+    height: 100px;
+    padding-right: 50px;
+}
+
+div#compra {
+    padding-bottom: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+div#teste {
+    height: 10px;
+    width: 5px;
+}
+
+img {
+    width: 220px;
+    height: 200px;
+}
