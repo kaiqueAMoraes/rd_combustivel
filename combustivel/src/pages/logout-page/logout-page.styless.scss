@@ -1,0 +1,23 @@
+.logout-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff !important;
+}
+
+.collumn-flex{
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    color: #2E91E6;
+    font-weight: bold;
+}
+
+.logout-image{
+    height: 390px;
+    width: 500px;
+    background-image: url("https://cdn.dribbble.com/users/389484/screenshots/9020848/media/072574192779be898f58b5bb47aa4ebe.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}

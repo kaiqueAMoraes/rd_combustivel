@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import CartIcon from './cart-icon/cart-icon.component';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import { connect } from 'react-redux';
 
@@ -17,10 +18,10 @@ import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 
 const handleSignOut = () => {
-    let user = sessionStorage.getItem('user')
-    user ? sessionStorage.clear() : sessionStorage.getItem('user');
-    window.location.reload();
-    console.log(sessionStorage.getItem('user'))
+    // let user = sessionStorage.getItem('user')
+    // user ? sessionStorage.clear() : sessionStorage.getItem('user');
+    // window.location.reload();
+
 }
 
 const Header = ({ history, hidden }) => {
@@ -42,7 +43,7 @@ const Header = ({ history, hidden }) => {
                         {
                             history.location.pathname === "/dashboard" ? (
                                 <div className="d-flex user-bag">
-                                    <Link onClick={handleSignOut} className="navbar-span align-self-bottom get-exit" id="usuario-navbar">Sair</Link>
+                                    <Link onClick={() => {history.push("/logout")}} className="navbar-span align-self-bottom get-exit" id="usuario-navbar">Sair</Link>
                                 </div>
                             ) : (
                                     <div className="d-flex user-bag">
@@ -64,14 +65,17 @@ const Header = ({ history, hidden }) => {
                                             <>
                                                 
                                                 <Link to="/dashboard"><FontAwesomeIcon icon={faMapMarkerAlt} className="icon-heart" /></Link>
+                                                <CartIcon />
                                                 <Link to="/dashboard"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle" /></Link>
                                                 <div className="user-login d-flex flex-column bd-highlight mb-3 Row" id="div-header-separation">
                                                     <Link to="/dashboard" className="navbar-span user-name" id="ola-navbar" >Olá, {currentUser}</Link>
                                                     <Link to="/dashboard" className="navbar-span align-self-bottom" id="usuario-navbar">Minha conta</Link>
                                                 </div>
+                                                <Link to="/logout"><FontAwesomeIcon icon={faSignOutAlt} className="icon-userCircle" /></Link>
                                             </>
                                         ) : (
                                             <>
+                                            <CartIcon />
                                                         <Link to="/login"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle user-mobile" /></Link>
                                                         <Link to="/login">
                                                         <CustomButton
@@ -88,7 +92,7 @@ const Header = ({ history, hidden }) => {
                                                 </>
                                             )
                                     }
-                                <CartIcon />
+                                
                                 </div>
                                 
                             </div>

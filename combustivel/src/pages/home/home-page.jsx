@@ -92,12 +92,7 @@ class Home extends Component {
                         produtos={`http://localhost:8080/find-all-products`}
                     />
 
-                    <Row><Link className="full full-black"></Link></Row>
-                    <Row className="justify-content-between mb-4">
-                        <Link className="diamond-offer"><span>70% off</span></Link>
-                        <Link className="diamond-offer"><span>90% off</span></Link>
-                        <Link className="diamond-offer"><span>50% off</span></Link>
-                    </Row>
+                   
 
 
                     <h2>Adicionados recentemente</h2>

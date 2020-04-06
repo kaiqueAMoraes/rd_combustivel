@@ -158,32 +158,35 @@ class DashboardPage extends Component {
                                 <>
                                     <h5 className="dashboard-title">Minha conta</h5>
                                     <div className="info-holder box-border">
-                                        <div className="info-container">
-                                            <span>nome</span><p>{this.state.user.firstName}</p>
+                                        <div className="address-info">
+                                            <div className="info-container">
+
+                                                <p>{this.state.user.firstName} {this.state.user.lastName}</p>
+                                                <p>{this.state.user.gender === "M" ? "Masculino" : "Feminino"}</p>
+                                                <p>{this.state.user.email}</p>
+                                                <p>{this.state.user.cpf}</p>
+                                                <p>{this.state.user.phone}</p>
+                                                <p>{birth}</p>
+                                            </div>
+
                                         </div>
 
                                         <div className="info-container">
-                                            <span>sobrenome</span><p>{this.state.user.lastName}</p>
                                         </div>
 
                                         <div className="info-container">
-                                            <span>sexo</span><p>{this.state.user.gender === "M" ? "Masculino" : "Feminino"}</p>
                                         </div>
 
                                         <div className="info-container">
-                                            <span>email</span><p>{this.state.user.email}</p>
                                         </div>
 
                                         <div className="info-container">
-                                            <span>cpf</span><p>{this.state.user.cpf}</p>
                                         </div>
 
                                         <div className="info-container">
-                                            <span>tel</span><p>{this.state.user.phone}</p>
                                         </div>
 
                                         <div className="info-container">
-                                            <span>data nasc</span><p>{birth}</p>
                                         </div>
 
                                         <div className="line-break-left">
@@ -199,7 +202,7 @@ class DashboardPage extends Component {
                                         <h5 className="dashboard-title">endereço de entrega</h5>
                                     </div>
 
-                                    <SelectedCardAddress/>
+                                    <SelectedCardAddress />
 
                                     <div className="line-break">
                                         <h5 className="dashboard-title">Meus endereços</h5>
@@ -235,7 +238,7 @@ class DashboardPage extends Component {
 }
 
 const mapStateToProps = state => ({
-    selectedAddress : state.address.addressSelected
+    selectedAddress: state.address.addressSelected
 });
 
 export default withRouter(connect(mapStateToProps)(DashboardPage));

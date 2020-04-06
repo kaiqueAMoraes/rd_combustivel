@@ -31,7 +31,11 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                         cartItem => cartItem.id !== action.payload.id
                     )
             }
-    
+            case CartActionTypes.RESET_CART:
+                return {
+                    ...state,
+                        cartItems: INITIAL_STATE.cartItems
+                }
         default:
             return state;
             break;
