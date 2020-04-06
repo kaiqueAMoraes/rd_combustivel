@@ -12369,14 +12369,14 @@ insert into tb_address(
                 ds_name
                 )
                 values(
-        "Gás Natural"
+        "Gasolina"
         );
 
     insert into tb_category(
                 ds_name
                 )
                 values(
-        "Gasolina Adtivada"
+        "Etanol"
         );
 
     insert into tb_category(
@@ -12402,13 +12402,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Eum neque consequatur.
-Vel non laudantium ipsam quidem id architecto.
-Nulla aut sed sapiente debitis ea.
-Rerum impedit harum necessitatibus eum.",
+    "É um combustível com baixo teor de enxofre que proporciona para os motores baixa formação de depósitos em válvulas, bicos injetores e na câmara de combustão.",
     "https://http2.mlstatic.com/galo-tanque-de-combustivel-20-litros-original-seaflo-D_NQ_NP_841552-MLB31118387857_062019-O.webp",
-    "Unbranded Concrete Chair",
-    174.38,
+    "Gasolina comum",
+    4.55,
     673,
     3
     );
@@ -12422,13 +12419,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Deleniti consequatur velit vitae odit quos magni dolor.
-Tempora id nobis libero ut deleniti quidem.
-Quisquam consequatur perspiciatis et inventore ex ipsa ipsa aut.
-Facilis consequatur repellat est dolore sunt placeat sunt et.",
+    "Combustível obtido da fermentação da cana-de-açúcar, o etanol ajuda na redução do gás carbônico. O tempo de preservação do etanol no tanque de combustível, sem perder suas características, vai depender das condições de armazenagem e temperatura.",
     "https://http2.mlstatic.com/D_Q_NP_694087-MLB29338393192_022019-AB.webp",
-    "Unbranded Wooden Salad",
-    68.7,
+    "Etanol Ipiranga",
+    3.29,
     116,
     4
     );
@@ -12442,34 +12436,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Quia dolorum fuga modi pariatur dicta.
-Quasi nihil delectus velit reiciendis mollitia non facilis.
-Unde animi velit repellendus.
-Ducimus mollitia incidunt quibusdam porro consequatur id vero.",
-    "https://http2.mlstatic.com/troca-oleo-motor-15w40-sl-semi-sintetico-acdelco-com-filtro-D_NQ_NP_771047-MLB31203118269_062019-W.webp",
-    "Licensed Fresh Sausages",
-    759.54,
-    50,
-    2
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Quis eum et assumenda.
-Sunt quo non voluptatem molestiae minima deserunt.
-Alias commodi voluptas.
-Et consectetur error cumque sint.
-Corrupti ut nam sunt qui quia rerum veritatis aut.",
+    "Oferece proteção instantânea a partir do momento em que você dá a partida. As moléculas inteligentes de Castrol MAGNATEC são especialmente formuladas para aderir às partes críticas do motor e reduzir drasticamente o desgaste.",
     "https://http2.mlstatic.com/5l-oleo-motor-castrol-magnatec-15w40-flex-lubrificante-carro-D_NQ_NP_799005-MLB31363741813_072019-W.webp",
-    "Gorgeous Metal Bacon",
-    869.7,
+    "Óleo Castrol Magnatec",
+    36.99,
     588,
     4
     );
@@ -12483,10 +12453,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Rerum aliquid et et.",
+    "Óleo para motor de veículos toyota atende todos os veículos da montadora. VISCOSIDADE 10W30 SEMI SINTÉTICO",
     "https://http2.mlstatic.com/oleo-de-motor-veiculo-toyota-10w30-genuino-toyota-D_NQ_NP_730029-MLB40027070448_122019-W.webp",
-    "Licensed Frozen Bacon",
-    258.3,
+    "Óleo De Motor 5w30 Original Toyota",
+    52.00,
     883,
     3
     );
@@ -12500,13 +12470,11 @@ insert into tb_product(
             id_category
             )
             values(
-    "Aut atque reprehenderit.
-In consequatur voluptas sed accusamus pariatur error sint tempore facilis.
-Excepturi est sint id.",
+    "Lubrificante premium sintético multiviscoso recomendado para uso nos modernos motores de elevado desempenho a gasolina, etanol, flex e GNV com injeção eletrônica, multiválvulas e turboalimentados.",
     "https://http2.mlstatic.com/oleo-de-carro-semissintetico-15w40-lubrax-1l-D_NQ_NP_631940-MLB31193076564_062019-W.webp",
-    "Ergonomic Granite Tuna",
-    129.26,
-    29,
+    "Óleo lubrificante Lubrax",
+    32.88,
+    49,
     2
     );
 
@@ -12519,12 +12487,9 @@ insert into tb_product(
             id_category
             )
             values(
-    "Incidunt officiis accusamus et sit necessitatibus ut numquam.
-Sed nihil esse laborum odit enim omnis beatae sit omnis.
-Consequuntur aut quas quis ut.
-Sit laboriosam tempore non id.",
+    "Lubrificante 100% sintético desenvolvido para motores de alto desempenho modernos a gasolina ou diesel, injeção direta e com catalisadores. Melhora a potência e proporciona respostas rápidas. Proteção reforçada contra o desgaste para conseguir uma maior longevidade do motor. Proteção ótima mesmo sob condições extremas de condução (estradas e trajetos urbanos curtos). Intervalo extendido entre as trocas de óleo.",
     "https://http2.mlstatic.com/oleo-motul-carro-8100-x-cess-5w40-100-sintetico-1-litro-D_NQ_NP_800368-MLB31907057542_082019-W.webp",
-    "Practical Wooden Keyboard",
+    "Óleo lubrificante Motul 8100 X-CESS",
     52.32,
     187,
     2
@@ -12539,33 +12504,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Temporibus incidunt soluta laboriosam rerum vero temporibus explicabo.
-Quo cupiditate inventore expedita id odit eum quia dolorem.
-Nam et totam veniam dolorem.
-Qui tempora et laudantium aut quaerat cumque ex similique.",
-    "https://http2.mlstatic.com/4-oleo-motor-carro-5w30-mobil-D_NQ_NP_783747-MLB31732628623_082019-W.webp",
-    "Licensed Fresh Tuna",
-    790.63,
-    983,
-    3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Tempore impedit voluptatem voluptatem quidem.
-Voluptatum rerum vel enim laborum neque vel.
-Aut et voluptate voluptatibus blanditiis cum nam.
-Facilis necessitatibus consequatur temporibus delectus sed repellendus sapiente aliquid repudiandae.",
+    "Lubrificante 100% sintético, multiviscoso 5W-40 , especialmente formulada para a proteção dos motores dos segmentos mais exigentes da indústria automotiva, Sendo apto a ser utilizado em todos os motores movidos a gasolina, etanol, GNV, flex e Diesel, atende às mais novas exigências da Volkswagen para motores fabricados no Brasil anterior à 2014.",
     "https://http2.mlstatic.com/kit-de-oleo-5w40-sintetico-atende-veiculos-diesel-gol-golf-mercedes-importado-promocao-sem-juros-brinde-exclusivo-D_NQ_NP_728868-MLB31666033072_082019-W.webp",
-    "Licensed Steel Car",
-    54.10,
+    "Óleo lubrificante Elaion",
+    61.65,
     526,
     4
     );
@@ -12600,11 +12542,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Iste perspiciatis ad rem minus.
-Nulla quibusdam officiis sint non voluptatum asperiores et.",
+    "Militec- 1 foi desenvolvido seguindo rigorosos padrões. O condicionador de metais de alto desempenho recomendado para todos os tipos de motores e lubrificantes. Tecnologia avançada para dar maior resistência e proteção ao seu motor.",
     "https://http2.mlstatic.com/aditivos-oleo-lubrificante-militec-D_NQ_NP_832622-MLB40283565401_122019-W.webp",
-    "Handcrafted Concrete Salad",
-    570.38,
+    "Militec-1 Condicionador de metais",
+    61.90,
     698,
     1
     );
@@ -12618,30 +12559,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Corrupti et velit porro impedit inventore sed temporibus nulla.
-Eos possimus ex.
-Recusandae alias iusto qui reprehenderit pariatur.
-Temporibus nisi animi nobis enim incidunt.",
-    "https://http2.mlstatic.com/kit-oleo-motul-carro-8100-x-cess-5w40-4-litros-sintetico-D_NQ_NP_700541-MLB40933676655_022020-W.webp",
-    "Licensed Fresh Hat",
-    168.89,
-    802,
-    4
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Et eaque autem nesciunt consequatur voluptas velit et rerum.",
+    "Motul® MC CARE ™ C4 Chain Lube FL é um lubrificante de cor branca desenvolvido especialmente para lubrificar as correntes das motos de competição: velocidade e resistência. Formula à base de aditivos sólidos AW / EP (antidesgaste e extrema-pressão).",
     "https://http2.mlstatic.com/motul-c4-400ml-spray-lubrificante-corrente-moto-chain-lube-D_NQ_NP_958840-MLB31421993565_072019-W.webp",
-    "Licensed Metal Pizza",
-    251.66,
+    "Spray Lubrificante Para Corrente Motul C4",
+    58.80,
     22,
     3
     );
@@ -12655,33 +12576,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Ea quae temporibus laudantium asperiores earum corporis fugiat eum quasi.
-Aspernatur sapiente id et possimus unde quam.
-Velit veniam velit delectus et voluptates.",
-    "https://http2.mlstatic.com/D_NQ_NP_659158-MLB41138771955_032020-W.webp",
-    "Practical Concrete Table",
-    213.24,
-    685,
-    2
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Quia et nostrum blanditiis cupiditate voluptatem at sed deleniti.
-Perferendis nostrum rerum nesciunt nesciunt nam voluptatem.
-Assumenda sed excepturi.
-Est et veritatis delectus tempore.
-Fugit voluptas quo nobis aut distinctio ea.",
+    "LUBRIFICANTE LUBRAX 15W 50 SINTÉTICO - o sintético, por sua vez, é obtido a partir de reações químicas controladas. Ele possui alta capacidade de lubrificação, o que potencializa a performance do motor, e, por isso, é o tipo mais indicado para motores de alto desempenho. APLICAÇÃO: Recomendada para motos de alto desempenho",
     "https://http2.mlstatic.com/oleo-lubrax-feroces-4t-15w-50-sintetico-D_NQ_NP_780785-MLB32814583758_112019-W.webp",
-    "Handmade Frozen Chair",
-    818.49,
+    "Óleo Sintético 15w50 Moto Lubrax Feroces Alto Desempenho",
+    38.90,
     558,
     3
     );
@@ -12695,32 +12593,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Sed illum fugiat.
-Illum deserunt eos eligendi.",
-    "https://http2.mlstatic.com/oleo-lubrificante-corrente-bardahl-maxlub-kart-e-moto-D_NQ_NP_785180-MLB26026756597_092017-W.webp",
-    "Unbranded Rubber Tuna",
-    149.3,
-    573,
-    3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Quisquam dolores ipsa eum dignissimos.
-Vel enim earum impedit.
-Quas facere est est.
-Minima aspernatur optio dicta sunt voluptatem repellat est laudantium qui.
-Tenetur aut qui ex sed.",
+    "Redutor de atrito metal x metal. Pode ser aplicado em qualquer tipo de motor, peça ou junta onde seja identificada a existência do encontro de duas ou mais peças de metal que venham a sofrer fricção entre as suas superfícies. Em motores de veículos leves ou pesados indicado para uso acada 20 mil KM.",
     "https://http2.mlstatic.com/nanotech-1000-condicionador-de-metais-koube-D_NQ_NP_745984-MLB31092283705_062019-W.webp",
-    "Incredible Wooden Fish",
-    601.42,
+    "Condicionador de Metais Nanotech 1000 Alto Desempenho",
+    51.90,
     960,
     4
     );
@@ -12734,52 +12610,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Quod fuga distinctio sit.
-Ducimus aliquid doloremque explicabo dolorem.
-Sint nemo delectus corrupti quae tempore accusamus.
-Illum doloribus deserunt fugiat inventore nostrum beatae voluptatem nemo et.",
-    "https://http2.mlstatic.com/kit-oleo-motul-5100-4t-15w50-4-litros-semissintetico-D_NQ_NP_696501-MLB31123824898_062019-W.webp",
-    "Ergonomic Frozen Soap",
-    110.43,
-    620,
-    3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Et fuga atque aut nihil nemo.
-Quibusdam non provident esse.",
-    "https://http2.mlstatic.com/kit-com-3l-motul-motocool-expert-para-radiadores-de-motos-D_NQ_NP_789193-MLB40037363846_122019-W.webp",
-    "Handmade Soft Tuna",
-    583.34,
-    256,
-    2
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Quis et cumque molestiae omnis voluptatem.
-Ut neque qui eius dolore id.
-Enim eum cupiditate tempore molestiae corrupti.
-Autem porro fuga commodi libero deserunt debitis quia cupiditate.
-Rerum dolores praesentium recusandae voluptatem eaque distinctio et ducimus.",
+    "Lubrificante de alto desempenho, Technosynthese®, para motores de 4 tempos ciclo Otto usando combustíveis comerciais (gasolina, Álcool, Gas Natural Veicular GNV, FLEX) e Diesel leve.",
     "https://http2.mlstatic.com/oleo-mutul-6100-motor-syn-nergy-5w40-sintetico-1-litro-D_NQ_NP_927728-MLB32817240300_112019-W.webp",
-    "Small Frozen Salad",
-    829.37,
+    "Óleo Motul 6100 Syn-nergy 5w40 Sintético",
+    38.50,
     998,
     4
     );
@@ -12793,31 +12627,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Et architecto possimus voluptas saepe et earum hic.
-Rerum itaque sit ex officiis illum veritatis aut adipisci quis.
-Officiis sed inventore odio beatae harum ut officia quo.",
-    "https://http2.mlstatic.com/kit-troca-oleo-10w30-new-civic-fit-city-crv-D_NQ_NP_974713-MLB41211089699_032020-W.webp",
-    "Small Granite Fish",
-    272.77,
-    829,
-    3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Aliquid quibusdam qui officiis.
-Ut odit deserunt ut reprehenderit et.
-Et omnis voluptatem quam minus officia hic nisi necessitatibus ea.",
+    "Protege o sistema de arrefecimento: evita o congelamento e a oxidação das partes metálicas. Promove excelente troca térmica sendo altamente eficiente na refrigeração do motor. Os ácidos orgânicos e os silicatos de sua formulação garantem excepcional propriedade anti-corrosiva à medida que o produto é utilizado. O produto não danifica juntas, selantes e componentes plásticos.",
     "https://http2.mlstatic.com/fluido-radiador-motul-inugel-expert-37c-1l-azul-hibrido-D_NQ_NP_836650-MLB40521639206_012020-W.webp",
-    "Tasty Steel Computer",
-    294.45,
+    "Fluido Para Radiador Motul Inugel Expert",
+    58.45,
     140,
     1
     );
@@ -12831,71 +12644,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Odio consequatur voluptas.
-Repellat aperiam omnis reprehenderit ipsam voluptates repudiandae.
-Ipsa et fugiat dolor.",
-    "https://http2.mlstatic.com/liquido-fuido-motul-inugel-expert-radiador-moto-ou-carro-1lt-D_NQ_NP_812547-MLB32253866556_092019-W.webp",
-    "Practical Granite Sausages",
-    704.72,
-    731,
-    3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Et quas maiores quo nemo illum commodi.
-Et autem ut quaerat.
-Sed aut aspernatur nihil numquam quaerat laborum sapiente.
-Enim iste magni iste.
-Ea et fuga.",
-    "https://http2.mlstatic.com/1uni-motul-dot-5-dot51-dot-5-51-brake-fluid-freio-D_NQ_NP_991016-MLB31085255980_062019-W.webp",
-    "Sleek Wooden Table",
-    75.38,
-    322,
-    4
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Quidem magnam sequi veritatis assumenda.
-Quas quis reiciendis quae provident.",
-    "https://http2.mlstatic.com/oleo-cmbio-original-peak-atf-cvt-full-synthetic-D_NQ_NP_663346-MLB31532629698_072019-W.webp",
-    "Incredible Concrete Chair",
-    233.84,
-    371,
-    3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Numquam autem voluptate dolor.
-Sit et commodi corrupti ut aut illum velit.
-Aspernatur deleniti distinctio eligendi suscipit et.
-Sunt harum incidunt eveniet illo sit nihil et doloribus quam.",
-    "https://http2.mlstatic.com/oleo-cambio-cvt-valvoline-nissan-mitsubishi-audi-vw-gm-kia-bmw-mb-honda-ford-subaru-hyundai-suzuki-dodge-jeep-D_NQ_NP_937980-MLB40738703094_022020-W.webp",
-    "Practical Fresh Ball",
-    183.93,
+    "Tem a função de limpar todo o sistema de alimentação do veículo – tanque, linha de combustível, bomba e injetores – e dispersar a sujeira",
+    "https://www.ecompletocdn.com.br/i/fp/6/807425_1_1478610299.jpg",
+    "Gasolina Aditivada",
+    4.43,
     511,
     4
     );
@@ -12909,13 +12661,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Velit officia dolorum ex inventore id voluptatum ratione.
-Autem voluptate enim molestiae.
-Voluptas quod omnis occaecati.
-Perferendis quo corporis nostrum iure.",
+    "Pode ser utilizado em qualquer veículo com a tecnologia flex: novo ou usado, de baixa ou alta potência. Fique tranquilo: os aditivos de alta qualidade de Castrol Etanol ajudam a melhorar o desempenho de qualquer veículo flex. Além dos aditivos, Castrol Etanol, por ser um biocombustível, possui uma octanagem maior do que as gasolinas, cerca de 110 octanas RON, o que o faz ser um combustível aditivado que consegue suportar maior compressão, sem queimar espontaneamente dentro do motor, na câmara de combustão.",
     "https://http2.mlstatic.com/castrol-power-1-racing-10w40-oleo-motor-moto-4t-sintetico-1l-D_NQ_NP_802189-MLB40643344023_022020-W.webp",
-    "Gorgeous Metal Shirt",
-    151.88,
+    "Etanol Castrol",
+    20.88,
     619,
     4
     );
@@ -12929,162 +12678,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Autem iste error excepturi commodi culpa aut officia totam deleniti.
-Explicabo non quam et.",
-    "https://http2.mlstatic.com/oleo-motul-4100-turbolight-10w40-galo-4-litros-4l-semissintetico-D_NQ_NP_983167-MLB31925155979_082019-W.webp",
-    "Gorgeous Metal Chair",
-    198.64,
-    928,
-    4
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Rerum aut ipsa omnis odit minima.
-Vel repellat rem deleniti voluptas et.
-Ea velit facilis eius voluptatem sunt neque illum error aut.",
-    "https://http2.mlstatic.com/oleo-lubrificante-motul-800-off-road-1-litro-100-sint-D_NQ_NP_646991-MLB31739706388_082019-W.webp",
-    "Handcrafted Plastic Fish",
-    53.88,
-    972,
-    2
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Ut et amet ea dolores consequuntur consequatur et aliquam ducimus.
-Quasi laudantium iste consequuntur eum earum eaque veniam voluptatibus.",
-    "https://http2.mlstatic.com/kit-graxa-03-un-p-corrente-em-geral-motos-300ml-spray-D_NQ_NP_920479-MLB31357279525_072019-W.webp",
-    "Licensed Fresh Computer",
-    679.14,
-    691,
-    4
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Sequi consectetur quo.
-Velit aliquam totam quis doloribus ipsam laborum.
-Omnis nesciunt ut aliquid enim provident quae quia.
-Quis ipsum aut ut voluptatum eius laborum.
-Corrupti non at consequatur commodi.",
-    "https://http2.mlstatic.com/4-litros-oleo-castrol-power1-racing-4t-5w40-original-bmw-D_NQ_NP_811613-MLB31095369013_062019-W.webp",
-    "Refined Rubber Fish",
-    809.91,
-    532,
-    1
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Laborum quae qui qui doloremque quasi aliquam error nemo et.
-Tenetur eos et dolorem cupiditate voluptatem.
-Ea optio alias autem.",
-    "https://http2.mlstatic.com/descarbonizante-para-motos-e-barcos-perfect-clean-250ml-D_NQ_NP_889888-MLB31365499603_072019-W.webp",
-    "Gorgeous Metal Chair",
-    756.82,
-    970,
-    4
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Dolor corrupti minus earum non ut deserunt.
-Id et quia nihil eos nam quo.
-Nisi ut temporibus id error rem cumque quis.",
-    "https://http2.mlstatic.com/oleo-valvoline-75w90-synpower-cambio-diferencial-autoblocante-eixo-dianterio-traseiro-D_NQ_NP_957981-MLB41102478331_032020-W.webp",
-    "Generic Wooden Shoes",
-    605.4,
-    457,
-    3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Commodi aperiam labore incidunt sed suscipit perspiciatis iure molestiae.",
-    "https://http2.mlstatic.com/motul-mc-care-m2-helmet-interior-clean-limpeza-de-capacete-D_NQ_NP_918649-MLB31028370290_062019-W.webp",
-    "Ergonomic Plastic Chicken",
-    255.43,
-    88,
-    3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Fugit id sint ratione deserunt quibusdam.
-Voluptates corrupti sed.",
-    "https://http2.mlstatic.com/oleo-febi-34608-zf-6hp-bmw-320i-x1-x3-x5-a4-a6-landrover-D_NQ_NP_949341-MLB28860885988_122018-W.webp",
-    "Rustic Rubber Computer",
-    31.17,
-    608,
-    2
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Ullam fuga perspiciatis laudantium provident blanditiis nemo omnis inventore.
-Odit dolor impedit ut ullam exercitationem odio enim eaque dolores.
-Sed asperiores tempora aut.
-Possimus eos soluta.",
+    "Formulado com óleos de base sintética de alta qualidade e aditivos de avançada tecnologia, e atende todos os requisitos rigorosos da especificação DEXRON General Motors ®-VI , que é projetado para as modernas transmissões automáticas dos veículos GM. Valvoline DEXRON ®-VI ATF é oficialmente licenciada com GM e pode ser usado em novas e antigas transmissões automáticas GM onde DEXRON ®-II e / ou III-DEXRON ® são recomendados.",
     "https://http2.mlstatic.com/oleo-cambio-aut-atf-4-valvoline-mopar-full-sintetico-chrysler-jeep-dodge-grand-cherokee-caravan-pt-cruiser-town-country-D_NQ_NP_973685-MLB40877041739_022020-W.webpautentica",
-    "Small Cotton Chicken",
-    216.68,
+    "Óleo Valvoline Atf Dexron - Fluído Transmissão Automática",
+    50.90,
     43,
     4
     );
@@ -13098,69 +12695,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Ex iusto officia ea quam.
-Dolor laboriosam labore provident quibusdam recusandae.
-Nihil sapiente sit ducimus eius aut fugiat.
-Molestias quisquam sit dolorem voluptatem dolor nemo dolor aut ut.",
-    "https://http2.mlstatic.com/fluido-oleo-cambio-automatico-atf-dexron-vi-6-mobil-6-litros-D_NQ_NP_686175-MLB32133146810_092019-W.webp",
-    "Practical Frozen Cheese",
-    539.58,
-    372,
-    2
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Qui cupiditate soluta ipsa.
-Adipisci tenetur occaecati.",
-    "https://http2.mlstatic.com/7-lts-oleo-fluido-cmbio-automatico-atf-t-iv-corolla-0208-D_NQ_NP_748788-MLB31094480428_062019-W.webp",
-    "Handcrafted Steel Salad",
-    355.81,
-    273,
-    3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Et illo doloremque error quae illo.
-Voluptatum eos quo.",
-    "https://http2.mlstatic.com/kit-oleo-lubrificante-atf-diamond-atf-sp-iii-sp3-7-litros-D_NQ_NP_904822-MLB32133263328_092019-W.webp   ",
-    "Gorgeous Cotton Chicken",
-    216.99,
-    821,
-    2
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Consequatur consequatur illo aut vel eos.
-Quod quo molestiae soluta.
-Vel ratione nemo ut mollitia id aliquid provident itaque ut.
-Inventore occaecati quod.",
+    "Líder em economia e performance para Motos. Na hora de abastecer os veículos da sua frota, preste atenção e somente use a versão do combustível indicada para cada veículo, que varia conforme o ano de fabricação. Os benefícios, resultado de testes em motores a diesel em caminhões e ônibus, comparados ao diesel comum de mesmo teor de enxofre, podem variar de acordo com o tipo de veículo. ",
     "https://http2.mlstatic.com/1-litro-oleo-10w40-repsol-moto-sport-4t-oleo-triumph-bmw-D_NQ_NP_996708-MLB31539551963_072019-W.webp",
-    "Awesome Metal Pants",
-    325.72,
+    "Etanol Repsol",
+    4.30,
     92,
     4
     );
@@ -13174,48 +12712,10 @@ insert into tb_product(
             id_category
             )
             values(
-    "Sed nisi labore commodi voluptatibus eius exercitationem reprehenderit nobis et.
-Perferendis vitae cupiditate aut et dolorem numquam.",
-    "https://http2.mlstatic.com/oleo-lubrificante-grafitado-corrente-moto-jerod-kit-5-pcs-D_NQ_NP_626934-MLB32159266162_092019-W.webp",
-    "Sleek Frozen Sausages",
-    608.5,
-    304,
-    4
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Qui libero provident doloribus dolorem quos enim est quisquam nihil.
-Voluptatum qui deserunt.
-Iusto dolor tempora fugiat quia magni.
-Repellendus ad tenetur laborum ex voluptas illo et consequuntur.",
-    "https://http2.mlstatic.com/elf-sti-10w40-acea-a3b4-api-sn-rno7100700-D_NQ_NP_653402-MLB31063832894_062019-W.webp",
-    "Gorgeous Soft Car",
-    489.7,
-    841,
-    2
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Voluptates et eligendi quibusdam nam quasi in sapiente velit repellendus.",
-    "https://http2.mlstatic.com/oleo-motor-honda-10w30-new-civic-fit-city-crv-original-D_NQ_NP_932717-MLB41111477689_032020-W.webp",
-    "Sleek Wooden Fish",
-    301.50,
+    "Altamente indicado para os veículos das marcas: Civic, New Civic, Fit, City e Accord",
+     "https://http2.mlstatic.com/oleo-motor-honda-10w30-new-civic-fit-city-crv-original-D_NQ_NP_932717-MLB41111477689_032020-W.webp",
+    "Óleo De Motor Honda 10w30",
+    31.50,
     591,
     2
     );
@@ -13229,200 +12729,12 @@ insert into tb_product(
             id_category
             )
             values(
-    "Et minus error voluptas consectetur et molestiae impedit in.",
-    "https://http2.mlstatic.com/fluido-radiador-motul-inugel-optimal-ultra-54c-laranja-1l-D_NQ_NP_661254-MLB32916721814_112019-W.webp",
-    "Tasty Plastic Mouse",
-    921.32,
-    63,
-    1
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Doloremque voluptatum facilis cumque.
-Maxime sunt ut saepe aspernatur officia.
-Sunt amet necessitatibus velit optio vero.
-Rerum consectetur quia.",
-    "https://http2.mlstatic.com/lubrax-atf-ta-oleo-fluido-direco-hidraulica-1-litro-D_NQ_NP_900491-MLB31093606118_062019-W.webp",
-    "Handcrafted Granite Cheese",
-    515.20,
-    282,
-    2
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Molestiae rem dolores est minus.
-Suscipit et recusandae quia.
-Vitae minus dolor autem et fugiat.
-Sapiente dicta unde illo qui in excepturi.",
-    "https://http2.mlstatic.com/kit-4-litros-oleo-texaco-havoline-0w20-sintetico-D_NQ_NP_635930-MLB31827455594_082019-W.webp",
-    "Fantastic Wooden Car",
-    650.66,
-    56,
-    4
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Laudantium praesentium earum culpa.",
-    "https://http2.mlstatic.com/1l-oleo-de-motor-honda-repsol-moto-10w30-lubrificante-10w-30-D_NQ_NP_986100-MLB32085319880_092019-W.webp",
-    "Tasty Wooden Fish",
-    992.89,
-    820,
-    4
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Provident aliquid ut repellendus asperiores quo porro cum.
-Consequatur nesciunt perspiciatis temporibus corporis voluptate ducimus consectetur vel dolores.
-Quam labore quam id id.
-Dolorem assumenda magnam molestiae impedit nihil quo.",
-    "https://http2.mlstatic.com/oleo-castrol-magnatec-5w40-a3b4-orig-vw-bossoniautoparts-D_NQ_NP_627274-MLB31205278483_062019-W.webp",
-    "Ergonomic Frozen Fish",
-    768.40,
-    895,
-    3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Id doloribus ut.
-Minima adipisci labore qui.
-Velit in tempora ipsum atque quia vel voluptate eaque.
-Architecto perspiciatis accusamus et voluptas nihil vel magni explicabo.",
-    "https://http2.mlstatic.com/troca-8-oleo-cmbio-automatico-mercedes-c180-c230-c280-c350-D_NQ_NP_630050-MLB31360067660_072019-W.webp",
-    "Practical Steel Soap",
-    758.57,
-    837,
-    4
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Perferendis sequi consequatur.
-Sed culpa et quis animi laborum beatae est est.",
-    "https://http2.mlstatic.com/oleo-lubrificante-castrol-power1-racing-4t-5w40-2-litros-D_NQ_NP_812089-MLB31136100740_062019-W.webp",
-    "Refined Rubber Hat",
-    740.50,
-    899,
-    3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Provident aut nemo voluptatem neque doloremque nisi.
-Est molestiae quaerat consequatur doloribus aut inventore dolores qui aperiam.",
-    "https://http2.mlstatic.com/kit-10-oleo-cambio-automatico-valvoline-dexron-vi-6-D_NQ_NP_986383-MLB32893415439_112019-W.webp",
-    "Licensed Concrete Computer",
-    385.0,
-    885,
-    4
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Aut ducimus ut laudantium non labore rerum.",
+    "Desenvolvido para motores flex e GNV, proporcionando lubrificação ideal e alta performance. ",
     "https://http2.mlstatic.com/oleo-petronas-sprinta-10w40-sintetico-moto-4t-jaso-ma2-1-l-D_NQ_NP_905094-MLB32165728670_092019-W.webp",
-    "Awesome Fresh Chicken",
-    989.22,
+    "Etanol Comum Petronas",
+    4.22,
     714,
     3
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Quo ab consequatur delectus et sunt in qui inventore.
-Corrupti ullam excepturi nemo deserunt itaque qui.
-Repellat quod fugiat soluta.
-Explicabo enim eligendi est sit ipsam asperiores illo magnam perspiciatis.
-Numquam autem et quod.",
-    "https://http2.mlstatic.com/2-litros-motul-800-2t-sintetico-oleo-motor-moto-trilha-D_NQ_NP_991398-MLB27589682873_062018-W.webp",
-    "Intelligent Wooden Towels",
-    804.43,
-    609,
-    4
-    );
-
-insert into tb_product(
-            ds_description,
-            ds_image,
-            ds_name,
-            vl_price,
-            nr_quant_stock,
-            id_category
-            )
-            values(
-    "Esse ut quos illo.",
-    "https://http2.mlstatic.com/6-oleo-yamalube-yamaha-mineral-4t-20w50-sae-api-sl-jaso-ma2-D_NQ_NP_635380-MLB31539551582_072019-W.webp",
-    "Fantastic Steel Sausages",
-    13.55,
-    64,
-    1
     );
 
 insert into tb_product(
