@@ -38,7 +38,7 @@ class Home extends Component {
                     <Row className="justify-content-around">
                         <div className="discount-container">
 
-                            <Link to="/login">
+                            <Link to="/home/categoria/gasolina-aditivada/">
                                 <div className="discount" id="discount-a">
                                     <img src="https://http2.mlstatic.com/yamaha-fz25-abs-blueflex-2020-2020-0-km-D_NQ_NP_833124-MLB32002026521_082019-F.webp" alt="" />
                                     <h2>Até 40% off</h2>
@@ -46,7 +46,7 @@ class Home extends Component {
                                 </div>
                             </Link>
 
-                            <Link to="/login">
+                            <Link to="/home/categoria/etanol-aditivado/">
                                 <div className="discount" id="discount-b">
                                     <h2>Até 35% off</h2>
                                     <span>para os aventureiros</span>
@@ -54,7 +54,7 @@ class Home extends Component {
                                 </div>
                             </Link>
 
-                            <Link to="/login">
+                            <Link to="/home/categoria/diesel/">
                                 <div className="discount" id="discount-c">
                                     <h2>Até 40% off</h2>
                                     <span>nos esportivos</span>
@@ -62,7 +62,7 @@ class Home extends Component {
                                 </div>
                             </Link>
 
-                            <Link to="/login">
+                            <Link to="/home/categoria/gas-natural/">
                                 <div className="discount" id="discount-d">
                                     <h2>25% off</h2>
                                     <span>escolhido a dedo</span>

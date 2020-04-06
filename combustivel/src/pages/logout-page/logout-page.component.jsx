@@ -25,7 +25,7 @@ class LogoutPage extends Component {
                         <Link to="/">Quero voltar</Link>
                         <CustomButton
                             onClick={() => {
-                                sessionStorage.clear() ;
+                                localStorage.clear() ;
                                 RESET_CART();
                                 RESET_ADDRESS();
                                 history.push("/");

@@ -62,8 +62,8 @@ class LoginPage extends Component {
                         if (response.data[0].password === password) {
                             let userName = response.data[0].firstName;
                             this.props.history.push("/");
-                            sessionStorage.setItem("user", userName);
-                            sessionStorage.setItem("email", response.data[0].email);
+                            localStorage.setItem("user", userName);
+                            localStorage.setItem("email", response.data[0].email);
                             window.location.reload();
                         }
                         else

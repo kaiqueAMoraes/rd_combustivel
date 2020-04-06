@@ -21,12 +21,10 @@ const handleSignOut = () => {
     // let user = sessionStorage.getItem('user')
     // user ? sessionStorage.clear() : sessionStorage.getItem('user');
     // window.location.reload();
-
 }
 
 const Header = ({ history, hidden }) => {
-    const currentUser = sessionStorage.getItem('user');
-
+    const currentUser = localStorage.getItem('user');
     {
         return (
 
@@ -103,16 +101,24 @@ const Header = ({ history, hidden }) => {
                             <Container className="fluid ">
                                 <ul className="navbar-nav d-flex none ">
                                     <li className="ml-4 nav-item mr-4 none">
-                                        <Link className="nav-link" to={'/home/categoria/gasolina-aditivada/'}>Gasolina</Link>
+                                        <Link className="nav-link" onClick={() => {
+                                            history.push('/home/categoria/gasolina-aditivada/')
+                                            window.location.reload()}}>Gasolina</Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none">
-                                        <Link className="nav-link" to={'/home/categoria/etanol-aditivado/'}>Etanol </Link>
+                                        <Link className="nav-link" onClick={() => {
+                                            history.push('/home/categoria/etanol-aditivado/')
+                                            window.location.reload()}}>Etanol </Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none" >
-                                        <Link className="nav-link" to={'/home/categoria/Diesel/'}>Óleo</Link>
+                                        <Link className="nav-link" onClick={() => {
+                                            history.push('/home/categoria/Diesel/')
+                                            window.location.reload()}}>Óleo</Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none">
-                                        <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Fluidos para motor</Link>
+                                        <Link className="nav-link"  onClick={() => {
+                                            history.push('/home/categoria/gas-natural/')
+                                            window.location.reload()}}>Fluidos para motor</Link>
                                     </li>
                                     {/* <li className="ml-4 nav-item mr-4 none">
                                         <Link className="nav-link" to={'/home/categoria/gas-natural/'}>Carros</Link>

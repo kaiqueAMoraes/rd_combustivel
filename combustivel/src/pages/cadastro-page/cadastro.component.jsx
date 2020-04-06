@@ -176,8 +176,8 @@ class CadastroPage extends Component {
                 const user = {
                     "email": email.toLowerCase(),
                     "password": password,
-                    "firstName": fullName.split(" ").slice(0, 1).toString().toLowerCase(),
-                    "lastName": fullName.split(" ").slice(1).join(" ").toLowerCase(),
+                    "firstName": fullName.split(" ").slice(0, 1).toString().toUpperCase(),
+                    "lastName": fullName.split(" ").slice(1).join(" ").toUpperCase(),
                     "cpf": cpf,
                     "gender": gender,
                     "phone": phone,
@@ -194,8 +194,8 @@ class CadastroPage extends Component {
                                     valid: true,
                                     successMessage: "usuario cadastrado com sucesso"
                                 })
-                                sessionStorage.setItem("user", user.firstName);
-                                sessionStorage.setItem("email", response.data.email);
+                                localStorage.setItem("user", user.firstName);
+                                localStorage.setItem("email", response.data.email);
                                 //sessionStorage.setItem("email", response.data[0].email);
                                 setInterval(() => {
                                     this.clearState();

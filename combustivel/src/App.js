@@ -15,6 +15,7 @@ import Product from './components/grid-produto/new-grid-product';
 import CheckoutPage from './pages/checkout/checkout.component';
 import CheckoutPageFinal from './pages/checkout-page-final/checkout-page-final.component';
 import SuccessOrderPage from './pages/checkout-success/checkout-success.component';
+import CategoriaPage from './pages/categoria-page/categoria.component';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/home/categoria/:cat" component={CategoriaPage} />
         <Route exact path="/logout" component={LogoutPage} />
         <Route exact path="/cadastro" component={CadastroPage} />
         <Route exact path="/dashboard" component={DashboardPage}/>
