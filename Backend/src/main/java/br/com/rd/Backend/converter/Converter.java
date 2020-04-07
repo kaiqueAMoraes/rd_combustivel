@@ -4,7 +4,7 @@ import br.com.rd.Backend.DTOs.*;
 import br.com.rd.Backend.DTOs.ProductDTO;
 
 import br.com.rd.Backend.models.*;
-import org.aspectj.weaver.ast.Or;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -50,6 +50,11 @@ public class Converter {
 
     public User converterTo(UserDTO userDTO) {
 
+        //String passwordCrypt = Base64.getEncoder().encodeToString(userDTO.getPassword().getBytes());
+
+        String salGerado = BCrypt.gensalt();
+        String passwordCrypt = BCrypt.hashpw(userDTO.getPassword(), salGerado);
+
         User user = new User();
 
         user.setFirstName(userDTO.getFirstName());
@@ -57,7 +62,8 @@ public class Converter {
         user.setCpf(userDTO.getCpf());
         user.setBirth(userDTO.getBirth());
         user.setEmail(userDTO.getEmail());
-        user.setPassword(userDTO.getPassword());
+        user.setPassword(passwordCrypt);
+       // user.setPassword(userDTO.getPassword());
         user.setGender(userDTO.getGender());
         user.setPhone(userDTO.getPhone());
 

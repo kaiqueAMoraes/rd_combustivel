@@ -10,6 +10,8 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -45,6 +47,7 @@ public class UserService implements UserInterface {
             } else {
                 Converter converter = new Converter();
                 User user = userRepository.save(converter.converterTo(userDTO));
+
                 return ResponseEntity.ok().body(converter.converterTo(user));
             }
 
@@ -85,6 +88,15 @@ public class UserService implements UserInterface {
             userRepository.findByEmail(email);
             return ResponseEntity.ok().body(userRepository.findByEmail(email));
         }
+    }
+
+    @Override
+    public ResponseEntity findUserByEmailAndPassword(String email, String password) {
+        String salGerado = BCrypt.gensalt();
+        String passwordCrypt = BCrypt.hashpw(password, salGerado);
+
+        userRepository.findUserByEmailAndPassword(email, passwordCrypt);
+        return ResponseEntity.ok().body(user);
     }
 
     @Override
