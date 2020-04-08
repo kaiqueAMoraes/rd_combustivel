@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
@@ -25,9 +26,14 @@ public class UserController {
         return userService.deleteUserById(id);
     }
 
-    @GetMapping("/login-user-email")
-    public ResponseEntity loginUser(@RequestBody String email, String password) {
-        return userService.findUserByEmailAndPassword(email, password);
+//    @GetMapping("/login/{email}/{password}")
+//    public ResponseEntity findUserByEmailAndPassword(@PathVariable ("email") String email, @PathVariable ("password") String password) {
+//        return userService.findUserByEmailAndPassword(email, password);
+//    }
+
+    @GetMapping("/login")
+    public ResponseEntity findUserByEmailAndPassword(@RequestBody String email, String password) {
+        return ResponseEntity.ok().body(userService.findUserByEmailAndPassword(email, password));
     }
 
     @GetMapping("/find-user/{id}")

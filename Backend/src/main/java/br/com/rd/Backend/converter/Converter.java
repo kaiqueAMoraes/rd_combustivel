@@ -5,6 +5,8 @@ import br.com.rd.Backend.DTOs.ProductDTO;
 
 import br.com.rd.Backend.models.*;
 import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,6 +14,8 @@ import java.util.List;
 
 
 public class Converter {
+
+
 
     public Converter() {
     }
@@ -50,10 +54,8 @@ public class Converter {
 
     public User converterTo(UserDTO userDTO) {
 
-        //String passwordCrypt = Base64.getEncoder().encodeToString(userDTO.getPassword().getBytes());
-
-        String salGerado = BCrypt.gensalt();
-        String passwordCrypt = BCrypt.hashpw(userDTO.getPassword(), salGerado);
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String hashedPassword = passwordEncoder.encode(userDTO.getPassword());
 
         User user = new User();
 
@@ -62,8 +64,8 @@ public class Converter {
         user.setCpf(userDTO.getCpf());
         user.setBirth(userDTO.getBirth());
         user.setEmail(userDTO.getEmail());
-        user.setPassword(passwordCrypt);
-       // user.setPassword(userDTO.getPassword());
+        // user.setPassword(userDTO.getPassword());
+        user.setPassword(hashedPassword);
         user.setGender(userDTO.getGender());
         user.setPhone(userDTO.getPhone());
 

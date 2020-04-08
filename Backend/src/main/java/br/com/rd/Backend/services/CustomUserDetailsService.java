@@ -15,7 +15,7 @@ import java.util.List;
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
-    UserRepository userRepository;
+UserRepository userRepository;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {

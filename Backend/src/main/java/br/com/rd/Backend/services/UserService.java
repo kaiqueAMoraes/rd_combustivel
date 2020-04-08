@@ -12,6 +12,7 @@ import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,7 +31,7 @@ public class UserService implements UserInterface {
 
     @Autowired
     UserRepository userRepository;
-    private User user;
+
 
     @Override
     public ResponseEntity saveUser(UserDTO userDTO) {
@@ -91,12 +92,22 @@ public class UserService implements UserInterface {
     }
 
     @Override
-    public ResponseEntity findUserByEmailAndPassword(String email, String password) {
-        String salGerado = BCrypt.gensalt();
-        String passwordCrypt = BCrypt.hashpw(password, salGerado);
+    public ResponseEntity findUserByEmailAndPassword(String email, String passwordParam) {
 
-        userRepository.findUserByEmailAndPassword(email, passwordCrypt);
-        return ResponseEntity.ok().body(user);
+        //Receber email e senha do usuário, comparar se senha recebida (depois de cript) é igual senha do bd
+
+        String user = userRepository.findByEmail(email).get(1).getPassword();
+
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+       // String hashedPassword = passwordEncoder.encode(user.getPassword());
+
+        boolean isPasswordMatch = passwordEncoder.matches(passwordParam, user);
+
+        if (isPasswordMatch == true) {
+            return ResponseEntity.ok().body("Senhas iguais " + userRepository.findByEmailAndPassword(email, passwordParam));
+        } else {
+            return ResponseEntity.ok().body("Senhas diferentes");
+        }
     }
 
     @Override
