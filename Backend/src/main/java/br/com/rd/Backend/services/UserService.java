@@ -96,15 +96,14 @@ public class UserService implements UserInterface {
 
         //Receber email e senha do usuário, comparar se senha recebida (depois de cript) é igual senha do bd
 
-        String user = userRepository.findByEmail(email).get(1).getPassword();
+        User user = userRepository.findByEmail(email).get(0);
 
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-       // String hashedPassword = passwordEncoder.encode(user.getPassword());
 
-        boolean isPasswordMatch = passwordEncoder.matches(passwordParam, user);
+       boolean isPasswordMatch = passwordEncoder.matches(passwordParam, user.getPassword());
 
         if (isPasswordMatch == true) {
-            return ResponseEntity.ok().body("Senhas iguais " + userRepository.findByEmailAndPassword(email, passwordParam));
+            return ResponseEntity.ok().body("Senhas iguais ");
         } else {
             return ResponseEntity.ok().body("Senhas diferentes");
         }

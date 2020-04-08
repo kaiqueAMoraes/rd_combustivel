@@ -1,8 +1,10 @@
 package br.com.rd.Backend.controllers;
 
 import br.com.rd.Backend.DTOs.UserDTO;
+import br.com.rd.Backend.models.Login;
 import br.com.rd.Backend.models.User;
 import br.com.rd.Backend.services.UserService;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,8 +34,8 @@ public class UserController {
 //    }
 
     @GetMapping("/login")
-    public ResponseEntity findUserByEmailAndPassword(@RequestBody String email, String password) {
-        return ResponseEntity.ok().body(userService.findUserByEmailAndPassword(email, password));
+    public ResponseEntity findUserByEmailAndPassword(@RequestBody Login login) {
+        return userService.findUserByEmailAndPassword(login.getEmail(), login.getPassword());
     }
 
     @GetMapping("/find-user/{id}")
