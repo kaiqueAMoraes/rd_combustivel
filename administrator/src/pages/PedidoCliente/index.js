@@ -12,7 +12,8 @@ export default class PedidoCliente extends Component {
     }
 
     state = {
-        orders: []
+        orders: [],
+        idUser: ""
     }
 
 
@@ -20,8 +21,9 @@ export default class PedidoCliente extends Component {
         axios.get(`http://localhost:8080/find-orders-byuser/${this.props.id}`)
           .then(res => {
             const orders = res.data;
-            this.setState({ orders });
+            this.setState({ orders, idUser: this.props.history.location.state });
           })
+          console.log(this.props.idUser);
       }
 
     render() {

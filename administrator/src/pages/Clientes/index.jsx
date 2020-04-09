@@ -15,19 +15,16 @@ export default class Clientes extends React.Component{
     handleOrders = (id) => {
     
         this.props.history.push('/pedido-cliente', id);
-        console.log(id);
     }
 
     handleDelete = (id) => {
 
         axios.delete(`http://localhost:8080/delete-user/${id}`)
           .then(res => {
-            console.log(res.data);
+            window.location.reload();
           })
 
           alert('Usuário deletado!')
-
-          //this.setState.users.filter(user => user.idUser !== id)
       }
 
       componentDidMount() {
