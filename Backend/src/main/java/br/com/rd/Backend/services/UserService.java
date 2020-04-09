@@ -94,18 +94,23 @@ public class UserService implements UserInterface {
     @Override
     public ResponseEntity findUserByEmailAndPassword(String email, String passwordParam) {
 
-        //Receber email e senha do usuário, comparar se senha recebida (depois de cript) é igual senha do bd
-
+        try {
+        Converter converter = new Converter();
         User user = userRepository.findByEmail(email).get(0);
-
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-
        boolean isPasswordMatch = passwordEncoder.matches(passwordParam, user.getPassword());
 
-        if (isPasswordMatch == true) {
-            return ResponseEntity.ok().body("Senhas iguais ");
-        } else {
-            return ResponseEntity.ok().body("Senhas diferentes");
+       if (userRepository.findByEmail(email).isEmpty()) {
+           return ResponseEntity.badRequest().body("Email não encontrado");
+       } else {
+           if (isPasswordMatch == true) {
+               return ResponseEntity.ok().body(converter.converterTo(user));
+           } else {
+               return ResponseEntity.ok().body("Senha incorreta");
+           }
+       }
+        } catch (IndexOutOfBoundsException e) {
+            return ResponseEntity.badRequest().body("Email não encontrado");
         }
     }
 

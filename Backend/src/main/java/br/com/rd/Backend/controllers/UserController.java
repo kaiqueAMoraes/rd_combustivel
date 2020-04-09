@@ -26,11 +26,6 @@ public class UserController {
         return userService.deleteUserById(id);
     }
 
-//    @GetMapping("/login/{email}/{password}")
-//    public ResponseEntity findUserByEmailAndPassword(@PathVariable ("email") String email, @PathVariable ("password") String password) {
-//        return userService.findUserByEmailAndPassword(email, password);
-//    }
-
     @GetMapping("/login")
     public ResponseEntity findUserByEmailAndPassword(@RequestBody Login login) {
         return userService.findUserByEmailAndPassword(login.getEmail(), login.getPassword());

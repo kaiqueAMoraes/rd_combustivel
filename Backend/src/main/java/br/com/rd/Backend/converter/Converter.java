@@ -64,7 +64,6 @@ public class Converter {
         user.setCpf(userDTO.getCpf());
         user.setBirth(userDTO.getBirth());
         user.setEmail(userDTO.getEmail());
-        // user.setPassword(userDTO.getPassword());
         user.setPassword(hashedPassword);
         user.setGender(userDTO.getGender());
         user.setPhone(userDTO.getPhone());
