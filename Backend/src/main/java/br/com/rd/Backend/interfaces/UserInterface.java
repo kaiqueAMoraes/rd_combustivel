@@ -19,6 +19,8 @@ public interface UserInterface {
 
     ResponseEntity findUserByEmail (String email);
 
+    ResponseEntity findUserByEmailAndPassword(String email, String password);
+
     ResponseEntity findUserByCpf (String cpf);
 
     ResponseEntity<List<User>> findAllUsers ();
