@@ -95,7 +95,7 @@ public class UserService implements UserInterface {
     public ResponseEntity findUserByEmailAndPassword(String email, String passwordParam) {
 
         try {
-        Converter converter = new Converter();
+
         User user = userRepository.findByEmail(email).get(0);
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
        boolean isPasswordMatch = passwordEncoder.matches(passwordParam, user.getPassword());
@@ -104,7 +104,7 @@ public class UserService implements UserInterface {
            return ResponseEntity.badRequest().body("Email não encontrado");
        } else {
            if (isPasswordMatch == true) {
-               return ResponseEntity.ok().body(converter.converterTo(user));
+               return ResponseEntity.ok().body(" idUser: " + user.getIdUser());
            } else {
                return ResponseEntity.ok().body("Senha incorreta");
            }
