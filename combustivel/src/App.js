@@ -14,6 +14,7 @@ import Product from './components/grid-produto/new-grid-product';
 import CheckoutPage from './pages/checkout/checkout.component';
 import CheckoutPageFinal from './pages/checkout-page-final/checkout-page-final.component';
 import SuccessOrderPage from './pages/checkout-success/checkout-success.component';
+import FormContact from '../src/components/form-contact-us/form-contact';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route exact path="/carrinho" component={CheckoutPage}/>
         <Route exact path="/carrinho/checkout" component={CheckoutPageFinal}/>
         <Route exact path="/carrinho/checkout/success-page" component={SuccessOrderPage}/> 
+        <Route exact path="/fale-conosco" component={FormContact}/>
         {/* <Route exact path="/carrinho/checkout/checkout-adresses" component={CreateAddress}/> */}
       </Switch>
     </BrowserRouter>
