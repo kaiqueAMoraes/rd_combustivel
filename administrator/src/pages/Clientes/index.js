@@ -27,7 +27,7 @@ export default class Clientes extends React.Component{
 
           alert('Usuário deletado!')
 
-          this.setState.users.filter(user => user.idUser !== id)
+          //this.setState.users.filter(user => user.idUser !== id)
       }
 
       componentDidMount() {

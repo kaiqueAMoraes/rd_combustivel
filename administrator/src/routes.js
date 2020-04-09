@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Logon from './pages/Logon';
+import Logon from './pages/Logon/index';
 import Main from './pages/Main';
 import Clientes from './pages/Clientes';
 import Pedidos from './pages/Pedidos';
