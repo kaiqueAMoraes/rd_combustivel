@@ -1,6 +1,7 @@
 package br.com.rd.Backend.controllers;
 
 import br.com.rd.Backend.DTOs.UserDTO;
+import br.com.rd.Backend.models.Login;
 import br.com.rd.Backend.models.User;
 import br.com.rd.Backend.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,11 @@ public class UserController {
     @DeleteMapping("/delete-user/{id}")
     public ResponseEntity deleteUserById (@PathVariable ("id") Long id) {
         return userService.deleteUserById(id);
+    }
+
+    @GetMapping("/login")
+    public ResponseEntity findUserByEmailAndPassword(@RequestBody Login login) {
+        return userService.findUserByEmailAndPassword(login.getEmail(), login.getPassword());
     }
 
     @GetMapping("/find-user/{id}")
