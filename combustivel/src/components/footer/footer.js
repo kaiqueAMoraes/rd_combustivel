@@ -7,8 +7,10 @@ const Footer = ({ match , history}) => {
     return (
         
            
-               history.location.pathname === "/dashboard" ? " " :
-                (
+               history.location.pathname === "/dashboard" ||  
+               history.location.pathname === "/user-credentials" 
+               ? " "  
+               : (
                     <>
             <Container className="container text-center text-md-left mt-5">
                 <Row className="row mt-3 dark-grey-text">

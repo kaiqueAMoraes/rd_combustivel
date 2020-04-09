@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
-
-
+import VALIDA from '../../validations/root_val'
 import FormInput from './form-input/form-input.componets';
 import FormInputDate from '../../components/form-input-date/form-input-date.componets';
 import CustomButton from '../../components/custom-button/custom-button.component';
@@ -164,6 +163,7 @@ class CadastroPage extends Component {
             if (CPF[i].match(intNum)) arr.push(CPF[i])
         }
         const cpf = arr.slice(",").join('');
+        
         try {
             if (this.handleCpfValidation(cpf)) {
 
@@ -171,7 +171,6 @@ class CadastroPage extends Component {
                 for (let i = 0; i < birth.length; i++) {
                     if (birth[i].match(intNum)) birthArr.push(birth[i])
                 }
-
 
                 const user = {
                     "email": email.toLowerCase(),

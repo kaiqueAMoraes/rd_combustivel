@@ -197,7 +197,6 @@ class CadastroEditPage extends Component {
                                 })
                                 localStorage.setItem("user", fullName);
                                 localStorage.setItem("email", response.data.email);
-                                //sessionStorage.setItem("email", response.data[0].email);
                                 setInterval(() => {
                                     this.clearState();
                                     this.props.history.push("/dashboard");

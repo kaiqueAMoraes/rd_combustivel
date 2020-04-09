@@ -28,7 +28,7 @@ const Header = ({ history, hidden }) => {
     {
         return (
 
-            history.location.pathname === "/login" ||
+            !history.location.pathname === "/user-credentials" ? (
                 history.location.pathname === "/cadastro" ||
                 history.location.pathname === "/dashboard" ||
                 history.location.pathname === "/dashboard/novo-endereco" ||
@@ -128,7 +128,10 @@ const Header = ({ history, hidden }) => {
                     </>
                 )
 
-        )
+        ) 
+        : ""
+        
+        ) 
     }
 }
 
