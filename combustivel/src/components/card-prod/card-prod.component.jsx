@@ -35,7 +35,7 @@ class CardProd extends Component {
         e.preventDefault()
         console.log(e.currentTarget)
         const produto = this.state.prod
-        //this.props.history.push('/dashboard/edit-usuario', { response: produto });    
+        this.props.history.push('/produto', { response: produto });    
         console.log(produto);
     }
 
@@ -49,18 +49,18 @@ class CardProd extends Component {
                 </div>
                 <div key={idprod} onClick={this.handleProduto.bind(this)}>
                     <div className="prod-image" >
-                        <img src={image} alt="image prod" />
+                        <img src={image} alt="image prod" className="image-prod-grid" />
                     </div>
                     <div className="prod-content">
                         <h5 className="prod-price">{Intl.NumberFormat('pt-BR',{style:'currency', currency:'BRL'}).format(price)}</h5>
                         <h5 className="prod-title" >{name}</h5>
-
                     </div>
                 </div>
                 <button onClick={()=> addItem(item)}
                     className="btn-to-cart">
                     <span>Adicionar ao Carrinho</span>
                 </button>
+                
             </div>
         )
     }
@@ -69,6 +69,5 @@ class CardProd extends Component {
 const mapDispatchToProps = dispatch => ({
     addItem : item => dispatch(addItem(item))
 })
-
 
 export default connect(null, mapDispatchToProps)(withRouter(CardProd));

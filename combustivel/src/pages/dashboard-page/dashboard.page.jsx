@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import CustomButton from '../../components/custom-button/custom-button.component';
 import CardAddress from '../../components/card-address/cardAddress.component';
+import SelectedCardAddress from '../../components/card-selected-address/card-selected-address.component';
 import CardPurchases from '../../components/card-purchases/cardPurchases.component';
 //import CardsGrid from './cards-grid/cards-grid.component'
 
@@ -13,21 +14,22 @@ import Container from 'react-bootstrap/Container'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import Alert from 'react-bootstrap/Alert'
+import { connect } from 'react-redux';
 
 //faUserCircle,
 class DashboardPage extends Component {
     constructor(props) {
         super(props);
         //console.log(props)
-        const currentUser = sessionStorage.getItem('user');
+        const currentUser = localStorage.getItem('user');
         if (!currentUser)
             this.props.history.push('/');
 
         this.state = {
             user: {},
-            email: sessionStorage.getItem('email'),
+            email: localStorage.getItem('email'),
             endereco: [],
-            compras : [],
+            compras: [],
             active: "myAccount",
             errorMessage: ""
         }
@@ -42,7 +44,7 @@ class DashboardPage extends Component {
             .then(response => {
                 this.setState({
                     user: {
-                        "idUser": response.data[0].idUser, 
+                        "idUser": response.data[0].idUser,
                         "email": response.data[0].email.toLowerCase(),
                         "password": response.data[0].password,
                         "firstName": response.data[0].firstName,
@@ -60,18 +62,18 @@ class DashboardPage extends Component {
         await axios.get(`http://localhost:8080/find-address-byuser/${this.state.user.idUser}`)
             .then(response => {
                 if (response.data) {
-                    typeof response.data === "string" ? this.setState({errorMessage : "ops! você ainda não tem nenhum endereço cadastrado."}) : 
-                    this.setState({endereco : response.data})
+                    typeof response.data === "string" ? this.setState({ errorMessage: "ops! você ainda não tem nenhum endereço cadastrado." }) :
+                        this.setState({ endereco: response.data })
                 }
             }).catch(error => {
                 console.log(error)
             });
 
-            await axios.get(`http://localhost:8080/find-orders-byuser/${this.state.user.idUser}`)
+        await axios.get(`http://localhost:8080/find-orders-byuser/${this.state.user.idUser}`)
             .then(response => {
                 if (response.data) {
-                    typeof response.data === "string" ? this.setState({errorMessage : "nenhuma compra realizada ainda"}) : 
-                    this.setState({compras : response.data})
+                    typeof response.data === "string" ? this.setState({ errorMessage: "nenhuma compra realizada ainda" }) :
+                        this.setState({ compras: response.data })
                 }
             }).catch(error => {
                 console.log(error)
@@ -116,16 +118,16 @@ class DashboardPage extends Component {
             Compras: function showPurchases() {
                 return compras.map(elm => {
                     console.log(elm)
-                    return     <CardPurchases
+                    return <CardPurchases
                         key={elm.idOrder}
                         elm={elm}
-                    props={props} />
+                        props={props} />
                 })
             }
 
         }
 
-
+        const { selectedAddress } = this.props;
         const { birth } = this.state.user;
         return (
             <div className="dashboard-container">
@@ -138,7 +140,7 @@ class DashboardPage extends Component {
                                 <div className="u-icon-holder"><FontAwesomeIcon icon={faInfoCircle} className="icon-userCircle" /></div>
                                 <div className="u-text-container">
                                     <h2 className="u-title">Minha conta</h2>
-                                    <span className="u-hello-user" >Olá, {sessionStorage.getItem('user')}</span>
+                                    <span className="u-hello-user" >Olá, {localStorage.getItem('user')}</span>
                                 </div>
                             </div>
                             <div className="u-show" name="active" value="compras" onClick={this.handleCompra}>
@@ -156,32 +158,35 @@ class DashboardPage extends Component {
                                 <>
                                     <h5 className="dashboard-title">Minha conta</h5>
                                     <div className="info-holder box-border">
-                                        <div className="info-container">
-                                            <span>nome</span><p>{this.state.user.firstName}</p>
+                                        <div className="address-info">
+                                            <div className="info-container">
+
+                                                <p>{this.state.user.firstName} {this.state.user.lastName}</p>
+                                                <p>{this.state.user.gender === "M" ? "Masculino" : "Feminino"}</p>
+                                                <p>{this.state.user.email}</p>
+                                                <p>{this.state.user.cpf}</p>
+                                                <p>{this.state.user.phone}</p>
+                                                <p>{birth}</p>
+                                            </div>
+
                                         </div>
 
                                         <div className="info-container">
-                                            <span>sobrenome</span><p>{this.state.user.lastName}</p>
                                         </div>
 
                                         <div className="info-container">
-                                            <span>sexo</span><p>{this.state.user.gender === "M" ? "Masculino" : "Feminino"}</p>
                                         </div>
 
                                         <div className="info-container">
-                                            <span>email</span><p>{this.state.user.email}</p>
                                         </div>
 
                                         <div className="info-container">
-                                            <span>cpf</span><p>{this.state.user.cpf}</p>
                                         </div>
 
                                         <div className="info-container">
-                                            <span>tel</span><p>{this.state.user.phone}</p>
                                         </div>
 
                                         <div className="info-container">
-                                            <span>data nasc</span><p>{birth}</p>
                                         </div>
 
                                         <div className="line-break-left">
@@ -190,25 +195,28 @@ class DashboardPage extends Component {
                                                 className="edit-button"
                                                 onClick={this.handleUserEdit} >
                                                 Editar
-                        </CustomButton>
+                                            </CustomButton>
                                         </div>
                                     </div>
+                                    <div className="line-break">
+                                        <h5 className="dashboard-title">endereço de entrega</h5>
+                                    </div>
+
+                                    <SelectedCardAddress />
 
                                     <div className="line-break">
                                         <h5 className="dashboard-title">Meus endereços</h5>
-
                                         <div className="flex-to-left">
                                             <Link to={`${this.props.match.url}/novo-endereco`}>
                                                 <CustomButton
                                                     type="submit"
                                                     className="create-button">
                                                     + adicionar novo
-                                </CustomButton>
+                                                </CustomButton>
                                             </Link>
                                         </div>
                                     </div>
                                     <span>{this.state.endereco.length} endereços cadastrados</span>
-
                                     {this.state.errorMessage ? (<Alert className="m-4" variant='primary'>{this.state.errorMessage}</Alert>) : ""}
                                     <MyComponents.Adressess />
                                 </>
@@ -229,4 +237,8 @@ class DashboardPage extends Component {
     }
 }
 
-export default withRouter(DashboardPage);
+const mapStateToProps = state => ({
+    selectedAddress: state.address.addressSelected
+});
+
+export default withRouter(connect(mapStateToProps)(DashboardPage));

@@ -31,14 +31,14 @@ const handleSubmit = async (items, history, total) => {
 const CheckoutPage = ({ cartItems, total, history }) => (
     <>
         <Container>
-            <h3>Talvez você goste</h3>
+            {/* <h3>Talvez você goste</h3>
 
             <ScrollCards
                 label={"Os mais vendidos"}
                 produtos={`http://localhost:8080/find-all-products`}
-            />
+            /> */}
 
-            <h3>Minha cesta</h3>
+            <h3 className="checkout-title">Minha cesta</h3>
             <Row>
 
                 <div className="checkout-page">
@@ -94,12 +94,12 @@ const CheckoutPage = ({ cartItems, total, history }) => (
                 produtos={`http://localhost:8080/find-all-products`}
             />
 
-            <h3>Talvez você goste</h3>
+            {/* <h3>Talvez você goste</h3>
 
             <ScrollCards
                 label={"Os mais vendidos"}
                 produtos={`http://localhost:8080/find-all-products`}
-            />
+            /> */}
         </Container>
     </>
 )

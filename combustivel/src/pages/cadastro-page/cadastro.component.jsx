@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
-
-
+import VALIDA from '../../validations/root_val'
 import FormInput from './form-input/form-input.componets';
 import FormInputDate from '../../components/form-input-date/form-input-date.componets';
 import CustomButton from '../../components/custom-button/custom-button.component';
@@ -18,7 +17,7 @@ class CadastroPage extends Component {
     constructor(props) {
         super(props);
 
-        if (sessionStorage.getItem('user'))
+        if (localStorage.getItem('user'))
             this.props.history.push('/');
 
         this.state = {
@@ -164,6 +163,7 @@ class CadastroPage extends Component {
             if (CPF[i].match(intNum)) arr.push(CPF[i])
         }
         const cpf = arr.slice(",").join('');
+        
         try {
             if (this.handleCpfValidation(cpf)) {
 
@@ -172,12 +172,11 @@ class CadastroPage extends Component {
                     if (birth[i].match(intNum)) birthArr.push(birth[i])
                 }
 
-
                 const user = {
                     "email": email.toLowerCase(),
                     "password": password,
-                    "firstName": fullName.split(" ").slice(0, 1).toString().toLowerCase(),
-                    "lastName": fullName.split(" ").slice(1).join(" ").toLowerCase(),
+                    "firstName": fullName.split(" ").slice(0, 1).toString().toUpperCase(),
+                    "lastName": fullName.split(" ").slice(1).join(" ").toUpperCase(),
                     "cpf": cpf,
                     "gender": gender,
                     "phone": phone,
@@ -194,8 +193,8 @@ class CadastroPage extends Component {
                                     valid: true,
                                     successMessage: "usuario cadastrado com sucesso"
                                 })
-                                sessionStorage.setItem("user", user.firstName);
-                                sessionStorage.setItem("email", response.data.email);
+                                localStorage.setItem("user", user.firstName);
+                                localStorage.setItem("email", response.data.email);
                                 //sessionStorage.setItem("email", response.data[0].email);
                                 setInterval(() => {
                                     this.clearState();

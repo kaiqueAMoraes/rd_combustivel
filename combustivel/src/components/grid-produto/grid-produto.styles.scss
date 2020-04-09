@@ -1,0 +1,45 @@
+.telaProduto {
+    padding: 20px;
+}
+.nome-produto{
+    font-weight: bolder;
+    font-size: 33px;
+    color: #2a2a2e;
+}    
+
+.descricao-produto{
+    color: gray;
+}
+
+.preco-produto{
+    color: #3A4276;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.produto{
+    padding: 10px;
+}
+
+.adicionar-produto{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-compra{
+    align-items: center;
+    height: 70vh;
+}
+
+.icone-compra-produto{
+    align-items: center;
+    justify-content: center;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
