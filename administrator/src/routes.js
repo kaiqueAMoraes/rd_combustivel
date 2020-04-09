@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Logon from './pages/Logon/index';
 import Main from './pages/Main';
-import Clientes from './pages/Clientes';
+import Clientes from './pages/Clientes/index';
 import Pedidos from './pages/Pedidos';
 import CadastrarProduto from './pages/CadastrarProduto';
 import PedidoCliente from './pages/PedidoCliente';

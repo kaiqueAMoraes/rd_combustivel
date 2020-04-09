@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 import api from '../../services/api';
@@ -30,6 +31,7 @@ class Logon extends Component {
 
         evt.preventDefault();
 
+        const { history } = this.props;
         const { email, password } = this.state;
 
         const Login = {
@@ -37,16 +39,18 @@ class Logon extends Component {
             "password": password
         }
 
-        console.log(Login);
+        await axios.post("http://localhost:8080/login", Login)
+        .then(res =>{
+            console.log(res);
+            if(res.status === 200){
+                sessionStorage.setItem("user", JSON.stringify(Login));
+                history.push("/main");
+            } else {
+                console.log(res.data);
+            }
+        })
 
-        // await axios.get("http://localhost:8080/login", Login)
-        // .then(res =>{
-        //     console.log(res.data);
-        // })
-        
     }
-    
-
 
     render() {
         return (
@@ -69,4 +73,4 @@ class Logon extends Component {
     }
 }
 
-export default Logon;
+export default withRouter(Logon);
