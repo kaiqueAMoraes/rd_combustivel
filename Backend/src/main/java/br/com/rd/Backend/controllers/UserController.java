@@ -26,7 +26,7 @@ public class UserController {
         return userService.deleteUserById(id);
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity findUserByEmailAndPassword(@RequestBody Login login) {
         return userService.findUserByEmailAndPassword(login.getEmail(), login.getPassword());
     }

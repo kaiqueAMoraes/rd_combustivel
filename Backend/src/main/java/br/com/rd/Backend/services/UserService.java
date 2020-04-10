@@ -38,7 +38,7 @@ public class UserService implements UserInterface {
         try {
             //Validação de email já cadastrado
 
-            if (userRepository.findByEmail(userDTO.getEmail()).size() != 0) {
+            if (!userRepository.findByEmail(userDTO.getEmail()).isEmpty()) {
                 return ResponseEntity.badRequest().body("Este e-mail já foi cadastrado");
             }
 
@@ -57,7 +57,7 @@ public class UserService implements UserInterface {
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos ");
         } catch (ConstraintViolationException e) {
-            return ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
+            return ResponseEntity.badRequest().body("CPF inválido!");
         }
     }
 
@@ -106,7 +106,7 @@ public class UserService implements UserInterface {
            if (isPasswordMatch == true) {
                return ResponseEntity.ok().body(" idUser: " + user.getIdUser());
            } else {
-               return ResponseEntity.ok().body("Senha incorreta");
+               return ResponseEntity.badRequest().body("Senha incorreta");
            }
        }
         } catch (IndexOutOfBoundsException e) {
@@ -132,6 +132,8 @@ public class UserService implements UserInterface {
     public ResponseEntity updateUserById(@RequestBody UserDTO userDTO) {
         try {
             User userEntity = userRepository.getOne(userDTO.getIdUser());
+
+
 
             if (userDTO.getFirstName() != null) {
                 userEntity.setFirstName(userDTO.getFirstName());
