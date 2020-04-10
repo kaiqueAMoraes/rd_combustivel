@@ -13,7 +13,7 @@ export default class Clientes extends React.Component{
       }
     
     handleOrders = (id) => {
-    
+        console.log(id)
         this.props.history.push('/pedido-cliente', id);
     }
 

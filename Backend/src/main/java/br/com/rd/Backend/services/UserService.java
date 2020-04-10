@@ -106,7 +106,7 @@ public class UserService implements UserInterface {
            if (isPasswordMatch == true) {
                return ResponseEntity.ok().body(" idUser: " + user.getIdUser());
            } else {
-               return ResponseEntity.ok().body("Senha incorreta");
+               return ResponseEntity.badRequest().body("Senha incorreta");
            }
        }
         } catch (IndexOutOfBoundsException e) {
