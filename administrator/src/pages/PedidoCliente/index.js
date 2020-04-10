@@ -7,7 +7,7 @@ import Header from '../../Components/Header/header';
 import './styles.css';
 
 export default class PedidoCliente extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
@@ -18,13 +18,24 @@ export default class PedidoCliente extends Component {
 
 
     componentDidMount() {
-        axios.get(`http://localhost:8080/find-orders-byuser/${this.props.id}`)
-          .then(res => {
-            const orders = res.data;
-            this.setState({ orders, idUser: this.props.history.location.state });
-          })
-          console.log(this.props.idUser);
-      }
+        const _ID = this.props.history.location.state ;
+
+        try {
+            axios.get(`http://localhost:8080/find-orders-byuser/${_ID}`)
+                .then(res => {
+                    if (res.status === 400) {
+                        throw new Error(res.data);
+                    } else {
+                        const orders = res.data;
+                        this.setState({ orders, idUser: _ID });
+                    }
+                })
+        } catch (err) {
+            alert("ah não! macacos me mordam \n/" + err)
+        } 
+        //console.log(this.props);
+        //console.log(this.props.history.location.state )
+    }
 
     render() {
         return (
@@ -41,17 +52,24 @@ export default class PedidoCliente extends Component {
                         </thead>
 
                         <tbody>
-                            {this.state.orders.map(order => (
-                                <tr>
-                                    <td key={order.idOrder}>{order.idOrder}</td>
-                                    <td>{(order.date).toLocaleString('pt-BR')}</td>
-                                    <td>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(order.totalPrice)}</td>
-                                </tr>
-                            ))}
+                            {
+                                this.state.orders.length === 0 
+                                ? ""
+                                : (
+                                    this.state.orders.map(order => (
+                                        <tr>
+                                            <td key={order.idOrder}>{order.idOrder}</td>
+                                            <td>{(order.date).toLocaleString('pt-BR')}</td>
+                                            <td>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(order.totalPrice)}</td>
+                                        </tr>
+                                    ))
+                                )
+                            }
+                            
                         </tbody>
                     </table>
                 </div>
-                <Link  to="/clientes">
+                <Link to="/clientes">
                     <button onClick="" className="voltar" onClick="">Voltar para Clientes</button>
                 </Link>
             </>

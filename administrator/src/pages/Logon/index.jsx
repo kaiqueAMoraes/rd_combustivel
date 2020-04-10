@@ -39,6 +39,7 @@ class Logon extends Component {
             "password": password
         }
 
+        try{
         await axios.post("http://localhost:8080/login", Login)
         .then(res =>{
             console.log(res);
@@ -46,10 +47,12 @@ class Logon extends Component {
                 sessionStorage.setItem("user", JSON.stringify(Login));
                 history.push("/main");
             } else {
-                console.log(res.data);
+                throw new Error(res.data);
             }
         })
-
+}catch (err){
+    alert("ah não! macacos me mordam \n/" + err)
+}
     }
 
     render() {
