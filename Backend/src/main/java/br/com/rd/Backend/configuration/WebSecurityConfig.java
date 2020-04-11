@@ -1,5 +1,6 @@
 package br.com.rd.Backend.configuration;
 
+import br.com.rd.Backend.auth.jwt.JWTLoginFilter;
 import br.com.rd.Backend.auth.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
