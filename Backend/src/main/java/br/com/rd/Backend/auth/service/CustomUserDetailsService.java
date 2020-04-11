@@ -1,4 +1,4 @@
-package br.com.rd.Backend.services;
+package br.com.rd.Backend.auth.service;
 
 import br.com.rd.Backend.repositories.UserRepository;
 import net.bytebuddy.asm.Advice;
@@ -15,7 +15,7 @@ import java.util.List;
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
-UserRepository userRepository;
+    UserRepository userRepository;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {

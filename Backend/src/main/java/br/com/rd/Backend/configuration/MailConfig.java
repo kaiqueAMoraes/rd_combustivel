@@ -1,4 +1,4 @@
-package br.com.rd.Backend.MailConfig;
+package br.com.rd.Backend.configuration;
 
 import java.util.Properties;
 

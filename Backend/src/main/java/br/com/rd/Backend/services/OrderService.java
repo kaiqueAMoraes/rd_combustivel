@@ -1,9 +1,9 @@
 package br.com.rd.Backend.services;
 
 import br.com.rd.Backend.DTOs.OrderDTO;
-import br.com.rd.Backend.MailConfig.Cart;
-import br.com.rd.Backend.MailConfig.Mailer;
-import br.com.rd.Backend.MailConfig.Messenger;
+import br.com.rd.Backend.mail.Cart;
+import br.com.rd.Backend.mail.Mailer;
+import br.com.rd.Backend.mail.Messenger;
 import br.com.rd.Backend.converter.Converter;
 import br.com.rd.Backend.interfaces.OrderInterface;
 import br.com.rd.Backend.models.Order;

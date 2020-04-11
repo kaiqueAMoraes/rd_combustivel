@@ -1,4 +1,4 @@
-package br.com.rd.Backend.MailConfig;
+package br.com.rd.Backend.mail;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;

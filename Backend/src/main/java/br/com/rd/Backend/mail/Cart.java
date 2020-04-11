@@ -1,4 +1,4 @@
-package br.com.rd.Backend.MailConfig;
+package br.com.rd.Backend.mail;
 
 import br.com.rd.Backend.models.Order;
 import br.com.rd.Backend.models.User;
@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.NumberFormat;
-import java.util.GregorianCalendar;
 import java.util.Locale;
 
 @Service("Cart")
