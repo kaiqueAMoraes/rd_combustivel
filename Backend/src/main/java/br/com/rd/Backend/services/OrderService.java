@@ -13,9 +13,11 @@ import br.com.rd.Backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import javax.validation.ConstraintViolationException;
 import java.util.Date;
 import java.util.List;
@@ -112,8 +114,17 @@ public class OrderService implements OrderInterface {
     }
 
     @Override
-    public ResponseEntity<List<Order>> findAllOrders() {
-        return ResponseEntity.ok().body(orderRepository.findAll());
+    public ResponseEntity<?> findAllOrders(Pageable pageable) {
+
+        try {
+            if (orderRepository.findAll(pageable).isEmpty()) {
+                return ResponseEntity.badRequest().body("Não foram encontrados pedidos");
+            } else {
+                return ResponseEntity.ok().body(orderRepository.findAll(pageable));
+            }
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.ok().body("Não foram encontrados pedidos");
+        }
     }
 
     @Override

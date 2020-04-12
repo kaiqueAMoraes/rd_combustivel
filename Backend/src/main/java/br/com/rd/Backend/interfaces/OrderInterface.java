@@ -5,6 +5,7 @@ import br.com.rd.Backend.DTOs.OrderDTO;
 import br.com.rd.Backend.models.Address;
 import br.com.rd.Backend.models.Order;
 import br.com.rd.Backend.models.User;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Date;
@@ -22,7 +23,7 @@ public interface OrderInterface {
 
     ResponseEntity findOrderByDate(Date date);
 
-    ResponseEntity<List<Order>> findAllOrders();
+    ResponseEntity<?> findAllOrders(Pageable pageable);
 
     ResponseEntity updateOrderById(OrderDTO orderDTO);
 }
