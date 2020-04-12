@@ -12,7 +12,7 @@ class FormContact extends Component {
                     <div className="row d-flex justify-content-center">
                         <Container >
                             <div className="text-container" >
-                                <h1>Fale conosco</h1>
+                                <h2>Fale conosco</h2>
                             </div>
                             <form>
                                 <FormGroup>
