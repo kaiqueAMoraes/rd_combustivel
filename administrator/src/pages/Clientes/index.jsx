@@ -38,13 +38,6 @@ export default class Clientes extends React.Component{
           })
       }
 
-      async componentDidUpdate(prevProps) {
-        const { page } = this.props.match.params;
-        if ( page !== prevProps.match.params.page) {
-          this.loadData(page);
-        }
-      }
-
     render() {
         return (
             <>
