@@ -28,10 +28,13 @@ export default class Clientes extends React.Component{
       }
 
       componentDidMount() {
+        //   const {page} = this.props.match.params;
+        //   this.loadData(page);
         axios.get(`http://localhost:8080/find-users`)
           .then(res => {
             const users = res.data;
             this.setState({ users });
+            console.log(users);
           })
       }
 
@@ -51,7 +54,7 @@ export default class Clientes extends React.Component{
                         </tr>
                     </thead>
 
-                    <tbody>
+                    {/* <tbody>
                         { this.state.users.map(user => (
                             <tr>
                                 <td name="id" key={user.idUser}>{user.idUser}</td>
@@ -63,7 +66,7 @@ export default class Clientes extends React.Component{
                                 <button onClick={() => this.handleOrders(user.idUser)} id="pedidos" className="buttons">Pedidos</button>
                             </tr>
                         ))}
-                    </tbody>
+                    </tbody> */}
                 </table>
             </div>
         </>
