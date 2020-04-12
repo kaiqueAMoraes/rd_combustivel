@@ -136,6 +136,9 @@ public class UserService implements UserInterface {
 
             User user = userRepository.findById(userDTO.getIdUser()).orElse(null);
 
+            BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+            String hashedPassword = passwordEncoder.encode(userDTO.getPassword());
+
             if (userDTO.getFirstName() != null) {
                 user.setFirstName(userDTO.getFirstName());
             }
@@ -155,10 +158,23 @@ public class UserService implements UserInterface {
                 user.setEmail(userDTO.getEmail());
             }
             if (userDTO.getPassword() != null) {
-                user.setPassword(userDTO.getPassword());
+                user.setPassword(hashedPassword);
             }
 
-            return ResponseEntity.ok().body(userRepository.save(user));
+            UserDTO userResult = new UserDTO();
+
+            userResult.setIdUser(user.getIdUser());
+            userResult.setFirstName(user.getFirstName());
+            userResult.setLastName(user.getLastName());
+            userResult.setBirth(user.getBirth());
+            userResult.setCpf(user.getCpf());
+            userResult.setEmail(user.getEmail());
+            userResult.setGender(user.getGender());
+            userResult.setPhone(user.getPhone());
+
+            userRepository.save(user);
+
+            return ResponseEntity.ok().body(userResult);
 
         } catch (InvalidDataAccessApiUsageException e) {
             return ResponseEntity.badRequest().body("O Id do usuário não foi informado na requisição");
