@@ -28,7 +28,8 @@ public class UserController {
 
     @PostMapping("/login")
     public String findUserByEmailAndPassword(@RequestBody Login login) {
-        return "Works!";
+        //return userService.findUserByEmailAndPassword(login.getEmail(), login.getPassword());
+        return "";
     }
 
     @GetMapping("/find-user/{id}")
