@@ -206,7 +206,6 @@ class CheckoutPageFinal extends React.Component {
                                             <p>CVV : {this.state.CVV}</p>
                                             <p>data : {this.state.DATA}</p>
                                         </div>
-                                       
                                     </div>
                                     {
                                         addressSelected && 

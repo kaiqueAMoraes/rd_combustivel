@@ -23,13 +23,11 @@ const handleSignOut = () => {
     // window.location.reload();
 }
 
-const Header = ({ history, hidden }) => {
-    const currentUser = localStorage.getItem('user');
+const Header = ({ history, hidden, currentUser }) => {
     {
         return (
 
-            !history.location.pathname === "/user-credentials" ? (
-                history.location.pathname === "/cadastro" ||
+                history.location.pathname === "/user-credentials" ? ("") : (
                 history.location.pathname === "/dashboard" ||
                 history.location.pathname === "/dashboard/novo-endereco" ||
                 history.location.pathname === "/carrinho/checkout" ||
@@ -41,7 +39,11 @@ const Header = ({ history, hidden }) => {
                         {
                             history.location.pathname === "/dashboard" ? (
                                 <div className="d-flex user-bag">
-                                    <Link onClick={() => {history.push("/logout")}} className="navbar-span align-self-bottom get-exit" id="usuario-navbar">Sair</Link>
+                                    <Link onClick={() => {
+                                        history.push("/logout")}
+                                        } 
+                                    className="navbar-span align-self-bottom get-exit"
+                                    id="usuario-navbar">Sair</Link>
                                 </div>
                             ) : (
                                     <div className="d-flex user-bag">
@@ -66,7 +68,7 @@ const Header = ({ history, hidden }) => {
                                                 <CartIcon />
                                                 <Link to="/dashboard"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle" /></Link>
                                                 <div className="user-login d-flex flex-column bd-highlight mb-3 Row" id="div-header-separation">
-                                                    <Link to="/dashboard" className="navbar-span user-name" id="ola-navbar" >Olá, {currentUser}</Link>
+                                                    <Link to="/dashboard" className="navbar-span user-name" id="ola-navbar" >Olá, {currentUser.firstName}</Link>
                                                     <Link to="/dashboard" className="navbar-span align-self-bottom" id="usuario-navbar">Minha conta</Link>
                                                 </div>
                                                 <Link to="/logout"><FontAwesomeIcon icon={faSignOutAlt} className="icon-userCircle" /></Link>
@@ -74,19 +76,22 @@ const Header = ({ history, hidden }) => {
                                         ) : (
                                             <>
                                             <CartIcon />
-                                                        <Link to="/login"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle user-mobile" /></Link>
-                                                        <Link to="/login">
+                                                        <Link to="/user-credentials"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle user-mobile" /></Link>
                                                         <CustomButton
+                                                        handleClick={(e)=>{
+                                                            history.push("/user-credentials")
+                                                        }}
                                                         className="login-button">
                                                             entre
                                                         </CustomButton>
-                                                        </Link>
-                                                        <Link to="/cadastro">
                                                         <CustomButton
+                                                        handleClick={(e)=>{
+                                                            history.push("/user-credentials")
+                                                        }}
                                                         className="signin-button">
+                                                            
                                                             cadastre-se
                                                         </CustomButton>
-                                                        </Link>
                                                 </>
                                             )
                                     }
@@ -128,9 +133,7 @@ const Header = ({ history, hidden }) => {
                     </>
                 )
 
-        ) 
-        : ""
-        
+        )  
         ) 
     }
 }

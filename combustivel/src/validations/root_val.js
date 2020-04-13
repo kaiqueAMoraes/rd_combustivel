@@ -16,17 +16,16 @@ const VALIDATE = {
           if (parseInt(arrCPF[n]) === undefined || parseInt(arrCPF[n]) === NaN) {
             return false;
           } else {
-            return parseInt(arrCPF[n]) === parseInt(arrCPF[i]) ?
-              aux.push(arrCPF[n]) :
-              false
+            if (parseInt(arrCPF[n]) === parseInt(arrCPF[i]))
+            aux.push(arrCPF[n]) 
           }
+          console.log(aux)
           if (aux.length >= 3) {
             i = arrCPF.length
           }
         }
-      } else return false;
+      } 
     }
-
     if (aux.length >= 3) return false;
 
     for (let i = 1; i <= 9; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
@@ -57,20 +56,33 @@ const VALIDATE = {
     return val;
   },
   _IS_EQUAL_PASSWORD: (first_pass, second_pass) => {
-    return first_pass !== second_pass
+    return first_pass === second_pass
   },
   _ONLY_TEXT: (str) => {
     const _NUM_REGEX = /^[0-9]+$/;
     if (!str.match(_NUM_REGEX)) return str.replace(/[0-9]+/g, '')
   },
-  _NO_MASK: (str) => {
+  _ONLY_NUMBERS: (str) => {
     const _NUM_REGEX = /^[0-9]+$/;
     const _ARR = [];
         for (let i = 0; i < str.length; i++) {
             if (str[i].match(_NUM_REGEX)) _ARR.push(str[i])
         }
         return _ARR.slice(",").join('');
-  }
+  },
+  _DELAY_ACTION : (controller, callback, time) => {
+    let counter = 0;
+    const handleAction = () => {
+        if (counter === 0) {
+            counter++
+            return (controller())
+        } else {
+            clearInterval(timer);
+        }
+    };
+    (callback())
+    const timer = setTimeout(handleAction, time);
+},
 
 }
 
@@ -78,6 +90,7 @@ export default VALIDATE;
 
 /*
 falo nada, e digo mais
+amoraes, kaique.
 
 ░░█▀░░░░░░░░░░░▀▀███████░░░░
 ░░█▌░░░░░░░░░░░░░░░▀██████░░░

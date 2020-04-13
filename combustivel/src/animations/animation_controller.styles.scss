@@ -1,0 +1,140 @@
+@keyframes upAndDown {
+    0% {
+        bottom: 80px;
+    }
+    50% {
+        bottom: 60px;
+    }
+    0% {
+        bottom: 80px;
+    }
+}
+
+@keyframes fade_in_out {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+    45% {
+        top: 100px;
+    }
+    100% {
+        opacity: 1;
+        top: 100px;
+    }
+}
+
+@keyframes fade_left_in {
+    0% {
+        opacity: 0;
+        left: -50%;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes fade_off {
+    0% {
+        opacity: 1;
+        position: relative;
+        top: 0px;
+    }
+
+    30% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 0;
+        top: 60px;
+    }
+}
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+        position: relative;
+        top: 60px;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+@keyframes fade_simple_fade_in_out {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fade_simple_fade_out_in {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade_simple_fade_out_off {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade_in_from_left{
+    0% {
+        opacity: 0;
+        right: -500px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 30px;
+    }
+}
+
+@keyframes message_giggles{
+    0% {
+        right: 28px;
+    }
+
+    100% {
+        right: 32px;
+    }
+}
+
+@keyframes fade_off_from_left {
+    0% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+        right: -500px;
+    }
+}
