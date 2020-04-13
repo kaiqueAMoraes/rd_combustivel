@@ -28,8 +28,9 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity findUserByEmailAndPassword(@RequestBody Login login) {
-        return userService.findUserByEmailAndPassword(login.getEmail(), login.getPassword());
+    public String findUserByEmailAndPassword(@RequestBody Login login) {
+        //return userService.findUserByEmailAndPassword(login.getEmail(), login.getPassword());
+        return "";
     }
 
     @GetMapping("/find-user/{id}")
