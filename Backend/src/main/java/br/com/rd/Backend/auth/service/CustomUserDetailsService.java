@@ -1,15 +1,13 @@
 package br.com.rd.Backend.auth.service;
 
+import br.com.rd.Backend.models.User;
 import br.com.rd.Backend.repositories.UserRepository;
-import net.bytebuddy.asm.Advice;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User.UserBuilder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 public class CustomUserDetailsService implements UserDetailsService {
@@ -20,8 +18,16 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
-        List user = userRepository.findByEmail(email);
+        User user = userRepository.findByEmail(email).get(0);
+        UserBuilder userBuilder;
 
-        return null;
+        if(user == null) {
+            userBuilder = org.springframework.security.core.userdetails.User.withUsername(email);
+            userBuilder.password(user.getPassword());
+        } else {
+            throw new UsernameNotFoundException("User not found!");
+        }
+
+        return userBuilder.build();
     }
 }
