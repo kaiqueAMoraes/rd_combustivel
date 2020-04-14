@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 import "./cadastroProduto.css";
 import Header from '../../Components/Header/header';
+import { Alert } from 'reactstrap';
 
 
 class cadastroProduto extends Component {
@@ -54,10 +55,18 @@ class cadastroProduto extends Component {
             await axios.post("http://localhost:8080/create-product", produto)
                 .then((response) => {
                     console.log(response)
+                    if (response.status === 200) {
+                        this.setState({
+                            successMessage: "Produto cadastrado com sucesso"
+                        })
+                    }
+                    
                 })
         } catch (error) {
             console.log(error)
         }
+
+
     }
 
     render() {
@@ -74,16 +83,16 @@ class cadastroProduto extends Component {
                         <form onSubmit={this.mySubmitHandler}>
                             <div className="form-group">
                                 <label htmlFor="ds_name">Nome do produto</label>
-                                <input type="text" className="form-control" id="nomeProduto" name="NameProduto" onChange={this.handleChange} />
+                                <input type="text" className="form-control" id="nomeProduto" name="NameProduto" onChange={this.handleChange} required/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="ds_description">Descrição</label>
-                                <input type="text" className="form-control" id="descricaoProduto" name="description" onChange={this.handleChange} />
+                                <input type="text" className="form-control" id="descricaoProduto" name="description" onChange={this.handleChange} required/>
                             </div>
                             <label className="category-block"> Categoria:</label>
                             <div className="form-group-category">
                                 <div>
-                                    <input htmlFor="id_category" type="radio" id="gasolina" name="idCategory" value="1" onChange={this.handleChange}  />
+                                    <input htmlFor="id_category" type="radio" id="gasolina" name="idCategory" value="1" onChange={this.handleChange} />
                                     <label for="gasolina">Gasolina</label>
                                 </div>
                                 <div>
@@ -102,22 +111,23 @@ class cadastroProduto extends Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="vl_price">Preço do litro</label>
-                                <input type="text" className="form-control" id="valorLitroProduto" name="valordoproduto" onChange={this.handleChange} />
+                                <input type="text" className="form-control" id="valorLitroProduto" name="valordoproduto" onChange={this.handleChange} required/>
                             </div>
 
                             <div className="form-group">
                                 <label htmlFor="quantStock">Quantidade (em litros)</label>
-                                <input type="text" className="form-control" id="quantidade" name="quantidade" onChange={this.handleChange} />
+                                <input type="text" className="form-control" id="quantidade" name="quantidade" onChange={this.handleChange} required />
                             </div>
-                            <button id="editar" className="buttons" onClick={this.mySubmitHandler}>Cadastrar</button>
+                            <button id="editar" className="buttons" onClick={this.mySubmitHandler} >Cadastrar</button>
+                                        
                         </form>
+                        {this.state.successMessage ? (<Alert color="success"> {this.state.successMessage} </Alert>) : ""}
+                           
                     </div>
                 </main>
             </>
         );
     }
-
-
 }
 
 export default withRouter(cadastroProduto);
