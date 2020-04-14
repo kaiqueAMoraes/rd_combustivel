@@ -9,16 +9,16 @@ import java.util.List;
 
 public interface CategoryInterface {
 
-    ResponseEntity saveCategory (CategoryDTO categoryDTO);
+    ResponseEntity save(CategoryDTO categoryDTO);
 
-    ResponseEntity deleteCategoryById (Long id);
+    ResponseEntity deleteById(Long id);
 
-    ResponseEntity findCategoryById (Long id);
+    ResponseEntity findById(Long id);
 
-    ResponseEntity findCategoryByName (String name);
+    ResponseEntity findByName(String name);
 
-    ResponseEntity<List<Category>> findAllCategories ();
+    ResponseEntity<List<Category>> findAll();
 
-    ResponseEntity updateCategory (CategoryDTO categoryDTO);
+    ResponseEntity update(CategoryDTO categoryDTO);
 
 }

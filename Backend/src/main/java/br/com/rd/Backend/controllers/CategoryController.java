@@ -8,39 +8,40 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/category")
 public class CategoryController {
 
     @Autowired
     CategoryService categoryService;
 
-    @PostMapping("/create-category")
-    public ResponseEntity saveCategory (@RequestBody CategoryDTO categoryDTO) {
-        return categoryService.saveCategory(categoryDTO);
+    @PostMapping(value = "/create", consumes = "application/json", produces = "application/json")
+    public ResponseEntity save(@RequestBody CategoryDTO categoryDTO) {
+        return categoryService.save(categoryDTO);
     }
 
-    @DeleteMapping("/delete-category/{id}")
-    public ResponseEntity deleteCategoryById (@PathVariable ("id")Long id) {
-        return  categoryService.deleteCategoryById(id);
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity deleteById(@PathVariable ("id")Long id) {
+        return  categoryService.deleteById(id);
     }
 
-    @GetMapping("/find-category/{id}")
-    public ResponseEntity findCategoryById (@PathVariable ("id")Long id) {
-        return categoryService.findCategoryById(id);
+    @GetMapping(value = "/findbyid/{id}", produces = "application/json")
+    public ResponseEntity findById(@PathVariable ("id")Long id) {
+        return categoryService.findById(id);
     }
 
-    @GetMapping("/find-category-name/{name}")
-    public ResponseEntity findCategoryByName (@PathVariable ("name")String name) {
-        return categoryService.findCategoryByName(name);
+    @GetMapping(value = "/findbyname/{name}", produces = "application/json")
+    public ResponseEntity findByName(@PathVariable ("name")String name) {
+        return categoryService.findByName(name);
     }
 
-    @GetMapping("/find-all-categories")
-    public ResponseEntity findAllCategories (CategoryDTO categoryDTO) {
-        return categoryService.findAllCategories();
+    @GetMapping(value = "/findall", produces = "application/json")
+    public ResponseEntity findAll(CategoryDTO categoryDTO) {
+        return categoryService.findAll();
     }
 
-    @PutMapping("update-category")
-    public ResponseEntity updateCategory (@RequestBody CategoryDTO category) {
-        return categoryService.updateCategory(category);
+    @PutMapping(value = "/update", consumes = "application/json", produces = "application/json")
+    public ResponseEntity update(@RequestBody CategoryDTO categoryDTO) {
+        return categoryService.update(categoryDTO);
     }
 
 }

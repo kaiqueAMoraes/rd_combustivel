@@ -22,12 +22,12 @@ public class CategoryService implements CategoryInterface {
     CategoryRepository categoryRepository;
 
     @Override
-    public ResponseEntity saveCategory(CategoryDTO categoryDTO) {
+    public ResponseEntity save(CategoryDTO categoryDTO) {
         try {
-            if (categoryRepository.findByName(categoryDTO.getName()).size() != 0) {
+            if (!categoryRepository.findByName(categoryDTO.getName()).isEmpty())
                 return ResponseEntity.badRequest().body("Esta categoria já foi cadastrada");
 
-            } else {
+              else {
                 Converter converter = new Converter();
                 Category category = converter.converterTo(categoryDTO);
                 return ResponseEntity.ok().body(categoryRepository.save(category));
@@ -40,7 +40,7 @@ public class CategoryService implements CategoryInterface {
     }
 
     @Override
-    public ResponseEntity deleteCategoryById(Long id) {
+    public ResponseEntity deleteById(Long id) {
         try {
             categoryRepository.deleteById(id);
             return ResponseEntity.ok().body("Categoria " + id + " deletada");
@@ -50,7 +50,7 @@ public class CategoryService implements CategoryInterface {
     }
 
     @Override
-    public ResponseEntity findCategoryById(Long id) {
+    public ResponseEntity findById(Long id) {
         try {
             if (categoryRepository.findById(id).isEmpty()) {
                 return ResponseEntity.badRequest().body("Id da categoria não encontrado");
@@ -63,7 +63,7 @@ public class CategoryService implements CategoryInterface {
     }
 
     @Override
-    public ResponseEntity findCategoryByName(String name) {
+    public ResponseEntity findByName(String name) {
         try {
             if (categoryRepository.findByName(name).isEmpty()) {
                 return ResponseEntity.badRequest().body("Categoria não encontrada");
@@ -76,12 +76,12 @@ public class CategoryService implements CategoryInterface {
     }
 
     @Override
-    public ResponseEntity<List<Category>> findAllCategories() {
+    public ResponseEntity<List<Category>> findAll() {
         return ResponseEntity.ok().body(categoryRepository.findAll());
     }
 
     @Override
-    public ResponseEntity updateCategory(CategoryDTO categoryDTO) {
+    public ResponseEntity update(CategoryDTO categoryDTO) {
         try {
             Category category = categoryRepository.getOne(categoryDTO.getIdCategory());
 
