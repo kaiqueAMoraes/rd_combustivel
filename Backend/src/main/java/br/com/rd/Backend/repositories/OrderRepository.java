@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 @Repository
-public interface OrderRepository extends PagingAndSortingRepository<Order, Long> {
+public interface OrderRepository extends JpaRepository<Order, Long> {
 
     List<Order> findByDate(Date date);
     List<Order> findByIdUser(User user);

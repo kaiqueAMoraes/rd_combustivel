@@ -11,40 +11,41 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 
 @RestController
+@RequestMapping("/order")
 public class OrderController {
 
     @Autowired
     OrderService orderService;
 
-    @PostMapping("/create-order")
-    public ResponseEntity saveOrder(@RequestBody OrderDTO orderDTO) {
-        return orderService.saveOrder(orderDTO);
+    @PostMapping(value = "/create", consumes = "application/json", produces = "application/json")
+    public ResponseEntity save(@RequestBody OrderDTO orderDTO) {
+        return orderService.save(orderDTO);
     }
 
-    @DeleteMapping("/delete-order/{id}")
-    public ResponseEntity deleteOrderById (@PathVariable ("id") Long id) {
-        return orderService.deleteOrderById(id);
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity deleteById(@PathVariable ("id") Long id) {
+        return orderService.deleteById(id);
     }
 
-    @GetMapping("/findall-orders")
-    public ResponseEntity<?> findAllOrders(Pageable pageable) {
-        return orderService.findAllOrders(pageable);
+    @GetMapping(value = "/findall", produces = "application/json")
+    public ResponseEntity<?> findAll(Pageable pageable) {
+        return orderService.findAll(pageable);
     }
 
-    @GetMapping("/find-orders/{id}")
+    @GetMapping(value = "/findbyid/{id}", produces = "application/json")
     public ResponseEntity findById(@PathVariable("id") Long id){
-        return orderService.findOrderById(id);
+        return orderService.findById(id);
     }
 
-    @GetMapping("/find-orders-byuser/{idUser}")
+    @GetMapping(value = "/findbyiduser/{idUser}", produces = "application/json")
     public ResponseEntity findById(@PathVariable("idUser") User user){
-        return orderService.findOrderByUser(user);
+        return orderService.findByUser(user);
     }
 
-    //SEM FUNCIONAMENTO:
-    @GetMapping("/find-orders-bydate")
-    public ResponseEntity findById(@RequestBody Date date){
-        return null;
-    }
+//    //SEM FUNCIONAMENTO:
+//    @GetMapping("/findbydate")
+//    public ResponseEntity findById(@RequestBody Date date){
+//        return null;
+//    }
 
 }

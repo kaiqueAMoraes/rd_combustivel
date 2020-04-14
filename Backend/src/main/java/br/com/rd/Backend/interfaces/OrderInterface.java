@@ -13,17 +13,17 @@ import java.util.List;
 
 public interface OrderInterface {
 
-    ResponseEntity saveOrder(OrderDTO orderDTO);
+    ResponseEntity save(OrderDTO orderDTO);
 
-    ResponseEntity deleteOrderById(Long id);
+    ResponseEntity deleteById(Long id);
 
-    ResponseEntity findOrderById(Long id);
+    ResponseEntity findById(Long id);
 
-    ResponseEntity findOrderByUser(User user);
+    ResponseEntity findByUser(User user);
 
-    ResponseEntity findOrderByDate(Date date);
+    ResponseEntity findByDate(Date date);
 
-    ResponseEntity<?> findAllOrders(Pageable pageable);
+    ResponseEntity<?> findAll(Pageable pageable);
 
-    ResponseEntity updateOrderById(OrderDTO orderDTO);
+    ResponseEntity update(OrderDTO orderDTO);
 }

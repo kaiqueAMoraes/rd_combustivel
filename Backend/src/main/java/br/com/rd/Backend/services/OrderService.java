@@ -16,6 +16,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.persistence.EntityNotFoundException;
 import javax.validation.ConstraintViolationException;
@@ -43,7 +44,7 @@ public class OrderService implements OrderInterface {
     Cart cart;
 
     @Override
-    public ResponseEntity saveOrder(OrderDTO orderDTO) {
+    public ResponseEntity save(OrderDTO orderDTO) {
 
         try {
 
@@ -52,9 +53,8 @@ public class OrderService implements OrderInterface {
             Order order = converter.converterTo(orderDTO);
 
             ResponseEntity response = orderItemService.saveOrderItem(order.getItemList());
-            if(response.getStatusCode() == BAD_REQUEST){
+            if(response.getStatusCode() == BAD_REQUEST)
                 return ResponseEntity.badRequest().body(response.getBody());
-            }
 
             order.setTotalPrice((Double) response.getBody());
             orderRepository.save(order);
@@ -75,7 +75,7 @@ public class OrderService implements OrderInterface {
     }
 
     @Override
-    public ResponseEntity deleteOrderById(Long id) {
+    public ResponseEntity deleteById(Long id) {
         try {
             orderRepository.deleteById(id);
             return ResponseEntity.ok().body("Pedido " + id + " deletado");
@@ -85,50 +85,47 @@ public class OrderService implements OrderInterface {
     }
 
     @Override
-    public ResponseEntity findOrderById(Long id) {
-        if (orderRepository.findById(id).isEmpty()) {
+    public ResponseEntity findById(Long id) {
+        if (orderRepository.findById(id).isEmpty())
             return ResponseEntity.badRequest().body("Pedido não encontrado");
-        } else {
+          else {
             orderRepository.findById(id).get();
             return ResponseEntity.ok().body(orderRepository.findById(id).get());
         }
     }
 
     @Override
-    public ResponseEntity findOrderByUser(User user) {
-        if (orderRepository.findByIdUser(user).isEmpty()) {
+    public ResponseEntity findByUser(User user) {
+        if (orderRepository.findByIdUser(user).isEmpty())
             return ResponseEntity.status(204).body("Não existem pedidos para este usuário");
-        } else {
+          else
             return ResponseEntity.ok().body(orderRepository.findByIdUser(user));
-        }
     }
 
     //SEM FUNCIONAMENTO
     @Override
-    public ResponseEntity findOrderByDate(Date date) {
-        if (orderRepository.findByDate(date).isEmpty()) {
+    public ResponseEntity findByDate(Date date) {
+        if (orderRepository.findByDate(date).isEmpty())
             return ResponseEntity.badRequest().body("Não existem pedidos para a data informada");
-        } else {
+          else
             return ResponseEntity.ok().body(orderRepository.findByDate(date));
-        }
     }
 
     @Override
-    public ResponseEntity<?> findAllOrders(Pageable pageable) {
+    public ResponseEntity<?> findAll(Pageable pageable) {
 
         try {
-            if (orderRepository.findAll(pageable).isEmpty()) {
+            if (orderRepository.findAll(pageable).isEmpty())
                 return ResponseEntity.badRequest().body("Não foram encontrados pedidos");
-            } else {
+              else
                 return ResponseEntity.ok().body(orderRepository.findAll(pageable));
-            }
         } catch (EntityNotFoundException e) {
             return ResponseEntity.ok().body("Não foram encontrados pedidos");
         }
     }
 
     @Override
-    public ResponseEntity updateOrderById(OrderDTO orderDTO) { //TODO
+    public ResponseEntity update(OrderDTO orderDTO) { //TODO
         return null;
     }
 }

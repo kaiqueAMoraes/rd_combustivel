@@ -9,6 +9,6 @@ import java.util.List;
 
 public interface OrderItemInterface {
 
-    ResponseEntity saveOrderItem(List<OrderItem> list);
-    ResponseEntity<List<OrderItem>> findAllOrderItems();
+    ResponseEntity save(List<OrderItem> list);
+    ResponseEntity<List<OrderItem>> findAll();
 }
