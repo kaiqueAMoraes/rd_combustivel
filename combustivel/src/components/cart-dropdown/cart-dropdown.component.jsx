@@ -3,7 +3,7 @@ import CustomButton from '../custom-button/custom-button.component';
 import { connect } from 'react-redux';
 import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { withRouter } from 'react-router-dom';
-import { toggleCartHidden } from '../../redux/cart/cart.actions';
+import { toggleCartIn, toggleCartOff } from '../../redux/cart/cart.actions';
 import Animations from '../../animations/animation_controller';
 
 import './cart-dropdown.styles.scss';
@@ -13,7 +13,7 @@ class CartDropdown extends React.Component {
     constructor(props) {
         super(props);
         const {hidden} = this.props;
-
+        alert(hidden)
         this.state = {
             hidden: hidden,
             fade_animation: {
@@ -24,52 +24,44 @@ class CartDropdown extends React.Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.hidden !== prevProps.hidden) {
-            alert("macacos")
-            return (this.handleChange)()
+            return (this.handleFadeIn)()
         }
     }
 
-    handleChange = (e) => {
+    handleFadeIn = (e) => {
         //const { counter } = this.state;
         const { hidden } = this.props;
-
-        if (hidden) {
-            return Animations.DELAY_CONTROLLER(
-                () => { alert("ok") },
-                () => {
-                    this.setState({
-                        fade_animation: Animations.FADE_IN_FROM_LEFT()
-                    })
-                },
-                2500
-            )
-        }
-        if (!hidden) {
-            return Animations.DELAY_CONTROLLER(
-                () => { alert("ok") },
-                () => {
-                    this.setState({
-                        fade_animation: Animations.FADE_OFF_FROM_LEFT()
-                    })
-                },
-                2500
-            )
+        
+        if (hidden === "not_hidden") {
+            this.setState({
+                fade_animation: Animations.FADE_IN_FROM_LEFT()
+            })
         }
     }
 
+
     render() {
-        const { cartItems, history, hide_cart, hidden} = this.props;
+        const { cartItems, history, hide_cart,bring_cart, hidden} = this.props;
         return (
             <div className="quase-mata-meu-coracao" style={this.state.fade_animation}>
 
             <div className="cart-dropdown">
                 <div className="close-cart"
                     onClick={() => {
-                        this.handleChange()
-                        return hide_cart
+                            hide_cart()
+                            return Animations.DELAY_CONTROLLER(
+                                () => {  },
+                                () => {
+                                    this.setState({
+                                        fade_animation: Animations.FADE_OFF_FROM_LEFT()
+                                    })
+                                },
+                                2500
+                            )
+                        
                     }}
                     >>>
-        </div>
+                </div>
                 <div className="cart-items">
                     {
                         cartItems.length ? cartItems.map(cartItem =>
@@ -89,7 +81,6 @@ class CartDropdown extends React.Component {
                     </div>
                     <div className="go-to-checkout"
                         onClick={() => {
-                            hide_cart()
                             //history.push('/carrinho')
                         }}>
                         <div className="card-bank">
@@ -111,7 +102,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    hide_cart: () => dispatch(toggleCartHidden())
+    bring_cart: () => dispatch(toggleCartIn()),
+    hide_cart: () => dispatch(toggleCartOff())
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDropdown));

@@ -4,8 +4,12 @@ export const resetCart = () => ({
     type: CartActionTypes.RESET_CART
 })
 
-export const toggleCartHidden = () => ({
-    type : CartActionTypes.TOGGLE_CART_HIDDEN
+export const toggleCartIn = () => ({
+    type : CartActionTypes.CALL_CART_IN
+})
+
+export const toggleCartOff = () => ({
+    type : CartActionTypes.CALL_CART_OFF
 })
 
 export const addItem = item => ({
