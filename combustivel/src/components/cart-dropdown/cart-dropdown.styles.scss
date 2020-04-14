@@ -1,5 +1,22 @@
-.cart-dropdown {
+@keyframes fade_in_from_left{
+  0% {
+      opacity: 0;
+      right: -500px;
+  }
+
+  100% {
+      opacity: 1;
+      right: 0px;
+  }
+}
+.quase-mata-meu-coracao{
   position: fixed;
+  z-index: 99999999;
+  top: 0;
+  right: 0;
+}
+.cart-dropdown {
+
   width: 439px;
   height: 100vh;
   display: flex;
@@ -7,13 +24,15 @@
   padding: 11px;
   border: 1px solid rgb(216, 230, 254);
   background-color: white;
-  top: 0;
-  right: 0;
-  z-index: 99999999;
+  position: relative;
+
+
   background-image: url("https://cdn.dribbble.com/users/2394319/screenshots/4773525/record.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  animation-name: fade_in_from_left;
+  animation-duration: 1.5s;
 
   .cart-items {
     height: 100%;

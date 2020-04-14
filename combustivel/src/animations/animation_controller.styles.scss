@@ -117,6 +117,29 @@
         right: 30px;
     }
 }
+@keyframes cart_fade_in_from_left{
+    0% {
+        opacity: 0;
+        right: -500px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0px;
+    }
+}
+
+@keyframes cart_fade_off_from_left{
+    0% {
+        opacity: 1;
+        right: 0px;
+    }
+
+    100% {
+        opacity: 0;
+        right: -500px;
+    }
+}
 
 @keyframes message_giggles{
     0% {

@@ -53,7 +53,7 @@ const Header = ({ history, hidden, currentUser }) => {
                     </Navbar>
                 ) : (
                     <>
-                       <CartDropdown/>
+                    <CartDropdown/>
                         <Navbar className="bg-main navbar fixed-header">
                             <Link to="/" className="logo"></Link>
                             <div className="d-flex user-bag">
