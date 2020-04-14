@@ -35,24 +35,20 @@ public class UserService implements UserInterface {
 
 
     @Override
-    public ResponseEntity saveUser(UserDTO userDTO) {
+    public ResponseEntity save(UserDTO userDTO) {
         try {
             //Validação de email já cadastrado
-
-            if (!userRepository.findByEmail(userDTO.getEmail()).isEmpty()) {
+            if (userRepository.findByEmail(userDTO.getEmail()) != null)
                 return ResponseEntity.badRequest().body("Este e-mail já foi cadastrado");
-            }
 
             //Validação de CPF já cadastrado
-            else if (userRepository.findByCpf(userDTO.getCpf()).size() != 0) {
+            else if (userRepository.findByCpf(userDTO.getCpf()) != null)
                 return ResponseEntity.badRequest().body("Este CPF já foi cadastrado");
-            } else {
+            else {
                 Converter converter = new Converter();
                 User user = userRepository.save(converter.converterTo(userDTO));
-
                 return ResponseEntity.ok().body(converter.converterTo(user));
             }
-
             //TODO: validação de maioridade
 
         } catch (DataIntegrityViolationException e) {
@@ -63,7 +59,7 @@ public class UserService implements UserInterface {
     }
 
     @Override
-    public ResponseEntity deleteUserById(Long id) {
+    public ResponseEntity deleteById(Long id) {
         try {
             userRepository.deleteById(id);
             return ResponseEntity.ok().body("Usuário deletado");
@@ -73,93 +69,88 @@ public class UserService implements UserInterface {
     }
 
     @Override
-    public ResponseEntity findUserById(Long id) {
-        if (userRepository.findById(id).isEmpty()) {
+    public ResponseEntity findById(Long id) {
+        if (userRepository.findById(id).isEmpty())
             return ResponseEntity.badRequest().body("Id do usuário não encontrado");
-        } else {
+        else {
             userRepository.findById(id).get();
             return ResponseEntity.ok().body(userRepository.findById(id).get());
         }
     }
 
     @Override
-    public ResponseEntity findUserByEmail(String email) {
-        if (userRepository.findByEmail(email).isEmpty()) {
+    public ResponseEntity findByEmail(String email) {
+        if (userRepository.findByEmail(email) == null)
             return ResponseEntity.badRequest().body("Email não encontrado");
-        } else {
+        else {
             userRepository.findByEmail(email);
             return ResponseEntity.ok().body(userRepository.findByEmail(email));
         }
     }
 
     @Override
-    public ResponseEntity findUserByEmailAndPassword(String email, String passwordParam) {
+    public ResponseEntity findByEmailAndPassword(String email, String passwordParam) {
 
         try {
+            User user = userRepository.findByEmail(email);
+            BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+            boolean isPasswordMatch = passwordEncoder.matches(passwordParam, user.getPassword());
 
-        User user = userRepository.findByEmail(email).get(0);
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-       boolean isPasswordMatch = passwordEncoder.matches(passwordParam, user.getPassword());
-
-       if (userRepository.findByEmail(email).isEmpty()) {
-           return ResponseEntity.badRequest().body("Email não encontrado");
-       } else {
-           if (isPasswordMatch == true) {
-               return ResponseEntity.ok().body(" idUser: " + user.getIdUser());
-           } else {
-               return ResponseEntity.badRequest().body("Senha incorreta");
-           }
-       }
+           if (userRepository.findByEmail(email) == null)
+               return ResponseEntity.badRequest().body("Email não encontrado");
+            else {
+               if (isPasswordMatch == true)
+                   return ResponseEntity.ok().body(" idUser: " + user.getIdUser());
+               else
+                   return ResponseEntity.badRequest().body("Senha incorreta");
+            }
         } catch (IndexOutOfBoundsException e) {
             return ResponseEntity.badRequest().body("Email não encontrado");
         }
     }
 
     @Override
-    public ResponseEntity findUserByCpf(String cpf) {
-        if (userRepository.findByCpf(cpf).isEmpty()) {
+    public ResponseEntity findByCpf(String cpf) {
+        if (userRepository.findByCpf(cpf) == null)
             return ResponseEntity.badRequest().body("CPF não encontrado");
-        } else {
+        else
             return ResponseEntity.ok().body(userRepository.findByCpf(cpf));
-        }
+
     }
 
     @Override
-    public ResponseEntity<?> findAllUsers(Pageable pageable) {
-
+    public ResponseEntity<?> findAll(Pageable pageable) {
         return ResponseEntity.ok().body(userRepository.findAll(pageable));
     }
 
     @Override
-    public ResponseEntity updateUserById(@RequestBody UserDTO userDTO) {
+    public ResponseEntity update(@RequestBody UserDTO userDTO) {
         try {
-
             User user = userRepository.findById(userDTO.getIdUser()).orElse(null);
 
             BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
             String hashedPassword = passwordEncoder.encode(userDTO.getPassword());
 
-            if (userDTO.getFirstName() != null) {
+            if (userDTO.getFirstName() != null)
                 user.setFirstName(userDTO.getFirstName());
-            }
-            if (userDTO.getLastName() != null) {
+
+            if (userDTO.getLastName() != null)
                 user.setLastName(userDTO.getLastName());
-            }
-            if (userDTO.getCpf() != null) {
+
+            if (userDTO.getCpf() != null)
                 user.setCpf(userDTO.getCpf());
-            }
-            if (userDTO.getPhone() != null) {
+
+            if (userDTO.getPhone() != null)
                 user.setPhone(userDTO.getPhone());
-            }
-            if (userDTO.getBirth() != null) {
+
+            if (userDTO.getBirth() != null)
                 user.setBirth(userDTO.getBirth());
-            }
-            if (userDTO.getEmail() != null) {
+
+            if (userDTO.getEmail() != null)
                 user.setEmail(userDTO.getEmail());
-            }
-            if (userDTO.getPassword() != null) {
+
+            if (userDTO.getPassword() != null)
                 user.setPassword(hashedPassword);
-            }
 
             UserDTO userResult = new UserDTO();
 

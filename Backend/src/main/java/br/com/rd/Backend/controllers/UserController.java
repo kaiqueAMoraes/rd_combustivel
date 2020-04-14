@@ -12,49 +12,49 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
     UserService userService;
 
-    @PostMapping("/create-user")
-    public ResponseEntity saveUser(@RequestBody UserDTO userDTO){
-        return userService.saveUser(userDTO);
+    @PostMapping(value = "/create", consumes = "application/json", produces = "application/json")
+    public ResponseEntity save(@RequestBody UserDTO userDTO){
+        return userService.save(userDTO);
     }
 
-    @DeleteMapping("/delete-user/{id}")
-    public ResponseEntity deleteUserById (@PathVariable ("id") Long id) {
-        return userService.deleteUserById(id);
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity deleteById(@PathVariable ("id") Long id) {
+        return userService.deleteById(id);
     }
 
-    @PostMapping("/login")
-    public ResponseEntity findUserByEmailAndPassword(@RequestBody Login login) {
-        return userService.findUserByEmailAndPassword(login.getEmail(), login.getPassword());
+    @PostMapping(value = "/login", consumes = "application/json")
+    public ResponseEntity findByEmailAndPassword(@RequestBody Login login) {
+        return userService.findByEmailAndPassword(login.getEmail(), login.getPassword());
     }
 
-    @GetMapping("/find-user/{id}")
-    public ResponseEntity findUserById(@PathVariable("id") Long id) {
-        return userService.findUserById(id);
+    @GetMapping(value = "/findbyid/{id}", produces = "application/json")
+    public ResponseEntity findById(@PathVariable("id") Long id) {
+        return userService.findById(id);
     }
 
-    @GetMapping("/find-user-email/{email}")
+    @GetMapping(value = "/findbyemail/{email}", produces = "application/json")
     public ResponseEntity findByEmail(@PathVariable ("email") String email) {
-        return userService.findUserByEmail(email);
+        return userService.findByEmail(email);
     }
 
-    @GetMapping("find-user-cpf/{cpf}")
+    @GetMapping(value = "/findbycpf/{cpf}", produces = "application/json")
     public ResponseEntity findByCpf(@PathVariable("cpf")String cpf) {
-        return userService.findUserByCpf(cpf);
+        return userService.findByCpf(cpf);
     }
 
-    @GetMapping("find-users")
-    public ResponseEntity<?> findAllUsers(Pageable pageable) {
-        return userService.findAllUsers(pageable);
+    @GetMapping(value = "/findall", produces = "application/json")
+    public ResponseEntity<?> findAll(Pageable pageable) {
+        return userService.findAll(pageable);
     }
 
-    @PutMapping("update-user")
-    public ResponseEntity updateUserById(@RequestBody UserDTO user) {
-        return userService.updateUserById(user);
+    @PutMapping(value = "/update", consumes = "application/json", produces = "application/json")
+    public ResponseEntity update(@RequestBody UserDTO user) {
+        return userService.update(user);
     }
-
 }

@@ -12,20 +12,20 @@ import java.util.List;
 
 public interface UserInterface {
 
-    ResponseEntity saveUser(UserDTO userDTO);
+    ResponseEntity save(UserDTO userDTO);
 
-    ResponseEntity deleteUserById(Long id);
+    ResponseEntity deleteById(Long id);
 
-    ResponseEntity findUserById(Long id);
+    ResponseEntity findById(Long id);
 
-    ResponseEntity findUserByEmail (String email);
+    ResponseEntity findByEmail (String email);
 
-    ResponseEntity findUserByEmailAndPassword(String email, String password);
+    ResponseEntity findByEmailAndPassword(String email, String password);
 
-    ResponseEntity findUserByCpf (String cpf);
+    ResponseEntity findByCpf (String cpf);
 
-    ResponseEntity<?> findAllUsers (Pageable pageable);
+    ResponseEntity<?> findAll(Pageable pageable);
 
-    ResponseEntity updateUserById (UserDTO userDTO);
+    ResponseEntity update(UserDTO userDTO);
 
 }
