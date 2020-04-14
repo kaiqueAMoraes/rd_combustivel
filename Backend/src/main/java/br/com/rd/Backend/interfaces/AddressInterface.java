@@ -9,16 +9,16 @@ import java.util.List;
 
 public interface AddressInterface {
 
-    ResponseEntity saveAddress(AddressDTO addressDTO);
+    ResponseEntity save(AddressDTO addressDTO);
 
-    ResponseEntity deleteAddressById(Long id);
+    ResponseEntity deleteById(Long id);
 
-    ResponseEntity findAddressById(Long id);
+    ResponseEntity findById(Long id);
 
-    ResponseEntity<List<Address>> findAllAddresses();
+    ResponseEntity<List<Address>> findAll();
 
-    ResponseEntity findAddressByUser(User user);
+    ResponseEntity findByUser(User user);
 
-    ResponseEntity updateAddressById(AddressDTO addressDTO);
+    ResponseEntity update(AddressDTO addressDTO);
 
 }

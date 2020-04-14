@@ -8,39 +8,39 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/address")
 public class AddressController {
 
     @Autowired
     AddressService addressService;
 
-    @PostMapping(value = "/create-address", produces = "application/json", consumes = "application/json")
-    public ResponseEntity saveAddress(@RequestBody AddressDTO addressDTO) {
-        return addressService.saveAddress(addressDTO);
+    @PostMapping(value = "/create", produces = "application/json", consumes = "application/json")
+    public ResponseEntity save(@RequestBody AddressDTO addressDTO) {
+        return addressService.save(addressDTO);
     }
 
-    @GetMapping("/find-address/{id}")
-    public ResponseEntity findAddressById(@PathVariable("id") Long id) {
-        return addressService.findAddressById(id);
+    @GetMapping(value = "/findbyid/{id}", produces = "application/json")
+    public ResponseEntity findById(@PathVariable("id") Long id) {
+        return addressService.findById(id);
     }
 
-    @GetMapping("/findall-address")
-    public ResponseEntity findAllAddresses() {
-        return addressService.findAllAddresses();
+    @GetMapping(value = "/findall", produces = "application/json")
+    public ResponseEntity findAll() {
+        return addressService.findAll();
     }
 
-    @GetMapping("/find-address-byuser/{idUser}")
-    public ResponseEntity findById(@PathVariable("idUser") User user){
-        return addressService.findAddressByUser(user);
+    @GetMapping(value = "/findbyiduser/{idUser}", produces = "application/json")
+    public ResponseEntity findByUser(@PathVariable("idUser") User user){
+        return addressService.findByUser(user);
     }
 
-
-    @PutMapping("/update-address")
-    public ResponseEntity updateAddress(@RequestBody AddressDTO addressDTO) {
-        return addressService.updateAddressById(addressDTO);
+    @PutMapping(value = "/update", consumes = "application/json", produces = "application/json")
+    public ResponseEntity update(@RequestBody AddressDTO addressDTO) {
+        return addressService.update(addressDTO);
     }
 
-    @DeleteMapping("/delete-address/{id}")
-    public ResponseEntity deleteAddress(@PathVariable("id") Long id) {
-        return addressService.deleteAddressById(id);
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity delete(@PathVariable("id") Long id) {
+        return addressService.deleteById(id);
     }
 }

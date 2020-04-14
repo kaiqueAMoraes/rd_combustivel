@@ -23,7 +23,7 @@ public class AddressService implements AddressInterface {
     AddressRepository addressRepository;
 
     @Override
-    public ResponseEntity saveAddress(AddressDTO addressDTO) {
+    public ResponseEntity save(AddressDTO addressDTO) {
 
         try {
             Converter converter = new Converter();
@@ -40,68 +40,64 @@ public class AddressService implements AddressInterface {
     }
 
     @Override
-    public ResponseEntity deleteAddressById(Long id) {
-        if (addressRepository.findById(id).isEmpty()) {
+    public ResponseEntity deleteById(Long id) {
+        if (addressRepository.findById(id).isEmpty())
             return ResponseEntity.ok().body("Não há registros para o id informado");
-        } else {
+        else {
             addressRepository.deleteById(id);
             return ResponseEntity.ok().body("Endereço id:" + id + " deletado");
         }
     }
 
     @Override
-    public ResponseEntity findAddressById(Long id) {
-        if (addressRepository.findById(id).isEmpty()) {
+    public ResponseEntity findById(Long id) {
+        if (addressRepository.findById(id).isEmpty())
             return ResponseEntity.ok().body("Endereço não encontrado");
-        } else {
+        else
             return ResponseEntity.ok().body(addressRepository.findById(id));
-        }
     }
 
     @Override
-    public ResponseEntity<List<Address>> findAllAddresses() {
-        if (addressRepository.findAll().isEmpty()) {
+    public ResponseEntity<List<Address>> findAll() {
+        if (addressRepository.findAll().isEmpty())
             return null;
-        } else {
+          else
             return ResponseEntity.ok().body(addressRepository.findAll());
-        }
     }
 
     @Override
-    public ResponseEntity findAddressByUser(User user) {
-        if (addressRepository.findByIdUser(user).isEmpty()) {
+    public ResponseEntity findByUser(User user) {
+        if (addressRepository.findByIdUser(user).isEmpty())
             return ResponseEntity.badRequest().body("Não existem endereços para este usuário");
-        } else {
+          else
             return ResponseEntity.ok().body(addressRepository.findByIdUser(user));
-        }
     }
 
     @Override
-    public ResponseEntity updateAddressById(AddressDTO addressDTO) {
+    public ResponseEntity update(AddressDTO addressDTO) {
         try {
             Address addressUpdate = addressRepository.getOne(addressDTO.getIdAddress());
 
-            if (addressDTO.getCep() != null) {
+            if (addressDTO.getCep() != null)
                 addressUpdate.setCep(addressDTO.getCep());
-            }
-            if (addressDTO.getState() != null) {
+
+            if (addressDTO.getState() != null)
                 addressUpdate.setState(addressDTO.getState());
-            }
-            if (addressDTO.getCity() != null) {
+
+            if (addressDTO.getCity() != null)
                 addressUpdate.setCity(addressDTO.getCity());
-            }
-            if (addressDTO.getDistrict() != null) {
+
+            if (addressDTO.getDistrict() != null)
                 addressUpdate.setDistrict(addressDTO.getDistrict());
-            }
-            if (addressDTO.getStreet() != null) {
+
+            if (addressDTO.getStreet() != null)
                 addressUpdate.setStreet(addressDTO.getStreet());
-            }
-            if (addressDTO.getNumber() != null) {
+
+            if (addressDTO.getNumber() != null)
                 addressUpdate.setNumber(addressDTO.getNumber());
-            }
-            if (addressDTO.getComplement() != null) {
+
+            if (addressDTO.getComplement() != null)
                 addressUpdate.setComplement(addressDTO.getComplement());
-            }
 
             addressUpdate.setIdUser(addressDTO.getIdUser());
 
