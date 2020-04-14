@@ -9,7 +9,7 @@ export default class CadastrarProduto extends Component {
         return (
             <>
             <div>
-                <Header />
+                <Header/>
                 <form onSubmit="">
                     <fieldset>
                         <fieldset className="grupo">

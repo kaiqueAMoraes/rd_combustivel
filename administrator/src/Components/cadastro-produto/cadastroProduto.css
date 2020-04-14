@@ -1,0 +1,40 @@
+main {
+    margin-top: 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+main .titulo {
+    background-color: #ff6b6b; 
+    margin-bottom: 5px;
+    padding: 20px;  
+    color: white;  
+}   
+
+main .container-form-cadastro {
+    width: 80%;
+    display: block;
+    align-items: center;
+    background-color: rgb(218, 211, 211);
+    margin-bottom: 10px;
+    /* padding-top: 20px; */
+}
+
+label {
+    padding: 20px;
+}
+
+input {
+    margin: 5px;
+}
+
+form {
+    display: block;
+    justify-content: center;
+}
+
+.form-group-category{
+    display: block;
+    padding-left: 100px;
+}
