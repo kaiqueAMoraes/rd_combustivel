@@ -29,7 +29,7 @@ public class OrderItemService implements OrderItemInterface {
     Converter converter = new Converter();
 
     @Override
-    public ResponseEntity saveOrderItem(List<OrderItem> list) {
+    public ResponseEntity save(List<OrderItem> list) {
 
         List<Product> productList = new ArrayList<>();
 
@@ -61,7 +61,7 @@ public class OrderItemService implements OrderItemInterface {
 
 
     @Override
-    public ResponseEntity<List<OrderItem>> findAllOrderItems() {
+    public ResponseEntity<List<OrderItem>> findAll() {
         return ResponseEntity.ok().body(orderItemRepository.findAll());
     }
 }

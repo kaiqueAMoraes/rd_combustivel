@@ -8,13 +8,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/orderitem")
 public class OrderItemController {
 
     @Autowired
     OrderItemService orderItemService;
 
-    @GetMapping("/findall-orderitems")
-    public ResponseEntity findAllOrderItems() {
-        return orderItemService.findAllOrderItems();
+    @GetMapping(value = "/findall", produces = "application/json")
+    public ResponseEntity findAll() {
+        return orderItemService.findAll();
     }
 }

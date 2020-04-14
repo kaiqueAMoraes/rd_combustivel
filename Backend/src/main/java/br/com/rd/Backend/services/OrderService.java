@@ -51,8 +51,8 @@ public class OrderService implements OrderInterface {
             Converter converter = new Converter();
 
             Order order = converter.converterTo(orderDTO);
+            ResponseEntity response = orderItemService.save(order.getItemList());
 
-            ResponseEntity response = orderItemService.saveOrderItem(order.getItemList());
             if(response.getStatusCode() == BAD_REQUEST)
                 return ResponseEntity.badRequest().body(response.getBody());
 
