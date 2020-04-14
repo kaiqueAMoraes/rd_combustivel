@@ -38,35 +38,34 @@ class Home extends Component {
                     <Row className="justify-content-around">
                         <div className="discount-container">
 
-                            <Link to="/login">
+                            <Link to="/home/categoria/gasolina-aditivada/">
                                 <div className="discount" id="discount-a">
-                                    <img src="https://http2.mlstatic.com/yamaha-fz25-abs-blueflex-2020-2020-0-km-D_NQ_NP_833124-MLB32002026521_082019-F.webp" alt="" />
-                                    <h2>Até 40% off</h2>
-                                    <span>Em gasolina para moto</span>
+                                    <img src="https://cdn.dribbble.com/users/19849/screenshots/7619520/media/048f6df7e7c367f3e32e71c46cb912bb.png" alt="" />
+                                    <h2>Gasolina</h2>
+                                    
                                 </div>
                             </Link>
 
-                            <Link to="/login">
+                            <Link to="/home/categoria/etanol-aditivado/">
                                 <div className="discount" id="discount-b">
-                                    <h2>Até 35% off</h2>
-                                    <span>para os aventureiros</span>
-                                    <img src="https://toro.fiat.com.br/content/dam/fiat/products/226/11a/0/2020/page/360/176/29.jpg" alt="" srcset="" />
+                                    <h2>Etanol</h2>
+                                    <img src="https://cdn.dribbble.com/users/1568450/screenshots/7880617/media/2b89eb9a9496fba5dc1f7bf7d1418855.png" alt="" srcset="" />
                                 </div>
                             </Link>
 
-                            <Link to="/login">
+                            <Link to="/home/categoria/diesel/">
                                 <div className="discount" id="discount-c">
-                                    <h2>Até 40% off</h2>
-                                    <span>nos esportivos</span>
-                                    <img src="https://www.motorsportmaranello.com.br/wp-content/uploads//2019/12/test-drive-noleggio-Lamborghini-Hur%C3%A0can-2.jpg" alt="" srcset="" />
+                                    <h2>óleo</h2>
+
+                                    <img src="https://cdn.dribbble.com/users/1146489/screenshots/4337092/volkswagen-t1-dribbble-800-600.jpg" alt="" srcset="" />
                                 </div>
                             </Link>
 
-                            <Link to="/login">
+                            <Link to="/home/categoria/gas-natural/">
                                 <div className="discount" id="discount-d">
-                                    <h2>25% off</h2>
-                                    <span>escolhido a dedo</span>
-                                    <img src="https://media.gazetadopovo.com.br/2018/08/a166e0e4b01fdced4a49ac7635f45394-gpMedium.jpg" alt="" srcset="" />
+                                    <h2>fluidos</h2>
+                                    <span>para motor</span>
+                                    <img src="https://cdn.dribbble.com/users/13754/screenshots/6780635/gasoline-station.png" alt="" srcset="" />
                                 </div>
                             </Link>
                         </div>
@@ -92,21 +91,12 @@ class Home extends Component {
                         produtos={`http://localhost:8080/find-all-products`}
                     />
 
-                    <Row><Link className="full full-black"></Link></Row>
-                    <Row className="justify-content-between mb-4">
-                        <Link className="diamond-offer"><span>70% off</span></Link>
-                        <Link className="diamond-offer"><span>90% off</span></Link>
-                        <Link className="diamond-offer"><span>50% off</span></Link>
-                    </Row>
-
-
                     <h2>Adicionados recentemente</h2>
                     <ScrollCards/>
                     
                     <h2>Outras ofertas</h2>
                     <ScrollCards/>
                 </Container>
-                <div className="footer"></div>
             </>
         )
     }

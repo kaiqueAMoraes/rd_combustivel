@@ -3,9 +3,9 @@ import axios from 'axios'
 
 import CardProd from "../card-prod/card-prod.component";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Row from 'react-bootstrap/Row'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import Row from 'react-bootstrap/Row'
 
 
 import './scroll-cards.styles.scss';
@@ -132,7 +132,6 @@ export default class scrollCards extends Component {
                     (<button className="btn-next" onClick={handleScrollNextProducts}>
                         <FontAwesomeIcon icon={faChevronRight} />
                     </button>) : ""}
-
             </Row>
         )
     }

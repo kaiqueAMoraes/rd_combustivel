@@ -1,35 +1,150 @@
+@keyframes fade_in_from_left{
+  0% {
+      opacity: 0;
+      right: -500px;
+  }
 
+  100% {
+      opacity: 1;
+      right: 0px;
+  }
+}
+.quase-mata-meu-coracao{
+  position: fixed;
+  z-index: 99999999;
+  top: 0;
+  right: -500px;
+}
 .cart-dropdown {
-    position: fixed;
-    width: 360px;
-    height: auto;
-    max-height: 375px;
-    min-height: 275px;
+
+  width: 439px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 11px;
+  border: 1px solid rgb(216, 230, 254);
+  background-color: white;
+  position: relative;
+
+
+  background-image: url("https://cdn.dribbble.com/users/2394319/screenshots/4773525/record.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation-name: fade_in_from_left;
+  animation-duration: 1.5s;
+
+  .cart-items {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 11px;
-    border: 1px solid rgba(0, 0, 0, 0.274);
-    border-radius: 8px;
-    background-color: white;
-    top: 90px;
-    right: 150px;
-    z-index: 99999999;
-    
-  
-    .cart-items {
-      height: 315px;
-      display: flex;
-      flex-direction: column;
-      overflow-y: scroll;
-      margin: 21px 0;
-    }
-  
-    button {
-      margin-top: auto;
+    overflow-y: scroll;
+    margin: 21px 0;
+  }
+
+  button {
+    margin-top: auto;
+  }
+
+}
+
+.cart-checkout {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.empty-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 22px;
+  color: #444;
+  text-shadow: 0 0 10px #d2e4fb;
+}
+
+.go-to-checkout {
+  box-shadow: 0 0 15px 10px #F6F4FC;
+  height: 90px;
+  width: 55%;
+  margin-bottom: 22px;
+  border-radius: 5px;
+  border: 1px solid #EAEAEA;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  & .card-bank {
+    height: 37px;
+    width: 64px;
+    border-radius: 3px;
+    background-color: #FEAFC2;
+    overflow: hidden;
+
+    & span[class="bankName"],
+    & span[class="bankNum"] {
+      font-size: 7px;
+      color: whitesmoke;
+      font-weight: bold;
+      position: relative;
+      top: -4px;
+      left: 7px;
     }
 
+    & span[class="bankNum"] {
+      font-size: 4px;
+      top: 4px;
+      left: -25px;
+    }
+
+    div[class="card-square"] {
+      position: relative;
+      height: 10px;
+      width: 10px;
+      right: -48px;
+      bottom: 2px;
+      border-radius: 2px;
+      background-color: #f5f5f5;
+    }
   }
-      .empty-message {
-        display:18px;
-        margin: 50px;
-      }
+
+  & span[class="span-finalizar-compra-carrinho"] {
+    color: #9192A4;
+    font-weight: bold;
+    width: 80px;
+    font-family: MontSerrat;
+    font-size: 15px;
+  }
+}
+
+.go-to-checkout:hover {
+  transition: all 500ms;
+  border: 1px solid rgb(140, 175, 229);
+}
+
+.cart-price-amount-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  width: 40%;
+  margin-bottom: 22px;
+
+}
+.cart-price-text{
+font-weight: bold;
+font-size: 14px;
+color: rgb(189, 190, 210);
+}
+
+.cart-price-amount{
+  color: rgb(87, 89, 119);
+  font-size: 22px;
+}

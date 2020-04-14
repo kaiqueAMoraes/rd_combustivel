@@ -17,7 +17,7 @@ class CreateAddress extends Component {
     constructor(props) {
         super(props);
 
-        if (!sessionStorage.getItem('user'))
+        if (!localStorage.getItem('user'))
             this.props.history.push('/');
 
         this.state = {
@@ -34,6 +34,7 @@ class CreateAddress extends Component {
             "idUser": "",
             "isEdit": false
         }
+        
         //this.handleChange = this.handleChange.bind(this);
     }
 
@@ -57,7 +58,8 @@ class CreateAddress extends Component {
         })
     }
 
-    componentDidMount = () => {
+    componentDidMount = async () => {
+
         if (this.props.location.pathname === "/dashboard/edit-endereco") {
             const endereco = this.props.location.state.response;
             console.log(endereco)
@@ -82,9 +84,6 @@ class CreateAddress extends Component {
     handleEditChange = async e => {
         e.preventDefault();
         const { cep, state, city, district, street, number, complement, idUser, id, idAddress } = this.state;
-        console.log(idAddress);
-        console.log(id);
-        console.log(this.state)
         const address = {
             "user": {
                 "idUser": idUser
@@ -97,7 +96,6 @@ class CreateAddress extends Component {
             "street": street,
             "number": number,
             "complement": complement
-            
         }
         try {
             await axios.put("http://localhost:8080/update-address", address)
@@ -200,9 +198,9 @@ class CreateAddress extends Component {
 
         try {
             let address = {};
-            await axios.get('http://localhost:8080/find-user-email/' + sessionStorage.getItem('email'))
+            await axios.get('http://localhost:8080/find-user-email/' + localStorage.getItem('email'))
                 .then(response => {
-                    console.log(sessionStorage.getItem('email'));
+                    console.log(localStorage.getItem('email'));
                     address = {
                         "cep": cep,
                         "state": state,

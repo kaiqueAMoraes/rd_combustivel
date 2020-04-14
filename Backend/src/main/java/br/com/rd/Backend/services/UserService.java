@@ -9,7 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,14 +32,14 @@ public class UserService implements UserInterface {
 
     @Autowired
     UserRepository userRepository;
-    private User user;
+
 
     @Override
     public ResponseEntity saveUser(UserDTO userDTO) {
         try {
             //Validação de email já cadastrado
 
-            if (userRepository.findByEmail(userDTO.getEmail()).size() != 0) {
+            if (!userRepository.findByEmail(userDTO.getEmail()).isEmpty()) {
                 return ResponseEntity.badRequest().body("Este e-mail já foi cadastrado");
             }
 
@@ -45,6 +49,7 @@ public class UserService implements UserInterface {
             } else {
                 Converter converter = new Converter();
                 User user = userRepository.save(converter.converterTo(userDTO));
+
                 return ResponseEntity.ok().body(converter.converterTo(user));
             }
 
@@ -53,7 +58,7 @@ public class UserService implements UserInterface {
         } catch (DataIntegrityViolationException e) {
             return ResponseEntity.badRequest().body("Um ou mais campos obrigatórios não foram preenchidos ");
         } catch (ConstraintViolationException e) {
-            return ResponseEntity.badRequest().body("Um dos campos obrigatórios não foi preenchido");
+            return ResponseEntity.badRequest().body("CPF inválido!");
         }
     }
 
@@ -88,6 +93,29 @@ public class UserService implements UserInterface {
     }
 
     @Override
+    public ResponseEntity findUserByEmailAndPassword(String email, String passwordParam) {
+
+        try {
+
+        User user = userRepository.findByEmail(email).get(0);
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+       boolean isPasswordMatch = passwordEncoder.matches(passwordParam, user.getPassword());
+
+       if (userRepository.findByEmail(email).isEmpty()) {
+           return ResponseEntity.badRequest().body("Email não encontrado");
+       } else {
+           if (isPasswordMatch == true) {
+               return ResponseEntity.ok().body(" idUser: " + user.getIdUser());
+           } else {
+               return ResponseEntity.badRequest().body("Senha incorreta");
+           }
+       }
+        } catch (IndexOutOfBoundsException e) {
+            return ResponseEntity.badRequest().body("Email não encontrado");
+        }
+    }
+
+    @Override
     public ResponseEntity findUserByCpf(String cpf) {
         if (userRepository.findByCpf(cpf).isEmpty()) {
             return ResponseEntity.badRequest().body("CPF não encontrado");
@@ -97,38 +125,56 @@ public class UserService implements UserInterface {
     }
 
     @Override
-    public ResponseEntity<List<User>> findAllUsers() {
-        return ResponseEntity.ok().body(userRepository.findAll());
+    public ResponseEntity<?> findAllUsers(Pageable pageable) {
+
+        return ResponseEntity.ok().body(userRepository.findAll(pageable));
     }
 
     @Override
     public ResponseEntity updateUserById(@RequestBody UserDTO userDTO) {
         try {
-            User userEntity = userRepository.getOne(userDTO.getIdUser());
+
+            User user = userRepository.findById(userDTO.getIdUser()).orElse(null);
+
+            BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+            String hashedPassword = passwordEncoder.encode(userDTO.getPassword());
 
             if (userDTO.getFirstName() != null) {
-                userEntity.setFirstName(userDTO.getFirstName());
+                user.setFirstName(userDTO.getFirstName());
             }
             if (userDTO.getLastName() != null) {
-                userEntity.setLastName(userDTO.getLastName());
+                user.setLastName(userDTO.getLastName());
             }
             if (userDTO.getCpf() != null) {
-                userEntity.setCpf(userDTO.getCpf());
+                user.setCpf(userDTO.getCpf());
             }
             if (userDTO.getPhone() != null) {
-                userEntity.setPhone(userDTO.getPhone());
+                user.setPhone(userDTO.getPhone());
             }
             if (userDTO.getBirth() != null) {
-                userEntity.setBirth(userDTO.getBirth());
+                user.setBirth(userDTO.getBirth());
             }
             if (userDTO.getEmail() != null) {
-                userEntity.setEmail(userDTO.getEmail());
+                user.setEmail(userDTO.getEmail());
             }
             if (userDTO.getPassword() != null) {
-                userEntity.setPassword(userDTO.getPassword());
+                user.setPassword(hashedPassword);
             }
 
-            return ResponseEntity.ok().body(userRepository.save(userEntity));
+            UserDTO userResult = new UserDTO();
+
+            userResult.setIdUser(user.getIdUser());
+            userResult.setFirstName(user.getFirstName());
+            userResult.setLastName(user.getLastName());
+            userResult.setBirth(user.getBirth());
+            userResult.setCpf(user.getCpf());
+            userResult.setEmail(user.getEmail());
+            userResult.setGender(user.getGender());
+            userResult.setPhone(user.getPhone());
+
+            userRepository.save(user);
+
+            return ResponseEntity.ok().body(userResult);
 
         } catch (InvalidDataAccessApiUsageException e) {
             return ResponseEntity.badRequest().body("O Id do usuário não foi informado na requisição");

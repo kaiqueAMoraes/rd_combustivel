@@ -1,9 +1,11 @@
 package br.com.rd.Backend.controllers;
 
 import br.com.rd.Backend.DTOs.UserDTO;
+import br.com.rd.Backend.models.Login;
 import br.com.rd.Backend.models.User;
 import br.com.rd.Backend.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +27,11 @@ public class UserController {
         return userService.deleteUserById(id);
     }
 
+    @PostMapping("/login")
+    public ResponseEntity findUserByEmailAndPassword(@RequestBody Login login) {
+        return userService.findUserByEmailAndPassword(login.getEmail(), login.getPassword());
+    }
+
     @GetMapping("/find-user/{id}")
     public ResponseEntity findUserById(@PathVariable("id") Long id) {
         return userService.findUserById(id);
@@ -41,8 +48,8 @@ public class UserController {
     }
 
     @GetMapping("find-users")
-    public ResponseEntity<List<User>> findAllUsers() {
-        return userService.findAllUsers();
+    public ResponseEntity<?> findAllUsers(Pageable pageable) {
+        return userService.findAllUsers(pageable);
     }
 
     @PutMapping("update-user")

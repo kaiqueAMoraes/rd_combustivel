@@ -1,0 +1,28 @@
+.message_dispatcher,
+.message_dispatcher_error{
+    position: absolute;
+    z-index: 999999;
+    background-color: #04D361;
+    right: -500px;
+    min-width: 100px;
+    max-width: 400px;
+    min-height: 50px;
+    height: fit-content;
+    padding: 1rem 3rem;
+    top: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px #51515178;
+    color: #fefefe;
+    font-family: MontSerrat;
+    font-weight: bold;
+    font-size: 14.5px;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.message_dispatcher_error{
+    background-color: #E43531;
+}

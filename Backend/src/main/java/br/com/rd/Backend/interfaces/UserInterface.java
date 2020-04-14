@@ -3,6 +3,7 @@ package br.com.rd.Backend.interfaces;
 
 import br.com.rd.Backend.DTOs.UserDTO;
 import br.com.rd.Backend.models.User;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,9 +20,11 @@ public interface UserInterface {
 
     ResponseEntity findUserByEmail (String email);
 
+    ResponseEntity findUserByEmailAndPassword(String email, String password);
+
     ResponseEntity findUserByCpf (String cpf);
 
-    ResponseEntity<List<User>> findAllUsers ();
+    ResponseEntity<?> findAllUsers (Pageable pageable);
 
     ResponseEntity updateUserById (UserDTO userDTO);
 

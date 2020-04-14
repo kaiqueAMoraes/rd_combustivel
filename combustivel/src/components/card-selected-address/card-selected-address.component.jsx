@@ -96,7 +96,7 @@ class SelectedCardAddress extends React.Component {
                                                         <CustomButton
                                                             type="submit"
                                                             className="create-button"
-                                                            onClick={() => history.push('/dashboard/novo-endereco')} >
+                                                            onClick={() => history.push('/dashboard')} >
                                                             usar outro endereço
                                                         </CustomButton>
                                                     </div>

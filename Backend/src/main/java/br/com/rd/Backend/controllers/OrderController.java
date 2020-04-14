@@ -4,6 +4,7 @@ import br.com.rd.Backend.DTOs.OrderDTO;
 import br.com.rd.Backend.models.User;
 import br.com.rd.Backend.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,8 +27,8 @@ public class OrderController {
     }
 
     @GetMapping("/findall-orders")
-    public ResponseEntity findAllOrders() {
-        return orderService.findAllOrders();
+    public ResponseEntity<?> findAllOrders(Pageable pageable) {
+        return orderService.findAllOrders(pageable);
     }
 
     @GetMapping("/find-orders/{id}")

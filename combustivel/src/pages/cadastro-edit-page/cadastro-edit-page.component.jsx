@@ -19,7 +19,7 @@ class CadastroEditPage extends Component {
         super(props);
         const user = props.history.location.state.response;
         
-        if (!sessionStorage.getItem('user')){
+        if (!localStorage.getItem('user')){
             this.props.history.push('/');
         }
 
@@ -195,9 +195,8 @@ class CadastroEditPage extends Component {
                                     valid: true,
                                     successMessage: "informações editadas com sucesso"
                                 })
-                                sessionStorage.setItem("user", fullName);
-                                sessionStorage.setItem("email", response.data.email);
-                                //sessionStorage.setItem("email", response.data[0].email);
+                                localStorage.setItem("user", fullName);
+                                localStorage.setItem("email", response.data.email);
                                 setInterval(() => {
                                     this.clearState();
                                     this.props.history.push("/dashboard");
