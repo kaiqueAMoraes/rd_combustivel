@@ -30,18 +30,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/**").permitAll()
-                .antMatchers("/login").permitAll()
-                .anyRequest().authenticated()
-                .and()
-
-                //Filter login requests
-                .addFilterBefore(new JWTLoginFilter("/login", authenticationManager()),
-                        UsernamePasswordAuthenticationFilter.class)
-
-                //Filter other requests to verify JWT presence on header
-                .addFilterBefore(new JWTAuthenticationFilter(),
-                        UsernamePasswordAuthenticationFilter.class);
+                .antMatchers("/**").permitAll();
+//                .antMatchers("/login").permitAll()
+//                .anyRequest().authenticated()
+//                .and()
+//
+//                //Filter login requests
+//                .addFilterBefore(new JWTLoginFilter("/login", authenticationManager()),
+//                        UsernamePasswordAuthenticationFilter.class)
+//
+//                //Filter other requests to verify JWT presence on header
+//                .addFilterBefore(new JWTAuthenticationFilter(),
+//                        UsernamePasswordAuthenticationFilter.class);
     }
 
 //    @Override
@@ -52,10 +52,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
         //create a default account
-        auth.inMemoryAuthentication()
-        .withUser("admin")
-        .password("{noop}admin")
-        .roles("ADMIN");
+//        auth.inMemoryAuthentication()
+//        .withUser("admin")
+//        .password("{noop}admin")
+//        .roles("ADMIN");
     }
 
 

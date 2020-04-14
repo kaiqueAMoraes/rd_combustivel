@@ -13,7 +13,7 @@ public class AddressController {
     @Autowired
     AddressService addressService;
 
-    @PostMapping("/create-address")
+    @PostMapping(value = "/create-address", produces = "application/json", consumes = "application/json")
     public ResponseEntity saveAddress(@RequestBody AddressDTO addressDTO) {
         return addressService.saveAddress(addressDTO);
     }
