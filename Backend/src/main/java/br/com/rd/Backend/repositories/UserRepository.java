@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UserRepository extends PagingAndSortingRepository<User, Long> {
-    List<User> findByEmail (String email);
-    List<User> findByCpf (String cpf);
-    User findByEmailAndPassword (String email, String password);
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    User findByEmail (String email);
+    User findByCpf (String cpf);
 }
