@@ -53,7 +53,7 @@ public class OrderItemService implements OrderItemInterface {
         }
 
         for (Product product : productList)
-            productService.updateProductById(converter.converterTo(product));
+            productService.update(converter.converterTo(product));
 
 
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(sum);

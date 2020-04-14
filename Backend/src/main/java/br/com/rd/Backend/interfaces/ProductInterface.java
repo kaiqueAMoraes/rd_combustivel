@@ -9,17 +9,19 @@ import java.util.List;
 
 public interface ProductInterface {
 
-    ResponseEntity saveProduct(ProductDTO productDTO);
+    ResponseEntity save(ProductDTO productDTO);
 
-    ResponseEntity deleteProductById(Long id);
+    ResponseEntity deleteById(Long id);
 
-    ResponseEntity findProductById(Long id);
+    ResponseEntity findById(Long id);
 
-    ResponseEntity findProductByName(String name);
+    ResponseEntity findByName(String name);
 
-    ResponseEntity findProductByIdCategory(Category idCategory);
+    ResponseEntity findByNameContaining(String name);
 
-    ResponseEntity<List<Product>> findAllProducts();
+    ResponseEntity findByIdCategory(Category idCategory);
 
-    ResponseEntity updateProductById (ProductDTO productDTO);
+    ResponseEntity<List<Product>> findAll();
+
+    ResponseEntity update(ProductDTO productDTO);
 }

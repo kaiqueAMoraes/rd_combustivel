@@ -24,12 +24,12 @@ public class ProductService implements ProductInterface {
     ProductRepository productRepository;
 
     @Override
-    public ResponseEntity saveProduct(ProductDTO productDTO) {
+    public ResponseEntity save(ProductDTO productDTO) {
         try {
-            if ((productRepository.findByName(productDTO.getName()).size() != 0) &&
-                    (productRepository.findByDescription(productDTO.getDescription()).size() != 0)) {
+            if ((!productRepository.findByName(productDTO.getName()).isEmpty()) &&
+                    (!productRepository.findByDescription(productDTO.getDescription()).isEmpty()))
                 return ResponseEntity.badRequest().body("Este produto já está cadastrado");
-            } else {
+              else {
                 Converter converter = new Converter();
                 Product product = converter.converterTo(productDTO);
                 return ResponseEntity.ok().body(productRepository.save(product));
@@ -42,67 +42,71 @@ public class ProductService implements ProductInterface {
     }
 
     @Override
-    public ResponseEntity deleteProductById(Long id) {
+    public ResponseEntity deleteById(Long id) {
         try {
             productRepository.deleteById(id);
             return ResponseEntity.ok().body("Produto deletado");
         } catch (EmptyResultDataAccessException e) {
-            return ResponseEntity.badRequest().body("Id do produto não existe");
+            return ResponseEntity.badRequest().body("Produto não encontrado");
         }
     }
 
     @Override
-    public ResponseEntity findProductById(Long id) {
-        if (productRepository.findById(id).isEmpty()) {
-            return ResponseEntity.badRequest().body("Id do produto não encontrado");
-        } else {
+    public ResponseEntity findById(Long id) {
+        if (productRepository.findById(id).isEmpty())
+            return ResponseEntity.badRequest().body("Produto não encontrado");
+          else
             return ResponseEntity.ok().body(productRepository.findById(id).get());
-        }
     }
 
     @Override
-    public ResponseEntity findProductByName(String name) {
-        if (productRepository.findByName(name).isEmpty()) {
+    public ResponseEntity findByName(String name) {
+        if (productRepository.findByName(name).isEmpty())
             return ResponseEntity.badRequest().body("Este produto não existe");
-        } else {
+          else
             return ResponseEntity.ok().body(productRepository.findByName(name));
-        }
     }
 
     @Override
-    public ResponseEntity findProductByIdCategory(Category idCategory) {
-        if (productRepository.findByIdCategory(idCategory).isEmpty()) {
+    public ResponseEntity findByNameContaining(String name) {
+        if (productRepository.findByNameContaining(name).isEmpty())
+            return ResponseEntity.badRequest().body("Nenhum produto encontrado");
+        else
+            return ResponseEntity.ok().body(productRepository.findByNameContaining(name));
+    }
+
+    @Override
+    public ResponseEntity findByIdCategory(Category idCategory) {
+        if (productRepository.findByIdCategory(idCategory).isEmpty())
             return ResponseEntity.badRequest().body("Não existem produtos nesta categoria");
-        } else {
+          else
             return ResponseEntity.ok().body(productRepository.findByIdCategory(idCategory));
-        }
     }
 
     @Override
-    public ResponseEntity<List<Product>> findAllProducts() {
+    public ResponseEntity<List<Product>> findAll() {
         return ResponseEntity.ok().body(productRepository.findAll());
     }
 
     @Override
-    public ResponseEntity updateProductById(@RequestBody ProductDTO productDTO) {
+    public ResponseEntity update(@RequestBody ProductDTO productDTO) {
         try {
             Product product = productRepository.getOne(productDTO.getIdProduct());
 
-            if (productDTO.getName() != null) {
+            if (productDTO.getName() != null)
                 product.setName(productDTO.getName());
-            }
-            if (productDTO.getDescription() != null) {
+
+            if (productDTO.getDescription() != null)
                 product.setDescription(productDTO.getDescription());
-            }
-            if (productDTO.getQuantStock() != null) {
+
+            if (productDTO.getQuantStock() != null)
                 product.setQuantStock(productDTO.getQuantStock());
-            }
-            if (productDTO.getPrice() != null) {
+
+            if (productDTO.getPrice() != null)
                 product.setPrice(productDTO.getPrice());
-            }
-            if (productDTO.getImage() != null) {
+
+            if (productDTO.getImage() != null)
                 product.setImage(productDTO.getImage());
-            }
 
             return ResponseEntity.ok().body(productRepository.save(product));
 
