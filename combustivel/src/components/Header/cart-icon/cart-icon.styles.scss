@@ -1,7 +1,6 @@
 .icon-shoppingBag {
     font-size: 30px;
     color: #333;
-    margin-left: 1rem;
 }
 
 #qtd-produto {
@@ -12,4 +11,7 @@
     top: -1px;
     font-weight: bolder;
     font-size: 11px;
+}
+.cart-icon-holder{
+    cursor:pointer;
 }

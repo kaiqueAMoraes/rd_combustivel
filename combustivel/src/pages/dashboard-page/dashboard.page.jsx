@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import axios from 'axios';
-//Link
+
 
 import CustomButton from '../../components/custom-button/custom-button.component';
 import CardAddress from '../../components/card-address/cardAddress.component';
 import SelectedCardAddress from '../../components/card-selected-address/card-selected-address.component';
-import CardPurchases from '../../components/card-purchases/cardPurchases.component';
-//import CardsGrid from './cards-grid/cards-grid.component'
+
 
 import './dashboard.styles.scss';
 import Container from 'react-bootstrap/Container'
@@ -15,19 +14,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import Alert from 'react-bootstrap/Alert'
 import { connect } from 'react-redux';
+import CardPurchases from '../../components/card-purchases/cardPurchases.component'
 
-//faUserCircle,
 class DashboardPage extends Component {
     constructor(props) {
         super(props);
-        //console.log(props)
-        const currentUser = localStorage.getItem('user');
-        if (!currentUser)
-            this.props.history.push('/');
+
+        //if (!this.props.currentUser)
+        //    this.props.history.push('/');
 
         this.state = {
             user: {},
-            email: localStorage.getItem('email'),
+            email: "",
             endereco: [],
             compras: [],
             active: "myAccount",
@@ -122,6 +120,7 @@ class DashboardPage extends Component {
                         key={elm.idOrder}
                         elm={elm}
                         props={props} />
+                        
                 })
             }
 
@@ -238,7 +237,8 @@ class DashboardPage extends Component {
 }
 
 const mapStateToProps = state => ({
-    selectedAddress: state.address.addressSelected
+    selectedAddress: state.address.addressSelected,
+    currentUser : state.user.currentUser
 });
 
 export default withRouter(connect(mapStateToProps)(DashboardPage));

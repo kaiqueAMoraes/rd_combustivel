@@ -40,6 +40,7 @@
     flex-direction: column;
     overflow-y: scroll;
     margin: 21px 0;
+    align-items: center;
   }
 
   button {
@@ -147,4 +148,22 @@ color: rgb(189, 190, 210);
 .cart-price-amount{
   color: rgb(87, 89, 119);
   font-size: 22px;
+}
+
+.not-validated-for-purchase{
+  opacity: 0.5 !important;
+}
+
+.close-cart {
+  width: 35px;
+background-color: #eaeff982 ;
+
+height: 44px;
+border-radius: 6px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+color: #97add1;
+font-weight: bold;  
 }

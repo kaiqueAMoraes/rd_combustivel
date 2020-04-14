@@ -14,11 +14,11 @@ import {
 import CartItem from '../../cart-item/cart-item.component';
 
 const CartIcon = ({bring_cart,hide_cart, itemCount}) => (
-    <div>
-        <NavbarBrand href="#" onClick={() => bring_cart()}>
-            <FontAwesomeIcon icon={faShoppingBag} className="icon-shoppingBag" />
+    <div className="cart-icon-holder"  onClick={() => bring_cart()}>
+
+            <div><FontAwesomeIcon icon={faShoppingBag} className="icon-shoppingBag" />
             <span id="qtd-produto" className="navbar-span">{itemCount}</span>
-        </NavbarBrand>
+            </div>
     </div>
 )
 
