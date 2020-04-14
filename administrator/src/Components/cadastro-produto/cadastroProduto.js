@@ -43,7 +43,9 @@ class cadastroProduto extends Component {
         const produto = {
             "name": NameProduto,
             "description": description,
-            "id_category": idCategory,
+            "idCategory": {
+                "idCategory": idCategory
+            },
             "price": valordoproduto,
             "quantStock": quantidade
         }
