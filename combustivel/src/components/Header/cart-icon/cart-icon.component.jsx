@@ -13,7 +13,7 @@ import {
 } from 'reactstrap'
 import CartItem from '../../cart-item/cart-item.component';
 
-const CartIcon = ({bring_cart, itemCount}) => (
+const CartIcon = ({bring_cart,hide_cart, itemCount}) => (
     <div>
         <NavbarBrand href="#" onClick={() => bring_cart()}>
             <FontAwesomeIcon icon={faShoppingBag} className="icon-shoppingBag" />

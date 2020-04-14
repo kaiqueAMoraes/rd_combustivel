@@ -13,7 +13,7 @@ class CartDropdown extends React.Component {
     constructor(props) {
         super(props);
         const {hidden} = this.props;
-        alert(hidden)
+
         this.state = {
             hidden: hidden,
             fade_animation: {
@@ -22,6 +22,13 @@ class CartDropdown extends React.Component {
         }
     }
 
+    componentDidMount = () => {
+        if(!this.props.hidden){
+            this.setState({
+                fade_animation: Animations.FADE_IN_FROM_LEFT()
+            })
+        }
+    }
     componentDidUpdate(prevProps) {
         if (this.props.hidden !== prevProps.hidden) {
             return (this.handleFadeIn)()
@@ -32,11 +39,12 @@ class CartDropdown extends React.Component {
         //const { counter } = this.state;
         const { hidden } = this.props;
         
-        if (hidden === "not_hidden") {
-            this.setState({
+        if (!hidden) {
+            return this.setState({
                 fade_animation: Animations.FADE_IN_FROM_LEFT()
             })
         }
+        
     }
 
 
@@ -60,7 +68,7 @@ class CartDropdown extends React.Component {
                             )
                         
                     }}
-                    >>>
+                    >>>{hidden.toString()}
                 </div>
                 <div className="cart-items">
                     {
@@ -72,7 +80,7 @@ class CartDropdown extends React.Component {
                 <div className="cart-checkout">
 
                     <div className="cart-price-amount-container">
-                    <span className="cart-price-text">preço total {hidden.toString()}</span>
+                    <span className="cart-price-text">preço total </span>
                         <span className="cart-price-amount">
                             {
                                 Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(123.32)

@@ -15,6 +15,7 @@ import {
     Navbar, Container
 } from 'reactstrap'
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+import { toggleCartOff, toggleCartIn } from "../../redux/cart/cart.actions";
 
 
 const handleSignOut = () => {
@@ -23,8 +24,9 @@ const handleSignOut = () => {
     // window.location.reload();
 }
 
-const Header = ({ history, hidden, currentUser }) => {
+const Header = ({ history,hidden, hide_cart, currentUser }) => {
     {
+
         return (
 
                 history.location.pathname === "/user-credentials" ? ("") : (
@@ -141,4 +143,9 @@ const mapStateToProps = ({user: {currentUser}, cart : {hidden}}) => ({
     hidden
 });
 
-export default connect(mapStateToProps)(withRouter(Header));
+const mapDispatchToProps = dispatch => ({
+    bring_cart: () => dispatch(toggleCartIn()),
+    hide_cart: () => dispatch(toggleCartOff())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Header));
