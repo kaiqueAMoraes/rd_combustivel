@@ -46,7 +46,11 @@ const CartItem = ({
             </div>
             <input 
                 value={quantity}
-                onChange={e => itemQuantity(handleChange(e, id))} 
+                onChange={e => 
+                    e.target.value <= 0
+                    ? clearItem(ITEM)
+                    : itemQuantity(handleChange(e, id))
+                } 
                 type="number" 
                 className="cart-item-number-input" 
                 />
