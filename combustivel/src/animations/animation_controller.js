@@ -3,25 +3,25 @@ import './animation_controller.styles.scss'
 const Animations  = {
     FADE_OFF : (e) => {
         return {
-            animation: "fade_off 2.5s  1 normal forwards",
+            animation: "fade_off 1.5s  1 normal forwards",
             animationFillMode: "forwards"
         }
     },
     FADE_IN : (e) => {
         return {
-            animation: "fade_in 2.5s  1 normal forwards",
+            animation: "fade_in 1.5s  1 normal forwards",
             animationFillMode: "forwards"
         }
     },
     FADE_IN_FROM_LEFT : (e) => {
         return {
-            animation: "cart_fade_in_from_left 1.7s  1 normal forwards",
+            animation: "cart_fade_in_from_left 0.5s  1 normal forwards",
             animationFillMode: "forwards"
         }
     },
     FADE_OFF_FROM_LEFT : (e) => {
         return {
-            animation: "cart_fade_off_from_left 1.7s  1 normal forwards",
+            animation: "cart_fade_off_from_left 0.5s  1 normal forwards",
             animationFillMode: "forwards"
         }
     },

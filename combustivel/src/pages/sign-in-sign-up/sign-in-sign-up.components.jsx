@@ -11,7 +11,7 @@ import Animations from "../../animations/animation_controller";
 class SIGN_IN_SIGN_UP extends Component {
   constructor(props) {
     super(props);
-
+    
     this.state = {
       isLoginComponent: true,
       fade_out: {

@@ -214,8 +214,8 @@ class CheckoutPageFinal extends React.Component {
                                         this.state.DATA.length > 4 &&
                                             this.state.CVV.length > 2 ? (
                                             <CustomButton
-
-                                                onClick={this.handleOrder}>
+                                                _class={"create_button"}
+                                                handleClick={() => this.handleOrder}>
                                                 finalizar compra
                                                 {loading ? <Spinner animation="grow" variant="light" /> : ""}
                                             </CustomButton>

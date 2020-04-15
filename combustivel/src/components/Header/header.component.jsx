@@ -108,22 +108,22 @@ const Header = ({ history,hidden, hide_cart, currentUser }) => {
                                     <li className="ml-4 nav-item mr-4 none">
                                         <Link className="nav-link" onClick={() => {
                                             history.push('/home/categoria/gasolina-aditivada/')
-                                            window.location.reload()}}>Gasolina</Link>
+                                            }}>Gasolina</Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none">
                                         <Link className="nav-link" onClick={() => {
                                             history.push('/home/categoria/etanol-aditivado/')
-                                            window.location.reload()}}>Etanol </Link>
+                                            }}>Etanol </Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none" >
                                         <Link className="nav-link" onClick={() => {
                                             history.push('/home/categoria/Diesel/')
-                                            window.location.reload()}}>Óleo</Link>
+                                            }}>Óleo</Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none">
                                         <Link className="nav-link"  onClick={() => {
                                             history.push('/home/categoria/gas-natural/')
-                                            window.location.reload()}}>Fluidos para motor</Link>
+                                            }}>Fluidos para motor</Link>
                                     </li>
                                 </ul>
                             </Container>
