@@ -26,7 +26,6 @@ class cadastroProduto extends Component {
             "valordoproduto": "",
             "quantidade": "",
             "image": ""
-
         }
     }
 
@@ -50,7 +49,7 @@ class cadastroProduto extends Component {
             },
             "price": valordoproduto,
             "quantStock": quantidade,
-            "image": image 
+            "image": image
         }
 
         try {
@@ -120,7 +119,7 @@ class cadastroProduto extends Component {
                             </div>
 
                             <div>
-                                <label for="myfile">Imagem do produto</label>
+                                <label html="image">Imagem do produto</label>
                                 <input type="file" id="image" name="image" onChange={this.handleChange}/>
                             </div>
                                 <button id="editar" className="buttons" onClick={this.mySubmitHandler} >Cadastrar</button>
