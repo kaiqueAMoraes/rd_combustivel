@@ -71,8 +71,9 @@ class DashboardPage extends Component {
         await axios.get(`http://localhost:8080/find-orders-byuser/${this.state.user.idUser}`)
             .then(response => {
                 if (response.data) {
-                    typeof response.data === "string" ? this.setState({ errorMessage: "nenhuma compra realizada ainda" }) :
-                        this.setState({ compras: response.data })
+                    typeof response.data === "string" 
+                        ? this.setState({ errorMessage: "nenhuma compra realizada ainda" }) 
+                        : this.setState({ compras: response.data })
                 }
             }).catch(error => {
                 console.log(error)
@@ -173,12 +174,12 @@ class DashboardPage extends Component {
                                         </div>
 
                                         <div className="line-break-left">
-                                            <CustomButton
-                                                type="submit"
-                                                className="edit-button"
-                                                onClick={this.handleUserEdit} >
-                                                Editar
-                                            </CustomButton>
+                                                <CustomButton
+                                                    type="submit"
+                                                    className="edit-button"
+                                                    handleClick={this.handleUserEdit} >
+                                                    Editar
+                                                </CustomButton>
                                         </div>
                                     </div>
                                     <div className="line-break">
