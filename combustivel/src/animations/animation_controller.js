@@ -9,7 +9,7 @@ const Animations  = {
     },
     FADE_IN : (e) => {
         return {
-            animation: "fade_in 2.5s  1 normal forwards",
+            animation: "fade_in 1.5s  1 normal forwards",
             animationFillMode: "forwards"
         }
     },
