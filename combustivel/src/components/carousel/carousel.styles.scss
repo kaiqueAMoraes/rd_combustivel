@@ -8,10 +8,13 @@
 ////////////////////////////////////////////////////////////////////////
 .carousel-controller {
     width: 100vw;
-    
+    border-radius: 20px;
     overflow: hidden;
     position: relative;
-
+    height: 400px;
+    margin: 60px 0;
+    position: relative
+    ;
     & .left,
     & .right {
         position: absolute;
@@ -31,7 +34,7 @@
     }
 
     & .right {
-        right: 15px;
+        right: -5px;
     }
 }
 

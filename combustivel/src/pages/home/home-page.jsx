@@ -79,8 +79,10 @@ class Home extends Component {
         return (
             <>
                 
-                <Carousel/>
                 <Container className="container-fluid">
+                <Row>
+                <Carousel/>
+                </Row>
                     {/* DISCOUNTS ===> TO CREATE COMPONENT */}
                     <MyComponents.Discount></MyComponents.Discount>
                     {/* DISCOUNTS ===> TO CREATE COMPONENT */}
