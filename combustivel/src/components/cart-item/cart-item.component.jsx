@@ -4,14 +4,16 @@ import { connect } from 'react-redux';
 import {
     clearItemFromCart,
     addItem,
-    removeItem
+    removeItem,
+    changeItemQuantity
 } from '../../redux/cart/cart.actions';
 import './cart-item.styles.scss';
 
-const handleChange = (e) => {
-    alert(e.target.value)
-
-
+const handleChange = (e, id) => {
+    return {
+         id,
+         quantity :  e.target.value
+    }
 }
 
 const CartItem = ({
@@ -22,7 +24,7 @@ const CartItem = ({
         quantity,
         id
     },
-    clearItem, addItem, removeItem
+    clearItem, itemQuantity
 }) => {
     const ITEM = { id: id }
     return (
@@ -42,7 +44,7 @@ const CartItem = ({
             </div>
             <input 
                 value={quantity}
-                onChange={e => handleChange(e)} 
+                onChange={e => itemQuantity(handleChange(e, id))} 
                 type="number" 
                 className="cart-item-number-input" 
                 />
@@ -61,7 +63,9 @@ const mapDispatchToProps = dispatch => ({
     addItem: item =>
         dispatch(addItem(item)),
     removeItem: item => 
-        dispatch(removeItem(item))
+        dispatch(removeItem(item)),
+    itemQuantity: item => 
+        dispatch(changeItemQuantity(item))
 })
 
 
