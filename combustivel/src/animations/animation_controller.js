@@ -3,7 +3,7 @@ import './animation_controller.styles.scss'
 const Animations  = {
     FADE_OFF : (e) => {
         return {
-            animation: "fade_off 2.5s  1 normal forwards",
+            animation: "fade_off 1.5s  1 normal forwards",
             animationFillMode: "forwards"
         }
     },
