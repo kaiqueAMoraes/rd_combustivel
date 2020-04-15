@@ -9,50 +9,47 @@ export default class DoughnutProducts extends Component {
         super(props);
 
         this.state = {
-            products: []
+            products: [],
+            dataGraph: []
         }
     }
 
     chartRef = React.createRef();
 
     componentDidMount() {
-
-    }
-
-    componentDidMount() {
         axios.get('http://localhost:8080/find-all-products')
             .then((response) => {
                 const products = response.data;
                 this.setState({ products })
-                console.log(products);
+                //console.log(products);
 
                 const categories = [];
                 this.state.products.map(product => (
                     categories.push(product.idCategory.name)
                 ));
-                console.log(categories);
+                //console.log(categories);
 
                 const filteredCategories = categories.filter((este, i) => categories.indexOf(este) === i);
-                console.log(filteredCategories);
+                //console.log(filteredCategories);
 
                 const items = [];
                 this.state.products.map(product => {
                     items.push(product.idCategory.idCategory)
                 })
-                console.log(items);
+                //console.log(items);
 
                 const filteredItems = items.filter((este, i) => items.indexOf(este) === i);
-                console.log(filteredItems);
+                //console.log(filteredItems);
 
                 let occurrences = items.reduce(function(obj, item) {
                     obj[item] = (obj[item] || 0) + 1;
                     return obj;
                   }, {});
 
-                console.log(occurrences['1'] / items.length * 100);
-                console.log(occurrences['2'] / items.length * 100);
-                console.log(occurrences['3'] / items.length * 100);
-                console.log(occurrences['4'] / items.length * 100);
+                //console.log(occurrences['1'] / items.length * 100);
+                //console.log(occurrences['2'] / items.length * 100);
+                //console.log(occurrences['3'] / items.length * 100);
+                //console.log(occurrences['4'] / items.length * 100);
 
                 const myChartRef = this.chartRef.current.getContext("2d");
 
