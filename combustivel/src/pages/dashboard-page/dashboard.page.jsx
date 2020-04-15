@@ -154,34 +154,12 @@ class DashboardPage extends Component {
 
 
                     <div className="dashboard-content-holder">
-                        <UserCardDashboard/>
                         {
                             this.state.active === "myAccount" ? (
                                 <>
                                     <h5 className="dashboard-title">Minha conta</h5>
-                                    <div className="info-holder box-border">
-                                        <div className="address-info">
-                                            <div className="info-container">
-
-                                                <p>{this.state.user.firstName} {this.state.user.lastName}</p>
-                                                <p>{this.state.user.gender === "M" ? "Masculino" : "Feminino"}</p>
-                                                <p>{this.state.user.email}</p>
-                                                <p>{this.state.user.cpf}</p>
-                                                <p>{this.state.user.phone}</p>
-                                                <p>{birth}</p>
-                                            </div>
-
-                                        </div>
-
-                                        <div className="line-break-left">
-                                                <CustomButton
-                                                    type="submit"
-                                                    className="edit-button"
-                                                    handleClick={this.handleUserEdit} >
-                                                    Editar
-                                                </CustomButton>
-                                        </div>
-                                    </div>
+                                    <UserCardDashboard/>
+                                    
                                     <div className="line-break">
                                         <h5 className="dashboard-title">endereço de entrega</h5>
                                     </div>

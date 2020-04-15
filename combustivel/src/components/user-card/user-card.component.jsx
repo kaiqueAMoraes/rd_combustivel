@@ -19,7 +19,7 @@ const UserCardDashboard = ({ _USER }) => {
                     <div className="div-user-edit-icon">
                     <FontAwesomeIcon icon={faUserEdit} className="icon-userEdit"/>
                     </div>
-                Editar
+                Editar minhas informações
             </div>
             <div className="user-card-info">
                 <div className="info-container">
