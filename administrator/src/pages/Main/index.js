@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import LineChart from '../../Components/LineChart/index';
+import LineSales from '../../Components/LineChartSale/index';
 import DoughnutProduct from '../../Components/DoughnutChartProduct/index';
 import Header from '../../Components/Header/header';
 
@@ -16,7 +16,7 @@ export default class Main extends Component {
         <Header />
         <div className="App">
             <div className="main chart-wrapper">
-            <LineChart
+            <LineSales
                 data=""
                 title="Vendas"
                 color="#3E517A"

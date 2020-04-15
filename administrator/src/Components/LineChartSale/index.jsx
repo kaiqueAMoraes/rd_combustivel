@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Chart } from 'chart.js';
 import './styles.css';
 
-export default class LineGraph extends Component {
+export default class LineSales extends Component {
 
     chartRef = React.createRef();
 
