@@ -3,8 +3,12 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { withRouter } from 'react-router-dom';
 import Animations from '../../animations/animation_controller';
+import SelectedCardAddress from '../../components/card-selected-address/card-selected-address.component';
+import {isHidden,  selectAllAddresses, mapSelectedAddress } from '../../redux/address/address.selector';
 
-class AdressSlider extends Component {
+import './address-card-slide.styles.scss'
+
+class AddressSlider extends Component {
     constructor(props){
         super(props);
 
@@ -17,13 +21,13 @@ class AdressSlider extends Component {
 
     componentDidMount = () => {
         if (!this.props.hidden) {
-            this.props.hide_cart()
+            //this.props.hide_cart()
         }
     }
     
     componentDidUpdate(prevProps) {
         if (this.props.hidden !== prevProps.hidden) {
-            return (this.handleFadeIn)()
+            //return (this.handleFadeIn)()
         }
     }
 
@@ -38,11 +42,31 @@ class AdressSlider extends Component {
     }
 
     
-
-
     render(){
         return(
-            <h1>ok ok</h1>
+            <div className="slider-address-container"
+            style={this.state.fade_animation}>
+            <div className="cart-dropdown">
+                    <div className="close-cart"
+                        onClick={() => {
+                            //hide_cart()
+                            return Animations.DELAY_CONTROLLER(
+                                () => { alert("running dsa")},
+                                () => {
+                                    this.setState({
+                                        fade_animation: Animations.FADE_OFF_FROM_LEFT()
+                                    })
+                                },
+                                2500
+                            )
+                        }}>
+                        x
+                    </div>
+                    <SelectedCardAddress />
+
+
+                    </div>
+            </div>
         )
     }
 }
@@ -59,5 +83,5 @@ export default withRouter(
     connect(
         mapStateToProps,
     )
-        (AdressSlider)
+        (AddressSlider)
 );

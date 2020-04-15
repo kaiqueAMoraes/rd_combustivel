@@ -28,7 +28,7 @@ class CartDropdown extends React.Component {
             this.props.hide_cart()
         }
     }
-    
+
     componentDidUpdate(prevProps) {
         if (this.props.hidden !== prevProps.hidden) {
             return (this.handleFadeIn)()
@@ -59,10 +59,11 @@ class CartDropdown extends React.Component {
     }
 
     render() {
-        const { cartItems, history, hide_cart,total,  bring_cart, hidden } = this.props;
+        const { cartItems, history, hide_cart, total, bring_cart, hidden } = this.props;
 
         return (
-            <div className="quase-mata-meu-coracao" style={this.state.fade_animation}>
+            <div className="quase-mata-meu-coracao"
+                style={this.state.fade_animation}>
 
                 <div className="cart-dropdown">
                     <div className="close-cart"
@@ -77,9 +78,8 @@ class CartDropdown extends React.Component {
                                 },
                                 2500
                             )
-
                         }}>
-                    x
+                        x
                     </div>
                     <div className="cart-items">
                         {

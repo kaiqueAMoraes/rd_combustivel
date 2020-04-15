@@ -16,6 +16,7 @@ import Alert from 'react-bootstrap/Alert'
 import { connect } from 'react-redux';
 import CardPurchases from '../../components/card-purchases/cardPurchases.component'
 import UserCardDashboard from '../../components/user-card/user-card.component';
+import AddressSlider from '../../components/address-card-slide/address-card-slide.component';
 
 class DashboardPage extends Component {
     constructor(props) {
@@ -128,35 +129,20 @@ class DashboardPage extends Component {
 
         }
 
-        const { selectedAddress } = this.props;
+        const { selectedAddress, history} = this.props;
         const { birth } = this.state.user;
         return (
             <div className="dashboard-container">
                 <Container className="inner-container">
 
-                    {/* INICIO box de seleção de display */}
-                    <div className="user-container">
-                        <div className="user-profile">
-                            <div className="u-show" name="active" value="myAccount" onClick={this.handleAccount}>
-                                <div className="u-icon-holder"><FontAwesomeIcon icon={faInfoCircle} className="icon-userCircle" /></div>
-                                <div className="u-text-container">
-                                    <h2 className="u-title">Minha conta</h2>
-                                    <span className="u-hello-user" >Olá, {localStorage.getItem('user')}</span>
-                                </div>
-                            </div>
-                            <div className="u-show" name="active" value="compras" onClick={this.handleCompra}>
-                                <div className="u-icon-holder"><FontAwesomeIcon icon={faShoppingBag} className="icon-userCircle" /></div>
-                                <span className="u-title-one" >Minhas compras</span>
-                            </div>
-                        </div>
-                    </div>
-                    {/*FIM box de seleção de display */}
-
-
+                <AddressSlider/>
                     <div className="dashboard-content-holder">
+
+
                         {
                             this.state.active === "myAccount" ? (
                                 <>
+                                
                                     <h5 className="dashboard-title">Minha conta</h5>
                                     <UserCardDashboard/>
                                     
@@ -169,13 +155,14 @@ class DashboardPage extends Component {
                                     <div className="line-break">
                                         <h5 className="dashboard-title">Meus endereços</h5>
                                         <div className="flex-to-left">
-                                            <Link to={`${this.props.match.url}/novo-endereco`}>
+                                            <div>
                                                 <CustomButton
                                                     type="submit"
+                                                    handleClick={() => history.push('dashboard/novo-endereco')}
                                                     className="create-button">
                                                     + adicionar novo
                                                 </CustomButton>
-                                            </Link>
+                                            </div>
                                         </div>
                                     </div>
                                     <span>{this.state.endereco.length} endereços cadastrados</span>

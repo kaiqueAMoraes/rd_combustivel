@@ -51,6 +51,10 @@
     border-radius: 6px;
     margin: 10px;
     padding: 0 10px;
+    &:hover{
+        transition: all 1s;
+        background-color: #E7DCFF;
+    }
     & .div-user-edit-icon {
         height: 20px;
         background-color: #c9b3feb0;
