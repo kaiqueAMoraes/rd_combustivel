@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import './form-contact.css';
+import { Link, withRouter } from "react-router-dom";
 
 import { Col, Button, Form, FormGroup, Label, Input, Container, Alert } from 'reactstrap';
 
-class FormContact extends Component {    
+class FormContact extends Component {
+
+    handleSent(e) {
+        alert("Mensagem enviada com sucesso! Em breve entramos em contato.") }
 
     render() {
         return (
@@ -14,7 +18,7 @@ class FormContact extends Component {
                             <div className="text-container" >
                                 <h2>Fale conosco</h2>
                             </div>
-                            <form>
+                            <form onSubmit={this.handleSent}>
                                 <FormGroup>
                                     <FormGroup>
                                         <Label>Nome</Label>
@@ -39,10 +43,9 @@ class FormContact extends Component {
                                         <Input type="textarea" name="text" id="exampleText" />
                                     </FormGroup>
 
-                                    <Button type="submit" onClick="">
+                                    <Button type="submit">
                                         Enviar
                                     </Button>
-
                                 </FormGroup>
                             </form>
                         </Container>
@@ -53,4 +56,4 @@ class FormContact extends Component {
     }
 }
 
-export default FormContact;
+export default withRouter(FormContact);

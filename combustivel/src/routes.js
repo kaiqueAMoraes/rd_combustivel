@@ -16,7 +16,7 @@ import SuccessOrderPage from './pages/checkout-success/checkout-success.componen
 import CategoriaPage from './pages/categoria-page/categoria.component';
 import Footer from '../../combustivel/src/components/footer/footer';
 import signInSignUpComponents from './pages/sign-in-sign-up/sign-in-sign-up.components';
-
+import FormContact from './components/form-contact-us/form-contact';
 
 const Routes = (props) => (
     <BrowserRouter>
@@ -36,6 +36,7 @@ const Routes = (props) => (
             <Route exact path="/carrinho/checkout" component={CheckoutPageFinal} />
             <Route exact path="/carrinho/checkout/success-page" component={SuccessOrderPage} />
             <Route exact path="/user-credentials" component={signInSignUpComponents}/>
+            <Route exact path="/fale-conosco" component={FormContact}/>
         </Switch>
         <Footer />
     </BrowserRouter>

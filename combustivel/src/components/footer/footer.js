@@ -20,7 +20,7 @@ const Footer = ({ match, history }) => {
                                 <hr className="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style={{ width: '60px' }} />
                                 <hr className="teal accent-3 mb-4 mt-0  d-inline-block mx-auto" style={{ width: '60px' }} />
                                 <p>
-                                    <Link className="dark-grey-text"> Fale conosco </Link>
+                                    <Link to="/fale-conosco" className="dark-grey-text"> Fale conosco </Link>
                                 </p>
                                 <p> origin-combustivel@gmail.com</p>
                                 <p> + 55 11 4202-8223</p>
@@ -30,16 +30,16 @@ const Footer = ({ match, history }) => {
                                 <h6 className="text-uppercase font-weight-bold">Produtos</h6>
                                 <hr className="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style={{ width: '60px' }} />
                                 <p>
-                                    <Link to="/home/categoria/gasolina-aditivada/" className="dark-grey-text">Gasolina</Link>
+                                    <Link to="/home/categoria/gasolina/" className="dark-grey-text">Gasolina</Link>
                                 </p>
                                 <p>
-                                    <Link to="/home/categoria/gasolina-aditivada/" className="dark-grey-text">Etanol </Link>
+                                    <Link to="/home/categoria/etanol" className="dark-grey-text">Etanol </Link>
                                 </p>
                                 <p>
-                                    <Link to="/home/categoria/gasolina-aditivada/" className="dark-grey-text">Óleo</Link>
+                                    <Link to="/home/categoria/oleo" className="dark-grey-text">Óleo</Link>
                                 </p>
                                 <p>
-                                    <Link to="/home/categoria/gasolina-aditivada/" className="dark-grey-text">Fluidos para motor</Link>
+                                    <Link to="/home/categoria/fluido" className="dark-grey-text">Fluidos para motor</Link>
                                 </p>
                             </Col>
                             <Col className="col-md-3 col-lg-4 col-xl-3 mb-4">
