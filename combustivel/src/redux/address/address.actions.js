@@ -5,6 +5,10 @@ export const addressSelected = address => ({
     payload : address
 })
 
+export const setHidden = () => ({
+    type : AddressActionTypes.SET_HIDDEN,
+})
+
 export const addressReset = address => ({
     type : AddressActionTypes.RESET_ADDRESS,
 })

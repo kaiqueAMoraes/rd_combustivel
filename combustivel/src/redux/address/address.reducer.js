@@ -1,7 +1,9 @@
 import AddressActionTypes from "./address.types";
 
 const INITIAL_STATE = {
-    addressSelected: null
+    addresses: null,
+    addressSelected: null,
+    hidden : true
 };
 
 const addressReducer = (state = INITIAL_STATE, action) => {
@@ -11,6 +13,11 @@ const addressReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 addressSelected: action.payload
             }
+            case AddressActionTypes.SET_HIDDEN:
+                return {
+                    ...state,
+                    hidden: !INITIAL_STATE.hidden
+                }
             case AddressActionTypes.RESET_ADDRESS:
                 return {
                     ...state,

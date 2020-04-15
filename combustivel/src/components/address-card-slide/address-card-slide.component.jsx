@@ -37,6 +37,8 @@ class AdressSlider extends Component {
         }
     }
 
+    
+
 
     render(){
         return(
@@ -49,8 +51,8 @@ class AdressSlider extends Component {
 
 const mapStateToProps = createStructuredSelector({
     hidden: isHidden,
-    addresses: bringAddresses,
-    addressSelected: state.address.addressSelected
+    addresses: selectAllAddresses,
+    addressSelected: mapSelectedAddress
 });
 
 export default withRouter(

@@ -28,6 +28,7 @@ class CartDropdown extends React.Component {
             this.props.hide_cart()
         }
     }
+    
     componentDidUpdate(prevProps) {
         if (this.props.hidden !== prevProps.hidden) {
             return (this.handleFadeIn)()
