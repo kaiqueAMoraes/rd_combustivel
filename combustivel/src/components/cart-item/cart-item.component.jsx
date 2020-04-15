@@ -8,11 +8,13 @@ import {
     changeItemQuantity
 } from '../../redux/cart/cart.actions';
 import './cart-item.styles.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const handleChange = (e, id) => {
     return {
          id,
-         quantity :  e.target.value
+         quantity :  e.target.value * 1
     }
 }
 
@@ -33,13 +35,13 @@ const CartItem = ({
             <div className="item-details">
                 <span className="cart-item-name">
                     {
-                        name.length > 12
-                            ? name.slice(0, 19) + "..."
+                        name.length > 22
+                            ? name.slice(0, 22) + "..."
                             : name
                     }
                 </span>
                 <span className="cart-item-price">
-                    {quantity} x R$ {price}
+                    <span className="unit-price">{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price)}</span>
                 </span>
             </div>
             <input 
@@ -49,8 +51,8 @@ const CartItem = ({
                 className="cart-item-number-input" 
                 />
             <div onClick={() => clearItem(ITEM)}
-                className='remove-button'>
-                Remover
+                className="remove-item-cart">
+                    <FontAwesomeIcon icon={faTrash} className="icon-trash"/>
                 </div>
         </div>
     )
