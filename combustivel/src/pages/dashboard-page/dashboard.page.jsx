@@ -15,6 +15,7 @@ import { faInfoCircle, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import Alert from 'react-bootstrap/Alert'
 import { connect } from 'react-redux';
 import CardPurchases from '../../components/card-purchases/cardPurchases.component'
+import UserCardDashboard from '../../components/user-card/user-card.component';
 
 class DashboardPage extends Component {
     constructor(props) {
@@ -152,6 +153,7 @@ class DashboardPage extends Component {
 
 
                     <div className="dashboard-content-holder">
+                        <UserCardDashboard/>
                         {
                             this.state.active === "myAccount" ? (
                                 <>
@@ -168,24 +170,6 @@ class DashboardPage extends Component {
                                                 <p>{birth}</p>
                                             </div>
 
-                                        </div>
-
-                                        <div className="info-container">
-                                        </div>
-
-                                        <div className="info-container">
-                                        </div>
-
-                                        <div className="info-container">
-                                        </div>
-
-                                        <div className="info-container">
-                                        </div>
-
-                                        <div className="info-container">
-                                        </div>
-
-                                        <div className="info-container">
                                         </div>
 
                                         <div className="line-break-left">

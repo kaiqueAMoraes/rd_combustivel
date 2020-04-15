@@ -1,0 +1,22 @@
+.user-dashboard-info-container{
+    min-height: 190px;
+    width: 100%;
+    background-color: #C9B3FE;
+    color: #f5f5f5;
+    background-image:url('../../images/user_dashboard.png');
+    background-size: 280px;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 1.5rem 4.5rem;
+    border-radius: 15px;
+    position: relative;
+    & .hello-user-dashboard{
+        color: indigo;
+font-weight: bold;
+font-family: MontSerrat;
+font-size: 24px;
+    }
+    & p{
+        margin: 0;
+    }
+}
