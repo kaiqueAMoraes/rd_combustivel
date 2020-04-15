@@ -43,9 +43,19 @@ class CartDropdown extends React.Component {
                 fade_animation: Animations.FADE_IN_FROM_LEFT()
             })
         }
-
     }
 
+    handleSubmit = async (items, history, total) => {
+        const itemList = [];
+        items.map(item => {
+            itemList.push({ "idProduct": { "idProduct": item.id }, "quantity": item.quantity })
+        })
+        const orderInfo = {
+            "itemList": itemList,
+            "total": total
+        }
+        history.push("/carrinho/checkout", orderInfo);
+    }
 
     render() {
         const { cartItems, history, hide_cart,total,  bring_cart, hidden } = this.props;
@@ -93,7 +103,8 @@ class CartDropdown extends React.Component {
                                 ? (
                                     <div className="go-to-checkout "
                                         onClick={() => {
-                                            history.push('/checkout')
+                                            this.handleSubmit(cartItems, history, total)
+
                                         }}>
                                         <div className="card-bank">
                                             <span className="bankName">bankCard</span>
@@ -103,10 +114,7 @@ class CartDropdown extends React.Component {
                                         <span className="span-finalizar-compra-carrinho">finalizar compra</span></div>
                                 )
                                 : (
-                                    <div className="go-to-checkout not-validated-for-purchase"
-                                        onClick={() => {
-                                            //history.push('/carrinho')
-                                        }}>
+                                    <div className="go-to-checkout not-validated-for-purchase">
                                         <div className="card-bank not-validated-for-purchase">
                                             <span className="bankName">bankCard</span>
                                             <span className="bankNum">**** 5858</span>

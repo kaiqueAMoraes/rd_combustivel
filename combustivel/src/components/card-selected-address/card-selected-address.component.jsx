@@ -61,8 +61,8 @@ class SelectedCardAddress extends React.Component {
                             <div className="btn-selected">
                                 <CustomButton
                                     type="submit"
-                                    className="create-button"
-                                    onClick={() => history.push('/dashboard/novo-endereco')} >
+                                    _class="create-button"
+                                    handleClick={() => history.push('/dashboard/novo-endereco')} >
                                     cadastrar um novo endereço
                                     </CustomButton>
                             </div>
@@ -95,7 +95,7 @@ class SelectedCardAddress extends React.Component {
                                                     <div className="btn-selected">
                                                         <CustomButton
                                                             type="submit"
-                                                            className="create-button"
+                                                            _class="create-button"
                                                             onClick={() => history.push('/dashboard')} >
                                                             usar outro endereço
                                                         </CustomButton>
