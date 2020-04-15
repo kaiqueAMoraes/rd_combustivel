@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import Header from '../../Components/Header/header';

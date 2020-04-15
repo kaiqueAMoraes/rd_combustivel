@@ -1,0 +1,11 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.chart-wrapper {
+    width: 60%;
+    margin-bottom: 30px;
+}

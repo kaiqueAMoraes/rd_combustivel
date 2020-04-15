@@ -19,6 +19,7 @@ export default function Header() {
         <div>
             <div className="header-container">
                 <img src={logoImg} width="200" alt="Origin Combustíveis" />
+                <Link className="link" to="/main">Dashboard</Link>
                 <Link className="link" to="/pedidos">Pedidos</Link>
                 <Link className="link" to="/cadastrar-produto">Cadastrar Produto</Link>
                 <Link className="link" to="/clientes">Clientes</Link>
