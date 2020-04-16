@@ -4,14 +4,15 @@ import { createStructuredSelector } from 'reselect';
 import { withRouter } from 'react-router-dom';
 import Animations from '../../animations/animation_controller';
 import SelectedCardAddress from '../../components/card-selected-address/card-selected-address.component';
-import {isHidden,  selectAllAddresses, mapSelectedAddress } from '../../redux/address/address.selector';
+import {isAddressCardHidden,  selectAllAddresses, mapSelectedAddress } from '../../redux/address/address.selector';
 
 import './address-card-slide.styles.scss'
+import { setHidden } from '../../redux/address/address.actions';
 
 class AddressSlider extends Component {
     constructor(props){
         super(props);
-
+        const { hidden } = this.props;
         this.state = {
             fade_animation : {
                 none : ""
@@ -20,20 +21,20 @@ class AddressSlider extends Component {
     }
 
     componentDidMount = () => {
-        if (!this.props.hidden) {
-            //this.props.hide_cart()
-        }
+        //if (!this.props.hidden) {
+            //this.props.setHidden()
+        //}
     }
     
     componentDidUpdate(prevProps) {
-        if (this.props.hidden !== prevProps.hidden) {
-            //return (this.handleFadeIn)()
+        if (this.props.isHidden !== prevProps.isHidden) {
+            return (this.handleFadeIn)()
         }
     }
 
     handleFadeIn = () => {
         const { hidden } = this.props;
-
+        
         if (!hidden) {
             return this.setState({
                 fade_animation: Animations.FADE_IN_FROM_LEFT()
@@ -51,10 +52,10 @@ class AddressSlider extends Component {
                         onClick={() => {
                             //hide_cart()
                             return Animations.DELAY_CONTROLLER(
-                                () => { alert("running dsa")},
+                                () => { setHidden()},
                                 () => {
                                     this.setState({
-                                        fade_animation: Animations.FADE_OFF_FROM_LEFT()
+                                       fade_animation: Animations.FADE_OFF_FROM_LEFT()
                                     })
                                 },
                                 2500
@@ -65,8 +66,6 @@ class AddressSlider extends Component {
                     <div className="address-slide-content-container">
                     <SelectedCardAddress />
                     </div>
-
-
                     </div>
             </div>
         )
@@ -76,14 +75,19 @@ class AddressSlider extends Component {
 
 
 const mapStateToProps = createStructuredSelector({
-    hidden: isHidden,
+    isHidden: isAddressCardHidden,
     addresses: selectAllAddresses,
     addressSelected: mapSelectedAddress
 });
 
+const mapDispatchToProps = dispatch => ({
+    setHidden : () => dispatch(setHidden())
+})
+
 export default withRouter(
     connect(
         mapStateToProps,
+        mapDispatchToProps
     )
         (AddressSlider)
 );

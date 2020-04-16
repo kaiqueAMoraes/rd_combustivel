@@ -12,3 +12,13 @@ export const setHidden = () => ({
 export const addressReset = address => ({
     type : AddressActionTypes.RESET_ADDRESS,
 })
+
+export const addAddress = address => ({
+    type: AddressActionTypes.ADD_ADDRESS,
+    payload: address
+})
+
+export const removeAddress = address => ({
+    type: AddressActionTypes.REMOVE_ADDRESS,
+    payload: address
+})

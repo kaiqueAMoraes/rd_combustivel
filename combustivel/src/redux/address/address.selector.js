@@ -14,7 +14,7 @@ export const mapSelectedAddress = createSelector(
     (address) => address.addressSelected
 )
 
-export const isHidden = createSelector(
+export const isAddressCardHidden = createSelector(
     [addressSelector],
     (address) => address.hidden
 )

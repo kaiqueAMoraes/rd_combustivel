@@ -6,6 +6,7 @@ import FormInput, { FormInputMedium, FormInputSmall } from "../../components/for
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import { addressSelected, addAddress } from '../../redux/address/address.actions';
 
 class CreateNewAddress extends Component {
     constructor(props) {
@@ -65,7 +66,7 @@ class CreateNewAddress extends Component {
     };
 
     handleSubmit = async e => {
-        const { currentUser } = this.props;
+        const { currentUser, setAddress, addToAddressesList } = this.props;
         const { cep, street, district, state, number, complement, city } = this.state
 
         alert(currentUser)
@@ -92,16 +93,10 @@ class CreateNewAddress extends Component {
             await axios.post("http://localhost:8080/create-address", address)
                 .then(response => {
                     if (response.status === 200) {
-
-                        setInterval(() => {
                             //this.clearState();
-                            this.props.history.push("/dashboard");
-                            window.location.reload();
-                        }, 1500);
-                    } else {
-                        throw new Error(response.data);
-                    }
-                })
+                            return addToAddressesList(address)
+                            //window.location.reload();
+                }})
         } catch (err) {
             console.log(err)
 
@@ -197,7 +192,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-
+    setAddress: address => dispatch(addressSelected(address)),
+    addToAddressesList: address => dispatch(addAddress(address))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CreateNewAddress))

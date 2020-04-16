@@ -16,7 +16,7 @@ import Alert from 'react-bootstrap/Alert'
 import { connect } from 'react-redux';
 import CardPurchases from '../../components/card-purchases/cardPurchases.component'
 import UserCardDashboard from '../../components/user-card/user-card.component';
-import AddressSlider from '../../components/address-card-slide/address-card-slide.component';
+//import AddressSlider from '../../components/card-slide/address-card-slide.component';
 
 class DashboardPage extends Component {
     constructor(props) {
@@ -30,7 +30,6 @@ class DashboardPage extends Component {
             email: "",
             endereco: [],
             compras: [],
-            active: "myAccount",
             errorMessage: ""
         }
 
@@ -39,23 +38,13 @@ class DashboardPage extends Component {
     }
 
     handleUserInformation = async () => {
-        const { currentUser : {email,idUser} } = this.props;
-
-        await axios.get(`http://localhost:8080/find-address-byuser/${idUser}`)
-            .then(response => {
-                if (response.data) {
-                    typeof response.data === "string" ? this.setState({ errorMessage: "ops! você ainda não tem nenhum endereço cadastrado." }) :
-                        this.setState({ endereco: response.data })
-                }
-            }).catch(error => {
-                console.log(error)
-            });
+        const { currentUser: { email, idUser } } = this.props;
 
         await axios.get(`http://localhost:8080/find-orders-byuser/${idUser}`)
             .then(response => {
                 if (response.data) {
-                    typeof response.data === "string" 
-                        ? this.setState({ errorMessage: "nenhuma compra realizada ainda" }) 
+                    typeof response.data === "string"
+                        ? this.setState({ errorMessage: "nenhuma compra realizada ainda" })
                         : this.setState({ compras: response.data })
                 }
             }).catch(error => {
@@ -71,19 +60,13 @@ class DashboardPage extends Component {
         this.handleUserInformation();
     }
 
-    handleAccount = (e) => {
-        this.setState({ active: "myAccount" });
-    }
-    handleCompra = (e) => {
-        this.setState({ active: "compras" });
-    }
-
     render() {
         const { endereco, compras, user } = this.state;
         const props = this.props;
+        const { addresses } = this.props;
         const MyComponents = { // cria componetização dinamica na pagina por um objeto, assim não é necessario criar callbacks no jsx
             Adressess: function showAddresses() {
-                return endereco.map(elm => {
+                return addresses.map(elm => {
                     return <CardAddress
                         cep={elm.cep}
                         street={elm.street}
@@ -105,61 +88,41 @@ class DashboardPage extends Component {
                         key={elm.idOrder}
                         elm={elm}
                         props={props} />
-                        
+
                 })
             }
 
         }
 
-        const { selectedAddress, history} = this.props;
+        const { selectedAddress, history } = this.props;
         const { birth } = this.state.user;
         return (
             <div className="dashboard-container">
                 <Container className="inner-container">
-
-                <AddressSlider/>
                     <div className="dashboard-content-holder">
 
+                        <div>
+                            <h5 className="dashboard-title">Minha conta</h5>
+                            <UserCardDashboard />
 
-                        {
-                            this.state.active === "myAccount" ? (
-                                <>
-                                
-                                    <h5 className="dashboard-title">Minha conta</h5>
-                                    <UserCardDashboard/>
-                                    
-                                    <div className="line-break">
-                                        <h5 className="dashboard-title">endereço de entrega</h5>
-                                    </div>
+                            <div>
 
-                                    <SelectedCardAddress />
+                        <h5 className="dashboard-title">Minhas compras</h5>
+                        <div className="info-holder center box-border">
+                            <MyComponents.Compras />
 
-                                    <div className="line-break">
-                                        <h5 className="dashboard-title">Meus endereços</h5>
-                                        <div className="flex-to-left">
-                                            <div>
-                                                <CustomButton
-                                                    type="submit"
-                                                    handleClick={() => history.push('dashboard/novo-endereco')}
-                                                    className="create-button">
-                                                    + adicionar novo
-                                                </CustomButton>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <span>{this.state.endereco.length} endereços cadastrados</span>
-                                    {this.state.errorMessage ? (<Alert className="m-4" variant='primary'>{this.state.errorMessage}</Alert>) : ""}
-                                    <MyComponents.Adressess />
-                                </>
-                            ) : (
-                                    <>
-                                        <h5 className="dashboard-title">Minhas compras</h5>
-                                        <div className="info-holder center box-border">
-                                            <MyComponents.Compras />
-                                        </div>
-                                    </>
-                                )
-                        }
+                        </div>
+</div>
+                        </div>
+                        <div>
+                            <h5 className="dashboard-title">endereço de entrega</h5>
+                            <SelectedCardAddress />
+                        <span>{this.state.endereco.length} endereços cadastrados</span>
+                        {this.state.errorMessage ? (<Alert className="m-4" variant='primary'>{this.state.errorMessage}</Alert>) : ""}
+                        <MyComponents.Adressess />
+                        </div>
+                        
+
 
                     </div>
                 </Container>
@@ -170,7 +133,8 @@ class DashboardPage extends Component {
 
 const mapStateToProps = state => ({
     selectedAddress: state.address.addressSelected,
-    currentUser : state.user.currentUser
+    currentUser: state.user.currentUser,
+    addresses: state.address.addresses
 });
 
 export default withRouter(connect(mapStateToProps)(DashboardPage));

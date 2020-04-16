@@ -9,7 +9,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import { connect } from 'react-redux';
-
+import AddressSlider from '../../components/address-card-slide/address-card-slide.component';
 
 import {
     Navbar, Container
@@ -37,6 +37,8 @@ const Header = ({ history,hidden, hide_cart, currentUser }) => {
                 history.location.pathname === "/dashboard/edit-usuario" ? (
                     
                     <Navbar className="bg-main navbar">
+                <AddressSlider/>
+
                         <Link to="/" className="logo"></Link>
                         {
                             history.location.pathname === "/dashboard" ? (
@@ -55,6 +57,7 @@ const Header = ({ history,hidden, hide_cart, currentUser }) => {
                     </Navbar>
                 ) : (
                     <>
+                    <AddressSlider/>
                     <CartDropdown/>
                         <Navbar className="bg-main navbar fixed-header">
                             <Link to="/" className="logo"></Link>
