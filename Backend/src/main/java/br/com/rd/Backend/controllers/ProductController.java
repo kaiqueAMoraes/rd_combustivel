@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
-
 @RestController
 public class ProductController {
 
@@ -43,6 +41,11 @@ public class ProductController {
     @GetMapping("/find-all-products")
     public ResponseEntity findAllProducts() {
         return productService.findAllProducts();
+    }
+
+    @GetMapping("/new-products")
+    public ResponseEntity newProducts() {
+        return  productService.newProducts();
     }
 
     @PutMapping("/update-product")

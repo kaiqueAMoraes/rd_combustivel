@@ -22,4 +22,6 @@ public interface ProductInterface {
     ResponseEntity<List<Product>> findAllProducts();
 
     ResponseEntity updateProductById (ProductDTO productDTO);
+
+    ResponseEntity<List<Product>> newProducts ();
 }

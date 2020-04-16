@@ -1,6 +1,5 @@
 package br.com.rd.Backend.repositories;
 
-import br.com.rd.Backend.DTOs.ProductDTO;
 import br.com.rd.Backend.models.Category;
 import br.com.rd.Backend.models.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
