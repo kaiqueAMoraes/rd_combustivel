@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { addressSelected, addAddress } from '../../redux/address/address.actions';
+import { errorMessage, successMessage } from '../../redux/message/message.actions';
 
 class CreateNewAddress extends Component {
     constructor(props) {
@@ -66,7 +67,7 @@ class CreateNewAddress extends Component {
     };
 
     handleSubmit = async e => {
-        const { currentUser, setAddress, addToAddressesList } = this.props;
+        const { currentUser, setAddress, addToAddressesList, successMessage } = this.props;
         const { cep, street, district, state, number, complement, city } = this.state
 
         alert(currentUser)
@@ -93,9 +94,8 @@ class CreateNewAddress extends Component {
             await axios.post("http://localhost:8080/create-address", address)
                 .then(response => {
                     if (response.status === 200) {
-                            //this.clearState();
                             return addToAddressesList(address)
-                            //window.location.reload();
+
                 }})
         } catch (err) {
             console.log(err)
@@ -188,12 +188,13 @@ class CreateNewAddress extends Component {
     }
 }
 const mapStateToProps = state => ({
-    currentUser : state.user.currentUser
+    currentUser : state.user.currentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
     setAddress: address => dispatch(addressSelected(address)),
-    addToAddressesList: address => dispatch(addAddress(address))
+    addToAddressesList: address => dispatch(addAddress(address)),
+
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CreateNewAddress))

@@ -5,9 +5,12 @@ import { withRouter } from 'react-router-dom';
 import Animations from '../../animations/animation_controller';
 import SelectedCardAddress from '../../components/card-selected-address/card-selected-address.component';
 import {isAddressCardHidden,  selectAllAddresses, mapSelectedAddress } from '../../redux/address/address.selector';
+import CardAddress from '../../components/card-address/cardAddress.component';
 
 import './address-card-slide.styles.scss'
 import { setHidden } from '../../redux/address/address.actions';
+import { getCurrentUser } from '../../redux/user/user.selector';
+import { successMessage, errorMessage } from '../../redux/message/message.actions';
 
 class AddressSlider extends Component {
     constructor(props){
@@ -44,6 +47,7 @@ class AddressSlider extends Component {
 
     
     render(){
+        const {addresses, currentUser} = this.props;
         return(
             <div className="slider-address-container"
             style={this.state.fade_animation}>
@@ -64,7 +68,26 @@ class AddressSlider extends Component {
                         x
                     </div>
                     <div className="address-slide-content-container">
+                    <h5 className="dashboard-title">endereço de entrega</h5>
                     <SelectedCardAddress />
+                    <h5 className="dashboard-title">Meus endereços</h5>
+                            <span>{this.props.addresses.length} endereços cadastrados</span>
+                    {
+                        addresses.map(elm => {
+                            console.log(elm)
+                            return <CardAddress
+                                cep={elm.cep}
+                                street={elm.street}
+                                city={elm.city}
+                                district={elm.district}
+                                number={elm.number}
+                                complement={elm.complement}
+                                state={elm.state}
+                                key={elm.idAddress}
+                                id={elm.idAddress}
+                                />
+                        })
+                    }
                     </div>
                     </div>
             </div>
@@ -72,16 +95,17 @@ class AddressSlider extends Component {
     }
 }
 
-
-
 const mapStateToProps = createStructuredSelector({
     isHidden: isAddressCardHidden,
     addresses: selectAllAddresses,
-    addressSelected: mapSelectedAddress
+    addressSelected: mapSelectedAddress,
+    currentUser : getCurrentUser
 });
 
 const mapDispatchToProps = dispatch => ({
-    setHidden : () => dispatch(setHidden())
+    setHidden : () => dispatch(setHidden()),
+    successMessage: message => dispatch(successMessage(message)),
+    errorMessage: message => dispatch(errorMessage(message)),
 })
 
 export default withRouter(

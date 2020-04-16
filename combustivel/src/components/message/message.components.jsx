@@ -41,7 +41,7 @@ class Message extends Component {
                 () => { setMessage("") },
                 () => {
                     this.setState({
-                        fade_animation: Animations.FADE_MESSAGE_IN()
+                        fade_animation: Animations.FADE_IN_FROM_LEFT()
                     })
                 },
                 2900

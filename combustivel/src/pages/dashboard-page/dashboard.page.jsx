@@ -107,21 +107,22 @@ class DashboardPage extends Component {
 
                             <div>
 
-                        <h5 className="dashboard-title">Minhas compras</h5>
-                        <div className="info-holder center box-border">
-                            <MyComponents.Compras />
+                                <h5 className="dashboard-title">Minhas compras</h5>
+                                <div className="info-holder center box-border">
+                                    <MyComponents.Compras />
 
-                        </div>
-</div>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <h5 className="dashboard-title">endereço de entrega</h5>
                             <SelectedCardAddress />
-                        <span>{this.state.endereco.length} endereços cadastrados</span>
-                        {this.state.errorMessage ? (<Alert className="m-4" variant='primary'>{this.state.errorMessage}</Alert>) : ""}
-                        <MyComponents.Adressess />
+                            {this.state.errorMessage ? (<Alert className="m-4" variant='primary'>{this.state.errorMessage}</Alert>) : ""}
+                            <h5 className="dashboard-title">Meus endereços</h5>
+                            <span>{this.props.addresses.length} endereços cadastrados</span>
+                            <MyComponents.Adressess />
                         </div>
-                        
+
 
 
                     </div>

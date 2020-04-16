@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 import Alert from 'react-bootstrap/Alert';
 import { connect } from 'react-redux';
 import { addressSelected } from '../../redux/address/address.actions';
+import { successMessage, errorMessage } from '../../redux/message/message.actions';
 
 class CardAddress extends React.Component {
     constructor(props) {
@@ -52,7 +53,7 @@ class CardAddress extends React.Component {
         await axios.put(`http://localhost:8080/update-address`, address).then(
             response => {
                 if(response.status === 200){
-                    window.location.reload()
+                    
                 }
             }
         )
@@ -67,7 +68,7 @@ class CardAddress extends React.Component {
     }
 
     render() {
-        const { cep, state, city, district, street, number, complement, id, history, addressSelected, isSelected, setAddress } = this.props;
+        const { cep, state, city, district, street, number, complement, id, history, addressSelected, isSelected, setAddress ,successMessage} = this.props;
         const address = {
             "idAddress": id,
             "cep": cep,
@@ -80,15 +81,18 @@ class CardAddress extends React.Component {
         }
         return (
             <div className="info-holder box-border">
-                <div className="rua">
-                    <div className="card-address-break-apart">
-                        <p>{street}</p>
                         <CustomButton
                             type="submit"
                             className="delete-button"
-                            onClick={() => setAddress(address)} >
+                            handleClick={() => {
+                                successMessage('Endereço de entrega foi mudado com sucesso')
+                                setAddress(address)}}
+                                 >
                             usar para entregas
                         </CustomButton>
+                <div className="rua">
+                    <div className="card-address-break-apart">
+                        <p>{street}</p>
                     </div>
                 </div>
                 <div className="address-info">
@@ -129,7 +133,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    setAddress: address => dispatch(addressSelected(address))
+    setAddress: address => dispatch(addressSelected(address)),
+    successMessage: message => dispatch(successMessage(message)),
+    errorMessage: message => dispatch(errorMessage(message)),
 })
 
 
