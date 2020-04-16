@@ -5,7 +5,7 @@
         right: 0px;
 
         & .cart-dropdown {
-
+            
             width: 439px;
             height: 100vh;
             display: flex;
@@ -20,5 +20,10 @@
             background-position: center;
             animation-name: fade_in_from_left;
             animation-duration: 1.5s;
+            & .address-slide-content-container {
+                overflow-y: scroll;
+                height: 95%;
+                padding-right: 10px;
+            }
         }
 }

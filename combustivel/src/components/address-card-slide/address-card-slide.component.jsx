@@ -62,7 +62,9 @@ class AddressSlider extends Component {
                         }}>
                         x
                     </div>
+                    <div className="address-slide-content-container">
                     <SelectedCardAddress />
+                    </div>
 
 
                     </div>

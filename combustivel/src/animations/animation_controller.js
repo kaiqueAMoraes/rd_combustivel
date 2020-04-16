@@ -37,6 +37,12 @@ const Animations  = {
             animationFillMode: "forwards"
         }
     },
+    FADE_GROW : (e) => {
+        return {
+            animation: "fade_off_from_left 1.2s 1 normal forwards",
+            animationFillMode: "forwards"
+        }
+    },
     DELAY_CONTROLLER : (controller, animationCallback, time) => {
         let counter = 0;
     

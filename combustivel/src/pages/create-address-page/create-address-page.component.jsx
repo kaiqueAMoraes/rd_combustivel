@@ -17,8 +17,10 @@ class CreateAddress extends Component {
     constructor(props) {
         super(props);
 
-        if (!localStorage.getItem('user'))
-            this.props.history.push('/');
+        //if (!localStorage.getItem('user'))
+            //this.props.history.push('/');
+
+            
 
         this.state = {
             "idAddress": "",

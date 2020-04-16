@@ -1,21 +1,25 @@
 
 .info-holder-selected {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     background-color: #fff;
     box-shadow: 0px 0px 15px #D9E3FF;
     border: 1px solid #D9E3FF;
     padding: 15px !important;
-    background-image: url("https://cdn.dribbble.com/users/1925451/screenshots/6412378/cyclist2r_copy_4x.jpg?compress=1&resize=800x600");
-    background-size: 220px;
-    background-repeat: no-repeat;
-    background-position: right;
+    min-height: 180px;
     span.ops-no-address{
         font-weight: bolder;
         display: inline-block;
         width: 57%;
         font-size: 15px;
         padding: 5px;
+    }
+    & .address-container-info{
+        background-image: url("https://cdn.dribbble.com/users/1925451/screenshots/6412378/cyclist2r_copy_4x.jpg?compress=1&resize=800x600");
+        background-size: 220px;
+        background-repeat: no-repeat;
+        background-position: right;
     }
     p{
         margin: 0;
@@ -82,4 +86,45 @@ justify-content: space-between;
 
 .selected-address.bk {
     
+}
+
+.edit-button-address-card{
+    position: relative;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 85px;
+    height: 35px;
+    font-size: 10px;
+    background-color: #D6E7FE;
+    color: #7ba4df;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border: none;
+    border-radius: 6px;
+    margin: 15px 0;
+    padding: 0 10px;
+    width: max-content;
+    &:hover{
+        transition: all 1s;
+        background-color: #E7DCFF;
+    }
+    & .div-address-edit-icon {
+        height: 20px;
+        background-color: #7ba3db70;
+        width: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        margin-right: 9px;
+    }
+}
+
+.newAddress{
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    transition: all 1s;
 }

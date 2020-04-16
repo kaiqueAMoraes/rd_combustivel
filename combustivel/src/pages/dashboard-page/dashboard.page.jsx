@@ -39,27 +39,9 @@ class DashboardPage extends Component {
     }
 
     handleUserInformation = async () => {
-        const { email } = this.state;
-        await axios.get('http://localhost:8080/find-user-email/' + email)
-            .then(response => {
-                this.setState({
-                    user: {
-                        "idUser": response.data[0].idUser,
-                        "email": response.data[0].email.toLowerCase(),
-                        "password": response.data[0].password,
-                        "firstName": response.data[0].firstName,
-                        "lastName": response.data[0].lastName,
-                        "cpf": response.data[0].cpf,
-                        "gender": response.data[0].gender,
-                        "phone": response.data[0].phone,
-                        "birth": response.data[0].birth.split('-').reverse().toString().split(",", 2).concat(response.data[0].birth.split("-", 1)).join('-')
-                    }
-                })
-            }).catch(error => {
-                console.log(error)
-            });
+        const { currentUser : {email,idUser} } = this.props;
 
-        await axios.get(`http://localhost:8080/find-address-byuser/${this.state.user.idUser}`)
+        await axios.get(`http://localhost:8080/find-address-byuser/${idUser}`)
             .then(response => {
                 if (response.data) {
                     typeof response.data === "string" ? this.setState({ errorMessage: "ops! você ainda não tem nenhum endereço cadastrado." }) :
@@ -69,7 +51,7 @@ class DashboardPage extends Component {
                 console.log(error)
             });
 
-        await axios.get(`http://localhost:8080/find-orders-byuser/${this.state.user.idUser}`)
+        await axios.get(`http://localhost:8080/find-orders-byuser/${idUser}`)
             .then(response => {
                 if (response.data) {
                     typeof response.data === "string" 
