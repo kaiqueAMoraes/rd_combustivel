@@ -20,7 +20,7 @@ const Footer = ({ match, history }) => {
                                 <hr className="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style={{ width: '60px' }} />
                                 <hr className="teal accent-3 mb-4 mt-0  d-inline-block mx-auto" style={{ width: '60px' }} />
                                 <p>
-                                    <Link className="dark-grey-text"> Fale conosco </Link>
+                                    <Link to="/fale-conosco" className="dark-grey-text"> Fale conosco </Link>
                                 </p>
                                 <p> origin-combustivel@gmail.com</p>
                                 <p> + 55 11 4202-8223</p>
