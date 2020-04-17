@@ -13,7 +13,7 @@ main .titulo {
 }   
 
 main .container-form-cadastro {
-    width: 80%;
+    width: 50%;
     display: block;
     align-items: center;
     background-color: rgb(218, 211, 211);
@@ -39,6 +39,34 @@ form {
     padding-left: 100px;
 }
 
+.category-block{
+    margin-top: 20px;
+}
+
+#nomeProduto {
+    margin-left: 50px;
+}
+
+#descricaoProduto {
+    margin-left: 95px;
+}
+
+.form-group-category {
+    margin-left: 95px;
+    padding-bottom: 10px;
+}
+
+#valorLitroProduto {
+    margin-left: 75px;
+}
+
+#quantidade {
+    margin-left: 20px;
+}
+
+#image {
+    margin-left: 35px;
+}
 /* .alert{
     background-color: rgb(127, 228, 127);
     border: rgb(44, 138, 44);

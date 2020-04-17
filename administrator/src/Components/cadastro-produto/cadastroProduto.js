@@ -79,7 +79,7 @@ class cadastroProduto extends Component {
                             <h3>Cadastro de Produtos</h3>
                         </div>
 
-                        <form onSubmit={this.mySubmitHandler}>
+                        <form onSubmit={this.mySubmitHandler} className="fomulario-fale">
                             <div className="form-group">
                                 <label htmlFor="ds_name">Nome do produto</label>
                                 <input type="text" className="form-control" id="nomeProduto" name="NameProduto" onChange={this.handleChange} required />
