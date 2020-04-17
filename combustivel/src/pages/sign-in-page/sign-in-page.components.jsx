@@ -68,7 +68,7 @@ class SignInPage extends Component {
 				}
 			)
 		} catch (error) {
-			errorMessage(JSON.stringify(error.message))
+			errorMessage("usuario ou senha incorretos")	
 		}
 	}
 

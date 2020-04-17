@@ -1,7 +1,7 @@
 .message_dispatcher,
 .message_dispatcher_error{
     position: fixed;
-    z-index: 999999;
+    z-index: 99999999999999999999;
     background-color: #04D361;
     right: -500px;
     min-width: 100px;
@@ -26,3 +26,9 @@
 .message_dispatcher_error{
     background-color: #E43531;
 }
+.message-spacer{
+    height: 30px;
+    width: 30px;
+}
+
+

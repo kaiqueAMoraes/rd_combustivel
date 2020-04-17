@@ -188,9 +188,9 @@ class CardAddress extends React.Component {
                    setAddress
                     ,successMessage
                 } = this.props;
-
+console.log(addressSelected)
         const address = {
-            "idAddress": id,
+            "idAddress": this.props.idAddress,
             "cep": cep,
             "state": state,
             "city": city,
@@ -199,6 +199,7 @@ class CardAddress extends React.Component {
             "number": number,
             "idUser": null
         }
+
         return (
             <div className="info-holder box-border">
                         <CustomButton

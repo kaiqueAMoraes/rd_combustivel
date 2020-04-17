@@ -26,6 +26,7 @@ class LogoutPage extends Component {
                         <Link to="/">Quero voltar</Link>
                         <CustomButton
                             handleClick={(e) => {
+                                localStorage.clear()
                                 RESET_USER();
                                 RESET_CART();
                                 RESET_ADDRESS();

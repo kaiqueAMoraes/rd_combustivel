@@ -64,29 +64,33 @@ const Header = ({ history, hidden, hide_cart, currentUser, addressSelected, setH
                             <Navbar className="bg-main navbar fixed-header">
                                 <div className="hold-logo-andHere">
 
-                                <Link to="/" className="logo"></Link>
+                                    <Link to="/" className="logo"></Link>
 
-                                <div className="location-where" onClick={() => currentUser ? setHidden() : ""}>
-                                    <FontAwesomeIcon icon={faMapMarkerAlt} className="icon-heart" />
-                                    <div className="location-where-info">
-                                        {
-                                        addressSelected 
-                                        ? (
-                                        <>
-                                        <p>{addressSelected.street}</p>
-                                        <p>{addressSelected.state}, {addressSelected.cep}, {addressSelected.city}</p>
-                                        </>
-                                        )
-                                        : (
+                                    <div className="location-where" onClick={() => currentUser ? setHidden() : ""}>
+                                        <FontAwesomeIcon icon={faMapMarkerAlt} className="icon-heart" />
+                                        <div className="location-where-info">
+                                            {
+                                                currentUser
+                                                    ? (
+                                                        addressSelected
+                                                            ? (
+                                                                <>
+                                                                    <p>{addressSelected.street}</p>
+                                                                    <p>{addressSelected.state}, {addressSelected.cep}, {addressSelected.city}</p>
+                                                                </>
+                                                            )
+                                                            : (
 
-                                            <>
-                                        <p>não encontramos nenhum endereço</p>
-                                        <p>Cadastre um endereço.</p>
-                                        </>
-                                        )
-                                    } 
+                                                                <>
+                                                                    <p>não encontramos nenhum endereço</p>
+                                                                    <p>Cadastre um endereço.</p>
+                                                                </>
+                                                            )
+                                                    )
+                                                    : ""
+                                    }
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
 
                                 <div className="d-flex user-bag">
@@ -139,21 +143,28 @@ const Header = ({ history, hidden, hide_cart, currentUser, addressSelected, setH
                                         <li className="ml-4 nav-item mr-4 none">
                                             <Link className="nav-link" onClick={() => {
                                                 history.push('/home/categoria/gasolina-aditivada/')
+                                                window.location.reload()
+
                                             }}>Gasolina</Link>
                                         </li>
                                         <li className="ml-4 nav-item mr-4 none">
                                             <Link className="nav-link" onClick={() => {
                                                 history.push('/home/categoria/etanol-aditivado/')
+                                                window.location.reload()
+
                                             }}>Etanol </Link>
                                         </li>
                                         <li className="ml-4 nav-item mr-4 none" >
                                             <Link className="nav-link" onClick={() => {
                                                 history.push('/home/categoria/Diesel/')
+                                                window.location.reload()
+
                                             }}>Óleo</Link>
                                         </li>
                                         <li className="ml-4 nav-item mr-4 none">
                                             <Link className="nav-link" onClick={() => {
                                                 history.push('/home/categoria/gas-natural/')
+                                                window.location.reload()
                                             }}>Fluidos para motor</Link>
                                         </li>
                                     </ul>

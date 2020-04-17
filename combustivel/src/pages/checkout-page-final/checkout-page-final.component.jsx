@@ -23,7 +23,7 @@ class CheckoutPageFinal extends React.Component {
             address: [],
             itemList: [],
             total: this.props.history.location.state.total,
-            frete: 91.32,
+            frete: 0,
             loading: false,
             idUser: "",
             ncartao: " ",
