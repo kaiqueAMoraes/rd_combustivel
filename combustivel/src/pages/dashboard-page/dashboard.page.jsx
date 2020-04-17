@@ -134,7 +134,7 @@ class DashboardPage extends Component {
                                     complement={elm.complement}
                                     state={elm.state}
                                     key={elm.idAddress}
-                                    id={elm.idAddress}
+                                    idAddress={elm.idAddress}
                                 />
                             })
                         )

@@ -8,6 +8,7 @@ import CustomButton from '../../components/custom-button/custom-button.component
 import { successMessage, errorMessage } from "../../redux/message/message.actions";
 import { setCurrentUser } from "../../redux/user/user.actions.js";
 import VALIDATE from "../../validations/root_val";
+import { addAddress } from '../../redux/address/address.actions';
 
 class SignInPage extends Component {
 	constructor(props) {
@@ -44,6 +45,14 @@ class SignInPage extends Component {
 								VALIDATE._DELAY_ACTION(
 									() => {
 										setUser(res.data)
+										axios.get(`http://localhost:8080/find-address-byuser/${this.props.currentUser.idUser}`)
+											.then(response => {
+												successMessage("info got")
+												return this.props.addToAddressesList(response.data)
+											}).catch(error => {
+												this.props.addToAddressesList([])
+											});
+
 										this.props.history.push("/")
 									},
 									() => {
@@ -90,8 +99,8 @@ class SignInPage extends Component {
 
 						<CustomButton
 							handleClick={() => {
-								if (VALIDATE._IS_EMPTY([password, email])) { 
-									errorMessage("todos os campos precisam ser preenchidos") 
+								if (VALIDATE._IS_EMPTY([password, email])) {
+									errorMessage("todos os campos precisam ser preenchidos")
 								}
 								else {
 									{ this.handleSignIn() }
@@ -108,11 +117,18 @@ class SignInPage extends Component {
 		)
 	}
 }
+
+
+const mapStateToProps = state => ({
+	currentUser : state.user.currentUser
+  });
+  
 const mapDispatchToProps = dispatch => ({
 	successMessage: message => dispatch(successMessage(message)),
 	errorMessage: message => dispatch(errorMessage(message)),
-	setUser: user => dispatch(setCurrentUser(user))
+	setUser: user => dispatch(setCurrentUser(user)),
+	addToAddressesList: address => dispatch(addAddress(address)),
 })
 
 
-export default withRouter(connect(null, mapDispatchToProps)(SignInPage))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignInPage))

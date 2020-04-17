@@ -6,9 +6,11 @@ import { withRouter } from 'react-router-dom';
 import { toggleCartIn, toggleCartOff } from '../../redux/cart/cart.actions';
 import Animations from '../../animations/animation_controller';
 import { createStructuredSelector } from 'reselect';
-
+import Message from '../../components/message/message.components'
 import './cart-dropdown.styles.scss';
 import CartItem from '../cart-item/cart-item.component';
+import { getCurrentUser } from '../../redux/user/user.selector';
+import { successMessage, errorMessage } from '../../redux/message/message.actions';
 
 class CartDropdown extends React.Component {
     constructor(props) {
@@ -59,11 +61,13 @@ class CartDropdown extends React.Component {
     }
 
     render() {
-        const { cartItems, history, hide_cart, total, bring_cart, hidden } = this.props;
+        const { cartItems, history, hide_cart, total, bring_cart, hidden ,currentUser, errorMessage, successMessage} = this.props;
 
         return (
             <div className="quase-mata-meu-coracao"
+            
                 style={this.state.fade_animation}>
+<Message/>
 
                 <div className="cart-dropdown">
                     <div className="close-cart"
@@ -102,17 +106,31 @@ class CartDropdown extends React.Component {
                         {
                             cartItems.length > 0
                                 ? (
-                                    <div className="go-to-checkout "
-                                        onClick={() => {
-                                            this.handleSubmit(cartItems, history, total)
+                                    currentUser
+                                    ? (<div className="go-to-checkout "
+                                    onClick={() => {
+                                        this.handleSubmit(cartItems, history, total)
 
+                                    }}>
+                                    <div className="card-bank">
+                                        <span className="bankName">bankCard</span>
+                                        <span className="bankNum">**** 5858</span>
+                                        <div className="card-square"></div>
+                                    </div>
+                                    <span className="span-finalizar-compra-carrinho">finalizar compra</span></div>)
+                                    : (
+                                        <div className="go-to-checkout "
+                                        onClick={() => {
+                                            errorMessage("é necessario estar logado para finalizar uma compra")
                                         }}>
-                                        <div className="card-bank">
+                                        
+                                        <div className="card-bank not-validated-for-purchase">
                                             <span className="bankName">bankCard</span>
                                             <span className="bankNum">**** 5858</span>
                                             <div className="card-square"></div>
                                         </div>
                                         <span className="span-finalizar-compra-carrinho">finalizar compra</span></div>
+                                    )
                                 )
                                 : (
                                     <div className="go-to-checkout not-validated-for-purchase">
@@ -135,11 +153,14 @@ const mapStateToProps = createStructuredSelector({
     hidden: isHidden,
     cartItems: selectCartItems,
     total: selectCartTotal,
+    currentUser : getCurrentUser
 });
 
 const mapDispatchToProps = dispatch => ({
     bring_cart: () => dispatch(toggleCartIn()),
-    hide_cart: () => dispatch(toggleCartOff())
+    hide_cart: () => dispatch(toggleCartOff()),
+    successMessage: message => dispatch(successMessage(message)),
+    errorMessage: message => dispatch(errorMessage(message)),
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDropdown));

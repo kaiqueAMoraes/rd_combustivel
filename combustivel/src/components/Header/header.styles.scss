@@ -50,7 +50,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: contain;
     height: 44px;
-    width: 234px;
+    width: 200px;
 
 }
 
@@ -194,4 +194,18 @@ a:hover {
     height: 520px;
     background-color: #fff;
     margin-top: 150px;
+}
+.hold-logo-andHere{
+    display: flex;
+}
+.location-where{
+    display: flex;
+font-size: 13px;
+align-items: center;
+cursor: pointer;
+
+    & .location-where-info {
+        margin: 0 10px;
+        & p {margin: 0;}
+    }
 }

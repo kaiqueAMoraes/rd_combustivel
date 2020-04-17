@@ -34,26 +34,26 @@ class SignUp extends Component {
     }
 
     handleSignIn = async () => {
-        const { errorMessage, successMessage,setUser } = this.props;
-        const { firstName, lastName, CPF, birthdate, phoneNumber, email, password, passwordEval, gender} = this.state;
+        const { errorMessage, successMessage, setUser } = this.props;
+        const { firstName, lastName, CPF, birthdate, phoneNumber, email, password, passwordEval, gender } = this.state;
 
         const errorArr = [];
         if (!VALIDATE._CPF(VALIDATE._ONLY_NUMBERS(CPF)))
             errorArr.push("CPF invalido");
-        if(!VALIDATE._IS_EQUAL_PASSWORD(password,passwordEval)) 
+        if (!VALIDATE._IS_EQUAL_PASSWORD(password, passwordEval))
             errorArr.push("Senhas precisam ser iguais!");
-        if(errorArr.length > 0 ) 
-        return errorMessage(...errorArr);
+        if (errorArr.length > 0)
+            return errorMessage(...errorArr);
 
         const _USER = {
-            "firstName" : firstName.toUpperCase(),
-            "lastName" : lastName.toUpperCase(),
-            "cpf" : VALIDATE._ONLY_NUMBERS(CPF),
-            "phone" : VALIDATE._ONLY_NUMBERS(phoneNumber),
-            "birth" : birthdate,
-            "email" : email,
-            "password" : password ,
-            "gender" : gender
+            "firstName": firstName.toUpperCase(),
+            "lastName": lastName.toUpperCase(),
+            "cpf": VALIDATE._ONLY_NUMBERS(CPF),
+            "phone": VALIDATE._ONLY_NUMBERS(phoneNumber),
+            "birth": birthdate,
+            "email": email,
+            "password": password,
+            "gender": gender
         }
 
         try {
@@ -63,22 +63,24 @@ class SignUp extends Component {
                         return VALIDATE._DELAY_ACTION(
                             () => {
                                 setUser(response.data)
+                                
                                 this.props.history.push("/")
                             },
                             () => {
                                 successMessage("Usuario Cadastrado com sucesso")
                             },
                             3200
-                        )} 
-                        throw new Error(response.data);
+                        )
+                    }
+                    throw new Error(response.data);
                 })
         }
         catch (err) {
             if (err) {
                 errorMessage(JSON.stringify(err))
             }
+        }
     }
-}
 
     render() {
         const { errorMessage } = this.props;
@@ -200,10 +202,14 @@ class SignUp extends Component {
     }
 }
 
+const mapStateToProps = state => ({
+  currentUser : state.user.currentUser
+});
+
 const mapDispatchToProps = dispatch => ({
     successMessage: message => dispatch(successMessage(message)),
     errorMessage: message => dispatch(errorMessage(message)),
     setUser: user => dispatch(setCurrentUser(user))
 })
 
-export default withRouter(connect(null, mapDispatchToProps)(SignUp))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignUp))
