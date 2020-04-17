@@ -84,7 +84,6 @@ class DashboardPage extends Component {
             },
             Compras: function showPurchases() {
                 return compras.map(elm => {
-                    console.log(elm)
                     return <CardPurchases
                         key={elm.idOrder}
                         elm={elm}
@@ -109,10 +108,9 @@ class DashboardPage extends Component {
                             <div>
 
                                 <h5 className="dashboard-title">Minhas compras</h5>
-                                <div className="info-holder center box-border">
+
                                     <MyComponents.Compras />
 
-                                </div>
                             </div>
                         </div>
                         <div>

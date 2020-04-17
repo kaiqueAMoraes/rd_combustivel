@@ -1,8 +1,9 @@
 import React from 'react';
 import InputMask from "react-input-mask";
 
+
 import './form-input.styles.scss';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 const FormInput = ({ handleChange, label, ...otherProps }) => (
   <div className='group'>
@@ -31,9 +32,10 @@ export const FormInputMedium = ({ handleChange, label, isPassword, mask, _class,
         {label}
       </label>
     ) : null}
-    {isPassword === true
-      ? (<Link className="forgot-password">Esqueci a senha</Link>) 
-      : ""
+    {
+    isPassword === true
+    ? (<Link className="forgot-password">Esqueci a senha</Link>) 
+    : ""
     }
   </div>
 );
@@ -57,4 +59,4 @@ export const FormInputSmall = ({ handleChange, label, isPassword, mask, ...other
   </div>
 );
 
-export default FormInput;
+export default withRouter(FormInput);

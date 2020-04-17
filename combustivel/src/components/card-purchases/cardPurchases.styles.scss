@@ -119,3 +119,35 @@
 .flex-to-left {
     align-self: flex-end;
 }
+
+.container-order-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+justify-content: space-between;
+}
+
+.order-id{
+    min-width: 85px;
+height: 25px;
+font-size: 10px;
+background-color: transparent;
+color: #357ae8;
+text-transform: uppercase;
+font-weight: bolder;
+border: none;
+border-radius: 10px;
+}
+.order-btn-and-price{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-order-info{
+    border: 1px solid #d9e7fa;
+margin: 15px 0;
+padding: 15px;
+border-radius: 10px;
+display: flex;
+}

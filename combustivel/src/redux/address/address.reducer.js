@@ -22,7 +22,7 @@ const addressReducer = (state = INITIAL_STATE, action) => {
                 case AddressActionTypes.RESET_ADDRESS:
                     return {
                         ...state,
-                        addressSelected: state.addressSelected
+                        addressSelected: null
                     }
                     case AddressActionTypes.ADD_ADDRESS:
                         return {

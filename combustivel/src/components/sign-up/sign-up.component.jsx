@@ -77,7 +77,7 @@ class SignUp extends Component {
         }
         catch (err) {
             if (err) {
-                errorMessage(JSON.stringify(err))
+                errorMessage(JSON.stringify(err.message))
             }
         }
     }
@@ -115,16 +115,16 @@ class SignUp extends Component {
                     value={password}
                     handleChange={this.handleChange}
                     label='senha'
-                    isPassword={true}
+
                     required />
 
                 <FormInputMedium
                     name="passwordEval"
-                    type="passwordEval"
+                    type="password"
                     value={passwordEval}
                     handleChange={this.handleChange}
-                    label='senha'
-                    isPassword={true}
+                    label='repita a senha'
+
                     required />
 
                 <FormInputMedium

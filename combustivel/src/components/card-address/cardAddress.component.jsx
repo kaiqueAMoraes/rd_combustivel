@@ -208,7 +208,7 @@ console.log(addressSelected)
                             handleClick={() => {
                                 successMessage('Endereço de entrega foi mudado com sucesso')
                                 setAddress(address)}}
-                                 >
+                                >
                             usar para entregas
                         </CustomButton>
                 <div className="rua">

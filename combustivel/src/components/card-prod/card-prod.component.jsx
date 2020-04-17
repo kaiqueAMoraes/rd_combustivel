@@ -6,6 +6,7 @@ import './card-prod.styles.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import {addItem} from '../../redux/cart/cart.actions';
+import { successMessage } from '../../redux/message/message.actions';
 
 
 class CardProd extends Component {
@@ -60,7 +61,12 @@ class CardProd extends Component {
                     }</h5>
                     </div>
                 </div>
-                <button onClick={()=> addItem(item)}
+                <button onClick={()=> 
+                   {
+                        this.props.successMessage(item.name + " "  + "foi adicionado ao carrinho com sucesso")
+                        addItem(item)
+                }
+                }
                     className="btn-to-cart">
                     <span>Adicionar ao Carrinho</span>
                 </button>
@@ -71,7 +77,8 @@ class CardProd extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    addItem : item => dispatch(addItem(item))
+    addItem : item => dispatch(addItem(item)),
+    successMessage: message => dispatch(successMessage(message)),
 })
 
 export default connect(null, mapDispatchToProps)(withRouter(CardProd));

@@ -7,25 +7,19 @@ const VALIDATE = {
     let aux = [];
     let arrCPF = strCPF.split('');
 
-    for (let i = 0; i <= arrCPF.length; i++) {
-      let n = i + 1;
-      if (parseInt(arrCPF[n]) === parseInt(arrCPF[i])) {
-        aux.push(arrCPF[n]);
-        for (let a = 0; a <= 4; a++) {
-          n++
-          if (parseInt(arrCPF[n]) === undefined || parseInt(arrCPF[n]) === NaN) {
-            return false;
-          } else {
-            if (parseInt(arrCPF[n]) === parseInt(arrCPF[i]))
-            aux.push(arrCPF[n]) 
-          }
-          console.log(aux)
-          if (aux.length >= 3) {
-            i = arrCPF.length
-          }
-        }
-      } 
-    }
+    if (
+      strCPF === "00000000000" || 
+      strCPF === "11111111111" ||
+      strCPF === "22222222222" ||
+      strCPF === "33333333333" ||
+      strCPF === "44444444444" ||
+      strCPF === "55555555555" ||
+      strCPF === "66666666666" ||
+      strCPF === "77777777777" ||
+      strCPF === "88888888888" ||
+      strCPF === "99999999999" 
+  ) return false;
+  
     if (aux.length >= 3) return false;
 
     for (let i = 1; i <= 9; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);

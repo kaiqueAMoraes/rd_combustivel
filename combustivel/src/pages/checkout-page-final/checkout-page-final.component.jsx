@@ -114,8 +114,8 @@ class CheckoutPageFinal extends React.Component {
                                                         <p>, {addressSelected.complement}</p>
                                                     ) : ""}
                                                 </div>
-                                                <p className="p-title-resumo">Destinatario </p>
-                                                <span>{localStorage.getItem("user")}</span>
+                                                {/* <p className="p-title-resumo">Destinatario </p>
+                                                <span>{currentUser.firstName + " " + currentUser.lastName }</span> */}
                                             </div>
                                         ) : (
                                                 <div className="address-info">
