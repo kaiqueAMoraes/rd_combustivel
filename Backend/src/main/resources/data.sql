@@ -12801,3 +12801,35 @@ insert into tb_product(
     1
     );
 
+insert into tb_order_item(
+            vl_price,
+            nr_quantity,
+            id_product)
+            values (
+            30.24,
+            2,
+            1);
+
+insert into tb_order_item(
+            vl_price,
+            nr_quantity,
+            id_product)
+            values (
+            100.24,
+            10,
+            8);
+
+insert into tb_order(
+            dt_order,
+            vl_total_price,
+            id_address,
+            id_user
+            )
+            values (
+            '2020-02-02',
+            80.98,
+            1,
+            1
+            );
+
+

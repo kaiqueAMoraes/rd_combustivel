@@ -7,7 +7,7 @@ import { Col, Button, Form, FormGroup, Label, Input, Container, Alert } from 're
 class FormContact extends Component {
 
     handleSent(e) {
-        alert("Mensagem enviada com sucesso! Em breve entramos em contato.") }
+        alert("Mensagem enviada com sucesso! Em breve entraremos em contato.") }
 
     render() {
         return (
