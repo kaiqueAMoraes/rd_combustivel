@@ -41,11 +41,11 @@ class CheckoutPageFinal extends React.Component {
     componentDidMount = async () => {
         const {idUser} = this.props.currentUser; 
         
-        let userAddress = await axios.get(`http://localhost:8080/find-address-byuser/${idUser}`).then(response => { return response.data[0] })
+        //let userAddress = await axios.get(`http://localhost:8080/find-address-byuser/${idUser}`).then(response => { return response.data[0] })
 
         this.setState({
             itemList: this.props.history.location.state.itemList,
-            address: userAddress,
+            address: this.props.addressSelected,
 
         })
     }
