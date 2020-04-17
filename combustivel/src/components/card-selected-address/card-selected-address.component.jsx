@@ -5,13 +5,21 @@ import './card-selected-address.styles.scss';
 import CustomButton from '../custom-button/custom-button.component';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addressSelected } from '../../redux/address/address.actions';
+import { addressSelected, setHidden, addAddress } from '../../redux/address/address.actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
+import CreateNewAddress from '../create-address/create-address.components';
 
 class SelectedCardAddress extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            endereco: {}
+            endereco: {},
+            displayForms: false,
+            displayNewField: {
+                height: '0',
+                width: '100%'
+            }
         }
     }
 
@@ -29,48 +37,66 @@ class SelectedCardAddress extends React.Component {
         history.push('/select-address')
     }
 
-    handleNewAddress = ({ history }) => {
-        history.push('/dashboard/novo-endereco')
+    handleNewAddress = () => {
+        //this.props.history.push('/dashboard/novo-endereco')
+
     }
 
     render() {
-        const { addressSelected, history } = this.props;
+        const { addressSelected, history, setHidden } = this.props;
+        const { displayForms } = this.state;
 
-        const { id, cep, state, city, district, street, number, complement } = this.state.endereco;
-        const address = {
-            "idAddress": id,
-            "cep": cep,
-            "state": state,
-            "city": city,
-            "district": district,
-            "street": street,
-            "number": number,
-            "idUser": null
-        }
-        console.log(addressSelected)
         return (
-            <div className="info-holder-selected box-border">
+            <div className="info-holder-selected box-border address-info">
+                <div
+                    type="submit"
+                    className="edit-button-address-card"
+                    onClick={(e) => {
+                        displayForms
+                            ? this.setState(
+                                {
+                                    displayNewField: {
+                                        height: "0", width: '100%'
+                                    }
+                                }, () => {
+                                    this.setState({ displayForms: !displayForms })
+                                })
+                            : this.setState(
+                                {
+                                    displayNewField: {
+                                        height: "750px", width: '100%'
+                                    }
+                                }, () => {
+                                    this.setState({ displayForms: !displayForms })
+                                })
+                    }} >
+
+
+                    <div className="div-address-edit-icon">
+                        <FontAwesomeIcon icon={faAddressBook} className="icon-userEdit" />
+                    </div>
+                                    novo endereço
+                                </div>
                 {
-                    addressSelected === null ? (
-                        <div className="address-info">
-                            <div className="address-state-city-cep">
-                                <span className="ops-no-address">
-                                    Ops! parece que você ainda não tem nenhum endereço cadastrado!
+                    addressSelected === null
+                        ? (
+                            <div >
+                                <div className="address-container-info">
+                                    <div className="address-state-city-cep">
+                                        <span className="ops-no-address">
+                                            Ops! parece que você ainda não tem nenhum endereço cadastrado!
                                     </span>
+                                    </div>
+
+                                </div>
+
+
                             </div>
-                            <div className="btn-selected">
-                                <CustomButton
-                                    type="submit"
-                                    className="create-button"
-                                    onClick={() => history.push('/dashboard/novo-endereco')} >
-                                    cadastrar um novo endereço
-                                    </CustomButton>
-                            </div>
-                        </div>
-                    ) : (
-                            addressSelected === null ? (
-                                ""
-                            ) : (
+                        )
+                        : (
+                            addressSelected === null
+                                ? ("")
+                                : (
                                     <>
                                         <div className="rua">
                                             <p>{addressSelected.street}</p>
@@ -90,25 +116,28 @@ class SelectedCardAddress extends React.Component {
                                                 ) : ""}
 
                                             </div>
-                                            {
-                                                history.location.pathname === "/carrinho/checkout" ? (
-                                                    <div className="btn-selected">
-                                                        <CustomButton
-                                                            type="submit"
-                                                            className="create-button"
-                                                            onClick={() => history.push('/dashboard')} >
-                                                            usar outro endereço
-                                                        </CustomButton>
-                                                    </div>
-                                                ) : ("")
-                                            }
+                                            <div
+                                                type="submit"
+                                                className="edit-button-user-card"
+                                                onClick={(e) => {
+                                                    setHidden()
+                                                }} >
+                                                <div className="div-user-edit-icon">
+                                                    <FontAwesomeIcon icon={faAddressBook} className="icon-userEdit" />
+                                                </div>
+                                                usar outro endereço
+                                            </div>
                                         </div>
+
                                     </>
                                 )
 
                         )
-                }
 
+                }
+                <div style={this.state.displayNewField} className="newAddress">
+                    <CreateNewAddress />
+                </div>
             </div >
         );
     }
@@ -119,8 +148,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    setAddress: address => dispatch(addressSelected(address))
+    setAddress: address => dispatch(addressSelected(address)),
+    setHidden: () => dispatch(setHidden()),
+    addToAddressesList: address => dispatch(addAddress(address))
 })
-
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SelectedCardAddress));

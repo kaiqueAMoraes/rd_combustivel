@@ -9,12 +9,13 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import { connect } from 'react-redux';
-
+import AddressSlider from '../../components/address-card-slide/address-card-slide.component';
 
 import {
     Navbar, Container
 } from 'reactstrap'
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+import { toggleCartOff, toggleCartIn } from "../../redux/cart/cart.actions";
 
 
 const handleSignOut = () => {
@@ -23,13 +24,12 @@ const handleSignOut = () => {
     // window.location.reload();
 }
 
-const Header = ({ history, hidden }) => {
-    const currentUser = localStorage.getItem('user');
+const Header = ({ history,hidden, hide_cart, currentUser }) => {
     {
+
         return (
 
-            !history.location.pathname === "/user-credentials" ? (
-                history.location.pathname === "/cadastro" ||
+                history.location.pathname === "/user-credentials" ? ("") : (
                 history.location.pathname === "/dashboard" ||
                 history.location.pathname === "/dashboard/novo-endereco" ||
                 history.location.pathname === "/carrinho/checkout" ||
@@ -37,11 +37,17 @@ const Header = ({ history, hidden }) => {
                 history.location.pathname === "/dashboard/edit-usuario" ? (
                     
                     <Navbar className="bg-main navbar">
+                <AddressSlider/>
+
                         <Link to="/" className="logo"></Link>
                         {
                             history.location.pathname === "/dashboard" ? (
                                 <div className="d-flex user-bag">
-                                    <Link onClick={() => {history.push("/logout")}} className="navbar-span align-self-bottom get-exit" id="usuario-navbar">Sair</Link>
+                                    <Link onClick={() => {
+                                        history.push("/logout")}
+                                        } 
+                                    className="navbar-span align-self-bottom get-exit"
+                                    id="usuario-navbar">Sair</Link>
                                 </div>
                             ) : (
                                     <div className="d-flex user-bag">
@@ -51,9 +57,8 @@ const Header = ({ history, hidden }) => {
                     </Navbar>
                 ) : (
                     <>
-                    {
-                                    hidden ? null : <CartDropdown/>
-                                }
+                    <AddressSlider/>
+                    <CartDropdown/>
                         <Navbar className="bg-main navbar fixed-header">
                             <Link to="/" className="logo"></Link>
                             <div className="d-flex user-bag">
@@ -66,7 +71,7 @@ const Header = ({ history, hidden }) => {
                                                 <CartIcon />
                                                 <Link to="/dashboard"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle" /></Link>
                                                 <div className="user-login d-flex flex-column bd-highlight mb-3 Row" id="div-header-separation">
-                                                    <Link to="/dashboard" className="navbar-span user-name" id="ola-navbar" >Olá, {currentUser}</Link>
+                                                    <Link to="/dashboard" className="navbar-span user-name" id="ola-navbar" >Olá, {currentUser.firstName}</Link>
                                                     <Link to="/dashboard" className="navbar-span align-self-bottom" id="usuario-navbar">Minha conta</Link>
                                                 </div>
                                                 <Link to="/logout"><FontAwesomeIcon icon={faSignOutAlt} className="icon-userCircle" /></Link>
@@ -74,19 +79,22 @@ const Header = ({ history, hidden }) => {
                                         ) : (
                                             <>
                                             <CartIcon />
-                                                        <Link to="/login"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle user-mobile" /></Link>
-                                                        <Link to="/login">
+                                                        <Link to="/user-credentials"><FontAwesomeIcon icon={faUserCircle} className="icon-userCircle user-mobile" /></Link>
                                                         <CustomButton
+                                                        handleClick={(e)=>{
+                                                            history.push("/user-credentials")
+                                                        }}
                                                         className="login-button">
                                                             entre
                                                         </CustomButton>
-                                                        </Link>
-                                                        <Link to="/cadastro">
                                                         <CustomButton
+                                                        handleClick={(e)=>{
+                                                            history.push("/user-credentials")
+                                                        }}
                                                         className="signin-button">
+                                                            
                                                             cadastre-se
                                                         </CustomButton>
-                                                        </Link>
                                                 </>
                                             )
                                     }
@@ -103,22 +111,22 @@ const Header = ({ history, hidden }) => {
                                     <li className="ml-4 nav-item mr-4 none">
                                         <Link className="nav-link" onClick={() => {
                                             history.push('/home/categoria/gasolina-aditivada/')
-                                            window.location.reload()}}>Gasolina</Link>
+                                            }}>Gasolina</Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none">
                                         <Link className="nav-link" onClick={() => {
                                             history.push('/home/categoria/etanol-aditivado/')
-                                            window.location.reload()}}>Etanol </Link>
+                                            }}>Etanol </Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none" >
                                         <Link className="nav-link" onClick={() => {
                                             history.push('/home/categoria/Diesel/')
-                                            window.location.reload()}}>Óleo</Link>
+                                            }}>Óleo</Link>
                                     </li>
                                     <li className="ml-4 nav-item mr-4 none">
                                         <Link className="nav-link"  onClick={() => {
                                             history.push('/home/categoria/gas-natural/')
-                                            window.location.reload()}}>Fluidos para motor</Link>
+                                            }}>Fluidos para motor</Link>
                                     </li>
                                 </ul>
                             </Container>
@@ -128,9 +136,7 @@ const Header = ({ history, hidden }) => {
                     </>
                 )
 
-        ) 
-        : ""
-        
+        )  
         ) 
     }
 }
@@ -140,4 +146,9 @@ const mapStateToProps = ({user: {currentUser}, cart : {hidden}}) => ({
     hidden
 });
 
-export default connect(mapStateToProps)(withRouter(Header));
+const mapDispatchToProps = dispatch => ({
+    bring_cart: () => dispatch(toggleCartIn()),
+    hide_cart: () => dispatch(toggleCartOff())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Header));

@@ -1,5 +1,7 @@
 .dashboard-content-holder {
-
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
 }
 
 .user-profile {
@@ -28,9 +30,7 @@
     padding: 0;
     display: flex;
     flex-direction: row;
-    overflow-y: scroll;
     height: 89vh;
-    overflow-x: hidden;
 }
 
 .user-container {
@@ -41,7 +41,7 @@
 }
 
 .dashboard-content-holder {
-    width: 85%;
+    width: 100%;
     margin-top: 15px;
     margin-bottom: 85px;
     padding: 35px;

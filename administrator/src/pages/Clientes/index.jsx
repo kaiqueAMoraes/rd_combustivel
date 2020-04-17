@@ -27,10 +27,13 @@ export default class Clientes extends React.Component{
       }
 
       componentDidMount() {
-        axios.get(`http://localhost:8080/find-users`)
+         //  const {page} = this.props.match.params;
+         //  this.loadData(page);
+         const {page} = axios.get(`http://localhost:8080/find-users`)
           .then(res => {
-            const users = res.data;
+            const users = res.data.content;
             this.setState({ users });
+            console.log(users);
           })
       }
 

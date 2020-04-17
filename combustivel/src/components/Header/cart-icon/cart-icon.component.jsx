@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {toggleCartHidden} from '../../../redux/cart/cart.actions';
+import {toggleCartIn, toggleCartOff} from '../../../redux/cart/cart.actions';
 import {selectCartItemsCount} from '../../../redux/cart/cart.selectors';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,17 +13,18 @@ import {
 } from 'reactstrap'
 import CartItem from '../../cart-item/cart-item.component';
 
-const CartIcon = ({toggleCartHidden, itemCount}) => (
-    <div>
-        <NavbarBrand href="#" onClick={toggleCartHidden}>
-            <FontAwesomeIcon icon={faShoppingBag} className="icon-shoppingBag" />
+const CartIcon = ({bring_cart,hide_cart, itemCount}) => (
+    <div className="cart-icon-holder"  onClick={() => bring_cart()}>
+
+            <div><FontAwesomeIcon icon={faShoppingBag} className="icon-shoppingBag" />
             <span id="qtd-produto" className="navbar-span">{itemCount}</span>
-        </NavbarBrand>
+            </div>
     </div>
 )
 
 const mapDispatchToProps = dispatch => ({
-    toggleCartHidden : () => dispatch(toggleCartHidden())
+    bring_cart: () => dispatch(toggleCartIn()),
+    hide_cart: () => dispatch(toggleCartOff())
 })
 
 const mapStateToProps = (state) => ({

@@ -6,7 +6,8 @@ import CustomButton from '../custom-button/custom-button.component';
 import { withRouter } from 'react-router-dom';
 import Alert from 'react-bootstrap/Alert';
 import { connect } from 'react-redux';
-import { addressSelected } from '../../redux/address/address.actions';
+import { addressSelected, addAddress } from '../../redux/address/address.actions';
+import { successMessage, errorMessage } from '../../redux/message/message.actions';
 
 class CardAddress extends React.Component {
     constructor(props) {
@@ -35,7 +36,7 @@ class CardAddress extends React.Component {
     }
 
     handleDelete = async () => {
-        const { cep, state, city, district, street, number, id} = this.props;
+        const { cep, state, city, district, street, number, id, addToAddressesList, successMessage, currentUser} = this.props;
 
         const address = {
             "idAddress": id,
@@ -52,7 +53,19 @@ class CardAddress extends React.Component {
         await axios.put(`http://localhost:8080/update-address`, address).then(
             response => {
                 if(response.status === 200){
-                    window.location.reload()
+                    axios.post("http://localhost:8080/create-address", address)
+                    .then(response => {
+                        if (response.status === 200) {
+                            let addresses = []
+                            axios.get(`http://localhost:8080/find-address-byuser/${currentUser.idUser}`)
+                                .then(response => {
+                                    successMessage("endereço deletado com sucesso")
+                                    return addToAddressesList(response.data)
+                                }).catch(error => {
+                                    console.log(error)
+                                });
+                                
+                    }})
                 }
             }
         )
@@ -67,7 +80,7 @@ class CardAddress extends React.Component {
     }
 
     render() {
-        const { cep, state, city, district, street, number, complement, id, history, addressSelected, isSelected, setAddress } = this.props;
+        const { cep, state, city, district, street, number, complement, id, history, addressSelected, isSelected, setAddress ,successMessage} = this.props;
         const address = {
             "idAddress": id,
             "cep": cep,
@@ -80,15 +93,18 @@ class CardAddress extends React.Component {
         }
         return (
             <div className="info-holder box-border">
-                <div className="rua">
-                    <div className="card-address-break-apart">
-                        <p>{street}</p>
                         <CustomButton
                             type="submit"
                             className="delete-button"
-                            onClick={() => setAddress(address)} >
+                            handleClick={() => {
+                                successMessage('Endereço de entrega foi mudado com sucesso')
+                                setAddress(address)}}
+                                 >
                             usar para entregas
                         </CustomButton>
+                <div className="rua">
+                    <div className="card-address-break-apart">
+                        <p>{street}</p>
                     </div>
                 </div>
                 <div className="address-info">
@@ -109,13 +125,13 @@ class CardAddress extends React.Component {
                     <CustomButton
                         type="submit"
                         className="edit-button"
-                        onClick={this.handleEdit.bind(this)} >
+                        handleClick={this.handleEdit.bind(this)} >
                         Editar
                     </CustomButton>
                     <CustomButton
                         type="submit"
                         className="delete-button"
-                        onClick={this.handleDelete.bind(this)} >
+                        handleClick={this.handleDelete.bind(this)} >
                         excluir
                     </CustomButton>
                 </div>
@@ -125,11 +141,15 @@ class CardAddress extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    addressSelected: state.address.addressSelected
+    addressSelected: state.address.addressSelected,
+    currentUser : state.user.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
-    setAddress: address => dispatch(addressSelected(address))
+    setAddress: address => dispatch(addressSelected(address)),
+    successMessage: message => dispatch(successMessage(message)),
+    errorMessage: message => dispatch(errorMessage(message)),
+    addToAddressesList: address => dispatch(addAddress(address)),
 })
 
 

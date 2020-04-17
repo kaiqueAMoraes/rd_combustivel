@@ -1,3 +1,15 @@
-.name {
+.container-footer{
     background-color: #ffffff;
+}
+
+.container-line-footer{
+    background-color: #ff6b6b;
+    height: 40px;
+    width: 100%;
+}
+
+.row-footer{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }

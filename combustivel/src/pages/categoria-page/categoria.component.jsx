@@ -17,6 +17,7 @@ export default class CategoriaPage extends Component {
     }
 
     componentDidMount = async () => {
+        alert("change")
         const { history } = this.props;
         console.log(history.location.pathname)
 
