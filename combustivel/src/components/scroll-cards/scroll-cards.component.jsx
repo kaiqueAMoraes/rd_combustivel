@@ -23,7 +23,7 @@ export default class scrollCards extends Component {
     }
 
     componentDidMount = async () => {
-        await axios.get("http://localhost:8080/find-all-products")
+        await axios.get(this.props.produtosApi)
             .then(response => {
                 this.setState({ products: response.data })
             }).catch(error => {

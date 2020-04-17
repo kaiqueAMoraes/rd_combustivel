@@ -117,14 +117,18 @@ class Home extends Component {
                     <h2>Os mais vendidos</h2>
                     <ScrollCards
                         label={"Os mais vendidos"}
-                        produtos={`http://localhost:8080/find-all-products`}
+                        produtosApi={`http://localhost:8080/find-all-products`}
                     />
 
                     <h2>Adicionados recentemente</h2>
-                    <ScrollCards />
+                    <ScrollCards 
+                        produtosApi={`http://localhost:8080/find-all-products`}
+                        />
 
                     <h2>Outras ofertas</h2>
-                    <ScrollCards />
+                    <ScrollCards 
+                        produtosApi={`http://localhost:8080/find-all-products`}
+                        />
                 </Container>
             </div>
         )
