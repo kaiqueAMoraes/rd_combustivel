@@ -90,8 +90,7 @@ class CheckoutPageFinal extends React.Component {
                 <div className="checkout-content-holder">
                     <div className="checkout-a-content">
                         <h5>Endereço de entrega</h5>
-                        <SelectedCardAddress
-                        />
+                        <SelectedCardAddress/>
                     </div>
                     <div className="finalizar-compra">
                         <h5>Resumo da compra</h5>
@@ -214,7 +213,7 @@ class CheckoutPageFinal extends React.Component {
                                             this.state.CVV.length > 2 ? (
                                             <CustomButton
                                                 _class="create_button"
-                                                handleClick={() => this.handleOrder()}>
+                                                handleClick={() => this.handleOrder()   }>
                                                 finalizar compra
                                             </CustomButton>
                                         ) : ""
