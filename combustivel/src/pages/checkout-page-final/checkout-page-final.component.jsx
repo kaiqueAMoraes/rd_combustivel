@@ -39,22 +39,22 @@ class CheckoutPageFinal extends React.Component {
     }
 
     componentDidMount = async () => {
-        const email = localStorage.getItem('email');
-        let userId = await axios.get('http://localhost:8080/find-user-email/' + email).then(response => { return response.data[0].idUser })
-        let userAddress = await axios.get(`http://localhost:8080/find-address-byuser/${userId}`).then(response => { return response.data[0] })
+        const {idUser} = this.props.currentUser; 
+        
+        let userAddress = await axios.get(`http://localhost:8080/find-address-byuser/${idUser}`).then(response => { return response.data[0] })
 
         this.setState({
             itemList: this.props.history.location.state.itemList,
             address: userAddress,
-            idUser: userId,
 
         })
-        console.log(userId)
     }
 
     handleOrder = async () => {
         this.setState({ loading: true })
-        const { address, itemList, total, idUser, frete } = this.state;
+        const { address, itemList, total, frete } = this.state;
+        const{idUser} = this.props.currentUser;
+        const {addressSelected} = this.props;
         const totalPrice = total + frete
         const order =
         {
@@ -63,7 +63,7 @@ class CheckoutPageFinal extends React.Component {
                 "idUser": idUser
             },
             "idAddress": {
-                "idAddress": address.idAddress
+                "idAddress": addressSelected.idAddress
             },
             "itemList": itemList
         }
@@ -72,9 +72,8 @@ class CheckoutPageFinal extends React.Component {
         await axios.post("http://localhost:8080/create-order", order)
             .then(response => {
                 if (response.status === 200) {
-                    console.log("sucesso ao cadastrar produto")
                     this.setState({ loading: false })
-                    this.props.history.push("/carrinho/checkout/success-page")
+                    return this.props.history.push("/carrinho/checkout/success-page")
                 } else {
                     console.log(response.data)
                     //throw new Error(response.data);
@@ -84,7 +83,7 @@ class CheckoutPageFinal extends React.Component {
 
     render() {
         const { total, itemList, frete, address, loading } = this.state;
-        const { itemCount, addressSelected, RESET_CART } = this.props
+        const { itemCount, addressSelected, currentUser, RESET_CART } = this.props
 
         return (
             <Container>
@@ -214,10 +213,9 @@ class CheckoutPageFinal extends React.Component {
                                         this.state.DATA.length > 4 &&
                                             this.state.CVV.length > 2 ? (
                                             <CustomButton
-                                                _class={"create_button"}
-                                                handleClick={() => this.handleOrder}>
+                                                _class="create_button"
+                                                handleClick={() => this.handleOrder()}>
                                                 finalizar compra
-                                                {loading ? <Spinner animation="grow" variant="light" /> : ""}
                                             </CustomButton>
                                         ) : ""
                                     }
@@ -234,7 +232,8 @@ class CheckoutPageFinal extends React.Component {
 
 const mapStateToProps = (state) => ({
     itemCount: selectCartItemsCount(state),
-    addressSelected: state.address.addressSelected
+    addressSelected: state.address.addressSelected,
+    currentUser : state.user.currentUser
 });
 
 export default withRouter(connect(mapStateToProps)(CheckoutPageFinal))

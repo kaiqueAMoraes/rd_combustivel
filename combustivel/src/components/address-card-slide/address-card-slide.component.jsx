@@ -59,7 +59,7 @@ class AddressSlider extends Component {
                                 () => { setHidden()},
                                 () => {
                                     this.setState({
-                                       fade_animation: Animations.FADE_OFF_FROM_LEFT()
+                                        fade_animation: Animations.FADE_OFF_FROM_LEFT()
                                     })
                                 },
                                 2500
@@ -71,7 +71,12 @@ class AddressSlider extends Component {
                     <h5 className="dashboard-title">endereço de entrega</h5>
                     <SelectedCardAddress />
                     <h5 className="dashboard-title">Meus endereços</h5>
-                            <span>{this.props.addresses.length} endereços cadastrados</span>
+                    {
+                        addresses
+                        ? (<span>{addresses.length} endereços cadastrados</span>)
+                        : ("")
+                    }
+                            
                     {
                         addresses.length >= 1
                         ? (
@@ -86,7 +91,11 @@ class AddressSlider extends Component {
                                     state={elm.state}
                                     key={elm.idAddress}
                                     id={elm.idAddress}
-                                    userId={currentUser.idUser}
+                                    userId={
+                                        currentUser
+                                        ? (currentUser.idUser)
+                                        : "" 
+                                    }
                                 />
                             })
                         )

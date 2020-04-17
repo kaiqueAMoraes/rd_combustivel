@@ -53,9 +53,7 @@ class CardAddress extends React.Component {
         await axios.put(`http://localhost:8080/update-address`, address).then(
             response => {
                 if(response.status === 200){
-                    axios.post("http://localhost:8080/create-address", address)
-                    .then(response => {
-                        if (response.status === 200) {
+
                             let addresses = []
                             axios.get(`http://localhost:8080/find-address-byuser/${currentUser.idUser}`)
                                 .then(response => {
@@ -63,9 +61,8 @@ class CardAddress extends React.Component {
                                     return addToAddressesList(response.data)
                                 }).catch(error => {
                                     console.log(error)
+                                    return addToAddressesList([])
                                 });
-                                
-                    }})
                 }
             }
         )

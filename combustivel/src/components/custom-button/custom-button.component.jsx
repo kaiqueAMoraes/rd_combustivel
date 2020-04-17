@@ -22,7 +22,6 @@ class CustomButton extends React.Component {
         
         let counter = 0;
         let handleAction = () => {
-            console.log("interval")
             if (counter === 0) {
                 counter++
                 this.setState({
