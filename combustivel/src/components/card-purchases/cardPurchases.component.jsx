@@ -45,14 +45,14 @@ export default function CardPurchases({ elm }) {
                     <div>
 
                         <div className="info-numbers-qtd">{itemList.length} itens</div>
-                        <div className="info-numbers">total : R${totalPrice}</div>
+                        <div className="info-numbers">total : {Intl.NumberFormat('pt-BR',{style:'currency', currency:'BRL'}).format(totalPrice)}</div>
                     </div>
-                    <CustomButton
+                    <button
                         type="submit"
                         className="edit-button-address-card"
-                        onClick={seeMore.bind(this)} >
+                        button="" >
                         ver informações
-                </CustomButton>
+                    </button>
                 </div>
             </div>
 
@@ -71,8 +71,8 @@ export default function CardPurchases({ elm }) {
                             </div>
                                 <div className="address-info">
                         <div className="address-state-city-cep">
-                            <p> quantidade : {elm.quantity}</p>
-                            <p>valor unitario : {elm.price}</p>
+                            <p> Quantidade : {elm.quantity}</p><br></br>
+                            <p>Valor Total : {Intl.NumberFormat('pt-BR',{style:'currency', currency:'BRL'}).format(elm.price)}</p>
                         </div>
                             </div>
                             </div>
