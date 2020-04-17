@@ -89,9 +89,11 @@ export default class DoughnutProducts extends Component {
                         scales: {
                             yAxes: [{
                                 ticks: {
-                                    beginAtZero: true
+                                    beginAtZero: true,
+                                    display: false
                                 }
                             }],
+                            display: false
                         },
 
                     }

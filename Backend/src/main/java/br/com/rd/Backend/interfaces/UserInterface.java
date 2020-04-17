@@ -24,7 +24,7 @@ public interface UserInterface {
 
     ResponseEntity findUserByCpf (String cpf);
 
-    ResponseEntity<?> findAllUsers (Pageable pageable);
+    ResponseEntity<?> findAllUsers ();
 
     ResponseEntity updateUserById (UserDTO userDTO);
 

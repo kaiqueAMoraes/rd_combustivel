@@ -125,9 +125,9 @@ public class UserService implements UserInterface {
     }
 
     @Override
-    public ResponseEntity<?> findAllUsers(Pageable pageable) {
+    public ResponseEntity<?> findAllUsers() {
 
-        return ResponseEntity.ok().body(userRepository.findAll(pageable));
+        return ResponseEntity.ok().body(userRepository.findAll());
     }
 
     @Override

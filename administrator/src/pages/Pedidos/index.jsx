@@ -18,7 +18,7 @@ export default class Pedidos extends Component {
     componentDidMount() {
         axios.get("http://localhost:8080/findall-orders")
         .then(response =>{
-            this.setState({ orders: response.data.content })
+            this.setState({ orders: response.data })
         })
     }
 

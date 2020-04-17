@@ -23,7 +23,7 @@ public interface OrderInterface {
 
     ResponseEntity findOrderByDate(Date date);
 
-    ResponseEntity<?> findAllOrders(Pageable pageable);
+    ResponseEntity<?> findAllOrders();
 
     ResponseEntity updateOrderById(OrderDTO orderDTO);
 }

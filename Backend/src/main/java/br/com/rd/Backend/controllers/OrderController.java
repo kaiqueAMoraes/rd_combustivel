@@ -27,8 +27,8 @@ public class OrderController {
     }
 
     @GetMapping("/findall-orders")
-    public ResponseEntity<?> findAllOrders(Pageable pageable) {
-        return orderService.findAllOrders(pageable);
+    public ResponseEntity<?> findAllOrders() {
+        return orderService.findAllOrders();
     }
 
     @GetMapping("/find-orders/{id}")

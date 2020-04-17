@@ -9,7 +9,7 @@ export default class LineUsers extends Component {
         super(props);
 
         this.state = {
-            orders: [],
+            users: [],
         }
     }
 
@@ -17,17 +17,10 @@ export default class LineUsers extends Component {
     chartRef = React.createRef();
 
     componentDidMount() {
-        axios.get('http://localhost:8080/findall-orders')
+        axios.get('http://localhost:8080/find-users')
             .then(response => {
-                const orders = response.data.content;
-                this.setState({ orders })
-
-                const ORDERS_JANUARY = [];
-                const ORDERS_FEBRUARY = [];
-                const ORDERS_MARCH = [];
-                const ORDERS_APRIL = [];
-                const ORDERS_MAY = [];
-                const ORDERS_JUNE = [];
+                const users = response.data;
+                this.setState({ users })
 
                 const JANUARY = new Date('2020-01-31 23:59:59');
                 const FEBRUARY = new Date('2020-02-29 23:59:59');
@@ -36,21 +29,30 @@ export default class LineUsers extends Component {
                 const MAY = new Date('2020-05-31 23:59:59');
                 const JUNE = new Date('2020-06-30 23:59:59');
 
-                this.state.orders.map(order => {
+                const USERS_JANUARY = [];
+                const USERS_FEBRUARY = [];
+                const USERS_MARCH = [];
+                const USERS_APRIL = [];
+                const USERS_MAY = [];
+                const USERS_JUNE = [];
+
+                
+                this.state.users.map(order => {
                     if(new Date(order.date) <= JANUARY){
-                        ORDERS_JANUARY.push(order);
+                        USERS_JANUARY.push(order);
                     } else if (new Date(order.date) <= FEBRUARY){
-                        ORDERS_FEBRUARY.push(order)
+                        USERS_FEBRUARY.push(order)
                     } else if (new Date(order.date) <= MARCH){
-                        ORDERS_MARCH.push(order)
+                        USERS_MARCH.push(order)
                     } else if (new Date(order.date) <= APRIL){
-                        ORDERS_APRIL.push(order)
+                        USERS_APRIL.push(order)
                     } else if (new Date(order.date) <= MAY){
-                        ORDERS_MAY.push(order)
+                        USERS_MAY.push(order)
                     } else {
-                        ORDERS_JUNE.push(order)
+                        USERS_JUNE.push(order)
                     } 
                 });
+
 
                 const myChartRef = this.chartRef.current.getContext("2d");
 
@@ -61,13 +63,13 @@ export default class LineUsers extends Component {
                         labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
                         datasets: [
                             {
-                                label: "Vendas",
-                                data: [ORDERS_JANUARY.length,
-                                     ORDERS_FEBRUARY.length, 
-                                     ORDERS_MARCH.length, 
-                                     ORDERS_APRIL.length, 
-                                     ORDERS_MAY.length, 
-                                     ORDERS_JUNE.length],
+                                label: "Cadasto de Novos Usuários",
+                                data: [USERS_JANUARY.length,
+                                     USERS_FEBRUARY.length, 
+                                     USERS_MARCH.length, 
+                                     USERS_APRIL.length, 
+                                     USERS_MAY.length, 
+                                     USERS_JUNE.length],
                                 backgroundColor: [
                                     'rgba(255, 99, 132, 0.2)',
                                 ],
@@ -84,8 +86,9 @@ export default class LineUsers extends Component {
                                 ticks: {
                                     beginAtZero: true,
                                     fontSize: 15,
-                                    stepSize: 1
-                                }
+                                    stepSize: 50
+                                },
+                                display: true
                             }]
                         }
                     }

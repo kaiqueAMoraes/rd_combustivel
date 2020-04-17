@@ -114,13 +114,13 @@ public class OrderService implements OrderInterface {
     }
 
     @Override
-    public ResponseEntity<?> findAllOrders(Pageable pageable) {
+    public ResponseEntity<?> findAllOrders() {
 
         try {
-            if (orderRepository.findAll(pageable).isEmpty()) {
+            if (orderRepository.findAll().isEmpty()) {
                 return ResponseEntity.badRequest().body("Não foram encontrados pedidos");
             } else {
-                return ResponseEntity.ok().body(orderRepository.findAll(pageable));
+                return ResponseEntity.ok().body(orderRepository.findAll());
             }
         } catch (EntityNotFoundException e) {
             return ResponseEntity.ok().body("Não foram encontrados pedidos");

@@ -31,7 +31,7 @@ export default class Clientes extends React.Component{
          //  this.loadData(page);
          const {page} = axios.get(`http://localhost:8080/find-users`)
           .then(res => {
-            const users = res.data.content;
+            const users = res.data;
             this.setState({ users });
             console.log(users);
           })

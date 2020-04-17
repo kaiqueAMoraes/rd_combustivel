@@ -19,7 +19,7 @@ export default class LineSales extends Component {
     componentDidMount() {
         axios.get('http://localhost:8080/findall-orders')
             .then(response => {
-                const orders = response.data.content;
+                const orders = response.data;
                 this.setState({ orders })
 
                 const ORDERS_JANUARY = [];

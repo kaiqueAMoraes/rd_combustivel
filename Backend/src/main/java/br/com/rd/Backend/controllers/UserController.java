@@ -48,8 +48,8 @@ public class UserController {
     }
 
     @GetMapping("find-users")
-    public ResponseEntity<?> findAllUsers(Pageable pageable) {
-        return userService.findAllUsers(pageable);
+    public ResponseEntity<?> findAllUsers() {
+        return userService.findAllUsers();
     }
 
     @PutMapping("update-user")

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 import LineSales from '../../Components/LineChartSale/index';
 import DoughnutProduct from '../../Components/DoughnutChartProduct/index';
+import LineUsers from '../../Components/LineChartUsers/index';
 import Header from '../../Components/Header/header';
 
 import './styles.css';
@@ -22,13 +22,13 @@ export default class Main extends Component {
                 color="#3E517A"
             />
             </div>
-            {/* <div className="sub chart-wrapper">
-            <LineChart
+            <div className="sub chart-wrapper">
+            <LineUsers
                 data=""
                 title="Clientes"
                 color="#70CAD1" 
             />
-            </div> */}
+            </div>
             <div className="sub chart-wrapper">
             <DoughnutProduct
                 data=""
