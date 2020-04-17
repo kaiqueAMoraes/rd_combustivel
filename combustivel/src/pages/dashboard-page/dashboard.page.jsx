@@ -64,22 +64,23 @@ class DashboardPage extends Component {
         const { endereco, compras, user } = this.state;
         const props = this.props;
         const { addresses } = this.props;
+        console.log(addresses);
         const MyComponents = { // cria componetização dinamica na pagina por um objeto, assim não é necessario criar callbacks no jsx
             Adressess: function showAddresses() {
-                return addresses.map(elm => {
-                    return <CardAddress
-                        cep={elm.cep}
-                        street={elm.street}
-                        city={elm.city}
-                        district={elm.district}
-                        number={elm.number}
-                        complement={elm.complement}
-                        state={elm.state}
-                        key={elm.idAddress}
-                        id={elm.idAddress}
-                        userId={user.idUser}
-                    />
-                })
+                //return addresses.map(elm => {
+                    // return <CardAddress
+                    //     cep={elm.cep}
+                    //     street={elm.street}
+                    //     city={elm.city}
+                    //     district={elm.district}
+                    //     number={elm.number}
+                    //     complement={elm.complement}
+                    //     state={elm.state}
+                    //     key={elm.idAddress}
+                    //     id={elm.idAddress}
+                    //     userId={user.idUser}
+                    // />
+               // })
             },
             Compras: function showPurchases() {
                 return compras.map(elm => {
@@ -94,7 +95,7 @@ class DashboardPage extends Component {
 
         }
 
-        const { selectedAddress, history } = this.props;
+        const { selectedAddress, history, currentUser } = this.props;
         const { birth } = this.state.user;
         return (
             <div className="dashboard-container">
@@ -120,7 +121,27 @@ class DashboardPage extends Component {
                             {this.state.errorMessage ? (<Alert className="m-4" variant='primary'>{this.state.errorMessage}</Alert>) : ""}
                             <h5 className="dashboard-title">Meus endereços</h5>
                             <span>{this.props.addresses.length} endereços cadastrados</span>
-                            <MyComponents.Adressess />
+                            {
+                        addresses.length >= 1
+                        ? (
+                            addresses.map(elm => {
+                                return <CardAddress
+                                    cep={elm.cep}
+                                    street={elm.street}
+                                    city={elm.city}
+                                    district={elm.district}
+                                    number={elm.number}
+                                    complement={elm.complement}
+                                    state={elm.state}
+                                    key={elm.idAddress}
+                                    id={elm.idAddress}
+                                />
+                            })
+                        )
+                        : (
+                            ""
+                        )
+                    }
                         </div>
 
 

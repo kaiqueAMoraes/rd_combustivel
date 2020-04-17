@@ -1,16 +1,15 @@
-export const addAddress = (addresses, addressToAdd) => {
+import axios from 'axios';
 
-    const existingAddresses = adresses.find(
-        address => address.id === addressToAdd.id
-        );
+export const loadAddressInfo = (idUser) => {
+        alert(idUser)
+        let addresses = []
+        axios.get(`http://localhost:8080/find-address-byuser/${idUser}`)
+            .then(response => {
+                addresses = [...response.data]
+            }).catch(error => {
+                console.log(error)
+            });
 
-        if(existingCartItem){
-            return addresses.map(address => 
-                address.id === addressToAdd.id ?
-                { ...cartItem, quantity: cartItem.quantity + 1 }
-                : cartItem
-            )
-            }
-
-        return [...cartItems, {...cartItemToAdd, quantity: 1}]
+            return addresses;
 }
+

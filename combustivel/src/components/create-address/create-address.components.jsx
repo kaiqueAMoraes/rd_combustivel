@@ -12,7 +12,6 @@ import { errorMessage, successMessage } from '../../redux/message/message.action
 class CreateNewAddress extends Component {
     constructor(props) {
         super(props);
-        alert(this.props.currentUser)
         this.state = {
             cep: "",
             street: "",
@@ -70,12 +69,9 @@ class CreateNewAddress extends Component {
         const { currentUser, setAddress, addToAddressesList, successMessage } = this.props;
         const { cep, street, district, state, number, complement, city } = this.state
 
-        alert(currentUser)
+
         try {
-            let address = {};
-            await axios.get('http://localhost:8080/find-user-email/' + currentUser.email)
-                .then(response => {
-                    address = {
+                    const address = {
                         "cep": cep,
                         "state": state,
                         "city": city,
@@ -84,18 +80,20 @@ class CreateNewAddress extends Component {
                         "number": number,
                         "complement": complement,
                         "idUser": {
-                            "idUser" : response.data[0].idUser
-                        } ,
+                            "idUser" : currentUser.idUser
+                        }
                     }
-                    alert(address);
-                }).catch(error => {
-                    console.log(error)
-                });
             await axios.post("http://localhost:8080/create-address", address)
                 .then(response => {
                     if (response.status === 200) {
-                            return addToAddressesList(address)
-
+                        let addresses = []
+                        axios.get(`http://localhost:8080/find-address-byuser/${currentUser.idUser}`)
+                            .then(response => {
+                                return addToAddressesList(response.data)
+                            }).catch(error => {
+                                console.log(error)
+                            });
+                            
                 }})
         } catch (err) {
             console.log(err)

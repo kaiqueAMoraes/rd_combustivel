@@ -1,4 +1,5 @@
 import AddressActionTypes from "./address.types";
+import { loadAddressInfo } from './address.utils';
 
 const INITIAL_STATE = {
     addressSelected: null,
@@ -26,7 +27,7 @@ const addressReducer = (state = INITIAL_STATE, action) => {
                     case AddressActionTypes.ADD_ADDRESS:
                         return {
                             ...state,
-                            addresses: [...state.addresses, action.payload]
+                            addresses: action.payload
                         }   
                         case AddressActionTypes.REMOVE_ADDRESS:
                             return {

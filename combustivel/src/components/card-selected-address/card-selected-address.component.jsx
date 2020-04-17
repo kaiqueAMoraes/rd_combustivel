@@ -87,10 +87,10 @@ class SelectedCardAddress extends React.Component {
                                             Ops! parece que você ainda não tem nenhum endereço cadastrado!
                                     </span>
                                     </div>
-                                        
+
                                 </div>
 
-                                
+
                             </div>
                         )
                         : (
@@ -127,18 +127,17 @@ class SelectedCardAddress extends React.Component {
                                                 </div>
                                                 usar outro endereço
                                             </div>
-                                          
                                         </div>
-                                        
+
                                     </>
                                 )
 
                         )
-                        
+
                 }
-<div style={this.state.displayNewField} className="newAddress">
-                                    <CreateNewAddress />
-                                </div>
+                <div style={this.state.displayNewField} className="newAddress">
+                    <CreateNewAddress />
+                </div>
             </div >
         );
     }

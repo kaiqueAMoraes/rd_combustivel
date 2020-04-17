@@ -73,20 +73,26 @@ class AddressSlider extends Component {
                     <h5 className="dashboard-title">Meus endereços</h5>
                             <span>{this.props.addresses.length} endereços cadastrados</span>
                     {
-                        addresses.map(elm => {
-                            console.log(elm)
-                            return <CardAddress
-                                cep={elm.cep}
-                                street={elm.street}
-                                city={elm.city}
-                                district={elm.district}
-                                number={elm.number}
-                                complement={elm.complement}
-                                state={elm.state}
-                                key={elm.idAddress}
-                                id={elm.idAddress}
+                        addresses.length >= 1
+                        ? (
+                            addresses.map(elm => {
+                                return <CardAddress
+                                    cep={elm.cep}
+                                    street={elm.street}
+                                    city={elm.city}
+                                    district={elm.district}
+                                    number={elm.number}
+                                    complement={elm.complement}
+                                    state={elm.state}
+                                    key={elm.idAddress}
+                                    id={elm.idAddress}
+                                    userId={currentUser.idUser}
                                 />
-                        })
+                            })
+                        )
+                        : (
+                            ""
+                        )
                     }
                     </div>
                     </div>
