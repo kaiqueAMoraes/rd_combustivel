@@ -59,7 +59,7 @@ export default class PedidoCliente extends Component {
                                     this.state.orders.map(order => (
                                         <tr>
                                             <td key={order.idOrder}>{order.idOrder}</td>
-                                            <td>{(order.date).toLocaleString('pt-BR')}</td>
+                                            <td>{(JSON.stringify(order.date)).slice(1, 11)}</td>
                                             <td>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(order.totalPrice)}</td>
                                         </tr>
                                     ))

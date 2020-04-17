@@ -3,7 +3,7 @@ import { Chart } from 'chart.js';
 import './styles.css';
 import axios from 'axios';
 
-export default class LineSales extends Component {
+export default class LineUsers extends Component {
 
     constructor(props) {
         super(props);

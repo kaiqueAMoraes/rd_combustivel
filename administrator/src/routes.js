@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Logon from './pages/Logon/index';
 import Main from './pages/Main';
 import Clientes from './pages/Clientes/index';
-import Pedidos from './pages/Pedidos';
+import Pedidos from './pages/Pedidos/index';
 import cadastroProduto from './Components/cadastro-produto/cadastroProduto';
 import PedidoCliente from './pages/PedidoCliente';
 
