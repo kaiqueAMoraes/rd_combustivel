@@ -11,11 +11,17 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service("OrderItemService")
 public class OrderItemService implements OrderItemInterface {
+
+    @PersistenceContext
+    private EntityManager em;
 
     @Autowired
     OrderItemRepository orderItemRepository;
@@ -64,4 +70,17 @@ public class OrderItemService implements OrderItemInterface {
     public ResponseEntity<List<OrderItem>> findAllOrderItems() {
         return ResponseEntity.ok().body(orderItemRepository.findAll());
     }
+
+    @Override
+    public ResponseEntity<List<Product>> topSelling() {
+
+        String stringQuery = "SELECT p.* " +
+                "FROM ( SELECT id_product, SUM(nr_quantity) " +
+                "FROM TB_ORDER_ITEM GROUP BY id_product ORDER BY 2 DESC ) mais_vendidos " +
+                "INNER JOIN TB_PRODUCT p ON (p.id_product = mais_vendidos.id_product) ";
+
+        Query query = em.createNativeQuery(stringQuery, Product.class);
+        List<Product> list = query.getResultList();
+
+        return ResponseEntity.ok().body(list);    }
 }

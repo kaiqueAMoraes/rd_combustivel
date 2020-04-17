@@ -45,6 +45,11 @@ public class ProductController {
         return productService.findAllProducts();
     }
 
+    @GetMapping("/new-products")
+    public ResponseEntity newProducts() {
+        return  productService.newProducts();
+    }
+
     @PutMapping("/update-product")
     public ResponseEntity updateProductById(@RequestBody ProductDTO product) {
         return productService.updateProductById(product);

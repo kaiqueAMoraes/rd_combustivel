@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.validation.ConstraintViolationException;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -109,5 +110,15 @@ public class ProductService implements ProductInterface {
         } catch (InvalidDataAccessApiUsageException e) {
             return ResponseEntity.badRequest().body("O Id do produto não foi informado na requisição");
         }
+    }
+
+    @Override
+    public ResponseEntity<List<Product>> newProducts() {
+        List<Product> list = productRepository.findAll();
+        Collections.reverse(list);
+
+        System.out.println(list);
+
+        return ResponseEntity.ok().body(list);
     }
 }
